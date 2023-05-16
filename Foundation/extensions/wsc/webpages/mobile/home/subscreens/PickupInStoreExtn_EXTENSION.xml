@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExtensionMetaData>
+    <ScreenExtension extnClassName="PickupInStoreExtn"
+        extnPackage="extn.mobile.home.subscreens"
+        originalScreen="wsc.mobile.home.subscreens.PickupInStore"
+        originalScreenPackage="wsc.mobile.home.subscreens" type="diffrential">
+        <MashupRefs>
+            <Init>
+                <MashupRef extnType="MODIFY"
+                    mashupId="pickupInStore_getShipmentListInit"
+                    mashupRefId="getShipmentList" pageSize="5"
+                    pageSizeType="Shipment" paginationStrategy="NEXTPAGE"/>
+            </Init>
+            <Behavior>
+                <MashupRef extnType="MODIFY"
+                    mashupId="pickupInStore_getShipmentList" mashupRefId="getShipmentListBehavior"/>
+            </Behavior>
+        </MashupRefs>
+    </ScreenExtension>
+</ExtensionMetaData>

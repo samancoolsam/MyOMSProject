@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ORDER_CHANGE.ON_CANCEL event xml -->
+<Order DocumentType="" MaxOrderStatus=""
+    MaxOrderStatusDesc="" MinOrderStatus="" MinOrderStatusDesc=""
+    OrderNo="" OrderHeaderKey="" ReceivingNode="" >
+    <OrderAudit AuditTransactionId="" NewBuffer="" OldBuffer=""
+        OrderAuditKey="" OrderHeaderKey="" OrderLineKey=""
+        OrderReleaseKey="" ReasonCode="" ReasonText="" Reference1=""
+        Reference2="" Reference3="" Reference4="" XMLFlag="" Modifyprogid="">
+        <Order EnterpriseCode="" OrderNo=""/>
+        <OrderAuditLevels>
+            <OrderAuditLevel ModificationLevel="" OrderLineKey="" OrderReleaseKey="">
+                <ModificationTypes>
+                    <ModificationType Name=""/>
+                </ModificationTypes>
+                <OrderLine PrimeLineNo="" SubLineNo=""/>
+                <OrderRelease ReleaseNo=""/>
+                <OrderAuditDetails>
+                    <OrderAuditDetail Action="" AuditType="">
+                        <IDs>
+                            <ID Name="" Value=""/>
+                        </IDs>
+                        <Attributes>
+                            <Attribute Name="" NewValue="" OldValue=""/>
+                        </Attributes>
+                    </OrderAuditDetail>
+                </OrderAuditDetails>
+            </OrderAuditLevel>
+        </OrderAuditLevels>
+    </OrderAudit>
+    <OrderLines>
+        <OrderLine ChangeInOrderedQty="" FulfillmentType="" LineType="" MaxLineStatus=""
+            MaxLineStatusDesc="" MinLineStatus="" MinLineStatusDesc=""
+            OrderHeaderKey="" OrderLineKey="" OrderedQty=""
+            OriginalOrderedQty="" PrimeLineNo="" ShipNode="" Status="" StatusQuantity=""
+            SubLineNo="" DeliveryMethod="">
+			<ChainedFromOrderLine OrderLineKey="" FulfillmentType=""  OrderedQty="" OrderHeaderKey=""
+				MaxLineStatus="" MaxLineStatusDesc="" MinLineStatus="" MinLineStatusDesc="">
+			</ChainedFromOrderLine>
+        </OrderLine>
+    </OrderLines>
+</Order>

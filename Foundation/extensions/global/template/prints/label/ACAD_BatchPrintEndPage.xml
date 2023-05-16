@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	<LabelFieldMap>
+			<LabelField Binding="Batch/@BatchNo" LabelFieldName="BatchNo" RepeatingElement="" Sequence="N"/>
+			<LabelField Binding="Batch/@BatchNo" LabelFieldName="BatchNumber" RepeatingElement="" Sequence="N"/>
+			<LabelField Binding="Batch/@BatchNo" LabelFieldName="BatchNo1" RepeatingElement="" Sequence="N"/>
+			<LabelField Binding="Batch/@WaveNo" LabelFieldName="WaveNo" RepeatingElement="" Sequence="N"/>
+			<LabelField Binding="Batch/BatchLocations/BatchLocation/@ShipmentNo" LabelFieldName="ShipmentNo" RepeatingElement="BatchLocation" Sequence="N"/>
+			<LabelField Binding="Batch/BatchLocations/BatchLocation/@ShipmentNo" LabelFieldName="ShipmentNumber" RepeatingElement="BatchLocation" Sequence="N"/>
+			<LabelField Binding="Batch/BatchLocations/BatchLocation/@CartLocationId" LabelFieldName="CartLocation" RepeatingElement="BatchLocation" Sequence="N"/>
+    <RepeatingFields>
+        <RepeatingField LabelFieldName="ShipmentNo" MaxFirstPage="9"
+            MaxLastPage="10" MaxMidPage="10"/>
+        <RepeatingField LabelFieldName="ShipmentNumber" MaxFirstPage="9"
+            MaxLastPage="10" MaxMidPage="10"/>
+        <RepeatingField LabelFieldName="CartLocation" MaxFirstPage="9"
+            MaxLastPage="10" MaxMidPage="10"/>
+    </RepeatingFields>
+</LabelFieldMap>

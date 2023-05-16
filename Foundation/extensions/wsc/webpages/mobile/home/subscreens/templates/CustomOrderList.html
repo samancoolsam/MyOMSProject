@@ -1,0 +1,195 @@
+<div class="sc-platform-screen-default shipmentpickdetails">
+
+<div data-dojo-type="idx/layout/ContentPane" data-dojo-props="	spanLabel : true,
+	 	'class' : 'lineDetails' , 
+		uId : 'extn_pnl'"> 
+
+ <div data-dojo-type="idx/layout/ContentPane" data-ibmsc-uid="pnlDataHolder"
+        data_dojo_props_identifier="{
+		 							spanLabel : true , 
+		style : 'width: 100%; margin-left: 10px;',
+		uId : 'pnlDataHolder'  
+		 				}">
+
+
+
+<!-- Order Number  -->
+
+
+
+	 <div data-dojo-type="sc/plat/dojo/widgets/Label" data-dojo-props="	spanLabel : true,
+	 	'class' : 'idxLabel' , 
+		uId : 'extn_lblOrderNo'  
+ 		,scParamDataFn :
+		 function() { 
+			return { 
+			 	value : 			this.getSimpleBundleString('extn_Label_OrderNo')
+			}
+		}
+"></div>
+
+    <div data-dojo-type="sc/plat/dojo/widgets/DataLabel" data-ibmsc-uid="lbl_OrderNum"
+    data-dojo-props="	spanLabel : true , 
+    	'class' : 'primaryInformation  autoLabelZeroWidth comappsWrapWord orderNumber a11yHiddenLabel' , 
+		uId : 'lbl_OrderNum'  
+ 		,scParamDataFn :
+		 function() { 
+			return { 
+
+			 	label : 			this.getBundleString('extn_Label_OrderNo')
+,	
+				title : 			this.getSimpleBundleString('Tooltip_OrderNoLinkAlt')
+,
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 path : 			'Order.OrderNo'
+,
+		 namespace : 			'Order'
+	}
+	}
+			}
+		}
+"></div>
+
+
+
+<!-- Order Status -->
+
+<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" data-ibmsc-uid="lbl_Status"
+    data-dojo-props="		spanLabel : true , 
+    	'class' : 'blockComponent zeroWidthLabelKey autoLabelZeroWidth comappsWrapWord a11yHiddenLabel groupLabelSpacing statusLabel' , 
+		uId : 'lbl_Status'  
+ 		,scParamDataFn :
+		 function() { 
+			return { 
+			 	label : 			this.getBundleString('Label_Status')
+,	
+			 	bindingData : 	{
+		 sourceBinding : 	{
+
+		 		 path : 			'Order.Status'
+,
+		 namespace : 			'Order'
+	
+
+
+
+	}
+	}
+			}
+		}
+"></div>
+
+
+<!-- Order date  -->
+
+
+ <div data-dojo-type="sc/plat/dojo/widgets/DataLabel" data-dojo-props="		scuiDataType : 'DATE' , 
+ 'class' : 'blockComponent autoLabelZeroWidth comappsWrapWord' , 
+		uId : 'lblOrderDateDisplay'  
+ 		,scParamDataFn :
+		 function() { 
+			return { 
+			 	label : 			this.getBundleString('Order Date')
+,	
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 path : 			'Order.OrderDate'
+,
+		 namespace : 			'Order'
+	}
+	}
+			}
+		}
+"></div>
+
+
+<!-- 
+Customer Name  -->
+
+
+
+<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" data-ibmsc-uid="lbl_CustName"
+    data-dojo-props="		'class' : '	a11yHiddenLabel comappsWrapWord autoLabelZeroWidth groupLabelSpacing' , spanLabel : true,
+
+		uId : 'lbl_CustName'  
+ 		,scParamDataFn :
+		 function() { 
+			return { 
+				label : 			this.getBundleString('Label_Status')
+,	
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 path : 			'Order.CustomerFirstName'
+,
+		 namespace : 			'Order'
+	},
+
+	}
+			}
+		}
+"></div>
+<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" data-ibmsc-uid="lbl_CustName"
+    data-dojo-props="		'class' : 'a11yHiddenLabel comappsWrapWord autoLabelZeroWidth groupLabelSpacing' ,  spanLabel : true,
+		uId : 'lbl_CustName'  
+ 		,scParamDataFn :
+		 function() { 
+			return { 
+
+				label : 			this.getBundleString('Label_Status')
+,	
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 path : 			'Order.CustomerLastName'
+,
+		 namespace : 			'Order'
+	},
+
+	}
+			}
+		}
+"></div>
+
+
+</div>
+
+
+ <div data-dojo-type="idx/layout/ContentPane" data-ibmsc-uid="pnlActionHolder"
+    data_dojo_props_identifier="{
+		 							spanLabel : true , 
+		 							style : 'width: 40%; display: table-cell;    vertical-align: middle; margin-top: 5px;',
+		uId : 'pnlActionHolder'  
+		 				}">
+ 
+ <div data-dojo-type="sc/plat/dojo/widgets/Link" data-ibmsc-uid="lnk_VeiwOrderSummary" data_dojo_props_identifier="{
+ spanLabel: true,
+'class': 'blockComponent actionLinks',
+uId: 'lnk_VeiwOrderSummary',
+}
+">
+	
+	 <div data-dojo-type="sc/plat/dojo/widgets/Label" data-dojo-props="	spanLabel : true,
+	 	'class' : 'idxLabel primaryInformation' , 
+	 	style:'line-height: 1.8; color:inherit;',
+		uId : 'extn_lblVeiwOrderSummary'  
+ 		,scParamDataFn :
+		 function() { 
+			return { 
+			 	value : 			this.getSimpleBundleString('extn_Label_Veiw_Order_Summary')
+			}
+		}
+"></div>
+
+
+</div>
+
+
+
+</div>
+
+
+</div>
+
+</div>
+
+

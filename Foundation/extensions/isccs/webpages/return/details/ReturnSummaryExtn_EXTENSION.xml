@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExtensionMetaData>
+    <ScreenExtension extnClassName="ReturnSummaryExtn"
+        extnPackage="extn.return.details"
+        originalScreen="isccs.return.details.ReturnSummary"
+        originalScreenPackage="isccs.return.details" type="diffrential">
+        <Items>
+            <Link _sc_extensibility_moveOrder="1"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="lblChannelDisplay"
+                label="$(_scBundle:extn_Tracking_Number)"
+                uId="extn_lnkTrackingNo" value="$(_scSimpleBundle:extn_Tracking_Number)">
+                <BindingData>
+                    <SourceBinding
+                        namespace="getCompleteOrderDetails_output" path="Order.Extn.ExtnTrackingNo"/>
+                </BindingData>
+            </Link>
+        </Items>
+        <Subscribers>
+            <Local>
+                <Subscriber description="Track return order shipment"
+                    eventId="extn_lnkTrackingNo_onClick" isExtn="true" sequence="51">
+                    <Handler methodName="extn_TrackReturnOrder"/>
+                </Subscriber>
+            </Local>
+        </Subscribers>
+    </ScreenExtension>
+</ExtensionMetaData>

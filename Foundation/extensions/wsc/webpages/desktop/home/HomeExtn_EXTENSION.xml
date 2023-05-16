@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExtensionMetaData>
+    <ScreenExtension extnClassName="HomeExtn"
+        extnPackage="extn.desktop.home"
+        originalScreen="wsc.desktop.home.Home"
+        originalScreenPackage="wsc.desktop.home" type="diffrential">
+        <Items>
+            <ContentPane _sc_extensibility_moveOrder="2"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="mainContainer" uId="extn_contentpane"/>
+            
+            <Link _sc_extensibility_moveOrder="3"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="first"
+                _sc_extensibility_referenceUId="extn_contentpane"
+                appendToContextRoot="true" hasImage="true"
+                imageSrc="wsc/resources/css/icons/images/refresh.png"
+                imageText="$(_scSimpleBundle:Action_Refresh)"
+                style="padding-left: 26px; padding-bottom: 8px;" uId="extn_HomeRefresh_link"/>
+        </Items>
+        <Subscribers>
+            <Local>
+                <Subscriber eventId="extn_HomeRefresh_link_onClick"
+                    isExtn="true" sequence="51">
+                    <Handler methodName="extn_refreshHomeScreen_method"/>
+                </Subscriber>
+            </Local>
+        </Subscribers>
+    </ScreenExtension>
+</ExtensionMetaData>

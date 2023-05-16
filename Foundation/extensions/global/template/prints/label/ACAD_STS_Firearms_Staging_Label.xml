@@ -1,0 +1,11 @@
+<LabelFieldMap>
+        <LabelField Binding="Shipment/@CustomerName" DataType="Text" LabelFieldName="CustomerName" RepeatingElement="" Sequence="N" />
+        <LabelField Binding="Shipment/@AltPickUpPerson" DataType="Text" LabelFieldName="AltPickUpPerson" RepeatingElement="" Sequence="N" />
+        <LabelField Binding="Shipment/@ShipmentNo" DataType="Text" LabelFieldName="ShipmentNo" RepeatingElement="" Sequence="N" />
+        <LabelField Binding="Shipment/@OrderNo" DataType="Text" LabelFieldName="OrderNo" RepeatingElement="" Sequence="N" />
+        <LabelField Binding="Shipment/@OrderDate" DataType="Text" LabelFieldName="OrderDate" RepeatingElement="" Sequence="N" />
+        <LabelField Binding="Shipment/@PickUpDate" DataType="Text" LabelFieldName="PickUpDate" RepeatingElement="" Sequence="N" />
+        <LabelField Binding="Shipment/@Quantity" DataType="Text" LabelFieldName="ItemQty" RepeatingElement="" Sequence="N" />
+        <LabelField Binding="Shipment/@ShipmentNo" DataType="Text" LabelFieldName="ShipmentBarcode" RepeatingElement="" Sequence="N" />
+		<LabelField Binding="Shipment/@OrderNo" DataType="Text" LabelFieldName="OrderBarcode" RepeatingElement="" Sequence="N" />
+</LabelFieldMap>

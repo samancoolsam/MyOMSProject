@@ -1,0 +1,20 @@
+<OrderLineList>
+<OrderLine OrderNo="" OrderLineKey="" OrderedQty="" InvoicedQty="">
+<DerivedFromOrder DocumentType="" EnterpriseCode="" OrderNo="">
+<PaymentMethods>
+<PaymentMethod PaymentType="" SuspendAnyMoreCharges=""/>
+</PaymentMethods>
+</DerivedFromOrder>
+<Order OrderHeaderKey="" Createprogid=""/>
+<Item ItemID="">
+<Extn/>
+</Item>
+<LineOverallTotals />
+<LineCharges>
+<LineCharge/>
+</LineCharges>
+<LineTaxes>
+<LineTax />
+</LineTaxes>
+</OrderLine>
+</OrderLineList>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Controller
+    className="com.sterlingcommerce.ui.web.platform.controller.SCUIXAPIMashupController"
+    controllerId="extn.components.batch.batchlist.BatchListDetailsScreenExtnBehaviorController"
+    requestMethodSupported="POST" screenId="extn.components.batch.batchlist.BatchListDetailsScreenExtn">
+    <MashupRefs>
+        <MashupRef extnType="ADD" mashupId="extn_ResetBatch"
+            mashupRefId="extn_ResetBatch" permissionId=""/>
+        <MashupRef extnType="ADD" mashupId="extn_PrintBatch"
+            mashupRefId="extn_PrintBatch" permissionId=""/>
+        <MashupRef extnType="ADD" mashupId="extn_PrintBatchNew"
+            mashupRefId="extn_PrintBatchNew" permissionId=""/>
+    </MashupRefs>
+</Controller>

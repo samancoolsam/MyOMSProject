@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ScreenBundle
+    screenBundleId="extn.order.details.OrderLineSummaryExtnBundle" screenId="extn.order.details.OrderLineSummaryExtn">
+    <BundleEntries>
+        <BundleEntry bundleEntryId="extn_promiseDate_DataLabel_label"
+            bundleKey="extn_Promised_Date" bundleValueFn="_scBundle"
+            property="label" type="WIDGET" uId="extn_promiseDate"/>
+	     <!-- End OMNI 12935 -->
+    </BundleEntries>
+</ScreenBundle>

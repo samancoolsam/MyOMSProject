@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- AFTER_CREATE_CUSTOMER event XML   -->
+<Customer ModifyTS="" MaxModifyTS="" CustomerID="" SyncTS="" CustomerKey="" CustomerType="" ExternalCustomerID="" OrganizationCode="" RegisteredDate="" Modifyprogid="" Operation="">
+       <Extn ExtnTaxExemptID=""/>
+    <CustomerContactList TotalNumberOfRecords="">
+        <CustomerContact ApproverProxyUserId="" ApproverUserId=""
+            Company="" CustomerContactID="" DateOfBirth="" DayFaxNo=""
+            DayPhone="" EmailID="" EveningFaxNo="" EveningPhone=""
+            FirstName="" LastName="" MiddleName="" MobilePhone=""
+            SpendingLimit="" SpendingLimitCurrency=""
+            SpouseDateOfBirth="" Title="" UserID="" WeddingAnniversaryDate="" Modifyprogid="">
+			<Extn ExtnIsCorporateCustomer="" ExtnRequiresWebprofileID="" ExtnIsRedLined="" ExtnOptIn=""/>
+            <CustomerAdditionalAddressList TotalNumberOfRecords="">
+                <CustomerAdditionalAddress AddressType=""
+                    CustomerAdditionalAddressID="" IsBillTo=""
+                    IsDefaultBillTo="" IsDefaultShipTo=""
+                    IsDefaultSoldTo="" IsShipTo="" IsSoldTo="">
+                    <PersonInfo AddressLine1="" AddressLine2=""
+                        AddressLine3="" AddressLine4="" AddressLine5=""
+                        AddressLine6="" AlternateEmailID="" Beeper=""
+                        City="" Company="" Country="" DayFaxNo=""
+                        DayPhone="" Department="" EMailID="" ErrorTxt=""
+                        EveningFaxNo="" EveningPhone="" FirstName=""
+                        HttpUrl="" JobTitle="" LastName="" Latitude=""
+                        Longitude="" MiddleName="" MobilePhone=""
+                        OtherPhone="" PersonID="" PersonInfoKey=""
+                        PreferredShipAddress="" State="" Suffix=""
+                        Title="" UseCount="" VerificationStatus="" ZipCode="">
+						<Extn  ExtnAddressNickName="" ExtnIsAddressVerified="" ExtnIsMilitary="" ExtnIsSignatureRequired="" ExtnIsPOBOXADDRESS="" ExtnIsAPOFPO=""/>
+					</PersonInfo>
+                </CustomerAdditionalAddress>
+            </CustomerAdditionalAddressList>
+        </CustomerContact>
+    </CustomerContactList>
+    <CustomerAdditionalAddressList TotalNumberOfRecords="">
+        <CustomerAdditionalAddress AddressType=""
+            CustomerAdditionalAddressID="" IsBillTo=""
+            IsDefaultBillTo="" IsDefaultShipTo="" IsDefaultSoldTo=""
+            IsInherited="" IsShipTo="" IsSoldTo="">
+            <PersonInfo AddressLine1="" AddressLine2="" AddressLine3=""
+                AddressLine4="" AddressLine5="" AddressLine6=""
+                AlternateEmailID="" Beeper="" City="" Company=""
+                Country="" DayFaxNo="" DayPhone="" Department=""
+                EMailID="" ErrorTxt="" EveningFaxNo="" EveningPhone=""
+                FirstName="" HttpUrl="" JobTitle="" LastName=""
+                Latitude="" Longitude="" MiddleName="" MobilePhone=""
+                OtherPhone="" PersonID="" PersonInfoKey=""
+                PreferredShipAddress="" State="" Suffix="" Title=""
+                UseCount="" VerificationStatus="" ZipCode="">
+				<Extn  ExtnAddressNickName="" ExtnIsAddressVerified="" ExtnIsMilitary="" ExtnIsSignatureRequired="" ExtnIsPOBOXADDRESS="" ExtnIsAPOFPO=""/>
+			</PersonInfo>
+        </CustomerAdditionalAddress>
+    </CustomerAdditionalAddressList>
+ </Customer>

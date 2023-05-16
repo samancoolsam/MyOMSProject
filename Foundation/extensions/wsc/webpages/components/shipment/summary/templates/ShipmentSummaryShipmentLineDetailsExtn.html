@@ -1,0 +1,273 @@
+		<div>
+		<!-- OMNI-71678 - Editable Staging Location - Start -->
+			<div data-dojo-type="idx/form/TextBox" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_txtStagingLoc' , 
+		_sc_extensibility_moveOrder : '13' , 
+		regExp : '[^,][^,]*' , 
+		'class' : 'autoLabelZeroWidth' ,
+		style : 'display: inline-block;' ,
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_position : 'before' , 
+		_sc_extensibility_referenceUId : 'lbl_Quantity'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	bindingData : 	{
+		 targetBinding : 	[
+	 		{
+		 path : 			'HoldLocation'
+,
+		 namespace : 			'extn_HoldLocation_Add_staging'
+,
+		 scExtensibilityArrayItemId : 			'extn_TargetBindings_0'
+	}
+	]
+,
+		 sourceBinding : 	{
+		 path : 			'ShipmentLine.Extn.ExtnStagingLocation'
+,
+		 namespace : 			'shipmentLine_Src'
+	}
+	}
+,	
+			 	label : 			this.getSimpleBundleString('extn_Staging_Location')
+			}
+		}
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="dijit/form/Button" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_btnEdit' , 
+									style : 'display: inline-block; padding:10px' ,  
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '14' , 
+		_sc_extensibility_position : 'after' , 
+		_sc_extensibility_referenceUId : 'extn_txtStagingLoc'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	label : 			this.getSimpleBundleString('Action_Edit')
+			}
+		}
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="dijit/form/Button" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_btnUpdate' ,
+									style : 'display: inline-block;' ,  									
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '15' , 
+		_sc_extensibility_position : 'after' , 
+		_sc_extensibility_referenceUId : 'extn_btnEdit'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	label : 			this.getSimpleBundleString('Action_Update')
+			}
+		}
+	 					}">
+		 	</div>  
+	<!-- OMNI-71678 - Editable Staging Location - END -->
+		 	<div data-dojo-type="idx/layout/ContentPane" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								_sc_extensibility_operation : 'insert' , 
+		'class' : 'inline shortageQty' , 
+		_sc_extensibility_moveOrder : '1' , 
+		_sc_extensibility_referenceUId : 'lbl_PackedQty' , 
+		uId : 'extn_ShortageReason' , 
+		_sc_extensibility_position : 'after'  
+	 					}">
+		 	</div>  
+			<div data-dojo-type="sc/plat/dojo/widgets/Link" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								_sc_extensibility_operation : 'change' , 
+		'class' : 'groupHeader blockComponent productdesclink disableLink' , 
+		_sc_extensibility_referenceUId : 'itemdescriptionLink'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								_sc_extensibility_operation : 'change' , 
+		_sc_extensibility_referenceUId : 'lbl_Quantity'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	label : 			this.getSimpleBundleString('extn_Current_Quantity')
+			}
+		}
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '3' , 
+		'class' : 'blockComponent zeroWidthLabelKey' , 
+		_sc_extensibility_referenceUId : 'lbl_Quantity' , 
+		uId : 'extn_datalabel' , 
+		_sc_extensibility_position : 'after'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	label : 			this.getSimpleBundleString('extn_Original_Quantity')
+,	
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 path : 			'ShipmentLine.OriginalQuantity'
+,
+		 dynamicBindingFunc : 			'getOriginalQuantity'
+,
+		 namespace : 			'shipmentLine_Src'
+	}
+	}
+			}
+		}
+	 					}">
+		 	</div>
+		 	<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								_sc_extensibility_operation : 'change' , 
+		_sc_extensibility_referenceUId : 'lbl_ShortedQty' , 
+		renderHidden : false  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								_sc_extensibility_operation : 'move' , 
+		_sc_extensibility_moveOrder : '3' , 
+		_sc_extensibility_referenceUId : 'extn_CancelReason' , 
+		uId : 'lbl_ShortedQty' , 
+		_sc_extensibility_position : 'after'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								_sc_extensibility_operation : 'move' , 
+		_sc_extensibility_moveOrder : '4' , 
+		_sc_extensibility_referenceUId : 'extn_CancelReason' , 
+		uId : 'lbl_ShortedQty' , 
+		_sc_extensibility_position : 'before'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								_sc_extensibility_operation : 'insert' , 
+		'class' : 'autoLabelZeroWidth' , 
+		_sc_extensibility_moveOrder : '2' , 
+		_sc_extensibility_referenceUId : 'extn_ShortageReason' , 
+		uId : 'extn_CancelReason' , 
+		renderHidden : true , 
+		_sc_extensibility_position : 'first'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	label : 			this.getBundleString('Label_CancelReason')
+,	
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 path : 			'ShipmentLine.CancelReason'
+,
+		 dynamicBindingFunc : 			'getCancelReason'
+,
+		 namespace : 			'shipmentLine_Src'
+	}
+	}
+			}
+		}
+	 					}">
+		 	</div>  
+		 			 	<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '4' , 
+		_sc_extensibility_referenceUId : 'itemVariationHolderCP' , 
+		uId : 'extn_datalabel' , 
+		_sc_extensibility_position : 'after'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	label : 			this.getBundleString('extn_Staging_Location')
+,	
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 path : 			'ShipmentLine.Extn.ExtnStagingLocation'
+,
+		 namespace : 			'shipmentLine_Src'
+	}
+	}
+			}
+		}
+	 					}">
+		 	</div> 
+			<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								renderHidden : true , 
+		uId : 'extn_save_the_sale_label' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '3' , 
+		'class' : 'extn_SaveTheSalelabelCss' , 
+		_sc_extensibility_position : 'first' , 
+		_sc_extensibility_referenceUId : 'extn_ShortageReason'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	label : 			this.getSimpleBundleString('Save The Sale')
+,	
+			 	title : 			this.getSimpleBundleString('Save The Sale')
+,	
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 path : 			'ShipmentLine.OrderLine.Extn.ExtnOriginalFulfillmentType'
+,
+		 dynamicBindingFunc : 			'isSaveTheSalesLine'
+,
+		 namespace : 			'shipmentLine_Src'
+	}
+	}
+			}
+		}
+	 					}">
+		 	</div>  
+
+     <!-- OMNI-105507 - AlternateStore - START -->
+
+    <div data-dojo-type="sc/plat/dojo/widgets/DataLabel" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_AlternateStore' , 
+									renderHidden : true ,
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '12' , 
+		'class' : 'highLightRed autoLabelZeroWidth blockComponent location' ,
+		_sc_extensibility_position : 'after' , 
+		_sc_extensibility_referenceUId : 'lbl_ShortedQty'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	label : 			this.getSimpleBundleString('Moved_To_Alternate_Store')
+			}
+		}
+	 					}">
+		 	</div>
+
+ <div data-dojo-type="sc/plat/dojo/widgets/DataLabel" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_AlternateStoreAddress' , 
+									renderHidden : true ,
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '12' , 
+		'class' : 'highLightRed autoLabelZeroWidth blockComponent location' ,
+		_sc_extensibility_position : 'after' , 
+		_sc_extensibility_referenceUId : 'extn_AlternateStore'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	label : 			this.getSimpleBundleString('')
+			}
+		}
+	 					}">
+		 	</div>
+
+   <!-- OMNI-105507 - AlternateStore - END -->
+
+
+		</div>

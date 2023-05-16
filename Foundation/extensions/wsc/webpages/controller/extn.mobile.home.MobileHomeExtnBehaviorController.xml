@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Controller
+    className="com.sterlingcommerce.ui.web.platform.controller.SCUIXAPIMashupController"
+    controllerId="extn.mobile.home.MobileHomeExtnBehaviorController"
+    requestMethodSupported="POST" screenId="extn.mobile.home.MobileHomeExtn">
+    <MashupRefs>
+        <MashupRef extnType="ADD" mashupId="extn_SFSOrdersCount"
+            mashupRefId="extn_SFSOrderForBatches" permissionId=""/>
+	<!-- Start - OMNI-5402 : Curbside Pickup home screen -->
+        <MashupRef extnType="ADD" mashupId="extn_CurbsidePickupOrders"
+            mashupRefId="extn_curbsidePickupOrdersCount" permissionId=""/>
+	<!-- End - OMNI-5402 : Curbside Pickup home screen -->
+	<!-- Start - OMNI-6579,6580 : STS home screen changes-->
+        <MashupRef extnType="ADD"
+            mashupId="extn_STSReceiveContainersCount"
+            mashupRefId="extn_STSReceiveContainers" permissionId=""/>
+        <MashupRef extnType="ADD"
+            mashupId="extn_STSStageContainersCount"
+            mashupRefId="extn_STSStageContainers" permissionId=""/>
+	 <!-- END - OMNI-6579,6580 : STS home screen changes-->   
+		<!--OMNI-67538 Feature Toggle Changes - START -->
+        <MashupRef extnType="ADD" mashupId="extn_AuditShipmentToggle"
+            mashupRefId="extn_AuditShipmentFeatureToggle" permissionId=""/>
+		<!--OMNI-67538 Feature Toggle Changes - END -->
+        <!--OMNI-71303 Begin-->
+        <MashupRef extnType="ADD" mashupId="extn_OnMyWayOrdersCount"
+            mashupRefId="extn_OnMyWayOrdersCount" permissionId=""/>
+        <!--OMNI-71303 End-->
+        <!--OMNI-72164 Begin-->
+        <MashupRef extnType="ADD" mashupId="extn_OnMyWayFeatureToggle"
+            mashupRefId="extn_OnMyWayFeatureToggle" permissionId=""/>
+        <!--OMNI-72164 Begin-->
+		<!--OMNI-72475 Begin-->
+		<MashupRef extnType="ADD" mashupId="extn_OnMyWayTimerToggle"
+            mashupRefId="extn_OnMyWayTimerToggle" permissionId=""/>
+		<!--OMNI-72475 End-->
+		<!--OMNI-72474 Begin-->
+        <MashupRef extnType="ADD"
+          mashupId="extn_StoreWorkingHours" mashupRefId="extn_StoreWorkingHours"/>
+        <!--OMNI-72474 End-->
+		<!--OMNI-81802 Begin-->
+         <MashupRef extnType="ADD" mashupId="extn_CommonCodeMashup"
+            mashupRefId="extn_MissedScanFeatureToggle" permissionId=""/>
+        <!--OMNI-81802 End-->
+		<!--OMNI-83367 Begin-->
+         <MashupRef extnType="ADD" mashupId="extn_CurbsideExtensions"
+            mashupRefId="extn_CurbsideExtensions_ref" permissionId=""/>
+        <!--OMNI-83367 End-->      
+		<!--START : OMNI-101859,OMNI-102131,OMNI-85177 -->
+		<MashupRef extnType="ADD" mashupId="extn_DetermineUIToggle"
+            mashupRefId="extn_DetermineUIToggle_ref"/>
+		<!--END : OMNI-101859,OMNI-102131,OMNI-85177 -->
+
+        <!--START : OMNI-102102 OMNI-102286  -->
+        <MashupRef extnType="ADD" mashupId="extn_STSDeliveredContainersCount"
+            mashupRefId="extn_STSDeliveredContainersCount_ref"/>
+      <MashupRef extnType="ADD" mashupId="extn_STSIntransitContainersCount"
+            mashupRefId="extn_STSIntransitContainersCount_ref"/>
+         <!--END : OMNI-102102 OMNI-102286  -->
+      <!--OMNI-105498 Begin-->
+      <MashupRef extnType="ADD"
+                 mashupId="extn_InStorePickupOrdersCount" mashupRefId="extn_InStorePickupOrdersCount"/>
+      <!--OMNI-105498 End-->
+    </MashupRefs>
+</Controller>

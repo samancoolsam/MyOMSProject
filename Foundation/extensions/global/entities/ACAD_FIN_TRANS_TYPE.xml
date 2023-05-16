@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DBSchema>
+   <Entities>
+      <Entity ApiNeeded="Y" AuditRequired="N"
+      	Description="Academy financial transaction types"
+      	HasHistory="False" Prefix="ACAD"
+      	TableName="ACAD_FIN_TRANS_TYPE" XMLName="ACADFinTranTypes">
+      	<Attributes>
+      		<Attribute ColumnName="FIN_TRAN_TYPE_KEY"
+      			DataType="Key" DefaultValue="' '"
+      			Description="Sterling auto generated key"
+      			Name="AcademyFinTranTypeKey" Nullable="false" XMLGroup=""
+      			XMLName="AcademyFinTranTypeKey" />
+      		<Attribute ColumnName="FIN_TRAN_CODE"
+      			DataType="AcademyFinTranCodeType" DefaultValue="0"
+      			Description="Financial transaction code"
+      			Name="AcademyFinTranCode" Nullable="false" XMLGroup=""
+      			XMLName="AcademyFinTranCode" />
+      		<Attribute ColumnName="FIN_TRAN_DESCRIPTION"
+      			DataType="AcademyFinTranDescription" DefaultValue="' '"
+      			Description="Financial Transaction description"
+      			Name="AcademyFinTranDescription" Nullable="true" XMLGroup=""
+      			XMLName="AcademyFinTranDescription" />
+      		<Attribute ColumnName="FIN_IMPACT_FLAG"
+      			DataType="AcademyFinImpactFlag" DefaultValue="' '"
+      			Description="Flag to indicate finacial impact" Name="AcademyHasFinImpact"
+      			Nullable="true" XMLGroup="" XMLName="AcademyHasFinImpact" />
+      		<Attribute ColumnName="CREATETS" DataType="TimeStamp"
+      			DefaultValue="SYSDATE" Description="Create TimeStamp" />
+      		<Attribute ColumnName="MODIFYTS" DataType="TimeStamp"
+      			DefaultValue="SYSDATE" Description="Modify TimeStamp" />
+      		<Attribute ColumnName="CREATEUSERID" DataType="UserId"
+      			DefaultValue="' '" Description="Creating User ID" />
+      		<Attribute ColumnName="MODIFYUSERID" DataType="UserId"
+      			DefaultValue="' '" Description="Modifying User ID" />
+      		<Attribute ColumnName="CREATEPROGID" DataType="ProgramID"
+      			DefaultValue="' '" Description="Creating Program ID" />
+      		<Attribute ColumnName="MODIFYPROGID" DataType="ProgramID"
+      			DefaultValue="' '" Description="Modifying Program ID" />
+      		<Attribute ColumnName="LOCKID" DataType="Lockid"
+      			DefaultValue="0" Description="Lock ID" />
+      	</Attributes>
+      	<PrimaryKey Name="FIN_TRAN_TYPE_PK">
+      		<Attribute ColumnName="FIN_TRAN_TYPE_KEY"
+      			Name="AcademyFinTranTypeKey" />
+      	</PrimaryKey>
+      </Entity>
+   </Entities>
+</DBSchema>

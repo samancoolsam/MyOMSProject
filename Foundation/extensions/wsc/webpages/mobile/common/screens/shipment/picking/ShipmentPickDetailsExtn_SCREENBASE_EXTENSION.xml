@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExtensionMetaData>
+    <ScreenExtension extnClassName="ShipmentPickDetailsExtn"
+        extnPackage="extn.mobile.common.screens.shipment.picking"
+        originalScreen="wsc.mobile.common.screens.shipment.picking.ShipmentPickDetails"
+        originalScreenPackage="wsc.mobile.common.screens.shipment.picking" type="diffrential">
+        <Items>
+       <!-- OMNI- 10393 STS Identifier on the customer pick up screen  - START -->
+            <Label _sc_extensibility_moveOrder="19"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="extn_STSOrderNum" uId="extn_sts_tag_label">
+                <BindingData>
+                    <SourceBinding dynamicBindingFunc="extn_getSTSLabel"
+                        namespace="Shipment" path="DeliveryMethod"/>
+                </BindingData>
+            </Label>
+            <!-- OMNI- 10393 STS Identifier on the customer pick up screen  - END -->
+            <Label _sc_extensibility_moveOrder="1"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="lbl_Status" uId="extn_deliveryMethod">
+                <BindingData>
+                    <SourceBinding
+                        dynamicBindingFunc="getDeliveryMethod"
+                        namespace="Shipment" path="DeliveryMethod"/>
+                </BindingData>
+            </Label>
+	    <!--Start: OMNI-6585-->
+		<!--Start: OMNI-102104-->
+		<Label _sc_extensibility_moveOrder="35"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="lbl_Products" uId="extn_lblShipmentSource">
+                <BindingData>
+                    <SourceBinding namespace="Shipment" path="Shipment.ShipmentNodeType"/>
+                </BindingData>
+        </Label>
+		<!--End: OMNI-102104-->
+	    <!-- Start: OMNI-6624 -->
+	    <DataLabel _sc_extensibility_moveOrder="15"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="extn_STSOrderNum" uId="extn_stsCustomerName">
+                <BindingData>
+                    <SourceBinding
+                        dynamicBindingFunc="extn_CustomerNameForSTSOrders"
+                        namespace="Shipment" path="Shipment.BillToAddress.FirstName"/>
+                </BindingData>
+            </DataLabel>
+	    <!-- End: OMNI-6624 -->
+            <DataLabel _sc_extensibility_moveOrder="9"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="lbl_Products"
+                label="$(_scSimpleBundle:Label_Order_number_mobile)"
+                spanLabel="true" uId="extn_STSOrderNum">
+                <BindingData>
+                    <SourceBinding
+                        dynamicBindingFunc="getDisplayOrderNumberList"
+                        namespace="Shipment" path="Shipment.DisplayOrderNo"/>
+                </BindingData>
+            </DataLabel>
+            <DataLabel _sc_extensibility_moveOrder="12"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="lbl_Products"
+                label="$(_scSimpleBundle:extn_Label_NumberOfContainers)"
+                spanLabel="true" uId="extn_STSContainers">
+                <BindingData>
+                    <SourceBinding
+                        dynamicBindingFunc="getNumberOfContainersLabel"
+                        namespace="Shipment" path="Shipment.TotalContainers"/>
+                </BindingData>
+            </DataLabel>
+	    <!--End: OMNI-6585-->
+            <!-- OMNI-87502, OMNI-87879 - Start -->
+            <DataLabel _sc_extensibility_moveOrder="31"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="lbl_timeRemaining"
+                class="extnInlineBlock"
+                label="$(_scSimpleBundle:extn_Shipment_number)"
+                renderHidden="true" uId="extn_STS_ShipmentNo">
+                <BindingData>
+                    <SourceBinding namespace="Shipment" path="Shipment.ShipmentNo"/>
+                </BindingData>
+            </DataLabel>
+     	    <!-- OMNI-87502, OMNI-87879 - End -->
+            <DataLabel _sc_extensibility_moveOrder="4"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="lbl_Carrier"
+                class="extnInlineBlock"
+                label="$(_scSimpleBundle:extn_Shipment_number)" uId="extn_shipmentNo">
+                <BindingData>
+                    <SourceBinding namespace="Shipment" path="Shipment.ShipmentNo"/>
+                </BindingData>
+            </DataLabel>
+             <!--Start: STS Curbside SLA Changes-->
+            <DataLabel _sc_extensibility_moveOrder="21"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="lbl_timeRemaining"
+                class="a11yHiddenLabel duein dueInLabel"
+                label="$(_scBundle:DueIn)" spanLabel="true" uId="extn_lbl_timeRemaining">
+                <BindingData>
+                    <SourceBinding
+                        dynamicBindingClassName="MobileHomeUtils"
+                        dynamicBindingFunc="applyOverdueStyling"
+                        dynamicBindingPackage="wsc.mobile.home.utils"
+                        namespace="Shipment" path="Shipment.ExpectedShipmentDat"/>
+                </BindingData>
+            </DataLabel>
+        <!--End: STS Curbside SLA Changes-->
+		<!--Start: OMNI-72475-->
+			<DataLabel _sc_extensibility_moveOrder="23"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="lbl_IncludedInBatch"
+                class="blockComponent autoLabelZeroWidth comappsWrapWord extn_OnMyWayTimerCss"
+                renderHidden="true"
+                style="vertical-align:middle; padding-left:inherit;" uId="extn_OMWStatusTimer">
+                <BindingData>
+                    <SourceBinding
+                        dynamicBindingFunc="getOnMyWayStatusTimer"
+                        namespace="Shipment" path="Shipment.OMWStatusTimer"/>
+                </BindingData>
+            </DataLabel>
+		<!--OMNI-81595-MSL: Last Scan date Changes-START-->
+			<DataLabel _sc_extensibility_moveOrder="28"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="extn_stsCustomerName"
+                label="$(_scSimpleBundle:extn_Last_Scanned_On)"
+				uId="extn_STS_LastScan_Date">
+                <BindingData>
+                    <SourceBinding namespace="Shipment" path="Shipment.LastScanDate"/>
+                </BindingData>
+            </DataLabel>
+			<DataLabel _sc_extensibility_moveOrder="25"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="lbl_Status"
+                label="$(_scSimpleBundle:extn_Last_Scanned_On)"
+                uId="extn_Last_Scanned_On">
+                <BindingData>
+                    <SourceBinding namespace="Shipment" path="Shipment.LastScanDate"/>
+                </BindingData>
+            </DataLabel>
+		<!--OMNI-81595-MSL: Last Scan date Changes-END-->
+		<!--End: OMNI-72475-->
+
+          <!--Start: OMNI_95878-->
+           <Link _sc_extensibility_moveOrder="32"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="lnk_PackAction"
+                renderHidden="true" resourceId="WSC000015"
+                uId="extn_screenbase_link_Assembly" value="$(_scSimpleBundle:extn_Complete_Assembly1)"/>
+            <!--End: OMNI_95878-->
+	   <!--Start: OMNI-102418 OMNI-102127-->
+	    <Link ImageAlt="$(_scSimpleBundle:extn_Receive)"
+                _sc_extensibility_moveOrder="33"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="extn_screenbase_link_Assembly"
+                renderHidden="true" resourceId="WSC000015"
+                title="$(_scSimpleBundle:extn_Receive)"
+                uId="extn_Receive_link" value="$(_scSimpleBundle:extn_Receive)"/>
+	<!--End: OMNI-102418 OMNI-102127-->	
+        </Items>
+        <Subscribers>
+            <Local>
+                <Subscriber eventId="afterScreenInit" isExtn="true" sequence="51">
+                    <Handler methodName="extn_afterInitializeScreen"/>
+                </Subscriber>
+		<!--Start: OMNI-6585-->
+                <Subscriber eventId="afterBehaviorMashupCall"
+                    isExtn="true" sequence="51">
+                    <Handler methodName="extn_afterBehaviorMashupCall"/>
+                </Subscriber>
+		<!--End: OMNI-6585-->
+               <!-- OMNI - 9236 - Ship to Store Order Search "customer pick up" - START -->
+                <Subscriber
+                    description="extn_startCustomerPickProcessForContainer"
+                    eventId="lnk_RecordCustomerPickupAction_onClick"
+                    isExtn="true" sequence="19">
+                    <Handler methodName="extn_startCustomerPickProcessForContainer"/>
+                </Subscriber>
+		<!-- OMNI - 9236 - Ship to Store Order Search "customer pick up" - END -->
+        <!--Start:  STS Curbside SLA Changes-->
+                <Subscriber
+                    eventId="lnk_RecordCustomerPickupAction_onClick"
+                    isExtn="true" sequence="18">
+                    <Handler methodName="extn_RecordStoreUserAction"/>
+                </Subscriber>
+        <!--End : STS Curbside SLA Changes-->
+          <!--START: OMNI_95878-->
+          <Subscriber
+                    eventId="extn_screenbase_link_Assembly_onClick"
+                    isExtn="true" sequence="51">
+                    <Handler methodName="click_Assembly_btn"/>
+                </Subscriber>
+		     <!--End: OMNI_95878-->
+			<!--Start: OMNI-102418 OMNI-102127-->
+                <Subscriber eventId="extn_Receive_link_onClick"
+                    isExtn="true" sequence="51">
+                    <Handler methodName="receiveClick"/>
+		    </Subscriber>
+		    	<!--End: OMNI-102418 OMNI-102127-->
+            </Local>
+        </Subscribers>
+        <MashupRefs>
+            <Behavior>
+                <MashupRef extnType="ADD"
+                    mashupId="extn_getShipmentList" mashupRefId="extn_getShipmentList_mobile"/>
+		<!-- OMNI - 9236 - Ship to Store Order Search "customer pick up" - START -->
+                <MashupRef extnType="ADD"
+                    mashupId="extn_RFCP_getSOShipmentList" mashupRefId="extn_getSOShipmentList"/>
+		<!-- OMNI - 9236 - Ship to Store Order Search "customer pick up" - END -->
+        <!--Start:  STS Curbside SLA Changes-->
+                    <MashupRef extnType="ADD"
+                    mashupId="extn_RecordStoreUserActionMashup" mashupRefId="extn_RecordStoreUserActionMashup"/>
+		     <!--End:  STS Curbside SLA Changes-->
+			 <!-- OMNI-85083 : Starts -->
+                    <MashupRef extnType="ADD"
+                    mashupId="extn_RecordStoreUserActionConsldCurbside" mashupRefId="extn_RecordStoreUserActionConsldCurbside"/>
+		     <!-- OMNI-85083 : Ends -->
+            </Behavior>
+        </MashupRefs>
+    </ScreenExtension>
+</ExtensionMetaData>

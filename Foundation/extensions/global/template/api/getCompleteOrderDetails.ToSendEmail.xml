@@ -1,0 +1,130 @@
+<Order EmailText="" CustomerEMailID="" OrderNo="" OrderDate="" EnterpriseCode="" OrderHeaderKey="">
+	<OrderInvoiceList>
+		<OrderInvoice ShipmentKey="" InvoiceNo="" InvoiceType=""/>
+	</OrderInvoiceList>
+	<PersonInfoBillTo AddressLine1="" AddressLine2="" AddressLine3="" AlternateEmailID="" 
+	City="" Company="" Country="" DayFaxNo="" DayPhone="" 
+	Department="" EveningFaxNo="" EveningPhone="" FirstName="" LastName="" MiddleName="" 
+	State="" ZipCode="" IsPOBox="" IsMilitary="" ExtnAddressNickName=""
+	ExtnIsAPOFPO="" IsSignatureRequired="" IsAddressVerified="" ExtnIsAddressVerified="" EMailID="" />
+	<PersonInfoShipTo AddressLine1="" AddressLine2="" AddressLine3="" AlternateEmailID="" 
+	City="" Company="" Country="" DayFaxNo="" DayPhone="" 
+	Department="" EveningFaxNo="" EveningPhone="" FirstName="" LastName="" MiddleName="" 
+	State="" ZipCode="" IsPOBox="" IsMilitary="" ExtnAddressNickName=""
+	ExtnIsAPOFPO="" IsSignatureRequired="" IsAddressVerified="" ExtnIsAddressVerified="" EMailID="" />
+	<PersonInfoMarkFor AddressLine1="" AddressLine2="" AddressLine3="" AlternateEmailID="" 
+	City="" Company="" Country="" DayFaxNo="" DayPhone="" 
+	Department="" EveningFaxNo="" EveningPhone="" FirstName="" LastName="" MiddleName="" 
+	State="" ZipCode="" IsPOBox="" IsMilitary="" ExtnAddressNickName=""
+	ExtnIsAPOFPO="" IsSignatureRequired="" IsAddressVerified="" ExtnIsAddressVerified="" EMailID="" />
+	<OverallTotals GrandTotal="" LineSubTotal="" GrandDiscount="" GrandCharges="" GrandTax="" />
+	<OrderLines>
+		<OrderLine OrderLineKey="" CarrierServiceCode="" OrderedQty="" OriginalOrderedQty="" InvoicedQty="" DerivedFromOrderHeaderKey="" 
+		DerivedFromOrderLineKey="" DeliveryMethod="" PackListType="">
+			<DerivedFromOrder DocumentType="" OrderNo="">
+			<PaymentMethods>
+				<PaymentMethod PaymentType="" DisplayCreditCardNo="" MaxChargeLimit="" SvcNo="" CreditCardNo="" DisplaySvcNo="" CreditCardType=""/>
+			</PaymentMethods>
+			</DerivedFromOrder>
+			<DerivedFromOrderLine OrderLineKey="" OrderedQty="" OriginalOrderedQty=""/>
+			<Instructions>
+				<Instruction InstructionType="" InstructionText=""/>
+			</Instructions>
+			<LineOverallTotals Charges="" Discount="" ExtendedPrice="" LineTotal="" OptionPrice="" PricingQty="" Tax="" UnitPrice=""/>
+			<ItemDetails ItemID="">
+				<PrimaryInformation Description ="" ImageLocation="" ImageID=""/>
+				<Extn ExtnWhiteGloveEligible=""/>
+			</ItemDetails>
+			<LineCharges>
+				<LineCharge ChargeAmount="" ChargeCategory="" ChargeName="" ChargePerLine="" IsBillable="" IsDiscount=""/>
+			</LineCharges>
+			<LineTaxes>
+				<LineTax ChargeCategory="" ChargeName="" Tax=""/>
+			</LineTaxes>
+			<PersonInfoShipTo DayPhone="" FirstName="" LastName="" AddressLine1="" AddressLine2="" AddressLine3="" City="" State="" ZipCode=""/>
+			<ShipmentLines>
+				<ShipmentLine ShipmentKey="" OrderLineKey=""/>
+			</ShipmentLines>
+			<Item UnitCost="" />
+			<LinePriceInfo ActualPricingQty="" BundleTotal=""
+                BundleUnitPrice="" DiscountPercentage=""
+                DisplayUnitPrice="" InvoicedLineTotal=""
+                InvoicedPricingQty="" IsLinePriceForInformationOnly=""
+                IsPriceLocked="" LineTotal="" ListPrice=""
+                OrderedPricingQty="" PricingQtyConversionFactor=""
+                PricingUOM="" RepricingQty="" RetailPrice=""
+                SettledAmount="" SettledQuantity=""
+                TaxExemptionCertificate="" TaxableFlag="" UnitPrice=""/>
+				<!-- Start OMNI -40289,40848 changes -->
+               <Extn ExtnInitialPromiseDate=""/> 
+               <!-- End OMNI -40289,40848 changes -->
+		</OrderLine>
+	</OrderLines>
+	<PaymentMethods>
+		<PaymentMethod PaymentType="" DisplayCreditCardNo="" MaxChargeLimit="" SvcNo="" DisplaySvcNo="" CreditCardType=""
+			PaymentReference5="" />
+	</PaymentMethods>
+	<OrderHoldTypes>
+		<OrderHoldType HoldType="" />
+	</OrderHoldTypes>
+	<Shipments>
+
+		<!-- Start WN-1627 Phase 1 Tracking link update from old to Narvar Link -->
+
+		<!-- SOF :: WN-1814 Ready for Customer Pickup Email  - Added ShipmentType Attribute -->
+		<Shipment ShipmentKey="" CarrierServiceCode = "" SCAC="" ScacAndService="" ActualShipmentDate="" ProNo="" ShipmentType="" DeliveryMethod="" ShipmentNo="" >
+		<ShipmentStatusAudits>
+				<ShipmentStatusAudit NewStatus="" NewStatusDate="" OldStatus="" OldStatusDate="" ShipmentKey="" />
+			</ShipmentStatusAudits>
+			<Extn ExtnSopModifyts="" ExtnShipmentPickedBy="" />
+			<ShipNode ShipNodeKey="" NodeType="">
+				<ShipNodePersonInfo ZipCode = ""/>
+			</ShipNode>
+			<!-- End WN-1627 Phase 1 Tracking link update from old to Narvar Link -->
+
+			<Containers TotalNumberOfRecords="">
+				<Container TrackingNo="" SCAC=""/>
+			</Containers>
+			<ShipmentLines>
+				<!-- Start : OMNI-9414 : Multiple emails for STS and BOPIS -->
+				<!-- Start OMNI-50596 - Email - Drop Ship Vendor email to Listrak - added  ChainedFromOrderHeaderKey-->
+				<ShipmentLine OrderLineKey="" ShipmentKey="" Quantity="" ChainedFromOrderLineKey="">
+				<!-- End OMNI-50596 - Email - Drop Ship Vendor email to Listrak -->
+					<OrderLine OrderLineKey="" CarrierServiceCode="" OrderedQty="" OriginalOrderedQty="" InvoicedQty="" DerivedFromOrderHeaderKey="" DerivedFromOrderLineKey="" DeliveryMethod="">
+						<DerivedFromOrder DocumentType="" OrderNo=""/>
+						<DerivedFromOrderLine OrderLineKey="" OrderedQty="" OriginalOrderedQty=""/>
+						<Instructions>
+							<Instruction InstructionType="" InstructionText=""/>
+						</Instructions>
+						<LineOverallTotals Charges="" Discount="" ExtendedPrice="" LineTotal="" OptionPrice="" PricingQty="" Tax="" UnitPrice=""/>
+						<ItemDetails ItemID="">
+							<PrimaryInformation Description ="" ImageLocation="" ImageID=""/>
+							<Extn ExtnWhiteGloveEligible=""/>
+						</ItemDetails>
+						<LineCharges>
+							<LineCharge ChargeAmount="" ChargeCategory="" ChargeName="" ChargePerLine="" IsBillable="" IsDiscount=""/>
+						</LineCharges>
+						<LineTaxes>
+							<LineTax ChargeCategory="" ChargeName="" Tax=""/>
+						</LineTaxes>
+						<PersonInfoShipTo DayPhone="" FirstName="" LastName="" AddressLine1="" AddressLine2="" AddressLine3="" City="" State="" ZipCode=""/>
+						<ShipmentLines>
+							<ShipmentLine ShipmentKey="" OrderLineKey=""/>
+						</ShipmentLines>
+						<Item UnitCost="" />
+						<LinePriceInfo ActualPricingQty="" BundleTotal=""
+							BundleUnitPrice="" DiscountPercentage=""
+							DisplayUnitPrice="" InvoicedLineTotal=""
+							InvoicedPricingQty="" IsLinePriceForInformationOnly=""
+							IsPriceLocked="" LineTotal="" ListPrice=""
+							OrderedPricingQty="" PricingQtyConversionFactor=""
+							PricingUOM="" RepricingQty="" RetailPrice=""
+							SettledAmount="" SettledQuantity=""
+							TaxExemptionCertificate="" TaxableFlag="" UnitPrice=""/>
+					</OrderLine>
+				</ShipmentLine>
+				<!-- End : OMNI-9414 : Multiple emails for STS and BOPIS -->
+			</ShipmentLines>
+		</Shipment>
+	</Shipments>
+</Order>

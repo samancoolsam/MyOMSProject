@@ -1,0 +1,9 @@
+<DBSchema>
+<Entities>
+<Entity TableName="YFS_ITEM">
+<Attributes>
+<Attribute ColumnName="EXTN_MULTIBOX" DataType="Flag"  DefaultValue="N" Description="Multibox Flag" Name="ExtnMultibox" Nullable="false" Size="1" Type="Flag" XMLName="ExtnMultibox" XMLGroup="Extn"/>
+</Attributes>
+</Entity>
+</Entities>
+</DBSchema>

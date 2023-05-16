@@ -1,0 +1,28 @@
+<%@ page import="com.yantra.yfc.dom.*" %>
+<%
+	YFCElement rootElement = (YFCElement) request.getAttribute("Manifest");
+	
+	YFCElement elemShipmentList = rootElement.getChildElement("Shipments");
+	int totalNumberOfShipments = elemShipmentList.getIntAttribute("TotalNumberOfRecords");
+	int numberOfShipmentsManifested = rootElement.getIntAttribute("NumberOfShipmentsManifestedCompletely");
+
+	YFCElement elemLoadList = rootElement.getChildElement("Loads");
+	int totalNumberOfLoads = elemLoadList.getIntAttribute("TotalNumberOfRecords");
+	int numberOfLoadsManifested = rootElement.getIntAttribute("NumberOfLoadsManifestedCompletely");
+
+	int partialManiShips = 0;
+	partialManiShips = totalNumberOfShipments - numberOfShipmentsManifested;
+
+	int partialManiLoads = 0;
+	partialManiLoads = totalNumberOfLoads - numberOfLoadsManifested;
+
+        int totalPackManifested = 0;
+		totalPackManifested = rootElement.getIntAttribute("NumberOfContainersManifested");
+        int totalContainers = 0;
+		totalContainers = rootElement.getIntAttribute("TotalNumberOfContainers");
+        int totalPacksToManifest = totalContainers - totalPackManifested;       
+	
+        rootElement.setIntAttribute("TotalPacksToManifest", totalPacksToManifest);
+		rootElement.setIntAttribute("PartialManifestedShipments", partialManiShips);
+		rootElement.setIntAttribute("PartialManifestedLoads", partialManiLoads);
+%>

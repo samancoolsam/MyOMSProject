@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExtensionMetaData>
+    <ScreenExtension extnClassName="ExistingOrderLineExtn"
+        extnPackage="extn.return.create.lines"
+        originalScreen="isccs.return.create.lines.ExistingOrderLine"
+        originalScreenPackage="isccs.return.create.lines" type="diffrential">
+        <Items>
+            <ContentPane _sc_extensibility_moveOrder="2"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="pnlNoReturnableQuantity"
+                class="exceptionPanel panelSpacer" renderHidden="true" uId="extn_EGCLineErrorPanel"/>
+            <Button _sc_extensibility_operation="change"
+                _sc_extensibility_referenceUId="btnExchange" renderHidden="true"/>
+            <Label _sc_extensibility_moveOrder="1"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="lblNoReturnableQuantity"
+                uId="extn_EGCLineError" value="$(_scSimpleBundle:extn_EGCLineError)">
+                <BindingData>
+                    <SourceBinding
+                        dynamicBindingFunc="extnEGCLineCheck" namespace="selectedOrderLine"/>
+                </BindingData>
+            </Label>
+            <Label _sc_extensibility_moveOrder="3"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="first"
+                _sc_extensibility_referenceUId="extn_EGCLineErrorPanel" uId="extn_EGCLineError"/>
+            <Link _sc_extensibility_operation="change"
+                _sc_extensibility_referenceUId="lnkPriceMatch" renderHidden="true"/>
+        </Items>
+    </ScreenExtension>
+</ExtensionMetaData>

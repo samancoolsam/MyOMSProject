@@ -1,0 +1,124 @@
+<div class="sc-platform-screen-default ExtnCancelShipmentOtherStores">
+	<div data-dojo-type="sc/plat/dojo/widgets/Label" data-dojo-props="		'class' : 'screen zeroWidthLabelKey labelMessage' , 
+		uId : 'extnLblNoShortageConfigured' , 
+		renderHidden : true  
+ 		,scParamDataFn :
+		 function() { 
+			return { 
+			 	value : 			this.getSimpleBundleString('Label_NoShortageConfigured')
+			}
+		}
+"></div>
+<div data-dojo-type="idx/layout/ContentPane" data-dojo-props="		spanLabel : true , 
+		'class' : 'scrollingContent' , 
+		colspan : 1 , 
+		uId : 'extnInnerContainer'  
+ ">
+		<div data-dojo-type="idx/form/RadioButtonSet" data-dojo-props="		groupAlignment : 'vertical' , 
+		'class' : 'shortageReason noColonLabels groupHeader' , 
+		style : 'display:block',
+		name : 'selectShortageReason' , 
+		uId : 'extnRadSelectShortRea'  
+ 		,scParamDataFn :
+		 function() { 
+			return { 
+			 	label : 			this.getSimpleBundleString('RadioButtonSet_Select_Shortage_reason')
+,	
+			 	bindingData : 	{
+		 optionsBinding : 	{
+		 descriptionField : 			'CodeShortDescription'
+,
+		 addEmptyOption : 			false
+,
+		 valueField : 			'CodeValue'
+,
+		 path : 			'CommonCodeList.CommonCode'
+,
+		 emptyOptionValue : 			''
+,
+		 emptyOptionDesc : 			''
+,
+		 namespace : 			'extn_getShortageReasonCode_output'
+	}
+,
+		 targetBinding : 	[
+	 		{
+		 path : 			'ShortageReason'
+,
+		 namespace : 			'getShortageReasonOutput'
+	}
+	]
+	}
+			}
+		}
+"></div>
+        
+        <div data-dojo-type="idx/form/FilteringSelect" data-dojo-props="		highlightMatch : 'false' , 
+		'class' : 'longTextbox cancelReason nonEditable' , 
+		style : 'padding-bottom:30px;display:block' , 
+		autoComplete : true , 
+		uId : 'extnCancellationReasonCode' , 
+		renderHidden : true , 
+		required : false  
+ 		,scParamDataFn :
+		 function() { 
+			return { 
+			 	label : 			this.getSimpleBundleString('Label_CancellationReasonCode')
+,	
+			 	bindingData : 	{
+		 optionsBinding : 	{
+		 descriptionField : 			'CodeShortDescription'
+,
+		 addEmptyOption : 			false
+,
+		 valueField : 			'CodeValue'
+,
+		 path : 			'CommonCodeList.CommonCode'
+,
+		 emptyOptionValue : 			''
+,
+		 emptyOptionDesc : 			''
+,
+		 namespace : 			'CancellationReasonCodeData'
+	}
+,
+		 targetBinding : 	[
+	 		{
+		 path : 			'CancelReasonCode'
+,
+		 namespace : 			'getCancellationReasonCodeOutput'
+	}
+	]
+	}
+			}
+		}
+"></div>
+        
+    </div>
+	<div data-dojo-type="idx/layout/ContentPane" data-dojo-props="		'class' : 'popupNavigation messageDialogFooter' , 
+		uId : 'extn_Popup_navigationPanel'  
+ ">
+        <div data-dojo-type="dijit/form/Button" data-dojo-props="		spanLabel : true , 
+		'class' : 'idxSpecialButton' , 
+		showLabel : true , 
+		uId : 'extn_Popup_btnNext'  
+ 		,scParamDataFn :
+		 function() { 
+			return { 
+			 	label : 			this.getSimpleBundleString('Action_Apply')
+			}
+		}
+"></div>
+        <div data-dojo-type="dijit/form/Button" data-dojo-props="		spanLabel : true , 
+		'class' : 'idxSecondaryButton' , 
+		showLabel : true , 
+		uId : 'extn_Popup_btnCancel'  
+ 		,scParamDataFn :
+		 function() { 
+			return { 
+			 	label : 			this.getSimpleBundleString('Cancel')
+			}
+		}
+"></div>
+    </div>
+</div>

@@ -1,0 +1,11 @@
+<OrderList> 
+	<Order OrderNo="" OrderHeaderKey="" OrderType="" EntryType=""> 
+		<OrderLines> 
+			<OrderLine OrderLineKey="" ReturnReason=""> 
+				<DerivedFromOrderLine OrderLineKey=""> 
+					<Extn ExtnWCOrderItemIdentifier=""/>  
+				</DerivedFromOrderLine> 
+			</OrderLine> 
+		</OrderLines> 
+	</Order> 
+</OrderList>

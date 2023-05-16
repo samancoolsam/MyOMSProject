@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ShipNodeList>
+	<ShipNode NodeType="" Localecode="">
+		<ShipNodePersonInfo AddressLine1="" City="" Country="" FirstName="" State="" ZipCode="" /> 
+	</ShipNode>
+</ShipNodeList> 

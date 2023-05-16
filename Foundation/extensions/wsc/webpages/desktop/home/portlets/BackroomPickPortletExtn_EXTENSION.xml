@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExtensionMetaData>
+    <ScreenExtension extnClassName="BackroomPickPortletExtn"
+        extnPackage="extn.desktop.home.portlets"
+        originalScreen="wsc.desktop.home.portlets.BackroomPickPortlet"
+        originalScreenPackage="wsc.desktop.home.portlets" type="diffrential">
+        <Items>
+            <Button _sc_extensibility_operation="change"
+                _sc_extensibility_referenceUId="btnPrintPickup" label="$(_scSimpleBundle:Action_PrintPickupOrders)"/>
+        </Items>
+        <MashupRefs>
+            <Init>
+                <MashupRef extnType="MODIFY"
+                    mashupId="backroomPickPortlet_getShipmentListPickCount" mashupRefId="getShipmentListReadyForPickInit"/>
+            </Init>
+            <Behavior>
+                <MashupRef extnType="MODIFY"
+                    mashupId="backroomPickPortlet_printPickTicket" mashupRefId="printPickTicket"/>
+            </Behavior>
+        </MashupRefs>
+    </ScreenExtension>
+</ExtensionMetaData>

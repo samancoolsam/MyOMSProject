@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ScreenBundle
+    screenBundleId="extn.components.shipment.confirm.ConfirmShipmentDetailExtnBundle" screenId="extn.components.shipment.confirm.ConfirmShipmentDetailExtn">
+    <BundleEntries>
+        <BundleEntry
+            bundleEntryId="containersCountLabel_DataLabel_label"
+            bundleKey="extn_Container" bundleValueFn="_scBundle"
+            property="label" type="WIDGET" uId="containersCountLabel"/>
+    </BundleEntries>
+</ScreenBundle>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+ <FlatfileDelimitedSchema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="delimitedreceiver.xsd">
+ <ParserDefaults DefaultRecordDelimiter="Newline" DefaultFieldDelimiter="," DefaultEscapeCharacter="\" DefaultPadCharacter="*" RecordIdStartPosition="1" SkipCarriageReturn="false">
+  <FileHeader FileHeaderId="000" FileHeaderStartPos="1" FileHeaderLength="3" /> 
+  <FileTrailer FileTrailerId="666" FileTrailerStartPos="1" FileTrailerLength="3" /> 
+  </ParserDefaults>
+ <Root Name="ResourcePoolList">
+  <Header Name="RESOURCEHEDR" RecordName="RESOURCEHEDR" MinOccurence="1" MaxOccurence="1" /> 
+  <Terminal Name="EffectiveDateRanges" RecordName="EFFDATRANGES" MinOccurrence="1" MaxOccurrence="1" /> 
+  <Sequence Name="EffectiveDateRange" RecordName="EFFDATRANGE" MinOccurrence="1" MaxOccurrence="1000" /> 
+  <Sequence Name="CapacitiesPerSlot" RecordName="CPTIESPERSLOT" MinOccurrence="1" MaxOccurrence="1000" /> 
+  <Sequence Name="CapacityPerSlot" RecordName="CPTYPERSLOT" MinOccurrence="1" MaxOccurrence="1000" /> 
+  </Root>
+ <RecordDefinitions>
+ <Record RecordId="RESOURCEHEDR" Name="RESOURCEHEDR" XMLName="ResourcePool">
+  <Field Name="CapacityOrganizationCode" FieldPosition="2" XMLName="CapacityOrganizationCode" /> 
+  <Field Name="ContextOrganizationCode" FieldPosition="3" XMLName="ContextOrganizationCode" /> 
+  <Field Name="IgnoreOrdering" FieldPosition="4" XMLName="IgnoreOrdering" /> 
+  <Field Name="Node" FieldPosition="5" XMLName="Node" /> 
+  <Field Name="ResourcePoolKey" FieldPosition="6" XMLName="ResourcePoolKey" /> 
+  </Record>
+ <Record RecordId="EFFDATRANGES" Name="EFFDATRANGES" XMLName="EffectiveDateRanges">
+  <Field Name="Reset" FieldPosition="2" XMLName="Reset" /> 
+  </Record>
+ <Record RecordId="EFFDATRANGE" Name="EFFDATRANGE" XMLName="EffectiveDateRange">
+  <Field Name="EffectiveStartDate" FieldPosition="2" XMLName="EffectiveStartDate" /> 
+  <Field Name="EffectiveEndDate" FieldPosition="3" XMLName="EffectiveEndDate" /> 
+  </Record>
+ <Record RecordId="CPTIESPERSLOT" Name="CPTIESPERSLOT" XMLName="CapacitiesPerSlot">
+  <Field Name="Reset" FieldPosition="2" XMLName="Reset" /> 
+  </Record>
+ <Record RecordId="CPTYPERSLOT" Name="CPTYPERSLOT" XMLName="CapacityPerSlot">
+  <Field Name="MondayCapacity" FieldPosition="2" XMLName="MondayCapacity" /> 
+  <Field Name="TuesdayCapacity" FieldPosition="3" XMLName="TuesdayCapacity" /> 
+  <Field Name="WednesdayCapacity" FieldPosition="4" XMLName="WednesdayCapacity" /> 
+  <Field Name="ThursdayCapacity" FieldPosition="5" XMLName="ThursdayCapacity" /> 
+  <Field Name="FridayCapacity" FieldPosition="6" XMLName="FridayCapacity" /> 
+  <Field Name="SaturdayCapacity" FieldPosition="7" XMLName="SaturdayCapacity" /> 
+  <Field Name="SundayCapacity" FieldPosition="8" XMLName="SundayCapacity" /> 
+  </Record>
+  </RecordDefinitions>
+  </FlatfileDelimitedSchema>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ShipmentLines>
+	<ShipmentLine ActualQuantity="15.00" CustomerPoLineNo=""
+		CustomerPoNo="" DocumentType="0001" ItemDesc="Component Item1"
+		ItemID="COMP1" NetWeight="0.00" NetWeightUom=""
+		OrderHeaderKey="20100609183209660001"
+		OrderLineKey="20100609183209660002" OrderNo="Y100003690"
+		OrderReleaseKey="20100609183255660022" OverShipQuantity="0.00"
+		PrimeLineNo="1" ProductClass="GOOD" Quantity="15.00" ReleaseNo="1"
+		Segment="" SegmentType="" ShipmentKey="20100609183311660028"
+		ShipmentLineKey="20100609183311660027" ShipmentLineNo="1"
+		SubLineNo="1" UnitOfMeasure="EACH">
+
+		<ShipmentTagSerials>
+
+			<ShipmentTagSerial BatchNo="" LotAttribute1=""
+				LotAttribute2="" LotAttribute3="" LotKeyReference="" LotNumber=""
+				Quantity="1.00" RevisionNo="" SerialNo="11w21"
+				ShipmentLineKey="20100609183311660027"
+				ShipmentTagSerialKey="20100610190932669139" />
+
+		</ShipmentTagSerials>
+		<ContainerDetails>
+			<ContainerDetail>
+				<ShipmentTagSerials>
+					<ShipmentTagSerial BatchNo="" LotAttribute1=""
+						LotAttribute2="" LotAttribute3="" LotKeyReference="" LotNumber=""
+						Quantity="1.00" RevisionNo="" SerialNo="" ShipmentLineKey=""
+						ShipmentTagSerialKey="" />
+				</ShipmentTagSerials>
+			</ContainerDetail>
+		</ContainerDetails>
+
+		<Shipment ShipmentNo="" ShipmentKey="" Status="" />
+	</ShipmentLine>
+</ShipmentLines>

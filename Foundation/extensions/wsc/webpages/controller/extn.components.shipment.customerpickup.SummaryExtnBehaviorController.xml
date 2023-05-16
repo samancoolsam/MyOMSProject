@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Controller
+    className="com.sterlingcommerce.ui.web.platform.controller.SCUIXAPIMashupController"
+    controllerId="extn.components.shipment.customerpickup.SummaryExtnBehaviorController"
+    requestMethodSupported="POST" screenId="extn.components.shipment.customerpickup.SummaryExtn">
+    <MashupRefs>
+        <MashupRef extnType="ADD" mashupId="UnResrvMsgToSIMOnShrtg"
+            mashupRefId="extn_UnResrvMsgToSIMOnShrtg" permissionId=""/>
+        <MashupRef extnType="ADD" mashupId="extn_changeShipment"
+            mashupRefId="extn_changeShipment_ref" permissionId=""/>
+        <MashupRef extnType="ADD"
+            mashupId="extn_stampInvoiceNoOnBOPISOrders"
+            mashupRefId="extn_stampInvoiceNoOnBOPISOrders_ref" permissionId=""/>
+		<MashupRef extnType="ADD" mashupId="extn_getUserListByUserID"
+            mashupRefId="extn_getUserListByUserID" permissionId=""/>
+        <MashupRef extnType="ADD"
+            mashupId="extn_AcademyBOPISPrintAckSlip"
+            mashupRefId="extn_AcademyBOPISPrintAckSlip_ref" permissionId=""/>
+		<!--OMNI-85085 - Start -->
+		<MashupRef extnType="ADD"
+            mashupId="extn_recordCustomerPickForCurbsideConsolidation" 
+			mashupRefId="extn_recordCustomerPickForCurbsideConsolidation" permissionId=""/>
+		<!--OMNI-85085 - End -->
+    </MashupRefs>
+</Controller>

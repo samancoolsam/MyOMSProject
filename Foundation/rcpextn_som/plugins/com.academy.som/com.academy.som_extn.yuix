@@ -1,0 +1,3149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Forms applicationId="YFSSYS00006" pluginId="com.academy.som">
+    <GlobalExtensions>
+        <Tasks/>
+    </GlobalExtensions>
+    <Form
+        extensionBehaviorName="com.academy.som.printpickticket.screens.AcademyPrintPickTicketForItemExtnWizardBehavior"
+        id="com.yantra.pca.ycd.rcp.tasks.printPickTicket.wizards.YCDPrintPickTicketWizard" wizard="true">
+        <NewFields>
+            <NewField>
+                <Field attachTo="bttnPrintForAll" attachType="BEFORE"
+                    defaultValue="Print" enabled="true"
+                    isAdvanced="false"
+                    name="extn_rdbPrintShipmentTickets" type="Radio"
+                    validationRequired="true" visible="true" wizardPageId="com.yantra.pca.ycd.rcp.tasks.printPickTicket.wizardpages.YCDPrintPickTicketScreen">
+                    <styles>
+                        <style style="NONE"/>
+                    </styles>
+               </Field>
+                <SetData name="YRCCheckedValue" value="Batch Shipment Print"/>
+                <SetData name="YRCSourceBinding" value=""/>
+                <SetData name="YRCTargetBinding" value="SelectedRadioButton:Shipment/@radioSelection"/>
+                <SetData name="yrc:customType" value="Label"/>
+                <LayoutData grabExcessHSpace="false"
+                    grabExcessVSpace="false" hAlignment="Beginning"
+                    hColSpan="1" hIndent="0" heightHint="-1"
+                    vAlignment="Center" vColSpan="1" widthHint="-1"/>
+            </NewField>
+            <NewField>
+                <Field attachTo="extn_rdbPrintShipmentTickets"
+                    attachType="AFTER" enabled="true" isAdvanced="false"
+                    name="extn_cmbBatchSizePrint" type="Combo"
+                    visible="true" wizardPageId="com.yantra.pca.ycd.rcp.tasks.printPickTicket.wizardpages.YCDPrintPickTicketScreen">
+                    <styles>
+                        <style style="NONE"/>
+                    </styles>
+                </Field>
+                <SetData name="YRCCodeBinding" value="CodeValue"/>
+                <SetData name="YRCDescriptionBinding" value="CodeValue"/>
+                <SetData name="YRCListBinding" value="Extn_printBatchSizeCC_Output:CommonCodeList/CommonCode"/>
+                <SetData name="YRCSourceBinding" value="Extn_printBatchSizeCC_Output:CommonCodeList/CommonCode/@CodeValue"/>
+                <SetData name="YRCTargetBinding" value=""/>
+                <SetData name="isMandatory" value="false"/>
+                <SetData name="yrc:customType" value="Combo"/>
+                <SetData name="yrc:dblocalized" value="false"/>
+                <LayoutData grabExcessHSpace="false"
+                    grabExcessVSpace="false" hAlignment="Beginning"
+                    hColSpan="1" hIndent="0" heightHint="-1"
+                    vAlignment="Center" vColSpan="1" widthHint="-1"/>
+            </NewField>
+            <NewField>
+                <Field attachTo="extn_cmbBatchSizePrint"
+                    attachType="AFTER" defaultValue="of" enabled="true"
+                    isAdvanced="false"
+                    name="extn_txtPrintShipmentTickets1" type="Text"
+                    visible="true" wizardPageId="com.yantra.pca.ycd.rcp.tasks.printPickTicket.wizardpages.YCDPrintPickTicketScreen">
+                    <styles>
+                        <style style="READ_ONLY"/>
+                    </styles>
+                </Field>
+                <SetData name="YRCSourceBinding" value=""/>
+                <SetData name="YRCTargetBinding" value=""/>
+                <SetData name="isMandatory" value="false"/>
+                <SetData name="yrc:customType" value="Text"/>
+                <SetData name="yrc:dblocalized" value="false"/>
+                <LayoutData grabExcessHSpace="false"
+                    grabExcessVSpace="false" hAlignment="Beginning"
+                    hColSpan="1" hIndent="0" heightHint="-1"
+                    vAlignment="Center" vColSpan="1" widthHint="-1"/>
+            </NewField>
+            <NewField>
+                <Field attachTo="extn_txtPrintShipmentTickets1"
+                    attachType="AFTER" defaultValue="(No)"
+                    enabled="true" isAdvanced="false"
+                    name="extn_lblShipmentNo" type="Label"
+                    visible="true" wizardPageId="com.yantra.pca.ycd.rcp.tasks.printPickTicket.wizardpages.YCDPrintPickTicketScreen">
+                    <styles>
+                        <style style="NONE"/>
+                    </styles>
+                </Field>
+                <SetData name="YRCSourceBinding" value=""/>
+                <SetData name="yrc:customType" value="Label"/>
+                <LayoutData grabExcessHSpace="false"
+                    grabExcessVSpace="false" hAlignment="Center"
+                    hColSpan="1" hIndent="0" heightHint="-1"
+                    vAlignment="Center" vColSpan="1" widthHint="-1"/>
+            </NewField>
+            <NewField>
+                <Field attachTo="extn_lblShipmentNo" attachType="AFTER"
+                    defaultValue="Pending Pick Tickets" enabled="true"
+                    isAdvanced="false"
+                    name="extn_txtPrintShipmentTickets2" type="Text"
+                    visible="true" wizardPageId="com.yantra.pca.ycd.rcp.tasks.printPickTicket.wizardpages.YCDPrintPickTicketScreen">
+                    <styles>
+                        <style style="READ_ONLY"/>
+                    </styles>
+                </Field>
+                <SetData name="YRCSourceBinding" value=""/>
+                <SetData name="YRCTargetBinding" value=""/>
+                <SetData name="isMandatory" value="false"/>
+                <SetData name="yrc:customType" value=""/>
+                <LayoutData grabExcessHSpace="false"
+                    grabExcessVSpace="false" hAlignment="Beginning"
+                    hColSpan="2" hIndent="0" heightHint="-1"
+                    vAlignment="Center" vColSpan="1" widthHint="-1"/>
+            </NewField>
+            <NewField>
+                <Field attachTo="extn_txtPrintShipmentTickets2"
+                    attachType="AFTER" defaultValue="Print"
+                    enabled="true" isAdvanced="false"
+                    name="extn_btnPrintShipmentTicketsF8" type="Button"
+                    validationRequired="true" visible="true" wizardPageId="com.yantra.pca.ycd.rcp.tasks.printPickTicket.wizardpages.YCDPrintPickTicketScreen">
+                    <styles>
+                        <style style="NONE"/>
+                    </styles>
+                </Field>
+                <SetData name="ExtnActionClass" value="com.academy.som.printpickticket.actions.AcademyReprintPickTicketForItemAction"/>
+                <SetData name="ExtnActionId" value="PRINT_SHIPMENT_PICK_TICKETS_ACTION"/>
+                <SetData name="ExtnKeySequence" value="F8"/>
+                <SetData name="IsKeyContextWizardLevel" value="true"/>
+                <SetData name="yrc:customType" value="Button"/>
+                <LayoutData grabExcessHSpace="true"
+                    grabExcessVSpace="false" hAlignment="Beginning"
+                    hColSpan="1" hIndent="0" heightHint="-1"
+                    vAlignment="Center" vColSpan="1" widthHint="65"/>
+            </NewField>
+            <NewField>
+                <Field attachTo="extn_btnPrintShipmentTicketsF8"
+                    attachType="BEFORE" enabled="true"
+                    isAdvanced="false" name="extn_PrinterIdCombo"
+                    type="Combo" visible="true" wizardPageId="com.yantra.pca.ycd.rcp.tasks.printPickTicket.wizardpages.YCDPrintPickTicketScreen">
+                    <styles>
+                        <style style="NONE"/>
+                    </styles>
+                </Field>
+                <SetData name="YRCCodeBinding" value="CodeValue"/>
+                <SetData name="YRCDescriptionBinding" value="CodeValue"/>
+                <SetData name="YRCListBinding" value="Extn_getCommonCodeList_PrinterID:CommonCodeList/CommonCode"/>
+                <SetData name="YRCSourceBinding" value="Extn_getCommonCodeList_PrinterID:CommonCodeList/CommonCode/@CodeValue"/>
+                <SetData name="YRCTargetBinding" value=""/>
+                <SetData name="isMandatory" value="false"/>
+                <SetData name="yrc:customType" value="Combo"/>
+                <LayoutData grabExcessHSpace="false"
+                    grabExcessVSpace="false" hAlignment="Fill"
+                    hColSpan="1" hIndent="0" heightHint="-1"
+                    vAlignment="Center" vColSpan="1" widthHint="-1"/>
+            </NewField>
+            <NewField>
+                <Field attachTo="bttnPrintForAll" attachType="AFTER"
+                    defaultValue="Reprint Pick Tickets for Batch #"
+                    enabled="true" isAdvanced="false"
+                    name="extn_rdbPrintTicketsForItem" type="Radio"
+                    validationRequired="true" visible="true" wizardPageId="com.yantra.pca.ycd.rcp.tasks.printPickTicket.wizardpages.YCDPrintPickTicketScreen">
+                    <styles>
+                        <style style="NONE"/>
+                    </styles>
+                </Field>
+                <SetData name="YRCCheckedValue" value="Reprint Shipment/Item Batch"/>
+                <SetData name="YRCSourceBinding" value=""/>
+                <SetData name="YRCTargetBinding" value="SelectedRadioButton:Shipment/@radioSelection"/>
+                <SetData name="yrc:customType" value="Label"/>
+                <LayoutData grabExcessHSpace="false"
+                    grabExcessVSpace="false" hAlignment="Beginning"
+                    hColSpan="4" hIndent="0" heightHint="-1"
+                    vAlignment="Center" vColSpan="1" widthHint="-1"/>
+            </NewField>
+            <NewField>
+               <Field attachTo="extn_rdbPrintTicketsForItem"
+                    attachType="AFTER" enabled="true" isAdvanced="false"
+                    name="extn_cmbBatchGroupPrint" type="Combo"
+                    visible="true" wizardPageId="com.yantra.pca.ycd.rcp.tasks.printPickTicket.wizardpages.YCDPrintPickTicketScreen">
+                    <styles>
+                        <style style="NONE"/>
+                    </styles>
+                </Field>
+                <SetData name="YRCCodeBinding" value="PickticketNo"/>
+                <SetData name="YRCDescriptionBinding" value="PickticketNo"/>
+                <SetData name="YRCListBinding" value="Extn_pickTicketNoList_Output:SFSShipmentPickTicketNoList/SFSShipmentPickTicketNo"/>
+                <SetData name="YRCSourceBinding" value="Extn_pickTicketNoList_Output:SFSShipmentPickTicketNoList/SFSShipmentPickTicketNo/@PickticketNo"/>
+                <SetData name="YRCTargetBinding" value=""/>
+                <SetData name="isMandatory" value="false"/>
+                <SetData name="yrc:customType" value="Combo"/>
+                <LayoutData grabExcessHSpace="false"
+                    grabExcessVSpace="false" hAlignment="Beginning"
+                    hColSpan="1" hIndent="0" heightHint="-1"
+                    vAlignment="Center" vColSpan="1" widthHint="-1"/>
+            </NewField>
+            <NewField>
+                <Field attachTo="extn_cmbBatchGroupPrint"
+                    attachType="AFTER" enabled="true" isAdvanced="false"
+                    name="extn_txtReprintPageNo" type="Text"
+                    visible="true" wizardPageId="com.yantra.pca.ycd.rcp.tasks.printPickTicket.wizardpages.YCDPrintPickTicketScreen">
+                    <styles>
+                        <style style="BORDER"/>
+                    </styles>
+                </Field>
+                <SetData name="YRCSourceBinding" value=""/>
+                <SetData name="YRCTargetBinding" value=""/>
+                <SetData name="isMandatory" value="false"/>
+                <SetData name="yrc:customType" value="Text"/>
+                <LayoutData grabExcessHSpace="false"
+                    grabExcessVSpace="false" hAlignment="Beginning"
+                    hColSpan="1" hIndent="0" heightHint="-1"
+                    vAlignment="Center" vColSpan="1" widthHint="-1"/>
+            </NewField>
+            <NewField>
+                <Field attachTo="extn_txtReprintPageNo"
+                    attachType="AFTER"
+                    defaultValue="Print Shipment Pick Ticket"
+                    enabled="true" isAdvanced="false"
+                    name="extn_btnPrintShipmentF7" type="Button"
+                    validationRequired="true" visible="true" wizardPageId="com.yantra.pca.ycd.rcp.tasks.printPickTicket.wizardpages.YCDPrintPickTicketScreen">
+                    <styles>
+                        <style style="NONE"/>
+                    </styles>
+                </Field>
+                <SetData name="ExtnActionClass" value="com.academy.som.printpickticket.actions.AcademyReprintShipmentPickTicketsAction"/>
+                <SetData name="ExtnActionId" value="REPRINT_SHIPMENT_PICK_TICKETS_ACTION"/>
+                <SetData name="ExtnKeySequence" value="F7"/>
+                <SetData name="IsKeyContextWizardLevel" value="false"/>
+                <SetData name="yrc:customType" value="Button"/>
+                <LayoutData grabExcessHSpace="false"
+                    grabExcessVSpace="false" hAlignment="Beginning"
+                    hColSpan="1" hIndent="0" heightHint="-1"
+                    vAlignment="Center" vColSpan="1" widthHint="-1"/>
+            </NewField>
+            <NewField>
+                <Field attachTo="extn_btnPrintShipmentF7"
+                    attachType="AFTER"
+                    defaultValue="Print Item Pick Ticket" enabled="true"
+                    isAdvanced="false" name="extn_btnPrintItemF4"
+                    type="Button" validationRequired="true"
+                    visible="true" wizardPageId="com.yantra.pca.ycd.rcp.tasks.printPickTicket.wizardpages.YCDPrintPickTicketScreen">
+                    <styles>
+                        <style style="NONE"/>
+                    </styles>
+                </Field>
+                <SetData name="ExtnActionClass" value="com.academy.som.printpickticket.actions.AcademyPrintPickTicketForItemAction"/>
+                <SetData name="ExtnActionId" value="PRINT_ITEM_PICK_TICKET_ACTION"/>
+                <SetData name="ExtnKeySequence" value="F4"/>
+                <SetData name="IsKeyContextWizardLevel" value="true"/>
+                <SetData name="yrc:customType" value="Button"/>
+                <LayoutData grabExcessHSpace="false"
+                    grabExcessVSpace="false" hAlignment="Beginning"
+                    hColSpan="1" hIndent="0" heightHint="-1"
+                    vAlignment="Center" vColSpan="1" widthHint="-1"/>
+            </NewField>
+            <!--Start: Updated as part of STL-1493-->
+            <NewField>
+                <Field attachTo="extn_btnPrintItemF4"
+                    attachType="AFTER"
+                    defaultValue="Reset Pick Ticket" enabled="true"
+                    isAdvanced="false" name="extn_btnReset"
+                    type="Button" validationRequired="true"
+                    visible="true" wizardPageId="com.yantra.pca.ycd.rcp.tasks.printPickTicket.wizardpages.YCDPrintPickTicketScreen">
+                    <styles>
+                        <style style="NONE"/>
+                    </styles>
+                </Field>
+                <SetData name="ExtnActionClass" value="com.academy.som.printpickticket.actions.AcademyResetPickTicketAction"/>
+                <SetData name="ExtnActionId" value="PRINT_RESET_PICK_TICKET_ACTION"/>
+                <SetData name="ExtnKeySequence" value=""/>
+                <SetData name="IsKeyContextWizardLevel" value="true"/>
+                <SetData name="yrc:customType" value="Button"/>
+                <LayoutData grabExcessHSpace="false"
+                    grabExcessVSpace="false" hAlignment="Beginning"
+                    hColSpan="1" hIndent="0" heightHint="-1"
+                    vAlignment="Center" vColSpan="1" widthHint="-1"/>
+            </NewField>
+            <!--End: Updated as part of STL-1493-->
+            <NewField>
+                <Field attachTo="bttnPrint" attachType="BEFORE"
+                    className="com.academy.som.printpickticket.screens.AcademyShipmentStatsDashboardPanel"
+                    enabled="true" isAdvanced="false"
+                    name="extn_pnlShipmentStats" type="Form"
+                    visible="true" wizardPageId="com.yantra.pca.ycd.rcp.tasks.printPickTicket.wizardpages.YCDPrintPickTicketScreen">
+                    <styles>
+                        <style style="NONE"/>
+                    </styles>
+                </Field>
+                <LayoutData grabExcessHSpace="true"
+                    grabExcessVSpace="false" hAlignment="Fill"
+                    hColSpan="2" hIndent="0" heightHint="-1"
+                    vAlignment="Center" vColSpan="1" widthHint="-1"/>
+            </NewField>
+            <NewField>
+                <Field attachTo="bttnPrint" attachType="AFTER"
+                    className="com.academy.som.printpickticket.screens.AcademyManifestingDayPanel"
+                    enabled="true" isAdvanced="false"
+                    name="extn_pnlManifestingDay" type="Form"
+                    visible="true" wizardPageId="com.yantra.pca.ycd.rcp.tasks.printPickTicket.wizardpages.YCDPrintPickTicketScreen">
+                    <styles>
+                        <style style="NONE"/>
+                    </styles>
+                </Field>
+                <LayoutData grabExcessHSpace="true"
+                    grabExcessVSpace="false" hAlignment="Fill"
+                    hColSpan="2" hIndent="0" heightHint="-1"
+                    vAlignment="Bottom" vColSpan="2" widthHint="-1"/>
+            </NewField>
+        </NewFields>
+        <ExistingFields>
+            <ExistingField enabled="true" name="pnlBody"
+                type="Composite" visible="true" wizardPageId="com.yantra.pca.ycd.rcp.tasks.printPickTicket.wizardpages.YCDPrintPickTicketScreen">
+                <Layout horizontalSpacing="5"
+                    makeColumnsEqualWidth="false" marginHeight="1"
+                    marginWidth="1" numberOfColumns="8" verticalSpacing="5"/>
+                <LayoutData grabExcessHSpace="true"
+                    grabExcessVSpace="false" hAlignment="Fill"
+                    hColSpan="1" hIndent="0" heightHint="-1"
+                    vAlignment="Center" vColSpan="1" widthHint="-1"/>
+                <SetData name="yrc:customType" value=""/>
+                <styles>
+                    <style style="NONE"/>
+                </styles>
+            </ExistingField>
+            <ExistingField enabled="true" name="txtOrderNumber"
+                type="Text" wizardPageId="com.yantra.pca.ycd.rcp.tasks.printPickTicket.wizardpages.YCDPrintPickTicketScreen">
+                <LayoutData grabExcessHSpace="false"
+                    grabExcessVSpace="false" hAlignment="Beginning"
+                    hColSpan="1" hIndent="0" heightHint="-1"
+                    vAlignment="Center" vColSpan="1" widthHint="85"/>
+                <SetData name="isMandatory" value="false"/>
+                <SetData name="yrc:customType" value="Text"/>
+                <SetData name="yrc:dblocalized" value="false"/>
+                <styles>
+                    <style style="NONE"/>
+                </styles>
+            </ExistingField>
+            <ExistingField enabled="true" name="bttnPrintForOneOrder"
+                type="Radio" wizardPageId="com.yantra.pca.ycd.rcp.tasks.printPickTicket.wizardpages.YCDPrintPickTicketScreen">
+                <LayoutData grabExcessHSpace="false"
+                    grabExcessVSpace="false" hAlignment="Beginning"
+                    hColSpan="1" hIndent="0" heightHint="-1"
+                    vAlignment="Center" vColSpan="1" widthHint="-1"/>
+                <SetData name="yrc:customType" value="BigBoldTextBlackOnWhite"/>
+                <styles>
+                    <style style="NONE"/>
+                </styles>
+            </ExistingField>
+            <ExistingField enabled="true" name="bttnPrintForAll"
+                type="Radio" wizardPageId="com.yantra.pca.ycd.rcp.tasks.printPickTicket.wizardpages.YCDPrintPickTicketScreen">
+                <LayoutData grabExcessHSpace="false"
+                    grabExcessVSpace="false" hAlignment="Beginning"
+                    hColSpan="2" hIndent="0" heightHint="-1"
+                    vAlignment="Center" vColSpan="1" widthHint="-1"/>
+               <SetData name="yrc:customType" value="BigBoldTextBlackOnWhite"/>
+                <styles>
+                    <style style="NONE"/>
+                </styles>
+            </ExistingField>
+            <ExistingField enabled="true" name="bttnSearchShipment"
+                type="Radio" wizardPageId="com.yantra.pca.ycd.rcp.tasks.printPickTicket.wizardpages.YCDPrintPickTicketScreen">
+                <LayoutData grabExcessHSpace="false"
+                    grabExcessVSpace="false" hAlignment="Beginning"
+                    hColSpan="2" hIndent="0" heightHint="-1"
+                    vAlignment="Center" vColSpan="1" widthHint="-1"/>
+                <SetData name="yrc:customType" value="BigBoldTextBlackOnWhite"/>
+                <styles>
+                    <style style="NONE"/>
+                </styles>
+            </ExistingField>
+            <ExistingField enabled="true" name="cmpst" type="Composite"
+                visible="true" wizardPageId="com.yantra.pca.ycd.rcp.tasks.printPickTicket.wizardpages.YCDPrintPickTicketScreen">
+                <Layout horizontalSpacing="0"
+                    makeColumnsEqualWidth="false" marginHeight="0"
+                    marginWidth="0" numberOfColumns="1" verticalSpacing="4"/>
+                <LayoutData grabExcessHSpace="false"
+                    grabExcessVSpace="false" hAlignment="Fill"
+                    hColSpan="2" hIndent="0" heightHint="-1"
+                    vAlignment="Fill" vColSpan="1" widthHint="-1"/>
+                <SetData name="yrc:customType" value="Composite"/>
+                <styles>
+                    <style style="NONE"/>
+                </styles>
+            </ExistingField>
+            <ExistingField enabled="true" name="pnlroot"
+                type="Composite" visible="true">
+                <Layout horizontalSpacing="5"
+                    makeColumnsEqualWidth="false" marginHeight="5"
+                    marginWidth="5" numberOfColumns="2" verticalSpacing="5"/>
+                <LayoutData grabExcessHSpace="true"
+                    grabExcessVSpace="true" hAlignment="Fill"
+                    hColSpan="1" hIndent="0" heightHint="-1"
+                    vAlignment="Fill" vColSpan="1" widthHint="-1"/>
+                <styles>
+                    <style style="NONE"/>
+                </styles>
+            </ExistingField>
+            <ExistingField enabled="true" name="bttnPrint" type="Button" wizardPageId="com.yantra.pca.ycd.rcp.tasks.printPickTicket.wizardpages.YCDPrintPickTicketScreen">
+                <LayoutData grabExcessHSpace="true"
+                    grabExcessVSpace="false" hAlignment="End"
+                    hColSpan="1" hIndent="3" heightHint="-1"
+                    vAlignment="Center" vColSpan="1" widthHint="-1"/>
+                <SetData name="yrc:customType" value="Button"/>
+                <styles>
+                    <style style="NONE"/>
+                </styles>
+            </ExistingField>
+            <ExistingField enabled="true" name="bttnClose" type="Button" wizardPageId="com.yantra.pca.ycd.rcp.tasks.printPickTicket.wizardpages.YCDPrintPickTicketScreen">
+                <LayoutData grabExcessHSpace="false"
+                    grabExcessVSpace="false" hAlignment="Center"
+                    hColSpan="1" hIndent="3" heightHint="-1"
+                    vAlignment="Center" vColSpan="1" widthHint="-1"/>
+                <SetData name="yrc:customType" value="Button"/>
+                <styles>
+                    <style style="NONE"/>
+                </styles>
+            </ExistingField>
+            <ExistingField enabled="true" name="pnlTitle"
+                type="Composite" visible="true" wizardPageId="com.yantra.pca.ycd.rcp.tasks.printPickTicket.wizardpages.YCDPrintPickTicketScreen">
+                <Layout horizontalSpacing="2"
+                    makeColumnsEqualWidth="false" marginHeight="2"
+                    marginWidth="2" numberOfColumns="1" verticalSpacing="2"/>
+                <LayoutData grabExcessHSpace="true"
+                    grabExcessVSpace="false" hAlignment="Fill"
+                    hColSpan="1" hIndent="0" heightHint="-1"
+                    vAlignment="Top" vColSpan="1" widthHint="-1"/>
+                <SetData name="yrc:customType" value=""/>
+                <styles>
+                    <style style="NONE"/>
+                </styles>
+            </ExistingField>
+            <ExistingField enabled="true" name="lblTitle" type="Label"
+                visible="true" wizardPageId="com.yantra.pca.ycd.rcp.tasks.printPickTicket.wizardpages.YCDPrintPickTicketScreen">
+                <LayoutData grabExcessHSpace="true"
+                    grabExcessVSpace="false" hAlignment="Beginning"
+                    hColSpan="1" hIndent="0" heightHint="-1"
+                    vAlignment="Center" vColSpan="1" widthHint="-1"/>
+                <SetData name="yrc:customType" value="NoTheme"/>
+                <styles>
+                    <style style="NONE"/>
+                </styles>
+            </ExistingField>
+        </ExistingFields>
+    </Form>
+    <Form
+        extensionBehaviorName="com.academy.som.backroompick.screens.AcademyRecordBackroomShipOutExtnWizardBehavior"
+        id="com.yantra.pca.ycd.rcp.tasks.backroompick.wizards.YCDBackroompickWizard" wizard="true">
+        <NewFields>
+			<!-- EFP-5 Commenting previous layout -->
+			<!--
+            <NewField>
+                <Field attachTo="txtLastScannedItem" attachType="AFTER"
+                    defaultValue="Container_Weight" enabled="true"
+                    isAdvanced="false" name="extn_lblWeight_scan"
+                    type="Label" visible="true" wizardPageId="com.yantra.pca.ycd.rcp.tasks.backroompick.wizardpages.YCDBackroomPick">
+                    <styles>
+                        <style style="NONE"/>
+                    </styles>
+                </Field>
+                <SetData name="YRCSourceBinding" value=""/>
+                <SetData name="yrc:customType" value="Label"/>
+                <LayoutData grabExcessHSpace="false"
+                    grabExcessVSpace="false" hAlignment="Beginning"
+                    hColSpan="1" hIndent="0" heightHint="-1"
+                    vAlignment="Center" vColSpan="1" widthHint="-1"/>
+            </NewField>
+			
+            <NewField>
+                <Field attachTo="extn_lblWeight_scan" attachType="AFTER"
+                    enabled="true" isAdvanced="false"
+                    name="extn_txtWeight_scan" type="Text"
+                    validationRequired="true" visible="true" wizardPageId="com.yantra.pca.ycd.rcp.tasks.backroompick.wizardpages.YCDBackroomPick">
+                    <styles>
+                        <style style="BORDER"/>
+                    </styles>
+                </Field>
+                <SetData name="YRCSourceBinding" value=""/>
+                <SetData name="YRCTargetBinding" value=""/>
+                <SetData name="isMandatory" value="false"/>
+                <SetData name="yrc:customType" value="Text"/>
+                <SetData name="yrc:dblocalized" value="false"/>
+                <LayoutData grabExcessHSpace="false"
+                    grabExcessVSpace="false" hAlignment="Beginning"
+                    hColSpan="1" hIndent="0" heightHint="-1"
+                    vAlignment="Center" vColSpan="1" widthHint="100"/>
+            </NewField>
+			
+            <NewField>
+                <Field attachTo="extn_txtWeight_scan" attachType="AFTER"
+                    defaultValue="Container Type" enabled="true"
+                    isAdvanced="false" name="extn_lblContainerType_scan"
+                    type="Label" visible="true" wizardPageId="com.yantra.pca.ycd.rcp.tasks.backroompick.wizardpages.YCDBackroomPick">
+                    <styles>
+                        <style style="NONE"/>
+                    </styles>
+                </Field>
+                <SetData name="YRCSourceBinding" value=""/>
+                <SetData name="yrc:customType" value="Label"/>
+                <LayoutData grabExcessHSpace="false"
+                    grabExcessVSpace="false" hAlignment="Beginning"
+                    hColSpan="1" hIndent="0" heightHint="-1"
+                    vAlignment="Center" vColSpan="1" widthHint="-1"/>
+            </NewField>
+            <NewField>
+                <Field attachTo="extn_lblContainerType_scan"
+                    attachType="AFTER" enabled="true" isAdvanced="false"
+                    name="extn_cmbContainerType_scan" type="Combo"
+                    validationRequired="true" visible="true" wizardPageId="com.yantra.pca.ycd.rcp.tasks.backroompick.wizardpages.YCDBackroomPick">
+                    <styles>
+                        <style style="NONE"/>
+                    </styles>
+                </Field>
+                <SetData name="YRCCodeBinding" value="ItemID"/>
+                <SetData name="YRCDescriptionBinding" value="PrimaryInformation/@ShortDescription"/>
+                <SetData name="YRCListBinding" value="Extn_getItemList_Output:ItemList/Item"/>
+                <SetData name="YRCSourceBinding" value=""/>
+                <SetData name="YRCTargetBinding" value=""/>
+                <SetData name="isMandatory" value="false"/>
+                <SetData name="yrc:customType" value="Combo"/>
+                <SetData name="yrc:dblocalized" value="false"/>
+                <LayoutData grabExcessHSpace="false"
+                    grabExcessVSpace="false" hAlignment="Beginning"
+                    hColSpan="1" hIndent="0" heightHint="-1"
+                    vAlignment="Center" vColSpan="1" widthHint="100"/>
+            </NewField>
+            <NewField>
+                <Field attachTo="extn_cmbContainerType_scan"
+                    attachType="AFTER" defaultValue="Pack Station"
+                    enabled="true" isAdvanced="false"
+                    name="extn_lblPrinter_Id" type="Label"
+                    visible="true" wizardPageId="com.yantra.pca.ycd.rcp.tasks.backroompick.wizardpages.YCDBackroomPick">
+                    <styles>
+                        <style style="NONE"/>
+                    </styles>
+                </Field>
+                <SetData name="YRCSourceBinding" value=""/>
+                <SetData name="yrc:customType" value="Label"/>
+                <LayoutData grabExcessHSpace="false"
+                    grabExcessVSpace="false" hAlignment="Beginning"
+                    hColSpan="1" hIndent="0" heightHint="-1"
+                    vAlignment="Center" vColSpan="1" widthHint="-1"/>
+            </NewField>
+			-->
+			<!-- EFP-5 Start -->
+			<NewField>
+                <Field attachTo="txtLastScannedItem" attachType="AFTER"
+                    defaultValue="Container Type" enabled="true"
+                    isAdvanced="false" name="extn_lblContainerType_scan"
+                    type="Label" visible="true" wizardPageId="com.yantra.pca.ycd.rcp.tasks.backroompick.wizardpages.YCDBackroomPick">
+                    <styles>
+                        <style style="NONE"/>
+                    </styles>
+                </Field>
+                <SetData name="YRCSourceBinding" value=""/>
+                <SetData name="yrc:customType" value="Label"/>
+                <LayoutData grabExcessHSpace="false"
+                    grabExcessVSpace="false" hAlignment="Beginning"
+                    hColSpan="1" hIndent="0" heightHint="-1"
+                    vAlignment="Center" vColSpan="1" widthHint="-1"/>
+            </NewField>
+            <NewField>
+                <Field attachTo="extn_lblContainerType_scan"
+                    attachType="AFTER" enabled="true" isAdvanced="false"
+                    name="extn_cmbContainerType_scan" type="Combo"
+                    validationRequired="true" visible="true" wizardPageId="com.yantra.pca.ycd.rcp.tasks.backroompick.wizardpages.YCDBackroomPick">
+                    <styles>
+                        <style style="NONE"/>
+                    </styles>
+                </Field>
+                <SetData name="YRCCodeBinding" value="ItemID"/>
+                <SetData name="YRCDescriptionBinding" value="PrimaryInformation/@ShortDescription"/>
+                <SetData name="YRCListBinding" value="Extn_getItemList_Output:ItemList/Item"/>
+                <SetData name="YRCSourceBinding" value=""/>
+                <SetData name="YRCTargetBinding" value=""/>
+                <SetData name="isMandatory" value="false"/>
+                <SetData name="yrc:customType" value="Combo"/>
+                <SetData name="yrc:dblocalized" value="false"/>
+                <LayoutData grabExcessHSpace="false"
+                    grabExcessVSpace="false" hAlignment="Beginning"
+                    hColSpan="1" hIndent="0" heightHint="-1"
+                    vAlignment="Center" vColSpan="1" widthHint="100"/>
+            </NewField>
+            <NewField>
+                <Field attachTo="extn_cmbContainerType_scan"
+                    attachType="AFTER" defaultValue="Container_Weight"
+                    enabled="true" isAdvanced="false"
+                    name="extn_lblWeight_scan" type="Label"
+                    visible="true" wizardPageId="com.yantra.pca.ycd.rcp.tasks.backroompick.wizardpages.YCDBackroomPick">
+                    <styles>
+                        <style style="NONE"/>
+                    </styles>
+                </Field>
+                <SetData name="YRCSourceBinding" value=""/>
+                <SetData name="yrc:customType" value="Label"/>
+                <LayoutData grabExcessHSpace="false"
+                    grabExcessVSpace="false" hAlignment="Beginning"
+                    hColSpan="1" hIndent="0" heightHint="-1"
+                    vAlignment="Center" vColSpan="1" widthHint="-1"/>
+            </NewField>
+            <NewField>
+                <Field attachTo="extn_lblWeight_scan" attachType="AFTER"
+                    enabled="true" isAdvanced="false"
+                    name="extn_txtWeight_scan" type="Text"
+                    validationRequired="true" visible="true" wizardPageId="com.yantra.pca.ycd.rcp.tasks.backroompick.wizardpages.YCDBackroomPick">
+                    <styles>
+                        <style style="BORDER"/>
+                    </styles>
+                </Field>
+                <SetData name="YRCSourceBinding" value=""/>
+                <SetData name="YRCTargetBinding" value=""/>
+                <SetData name="isMandatory" value="false"/>
+                <SetData name="yrc:customType" value="Text"/>
+                <SetData name="yrc:dblocalized" value="false"/>
+                <LayoutData grabExcessHSpace="false"
+                    grabExcessVSpace="false" hAlignment="Beginning"
+                    hColSpan="1" hIndent="0" heightHint="-1"
+                    vAlignment="Center" vColSpan="1" widthHint="100"/>
+            </NewField>
+            <NewField>
+                <Field attachTo="extn_txtWeight_scan" attachType="AFTER"
+                    defaultValue="Pack Station" enabled="true"
+                    isAdvanced="false" name="extn_lblPrinter_Id"
+                    type="Label" visible="true" wizardPageId="com.yantra.pca.ycd.rcp.tasks.backroompick.wizardpages.YCDBackroomPick">
+                    <styles>
+                        <style style="NONE"/>
+                    </styles>
+                </Field>
+                <SetData name="YRCSourceBinding" value=""/>
+                <SetData name="yrc:customType" value="Label"/>
+                <LayoutData grabExcessHSpace="false"
+                    grabExcessVSpace="false" hAlignment="Beginning"
+                    hColSpan="1" hIndent="0" heightHint="-1"
+                    vAlignment="Center" vColSpan="1" widthHint="-1"/>
+            </NewField>
+			<!-- EFP-5 End -->		
+            <NewField>
+                <Field attachTo="extn_lblPrinter_Id" attachType="AFTER"
+                    enabled="true" isAdvanced="false"
+                    name="extn_PrinterIdComboBox" type="Combo"
+                    visible="true" wizardPageId="com.yantra.pca.ycd.rcp.tasks.backroompick.wizardpages.YCDBackroomPick">
+                    <styles>
+                        <style style="NONE"/>
+                    </styles>
+                </Field>
+                <SetData name="YRCCodeBinding" value="CodeValue"/>
+                <SetData name="YRCDescriptionBinding" value="CodeValue"/>
+                <SetData name="YRCListBinding" value="Extn_PackSlip_PrinterID_Output:/CommonCodeList/CommonCode"/>
+                <SetData name="YRCSourceBinding" value=""/>
+                <SetData name="YRCTargetBinding" value=""/>
+                <SetData name="isMandatory" value="false"/>
+                <SetData name="yrc:customType" value="Combo"/>
+                <SetData name="yrc:dblocalized" value="false"/>
+                <LayoutData grabExcessHSpace="false"
+                    grabExcessVSpace="false" hAlignment="Beginning"
+                    hColSpan="1" hIndent="0" heightHint="-1"
+                    vAlignment="Center" vColSpan="1" widthHint="-1"/>
+            </NewField>
+            <NewField>
+                <Field attachTo="bttnClose" attachType="BEFORE"
+                    defaultValue="Next F11" enabled="true"
+                    isAdvanced="false" name="extn_btnPickNext"
+                    type="Button" validationRequired="true"
+                    visible="true" wizardPageId="com.yantra.pca.ycd.rcp.tasks.backroompick.wizardpages.YCDBackroomPick">
+                    <styles>
+                        <style style="NONE"/>
+                    </styles>
+                </Field>
+                <SetData name="ExtnActionClass" value="com.academy.som.backroompick.actions.AcademyRecordBackroomShipOutNextAction"/>
+                <SetData name="ExtnActionId" value="BACKROOMPICK_NEXT_ACTION"/>
+                <SetData name="ExtnKeySequence" value="F11"/>
+                <SetData name="IsKeyContextWizardLevel" value="false"/>
+                <SetData name="yrc:customType" value="Button"/>
+                <LayoutData grabExcessHSpace="false"
+                    grabExcessVSpace="false" hAlignment="Beginning"
+                    hColSpan="1" hIndent="0" heightHint="-1"
+                    vAlignment="Center" vColSpan="1" widthHint="-1"/>
+            </NewField>
+            <NewField>
+                <Field attachTo="bttnShrtgRsn2" attachType="AFTER"
+                    defaultValue="Reason Code" enabled="true"
+                    isAdvanced="false" name="extn_lblinvshortage_Reason"
+                    type="Label" visible="true" wizardPageId="com.yantra.pca.ycd.rcp.tasks.backroompick.wizardpages.YCDBackroomPickShortageReasons">
+                    <styles>
+                        <style style="NONE"/>
+                    </styles>
+                </Field>
+                <SetData name="YRCSourceBinding" value=""/>
+                <SetData name="yrc:customType" value="Label"/>
+                <LayoutData grabExcessHSpace="false"
+                    grabExcessVSpace="false" hAlignment="Beginning"
+                    hColSpan="1" hIndent="0" heightHint="-1"
+                    vAlignment="Center" vColSpan="1" widthHint="-1"/>
+            </NewField>
+            <NewField>
+                <Field attachTo="extn_lblinvshortage_Reason"
+                    attachType="AFTER" enabled="true" isAdvanced="false"
+                    name="extn_InvShortage_Reason_Code" type="Combo"
+                    validationRequired="true" visible="true" wizardPageId="com.yantra.pca.ycd.rcp.tasks.backroompick.wizardpages.YCDBackroomPickShortageReasons">
+                    <styles>
+                        <style style="NONE"/>
+                    </styles>
+                </Field>
+                <SetData name="YRCCodeBinding" value="CodeValue"/>
+                <SetData name="YRCDescriptionBinding" value="CodeValue"/>
+                <SetData name="YRCListBinding" value="Extn_inv_shrt_rsn_Output:/CommonCodeList/CommonCode"/>
+                <SetData name="YRCSourceBinding" value=""/>
+                <SetData name="YRCTargetBinding" value=""/>
+                <SetData name="isMandatory" value="false"/>
+                <SetData name="yrc:customType" value="Combo"/>
+                <SetData name="yrc:dblocalized" value="false"/>
+                <LayoutData grabExcessHSpace="false"
+                    grabExcessVSpace="false" hAlignment="Beginning"
+                    hColSpan="1" hIndent="0" heightHint="-1"
+                    vAlignment="Center" vColSpan="1" widthHint="100"/>
+            </NewField>
+            <NewField>
+                <Field attachTo="bttn" attachType="BEFORE"
+                    defaultValue="Confirm" enabled="true"
+                    isAdvanced="false" name="extn_btnPickConfirm"
+                    type="Button" validationRequired="true"
+                    visible="true" wizardPageId="com.yantra.pca.ycd.rcp.tasks.backroompick.wizardpages.YCDBackroomPickShortageReasons">
+                    <styles>
+                        <style style="NONE"/>
+                    </styles>
+                </Field>
+                <SetData name="ExtnActionClass" value="com.academy.som.backroompick.actions.AcademyRecordBackroomShipOutConfirmAction"/>
+                <SetData name="ExtnActionId" value="BACKROOM_PICK_CONFIRM_ACTION"/>
+                <SetData name="ExtnKeySequence" value="F8"/>
+                <SetData name="IsKeyContextWizardLevel" value="false"/>
+                <SetData name="yrc:customType" value="Button"/>
+                <LayoutData grabExcessHSpace="false"
+                    grabExcessVSpace="false" hAlignment="Beginning"
+                    hColSpan="1" hIndent="0" heightHint="-1"
+                    vAlignment="Center" vColSpan="1" widthHint="-1"/>
+            </NewField>
+           <!--Start :Changes made for STL 933-->
+            <NewField>
+                <Field IsResizeable="true" attachTo="tblClmnItem"
+                    attachType="AFTER" enabled="true" isAdvanced="false"
+                    name="extn_ItemID" tableName="tblBackroomPickTable"
+                    type="TableColumn" visible="true" width="50" wizardPageId="com.yantra.pca.ycd.rcp.tasks.backroompick.wizardpages.YCDBackroomPick">
+                    <styles>
+                        <style style="NONE"/>
+                    </styles>
+                </Field>
+                <SetData name="YRCSourceBinding" value="getShipmentDetails_output:/Shipment/ShipmentLines/ShipmentLine"/>
+                <SetData name="YRCTableAttributeBinding" value="@ItemID"/>
+                <SetData name="YRCTableColumnBinding" value="Item ID"/>
+                <SetData name="yrc:customType" value=""/>
+            </NewField>
+            <NewField>
+                <Field IsResizeable="true" attachTo="extn_ItemID"
+                    attachType="AFTER" enabled="true" isAdvanced="false"
+                    name="extn_ItemDescription"
+                    tableName="tblBackroomPickTable" type="TableColumn"
+                    visible="true" width="100" wizardPageId="com.yantra.pca.ycd.rcp.tasks.backroompick.wizardpages.YCDBackroomPick">
+                    <styles>
+                        <style style="NONE"/>
+                    </styles>
+                </Field>
+                <SetData name="YRCSourceBinding" value="getShipmentDetails_output:/Shipment/ShipmentLines/ShipmentLine"/>
+                <SetData name="YRCTableAttributeBinding" value="@ItemDesc"/>
+                <SetData name="YRCTableColumnBinding" value="Description"/>
+                <SetData name="yrc:customType" value=""/>
+            </NewField>
+            <NewField>
+                <Field IsResizeable="true"
+                    attachTo="extn_ItemDescription" attachType="AFTER"
+                    enabled="true" isAdvanced="false"
+                    name="extn_tblclmQuantity"
+                    tableName="tblBackroomPickTable" type="TableColumn"
+                    visible="true" width="30" wizardPageId="com.yantra.pca.ycd.rcp.tasks.backroompick.wizardpages.YCDBackroomPick">
+                    <styles>
+                        <style style="NONE"/>
+                    </styles>
+                </Field>
+                <SetData name="YRCSourceBinding" value="getShipmentDetails_output:/Shipment/ShipmentLines/ShipmentLine"/>
+                <SetData name="YRCTableAttributeBinding" value="@Quantity"/>
+                <SetData name="YRCTableColumnBinding" value="Original Quantity"/>
+                <SetData name="yrc:customType" value=""/>
+            </NewField>
+            <NewField>
+                <Field IsResizeable="true"
+                    attachTo="tblClmnPickQuantity"
+                    attachType="AFTER" enabled="true" isAdvanced="false"
+                    name="extn_tblclmpickedqty"
+                    tableName="tblBackroomPickTable" type="TableColumn"
+                    visible="true" width="50" wizardPageId="com.yantra.pca.ycd.rcp.tasks.backroompick.wizardpages.YCDBackroomPick">
+                    <styles>
+                        <style style="NONE"/>
+                    </styles>
+                </Field>
+                <SetData name="YRCSourceBinding" value="getShipmentDetails_output:/Shipment/ShipmentLines/ShipmentLine"/>
+                <SetData name="YRCTableAttributeBinding" value="@BackroomPickedQuantity"/>
+                <SetData name="YRCTableColumnBinding" value="Previous Pick Qty"/>
+                <SetData name="yrc:customType" value=""/>
+            </NewField>
+            <NewField>
+                <Field IsResizeable="true" attachTo="tblclmOrderNo"
+                    attachType="AFTER" enabled="true" isAdvanced="false"
+                    name="extn_tblclmItemID"
+                    tableName="tblShortageReason" type="TableColumn"
+                    visible="true" width="30" wizardPageId="com.yantra.pca.ycd.rcp.tasks.backroompick.wizardpages.YCDBackroomPickShortageReasons">
+                    <styles>
+                        <style style="NONE"/>
+                    </styles>
+                </Field>
+                <SetData name="YRCSourceBinding" value="ShortageResolution_input:/Shipment/ShipmentLines/ShipmentLine"/>
+                <SetData name="YRCTableAttributeBinding" value="/OrderLine/Item/@ItemID"/>
+                <SetData name="YRCTableColumnBinding" value="Item ID"/>
+                <SetData name="yrc:customType" value=""/>
+            </NewField>
+            <NewField>
+                <Field IsResizeable="true" attachTo="extn_tblclmItemID"
+                    attachType="AFTER" enabled="true" isAdvanced="false"
+                    name="extn_tblclmItemdesc"
+                    tableName="tblShortageReason" type="TableColumn"
+                    visible="true" width="100" wizardPageId="com.yantra.pca.ycd.rcp.tasks.backroompick.wizardpages.YCDBackroomPickShortageReasons">
+                    <styles>
+                        <style style="NONE"/>
+                    </styles>
+                </Field>
+                <SetData name="YRCSourceBinding" value="ShortageResolution_input:/Shipment/ShipmentLines/ShipmentLine"/>
+                <SetData name="YRCTableAttributeBinding" value="/OrderLine/Item/@ItemDesc"/>
+                <SetData name="YRCTableColumnBinding" value="Description"/>
+                <SetData name="yrc:customType" value=""/>
+            </NewField>
+           <!--End :Changes made for STL 933-->
+		   <!--Start:Changes made for STL-950 Shared inventory-->
+		    <NewField>
+                <Field attachTo="txtShipmentSearchShipmentNo"
+                    attachType="AFTER"
+                    defaultValue="Warehouse Container #" enabled="true"
+                    isAdvanced="false" name="extn_lblWarehouseContId"
+                    type="Label" visible="true" wizardPageId="com.yantra.pca.ycd.rcp.tasks.backroompick.wizardpages.YCDBackroomPickShipmentSearch">
+                    <styles>
+                        <style style="NONE"/>
+                    </styles>
+                </Field>
+                <SetData name="YRCSourceBinding" value=""/>
+                <SetData name="yrc:customType" value="Label"/>
+                <LayoutData grabExcessHSpace="false"
+                    grabExcessVSpace="false" hAlignment="Beginning"
+                    hColSpan="1" hIndent="0" heightHint="-1"
+                    vAlignment="Center" vColSpan="1" widthHint="-1"/>
+            </NewField>
+            <NewField>
+                <Field attachTo="extn_lblWarehouseContId"
+                    attachType="AFTER" enabled="true" isAdvanced="false"
+                    name="extn_txtWarehouseContId" type="Text"
+                    visible="true" wizardPageId="com.yantra.pca.ycd.rcp.tasks.backroompick.wizardpages.YCDBackroomPickShipmentSearch">
+                    <styles>
+                        <style style="BORDER"/>
+                    </styles>
+                </Field>
+                <SetData name="YRCSourceBinding" value=""/>
+                <SetData name="YRCTargetBinding" value=""/>
+                <SetData name="isMandatory" value="false"/>
+                <SetData name="yrc:customType" value="Text"/>
+                <SetData name="yrc:dblocalized" value="false"/>
+                <LayoutData grabExcessHSpace="false"
+                    grabExcessVSpace="false" hAlignment="Beginning"
+                    hColSpan="1" hIndent="0" heightHint="-1"
+                    vAlignment="Center" vColSpan="1" widthHint="120"/>
+            </NewField>
+			<NewField>
+                <Field attachTo="txtExpectedShipDate" attachType="AFTER"
+                    defaultValue="Warehouse Container #" enabled="true"
+                    isAdvanced="false"
+                    name="extn_lblWarehouseCont_Id_ShipDtls"
+                    type="Label" visible="true" wizardPageId="com.yantra.pca.ycd.rcp.tasks.backroompick.wizardpages.YCDBackroomPick">
+                    <styles>
+                        <style style="NONE"/>
+                    </styles>
+                </Field>
+                <SetData name="YRCSourceBinding" value=""/>
+                <SetData name="yrc:customType" value="Label"/>
+                <LayoutData grabExcessHSpace="false"
+                    grabExcessVSpace="false" hAlignment="Beginning"
+                    hColSpan="1" hIndent="5" heightHint="-1"
+                    vAlignment="Center" vColSpan="1" widthHint="-1"/>
+            </NewField>
+            <NewField>
+                <Field attachTo="extn_lblWarehouseCont_Id_ShipDtls"
+                    attachType="AFTER" enabled="true" isAdvanced="false"
+                    name="extn_txtWarehouseCont_Id_ShipDtls" type="Text"
+                    visible="true" wizardPageId="com.yantra.pca.ycd.rcp.tasks.backroompick.wizardpages.YCDBackroomPick">
+                    <styles>
+                        <style style="NONE"/>
+                    </styles>
+                </Field>
+                <SetData name="YRCSourceBinding" value="getShipmentDetails_output:/Shipment/Extn/@ExtnExeterContainerId"/>
+                <SetData name="YRCTargetBinding" value=""/>
+                <SetData name="isMandatory" value="false"/>
+                <SetData name="yrc:customType" value="Text"/>
+                <SetData name="yrc:dblocalized" value="false"/>
+                <LayoutData grabExcessHSpace="false"
+                    grabExcessVSpace="false" hAlignment="Beginning"
+                    hColSpan="1" hIndent="0" heightHint="-1"
+                    vAlignment="Center" vColSpan="1" widthHint="-1"/>
+            </NewField>
+			 <!--End:Changes made for STL-950 Shared inventory-->
+			 
+			  <!-- START STL-1678 added UPC based search in BackroomPick search screen -->
+			 <NewField>
+                <Field attachTo="extn_txtWarehouseContId"
+                    attachType="AFTER"
+                    defaultValue="UPC/ItemID" enabled="true"
+                    isAdvanced="false" name="extn_lblUPCCode"
+                    type="Label" visible="false" wizardPageId="com.yantra.pca.ycd.rcp.tasks.backroompick.wizardpages.YCDBackroomPickShipmentSearch">
+                    <styles>
+                        <style style="NONE"/>
+                    </styles>
+                </Field>
+                <SetData name="YRCSourceBinding" value=""/>
+                <SetData name="yrc:customType" value="Label"/>
+                <LayoutData grabExcessHSpace="false"
+                    grabExcessVSpace="false" hAlignment="Beginning"
+                    hColSpan="1" hIndent="0" heightHint="-1"
+                    vAlignment="Center" vColSpan="1" widthHint="-1"/>
+            </NewField>
+            <NewField>
+                <Field attachTo="extn_lblUPCCode"
+                    attachType="AFTER" enabled="true" isAdvanced="false"
+                    name="extn_txtUPCCode" type="Text"
+                    validationRequired="false" visible="false" wizardPageId="com.yantra.pca.ycd.rcp.tasks.backroompick.wizardpages.YCDBackroomPickShipmentSearch">
+                    <styles>
+                        <style style="BORDER"/>
+                    </styles>
+                </Field>
+                <SetData name="YRCSourceBinding" value=""/>
+                <SetData name="YRCTargetBinding" value=""/>
+                <SetData name="isMandatory" value="false"/>
+                <SetData name="yrc:customType" value="Text"/>
+                <SetData name="yrc:dblocalized" value="false"/>
+                <LayoutData grabExcessHSpace="false"
+                    grabExcessVSpace="false" hAlignment="Beginning"
+                    hColSpan="1" hIndent="0" heightHint="-1"
+                    vAlignment="Center" vColSpan="1" widthHint="120"/>
+            </NewField>
+			  <!-- END STL-1678 added UPC based search in BackroomPick search screen -->
+			  
+			  <!-- Start WN-2980 GC Activation and fulfillment for SI DCs -->
+            <NewField>
+                <Field attachTo="txtLastScannedItem" attachType="AFTER"
+                    defaultValue="Serial No" enabled="true"
+                    isAdvanced="false" name="extn_lblSerialNo"
+                    type="Label" visible="true" wizardPageId="com.yantra.pca.ycd.rcp.tasks.backroompick.wizardpages.YCDBackroomPick">
+                    <styles>
+                        <style style="NONE"/>
+                    </styles>
+                </Field>
+                <SetData name="YRCSourceBinding" value=""/>
+                <SetData name="yrc:customType" value="label"/>
+                <LayoutData grabExcessHSpace="false"
+                    grabExcessVSpace="false" hAlignment="Beginning"
+                    hColSpan="1" hIndent="0" heightHint="-1"
+                    vAlignment="Center" vColSpan="1" widthHint="-1"/>
+            </NewField>
+            <NewField>
+                <Field attachTo="extn_lblSerialNo" attachType="AFTER"
+                    enabled="true" isAdvanced="false"
+                    name="extn_txtSerialNo" validationRequired="true" type="Text" visible="true" wizardPageId="com.yantra.pca.ycd.rcp.tasks.backroompick.wizardpages.YCDBackroomPick">
+                    <styles>
+                        <style style="BORDER"/>
+                    </styles>
+                </Field>
+                <SetData name="YRCSourceBinding" value=""/>
+                <SetData name="YRCTargetBinding" value=""/>
+                <SetData name="isMandatory" value="false"/>
+                <SetData name="yrc:customType" value="Text"/>
+                <SetData name="yrc:dblocalized" value="false"/>
+                <LayoutData grabExcessHSpace="false"
+                    grabExcessVSpace="false" hAlignment="Beginning"
+                    hColSpan="1" hIndent="0" heightHint="-1"
+                    vAlignment="Center" vColSpan="1" widthHint="100"/>
+            </NewField>
+            <NewField>
+                <Field attachTo="extn_txtSerialNo" attachType="AFTER"
+                    defaultValue="Last Scanned Serial" enabled="true"
+                    isAdvanced="false" name="extn_lblLastScannedSerialNo"
+                    type="Label" visible="true" wizardPageId="com.yantra.pca.ycd.rcp.tasks.backroompick.wizardpages.YCDBackroomPick">
+                    <styles>
+                        <style style="NONE"/>
+                    </styles>
+                </Field>
+                <SetData name="YRCSourceBinding" value=""/>
+                <SetData name="yrc:customType" value="label"/>
+                <LayoutData grabExcessHSpace="false"
+                    grabExcessVSpace="false" hAlignment="Beginning"
+                    hColSpan="1" hIndent="0" heightHint="-1"
+                    vAlignment="Center" vColSpan="1" widthHint="-1"/>
+            </NewField>
+            <NewField>
+               <Field attachTo="extn_lblLastScannedSerialNo" attachType="AFTER"
+                    defaultValue="" enabled="false"
+                    isAdvanced="false" name="extn_txtLastScannedSerialNo"
+                    type="Text" visible="true" wizardPageId="com.yantra.pca.ycd.rcp.tasks.backroompick.wizardpages.YCDBackroomPick">
+                    <styles>
+                        <style style="NONE"/>
+                    </styles>
+                </Field>
+                <SetData name="YRCSourceBinding" value=""/>
+                <SetData name="yrc:customType" value="label"/>
+                <LayoutData grabExcessHSpace="false"
+                    grabExcessVSpace="false" hAlignment="Beginning"
+                    hColSpan="1" hIndent="0" heightHint="-1"
+                    vAlignment="Center" vColSpan="1" widthHint="100"/>
+            </NewField>
+			 <NewField>
+                <Field IsResizeable="true"
+                    attachTo="extn_tblclmQuantity" attachType="AFTER"
+                    enabled="true" isAdvanced="true" isEditable ="Y"
+                    name="extn_clmCustomPick"
+                    tableName="tblBackroomPickTable" type="TableColumn"
+                    validationRequired="true" visible="true" width="100" wizardPageId="com.yantra.pca.ycd.rcp.tasks.backroompick.wizardpages.YCDBackroomPick">
+                    <styles>
+                        <style style="NONE"/>
+                    </styles>
+                </Field>
+                <SetData name="YRCSourceBinding" value="getShipmentDetails_output:/Shipment/ShipmentLines/ShipmentLine"/>
+                <SetData name="YRCTableAttributeBinding" value=""/>
+                <SetData name="YRCTableColumnBinding" value="Current Pick Quantity"/>
+                <SetData name="yrc:customType" value=""/>
+            </NewField>
+			<!-- End WN-2980 GC Activation and fulfillment for SI DCs -->
+			<!-- EFP-5 Start -->
+			<NewField>
+                <Field attachTo="txtItemID" attachType="AFTER"
+                    enabled="true" isAdvanced="false"
+                    name="extn_UnusedTxtBox_01" type="Text"
+                    visible="false" wizardPageId="com.yantra.pca.ycd.rcp.tasks.backroompick.wizardpages.YCDBackroomPick">
+                    <styles>
+                        <style style="NONE"/>
+                    </styles>
+                </Field>
+                <SetData name="YRCSourceBinding" value=""/>
+                <SetData name="YRCTargetBinding" value=""/>
+                <SetData name="isMandatory" value="false"/>
+                <SetData name="yrc:customType" value=""/>
+                <SetData name="yrc:dblocalized" value="false"/>
+                <LayoutData grabExcessHSpace="false"
+                    grabExcessVSpace="false" hAlignment="Beginning"
+                    hColSpan="1" hIndent="0" heightHint="-1"
+                    vAlignment="Center" vColSpan="1" widthHint="-1"/>
+            </NewField>
+            <NewField>
+                <Field attachTo="extn_UnusedTxtBox_01"
+                    attachType="AFTER" enabled="true" isAdvanced="false"
+                    name="extn_UnusedTxtBox_02" type="Text"
+                    visible="false" wizardPageId="com.yantra.pca.ycd.rcp.tasks.backroompick.wizardpages.YCDBackroomPick">
+                    <styles>
+                        <style style="NONE"/>
+                    </styles>
+                </Field>
+                <SetData name="YRCSourceBinding" value=""/>
+                <SetData name="YRCTargetBinding" value=""/>
+                <SetData name="isMandatory" value="false"/>
+                <SetData name="yrc:customType" value=""/>
+                <SetData name="yrc:dblocalized" value="false"/>
+                <LayoutData grabExcessHSpace="false"
+                    grabExcessVSpace="false" hAlignment="Beginning"
+                    hColSpan="1" hIndent="0" heightHint="-1"
+                    vAlignment="Center" vColSpan="1" widthHint="-1"/>
+            </NewField>
+            <NewField>
+                <Field attachTo="extn_UnusedTxtBox_02"
+                    attachType="AFTER" enabled="true" isAdvanced="false"
+                    name="extn_UnusedTxtBox_03" type="Text"
+                    visible="false" wizardPageId="com.yantra.pca.ycd.rcp.tasks.backroompick.wizardpages.YCDBackroomPick">
+                    <styles>
+                        <style style="NONE"/>
+                    </styles>
+                </Field>
+                <SetData name="YRCSourceBinding" value=""/>
+                <SetData name="YRCTargetBinding" value=""/>
+                <SetData name="isMandatory" value="false"/>
+                <SetData name="yrc:customType" value=""/>
+                <SetData name="yrc:dblocalized" value="false"/>
+                <LayoutData grabExcessHSpace="false"
+                    grabExcessVSpace="false" hAlignment="Beginning"
+                    hColSpan="1" hIndent="0" heightHint="-1"
+                    vAlignment="Center" vColSpan="1" widthHint="-1"/>
+            </NewField>
+            <NewField>
+                <Field attachTo="txtLastScannedItem" attachType="AFTER"
+                    enabled="true" isAdvanced="false"
+                    name="extn_UnusedTxtBox_04" type="Text"
+                    visible="false" wizardPageId="com.yantra.pca.ycd.rcp.tasks.backroompick.wizardpages.YCDBackroomPick">
+                    <styles>
+                        <style style="NONE"/>
+                    </styles>
+                </Field>
+                <SetData name="YRCSourceBinding" value=""/>
+                <SetData name="YRCTargetBinding" value=""/>
+                <SetData name="isMandatory" value="false"/>
+                <SetData name="yrc:customType" value=""/>
+                <SetData name="yrc:dblocalized" value="false"/>
+                <LayoutData grabExcessHSpace="false"
+                    grabExcessVSpace="false" hAlignment="Beginning"
+                    hColSpan="1" hIndent="0" heightHint="-1"
+                    vAlignment="Center" vColSpan="1" widthHint="-1"/>
+            </NewField>
+            <NewField>
+                <Field attachTo="extn_UnusedTxtBox_04"
+                    attachType="AFTER" enabled="true" isAdvanced="false"
+                    name="extn_UnusedTxtBox_05" type="Text"
+                    visible="false" wizardPageId="com.yantra.pca.ycd.rcp.tasks.backroompick.wizardpages.YCDBackroomPick">
+                    <styles>
+                        <style style="NONE"/>
+                    </styles>
+                </Field>
+                <SetData name="YRCSourceBinding" value=""/>
+                <SetData name="YRCTargetBinding" value=""/>
+                <SetData name="isMandatory" value="false"/>
+                <SetData name="yrc:customType" value=""/>
+                <SetData name="yrc:dblocalized" value="false"/>
+                <LayoutData grabExcessHSpace="false"
+                    grabExcessVSpace="false" hAlignment="Beginning"
+                    hColSpan="1" hIndent="0" heightHint="-1"
+                    vAlignment="Center" vColSpan="1" widthHint="-1"/>
+            </NewField>
+            <NewField>
+                <Field attachTo="extn_UnusedTxtBox_05"
+                    attachType="AFTER" enabled="true" isAdvanced="false"
+                    name="extn_UnusedTxtBox_06" type="Text"
+                    visible="false" wizardPageId="com.yantra.pca.ycd.rcp.tasks.backroompick.wizardpages.YCDBackroomPick">
+                    <styles>
+                        <style style="NONE"/>
+                    </styles>
+                </Field>
+                <SetData name="YRCSourceBinding" value=""/>
+                <SetData name="YRCTargetBinding" value=""/>
+                <SetData name="isMandatory" value="false"/>
+                <SetData name="yrc:customType" value=""/>
+                <SetData name="yrc:dblocalized" value="false"/>
+                <LayoutData grabExcessHSpace="false"
+                    grabExcessVSpace="false" hAlignment="Beginning"
+                    hColSpan="1" hIndent="0" heightHint="-1"
+                    vAlignment="Center" vColSpan="1" widthHint="-1"/>
+            </NewField>
+            <NewField>
+                <Field attachTo="extn_txtSerialNo" attachType="AFTER"
+                    enabled="true" isAdvanced="false"
+                    name="extn_UnusedTxtBox_07" type="Text"
+                    visible="false" wizardPageId="com.yantra.pca.ycd.rcp.tasks.backroompick.wizardpages.YCDBackroomPick">
+                    <styles>
+                        <style style="NONE"/>
+                    </styles>
+                </Field>
+                <SetData name="YRCSourceBinding" value=""/>
+                <SetData name="YRCTargetBinding" value=""/>
+                <SetData name="isMandatory" value="false"/>
+                <SetData name="yrc:customType" value=""/>
+                <SetData name="yrc:dblocalized" value="false"/>
+                <LayoutData grabExcessHSpace="false"
+                    grabExcessVSpace="false" hAlignment="Beginning"
+                    hColSpan="1" hIndent="0" heightHint="-1"
+                    vAlignment="Center" vColSpan="1" widthHint="-1"/>
+            </NewField>
+            <NewField>
+                <Field attachTo="extn_UnusedTxtBox_07"
+                    attachType="AFTER" enabled="true" isAdvanced="false"
+                    name="extn_UnusedTxtBox_08" type="Text"
+                    visible="false" wizardPageId="com.yantra.pca.ycd.rcp.tasks.backroompick.wizardpages.YCDBackroomPick">
+                    <styles>
+                        <style style="NONE"/>
+                    </styles>
+                </Field>
+                <SetData name="YRCSourceBinding" value=""/>
+                <SetData name="YRCTargetBinding" value=""/>
+                <SetData name="isMandatory" value="false"/>
+                <SetData name="yrc:customType" value=""/>
+                <SetData name="yrc:dblocalized" value="false"/>
+                <LayoutData grabExcessHSpace="false"
+                    grabExcessVSpace="false" hAlignment="Beginning"
+                    hColSpan="1" hIndent="0" heightHint="-1"
+                    vAlignment="Center" vColSpan="1" widthHint="-1"/>
+            </NewField>
+            <NewField>
+                <Field attachTo="extn_UnusedTxtBox_08"
+                    attachType="AFTER" enabled="true" isAdvanced="false"
+                    name="extn_UnusedTxtBox_09" type="Text"
+                    visible="false" wizardPageId="com.yantra.pca.ycd.rcp.tasks.backroompick.wizardpages.YCDBackroomPick">
+                    <styles>
+                        <style style="NONE"/>
+                    </styles>
+                </Field>
+                <SetData name="YRCSourceBinding" value=""/>
+                <SetData name="YRCTargetBinding" value=""/>
+                <SetData name="isMandatory" value="false"/>
+                <SetData name="yrc:customType" value=""/>
+                <SetData name="yrc:dblocalized" value="false"/>
+                <LayoutData grabExcessHSpace="false"
+                    grabExcessVSpace="false" hAlignment="Beginning"
+                    hColSpan="1" hIndent="0" heightHint="-1"
+                    vAlignment="Center" vColSpan="1" widthHint="-1"/>
+            </NewField>
+            <NewField>
+                <Field attachTo="extn_lblContainerType_scan"
+                    attachType="BEFORE" enabled="true"
+                    isAdvanced="false" name="extn_UnusedTxtBox_10"
+                    type="Text" visible="false" wizardPageId="com.yantra.pca.ycd.rcp.tasks.backroompick.wizardpages.YCDBackroomPick">
+                    <styles>
+                        <style style="NONE"/>
+                    </styles>
+                </Field>
+                <SetData name="YRCSourceBinding" value=""/>
+                <SetData name="YRCTargetBinding" value=""/>
+                <SetData name="isMandatory" value="false"/>
+                <SetData name="yrc:customType" value=""/>
+                <SetData name="yrc:dblocalized" value="false"/>
+                <LayoutData grabExcessHSpace="false"
+                    grabExcessVSpace="false" hAlignment="Beginning"
+                    hColSpan="1" hIndent="0" heightHint="-1"
+                    vAlignment="Center" vColSpan="1" widthHint="-1"/>
+            </NewField>
+            <NewField>
+                <Field attachTo="extn_UnusedTxtBox_10"
+                    attachType="AFTER" enabled="true" isAdvanced="false"
+                    name="extn_UnusedTxtBox_11" type="Text"
+                    visible="false" wizardPageId="com.yantra.pca.ycd.rcp.tasks.backroompick.wizardpages.YCDBackroomPick">
+                    <styles>
+                        <style style="NONE"/>
+                    </styles>
+                </Field>
+                <SetData name="YRCSourceBinding" value=""/>
+                <SetData name="YRCTargetBinding" value=""/>
+                <SetData name="isMandatory" value="false"/>
+                <SetData name="yrc:customType" value=""/>
+                <SetData name="yrc:dblocalized" value="false"/>
+                <LayoutData grabExcessHSpace="false"
+                    grabExcessVSpace="false" hAlignment="Beginning"
+                    hColSpan="1" hIndent="0" heightHint="-1"
+                    vAlignment="Center" vColSpan="1" widthHint="-1"/>
+            </NewField>
+            <NewField>
+                <Field attachTo="extn_UnusedTxtBox_11"
+                    attachType="AFTER" enabled="true" isAdvanced="false"
+                    name="extn_UnusedTxtBox_12" type="Text"
+                    visible="false" wizardPageId="com.yantra.pca.ycd.rcp.tasks.backroompick.wizardpages.YCDBackroomPick">
+                    <styles>
+                        <style style="NONE"/>
+                    </styles>
+                </Field>
+                <SetData name="YRCSourceBinding" value=""/>
+                <SetData name="YRCTargetBinding" value=""/>
+                <SetData name="isMandatory" value="false"/>
+                <SetData name="yrc:customType" value=""/>
+                <SetData name="yrc:dblocalized" value="false"/>
+                <LayoutData grabExcessHSpace="false"
+                    grabExcessVSpace="false" hAlignment="Beginning"
+                    hColSpan="1" hIndent="0" heightHint="-1"
+                    vAlignment="Center" vColSpan="1" widthHint="-1"/>
+            </NewField>
+            <NewField>
+                <Field attachTo="extn_lblContainerType_scan"
+                    attachType="AFTER" enabled="true" isAdvanced="false"
+                    name="extn_RadioContnrType" type="Radio"
+                    validationRequired="true" visible="true" wizardPageId="com.yantra.pca.ycd.rcp.tasks.backroompick.wizardpages.YCDBackroomPick">
+                    <styles>
+                        <style style="NONE"/>
+                    </styles>
+                </Field>
+                <SetData name="YRCCheckedValue" value=""/>
+                <SetData name="YRCSourceBinding" value=""/>
+                <SetData name="YRCTargetBinding" value=""/>
+                <SetData name="yrc:customType" value="Label"/>
+                <LayoutData grabExcessHSpace="false"
+                    grabExcessVSpace="false" hAlignment="End"
+                    hColSpan="1" hIndent="0" heightHint="-1"
+                    vAlignment="Center" vColSpan="-1" widthHint="-1"/>
+            </NewField>
+            <!-- Start OMNI 65686 Pack Station  Auto select container size RCP SOM -->
+            <NewField>
+                <Field attachTo="extn_RadioContnrType" attachType="AFTER"
+                    defaultValue="Vendor Package" enabled="true"
+                    isAdvanced="false" name="extn_lblVendorContainerType"
+                    type="Label" visible="true" wizardPageId="com.yantra.pca.ycd.rcp.tasks.backroompick.wizardpages.YCDBackroomPick">
+                    <styles>
+                        <style style="NONE"/>
+                    </styles>
+                </Field>
+                <SetData name="YRCSourceBinding" value=""/>
+                <SetData name="yrc:customType" value="Label"/>
+                <LayoutData grabExcessHSpace="false"
+                    grabExcessVSpace="false" hAlignment="Beginning"
+                    hColSpan="1" hIndent="0" heightHint="-1"
+                    vAlignment="Center" vColSpan="1" widthHint="-1"/>
+            </NewField>
+            <!-- End OMNI 65686 Pack Station Auto select container size RCP SOM -->
+            <NewField>
+                <Field attachTo="extn_lblWeight_scan"
+                    attachType="BEFORE"
+                    defaultValue="Container Description" enabled="true"
+                    isAdvanced="false" name="extn_lblScannedContnr"
+                    type="Label" visible="true" wizardPageId="com.yantra.pca.ycd.rcp.tasks.backroompick.wizardpages.YCDBackroomPick">
+                    <styles>
+                        <style style="NONE"/>
+                    </styles>
+                </Field>
+                <SetData name="YRCSourceBinding" value=""/>
+                <SetData name="yrc:customType" value="Label"/>
+                <LayoutData grabExcessHSpace="false"
+                    grabExcessVSpace="false" hAlignment="Beginning"
+                    hColSpan="1" hIndent="0" heightHint="-1"
+                    vAlignment="Center" vColSpan="1" widthHint="-1"/>
+            </NewField>
+            <NewField>
+                <Field attachTo="extn_lblScannedContnr"
+                    attachType="AFTER" isAdvanced="false"
+                    name="extn_TxtScanContnrType" type="Text"
+                    validationRequired="true" visible="true" wizardPageId="com.yantra.pca.ycd.rcp.tasks.backroompick.wizardpages.YCDBackroomPick">
+                    <styles>
+                        <style style="NONE"/>
+                    </styles>
+                </Field>
+                <SetData name="YRCSourceBinding" value=""/>
+                <SetData name="YRCTargetBinding" value=""/>
+                <SetData name="isMandatory" value="false"/>
+                <SetData name="yrc:customType" value=""/>
+                <SetData name="yrc:dblocalized" value="false"/>
+                <LayoutData grabExcessHSpace="false"
+                    grabExcessVSpace="false" hAlignment="Beginning"
+                    hColSpan="1" hIndent="0" heightHint="-1"
+                    vAlignment="Center" vColSpan="1" widthHint="180"/>
+            </NewField>
+            <NewField>
+                <Field attachTo="extn_TxtScanContnrType"
+                    attachType="AFTER" enabled="true" isAdvanced="false"
+                    name="extn_UnusedTxtBox_13" type="Text" wizardPageId="com.yantra.pca.ycd.rcp.tasks.backroompick.wizardpages.YCDBackroomPick">
+                    <styles>
+                        <style style="NONE"/>
+                    </styles>
+                </Field>
+                <SetData name="YRCSourceBinding" value=""/>
+                <SetData name="YRCTargetBinding" value=""/>
+                <SetData name="isMandatory" value="false"/>
+                <SetData name="yrc:customType" value=""/>
+                <SetData name="yrc:dblocalized" value="false"/>
+                <LayoutData grabExcessHSpace="false"
+                    grabExcessVSpace="false" hAlignment="Beginning"
+                    hColSpan="1" hIndent="0" heightHint="-1"
+                    vAlignment="Center" vColSpan="1" widthHint="-1"/>
+            </NewField>
+            <NewField>
+                <Field attachTo="extn_UnusedTxtBox_13"
+                    attachType="AFTER" enabled="true" isAdvanced="false"
+                    name="extn_UnusedTxtBox_14" type="Text" wizardPageId="com.yantra.pca.ycd.rcp.tasks.backroompick.wizardpages.YCDBackroomPick">
+                    <styles>
+                        <style style="NONE"/>
+                    </styles>
+                </Field>
+                <SetData name="YRCSourceBinding" value=""/>
+                <SetData name="YRCTargetBinding" value=""/>
+                <SetData name="isMandatory" value="false"/>
+                <SetData name="yrc:customType" value=""/>
+                <SetData name="yrc:dblocalized" value="false"/>
+                <LayoutData grabExcessHSpace="false"
+                    grabExcessVSpace="false" hAlignment="Beginning"
+                    hColSpan="1" hIndent="0" heightHint="-1"
+                    vAlignment="Center" vColSpan="1" widthHint="-1"/>
+            </NewField>
+            <NewField>
+                <Field attachTo="extn_UnusedTxtBox_14"
+                    attachType="AFTER" enabled="true" isAdvanced="false"
+                    name="extn_UnusedTxtBox_15" type="Text" wizardPageId="com.yantra.pca.ycd.rcp.tasks.backroompick.wizardpages.YCDBackroomPick">
+                    <styles>
+                        <style style="NONE"/>
+                    </styles>
+                </Field>
+                <SetData name="YRCSourceBinding" value=""/>
+                <SetData name="YRCTargetBinding" value=""/>
+                <SetData name="isMandatory" value="false"/>
+                <SetData name="yrc:customType" value=""/>
+                <SetData name="yrc:dblocalized" value="false"/>
+                <LayoutData grabExcessHSpace="false"
+                    grabExcessVSpace="false" hAlignment="Beginning"
+                    hColSpan="1" hIndent="0" heightHint="-1"
+                    vAlignment="Center" vColSpan="1" widthHint="-1"/>
+            </NewField>
+            <NewField>
+                <Field attachTo="extn_txtWeight_scan" attachType="AFTER"
+                    enabled="true" isAdvanced="false"
+                    name="extn_UnusedTxtBox_19" type="Text" wizardPageId="com.yantra.pca.ycd.rcp.tasks.backroompick.wizardpages.YCDBackroomPick">
+                    <styles>
+                        <style style="NONE"/>
+                    </styles>
+                </Field>
+                <SetData name="YRCSourceBinding" value=""/>
+                <SetData name="YRCTargetBinding" value=""/>
+                <SetData name="isMandatory" value="false"/>
+                <SetData name="yrc:customType" value=""/>
+                <SetData name="yrc:dblocalized" value="false"/>
+                <LayoutData grabExcessHSpace="false"
+                    grabExcessVSpace="false" hAlignment="Beginning"
+                    hColSpan="1" hIndent="0" heightHint="-1"
+                    vAlignment="Center" vColSpan="1" widthHint="-1"/>
+            </NewField>
+            <NewField>
+                <Field attachTo="extn_UnusedTxtBox_19"
+                    attachType="AFTER" enabled="true" isAdvanced="false"
+                    name="extn_UnusedTxtBox_20" type="Text" wizardPageId="com.yantra.pca.ycd.rcp.tasks.backroompick.wizardpages.YCDBackroomPick">
+                    <styles>
+                        <style style="NONE"/>
+                    </styles>
+                </Field>
+                <SetData name="YRCSourceBinding" value=""/>
+                <SetData name="YRCTargetBinding" value=""/>
+                <SetData name="isMandatory" value="false"/>
+                <SetData name="yrc:customType" value=""/>
+                <SetData name="yrc:dblocalized" value="false"/>
+                <LayoutData grabExcessHSpace="false"
+                    grabExcessVSpace="false" hAlignment="Beginning"
+                    hColSpan="1" hIndent="0" heightHint="-1"
+                    vAlignment="Center" vColSpan="1" widthHint="-1"/>
+            </NewField>
+            <NewField>
+                <Field attachTo="extn_UnusedTxtBox_20"
+                    attachType="AFTER" enabled="true" isAdvanced="false"
+                    name="extn_UnusedTxtBox_21" type="Text" wizardPageId="com.yantra.pca.ycd.rcp.tasks.backroompick.wizardpages.YCDBackroomPick">
+                    <styles>
+                        <style style="NONE"/>
+                    </styles>
+                </Field>
+                <SetData name="YRCSourceBinding" value=""/>
+                <SetData name="YRCTargetBinding" value=""/>
+                <SetData name="isMandatory" value="false"/>
+                <SetData name="yrc:customType" value=""/>
+                <SetData name="yrc:dblocalized" value="false"/>
+                <LayoutData grabExcessHSpace="false"
+                    grabExcessVSpace="false" hAlignment="Beginning"
+                    hColSpan="1" hIndent="0" heightHint="-1"
+                    vAlignment="Center" vColSpan="1" widthHint="-1"/>
+            </NewField>
+            <NewField>
+                <Field attachTo="extn_lblContainerType_scan"
+                    attachType="AFTER" enabled="true" isAdvanced="false"
+                    name="extn_CompositeContnr_BarCde" type="Composite"
+                    visible="true" wizardPageId="com.yantra.pca.ycd.rcp.tasks.backroompick.wizardpages.YCDBackroomPick">
+                    <styles>
+                        <style style="NONE"/>
+                    </styles>
+                </Field>
+                <Layout horizontalSpacing="5"
+                    makeColumnsEqualWidth="false" marginHeight="5"
+                    marginWidth="5" numberOfColumns="2" verticalSpacing="5"/>
+                <LayoutData grabExcessHSpace="false"
+                    grabExcessVSpace="false" hAlignment="Beginning"
+                    hColSpan="1" hIndent="0" heightHint="-1"
+                    vAlignment="Center" vColSpan="1" widthHint="-1"/>
+            </NewField>
+            <NewField>
+                <Field attachTo="extn_CompositeContnr_BarCde"
+                    attachType="WITHIN" enabled="true"
+                    isAdvanced="false" name="extn_RadioContnrBarCde"
+                    type="Radio" validationRequired="true"
+                    visible="true" wizardPageId="com.yantra.pca.ycd.rcp.tasks.backroompick.wizardpages.YCDBackroomPick">
+                    <styles>
+                        <style style="NONE"/>
+                    </styles>
+                </Field>
+                <SetData name="YRCCheckedValue" value=""/>
+                <SetData name="YRCSourceBinding" value=""/>
+                <SetData name="YRCTargetBinding" value=""/>
+                <SetData name="yrc:customType" value=""/>
+                <LayoutData grabExcessHSpace="false"
+                    grabExcessVSpace="false" hAlignment="Beginning"
+                    hColSpan="1" hIndent="0" heightHint="-1"
+                    vAlignment="Center" vColSpan="1" widthHint="-1"/>
+            </NewField>
+            <NewField>
+                <Field attachTo="extn_RadioContnrBarCde"
+                    attachType="AFTER" enabled="true" isAdvanced="false"
+                    name="extn_TxtContnrBarcde" type="Text"
+                    validationRequired="true" visible="true" wizardPageId="com.yantra.pca.ycd.rcp.tasks.backroompick.wizardpages.YCDBackroomPick">
+                    <styles>
+                        <style style="BORDER"/>
+                    </styles>
+                </Field>
+                <SetData name="YRCSourceBinding" value=""/>
+                <SetData name="YRCTargetBinding" value=""/>
+                <SetData name="isMandatory" value="false"/>
+                <SetData name="yrc:customType" value=""/>
+                <SetData name="yrc:dblocalized" value="false"/>
+                <LayoutData grabExcessHSpace="false"
+                    grabExcessVSpace="false" hAlignment="Beginning"
+                    hColSpan="1" hIndent="0" heightHint="-1"
+                    vAlignment="Center" vColSpan="1" widthHint="120"/>
+            </NewField>
+            <NewField>
+                <Field attachTo="extn_cmbContainerType_scan"
+                    attachType="AFTER" enabled="true" isAdvanced="false"
+                    name="extn_ContainerSelected" type="Text" wizardPageId="com.yantra.pca.ycd.rcp.tasks.backroompick.wizardpages.YCDBackroomPick">
+                    <styles>
+                        <style style="NONE"/>
+                    </styles>
+                </Field>
+                <SetData name="YRCSourceBinding" value=""/>
+                <SetData name="YRCTargetBinding" value=""/>
+                <SetData name="isMandatory" value="false"/>
+                <SetData name="yrc:customType" value=""/>
+                <SetData name="yrc:dblocalized" value="false"/>
+                <LayoutData grabExcessHSpace="false"
+                    grabExcessVSpace="false" hAlignment="Beginning"
+                    hColSpan="1" hIndent="0" heightHint="-1"
+                    vAlignment="Center" vColSpan="1" widthHint="-1"/>
+            </NewField>
+        </NewFields>
+        <ExistingFields>
+            <ExistingField enabled="true" name="cmpstScanModeControls"
+                type="Composite" visible="true" wizardPageId="com.yantra.pca.ycd.rcp.tasks.backroompick.wizardpages.YCDBackroomPick">
+                <Layout horizontalSpacing="5"
+                    makeColumnsEqualWidth="false" marginHeight="5"
+                    marginWidth="5" numberOfColumns="5" verticalSpacing="5"/>
+                <LayoutData grabExcessHSpace="false"
+                    grabExcessVSpace="false" hAlignment="Fill"
+                    hColSpan="1" hIndent="0" heightHint="-1"
+                    vAlignment="Center" vColSpan="1" widthHint="-1"/>
+                <SetData name="yrc:customType" value=""/>
+                <styles>
+                    <style style="NONE"/>
+                </styles>
+            </ExistingField>
+            <ExistingField enabled="true" name="cmpstBttn"
+                type="Composite" visible="true">
+                <Layout horizontalSpacing="5"
+                    makeColumnsEqualWidth="false" marginHeight="5"
+                    marginWidth="5" numberOfColumns="1" verticalSpacing="5"/>
+                <LayoutData grabExcessHSpace="true"
+                    grabExcessVSpace="false" hAlignment="Fill"
+                    hColSpan="1" hIndent="0" heightHint="-1"
+                    vAlignment="Fill" vColSpan="1" widthHint="-1"/>
+                <styles>
+                    <style style="NONE"/>
+                </styles>
+            </ExistingField>
+            <ExistingField enabled="true" name="bttn" type="Button" wizardPageId="com.yantra.pca.ycd.rcp.tasks.backroompick.wizardpages.YCDBackroomPick">
+                <LayoutData grabExcessHSpace="true"
+                    grabExcessVSpace="false" hAlignment="End"
+                    hColSpan="1" hIndent="0" heightHint="25"
+                    vAlignment="Center" vColSpan="1" widthHint="-1"/>
+                <SetData name="yrc:customType" value="Button"/>
+                <styles>
+                    <style style="NONE"/>
+                </styles>
+            </ExistingField>
+            <ExistingField enabled="true" name="bttnClose" type="Button" wizardPageId="com.yantra.pca.ycd.rcp.tasks.backroompick.wizardpages.YCDBackroomPick">
+                <LayoutData grabExcessHSpace="false"
+                    grabExcessVSpace="false" hAlignment="Center"
+                    hColSpan="1" hIndent="0" heightHint="25"
+                    vAlignment="Center" vColSpan="1" widthHint="-1"/>
+                <SetData name="yrc:customType" value="Button"/>
+                <styles>
+                    <style style="NONE"/>
+                </styles>
+            </ExistingField>
+            <ExistingField enabled="true"
+                name="cmpstShortageReasonRadioButtons" type="Composite" visible="true">
+                <Layout horizontalSpacing="5"
+                    makeColumnsEqualWidth="false" marginHeight="5"
+                    marginWidth="5" numberOfColumns="1" verticalSpacing="4"/>
+                <LayoutData grabExcessHSpace="true"
+                    grabExcessVSpace="true" hAlignment="Fill"
+                    hColSpan="1" hIndent="0" heightHint="-1"
+                    vAlignment="Fill" vColSpan="1" widthHint="-1"/>
+                <styles>
+                    <style style="NONE"/>
+                </styles>
+            </ExistingField>
+            <ExistingField enabled="true" name="cmpstButtons"
+                type="Composite" visible="true">
+                <Layout horizontalSpacing="5"
+                    makeColumnsEqualWidth="false" marginHeight="5"
+                    marginWidth="5" numberOfColumns="3" verticalSpacing="5"/>
+                <LayoutData grabExcessHSpace="true"
+                    grabExcessVSpace="false" hAlignment="Fill"
+                    hColSpan="2" hIndent="0" heightHint="-1"
+                    vAlignment="Center" vColSpan="1" widthHint="-1"/>
+                <styles>
+                    <style style="NONE"/>
+                </styles>
+            </ExistingField>
+            <ExistingField enabled="true" name="bttnConfirm"
+                type="Button" wizardPageId="com.yantra.pca.ycd.rcp.tasks.backroompick.wizardpages.YCDBackroomPickShortageReasons">
+                <LayoutData grabExcessHSpace="false"
+                    grabExcessVSpace="false" hAlignment="End"
+                    hColSpan="1" hIndent="0" heightHint="25"
+                    vAlignment="Center" vColSpan="1" widthHint="-1"/>
+                <SetData name="yrc:customType" value="Button"/>
+                <styles>
+                    <style style="NONE"/>
+                </styles>
+            </ExistingField>
+            <ExistingField enabled="true"
+                name="cmpstshortageradioButttons" type="Composite" visible="true">
+                <Layout horizontalSpacing="0"
+                    makeColumnsEqualWidth="false" marginHeight="0"
+                    marginWidth="0" numberOfColumns="1" verticalSpacing="3"/>
+                <LayoutData grabExcessHSpace="true"
+                    grabExcessVSpace="true" hAlignment="Fill"
+                    hColSpan="1" hIndent="10" heightHint="-1"
+                    vAlignment="Fill" vColSpan="1" widthHint="-1"/>
+                <styles>
+                    <style style="NONE"/>
+                </styles>
+            </ExistingField>
+            <ExistingField enabled="true"
+                name="bttn1ShortageResolutionReason" type="Radio"
+                validationRequired="true" visible="true" wizardPageId="com.yantra.pca.ycd.rcp.tasks.backroompick.wizardpages.YCDBackroomPickShortageReasons">
+                <LayoutData grabExcessHSpace="false"
+                    grabExcessVSpace="false" hAlignment="Beginning"
+                    hColSpan="1" hIndent="0" heightHint="-1"
+                    vAlignment="Center" vColSpan="1" widthHint="-1"/>
+                <SetData name="yrc:customType" value="TaskWhiteComposite"/>
+                <styles>
+                    <style style="NONE"/>
+                </styles>
+            </ExistingField>
+            <ExistingField enabled="true" name="bttn2ShortageResolution"
+                type="Radio" validationRequired="true" visible="true" wizardPageId="com.yantra.pca.ycd.rcp.tasks.backroompick.wizardpages.YCDBackroomPickShortageReasons">
+                <LayoutData grabExcessHSpace="false"
+                    grabExcessVSpace="false" hAlignment="Beginning"
+                    hColSpan="1" hIndent="0" heightHint="-1"
+                    vAlignment="Center" vColSpan="1" widthHint="-1"/>
+                <SetData name="yrc:customType" value="TaskWhiteComposite"/>
+                <styles>
+                    <style style="NONE"/>
+                </styles>
+            </ExistingField>
+          <!-- Start: Changes made for STL 933-->
+            <ExistingField name="bttnShrtgRsn2" type="Radio" wizardPageId="com.yantra.pca.ycd.rcp.tasks.backroompick.wizardpages.YCDBackroomPickShortageReasons">
+                <LayoutData grabExcessHSpace="false"
+                    grabExcessVSpace="false" hAlignment="Beginning"
+                    hColSpan="1" hIndent="0" heightHint="-1"
+                    vAlignment="Center" vColSpan="1" widthHint="-1"/>
+                <SetData name="yrc:customType" value="Text"/>
+                <styles>
+                    <style style="NONE"/>
+                </styles>
+            </ExistingField>
+            <ExistingField IsResizeable="true" enabled="true"
+                name="tblClmnItem" tableName="tblBackroomPickTable"
+                type="TableColumn" width="198" wizardPageId="com.yantra.pca.ycd.rcp.tasks.backroompick.wizardpages.YCDBackroomPick">
+                <SetData name="yrc:customType" value="Table"/>
+                <styles>
+                    <style style="NONE"/>
+                </styles>
+            </ExistingField>
+            <ExistingField IsResizeable="true" enabled="true" visible="false"
+                name="tblClmnPickedQuantity"
+                tableName="tblBackroomPickTable" type="TableColumn"
+                width="100" wizardPageId="com.yantra.pca.ycd.rcp.tasks.backroompick.wizardpages.YCDBackroomPick">
+                <SetData name="yrc:customType" value="Table"/>
+                <styles>
+                    <style style="NONE"/>
+                </styles>
+            </ExistingField>
+            <ExistingField IsResizeable="true" enabled="true"
+                name="tblClmnShrtgrResn" tableName="tblShortageReason"
+                type="TableColumn" width="253" wizardPageId="com.yantra.pca.ycd.rcp.tasks.backroompick.wizardpages.YCDBackroomPickShortageReasons">
+                <SetData name="yrc:customType" value="Table"/>
+                <styles>
+                    <style style="NONE"/>
+                </styles>
+            </ExistingField>
+            <ExistingField IsResizeable="true" enabled="true"
+                name="tblclmItemShortDesc" tableName="tblShortageReason"
+                type="TableColumn" width="177" wizardPageId="com.yantra.pca.ycd.rcp.tasks.backroompick.wizardpages.YCDBackroomPickShortageReasons">
+                <SetData name="yrc:customType" value="Table"/>
+                <styles>
+                    <style style="NONE"/>
+                </styles>
+            </ExistingField>
+          <!--End:Changes made for STL 933-->
+		  <!--Start:Changes for shared Inventory-->
+		  <ExistingField enabled="true" name="cmpstShipmentsearch"
+                type="Composite" visible="true" wizardPageId="com.yantra.pca.ycd.rcp.tasks.backroompick.wizardpages.YCDBackroomPickShipmentSearch">
+                <Layout horizontalSpacing="5"
+                    makeColumnsEqualWidth="false" marginHeight="5"
+                    marginWidth="5" numberOfColumns="6" verticalSpacing="5"/>  <!-- START STL-1678 numberOfColumns change from 4"-->
+                <LayoutData grabExcessHSpace="true"
+                    grabExcessVSpace="false" hAlignment="Fill"
+                    hColSpan="1" hIndent="0" heightHint="-1"
+                    vAlignment="Center" vColSpan="1" widthHint="-1"/>
+                <SetData name="yrc:customType" value="Composite"/>
+                <styles>
+                    <style style="NONE"/>
+                </styles>
+            </ExistingField>
+		  <!--End:Changes for shared Inventory-->
+		  
+		  <!-- Start WN-2980 GC Activation and fulfillment for SI DCs -->
+		  <ExistingField enabled="true" name="txtItemID" type="Text"
+                validationRequired="true" visible="true" wizardPageId="com.yantra.pca.ycd.rcp.tasks.backroompick.wizardpages.YCDBackroomPick">
+                <LayoutData grabExcessHSpace="false"
+                    grabExcessVSpace="false" hAlignment="Beginning"
+                    hColSpan="1" hIndent="0" heightHint="-1"
+                    vAlignment="Center" vColSpan="1" widthHint="120"/>
+                <SetData name="isMandatory" value="false"/>
+                <SetData name="yrc:customType" value="Text"/>
+                <SetData name="yrc:dblocalized" value="false"/>
+                <styles>
+                    <style style="NONE"/>
+                </styles>
+            </ExistingField>
+            <ExistingField IsResizeable="true" enabled="true"
+                name="tblClmnPickQuantity"
+                tableName="tblBackroomPickTable" type="TableColumn"
+                width="232" wizardPageId="com.yantra.pca.ycd.rcp.tasks.backroompick.wizardpages.YCDBackroomPick">
+                <SetData name="yrc:customType" value="Table"/>
+                <styles>
+                    <style style="NONE"/>
+                </styles>
+            </ExistingField>
+            <ExistingField enabled="true" name="lblLastScannedItem"
+                type="Label" visible="true" wizardPageId="com.yantra.pca.ycd.rcp.tasks.backroompick.wizardpages.YCDBackroomPick">
+                <LayoutData grabExcessHSpace="false"
+                    grabExcessVSpace="false" hAlignment="Beginning"
+                    hColSpan="1" hIndent="0" heightHint="-1"
+                    vAlignment="Center" vColSpan="1" widthHint="-1"/>
+                <SetData name="yrc:customType" value="Label"/>
+                <styles>
+                    <style style="NONE"/>
+                </styles>
+            </ExistingField>
+            <ExistingField enabled="true" name="txtLastScannedItem"
+                type="Label" visible="true" wizardPageId="com.yantra.pca.ycd.rcp.tasks.backroompick.wizardpages.YCDBackroomPick">
+                <LayoutData grabExcessHSpace="false"
+                    grabExcessVSpace="false" hAlignment="Beginning"
+                    hColSpan="1" hIndent="0" heightHint="-1"
+                    vAlignment="Center" vColSpan="1" widthHint="120"/>
+                <SetData name="yrc:customType" value="Text"/>
+                <styles>
+                    <style style="NONE"/>
+                </styles>
+            </ExistingField>
+        </ExistingFields>
+    </Form>
+    <Form
+        extensionBehaviorName="com.academy.som.searchshipment.screens.AcademySearchShipmentExtnBehavior"
+        id="com.yantra.pca.ycd.rcp.tasks.common.advancedShipmentSearch.screens.YCDAdvancedShipmentSearchCriteriaPanel" wizard="false">
+        <NewFields>
+            <NewField>
+                <Field attachTo="txtShipmentNo" attachType="BEFORE"
+                    enabled="true" isAdvanced="false"
+                    name="extn_cmbQueryTypeShipNo" type="Combo" visible="true">
+                    <styles>
+                        <style style="NONE"/>
+                    </styles>
+                </Field>
+                <SetData name="YRCCodeBinding" value="QueryType"/>
+                <SetData name="YRCDescriptionBinding" value="QueryTypeDesc"/>
+                <SetData name="YRCListBinding" value="Extn_getQueryTypeList_Output:QueryTypeList/StringQueryTypes/QueryType"/>
+                <SetData name="YRCSourceBinding" value=""/>
+                <SetData name="YRCTargetBinding" value="getShipmentList_input:Shipment/@ShipmentNoQryType"/>
+                <SetData name="isMandatory" value="false"/>
+                <SetData name="yrc:customType" value="Combo"/>
+                <SetData name="yrc:dblocalized" value="false"/>
+                <LayoutData grabExcessHSpace="false"
+                    grabExcessVSpace="false" hAlignment="Beginning"
+                    hColSpan="1" hIndent="10" heightHint="-1"
+                    vAlignment="Center" vColSpan="1" widthHint="100"/>
+            </NewField>
+            <NewField>
+                <Field attachTo="txtOrderNo" attachType="BEFORE"
+                    enabled="true" isAdvanced="false"
+                    name="extn_cmbQueryTypeOrderNo" type="Combo"
+                    validationRequired="true" visible="true">
+                    <styles>
+                        <style style="NONE"/>
+                    </styles>
+                </Field>
+                <SetData name="YRCCodeBinding" value="QueryType"/>
+                <SetData name="YRCDescriptionBinding" value="QueryTypeDesc"/>
+                <SetData name="YRCListBinding" value="Extn_getQueryTypeList_Output:QueryTypeList/StringQueryTypes/QueryType"/>
+                <SetData name="YRCSourceBinding" value=""/>
+                <SetData name="YRCTargetBinding" value="getShipmentList_input:Shipment/ShipmentLines/ShipmentLine/@OrderNoQryType"/>
+                <SetData name="isMandatory" value="false"/>
+                <SetData name="yrc:customType" value="Combo"/>
+                <SetData name="yrc:dblocalized" value="false"/>
+                <LayoutData grabExcessHSpace="false"
+                    grabExcessVSpace="false" hAlignment="Beginning"
+                    hColSpan="1" hIndent="10" heightHint="-1"
+                    vAlignment="Center" vColSpan="1" widthHint="100"/>
+            </NewField>
+            <NewField>
+                <Field attachTo="txtOrderNo" attachType="AFTER"
+                    defaultValue="Manifest #" enabled="true"
+                    isAdvanced="false" name="extn_lblManifestNo"
+                    type="Label" visible="true">
+                    <styles>
+                        <style style="NONE"/>
+                    </styles>
+                </Field>
+                <SetData name="YRCSourceBinding" value=""/>
+                <SetData name="yrc:customType" value="Label"/>
+                <LayoutData grabExcessHSpace="false"
+                    grabExcessVSpace="false" hAlignment="Beginning"
+                    hColSpan="1" hIndent="3" heightHint="-1"
+                    vAlignment="Center" vColSpan="1" widthHint="-1"/>
+            </NewField>
+            <NewField>
+                <Field attachTo="extn_lblManifestNo" attachType="AFTER"
+                    enabled="true" isAdvanced="false"
+                    name="extn_cmbManifestNo" type="Combo"
+                    validationRequired="true" visible="true">
+                    <styles>
+                        <style style="NONE"/>
+                    </styles>
+                </Field>
+                <SetData name="YRCCodeBinding" value="@ManifestNo"/>
+                <SetData name="YRCDescriptionBinding" value="@ManifestNo"/>
+                <SetData name="YRCListBinding" value="Extn_openManifestList_Output:Manifests/Manifest"/>
+                <SetData name="YRCSourceBinding" value=""/>
+                <SetData name="YRCTargetBinding" value="getShipmentList_input:Shipment/@ManifestNo"/>
+                <SetData name="isMandatory" value="false"/>
+                <SetData name="yrc:customType" value="Combo"/>
+                <SetData name="yrc:dblocalized" value="false"/>
+                <LayoutData grabExcessHSpace="false"
+                    grabExcessVSpace="false" hAlignment="Beginning"
+                    hColSpan="1" hIndent="10" heightHint="-1"
+                    vAlignment="Center" vColSpan="1" widthHint="100"/>
+            </NewField>
+            <NewField>
+                <Field attachTo="extn_cmbManifestNo" attachType="AFTER"
+                    enabled="true" isAdvanced="false"
+                    name="extn_lblFiller1" type="Label" visible="true">
+                    <styles>
+                        <style style="NONE"/>
+                    </styles>
+                </Field>
+                <SetData name="YRCSourceBinding" value=""/>
+                <SetData name="yrc:customType" value="Label"/>
+                <LayoutData grabExcessHSpace="false"
+                    grabExcessVSpace="false" hAlignment="Beginning"
+                    hColSpan="1" hIndent="0" heightHint="-1"
+                    vAlignment="Center" vColSpan="1" widthHint="-1"/>
+            </NewField>
+            <NewField>
+                <Field attachTo="cmpstSimpleSearchCriteria11"
+                    attachType="AFTER" enabled="true" isAdvanced="false"
+                    name="extn_pnlSearchCriteriaStatus" type="Composite" visible="true">
+                    <styles>
+                        <style style="BORDER"/>
+                    </styles>
+                </Field>
+                <Layout horizontalSpacing="6"
+                    makeColumnsEqualWidth="false" marginHeight="6"
+                    marginWidth="6" numberOfColumns="4" verticalSpacing="6"/>
+                <LayoutData grabExcessHSpace="true"
+                    grabExcessVSpace="false" hAlignment="Fill"
+                    hColSpan="1" hIndent="0" heightHint="170"
+                    vAlignment="Center" vColSpan="1" widthHint="-1"/>
+            </NewField>
+            <NewField>
+                <Field attachTo="extn_pnlSearchCriteriaStatus"
+                    attachType="WITHIN" defaultValue="Item ID"
+                    enabled="true" isAdvanced="false"
+                    name="extn_lblItemID" type="Label" visible="true">
+                    <styles>
+                        <style style="NONE"/>
+                    </styles>
+                </Field>
+                <SetData name="YRCSourceBinding" value=""/>
+                <SetData name="YRCTargetBinding" value=""/>
+                <SetData name="yrc:customType" value="Label"/>
+                <LayoutData grabExcessHSpace="false"
+                    grabExcessVSpace="false" hAlignment="Beginning"
+                    hColSpan="1" hIndent="0" heightHint="-1"
+                    vAlignment="Center" vColSpan="1" widthHint="-1"/>
+            </NewField>
+            <NewField>
+                <Field attachTo="extn_lblItemID" attachType="AFTER"
+                    enabled="true" isAdvanced="false"
+                    name="extn_cmbQueryTypeItemID" type="Combo"
+                    validationRequired="true" visible="true">
+                    <styles>
+                        <style style="NONE"/>
+                    </styles>
+                </Field>
+                <SetData name="YRCCodeBinding" value="QueryType"/>
+                <SetData name="YRCDescriptionBinding" value="QueryTypeDesc"/>
+                <SetData name="YRCListBinding" value="Extn_getQueryTypeList_Output:QueryTypeList/StringQueryTypes/QueryType"/>
+                <SetData name="YRCSourceBinding" value=""/>
+                <SetData name="YRCTargetBinding" value="getShipmentList_input:Shipment/ShipmentLines/ShipmentLine/@ItemIDQryType"/>
+                <SetData name="isMandatory" value="false"/>
+                <SetData name="yrc:customType" value="Combo"/>
+                <SetData name="yrc:dblocalized" value="false"/>
+                <LayoutData grabExcessHSpace="false"
+                    grabExcessVSpace="false" hAlignment="Beginning"
+                    hColSpan="1" hIndent="0" heightHint="-1"
+                    vAlignment="Center" vColSpan="1" widthHint="120"/>
+            </NewField>
+            <NewField>
+                <Field attachTo="extn_cmbQueryTypeItemID"
+                    attachType="AFTER" enabled="true" isAdvanced="false"
+                    name="extn_txtItemID" type="Text" visible="true">
+                    <styles>
+                        <style style="BORDER"/>
+                    </styles>
+                </Field>
+                <SetData name="YRCSourceBinding" value=""/>
+                <SetData name="YRCTargetBinding" value="getShipmentList_input:Shipment/ShipmentLines/ShipmentLine/@ItemID"/>
+                <SetData name="isMandatory" value="false"/>
+                <SetData name="yrc:customType" value="Text"/>
+                <SetData name="yrc:dblocalized" value="false"/>
+                <LayoutData grabExcessHSpace="false"
+                    grabExcessVSpace="false" hAlignment="Beginning"
+                    hColSpan="1" hIndent="0" heightHint="-1"
+                    vAlignment="Center" vColSpan="1" widthHint="120"/>
+            </NewField>
+            <NewField>
+                <Field attachTo="extn_txtItemID" attachType="AFTER"
+                    enabled="true" isAdvanced="false"
+                    name="extn_lblLookUp" type="Button"
+                    validationRequired="true" visible="true">
+                    <styles>
+                        <style style="NONE"/>
+                    </styles>
+                </Field>
+                <SetData name="ExtnActionClass" value=""/>
+                <SetData name="ExtnActionId" value=""/>
+                <SetData name="ExtnKeySequence" value=""/>
+                <SetData name="IsKeyContextWizardLevel" value="true"/>
+                <SetData name="yrc:customType" value="Lookup"/>
+                <LayoutData grabExcessHSpace="false"
+                    grabExcessVSpace="false" hAlignment="Beginning"
+                    hColSpan="1" hIndent="0" heightHint="20"
+                    vAlignment="Center" vColSpan="1" widthHint="-1"/>
+            </NewField>
+            <NewField>
+                <Field attachTo="extn_lblLookUp" attachType="AFTER"
+                    defaultValue="Shipment Status" enabled="true"
+                    isAdvanced="false" name="extn_lblStatusBetween"
+                    type="Label" visible="true">
+                    <styles>
+                        <style style="NONE"/>
+                    </styles>
+                </Field>
+                <SetData name="YRCSourceBinding" value=""/>
+                <SetData name="yrc:customType" value="Label"/>
+                <LayoutData grabExcessHSpace="false"
+                    grabExcessVSpace="false" hAlignment="Beginning"
+                    hColSpan="1" hIndent="0" heightHint="-1"
+                    vAlignment="Center" vColSpan="1" widthHint="-1"/>
+            </NewField>
+            <NewField>
+                <Field attachTo="extn_lblStatusBetween"
+                    attachType="AFTER" enabled="true" isAdvanced="false"
+                    name="extn_cmbStatus" type="Combo"
+                    validationRequired="true" visible="true">
+                    <styles>
+                        <style style="NONE"/>
+                    </styles>
+                </Field>
+                <SetData name="YRCCodeBinding" value="Status"/>
+                <SetData name="YRCDescriptionBinding" value="Description"/>
+                <SetData name="YRCListBinding" value="Extn_getStatusList_Output:StatusList/Status"/>
+                <SetData name="YRCSourceBinding" value="Extn_getStatusList_Output:StatusList/Status/@Description"/>
+                <SetData name="YRCTargetBinding" value="getShipmentList_input:Shipment/@Status"/>
+                <SetData name="isMandatory" value="false"/>
+                <SetData name="yrc:customType" value="Combo"/>
+                <SetData name="yrc:dblocalized" value="false"/>
+                <LayoutData grabExcessHSpace="false"
+                    grabExcessVSpace="false" hAlignment="Fill"
+                    hColSpan="1" hIndent="0" heightHint="-1"
+                    vAlignment="Center" vColSpan="1" widthHint="-1"/>
+            </NewField>
+            <NewField>
+                <Field attachTo="extn_cmbStatus" attachType="AFTER"
+                    enabled="true" isAdvanced="false"
+                    name="extn_lblFiller2" type="Label" visible="true">
+                    <styles>
+                        <style style="NONE"/>
+                    </styles>
+                </Field>
+                <SetData name="YRCSourceBinding" value=""/>
+                <SetData name="yrc:customType" value="Label"/>
+                <LayoutData grabExcessHSpace="false"
+                    grabExcessVSpace="false" hAlignment="Beginning"
+                    hColSpan="1" hIndent="0" heightHint="-1"
+                    vAlignment="Center" vColSpan="1" widthHint="-1"/>
+            </NewField>
+            <NewField>
+                <Field attachTo="extn_cmbStatus" attachType="AFTER"
+                    enabled="true" isAdvanced="false"
+                    name="extn_lblFiller4" type="Label" visible="true">
+                    <styles>
+                        <style style="NONE"/>
+                    </styles>
+                </Field>
+                <SetData name="YRCSourceBinding" value=""/>
+                <SetData name="yrc:customType" value="Label"/>
+                <LayoutData grabExcessHSpace="false"
+                    grabExcessVSpace="false" hAlignment="Beginning"
+                    hColSpan="1" hIndent="0" heightHint="-1"
+                    vAlignment="Center" vColSpan="1" widthHint="-1"/>
+            </NewField>
+            <NewField>
+                <Field attachTo="extn_cmbStatus" attachType="AFTER"
+                    enabled="true" isAdvanced="false"
+                    name="extn_txtFiller1" type="Text" visible="true">
+                    <styles>
+                        <style style="NONE"/>
+                    </styles>
+                </Field>
+                <SetData name="YRCSourceBinding" value=""/>
+                <SetData name="YRCTargetBinding" value=""/>
+                <SetData name="isMandatory" value="false"/>
+                <SetData name="yrc:customType" value="Text"/>
+                <SetData name="yrc:dblocalized" value="false"/>
+                <LayoutData grabExcessHSpace="false"
+                    grabExcessVSpace="false" hAlignment="Beginning"
+                    hColSpan="1" hIndent="0" heightHint="-1"
+                    vAlignment="Center" vColSpan="1" widthHint="-1"/>
+            </NewField>
+            <NewField>
+                <Field attachTo="extn_txtFiller1" attachType="AFTER"
+                    enabled="true" isAdvanced="false"
+                    name="extn_txtFiller2" type="Text" visible="true">
+                    <styles>
+                        <style style="NONE"/>
+                    </styles>
+                </Field>
+                <SetData name="YRCSourceBinding" value=""/>
+                <SetData name="YRCTargetBinding" value=""/>
+                <SetData name="isMandatory" value="false"/>
+                <SetData name="yrc:customType" value="Text"/>
+                <SetData name="yrc:dblocalized" value="false"/>
+                <LayoutData grabExcessHSpace="false"
+                    grabExcessVSpace="false" hAlignment="Beginning"
+                    hColSpan="1" hIndent="0" heightHint="-1"
+                    vAlignment="Center" vColSpan="1" widthHint="-1"/>
+            </NewField>
+            <NewField>
+                <Field attachTo="extn_txtFiller2" attachType="AFTER"
+                    defaultValue="Shipments included in Batch #"
+                    enabled="true" isAdvanced="false"
+                    name="extn_lblBatchGroupPrint" type="Label" visible="true">
+                    <styles>
+                        <style style="NONE"/>
+                    </styles>
+                </Field>
+                <SetData name="YRCSourceBinding" value=""/>
+                <SetData name="yrc:customType" value="Label"/>
+                <LayoutData grabExcessHSpace="false"
+                    grabExcessVSpace="false" hAlignment="Beginning"
+                    hColSpan="1" hIndent="0" heightHint="-1"
+                    vAlignment="Center" vColSpan="1" widthHint="-1"/>
+            </NewField>
+            <NewField>
+                <Field attachTo="extn_lblBatchGroupPrint"
+                    attachType="AFTER" enabled="true" isAdvanced="false"
+                    name="extn_cmbBatchGroupPrint" type="Combo" visible="true">
+                    <styles>
+                        <style style="NONE"/>
+                    </styles>
+                </Field>
+                <SetData name="YRCCodeBinding" value="PickticketNo"/>
+                <SetData name="YRCDescriptionBinding" value="PickticketNo"/>
+                <SetData name="YRCListBinding" value="Extn_pickTicketNoList_Output:SFSShipmentPickTicketNoList/SFSShipmentPickTicketNo"/>
+                <SetData name="YRCSourceBinding" value=""/>
+                <SetData name="YRCTargetBinding" value="getShipmentList_input:Shipment/@PickticketNo"/>
+                <SetData name="isMandatory" value="false"/>
+                <SetData name="yrc:customType" value="Combo"/>
+                <LayoutData grabExcessHSpace="false"
+                    grabExcessVSpace="false" hAlignment="Fill"
+                    hColSpan="1" hIndent="0" heightHint="-1"
+                    vAlignment="Center" vColSpan="1" widthHint="-1"/>
+            </NewField>
+            <NewField>
+                <Field attachTo="btnSearch" attachType="AFTER"
+                    defaultValue="Reset" enabled="true"
+                    isAdvanced="false" name="extn_btnReset"
+                    type="Button" validationRequired="true" visible="true">
+                    <styles>
+                        <style style="NONE"/>
+                    </styles>
+                </Field>
+                <SetData name="ExtnActionClass" value="com.academy.som.searchshipment.actions.AcademyShipmentSearchResetAction"/>
+                <SetData name="ExtnActionId" value="SHIPMENT_SEARCH_RESET_ACTION"/>
+                <SetData name="ExtnKeySequence" value="F9"/>
+                <SetData name="IsKeyContextWizardLevel" value="true"/>
+                <SetData name="yrc:customType" value="Button"/>
+                <LayoutData grabExcessHSpace="false"
+                    grabExcessVSpace="false" hAlignment="Beginning"
+                    hColSpan="1" hIndent="0" heightHint="-1"
+                    vAlignment="Center" vColSpan="1" widthHint="-1"/>
+            </NewField>
+			<!--Start-Added as part of Shared Inventory-->
+			<NewField>
+                <Field attachTo="extn_cmbBatchGroupPrint"
+                    attachType="AFTER" enabled="true" isAdvanced="false"
+                    name="extn_lblFiller22" type="Label" visible="true">
+                    <styles>
+                        <style style="NONE"/>
+                    </styles>
+                </Field>
+                <SetData name="YRCSourceBinding" value=""/>
+                <SetData name="yrc:customType" value="Label"/>
+                <LayoutData grabExcessHSpace="false"
+                    grabExcessVSpace="false" hAlignment="Beginning"
+                    hColSpan="1" hIndent="0" heightHint="-1"
+                    vAlignment="Center" vColSpan="1" widthHint="-1"/>
+            </NewField>
+            <NewField>
+                <Field attachTo="extn_lblFiller22" attachType="AFTER"
+                    enabled="true" isAdvanced="false"
+                    name="extn_lblFiller23" type="Label" visible="true">
+                    <styles>
+                        <style style="NONE"/>
+                    </styles>
+                </Field>
+                <SetData name="YRCSourceBinding" value=""/>
+                <SetData name="yrc:customType" value="Label"/>
+                <LayoutData grabExcessHSpace="false"
+                    grabExcessVSpace="false" hAlignment="Beginning"
+                    hColSpan="1" hIndent="0" heightHint="-1"
+                    vAlignment="Center" vColSpan="1" widthHint="-1"/>
+            </NewField>
+            <NewField>
+                <Field attachTo="extn_lblFiller23" attachType="AFTER"
+                    defaultValue="Warehouse Container #" enabled="true"
+                    isAdvanced="false"
+                    name="extn_lblWarehouseContainer_Id" type="Label" visible="true">
+                    <styles>
+                        <style style="NONE"/>
+                    </styles>
+                </Field>
+                <SetData name="YRCSourceBinding" value=""/>
+                <SetData name="yrc:customType" value="Label"/>
+                <LayoutData grabExcessHSpace="false"
+                    grabExcessVSpace="false" hAlignment="Beginning"
+                    hColSpan="1" hIndent="0" heightHint="-1"
+                    vAlignment="Center" vColSpan="1" widthHint="-1"/>
+            </NewField>
+            <NewField>
+                <Field attachTo="extn_lblWarehouseContainer_Id"
+                    attachType="AFTER" enabled="true" isAdvanced="false"
+                    name="extn_txtWarehouseContainer_Id" type="Text" visible="true">
+                    <styles>
+                        <style style="BORDER"/>
+                    </styles>
+                </Field>
+                <SetData name="YRCSourceBinding" value=""/>
+                <SetData name="YRCTargetBinding" value="getShipmentList_input:/Shipment/Extn/@ExtnExeterContainerId"/>
+                <SetData name="isMandatory" value="false"/>
+                <SetData name="yrc:customType" value="Text"/>
+                <SetData name="yrc:dblocalized" value="false"/>
+                <LayoutData grabExcessHSpace="false"
+                    grabExcessVSpace="false" hAlignment="Beginning"
+                    hColSpan="1" hIndent="0" heightHint="-1"
+                    vAlignment="Center" vColSpan="1" widthHint="135"/>
+            </NewField>
+			<!--End-Added as part of Shared Inventory-->
+	    <!-- Start : OMNI-6622 : Enable Search based on Sales and Transfer Order -->
+	    <NewField>
+                <Field attachTo="extn_cmbBatchGroupPrint" attachType="AFTER"
+                    enabled="true" isAdvanced="false"
+                    name="extn_txtFiller3" type="Text" visible="true">
+                    <styles>
+                        <style style="NONE"/>
+                    </styles>
+                </Field>
+                <SetData name="YRCSourceBinding" value=""/>
+                <SetData name="YRCTargetBinding" value=""/>
+                <SetData name="isMandatory" value="false"/>
+                <SetData name="yrc:customType" value="Text"/>
+                <SetData name="yrc:dblocalized" value="false"/>
+                <LayoutData grabExcessHSpace="false"
+                    grabExcessVSpace="false" hAlignment="Beginning"
+                    hColSpan="1" hIndent="0" heightHint="-1"
+                    vAlignment="Center" vColSpan="1" widthHint="-1"/>
+            </NewField>
+            <NewField>
+                <Field attachTo="extn_txtFiller3" attachType="AFTER"
+                    enabled="true" isAdvanced="false"
+                    name="extn_txtFiller4" type="Text" visible="true">
+                    <styles>
+                        <style style="NONE"/>
+                    </styles>
+                </Field>
+                <SetData name="YRCSourceBinding" value=""/>
+                <SetData name="YRCTargetBinding" value=""/>
+                <SetData name="isMandatory" value="false"/>
+                <SetData name="yrc:customType" value="Text"/>
+                <SetData name="yrc:dblocalized" value="false"/>
+                <LayoutData grabExcessHSpace="false"
+                    grabExcessVSpace="false" hAlignment="Beginning"
+                    hColSpan="1" hIndent="0" heightHint="-1"
+                    vAlignment="Center" vColSpan="1" widthHint="-1"/>
+            </NewField>
+	   <NewField>
+                <Field attachTo="extn_txtFiller4" attachType="AFTER"
+                    defaultValue="Fulfillment Type"
+                    enabled="true" isAdvanced="false"
+                    name="extn_lblDocumentType" type="Label" visible="true">
+                    <styles>
+                        <style style="NONE"/>
+                    </styles>
+                </Field>
+                <SetData name="YRCSourceBinding" value=""/>
+                <SetData name="yrc:customType" value="Label"/>
+                <LayoutData grabExcessHSpace="false"
+                    grabExcessVSpace="false" hAlignment="Beginning"
+                    hColSpan="1" hIndent="0" heightHint="-1"
+                    vAlignment="Center" vColSpan="1" widthHint="-1"/>
+            </NewField>
+            <NewField>
+                <Field attachTo="extn_lblDocumentType"
+                    attachType="AFTER" enabled="true" isAdvanced="false"
+                    name="extn_cmbDocumentType" type="Combo" visible="true">
+                    <styles>
+                        <style style="NONE"/>
+                    </styles>
+                </Field>
+                <SetData name="YRCCodeBinding" value="DocumentType"/>
+                <SetData name="YRCDescriptionBinding" value="Description"/>
+                <SetData name="YRCListBinding" value="Extn_getDocumentTypeList_Output:DocumentParamsList/DocumentParams"/>
+                <SetData name="YRCSourceBinding" value="Extn_getDocumentTypeList_Output:DocumentParamsList/DocumentParams/@Description"/>
+                <SetData name="YRCTargetBinding" value="getShipmentList_input:Shipment/@DocumentType"/>
+                <SetData name="isMandatory" value="false"/>
+                <SetData name="yrc:customType" value="Combo"/>
+                <LayoutData grabExcessHSpace="false"
+                    grabExcessVSpace="false" hAlignment="Fill"
+                    hColSpan="1" hIndent="0" heightHint="-1"
+                    vAlignment="Center" vColSpan="1" widthHint="-1"/>
+            </NewField>
+	    <!-- End : OMNI-6622 : Enable search based on Sales and Transfer Orders -->
+			
+        </NewFields>
+        <ExistingFields>
+            <ExistingField enabled="true" name="cmbCarrier" type="Combo">
+                <LayoutData grabExcessHSpace="false"
+                    grabExcessVSpace="false" hAlignment="Fill"
+                    hColSpan="1" hIndent="30" heightHint="-1"
+                    vAlignment="Center" vColSpan="1" widthHint="-1"/>
+                <SetData name="isMandatory" value="false"/>
+               <SetData name="yrc:customType" value="Combo"/>
+                <SetData name="yrc:dblocalized" value="false"/>
+                <styles>
+                    <style style="NONE"/>
+                </styles>
+            </ExistingField>
+            <ExistingField enabled="true" name="lblCarrier" type="Label">
+                <LayoutData grabExcessHSpace="false"
+                    grabExcessVSpace="false" hAlignment="Beginning"
+                    hColSpan="1" hIndent="3" heightHint="-1"
+                    vAlignment="Center" vColSpan="1" widthHint="-1"/>
+                <SetData name="yrc:customType" value="Label"/>
+                <styles>
+                    <style style="NONE"/>
+                </styles>
+            </ExistingField>
+            <ExistingField enabled="true" name="txtFirstName" type="Text">
+                <LayoutData grabExcessHSpace="true"
+                    grabExcessVSpace="false" hAlignment="Fill"
+                    hColSpan="1" hIndent="30" heightHint="-1"
+                    vAlignment="Center" vColSpan="1" widthHint="120"/>
+                <SetData name="isMandatory" value="false"/>
+                <SetData name="yrc:customType" value="Text"/>
+                <SetData name="yrc:dblocalized" value="false"/>
+                <styles>
+                    <style style="NONE"/>
+                </styles>
+            </ExistingField>
+            <ExistingField enabled="true" name="lblFirstName" type="Label">
+                <LayoutData grabExcessHSpace="false"
+                    grabExcessVSpace="false" hAlignment="Beginning"
+                    hColSpan="1" hIndent="3" heightHint="-1"
+                    vAlignment="Center" vColSpan="1" widthHint="-1"/>
+                <SetData name="yrc:customType" value="Label"/>
+                <styles>
+                    <style style="NONE"/>
+                </styles>
+            </ExistingField>
+            <ExistingField enabled="true" name="txtLastName" type="Text">
+                <LayoutData grabExcessHSpace="true"
+                    grabExcessVSpace="false" hAlignment="Fill"
+                    hColSpan="1" hIndent="30" heightHint="-1"
+                    vAlignment="Center" vColSpan="1" widthHint="120"/>
+                <SetData name="isMandatory" value="false"/>
+                <SetData name="yrc:customType" value="Text"/>
+                <SetData name="yrc:dblocalized" value="false"/>
+                <styles>
+                    <style style="NONE"/>
+                </styles>
+            </ExistingField>
+            <ExistingField enabled="true" name="lblLastName" type="Label">
+                <LayoutData grabExcessHSpace="false"
+                    grabExcessVSpace="false" hAlignment="Beginning"
+                    hColSpan="1" hIndent="3" heightHint="-1"
+                    vAlignment="Center" vColSpan="1" widthHint="-1"/>
+                <SetData name="yrc:customType" value="Label"/>
+                <styles>
+                    <style style="NONE"/>
+                </styles>
+            </ExistingField>
+           <ExistingField enabled="true"
+                name="cmpstAdvancedSearchCriteria11" type="Composite">
+                <Layout horizontalSpacing="3"
+                    makeColumnsEqualWidth="false" marginHeight="3"
+                    marginWidth="3" numberOfColumns="3" verticalSpacing="3"/>
+                <LayoutData grabExcessHSpace="true"
+                    grabExcessVSpace="true" hAlignment="Fill"
+                    hColSpan="1" hIndent="0" heightHint="-1"
+                    vAlignment="Fill" vColSpan="1" widthHint="-1"/>
+                <SetData name="yrc:customType" value="Composite"/>
+                <styles>
+                    <style style="NONE"/>
+                </styles>
+            </ExistingField>
+            <ExistingField enabled="true"
+                name="cmpstAdvancedSearchCriteria1" type="Composite">
+                <Layout horizontalSpacing="0"
+                    makeColumnsEqualWidth="false" marginHeight="0"
+                    marginWidth="0" numberOfColumns="1" verticalSpacing="0"/>
+                <LayoutData grabExcessHSpace="true"
+                    grabExcessVSpace="true" hAlignment="Fill"
+                    hColSpan="1" hIndent="0" heightHint="-1"
+                    vAlignment="Fill" vColSpan="1" widthHint="-1"/>
+                <SetData name="yrc:customType" value="Composite"/>
+                <styles>
+                    <style style="NONE"/>
+                </styles>
+            </ExistingField>
+            <ExistingField enabled="true" name="lblshipmentNo"
+                type="Label" visible="true">
+                <LayoutData grabExcessHSpace="false"
+                    grabExcessVSpace="false" hAlignment="Beginning"
+                    hColSpan="1" hIndent="3" heightHint="-1"
+                    vAlignment="Center" vColSpan="1" widthHint="-1"/>
+                <SetData name="yrc:customType" value="Label"/>
+                <styles>
+                    <style style="NONE"/>
+                </styles>
+            </ExistingField>
+            <ExistingField enabled="true"
+                name="cmpstSimpleSearchCriteria11" type="Composite" visible="true">
+                <Layout horizontalSpacing="3"
+                    makeColumnsEqualWidth="false" marginHeight="3"
+                    marginWidth="3" numberOfColumns="3" verticalSpacing="5"/>
+                <LayoutData grabExcessHSpace="true"
+                    grabExcessVSpace="false" hAlignment="Fill"
+                    hColSpan="1" hIndent="0" heightHint="90"
+                    vAlignment="Fill" vColSpan="1" widthHint="1200"/>
+                <SetData name="yrc:customType" value="Composite"/>
+                <styles>
+                    <style style="NONE"/>
+                </styles>
+            </ExistingField>
+            <ExistingField enabled="true" name="txtShipmentNo"
+                type="Text" validationRequired="true" visible="true">
+                <LayoutData grabExcessHSpace="true"
+                    grabExcessVSpace="false" hAlignment="Beginning"
+                    hColSpan="1" hIndent="0" heightHint="-1"
+                    vAlignment="Top" vColSpan="1" widthHint="120"/>
+                <SetData name="YRCTargetBinding" value=""/>
+                <SetData name="isMandatory" value="false"/>
+                <SetData name="yrc:customType" value="Text"/>
+                <SetData name="yrc:dblocalized" value="false"/>
+                <styles>
+                    <style style="NONE"/>
+                </styles>
+            </ExistingField>
+            <ExistingField enabled="true" name="txtOrderNo" type="Text" visible="true">
+                <LayoutData grabExcessHSpace="false"
+                    grabExcessVSpace="false" hAlignment="Beginning"
+                    hColSpan="1" hIndent="0" heightHint="-1"
+                    vAlignment="Top" vColSpan="1" widthHint="120"/>
+                <SetData name="isMandatory" value="false"/>
+                <SetData name="yrc:customType" value="Text"/>
+                <SetData name="yrc:dblocalized" value="false"/>
+                <styles>
+                    <style style="NONE"/>
+                </styles>
+            </ExistingField>
+            <ExistingField enabled="true" name="cmpstResetAndSearch"
+                type="Composite" visible="true">
+                <Layout horizontalSpacing="5"
+                    makeColumnsEqualWidth="false" marginHeight="3"
+                    marginWidth="0" numberOfColumns="4" verticalSpacing="3"/>
+                <LayoutData grabExcessHSpace="true"
+                    grabExcessVSpace="true" hAlignment="Fill"
+                    hColSpan="2" hIndent="0" heightHint="-1"
+                    vAlignment="Fill" vColSpan="1" widthHint="-1"/>
+                <styles>
+                    <style style="NONE"/>
+                </styles>
+            </ExistingField>
+            <ExistingField enabled="true" name="cmpstOrderBy"
+                type="Composite" visible="true">
+                <Layout horizontalSpacing="5"
+                    makeColumnsEqualWidth="false" marginHeight="0"
+                    marginWidth="0" numberOfColumns="6" verticalSpacing="5"/>
+                <LayoutData grabExcessHSpace="true"
+                    grabExcessVSpace="false" hAlignment="End"
+                    hColSpan="1" hIndent="0" heightHint="-1"
+                    vAlignment="Center" vColSpan="1" widthHint="-1"/>
+                <styles>
+                    <style style="NONE"/>
+                </styles>
+            </ExistingField>
+            <ExistingField enabled="true" name="cmpstDelMethods"
+                type="Composite" visible="true">
+                <Layout horizontalSpacing="5"
+                    makeColumnsEqualWidth="false" marginHeight="5"
+                    marginWidth="5" numberOfColumns="3" verticalSpacing="0"/>
+                <LayoutData grabExcessHSpace="true"
+                    grabExcessVSpace="true" hAlignment="Fill"
+                    hColSpan="2" hIndent="0" heightHint="-1"
+                    vAlignment="Fill" vColSpan="1" widthHint="-1"/>
+                <styles>
+                    <style style="NONE"/>
+                </styles>
+            </ExistingField>
+            <ExistingField enabled="true" name="bttnShip" type="Radio" visible="true">
+                <LayoutData grabExcessHSpace="false"
+                    grabExcessVSpace="false" hAlignment="End"
+                    hColSpan="1" hIndent="0" heightHint="-1"
+                    vAlignment="Center" vColSpan="1" widthHint="-1"/>
+                <SetData name="YRCSourceBinding" value="Extn_getQueryTypeList_Output:QueryTypeList/@DeliveryMethod"/>
+                <SetData name="YRCTargetBinding" value="getShipmentList_input:Shipment/ShipmentLines/ShipmentLine/OrderLine/@DeliveryMethod"/>
+                <SetData name="yrc:customType" value="Label"/>
+                <styles>
+                    <style style="NONE"/>
+                </styles>
+            </ExistingField>
+            <ExistingField enabled="true" name="bttnPick" type="Radio"
+                validationRequired="true" visible="true">
+                <LayoutData grabExcessHSpace="false"
+                    grabExcessVSpace="false" hAlignment="End"
+                    hColSpan="1" hIndent="0" heightHint="-1"
+                    vAlignment="Center" vColSpan="1" widthHint="-1"/>
+                <SetData name="yrc:customType" value="Label"/>
+                <styles>
+                    <style style="NONE"/>
+                </styles>
+            </ExistingField>
+            <ExistingField enabled="true" name="txtPhoneNo" type="Text">
+                <LayoutData grabExcessHSpace="false"
+                    grabExcessVSpace="false" hAlignment="Fill"
+                    hColSpan="1" hIndent="30" heightHint="-1"
+                    vAlignment="Center" vColSpan="1" widthHint="120"/>
+                <SetData name="isMandatory" value="false"/>
+                <SetData name="yrc:customType" value="Text"/>
+                <SetData name="yrc:dblocalized" value="false"/>
+                <styles>
+                    <style style="NONE"/>
+                </styles>
+            </ExistingField>
+            <ExistingField enabled="true" name="lblCustomerPhoneNo" type="Label">
+                <LayoutData grabExcessHSpace="false"
+                    grabExcessVSpace="false" hAlignment="Beginning"
+                    hColSpan="1" hIndent="3" heightHint="-1"
+                    vAlignment="Center" vColSpan="1" widthHint="-1"/>
+                <SetData name="yrc:customType" value="Label"/>
+                <styles>
+                    <style style="NONE"/>
+               </styles>
+            </ExistingField>
+            <ExistingField enabled="true" name="btnSearch" type="Button"
+                validationRequired="true" visible="true">
+                <LayoutData grabExcessHSpace="false"
+                    grabExcessVSpace="false" hAlignment="End"
+                    hColSpan="1" hIndent="0" heightHint="25"
+                    vAlignment="Center" vColSpan="1" widthHint="-1"/>
+                <SetData name="yrc:customType" value="Button"/>
+                <styles>
+                    <style style="NONE"/>
+                </styles>
+            </ExistingField>
+        </ExistingFields>
+    </Form>
+    <!-- Fix for STL - 1039 -->
+    <Form
+        extensionBehaviorName="com.academy.som.searchshipment.screens.AcademySearchShipmentWizardExtnBehaviour"
+        id="com.yantra.pca.ycd.rcp.tasks.advancedShipmentSearch.wizards.YCDAdvancedShipmentSearchWizard" wizard="true">
+        <!-- Fix for STL - 1039 -->
+        <NewFields>
+            <NewField>
+                <Field IsResizeable="true" attachTo="tblColStatus"
+                    attachType="AFTER" enabled="true"
+                    filterRequired="true" isAdvanced="false"
+                    name="extn_clmManifestNo" sortRequired="true"
+                    tableName="tblShipmentDetails" type="TableColumn"
+                    visible="true" width="100" wizardPageId="com.yantra.pca.ycd.rcp.tasks.advancedShipmentSearch.wizardpages.YCDAdvancedShipmentSearchScreen">
+                    <styles>
+                        <style style="NONE"/>
+                    </styles>
+                </Field>
+                <SetData name="YRCSourceBinding" value="getShipmentList_output:/Shipments/Shipment"/>
+                <SetData name="YRCTableAttributeBinding" value="@ManifestNo"/>
+                <SetData name="YRCTableColumnBinding" value="Manifest #"/>
+                <SetData name="yrc:customType" value="Table"/>
+            </NewField>
+                  <NewField>
+                <Field IsResizeable="true" attachTo="tblColStatus"
+                    attachType="AFTER" enabled="true"
+                   filterRequired="true" isAdvanced="false"
+                    name="extn_clmScacAndService" sortRequired="true"
+                    tableName="tblSearchResults" type="TableColumn"
+                    visible="true" width="50" wizardPageId="com.yantra.pca.ycd.rcp.tasks.advancedShipmentSearch.wizardpages.YCDAdvancedShipmentSearchScreen">
+                    <styles>
+                        <style style="NONE"/>
+                    </styles>
+                </Field>
+                <SetData name="YRCSourceBinding" value="getShipmentList_output:/Shipments/Shipment"/>
+                <SetData name="YRCTableAttributeBinding" value="@ScacAndService"/>
+                <SetData name="YRCTableColumnBinding" value="LevelOfService"/>
+                <SetData name="yrc:customType" value="TableColumn"/>
+            </NewField>
+            <!-- Fix for STL - 1039 -->
+            <NewField>
+                <Field IsResizeable="true" attachTo="tblcolCustomerName"
+                    attachType="AFTER" enabled="true" isAdvanced="true"
+                    name="extn_clmReqShipDate" sortRequired="true"
+                    tableName="tblSearchResults" type="TableColumn"
+                    visible="true" width="120" wizardPageId="com.yantra.pca.ycd.rcp.tasks.advancedShipmentSearch.wizardpages.YCDAdvancedShipmentSearchScreen">
+                    <styles>
+                        <style style="NONE"/>
+                    </styles>
+                </Field>
+                <SetData name="YRCSourceBinding" value="getShipmentList_output:/Shipments/Shipment"/>
+                <SetData name="YRCTableAttributeBinding" value="@RequestedShipmentDate"/>
+                <SetData name="YRCTableColumnBinding" value="Requested Ship Date"/>
+                <SetData name="yrc:customType" value="LastOccurredOn"/>
+            </NewField>
+          <!-- Fix for STL - 1039 -->
+        </NewFields>
+        <ExistingFields>
+            <ExistingField IsResizeable="true"
+                attachTo="tblcolShipmentNo" attachType="AFTER"
+                enabled="true" name="tblColService"
+                tableName="tblSearchResults" type="TableColumn"
+                width="80" wizardPageId="com.yantra.pca.ycd.rcp.tasks.advancedShipmentSearch.wizardpages.YCDAdvancedShipmentSearchScreen">
+                <SetData name="yrc:customType" value="Table"/>
+                <styles>
+                    <style style="NONE"/>
+                </styles>
+            </ExistingField>
+             <!-- Fix for STL - 1039 -->
+            <ExistingField attachTo="tblColOrderNo" attachType="AFTER"
+                name="tblcolCustomerName" tableName="tblSearchResults"
+                type="TableColumn" visible="true" width="50" wizardPageId="com.yantra.pca.ycd.rcp.tasks.advancedShipmentSearch.wizardpages.YCDAdvancedShipmentSearchScreen">
+                <styles>
+                    <style style="NONE"/>
+                </styles>
+            </ExistingField>
+            <ExistingField attachTo="tblColExpectedShipDate"
+                attachType="AFTER" name="tblColStatus"
+                tableName="tblSearchResults" type="TableColumn"
+                width="50" wizardPageId="com.yantra.pca.ycd.rcp.tasks.advancedShipmentSearch.wizardpages.YCDAdvancedShipmentSearchScreen">
+                <styles>
+                    <style style="NONE"/>
+                </styles>
+            </ExistingField>
+            <ExistingField IsResizeable="true"
+                attachTo="tblColStoreNotifiedOn" attachType="AFTER"
+                enabled="true" name="tblColExpectedShipDate"
+                tableName="tblSearchResults" type="TableColumn"
+                width="190" wizardPageId="com.yantra.pca.ycd.rcp.tasks.advancedShipmentSearch.wizardpages.YCDAdvancedShipmentSearchScreen">
+                <SetData name="yrc:customType" value="Table"/>
+                <styles>
+                    <style style="NONE"/>
+                </styles>
+            </ExistingField>
+             <!-- Fix for STL - 1039 -->
+        </ExistingFields>
+    </Form>
+    <Form
+        extensionBehaviorName="com.academy.som.shipmentDetails.screens.AcademyShipmentDetailsExtnBehaviour"
+       id="com.yantra.pca.ycd.rcp.tasks.shipmentTracking.screens.YCDShipmentDetails" wizard="false">
+        <NewFields>
+            <NewField>
+                <Field attachTo="txtNoContainers" attachType="AFTER"
+                    defaultValue="Req Ship Date" enabled="true"
+                    isAdvanced="false" name="extn_lblDelDate"
+                    type="Label" visible="true">
+                    <styles>
+                        <style style="NONE"/>
+                    </styles>
+                </Field>
+                <SetData name="YRCSourceBinding" value=""/>
+                <SetData name="yrc:customType" value="Label"/>
+                <LayoutData grabExcessHSpace="false"
+                    grabExcessVSpace="false" hAlignment="Beginning"
+                    hColSpan="1" hIndent="0" heightHint="-1"
+                    vAlignment="Center" vColSpan="1" widthHint="-1"/>
+            </NewField>
+            <NewField>
+                <Field attachTo="extn_lblDelDate" attachType="AFTER"
+                    enabled="true" isAdvanced="false"
+                    name="extn_txtDelDate" type="Text" visible="true">
+                    <styles>
+                        <style style="NONE"/>
+                    </styles>
+                </Field>
+                <SetData name="YRCSourceBinding" value="Shipment:Shipment/@RequestedShipmentDate"/>
+                <SetData name="YRCTargetBinding" value=""/>
+                <SetData name="isMandatory" value="false"/>
+                <SetData name="yrc:customType" value="Text"/>
+                <SetData name="yrc:dblocalized" value="false"/>
+                <LayoutData grabExcessHSpace="false"
+                    grabExcessVSpace="false" hAlignment="Beginning"
+                    hColSpan="1" hIndent="0" heightHint="-1"
+                    vAlignment="Center" vColSpan="1" widthHint="-1"/>
+            </NewField>
+            <NewField>
+                <Field attachTo="extn_txtDelDate" attachType="AFTER"
+                    defaultValue="BOL #" enabled="true"
+                    isAdvanced="false" name="extn_lblBolNo" type="Label" visible="true">
+                    <styles>
+                        <style style="NONE"/>
+                    </styles>
+                </Field>
+                <SetData name="YRCSourceBinding" value=""/>
+                <SetData name="yrc:customType" value="Label"/>
+                <LayoutData grabExcessHSpace="false"
+                    grabExcessVSpace="false" hAlignment="Beginning"
+                    hColSpan="1" hIndent="0" heightHint="-1"
+                    vAlignment="Center" vColSpan="1" widthHint="-1"/>
+            </NewField>
+            <NewField>
+                <Field attachTo="extn_lblBolNo" attachType="AFTER"
+                    enabled="true" isAdvanced="false"
+                    name="extn_txtBolNo" type="Text" visible="true">
+                    <styles>
+                        <style style="NONE"/>
+                    </styles>
+                </Field>
+                <SetData name="YRCSourceBinding" value="Shipment:Shipment/@BolNo"/>
+                <SetData name="YRCTargetBinding" value=""/>
+                <SetData name="isMandatory" value="false"/>
+                <SetData name="yrc:customType" value="Text"/>
+                <SetData name="yrc:dblocalized" value="false"/>
+                <LayoutData grabExcessHSpace="false"
+                    grabExcessVSpace="false" hAlignment="Beginning"
+                    hColSpan="1" hIndent="0" heightHint="-1"
+                    vAlignment="Center" vColSpan="1" widthHint="-1"/>
+            </NewField>
+            <NewField>
+                <Field attachTo="extn_txtBolNo" attachType="AFTER"
+                    defaultValue="Manifest #" enabled="true"
+                    isAdvanced="false" name="extn_lblManifestNo"
+                    type="Label" visible="true">
+                    <styles>
+                        <style style="NONE"/>
+                    </styles>
+                </Field>
+                <SetData name="YRCSourceBinding" value=""/>
+                <SetData name="yrc:customType" value="Label"/>
+                <LayoutData grabExcessHSpace="false"
+                    grabExcessVSpace="false" hAlignment="Beginning"
+                    hColSpan="1" hIndent="0" heightHint="-1"
+                    vAlignment="Center" vColSpan="1" widthHint="-1"/>
+            </NewField>
+            <NewField>
+                <Field attachTo="extn_lblManifestNo" attachType="AFTER"
+                    enabled="true" isAdvanced="false"
+                    name="extn_txtManifestNo" type="Text" visible="true">
+                    <styles>
+                        <style style="NONE"/>
+                    </styles>
+                </Field>
+                <SetData name="YRCSourceBinding" value="Shipment:Shipment/@ManifestNo"/>
+                <SetData name="YRCTargetBinding" value=""/>
+                <SetData name="isMandatory" value="false"/>
+                <SetData name="yrc:customType" value="Text"/>
+                <SetData name="yrc:dblocalized" value="false"/>
+                <LayoutData grabExcessHSpace="false"
+                    grabExcessVSpace="false" hAlignment="Beginning"
+                    hColSpan="1" hIndent="0" heightHint="-1"
+                    vAlignment="Center" vColSpan="1" widthHint="-1"/>
+            </NewField>
+            <NewField>
+                <Field attachTo="extn_txtManifestNo" attachType="AFTER"
+                    defaultValue="Document Type" enabled="true"
+                    isAdvanced="false" name="extn_lblDocType"
+                    type="Label" visible="true">
+                    <styles>
+                        <style style="NONE"/>
+                    </styles>
+                </Field>
+                <SetData name="YRCSourceBinding" value=""/>
+                <SetData name="yrc:customType" value="Label"/>
+                <LayoutData grabExcessHSpace="false"
+                    grabExcessVSpace="false" hAlignment="Beginning"
+                    hColSpan="1" hIndent="0" heightHint="-1"
+                    vAlignment="Center" vColSpan="1" widthHint="-1"/>
+            </NewField>
+            <NewField>
+                <Field attachTo="extn_lblDocType" attachType="AFTER"
+                    enabled="true" isAdvanced="false"
+                    name="extn_txtDocType" type="Text" visible="true">
+                    <styles>
+                        <style style="NONE"/>
+                    </styles>
+                </Field>
+                <SetData name="YRCSourceBinding" value=""/>
+                <SetData name="YRCTargetBinding" value=""/>
+                <SetData name="isMandatory" value="false"/>
+                <SetData name="yrc:customType" value="Text"/>
+                <SetData name="yrc:dblocalized" value="false"/>
+                <LayoutData grabExcessHSpace="false"
+                    grabExcessVSpace="false" hAlignment="Beginning"
+                    hColSpan="1" hIndent="0" heightHint="-1"
+                    vAlignment="Center" vColSpan="1" widthHint="-1"/>
+            </NewField>
+            <NewField>
+                <Field attachTo="extn_txtDocType" attachType="AFTER"
+                    defaultValue="Shipment Type" enabled="true"
+                    isAdvanced="false" name="extn_lblShipmentType"
+                    type="Label" visible="true">
+                    <styles>
+                        <style style="NONE"/>
+                    </styles>
+                </Field>
+                <SetData name="YRCSourceBinding" value=""/>
+                <SetData name="yrc:customType" value="Label"/>
+                <LayoutData grabExcessHSpace="false"
+                    grabExcessVSpace="false" hAlignment="Beginning"
+                    hColSpan="1" hIndent="0" heightHint="-1"
+                    vAlignment="Center" vColSpan="1" widthHint="-1"/>
+            </NewField>
+            <NewField>
+                <Field attachTo="extn_lblShipmentType"
+                    attachType="AFTER" enabled="true" isAdvanced="false"
+                    name="extn_txtShipmentType" type="Text" visible="true">
+                    <styles>
+                        <style style="READ_ONLY"/>
+                    </styles>
+                </Field>
+                <SetData name="YRCSourceBinding" value=""/>
+                <SetData name="YRCTargetBinding" value=""/>
+                <SetData name="isMandatory" value="false"/>
+                <SetData name="yrc:customType" value="Text"/>
+                <SetData name="yrc:dblocalized" value="false"/>
+                <LayoutData grabExcessHSpace="false"
+                    grabExcessVSpace="false" hAlignment="Beginning"
+                    hColSpan="1" hIndent="0" heightHint="-1"
+                    vAlignment="Center" vColSpan="1" widthHint="-1"/>
+            </NewField>
+            
+            <!-- STL 1528 start-->
+            <NewField>
+                <Field attachTo="extn_txtShipmentType" attachType="AFTER"
+                    defaultValue="Warehouse Container# " enabled="true"
+                    isAdvanced="false" name="extn_lblWarehouseContainer"
+                    type="Label" visible="true">
+                    <styles>
+                        <style style="NONE"/>
+                    </styles>
+                </Field>
+                <SetData name="YRCSourceBinding" value=""/>
+                <SetData name="yrc:customType" value="Label"/>
+                <LayoutData grabExcessHSpace="false"
+                    grabExcessVSpace="false" hAlignment="Beginning"
+                    hColSpan="1" hIndent="0" heightHint="-1"
+                    vAlignment="Center" vColSpan="1" widthHint="-1"/>
+            </NewField>
+            <NewField>
+                <Field attachTo="extn_lblWarehouseContainer"
+                    attachType="AFTER" enabled="true" isAdvanced="false"
+                    name="extn_txtWarehouseContainer" type="Text" visible="true">
+                    <styles>
+                        <style style="READ_ONLY"/>
+                    </styles>
+                </Field>                
+                <SetData name="YRCSourceBinding" value="Shipment:Shipment/Extn/@ExtnExeterContainerId"/>
+                <SetData name="YRCTargetBinding" value=""/>
+                <SetData name="isMandatory" value="false"/>
+                <SetData name="yrc:customType" value="Text"/>
+                <SetData name="yrc:dblocalized" value="false"/>
+                <LayoutData grabExcessHSpace="false"
+                    grabExcessVSpace="false" hAlignment="Beginning"
+                    hColSpan="1" hIndent="0" heightHint="-1"
+                    vAlignment="Center" vColSpan="1" widthHint="-1"/>
+            </NewField>
+            <!-- STL 1528 End-->
+			
+                  <!-- STL - 685: Start-->
+                  <NewField>
+                <Field attachTo="btnNext" attachType="BEFORE"
+                    defaultValue="Cancel Shipment" enabled="true"
+                    isAdvanced="false" name="extn_cancel" type="Button"
+                    validationRequired="true" visible="true" >
+                    <styles>
+                        <style style="LEFT"/>
+                    </styles>
+                </Field>
+                <SetData name="IsKeyContextWizardLevel" value="true"/>
+                <SetData name="ExtnActionClass" value=""/>
+                <SetData name="ExtnKeySequence" value=""/>
+                <SetData name="ExtnActionId" value=""/>
+                <SetData name="yrc:customType" value="BoldTextBlackOnWhite"/>
+                <LayoutData grabExcessHSpace="false"
+                    grabExcessVSpace="false" hAlignment="Beginning"
+                    hColSpan="1" hIndent="2" heightHint="-1"
+                    vAlignment="Top" vColSpan="1" widthHint="-1"/>
+            </NewField>
+                  <!-- STL - 685: End-->
+        </NewFields>
+        <ExistingFields>
+            <ExistingField enabled="true" name="composite22"
+                type="Composite" visible="true">
+                <Layout horizontalSpacing="5"
+                    makeColumnsEqualWidth="false" marginHeight="5"
+                    marginWidth="5" numberOfColumns="4" verticalSpacing="5"/>
+                <LayoutData grabExcessHSpace="false"
+                    grabExcessVSpace="false" hAlignment="Fill"
+                    hColSpan="4" hIndent="0" heightHint="-1"
+                    vAlignment="Fill" vColSpan="1" widthHint="-1"/>
+                <styles>
+                    <style style="NONE"/>
+                </styles>
+            </ExistingField>
+            <ExistingField enabled="true" name="pnlRoot"
+                type="Composite" visible="true">
+                <Layout horizontalSpacing="5"
+                    makeColumnsEqualWidth="false" marginHeight="5"
+                    marginWidth="5" numberOfColumns="1" verticalSpacing="5"/>
+                <LayoutData grabExcessHSpace="true"
+                    grabExcessVSpace="true" hAlignment="Fill"
+                    hColSpan="1" hIndent="0" heightHint="-1"
+                    vAlignment="Fill" vColSpan="1" widthHint="-1"/>
+                <SetData name="yrc:customType" value="TaskComposite"/>
+                <styles>
+                    <style style="NONE"/>
+                </styles>
+            </ExistingField>
+                  
+            <ExistingField enabled="true" name="txtStatus" type="Text" visible="true">
+                <LayoutData grabExcessHSpace="false"
+                    grabExcessVSpace="false" hAlignment="Beginning"
+                    hColSpan="1" hIndent="0" heightHint="-1"
+                    vAlignment="Center" vColSpan="1" widthHint="150"/>
+                <SetData name="isMandatory" value="false"/>
+                <SetData name="yrc:customType" value="Text"/>
+                <SetData name="yrc:dblocalized" value="false"/>
+                <styles>
+                    <style style="NONE"/>
+                </styles>
+            </ExistingField>
+        </ExistingFields>
+    </Form>
+    <Form extensionBehaviorName=""
+        id="com.yantra.pca.ycd.rcp.tasks.shipmentTracking.screens.YCDShipmentDetailsShipmentLines" wizard="false">
+        <NewFields>
+            <NewField>
+                <Field IsResizeable="true" attachTo="tableColumn2"
+                    attachType="AFTER" enabled="true" isAdvanced="false"
+                    movable="true" name="extn_clmItemUOM"
+                    sortRequired="true" tableName="tblItems"
+                    type="TableColumn" visible="true" width="50">
+                    <styles>
+                        <style style="NONE"/>
+                    </styles>
+                </Field>
+                <SetData name="YRCSourceBinding" value="Shipment:/Shipment/ShipmentLines/ShipmentLine"/>
+                <SetData name="YRCTableAttributeBinding" value="@UnitOfMeasure"/>
+                <SetData name="YRCTableColumnBinding" value="UOM"/>
+                <SetData name="yrc:customType" value="Table"/>
+            </NewField>
+                  <NewField>
+                <Field IsResizeable="true" attachTo="tableColumn4"
+                    attachType="AFTER" enabled="true" isAdvanced="false"
+                    name="extn_ItemID" tableName="tblItems"
+                    type="TableColumn" visible="true" width="50">
+                    <styles>
+                        <style style="NONE"/>
+                    </styles>
+                </Field>
+                <SetData name="YRCSourceBinding" value="Shipment:/Shipment/ShipmentLines/ShipmentLine"/>
+                <SetData name="YRCTableAttributeBinding" value="@ItemID"/>
+                <SetData name="YRCTableColumnBinding" value="Item ID"/>
+                <SetData name="yrc:customType" value=""/>
+            </NewField>
+            <NewField>
+                <Field IsResizeable="true" attachTo="extn_ItemID"
+                    attachType="AFTER" enabled="true" isAdvanced="false"
+                    name="extn_ItemDesc" tableName="tblItems"
+                    type="TableColumn" visible="true" width="115">
+                    <styles>
+                        <style style="NONE"/>
+                    </styles>
+                </Field>
+                <SetData name="YRCSourceBinding" value="Shipment:/Shipment/ShipmentLines/ShipmentLine"/>
+                <SetData name="YRCTableAttributeBinding" value="@ItemDesc"/>
+                <SetData name="YRCTableColumnBinding" value="Description"/>
+                <SetData name="yrc:customType" value=""/>
+            </NewField>
+            <NewField>
+                <Field IsResizeable="true" attachTo="extn_ItemDesc"
+                    attachType="AFTER" enabled="true" isAdvanced="false"
+                    name="extn_Quantity" tableName="tblItems"
+                    type="TableColumn" visible="true" width="50">
+                    <styles>
+                        <style style="NONE"/>
+                    </styles>
+                </Field>
+                <SetData name="YRCSourceBinding" value="Shipment:/Shipment/ShipmentLines/ShipmentLine"/>
+                <SetData name="YRCTableAttributeBinding" value="@Quantity"/>
+                <SetData name="YRCTableColumnBinding" value="Quantity"/>
+                <SetData name="yrc:customType" value=""/>
+            </NewField>
+            </NewFields>
+       <ExistingFields>
+            <ExistingField IsResizeable="true" enabled="true"
+                name="tableColumn" tableName="tblItems"
+                type="TableColumn" width="317">
+                <SetData name="yrc:customType" value="Table"/>
+                <styles>
+                    <style style="NONE"/>
+                </styles>
+            </ExistingField>
+            <ExistingField IsResizeable="true" enabled="true"
+                name="tableColumn2" tableName="tblItems"
+                type="TableColumn" width="158">
+                <SetData name="yrc:customType" value="Table"/>
+                <styles>
+                    <style style="NONE"/>
+                </styles>
+            </ExistingField>
+            <!-- Start : OMNI-6616 : Changes for STS -->
+	    <ExistingField IsResizeable="true" enabled="true"
+                name="tableColumnReceiveQty" tableName="tblItems" isAdvanced="true"
+                type="TableColumn" validationRequired="true" width="158">
+                <SetData name="yrc:customType" value="Table"/>
+                <styles>
+                    <style style="NONE"/>
+                </styles>
+            </ExistingField>
+            <!-- End : OMNI-6616 : Changes for STS -->
+        </ExistingFields>
+    </Form>
+      
+      <!-- Close Manifest related Start -->
+    <Form
+        extensionBehaviorName="com.academy.som.closemanifest.wizards.AcademyCloseManifestExtnWizardBehavior"
+        id="com.academy.som.closemanifest.wizards.AcademyCloseManifestWizard" wizard="true">
+        <NewFields/>
+        <ExistingFields>
+            <ExistingField attachTo="" attachType="" enabled="true"
+                name="pnlButtons" type="Composite" visible="true">
+                <Layout horizontalSpacing="5"
+                    makeColumnsEqualWidth="false" marginHeight="5"
+                    marginWidth="5" numberOfColumns="1" verticalSpacing="5"/>
+                <LayoutData grabExcessHSpace="true"
+                    grabExcessVSpace="false" hAlignment="Fill"
+                    hColSpan="1" hIndent="0" heightHint="-1"
+                    vAlignment="Top" vColSpan="1" widthHint="-1"/>
+                <styles>
+                    <style style="NONE"/>
+                </styles>
+            </ExistingField>
+            <ExistingField attachTo="" attachType="" enabled="true"
+                name="btnClose" type="Button" validationRequired="true"
+                visible="true" wizardPageId="com.yantra.pca.sop.rcp.tasks.outboundexecution.shipout.closemanifest.wizardpages.SOPCloseManifest">
+                <LayoutData grabExcessHSpace="true"
+                    grabExcessVSpace="false" hAlignment="End"
+                    hColSpan="1" hIndent="0" heightHint="-1"
+                    vAlignment="Center" vColSpan="1" widthHint="-1"/>
+                <SetData name="yrc:customType" value="TaskComposite"/>
+                <styles>
+                    <style style="NONE"/>
+                </styles>
+            </ExistingField>
+                  <ExistingField enabled="true" name="pnlCloseManifest"
+                type="Composite" visible="true" wizardPageId="com.academy.som.closemanifest.wizardpages.AcademyCloseManifest">
+                <Layout horizontalSpacing="5"
+                    makeColumnsEqualWidth="false" marginHeight="1"
+                    marginWidth="5" numberOfColumns="3" verticalSpacing="5"/>
+                <LayoutData grabExcessHSpace="true"
+                    grabExcessVSpace="true" hAlignment="Fill"
+                    hColSpan="1" hIndent="0" heightHint="230"
+                    vAlignment="Top" vColSpan="1" widthHint="-1"/>
+                <SetData name="yrc:customType" value="Composite"/>
+                <styles>
+                    <style style="NONE"/>
+                </styles>
+            </ExistingField>
+        </ExistingFields>
+    </Form>
+<!--Start:Changes made for STL 937-->
+    <Form
+        extensionBehaviorName="com.academy.som.shipmentTracking.AcademyShipmentDetailsContainerPnlExtnBehavior"
+        id="com.yantra.pca.ycd.rcp.tasks.shipmentTracking.screens.YCDShipmentDetailsContainerPnl" wizard="false">
+        <!--  Start : Changes made for OMNI-6616 -->
+	<NewFields>
+            <NewField>
+                <Field attachTo="lblTrackingNo" attachType="BEFORE"
+                    defaultValue="Location" enabled="true"
+                    isAdvanced="false" name="extn_lblLocation"
+                    type="Label" visible="true">
+                    <styles>
+                        <style style="NONE"/>
+                    </styles>
+                </Field>
+                <SetData name="yrc:customType" value=""/>
+                <LayoutData grabExcessHSpace="false"
+                    grabExcessVSpace="false" hAlignment="Beginning"
+                    hColSpan="1" hIndent="0" heightHint="-1"
+                    vAlignment="Center" vColSpan="1" widthHint="-1"/>
+            </NewField>
+            <NewField>
+                <Field attachTo="extn_lblLocation" attachType="AFTER"
+                    enabled="true" isAdvanced="true"
+                    name="extn_txtLocation" type="Text" visible="true">
+                    <styles>
+                        <style style="READ_ONLY"/>
+                    </styles>
+                </Field>
+                <SetData name="YRCSourceBinding" value="Container:/Container/@Zone"/>
+                <SetData name="isMandatory" value="false"/>
+                <SetData name="yrc:customType" value="Text"/>
+                <SetData name="yrc:dblocalized" value="false"/>
+                <LayoutData grabExcessHSpace="false"
+                    grabExcessVSpace="false" hAlignment="Fill"
+                    hColSpan="1" hIndent="0" heightHint="-1"
+                    vAlignment="Center" vColSpan="1" widthHint="-1"/>
+            </NewField>
+        </NewFields>
+        <ExistingFields>
+            <ExistingField enabled="true" name="composite"
+                type="Composite" visible="true">
+                <Layout horizontalSpacing="5"
+                    makeColumnsEqualWidth="false" marginHeight="5"
+                    marginWidth="5" numberOfColumns="2" verticalSpacing="4"/>
+                <LayoutData grabExcessHSpace="true"
+                    grabExcessVSpace="true" hAlignment="Fill"
+                    hColSpan="1" hIndent="0" heightHint="-1"
+                    vAlignment="Fill" vColSpan="1" widthHint="-1"/>
+                <styles>
+                    <style style="NONE"/>
+                </styles>
+            </ExistingField>
+            <ExistingField name="lnkShippingLabel" type="Link">
+                <LayoutData grabExcessHSpace="false"
+                    grabExcessVSpace="false" hAlignment="Beginning"
+                    hColSpan="1" hIndent="0" heightHint="-1"
+                    vAlignment="Top" vColSpan="1" widthHint="150"/>
+                <SetData name="yrc:customType" value="Link"/>
+                <styles>
+                    <style style="NONE"/>
+                </styles>
+            </ExistingField>
+            <ExistingField name="lnkReturnLabel" type="Link">
+                <LayoutData grabExcessHSpace="false"
+                    grabExcessVSpace="false" hAlignment="Fill"
+                    hColSpan="1" hIndent="5" heightHint="-1"
+                    vAlignment="Top" vColSpan="1" widthHint="150"/>
+                <SetData name="yrc:customType" value="Link"/>
+                <styles>
+                    <style style="NONE"/>
+                </styles>
+            </ExistingField>
+            <ExistingField enabled="true" name="txtTrackingNo"
+                type="Text" visible="true">
+                <LayoutData grabExcessHSpace="false"
+                    grabExcessVSpace="false" hAlignment="Fill"
+                    hColSpan="1" hIndent="5" heightHint="-1"
+                    vAlignment="Center" vColSpan="1" widthHint="-1"/>
+            </ExistingField>
+            <ExistingField enabled="true" name="lblTrackingNo"
+                type="Label" visible="true">
+                <LayoutData grabExcessHSpace="false"
+                    grabExcessVSpace="true" hAlignment="Beginning"
+                    hColSpan="1" hIndent="0" heightHint="-1"
+                    vAlignment="Center" vColSpan="1" widthHint="-1"/>
+            </ExistingField>
+        <!--  End : Changes made for OMNI-6616 -->
+        </ExistingFields>
+    </Form>
+    <Form extensionBehaviorName=""
+        id="com.academy.som.shipmentDetails.screens.AcademyContainerSelectionPanelPopup" wizard="false">
+        <NewFields>
+        <!--WMS Optimization
+            <NewField>
+                <Field attachTo="cmbShipmentCntr" attachType="AFTER"
+                    defaultValue="Pack Station" enabled="true"
+                    isAdvanced="false" name="extn_lblPckStn"
+                    type="Label" visible="true">
+                    <styles>
+                        <style style="NONE"/>
+                    </styles>
+                </Field>
+                <SetData name="YRCSourceBinding" value=""/>
+                <SetData name="yrc:customType" value="Label"/>
+                <LayoutData grabExcessHSpace="false"
+                    grabExcessVSpace="false" hAlignment="Beginning"
+                    hColSpan="1" hIndent="0" heightHint="-1"
+                    vAlignment="Center" vColSpan="1" widthHint="-1"/>
+            </NewField>
+            WMS Optimization -->
+            <NewField>
+                <Field attachTo="cmbShipmentCntr" attachType="BEFORE"
+                    defaultValue="Container No" enabled="true"
+                    isAdvanced="false" name="extn_lblContainerNo"
+                    type="Label" visible="true">
+                    <styles>
+                        <style style="NONE"/>
+                    </styles>
+                </Field>
+                <SetData name="YRCSourceBinding" value=""/>
+                <SetData name="yrc:customType" value="Label"/>
+                <LayoutData grabExcessHSpace="false"
+                    grabExcessVSpace="false" hAlignment="Beginning"
+                    hColSpan="1" hIndent="0" heightHint="-1"
+                    vAlignment="Center" vColSpan="1" widthHint="-1"/>
+            </NewField>
+        </NewFields>
+        <ExistingFields>
+            <ExistingField enabled="true" name="cmbComposite"
+                type="Composite" visible="true">
+                <Layout horizontalSpacing="0"
+                    makeColumnsEqualWidth="false" marginHeight="5"
+                    marginWidth="5" numberOfColumns="2" verticalSpacing="5"/>
+                <LayoutData grabExcessHSpace="true"
+                    grabExcessVSpace="false" hAlignment="Fill"
+                    hColSpan="1" hIndent="0" heightHint="-1"
+                    vAlignment="Center" vColSpan="1" widthHint="-1"/>
+                <SetData name="yrc:customType" value=""/>
+                <styles>
+                    <style style="NONE"/>
+                </styles>
+            </ExistingField>
+            <ExistingField enabled="true" name="cmbShipmentCntr"
+                type="Combo" visible="true">
+                <LayoutData grabExcessHSpace="true"
+                    grabExcessVSpace="false" hAlignment="Center"
+                    hColSpan="1" hIndent="0" heightHint="-1"
+                    vAlignment="Center" vColSpan="1" widthHint="100"/>
+                <SetData name="isMandatory" value="false"/>
+                <SetData name="yrc:customType" value="Combo"/>
+                <SetData name="yrc:dblocalized" value="false"/>
+                <styles>
+                    <style style="NONE"/>
+                </styles>
+            </ExistingField>
+            <ExistingField enabled="true" name="cmbPackStation"
+                type="Combo" visible="true">
+                <LayoutData grabExcessHSpace="true"
+                    grabExcessVSpace="false" hAlignment="Center"
+                    hColSpan="1" hIndent="0" heightHint="-1"
+                    vAlignment="Center" vColSpan="1" widthHint="100"/>
+                <SetData name="isMandatory" value="false"/>
+                <SetData name="yrc:customType" value="Combo"/>
+                <SetData name="yrc:dblocalized" value="false"/>
+                <styles>
+                    <style style="NONE"/>
+                </styles>
+            </ExistingField>
+        </ExistingFields>
+    </Form>
+</Forms>

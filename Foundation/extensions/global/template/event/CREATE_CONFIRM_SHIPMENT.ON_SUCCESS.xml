@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- OMNI-37323 : Created new template from CONFIRM_SHIPMENT.ON_SUCCESS event xml -->
+<Shipment ActualDeliveryDate=" " ActualFreightCharge=" "
+    ActualShipmentDate=" " AppointmentNo=" " BolNo=" "
+    BuyerOrganizationCode=" " CarrierAccountNo=" "
+    CarrierServiceCode=" " CarrierType=" " Code=" " CommercialValue=" "
+    Currency=" " DeliveryCode=" " DeliveryPlanKey=" " DeliveryTS=" "
+    DestinationZone=" " DocumentType=" " DownLoadCount=" "
+    EnterpriseCode=" " ExpectedDeliveryDate=" " ExpectedShipmentDate=" "
+    ExportTaxpayerID=" " FreightTerms=" " FromAddressKey=" "
+    FromAppointment=" " HasOtherShipments=" " HazardousMaterialFlag=" "
+    HeldForConfirmation=" " ITDate=" " ITNo=" " ManifestKey=" "
+    ManifestNo=" " NextAlertTs=" " NumOfCartons=" " NumOfPallets=" "
+    OriginZone=" " PackListType=" " ParentShipmentKey=" " PickListNo=" "
+    PickticketNo=" " PipelineKey=" " PodNo=" " ProNo=" "
+    ReceivingNode=" " SCAC=" " SealNo=" " SellerOrganizationCode=" "
+    ShipDate=" " ShipMode=" " ShipNode=" " ShipVia=" "
+    ShipmentClosedFlag=" " ShipmentConfirmUpdatesDone=" "
+    ShipmentContainerizedFlag=" " ShipmentDeliverUpdatesDone=" "
+    ShipmentKey=" " ShipmentNo=" " ShipmentPlannedFlag=" "
+    ShipmentType=" " Status=" " StatusDate=" " ToAddressKey=" "
+    ToAppointment=" " TotalActualCharge=" " TotalEstimatedCharge=" "
+    TotalVolume=" " TotalVolumeUOM=" " TotalWeight=" "
+    TotalWeightUOM=" " TrackingNo=" " TrailerNo=" " DeliveryMethod="">
+	<!-- Start Inventory POC -->
+	<ShipNode NodeType=" "/>
+	<!-- End Inventory POC -->
+	<!-- Start : OMNI-5404 -->
+	<Extn ExtnIsCurbsidePickupOpted="" />
+	<!-- End : OMNI-5404 -->
+	<!--Start WN-1801 Narvar: Shipment Confirmation-->
+	<BillToAddress AddressLine1=" " AddressLine2=" " AddressLine3=" "
+        AddressLine4=" " AddressLine5=" " AddressLine6=" "
+        AlternateEmailID=" " Beeper=" " City=" " Company=" " Country=" "
+        DayFaxNo=" " DayPhone=" " Department=" " EMailID=" "
+        ErrorTxt=" " EveningFaxNo=" " EveningPhone=" " FirstName=" "
+        HttpUrl=" " JobTitle=" " LastName=" " MiddleName=" "
+        MobilePhone=" " OtherPhone=" " PersonID=" " PersonInfoKey=" "
+        PreferredShipAddress=" " State=" " Suffix=" " Title=" "
+        UseCount=" " VerificationStatus=" " ZipCode=" "/>
+	<!--End WN-1801 Narvar: Shipment Confirmation-->		
+	<ToAddress AddressLine1=" " AddressLine2=" " AddressLine3=" "
+        AddressLine4=" " AddressLine5=" " AddressLine6=" "
+        AlternateEmailID=" " Beeper=" " City=" " Company=" " Country=" "
+        DayFaxNo=" " DayPhone=" " Department=" " EMailID=" "
+        ErrorTxt=" " EveningFaxNo=" " EveningPhone=" " FirstName=" "
+        HttpUrl=" " JobTitle=" " LastName=" " MiddleName=" "
+        MobilePhone=" " OtherPhone=" " PersonID=" " PersonInfoKey=" "
+        PreferredShipAddress=" " State=" " Suffix=" " Title=" "
+        UseCount=" " VerificationStatus=" " ZipCode=" "/>
+	<FromAddress AddressLine1=" " AddressLine2=" " AddressLine3=" "
+        AddressLine4=" " AddressLine5=" " AddressLine6=" "
+        AlternateEmailID=" " Beeper=" " City=" " Company=" " Country=" "
+        DayFaxNo=" " DayPhone=" " Department=" " EMailID=" "
+        ErrorTxt=" " EveningFaxNo=" " EveningPhone=" " FirstName=" "
+        HttpUrl=" " JobTitle=" " LastName=" " MiddleName=" "
+        MobilePhone=" " OtherPhone=" " PersonID=" " PersonInfoKey=" "
+        PreferredShipAddress=" " State=" " Suffix=" " Title=" "
+        UseCount=" " VerificationStatus=" " ZipCode=" "/>
+	<OrderInvoiceList>
+		<OrderInvoice>
+			<Extn />
+		</OrderInvoice>
+	</OrderInvoiceList>
+	<Containers>
+		<Container ActualFreightCharge=" " AppliedWeight=" "
+            AppliedWeightUOM=" " AstraCode=" " BarcodeDiscount=" "
+            BasicFreightCharge=" " CarriageValue=" "
+            CarrierBillAccount=" " CarrierLocationID=" "
+            CarrierPaymentType=" " CarrierServiceCode=" "
+            CommitmentCode=" " ContainerGrossWeight=" "
+            ContainerGrossWeightUOM=" " ContainerHeight=" "
+            ContainerHeightUOM=" " ContainerLength=" "
+            ContainerLengthUOM=" " ContainerNetWeight=" "
+            ContainerNetWeightUOM=" " ContainerNo=" " ContainerScm=" "
+            ContainerSeqNo=" " ContainerType=" " ContainerWidth=" "
+            ContainerWidthUOM=" " CustCarrierAccountNo=" "
+            CustomsValue=" " DeclaredValue=" " DeliverBy=" "
+            DeliveryCode=" " DeliveryDay=" " DimmedFlag=" "
+            DiscountAmount=" " ExportLicenseExpDate=" "
+            ExportLicenseNo=" " FormID=" " FreightTerms=" "
+            HasOtherContainers=" " ManifestKey=" " ManifestNo=" "
+            MasterContainerNo=" " OversizedFlag=" "
+            ParentContainerNo=" " RoutingCode=" " SCAC=" "
+            ServiceType=" " ShipDate=" " ShipMode=" " ShipToKey=" "
+            ShipmentContainerKey=" " ShipmentKey=" "
+            SpecialServicesSurcharge=" " TrackingNo=" " Ucc128code=" " Zone=" ">
+			<ContainerDetails>
+				<ContainerDetail ContainerDetailsKey=" " ItemID=" "
+                    LotNumber=" " ProductClass=" " Quantity=" "
+                    ShipmentContainerKey=" " ShipmentKey=" "
+                    ShipmentLineKey=" " UnitOfMeasure=" ">
+					<ShipmentTagSerials TotalNumberOfRecords="">
+						<ShipmentTagSerial BatchNo=" "
+                            ContainerDetailKey=" " LotAttribute1=" "
+                            LotAttribute2=" " LotAttribute3=" "
+                            LotKeyReference=" " LotNumber=" "
+                            ManufacturingDate=" " Quantity=" "
+                            RevisionNo=" " SerialNo=" " ShipByDate=" "
+                            ShipmentLineKey=" " ShipmentTagSerialKey=" "/>
+					</ShipmentTagSerials>
+				</ContainerDetail>
+			</ContainerDetails>
+			<Instructions>
+				<Instruction InstructionDetailKey="" InstructionText=" "
+                    InstructionType=" " InstructionURL=" "
+                    InstructionUsage=" " ReferenceKey=" " SequenceNo=" " TableName=" "/>
+			</Instructions>
+			<ContainerActivities TotalNumberOfRecords="">
+				<ContainerActivity Action="" ActivityCode=""
+                    ActivityTimeStamp="" ActivityUserId=""
+                    ContainerActivityKey="" Createprogid="" Createts=""
+                    Createuserid="" IsException="" Lockid=""
+                    Modifyprogid="" Modifyts="" Modifyuserid="" Notes="" ShipmentContainerKey="">
+					<ActivityLocation ActivityLocationId=""
+                        ActivityNodeKey="" AddressLine1=""
+                        AddressLine2="" AddressLine3="" AddressLine4=""
+                        AddressLine5="" AddressLine6="" City=""
+                        Company="" Country="" FirstName="" LastName=""
+                        MiddleName="" State="" ZipCode=""/>
+				</ContainerActivity>
+			</ContainerActivities>
+		</Container>
+	</Containers>
+	<Instructions>
+		<Instruction InstructionDetailKey="" InstructionText=" "
+            InstructionType=" " InstructionURL=" " InstructionUsage=" "
+            ReferenceKey=" " SequenceNo=" " TableName=" "/>
+	</Instructions>
+	<ShipmentLines>
+		<ShipmentLine ChainedFromOrderHeaderKey=" "
+            ChainedFromOrderLineKey=" " ItemDesc=" " ItemID=" " PrimeLineNo=" "
+            OrderHeaderKey=" " OrderNo=" " Quantity=" " Segment=" " SegmentType=" "
+            ShipmentKey=" " ShipmentLineKey=" " ShipmentLineNo=" "
+            SubLineNo=" " UnitOfMeasure=" " isHistory="" OrderLineKey="">
+			<ShipmentLineInvAttRequest BatchNo=" " LotAttribute1=" "
+                LotAttribute2=" " LotAttribute3=" " LotKeyReference=" "
+                LotNumber=" " ManufacturingDate=" " RevisionNo=" "/>
+			<ShipmentTagSerials TotalNumberOfRecords="">
+				<ShipmentTagSerial BatchNo=" " LotAttribute1=" "
+                    LotAttribute2=" " LotAttribute3=" "
+                    LotKeyReference=" " LotNumber=" "
+                    ManufacturingDate=" " Quantity=" " RevisionNo=" "
+                    SerialNo=" " ShipByDate=" " ShipmentLineKey=" " ShipmentTagSerialKey=" "/>
+			</ShipmentTagSerials>
+			<Instructions>
+				<Instruction InstructionDetailKey="" InstructionText=" "
+                    InstructionType=" " InstructionURL=" "
+                    InstructionUsage=" " ReferenceKey=" " SequenceNo=" " TableName=" "/>
+			</Instructions>
+			<Order />
+			<OrderLine PrimeLineNo="" OriginalOrderedQty="" OrderedQty="" DeliveryMethod="" FulfillmentType="" >
+				<ChainedFromOrderLine LineType="" FulfillmentType="" PrimeLineNo=" ">
+					<Order OrderHeaderKey="" DocumentType="" OrderNo="" OrderDate="" EnterpriseCode=""/>			
+				</ChainedFromOrderLine>
+				<Item>
+					<Extn/>
+				</Item>
+				<LineCharges>
+					<LineCharge/>
+				</LineCharges>
+				<LineTaxes>
+					<LineTax/>
+					<TaxSummary>
+						<TaxSummaryDetail />
+					</TaxSummary>
+				</LineTaxes>
+				<!-- Start - OMNI-2821 : Narvar: Send Narvar ASO Promise Date  -->
+				<Extn ExtnWCOrderItemIdentifier="" ExtnInitialPromiseDate="" /> 
+				<!-- End - OMNI-2821 : Narvar: Send Narvar ASO Promise Date  -->
+				<LinePriceInfo/>
+			</OrderLine>
+			<Item CanUseAsServiceTool="" Createprogid="" Createts="" Createuserid="" DisplayItemId="" GlobalItemID="" InheritAttributesFromClassification="" IsShippingCntr="" ItemGroupCode="" ItemID="" ItemKey="" Lockid="" MaxModifyTS="" Modifyprogid="" Modifyts="" Modifyuserid="" OrganizationCode="" SyncTS="" UnitOfMeasure="">
+
+				<!--Start WN-1801 Narvar: Shipment Confirmation-->
+				<Extn/>
+				<!--End WN-1801 Narvar: Shipment Confirmation-->
+
+			</Item>
+		</ShipmentLine>
+	</ShipmentLines>
+	<ShipmentCharges>
+		<ShipmentCharge ActualCharge=" " ChargeCategory=" "
+            ChargeName=" " EstimatedCharge=" " InvoiceNo=" "
+            KeyReference1=" " KeyReference2=" " LoadKey=" "
+            LoadShipmentChargeKey=" " PayeeOrganizationCode=" " ShipmentKey=" "/>
+	</ShipmentCharges>
+	<ShipmentStatusAudits>
+		<ShipmentStatusAudit ShipmentStatusAuditKey="" OldStatus="" NewStatus="" OldStatusDate="" NewStatusDate="" ReasonCode="" ReasonText=""/>
+	</ShipmentStatusAudits>
+</Shipment>

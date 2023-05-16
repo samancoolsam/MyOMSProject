@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OrderList>
+<Order OrderNo="" OrderHeaderKey="" Status="">
+	<OrderLines LastOrderLineKey="">
+		<OrderLine CarrierServiceCode="" DerivedFromOrderHeaderKey=""
+			DerivedFromOrderLineKey="" 
+			 InvoicedQty="" InvoicedQuantity=""
+			MaxLineStatus="" MaxLineStatusDesc="" MinLineStatus=""
+			MinLineStatusDesc="" OrderHeaderKey="" OrderLineKey="" OrderedQty=""
+			PrimeLineNo="" ReturnReason="" ReturnReasonLongDesc=""
+			ReturnReasonShortDesc="" SCAC="" ScacAndService=""
+			 ShipNode="">
+			<LinePriceInfo DisplayUnitPrice="" InvoicedLineTotal=""
+				InvoicedPricingQty=""  LineTotal="" 
+				 PricingUOM="" RepricingQty="" UnitPrice="" />
+			<Item IsReturnable="" ItemDesc="" ItemID="" 
+				 UnitOfMeasure="">
+			</Item>
+			<DerivedFromOrder DocumentType="" EnterpriseCode=""
+				OrderNo="" />
+			<!--Optional-->
+			<LineCharges>
+				<LineCharge ChargeAmount="" ChargeCategory=""
+					ChargeName="" ChargeNameKey="" ChargePerLine="" ChargePerUnit=""
+					InvoicedChargeAmount="" InvoicedChargePerLine=""
+					InvoicedChargePerUnit="" IsBillable="" IsDiscount="" Reference=""
+					RemainingChargeAmount="" RemainingChargePerLine=""
+					RemainingChargePerUnit="" />
+			</LineCharges>
+			<!-- LineCharge is not a template driven element. If the template contains either of LineCharge or LineTax elements, both will appear in the output, alongwith all their attributes. -->
+			<LineTaxes>
+				<LineTax ChargeCategory="" ChargeName=""
+					ChargeNameKey="" InvoicedTax="" Reference_1="" Reference_2=""
+					Reference_3="" RemainingTax="" Tax="" TaxName="" TaxPercentage="" />
+				<TaxSummary>
+					<TaxSummaryDetail InvoicedTax="" OverallTax=""
+						RemainingTax="" TaxName="" />
+				</TaxSummary>
+			</LineTaxes>
+			<OrderStatuses>
+				<OrderStatus OrderHeaderKey="" OrderLineKey=""
+					 OrderReleaseKey="" 
+					 ShipNode="" Status="" StatusDate=""
+					StatusDescription="" StatusQty="" StatusReason=""
+					TotalQuantity="">
+
+					<OrderStatusTranQuantity StatusQty=""
+						TotalQuantity="" TransactionalUOM="" />
+				</OrderStatus>
+			</OrderStatuses>
+			<DerivedFromOrderLine PrimeLineNo="" SubLineNo="">
+				<Item ItemID="" UnitOfMeasure="" />
+			</DerivedFromOrderLine>
+		</OrderLine>
+	</OrderLines>
+	<PriceInfo Currency="" EnterpriseCurrency=""
+		 TotalAmount="" />
+
+	<OrderStatuses>
+		<OrderStatus OrderHeaderKey="" OrderLineKey=""
+			 OrderReleaseKey="" 
+			 ShipNode="" Status="" StatusDate=""
+			StatusDescription="" StatusQty="" StatusReason="" TotalQuantity="">
+		</OrderStatus>
+	</OrderStatuses>
+
+</Order>
+</OrderList>

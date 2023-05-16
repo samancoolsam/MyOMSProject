@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- getNodeItemDetails Output XML -->
+<Item ItemID="" ItemKey="" ItemGroupCode="" OrganizationCode="" UnitOfMeasure="" GlobalItemID="" DisplayItemId="">
+	<PrimaryInformation CapacityQuantityStrategy=" " CostCurrency=" " CountryOfOrigin=" " CreditWOReceipt=" " DefaultProductClass=" " Description=" "   ExtendedDescription=" "    FixedCapacityQtyPerLine=" " FixedPricingQtyPerLine=" " InvoiceBasedOnActuals=" "  IsDeliveryAllowed=" " IsPickupAllowed=" " IsReturnService=" " IsReturnable=" " IsShippingAllowed=" " ItemType=" " KitCode=" " ManufacturerItem=" " ManufacturerItemDesc=" " ManufacturerName=" "  MasterCatalogID=" " MaxOrderQuantity=" "  MinOrderQuantity=" " MinimumCapacityQuantity=" " MultipleProdLineAllowed=" " PricingQuantityConvFactor=" " PricingQuantityStrategy=" " PricingUOM=" " PricingUOMStrategy=" " PrimaryEnterpriseCode=" " ProductLine=" " RequiresProdAssociation=" " ReturnWindow=" " SerializedFlag=" " ShortDescription=" " Status=" "  TaxableFlag=" " UnitCost=" " UnitHeight=" " UnitHeightUOM=" " UnitLength=" " UnitLengthUOM=" " UnitWeight=" " UnitWeightUOM=" " UnitWidth=" " UnitWidthUOM=" " IsParcelShippingAllowed="" DisplayItemDescription="" SerialCapturedInReceiving=" " SerialCapturedInInventory=" " SerialCapturedInShipping=" " SerialCapturedInReturns=" "/>
+	<Extn />
+	<InventoryParameters  ATPRule=" " AdvanceNotificationTime=" " DefaultExpirationDays=" " InventoryMonitorRule=" " IsFifoTracked=" " IsSerialTracked=" " LeadTime=" "  MinNotificationTime=" "  ProcessingTime=" " TagControlFlag=" " TagReqAtReceipt=" " TagReqAtShipment=" " TimeSensitive=" "/>
+	<ClassificationCodes  CommodityCode=" " ECCNNo=" " HarmonizedCode=" " HazmatClass=" " NAICSCode=" " NMFCClass=" " NMFCCode=" "  OperationalConfigurationComplete=" " PickingType=" "   Schedule_B_Code=" "  StorageType=" " TaxProductCode=" " UNSPSC=" " VelocityCode=" "/>
+    <ItemAliasList>
+        <ItemAlias AliasName="" AliasValue=""/>
+    </ItemAliasList>
+    <ItemExclusionList>
+        <ItemExclusion ExclusionCode=""/>
+    </ItemExclusionList>
+    <AdditionalAttributeList>
+        <AdditionalAttribute Name="" Value=""/>
+    </AdditionalAttributeList>
+    <CategoryList>
+        <Category CategoryID="" CategoryKey="" CategoryPath="" OrganizationCode=""/>
+    </CategoryList>
+    <LanguageDescriptionList>
+        <LanguageDescription LocaleCode="" ShortDescription="" ExtendedDescription="" Description="" />
+    </LanguageDescriptionList>
+    <Components> 
+        <Component ItemKey="" ComponentItemKey="" KitQuantity=""/>
+    </Components>
+	<InventoryTagAttributes  ItemTagKey="" ItemKey="" LotAttribute1="" LotAttribute2="" LotAttribute3=""  LotManufactureDate="" LotKeyReference="" LotNumber="" BatchNo="" RevisionNo=""/>
+	<AlternateUOMList>
+		<AlternateUOM ItemKey="" ItemUOMKey="" UnitOfMeasure="" Quantity="" Length="" LengthUOM="" Width="" WidthUOM=""  Height="" HeightUOM="" Weight="" WeightUOM="" IsOrderingUOM="" /> 
+	</AlternateUOMList>
+	<ItemInstructionList>
+		<ItemInstruction ItemInstructionKey="" ItemKey="" InstructionType="" Seq_No="" InstructionCode="" InstructionText="" /> 
+	</ItemInstructionList>
+	<ItemOptionList>
+		<ItemOption ItemOptionKey="" ItemKey="" OptionItemId="" OptionUOM="" />
+	</ItemOptionList>
+	<ItemServiceAssocList>
+		<ItemServiceAssoc ItemServiceAssocKey="" ItemKey="" CategoryKey="" ServiceItemId="" ServiceUOM="" ServiceQuantity="" ProductQuantity="" PricingServiceQuantity="" PricingProductQuantity="" HoldSchedTillCompletion="" >
+            <ItemServiceAssocSkillList>
+                <ItemServiceAssocSkill ServiceSkillId="" Description=""/>
+            </ItemServiceAssocSkillList>
+        </ItemServiceAssoc>
+	</ItemServiceAssocList>
+</Item>

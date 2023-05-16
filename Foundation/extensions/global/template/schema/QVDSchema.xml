@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlatfileDelimitedSchema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation='delimitedreceiver.xsd'>
+   <ParserDefaults DefaultRecordDelimiter="Newline" DefaultFieldDelimiter="," DefaultPadCharacter="#" RecordIdStartPosition="1">
+    </ParserDefaults>
+
+	<Root Name="QVD">
+   		  <Header Name="wbellacademy" RecordName="wbellacademy" MinOccurence="1" MaxOccurence="1"/>
+	</Root>
+
+	<RecordDefinitions>
+		<Record RecordId="wbellacademy" Name="wbellacademy" XMLName="Shipment">
+			<Field Name='Subscription_Name' FieldPosition='2' XMLName='Subscription_Name'/>
+			<Field Name='Subscription_Number' FieldPosition='3' XMLName='Subscription_Number'/>
+			<Field Name='Query_Begin_Date' FieldPosition='4' XMLName='Query_Begin_Date'/>
+			<Field Name='Query_End_Date' FieldPosition='5' XMLName='Query_End_Date'/>
+			<Field Name='Subscription_File_Name' FieldPosition='6' XMLName='Subscription_File_Name'/>
+			<Field Name='File_Status' FieldPosition='7' XMLName='File_Status'/>
+			<Field Name='Record_Type' FieldPosition='8' XMLName='Record_Type'/>
+			<Field Name='Shipper_Number' FieldPosition='9' XMLName='Shipper_Number'/>
+			<Field Name='Shipper_Name' FieldPosition='10' XMLName='Shipper_Name'/>
+			<Field Name='Shipper_Address_Line_1' FieldPosition='11' XMLName='Shipper_Address_Line_1'/>
+			<Field Name='Shipper_Address_Line_2' FieldPosition='12' XMLName='Shipper_Address_Line_2'/>
+			<Field Name='Shipper_Address_Line_3' FieldPosition='13' XMLName='Shipper_Address_Line_3'/>
+			<Field Name='Shipper_City' FieldPosition='14' XMLName='Shipper_City'/>
+			<Field Name='Shipper_State_Province' FieldPosition='15' XMLName='Shipper_State_Province'/>
+			<Field Name='Shipper_Postal_Code' FieldPosition='16' XMLName='Shipper_Postal_Code'/>
+			<Field Name='Shipper_Country' FieldPosition='17' XMLName='Shipper_Country'/>
+			<Field Name='Ship_To_Attention' FieldPosition='18' XMLName='Ship_To_Attention'/>
+			<Field Name='Ship_To_Phone' FieldPosition='19' XMLName='Ship_To_Phone'/>
+			<Field Name='Ship_To_Name' FieldPosition='20' XMLName='Ship_To_Name'/>
+			<Field Name='Ship_To_Address_Line_1' FieldPosition='21' XMLName='Ship_To_Address_Line_1'/>
+			<Field Name='Ship_To_Address_Line_2' FieldPosition='22' XMLName='Ship_To_Address_Line_2'/>
+			<Field Name='Ship_To_Address_Line_3' FieldPosition='23' XMLName='Ship_To_Address_Line_3'/>
+			<Field Name='Ship_To_City' FieldPosition='24' XMLName='Ship_To_City'/>
+			<Field Name='Ship_To_State_Province' FieldPosition='25' XMLName='Ship_To_State_Province'/>
+			<Field Name='Ship_To_Postal_Code' FieldPosition='26' XMLName='Ship_To_Postal_Code'/>
+			<Field Name='Ship_To_Country' FieldPosition='27' XMLName='Ship_To_Country'/>
+			<Field Name='Ship_To_Location_ID' FieldPosition='28' XMLName='Ship_To_Location_ID'/>
+			<Field Name='Shipment_Reference_Number_Type_1' FieldPosition='29' XMLName='Shipment_Reference_Number_Type_1'/>
+			<Field Name='Shipment_Reference_Number_Value_1' FieldPosition='30' XMLName='Shipment_Reference_Number_Value_1'/>
+			<Field Name='Shipment_Reference_Number_Type_2' FieldPosition='31' XMLName='Shipment_Reference_Number_Type_2'/>
+			<Field Name='Shipment_Reference_Number_Value_2' FieldPosition='32' XMLName='Shipment_Reference_Number_Value_2'/>
+			<Field Name='UPS_Service' FieldPosition='33' XMLName='UPS_Service'/>
+			<Field Name='Pickup_Date' FieldPosition='34' XMLName='Pickup_Date'/>
+			<Field Name='Scheduled_Delivery_Date' FieldPosition='35' XMLName='Scheduled_Delivery_Date'/>
+			<Field Name='Scheduled_Delivery_Time' FieldPosition='36' XMLName='Scheduled_Delivery_Time'/>
+			<Field Name='Document_Type' FieldPosition='37' XMLName='Document_Type'/>
+			<Field Name='Package_Activity_Date' FieldPosition='38' XMLName='Package_Activity_Date'/>
+			<Field Name='Package_Activity_Time' FieldPosition='39' XMLName='Package_Activity_Time'/>
+			<Field Name='Package_Description' FieldPosition='40' XMLName='Package_Description'/>
+			<Field Name='Package_Count' FieldPosition='41' XMLName='Package_Count'/>
+			<Field Name='Package_Dimensions_Unit_of_Measurement' FieldPosition='42' XMLName='Package_Dimensions_Unit_of_Measurement'/>
+			<Field Name='Length' FieldPosition='43' XMLName='Length'/>
+			<Field Name='Width' FieldPosition='44' XMLName='Width'/>
+			<Field Name='Height' FieldPosition='45' XMLName='Height'/>
+			<Field Name='Package_Dimensional_Weight' FieldPosition='46' XMLName='Package_Dimensional_Weight'/>
+			<Field Name='Package_Weight' FieldPosition='47' XMLName='Package_Weight'/>
+			<Field Name='Large_Package' FieldPosition='48' XMLName='Large_Package'/>
+			<Field Name='Tracking_Number' FieldPosition='49' XMLName='Tracking_Number'/>
+			<Field Name='Package_Reference_Number_Type_1' FieldPosition='50' XMLName='Package_Reference_Number_Type_1'/>
+			<Field Name='Package_Reference_Number_Value_1' FieldPosition='51' XMLName='Package_Reference_Number_Value_1'/>
+			<Field Name='Package_Reference_Number_Type_2' FieldPosition='52' XMLName='Package_Reference_Number_Type_2'/>
+			<Field Name='Package_Reference_Number_Value_2' FieldPosition='53' XMLName='Package_Reference_Number_Value_2'/>
+			<Field Name='Package_Reference_Number_Type_3' FieldPosition='54' XMLName='Package_Reference_Number_Type_3'/>
+			<Field Name='Package_Reference_Number_Value_3' FieldPosition='55' XMLName='Package_Reference_Number_Value_3'/>
+			<Field Name='Package_Reference_Number_Type_4' FieldPosition='56' XMLName='Package_Reference_Number_Type_4'/>
+			<Field Name='Package_Reference_Number_Value_4' FieldPosition='57' XMLName='Package_Reference_Number_Value_4'/>
+			<Field Name='Package_Reference_Number_Type_5' FieldPosition='58' XMLName='Package_Reference_Number_Type_5'/>
+			<Field Name='Package_Reference_Number_Value_5' FieldPosition='59' XMLName='Package_Reference_Number_Value_5'/>
+			<Field Name='COD_Currency_Type' FieldPosition='60' XMLName='COD_Currency_Type'/>
+			<Field Name='COD_Amount_Due' FieldPosition='61' XMLName='COD_Amount_Due'/>
+			<Field Name='Declared_Value' FieldPosition='62' XMLName='Declared_Value'/>
+			<Field Name='Earliest_Delivery_Time' FieldPosition='63' XMLName='Earliest_Delivery_Time'/>
+			<Field Name='Hazardous_Materials_Type' FieldPosition='64' XMLName='Hazardous_Materials_Type'/>
+			<Field Name='Hold_For_Pickup' FieldPosition='65' XMLName='Hold_For_Pickup'/>
+			<Field Name='Saturday_Delivery_Indicator' FieldPosition='66' XMLName='Saturday_Delivery_Indicator'/>
+			<Field Name='Call_Tag_ARS_Type' FieldPosition='67' XMLName='Call_Tag_ARS_Type'/>
+			<Field Name='Manufacture_Country' FieldPosition='68' XMLName='Manufacture_Country'/>
+			<Field Name='Harmonized_Type' FieldPosition='69' XMLName='Harmonized_Type'/>
+			<Field Name='Customs_Monetary_Value' FieldPosition='70' XMLName='Customs_Monetary_Value'/>
+			<Field Name='Special_Instructions' FieldPosition='71' XMLName='Special_Instructions'/>
+			<Field Name='Shipment_Charge_Type' FieldPosition='72' XMLName='Shipment_Charge_Type'/>
+			<Field Name='Bill_Ship_To' FieldPosition='73' XMLName='Bill_Ship_To'/>
+			<Field Name='Collect_Bill' FieldPosition='74' XMLName='Collect_Bill'/>
+			<Field Name='UPS_Location' FieldPosition='75' XMLName='UPS_Location'/>
+			<Field Name='UPS_Location_State_Province' FieldPosition='76' XMLName='UPS_Location_State_Province'/>
+			<Field Name='UPS_Location_Country' FieldPosition='77' XMLName='UPS_Location_Country'/>
+			<Field Name='Updated_Ship_To_Name' FieldPosition='78' XMLName='Updated_Ship_To_Name'/>
+			<Field Name='Updated_Ship_To_Street_Number' FieldPosition='79' XMLName='Updated_Ship_To_Street_Number'/>
+			<Field Name='Updated_Ship_To_Street_Prefix' FieldPosition='80' XMLName='Updated_Ship_To_Street_Prefix'/>
+			<Field Name='Updated_Ship_To_Street_Name' FieldPosition='81' XMLName='Updated_Ship_To_Street_Name'/>
+			<Field Name='Updated_Ship_To_Street_Type' FieldPosition='82' XMLName='Updated_Ship_To_Street_Type'/>
+			<Field Name='Updated_Ship_To_Street_Suffix' FieldPosition='83' XMLName='Updated_Ship_To_Street_Suffix'/>
+			<Field Name='Updated_Ship_To_Building_Name' FieldPosition='84' XMLName='Updated_Ship_To_Building_Name'/>
+			<Field Name='Updated_Ship_To_Room_Suite_Floor' FieldPosition='85' XMLName='Updated_Ship_To_Room_Suite_Floor'/>
+			<Field Name='Updated_Ship_To_Political_Division_3' FieldPosition='86' XMLName='Updated_Ship_To_Political_Division_3'/>
+			<Field Name='Updated_Ship_To_City' FieldPosition='87' XMLName='Updated_Ship_To_City'/>
+			<Field Name='Updated_Ship_To_State_Province' FieldPosition='88' XMLName='Updated_Ship_To_State_Province'/>
+			<Field Name='Updated_Ship_To_Country' FieldPosition='89' XMLName='Updated_Ship_To_Country'/>
+			<Field Name='Updated_Ship_To_Postal_Code' FieldPosition='90' XMLName='Updated_Ship_To_Postal_Code'/>
+			<Field Name='Exception_Status_Description' FieldPosition='91' XMLName='Exception_Status_Description'/>
+			<Field Name='Exception_Reason_Description' FieldPosition='92' XMLName='Exception_Reason_Description'/>
+			<Field Name='Exception_Resolution_Type' FieldPosition='93' XMLName='Exception_Resolution_Type'/>
+			<Field Name='Exception_Resolution_Description' FieldPosition='94' XMLName='Exception_Resolution_Description'/>
+			<Field Name='Rescheduled_Delivery_Date' FieldPosition='95' XMLName='Rescheduled_Delivery_Date'/>
+			<Field Name='Rescheduled_Delivery_Time' FieldPosition='96' XMLName='Rescheduled_Delivery_Time'/>
+			<Field Name='Driver_Release' FieldPosition='97' XMLName='Driver_Release'/>
+			<Field Name='Delivery_Location' FieldPosition='98' XMLName='Delivery_Location'/>
+			<Field Name='Delivery_Name' FieldPosition='99' XMLName='Delivery_Name'/>
+			<Field Name='Delivery_Street_Number' FieldPosition='100' XMLName='Delivery_Street_Number'/>
+			<Field Name='Delivery_Street_Prefix' FieldPosition='101' XMLName='Delivery_Street_Prefix'/>
+			<Field Name='Delivery_Street_Name' FieldPosition='102' XMLName='Delivery_Street_Name'/>
+			<Field Name='Delivery_Street_Type' FieldPosition='103' XMLName='Delivery_Street_Type'/>
+			<Field Name='Delivery_Street_Suffix' FieldPosition='104' XMLName='Delivery_Street_Suffix'/>
+			<Field Name='Delivery_Building_Name' FieldPosition='105' XMLName='Delivery_Building_Name'/>
+			<Field Name='Delivery_Room_Suite_Floor' FieldPosition='106' XMLName='Delivery_Room_Suite_Floor'/>
+			<Field Name='Delivery_Political_Division_3' FieldPosition='107' XMLName='Delivery_Political_Division_3'/>
+			<Field Name='Delivery_City' FieldPosition='108' XMLName='Delivery_City'/>
+			<Field Name='Delivery_State_Province' FieldPosition='109' XMLName='Delivery_State_Province'/>
+			<Field Name='Delivery_Country' FieldPosition='110' XMLName='Delivery_Country'/>
+			<Field Name='Delivery_Postal_Code' FieldPosition='111' XMLName='Delivery_Postal_Code'/>
+			<Field Name='Residential_Address' FieldPosition='112' XMLName='Residential_Address'/>
+			<Field Name='Signed_For_By' FieldPosition='113' XMLName='Signed_For_By'/>
+			<Field Name='COD_Collected_Currency_Type' FieldPosition='114' XMLName='COD_Collected_Currency_Type'/>
+			<Field Name='COD_Amount_Collected' FieldPosition='115' XMLName='COD_Amount_Collected'/>
+			<Field Name='COD_Amount_Decimal' FieldPosition='116' XMLName='COD_Amount_Decimal'/>
+			<Field Name='Bill_To_Account_Number' FieldPosition='117' XMLName='Bill_To_Account_Number'/>
+			<Field Name='Bill_Option' FieldPosition='118' XMLName='Bill_Option'/>
+			<Field Name='Exception_Reason_Code' FieldPosition='119' XMLName='Exception_Reason_Code'/>
+			<Field Name='Exception_Status_Code' FieldPosition='120' XMLName='Exception_Status_Code'/>
+			<Field Name='Receiving_Address_Name' FieldPosition='121' XMLName='Receiving_Address_Name'/>
+			<Field Name='Activity_Type' FieldPosition='122' XMLName='Activity_Type'/>
+			<Field Name='Location_Assured' FieldPosition='123' XMLName='Location_Assured'/>
+		</Record>
+	</RecordDefinitions>
+</FlatfileDelimitedSchema>

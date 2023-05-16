@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExtensionMetaData>
+    <ScreenExtension extnClassName="ContainerPackExtn"
+        extnPackage="extn.components.shipment.container.pack"
+        originalScreen="wsc.components.shipment.container.pack.ContainerPack"
+        originalScreenPackage="wsc.components.shipment.container.pack" type="diffrential">
+        <Subscribers>
+            <Local>
+                <Subscriber eventId="afterScreenInit" isExtn="true" sequence="51">
+                    <Handler methodName="extn_afterInitializeScreen"/>
+                </Subscriber>
+                <!--<Subscriber eventId="saveCurrentPage" isExtn="true" sequence="19">
+                    <Handler methodName="extn_containerWeightSaveBeforeFinishPack"/>
+                </Subscriber>-->
+            </Local>
+        </Subscribers>
+        <MashupRefs>
+            <Behavior>
+                <!--<MashupRef extnType="ADD"
+                    mashupId="extn_FinishPackCustomized" mashupRefId="extn_FinishPackCustomized"/>
+                <MashupRef extnType="ADD"
+                    mashupId="containerPack_changeShipmentForWeight" mashupRefId="extn_containerPack_changeShipmentForWeight_Ref"/>-->
+				<MashupRef extnType="ADD"
+                    mashupId="extn_AcademyUpdateWeightAndFinishPack" mashupRefId="extn_AcademyUpdateWeightAndFinishPack_Ref"/>
+            </Behavior>
+        </MashupRefs>
+    </ScreenExtension>
+</ExtensionMetaData>

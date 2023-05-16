@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ScreenBundle
+    screenBundleId="extn.components.shipment.summary.ShipmentSummaryExtnBundle" screenId="extn.components.shipment.summary.ShipmentSummaryExtn">
+    <BundleEntries>
+		<BundleEntry
+            bundleEntryId="extn_CancelShipmentOtherStoresSummary_Button_label"
+            bundleKey="extn_Cancel_Shipment_from_other_stores_"
+            bundleValueFn="_scSimpleBundle" property="label"
+            type="WIDGET" uId="extn_CancelShipmentOtherStoresSummary"/>
+        <BundleEntry bundleEntryId="lblExpectedShipDate_DataLabel_label"
+            bundleKey="pickupDate" bundleValueFn="_scSimpleBundle"
+            property="label" type="WIDGET" uId="lblExpectedShipDate"/>
+        <BundleEntry bundleEntryId="extn_datalabel1_DataLabel_label"
+            bundleKey="extn_Max_Pick_Date"
+            bundleValueFn="_scSimpleBundle" property="label"
+            type="WIDGET" uId="extn_datalabel1"/>
+        <BundleEntry bundleEntryId="extn_datalabel1_DataLabel_value"
+            bundleKey="blank" bundleValueFn="_scSimpleBundle"
+            property="value" type="WIDGET" uId="extn_datalabel1"/>
+        <BundleEntry bundleEntryId="extn_datalabel2_DataLabel_label"
+            bundleKey="extn_Picked_Up_Date" bundleValueFn="_scBundle"
+            property="label" type="WIDGET" uId="extn_datalabel2"/>
+        <BundleEntry bundleEntryId="extn_pickedUpBy_DataLabel_label"
+            bundleKey="extn_Picked_Up_By"
+            bundleValueFn="_scSimpleBundle" property="label"
+            type="WIDGET" uId="extn_pickedUpBy"/>
+        <!--OMNI-72013 Begin-->
+        <BundleEntry
+            bundleEntryId="extn_CompleteOnMyWaybutton_Button_label"
+            bundleKey="extn_Complete" bundleValueFn="_scSimpleBundle"
+            property="label" type="WIDGET" uId="extn_CompleteOnMyWaybutton"/>
+        <!--OMNI-72013 End-->
+    </BundleEntries>
+</ScreenBundle>

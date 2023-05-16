@@ -1,0 +1,9 @@
+<Order OrderHeaderKey="" CustomerEmailID="">
+<OrderLines>
+<OrderLine OrderLineKey="" OrderedQty=""/>
+</OrderLines>
+<PaymentMethods>
+<PaymentMethod  PaymentType="" CreditCardNo=""  DisplayCreditCardNo="" DisplaySvcNo="" SvcNo="">
+</PaymentMethod>
+</PaymentMethods>
+</Order>

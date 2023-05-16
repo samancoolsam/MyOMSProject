@@ -1,0 +1,231 @@
+<div class="sc-platform-screen-default search" role="region" aria-label="region_screenHeader">
+<!-- <div data-dojo-type="idx/layout/ContentPane" data-dojo-props="      spanLabel : true , 
+        uId : 'systemMessagePanelPopup' , 
+        renderHidden : true  
+ "></div> -->
+
+    <div data-dojo-type="idx/layout/ContentPane" data-dojo-props="		spanLabel : true , 
+		title : 'Top Content' , 
+		'class' : 'mobileCommonScreen screenHeader' , 
+		colspan : 1 , 
+		uId : 'TopContent' , 
+		layoutAlign : 'top'  
+ ">
+        <div data-dojo-type="idx/layout/ContentPane" data-dojo-props="		spanLabel : true , 
+		'class' : 'screenTitle' , 
+		uId : 'pnlScreenDescription'  
+ ">
+            <div data-dojo-type="sc/plat/dojo/widgets/Label" data-dojo-props="		spanLabel : true , 
+		uId : 'lbl_eComSearchScreenTitle'  
+ 		,scParamDataFn :
+		 function() { 
+			return { 
+			 	value : 			this.getSimpleBundleString('Title_SearcheComOrders')
+			}
+		}
+"></div>
+        </div>
+    </div>
+
+
+
+
+
+
+    <div data-dojo-type="idx/layout/ContentPane" data-dojo-props="		spanLabel : true , 
+		'class' : 'searchContent' , 
+		uId : 'pnl_SearchContents' , 
+		renderHidden : false  
+ ">
+<div data-dojo-type="idx/layout/ContentPane" data-dojo-props="      spanLabel : true , 
+		style : 'margin-left: 10px;margin-right: 10px;',
+        uId : 'systemMessagePanelPopup' , 
+        renderHidden : true  
+ "></div>
+        <div data-dojo-type="idx/form/TextBox" data-dojo-props="		'class' : 'autoLabelZeroWidth longTextbox' , 
+		uId : 'txt_SearchOrderNo'  
+ 		,scParamDataFn :
+		 function() { 
+			return { 
+			 	label : 			this.getSimpleBundleString('TextField_Order_number')
+,	            hint  :             this.getSimpleBundleString('extn_TextField_Enter_Order_No')
+,
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 path : 			'Order.OrderNo'
+,
+		 namespace : 			'SavedSearchCriteria'
+	}
+,
+		 targetBinding : 	[
+	 		{
+		 path : 			'Order.OrderNo'
+,
+		 namespace : 			'getOrderSearch_input'
+	}
+	]
+	}
+			}
+		}
+"></div>  
+
+
+
+
+
+ <div data-dojo-type="sc/plat/dojo/widgets/Label" data-dojo-props="		'class' : 'fieldLabel' , 
+		uId : 'lblCustomerDetails'  
+ 		,scParamDataFn :
+		 function() { 
+			return { 
+			 	value : 			this.getSimpleBundleString('Label_CustomerDetails')
+			}
+		}
+"></div>
+
+
+
+
+<div data-dojo-type="idx/layout/ContentPane" data-dojo-props="		spanLabel : true , 
+		'class' : 'customerDetails' , 
+		uId : 'pnl_customerDtls1'  
+ ">
+            <div data-dojo-type="idx/form/TextBox" data-dojo-props="		uId : 'txt_SearchCustLastName' , 
+		showTitle : false  
+ 		,scParamDataFn :
+		 function() { 
+			return { 
+			 	hint : 			this.getSimpleBundleString('TextField_CustLastNameHint')
+,	
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 path : 			'Order.PersonInfoBillTo.LastName'
+,
+		 namespace : 			'SavedSearchCriteria'
+	}
+,
+		 targetBinding : 	[
+	 		{
+		 path : 			'Order.PersonInfoBillTo.LastName'
+,
+		 namespace : 			'getOrderSearch_input'
+	}
+	]
+	}
+			}
+		}
+"></div>
+            <div data-dojo-type="idx/form/TextBox" data-dojo-props="		uId : 'txt_SearchCustFirstName' , 
+		showTitle : false  
+ 		,scParamDataFn :
+		 function() { 
+			return { 
+			 	hint : 			this.getSimpleBundleString('TextField_CustFirstNameHint')
+,	
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 path : 			'Order.PersonInfoBillTo.FirstName'
+,
+		 namespace : 			'SavedSearchCriteria'
+	}
+,
+		 targetBinding : 	[
+	 		{
+		 path : 			'Order.PersonInfoBillTo.FirstName'
+,
+		 namespace : 			'getOrderSearch_input'
+	}
+	]
+	}
+			}
+		}
+"></div>
+        </div>
+		
+		
+		
+		
+		
+		 <div data-dojo-type="idx/layout/ContentPane" data-dojo-props="		spanLabel : true , 
+		'class' : 'customerDetails' , 
+		uId : 'pnl_customerDtls2'  
+ ">
+            <div data-dojo-type="idx/form/TextBox" data-dojo-props="		uId : 'txt_SearchCustEmail' , 
+		showTitle : false  
+ 		,scParamDataFn :
+		 function() { 
+			return { 
+			 	hint : 			this.getSimpleBundleString('TextField_CustEmailHint')
+,	
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 path : 			'Order.PersonInfoBillTo.EMailID'
+,
+		 namespace : 			'SavedSearchCriteria'
+	}
+,
+		 targetBinding : 	[
+	 		{
+		 path : 			'Order.PersonInfoBillTo.EMailID'
+,
+		 queryType : 			'FLIKE'
+,
+		 namespace : 			'getOrderSearch_input'
+	}
+	]
+	}
+			}
+		}
+"></div>
+            <div data-dojo-type="idx/form/TextBox" data-dojo-props="		uId : 'txt_SearchCustPhoneNo' , 
+		showTitle : false  
+ 		,scParamDataFn :
+		 function() { 
+			return { 
+			 	hint : 			this.getSimpleBundleString('TextField_CustPhoneNoHint')
+,	
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 path : 			'Order.PersonInfoBillTo.DayPhone'
+,
+		 namespace : 			'SavedSearchCriteria'
+	}
+,
+		 targetBinding : 	[
+	 		{
+		 path : 			'Order.PersonInfoBillTo.DayPhone'
+,
+		 namespace : 			'getOrderSearch_input'
+	}
+	]
+	}
+			}
+		}
+"></div>
+        </div>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+        
+        <div data-dojo-type="dijit/form/Button" data-dojo-props="		'class' : 'idxSpecialButton longButtons' , 
+		uId : 'btnSearchOrders'  
+ 		,scParamDataFn :
+		 function() { 
+			return { 
+			 	label : 			this.getSimpleBundleString('Action_SearchOrders')
+			}
+		}
+"></div>
+
+
+
+    </div>
+</div>

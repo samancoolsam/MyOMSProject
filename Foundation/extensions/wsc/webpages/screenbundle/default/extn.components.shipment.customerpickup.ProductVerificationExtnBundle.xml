@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ScreenBundle
+    screenBundleId="extn.components.shipment.customerpickup.ProductVerificationExtnBundle" screenId="extn.components.shipment.customerpickup.ProductVerificationExtn">
+    <BundleEntries>
+	<!--//Combining Customer Pickup screen OMNI-8660 -Start -->    
+        <BundleEntry
+	        bundleEntryId="extn_cmbCustVerfMethod_FilteringSelect_label"
+            bundleKey="Label_Customer_Verification_Method"
+            bundleValueFn="_scSimpleBundle" property="label"
+            type="WIDGET" uId="extn_cmbCustVerfMethod"/>
+        <BundleEntry
+            bundleEntryId="extn_filteringselect_FilteringSelect_label"
+            bundleKey="extn_Picked_Up_By"
+            bundleValueFn="_scSimpleBundle" property="label"
+            type="WIDGET" uId="extn_filteringselect"/>
+        <BundleEntry
+            bundleEntryId="extn_resetCurbsideOrder_ContentPane_title"
+            bundleKey="extn_Reset_Curbside_Order"
+            bundleValueFn="_scSimpleBundle" property="title"
+            type="WIDGET" uId="extn_resetCurbsideOrder"/>
+        <BundleEntry bundleEntryId="extn_FinishPickuButton_Button_label"
+            bundleKey="extn_Click_here_to_Complete_Order"
+            bundleValueFn="_scSimpleBundle" property="label"
+            type="WIDGET" uId="extn_FinishPickuButton"/>
+        <BundleEntry
+            bundleEntryId="extn_FinishPickupButton_Button_label"
+            bundleKey="extn_CLICK_HERE_TO_br_COMPLETE_ORDER"
+            bundleValueFn="_scSimpleBundle" property="label"
+            type="WIDGET" uId="extn_FinishPickupButton"/>
+        <BundleEntry
+            bundleEntryId="extn_resetCurbsideOrder1_Button_label"
+            bundleKey="extn_RESET_CURBSIDE_ORDER"
+            bundleValueFn="_scSimpleBundle" property="label"
+            type="WIDGET" uId="extn_resetCurbsideOrder1"/>
+        <BundleEntry bundleEntryId="extn_FinishPick_button_Button_label"
+            bundleKey="extn_Click_here_to_Complete_Order"
+            bundleValueFn="_scSimpleBundle" property="label"
+            type="WIDGET" uId="extn_FinishPick_button"/>
+        <BundleEntry bundleEntryId="extn_Close_button_Button_label"
+            bundleKey="Action_Close" bundleValueFn="_scSimpleBundle"
+            property="label" type="WIDGET" uId="extn_Close_button"/>
+        <BundleEntry bundleEntryId="extn_Previous_button_Button_label"
+            bundleKey="b_Previous" bundleValueFn="_scSimpleBundle"
+            property="label" type="WIDGET" uId="extn_Previous_button"/>
+        <BundleEntry
+            bundleEntryId="extn_FinishPick_button2new_Button_label"
+            bundleKey="extn_Click_here_to_Complete_Order"
+            bundleValueFn="_scSimpleBundle" property="label"
+            type="WIDGET" uId="extn_FinishPick_button2new"/>
+        <BundleEntry bundleEntryId="extn_Close_button2new_Button_label"
+            bundleKey="Action_Close" bundleValueFn="_scSimpleBundle"
+            property="label" type="WIDGET" uId="extn_Close_button2new"/>
+        <BundleEntry
+            bundleEntryId="extn_Previous_button2new_Button_label"
+            bundleKey="b_Previous" bundleValueFn="_scSimpleBundle"
+            property="label" type="WIDGET" uId="extn_Previous_button2new"/>
+        <BundleEntry
+            bundleEntryId="extn_customer_piickup_button_Button_label"
+            bundleKey="extn_Start_Paper_Work"
+            bundleValueFn="_scSimpleBundle" property="label"
+            type="WIDGET" uId="extn_customer_piickup_button"/>
+        <BundleEntry
+            bundleEntryId="extn_FinishPickUpButton1_Button_label"
+            bundleKey="extn_CLICK_HERE_TO_br_COMPLETE_ORDER"
+            bundleValueFn="_scSimpleBundle" property="label"
+            type="WIDGET" uId="extn_FinishPickUpButton1"/>
+        <BundleEntry
+            bundleEntryId="extn_resetCurbsideButton_Button_label"
+            bundleKey="extn_RESET_CURBSIDE_ORDER"
+            bundleValueFn="_scSimpleBundle" property="label"
+            type="WIDGET" uId="extn_resetCurbsideButton"/>
+        <BundleEntry
+            bundleEntryId="extn_FinishPickupButton1_Button_label"
+            bundleKey="extn_Click_here_to_Complete_Order"
+            bundleValueFn="_scSimpleBundle" property="label"
+            type="WIDGET" uId="extn_FinishPickupButton1"/>
+        <BundleEntry bundleEntryId="extn_imgPhoneNo_Image_ImageAlt"
+            bundleKey="Tooltip_PhoneNo" bundleValueFn="_scSimpleBundle"
+            property="ImageAlt" type="WIDGET" uId="extn_imgPhoneNo"/>
+        <BundleEntry bundleEntryId="extn_imgPhoneNo_Image_title"
+            bundleKey="Tooltip_PhoneNo" bundleValueFn="_scSimpleBundle"
+            property="title" type="WIDGET" uId="extn_imgPhoneNo"/>
+        <BundleEntry bundleEntryId="extn_imgEmailLabel_Image_ImageAlt"
+            bundleKey="Tooltip_Email" bundleValueFn="_scSimpleBundle"
+            property="ImageAlt" type="WIDGET" uId="extn_imgEmailLabel"/>
+        <BundleEntry bundleEntryId="extn_imgEmailLabel_Image_title"
+            bundleKey="Tooltip_Email" bundleValueFn="_scSimpleBundle"
+            property="title" type="WIDGET" uId="extn_imgEmailLabel"/>
+	<!-- OMNI-8710, 8717: UI Align and Payment Info - Start -->
+        <BundleEntry
+            bundleEntryId="extn_lblCustomerInfo_DataLabel_label"
+            bundleKey="Title_CustomerFields"
+            bundleValueFn="_scSimpleBundle" property="label"
+            type="WIDGET" uId="extn_lblCustomerInfo"/>
+	<!-- OMNI-8710, 8717: UI Align and Payment Info - End -->
+        <BundleEntry bundleEntryId="extn_lblOrderNo_DataLabel_label"
+            bundleKey="Label_OrderNo" bundleValueFn="_scSimpleBundle"
+            property="label" type="WIDGET" uId="extn_lblOrderNo"/>
+        <BundleEntry bundleEntryId="extn_lblName_DataLabel_label"
+            bundleKey="Label_Customername"
+            bundleValueFn="_scSimpleBundle" property="label"
+            type="WIDGET" uId="extn_lblName"/>
+        <BundleEntry bundleEntryId="extn_lblDayPhone_DataLabel_label"
+            bundleKey="Label_Phone_number"
+            bundleValueFn="_scSimpleBundle" property="label"
+            type="WIDGET" uId="extn_lblDayPhone"/>
+	<!-- OMNI-8710, 8717: UI Align and Payment Info - Start -->
+        <BundleEntry bundleEntryId="extn_VehicleMake_DataLabel_label"
+            bundleKey="extn_Vehicle_Make"
+            bundleValueFn="_scSimpleBundle" property="label"
+            type="WIDGET" uId="extn_VehicleMake"/>
+        <BundleEntry bundleEntryId="extn_VehicleColor_DataLabel_label"
+            bundleKey="extn_Vehicle_Color"
+            bundleValueFn="_scSimpleBundle" property="label"
+            type="WIDGET" uId="extn_VehicleColor"/>
+        <BundleEntry bundleEntryId="extn_ParkingSpot_DataLabel_label"
+            bundleKey="extn_Parking_Spot"
+            bundleValueFn="_scSimpleBundle" property="label"
+            type="WIDGET" uId="extn_ParkingSpot"/>
+        <BundleEntry bundleEntryId="extn_PaymentInfo_DataLabel_label"
+            bundleKey="extn_Visa_ending_in"
+            bundleValueFn="_scSimpleBundle" property="label"
+            type="WIDGET" uId="extn_PaymentInfo"/>
+        <BundleEntry bundleEntryId="extn_GiftCard_DataLabel_label"
+            bundleKey="extn_GiftCard_ending_in"
+            bundleValueFn="_scSimpleBundle" property="label"
+            type="WIDGET" uId="extn_GiftCard"/>
+        <BundleEntry bundleEntryId="extn_PaymentMethod_DataLabel_label"
+            bundleKey="Payment_Method" bundleValueFn="_scSimpleBundle"
+            property="label" type="WIDGET" uId="extn_PaymentMethod"/>
+        <BundleEntry bundleEntryId="extn_PLCC_DataLabel_label"
+            bundleKey="extn_Academy_CreditCard_ending_in"
+            bundleValueFn="_scSimpleBundle" property="label"
+            type="WIDGET" uId="extn_PLCC"/>
+	<BundleEntry bundleEntryId="extn_Visa_DataLabel_label"
+            bundleKey="extn_Visa_ending_in"
+            bundleValueFn="_scSimpleBundle" property="label"
+            type="WIDGET" uId="extn_Visa"/>
+        <BundleEntry
+            bundleEntryId="extn_AmericanExpress_DataLabel_label"
+            bundleKey="extn_American_Express_ending_in"
+            bundleValueFn="_scSimpleBundle" property="label"
+            type="WIDGET" uId="extn_AmericanExpress"/>
+        <BundleEntry bundleEntryId="extn_Discover_DataLabel_label"
+            bundleKey="extn_Discover_ending_in"
+            bundleValueFn="_scSimpleBundle" property="label"
+            type="WIDGET" uId="extn_Discover"/>
+        <BundleEntry bundleEntryId="extn_MasterCard_DataLabel_label"
+            bundleKey="extn_MasterCard_ending_in"
+            bundleValueFn="_scSimpleBundle" property="label"
+            type="WIDGET" uId="extn_MasterCard"/>
+	<!-- OMNI-8710, 8717: UI Align and Payment Info - End -->
+        <BundleEntry bundleEntryId="extn_Curbsidelbl_DataLabel_label"
+            bundleKey="extn_Curbbside_Make_Color"
+            bundleValueFn="_scSimpleBundle" property="label"
+            type="WIDGET" uId="extn_Curbsidelbl"/>
+        <BundleEntry bundleEntryId="extn_lblShipmentNo_DataLabel_label"
+            bundleKey="extn_Shipment_number"
+            bundleValueFn="_scSimpleBundle" property="label"
+            type="WIDGET" uId="extn_lblShipmentNo"/>
+        <BundleEntry bundleEntryId="extn_datalabel3_DataLabel_label"
+            bundleKey="extn_Max_Pick_Date"
+            bundleValueFn="_scSimpleBundle" property="label"
+            type="WIDGET" uId="extn_datalabel3"/>
+        <BundleEntry
+            bundleEntryId="extn_lblAssignedToUsr_DataLabel_label"
+            bundleKey="Label_Picker_ID" bundleValueFn="_scSimpleBundle"
+            property="label" type="WIDGET" uId="extn_lblAssignedToUsr"/>
+        <!-- OMNI-71887 Start-->
+       <BundleEntry bundleEntryId="extn_VehicleType_DataLabel_label"
+            bundleKey="extn_Vehicle_Type"
+            bundleValueFn="_scSimpleBundle" property="label"
+            type="WIDGET" uId="extn_VehicleType"/>
+        <BundleEntry bundleEntryId="extn_UploadPlace_DataLabel_label"
+            bundleKey="extn_Customer_Preference"
+            bundleValueFn="_scSimpleBundle" property="label"
+            type="WIDGET" uId="extn_UploadPlace"/>
+        <!-- OMNI-71887 End-->
+        <BundleEntry
+            bundleEntryId="extn_FinishPickMobile_link_Link_value"
+            bundleKey="Label_Finish_Pickup"
+            bundleValueFn="_scSimpleBundle" property="value"
+            type="WIDGET" uId="extn_FinishPickMobile_link"/>
+        <BundleEntry bundleEntryId="extn_lnkEmail_Link_ImageAlt"
+            bundleKey="Tooltip_Email" bundleValueFn="_scSimpleBundle"
+            property="ImageAlt" type="WIDGET" uId="extn_lnkEmail"/>
+        <BundleEntry bundleEntryId="extn_lnkEmail_Link_title"
+            bundleKey="Tooltip_Email" bundleValueFn="_scSimpleBundle"
+            property="title" type="WIDGET" uId="extn_lnkEmail"/>
+	    <!-- //Combining Customer Pickup screen OMNI-8660 -END -->
+		<!--OMNI-72389 Curbside customer pick up screen UI – Notification of related orders  START-->
+		 <BundleEntry
+            bundleEntryId="extn_lblRelatedOrders_DataLabel_label"
+            bundleKey="extn_Related_Orders"
+            bundleValueFn="_scSimpleBundle" property="label"
+            type="WIDGET" uId="extn_lblRelatedOrders"/>
+		<!--OMNI-72389 Curbside customer pick up screen UI – Notification of related orders  END-->
+		
+		<!-- OMNI-83819, OMNI-85035 Curbside Consolidation - Start-->
+		<BundleEntry bundleEntryId="extn_lblAlternatePickupDetails_DataLabel_label"
+            bundleKey="extn_AlternatePickupDetails"
+            bundleValueFn="_scSimpleBundle" property="label"
+            type="WIDGET" uId="extn_AlternatePickupDetails"/>
+		<BundleEntry bundleEntryId="extn_APP_Name_DataLabel_label"
+            bundleKey="extn_APP_Name"
+            bundleValueFn="_scSimpleBundle" property="label"
+            type="WIDGET" uId="extn_APP_Name"/>
+		<BundleEntry bundleEntryId="extn_APP_Email_DataLabel_label"
+            bundleKey="extn_APP_Email"
+            bundleValueFn="_scSimpleBundle" property="label"
+            type="WIDGET" uId="extn_APP_Email"/>
+		<BundleEntry bundleEntryId="extn_lblTotal_ShipLines_DataLabel_label"
+            bundleKey="extn_Total_ShipLines"
+            bundleValueFn="_scSimpleBundle" property="label"
+            type="WIDGET" uId="extn_Total_ShipLines"/>
+		<!-- OMNI-83819, OMNI-85035 Curbside Consolidation - End-->
+		
+	</BundleEntries>
+</ScreenBundle>

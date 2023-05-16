@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DBSchema>
+    <Entities>
+        <Entity ApiNeeded="Y" AuditRequired="N" 
+            Description="This table stores the Vendor Invoice Details From VendorNet"
+            Prefix="EXTN_"
+            TableName="EXTN_VENDOR_INVOICE" XMLName="ExtnVendorInvoice">
+            <Attributes>
+			
+		<Attribute ColumnName="VENDOR_INVOICE_KEY"
+                    DataType="Key" DefaultValue="' '"
+                    Description="The primary key of the EXTN_VENDOR_INVOICE table."
+                    Name="Vendor_Invoice_Key" Nullable="false" XMLName="VendorInvoiceKey"/>
+					
+		<Attribute ColumnName="ORDER_NO"
+                    DataType="DocumentNo" DefaultValue="' '"
+                    Description="The unique identifier for the Order."
+                    Name="Order_NO" Nullable="false" XMLName="OrderNO"/>
+				
+        <Attribute ColumnName="PURCHASE_ORDER_NO"
+                    DataType="DocumentNo" DefaultValue="' '"
+                    Description="The Unique Identifier of the Purchase Order"
+                    Name="Purchase_Order_NO" Nullable="false" XMLName="PurchaseOrderNO"/>
+					
+		<Attribute ColumnName="IS_PUBLISHED"
+                    DataType="Flag" DefaultValue="N"
+                    Description="To identify IP PO got created or not"
+                    Name="Is_published" Nullable="false" XMLName="Ispublished"/>
+
+		<Attribute ColumnName="INVOICE_NO"
+                    DataType="InvoiceNo" DefaultValue="' '"
+                    Description="The unique identifier for the vendor."
+                    Name="Invoice_NO" Nullable="false" XMLName="InvoiceNO"/>
+
+		<Attribute ColumnName="ACCOUNT_ID"
+                    DataType="AccountNo" DefaultValue="' '"
+                    Description="The Account ID"
+                    Name="Account_ID" Nullable="true" XMLName="AccountID"/>
+
+		<Attribute ColumnName="PURCHASE_ORDER_Terms"
+                    DataType="Key" DefaultValue="' '"
+                    Description="The PO Terms"
+                    Name="Purchase_Order_Terms" Nullable="true" XMLName="PurchaseOrderTerms"/>
+
+		<Attribute ColumnName="INVOICE_DATE"
+                    DataType="Date" DefaultValue="sysdate"
+                    Description="The Date of the Creted Invoice"
+                    Name="Invoice_Date" Nullable="false" XMLName="InvoiceDate"/>
+
+		<Attribute ColumnName="SHIP_TO_KEY"
+                    DataType="Key" DefaultValue="' '"
+                    Description="The Customer Address key to which address the product has to be shipped"
+                    Name="Ship_To_Key" Nullable="true" XMLName="ShipToKey"/>
+
+		<Attribute ColumnName="INVOICE_TOTAL"
+                    DataType="Money" DefaultValue="0"
+                    Description="The Invoice Total Amount"
+                    Name="Invoice_Total" Nullable="true" XMLName="InvoiceTotal"/>
+
+		<Attribute ColumnName="FREIGHT_CHARGES"
+                    DataType="Money" DefaultValue="0"
+                    Description="The freight charges "
+                    Name="Freight_Charges" Nullable="true" XMLName="FreightCharges"/>
+					
+		<Attribute ColumnName="HANDLING_FEE"
+                    DataType="Money" DefaultValue="0"
+                    Description="The Handling fee "
+                    Name="Handling_Fee" Nullable="true" XMLName="HandlingFee"/>
+
+		<Attribute ColumnName="TAX_AMOUNT"
+                    DataType="Money" DefaultValue="0"
+                    Description="The Tax Amount "
+                    Name="Tax_Amount" Nullable="true" XMLName="TaxAmount"/>
+
+		<Attribute ColumnName="DUTY_AMOUNT"
+                    DataType="Money" DefaultValue="0"
+                    Description="The Duty Amount "
+                    Name="Duty_Amount" Nullable="true" XMLName="DutyAmount"/>
+
+		<Attribute ColumnName="VENDOR_NO"
+                    DataType="Key" DefaultValue="' '"
+                    Description="The unique Identifier for the Vendor"
+                    Name="Vendor_NO" Nullable="false" XMLName="VendorNO"/>
+					
+		<Attribute ColumnName="COMPANY"
+                    DataType="Address" DefaultValue="' '"
+                    Description="The Name of the Company"
+                    Name="Company" Nullable="true" XMLName="Company"/>
+					
+		<Attribute ColumnName="AP_VENDOR"
+                    DataType="Address" DefaultValue="0"
+                    Description="The AP Vendor "
+                    Name="AP_Vendor" Nullable="true" XMLName="APVendor"/>
+					
+		<Attribute ColumnName="DEPARTMENT"
+                    DataType="Address" DefaultValue="' '"
+                    Description="The Department"
+                    Name="Department" Nullable="true" XMLName="Department"/>
+					
+		<Attribute ColumnName="DIVISION"
+                    DataType="Division" DefaultValue="' '"
+                    Description="The Division"
+                    Name="Division" Nullable="true" XMLName="Division"/>
+		    
+		    <Attribute ColumnName="AVAILABLE_DATE"
+                    DataType="TimeStamp" DefaultValue="sysdate"
+                    Description="The Date of the vendor Invoice"
+                    Name="Available_Date" Nullable="false" XMLName="AvailableDate"/>
+		    
+		    <Attribute ColumnName="COUNTER"
+                    DataType="Integer" DefaultValue="0"
+                    Description="Counter"
+                    Name="Counter" Nullable="false" XMLName="Counter"/>
+			<!-- Start Changes for DSA-9-->		
+			<Attribute ColumnName="VENDOR_SHIPMENT_NO"
+                    DataType="Key" DefaultValue="' '" Type="VARCHAR2"
+                    Description="Vendor Shipment No of Exnt_Vendor_Invoice"
+                    Name="Vendor_Shipment_No" Nullable="false" XMLName="VendorShipmentNo"/>
+			<!-- End Changes for DSA-9-->		
+					
+			
+		<Attribute ColumnName="CREATETS" DataType="TimeStamp"
+					DefaultValue="SYSDATE" Description="Create TimeStamp" />
+				<Attribute ColumnName="MODIFYTS" DataType="TimeStamp"
+					DefaultValue=" SYSDATE" Description="Modify TimeStamp" />
+				<Attribute ColumnName="CREATEUSERID" DataType="UserId"
+					DefaultValue="' '" Description="Creating User ID" />
+				<Attribute ColumnName="MODIFYUSERID" DataType="UserId"
+					DefaultValue="' '" Description="Modifying User ID" />
+				<Attribute ColumnName="CREATEPROGID"
+					DataType="ProgramID" DefaultValue="' '"
+					Description="Creating Program ID" />
+				<Attribute ColumnName="MODIFYPROGID"
+					DataType="ProgramID" DefaultValue="' '"
+					Description="Modifying Program ID" />
+				<Attribute ColumnName="LOCKID" DataType="Lockid"
+					DefaultValue="0" Description="Lock ID" />
+            </Attributes>  
+	    <PrimaryKey Name="VENDOR_INV_KEY_PK">
+                <Attribute ColumnName="VENDOR_INVOICE_KEY" />
+            </PrimaryKey>
+	    <Indices> 
+                   <Index Name="VENDOR_INVOICE_I1" Unique="False"> 
+                      <Column Name="AVAILABLE_DATE" />
+                      <Column Name="IS_PUBLISHED" />
+                   </Index>
+                </Indices>
+		</Entity>
+	</Entities>
+</DBSchema>

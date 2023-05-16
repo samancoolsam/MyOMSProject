@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Controller className="com.sterlingcommerce.ui.web.platform.controller.SCUIXAPIMashupController"
+ controllerId="extn.mobile.home.AuditStagedShipment.PopUp.AbortPopUp.AbortPopUpBehaviorController" 
+ requestMethodSupported="POST" screenId="extn.mobile.home.AuditStagedShipment.PopUp.AbortPopUp.AbortPopUp">
+<MashupRefs>
+	<MashupRef mashupId="startBatchScanProcess_AuditShipmentHomeScreen"
+            mashupRefId="startBatchScanProcess" permissionId=""/>
+</MashupRefs>
+</Controller>

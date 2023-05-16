@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Shipments >   
+<Shipment ActualFreightCharge="" BuyerOrganizationCode=""
+    CarrierServiceCode="" CarrierType="" CommercialValue="" Currency=""
+    DeliveryMethod="" DeliveryTS="" DestinationZone=""
+    DocumentType="" DownLoadCount="" ExpectedDeliveryDate=""
+    EnterpriseCode="" ExecutionStatus="" ExpectedShipmentDate=""
+    FreightTerms="" FromAppointment="" HasNodeExceptions=""
+    HasOtherShipments="" HazardousMaterialFlag="" HoldFlag=""
+    ITDate="" IsDomesticShipment="" IsPackProcessComplete=""
+    IsProductPlacingComplete="" NumOfCartons=""
+    NumOfPallets="" OrderAvailableOnSystem="" OriginZone=""
+    PackAndHold="" PlacedQuantity="" RoutingSource="" SCAC=""
+    ScacAndService="" ScacIntegrationRequired=""
+    SellerOrganizationCode="" ShipMode=""
+    ShipNode="" ShipmentClosedFlag="" RequestedDeliveryDate=""
+    ShipmentConfirmUpdatesDone="" ShipmentContainerizedFlag=""
+    ShipmentDeliverUpdatesDone="" RequestedShipmentDate=""
+    ShipmentNo="" ShipmentPlannedFlag=""
+    ShipmentSortLocationId="" ShipmentType="" 
+    ToAppointment=""
+    TotalActualCharge="" TotalEstimatedCharge=""
+    TotalVolume="" TotalVolumeUOM="" TotalWeight=""
+    TotalWeightUOM="" WaveNo="">
+	<Extn/>
+	<AdditionalDates>
+		<AdditionalDate AdditionalDateKey="" DateTypeId="" RequestedDate="" ExpectedDate="" />
+	</AdditionalDates>
+    <Instructions TotalNumberOfRecords=""/>
+    <ToAddress AddressLine1="" AddressLine2=""
+        AddressLine3="" AddressLine4="" AddressLine5="" AddressLine6=""
+        AlternateEmailID="" Beeper="" City="" Company=""
+        Country="" DayFaxNo="" DayPhone="" Department=""
+        EMailID="" ErrorTxt="" EveningFaxNo=""
+        EveningPhone="" FirstName="" HttpUrl="" IsCommercialAddress="" JobTitle=""
+        LastName="" MiddleName="" MobilePhone="" OtherPhone=""
+        PersonID="" PreferredShipAddress="" State="" Suffix=""
+        Title="" UseCount="" VerificationStatus="" ZipCode="">
+		<Extn/>
+		</ToAddress>
+    <BillToAddress AddressLine1="" AddressLine2=""
+        AddressLine3="" AddressLine4="" AddressLine5="" AddressLine6=""
+        AlternateEmailID="" Beeper="" City="" Company=""
+        Country="" DayFaxNo="" DayPhone="" Department=""
+        EMailID="" ErrorTxt="" EveningFaxNo=""
+        EveningPhone="" FirstName="" HttpUrl="" JobTitle=""
+        LastName="" MiddleName="" MobilePhone="" OtherPhone=""
+        PersonID="" PreferredShipAddress="" State=""
+        Suffix="" Title="" UseCount=""
+        VerificationStatus="" ZipCode=""/>
+    <FromAddress AddressLine1="" AddressLine2=""
+        AddressLine3="" AddressLine4="" AddressLine5="" AddressLine6=""
+        AlternateEmailID="" Beeper="" City="" Company=""
+        Country="" DayFaxNo="" DayPhone="" Department="" EMailID=""
+        ErrorTxt="" EveningFaxNo="" EveningPhone=""
+        FirstName="" HttpUrl="" JobTitle=""
+        LastName="" MiddleName="" MobilePhone="" OtherPhone="" PersonID="" PreferredShipAddress=""
+        State="" Suffix="" Title="" UseCount="" VerificationStatus=""
+        ZipCode="" isHistory=""/>
+    <LoadShipments TotalNumberOfRecords=""/>
+    <Containers TotalNumberOfRecords=""/>
+	<OrderInvoiceList TotalNumberOfRecords="">
+        <OrderInvoice AmountCollected="" Currency=""
+            DateInvoiced="" InvoiceNo="" 
+            InvoiceType="" LineSubTotal=""
+            MasterInvoiceNo="" OrderNo="" 
+             TotalAmount="" TotalTax="" OrderInvoiceKey="">
+			<LineDetails TotalNumberOfRecords="">
+                <LineDetail Charges="" ExtendedPrice=""
+                    ItemID="" LineTotal=""
+                    OrderInvoiceDetailKey=""
+                    PrimeLineNo="" ProductClass=""
+                    ShippedQty="" SubLineNo="" Tax=""
+                    UnitOfMeasure="" UnitPrice="">
+                    <LineChargeList TotalNumberOfRecords="">
+                        <LineCharge ChargeAmount=""
+                            ChargeCategory=""
+                            ChargeName=""
+                            ChargePerLine="" ChargePerUnit=""
+                            InvoicedChargePerLine=""
+                            InvoicedExtendedCharge="" IsBillable=""
+                            IsDiscount=""
+                            LineKey=""
+                            RecordType="" Reference=""/>
+                    </LineChargeList>
+					<LineTaxList TotalNumberOfRecords="">
+                            <LineTax ChargeCategory="" ChargeName=""
+                            InvoicedTax="" Reference_1="" Reference_2=""
+                            Reference_3="" RemainingTax="" Tax=""
+                            TaxName="" TaxPercentage=""/>
+                        </LineTaxList>
+				</LineDetail>
+            </LineDetails>
+		</OrderInvoice>
+    </OrderInvoiceList>
+    <ShipmentLines TotalNumberOfRecords="">
+        <ShipmentLine Action="" CountryOfOrigin=""
+            CustomerPoLineNo="" CustomerPoNo=""
+            DepartmentCode="" FifoNo="" IsPickable=""
+            ItemDesc="" OrderNo=""
+            ItemID="" KitCode="" KitQty="" NetWeight="" NetWeightUom=""
+            OriginalQuantity="" OverShipQuantity=""
+            PrimeLineNo="" ProductClass="" Quantity=""
+            RequestedSerialNo=""
+            ReturnShippingLabelLevel="" Segment="" SegmentType="" 
+			ShipmentLineKey="" ShipmentLineNo=""
+            ShipmentSubLineNo="" ShortageQty="" SubLineNo=""
+            UnitOfMeasure="" WaveNo="" isHistory="">
+          <!-- <Instructions TotalNumberOfRecords="" /> -->
+            <Order OrderDate="">
+				<OverallTotals />
+				<PaymentMethods>
+				<PaymentMethod />
+				</PaymentMethods>
+			</Order >
+            <OrderLine >
+                <ItemDetails CanUseAsServiceTool="" GlobalItemID="" IsItemSuperseded="" ItemGroupCode="" ItemID="" OrganizationCode="" SubCatalogOrganizationCode="" UnitOfMeasure=""> <PrimaryInformation />   
+                </ItemDetails>
+                <Item AlternateItemID="" BundleFulfillmentMode="" CostCurrency="" CountryOfOrigin="" CreditWOReceipt="" CustomerItem="" CustomerItemDesc="" ECCNNo="" HarmonizedCode="" ISBN="" IsReturnable="" ItemDesc="" ItemID="" ItemShortDesc="" ItemWeight="" ItemWeightUOM="" ManufacturerItem="" ManufacturerItemDesc="" ManufacturerName="" NMFCClass="" NMFCCode="" NMFCDescription="" ProductClass="" ProductLine="" ReturnWindow="" ScheduleBCode="" SupplierItem="" SupplierItemDesc="" TaxProductCode="" UPCCode="" UnitCost="" UnitOfMeasure=""> 
+                </Item>
+                <!--Optional-->
+                <LinePriceInfo ActualPricingQty="" BundleTotal="" DiscountPercentage="" InvoicedLineTotal="" InvoicedPricingQty="" IsLinePriceForInformationOnly="" IsPriceLocked="" LineTotal="" ListPrice="" OrderedPricingQty="" PricingQtyConversionFactor="" PricingUOM="" RepricingQty="" RetailPrice="" SettledAmount="" SettledQuantity="" TaxExemptionCertificate="" TaxableFlag="" UnitPrice=""/>
+                <ComputedPrice Charges="" Discount="" ExtendedPrice="" LineTotal="" LineTotalWithoutTax="" Tax="" UnitPrice=""/>
+                <PersonInfoShipTo AddressID="" AddressLine1="" AddressLine2="" AddressLine3="" AddressLine4="" AddressLine5="" AddressLine6="" AlternateEmailID="" Beeper="" City="" Company="" Country="" DayFaxNo="" DayPhone="" Department="" EMailID="" EveningFaxNo="" EveningPhone="" FirstName="" IsAddressVerified="" IsCommercialAddress="" JobTitle="" LastName="" Latitude="" Longitude="" MiddleName="" MobilePhone="" OtherPhone="" PersonID="" State="" Suffix="" TaxGeoCode="" Title="" ZipCode=""/>
+                <!--Optional-->
+                <PersonInfoMarkFor AddressID="" AddressLine1="" AddressLine2="" AddressLine3="" AddressLine4="" AddressLine5="" AddressLine6="" AlternateEmailID="" Beeper="" City="" Company="" Country="" DayFaxNo="" DayPhone="" Department="" EMailID="" EveningFaxNo="" EveningPhone="" FirstName="" IsAddressVerified="" IsCommercialAddress="" JobTitle="" LastName="" Latitude="" Longitude="" MiddleName="" MobilePhone="" OtherPhone="" PersonID="" State="" Suffix="" TaxGeoCode="" Title="" ZipCode=""/>
+                <Instructions NumberOfInstructions=""> <!-- NumberOfInstructions is not a template driven attribute. --> <Instruction InstructionText="" InstructionType=""     InstructionURL="" SequenceNo=""/>
+                </Instructions>
+                <References> <Reference Name="" Value=""/>
+                </References>
+                <Notes NumberOfNotes=""> <Note AuditTransactionId="" ContactReference=""     ContactTime="" ContactType="" ContactUser=""     CustomerSatIndicator="" NoteText="" Priority=""     ReasonCode="" SequenceNo="" Tranid=""     Tranname="" VisibleToAll="">     <User Username="" Usertype=""/> </Note>
+                </Notes>
+                <LineOverallTotals Charges="" Discount="" ExtendedPrice="" LineTotal="" LineTotalWithoutTax="" ManualDiscountPercentage="" OptionPrice="" PercentProfitMargin="" PricingQty="" ShippingBaseCharge="" ShippingCharges="" ShippingDiscount="" ShippingTotal="" Tax="" UnitPrice=""/>
+                <!-- LineOverallTotals is a template-driven element but its attributes are not. The element can be removed from the template, and prevented from appearing in the output. But if the attributes are removed from the template, they will still be present in the output xml. -->
+                <LineInvoicedTotals Charges="" Discount="" ExtendedPrice="" LineTotal="" OptionPrice="" PricingQty="" Tax="" UnitPrice=""/>
+                <!-- LineInvoicedTotals is a template-driven element but its attributes are not. The element can be removed from the template, and prevented from appearing in the output. But if the attributes are removed from the template, they will still be present in the output xml. -->
+                <LineRemainingTotals Charges="" Discount="" ExtendedPrice="" LineTotal="" OptionPrice="" PricingQty="" Tax="" UnitPrice=""/>
+                <!-- LineRemainingTotals is a template-driven element but its attributes are not. The element can be removed from the template, and prevented from appearing in the output. But if the attributes are removed from the template, they will still be present in the output xml. -->
+                <LineOverallTotalsInEnterpriseCurrency Charges="" Discount="" ExtendedPrice="" LineTotal="" OptionPrice="" PricingQty="" Tax="" UnitPrice=""/>
+                <!-- LineOverallTotalsInEnterpriseCurrency is a template-driven element but its attributes are not. The element can be removed from the template, and prevented from appearing in the output. But if only the attributes are removed from the template, they will still be present in the output xml. -->
+                <LineRemainingTotalsInEnterpriseCurrency Charges="" Discount="" ExtendedPrice="" LineTotal="" OptionPrice="" PricingQty="" Tax="" UnitPrice=""/>
+                <!-- LineRemainingTotalsInEnterpriseCurrency is a template-driven element but its attributes are not. The element can be removed from the template, and prevented from appearing in the output. But if only the attributes are removed from the template, they will still be present in the output xml. -->
+                <LineCharges> <LineCharge ChargeAmount="" ChargeCategory=""     ChargeName="" ChargePerLine=""     ChargePerUnit="" InvoicedChargeAmount=""     InvoicedChargePerLine=""     InvoicedChargePerUnit="" IsBillable=""     IsDiscount="" IsManual="" IsShippingCharge=""     Reference="" RemainingChargeAmount=""     RemainingChargePerLine="" RemainingChargePerUnit=""/>
+                </LineCharges>
+                <!-- LineCharge is not a template driven element. If the template contains either of LineCharge or LineTax elements, both will appear in the output, alongwith all their attributes. -->
+                <LineTaxes> <LineTax ChargeCategory="" ChargeName="" InvoicedTax="" Reference_1=""     Reference_2="" Reference_3="" RemainingTax=""     Tax="" TaxName="" TaxPercentage=""/> <TaxSummary>     <TaxSummaryDetail InvoicedTax="" OverallTax=""         RemainingTax="" TaxName=""/> </TaxSummary>
+                </LineTaxes> 
+            </OrderLine>
+            <Instructions TotalNumberOfRecords="">
+                <Instruction InstructionText="" InstructionType="" InstructionURL="" InstructionUsage="" ReferenceKey="" SequenceNo="" TableName="" isHistory=""/>
+            </Instructions>
+        </ShipmentLine>
+    </ShipmentLines>
+    <ScacAndService ScacAndServiceDesc="" ScacAndService=""/> 
+</Shipment>
+</Shipments > 

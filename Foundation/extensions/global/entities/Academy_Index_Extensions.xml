@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DBSchema>
+	<Entities>        
+		<Entity TableName="YFS_ORDER_HEADER" >
+			<Indices>
+				<Index Name="IX_ACAD_ODR_HDR_02">
+					<Column Name="ORDER_NO" />
+					<Column Name="DOCUMENT_TYPE" />
+					<Column Name="DRAFT_ORDER_FLAG" />
+				</Index>
+				<Index Name="IX_ACAD_ODR_HDR_06">
+					<Column Name="ORDER_HEADER_KEY" />
+					<Column Name="HOLD_FLAG" />
+					<Column Name="DOCUMENT_TYPE" />
+					<Column Name="DRAFT_ORDER_FLAG" />
+				</Index>
+				<Index Name="IX_ACAD_ODR_HDR_07">
+					<Column Name="CUSTOMER_PHONE_NO" />
+					<Column Name="ORDER_DATE" />					
+				</Index>
+            </Indices>  
+		</Entity>
+		<Entity TableName="YFS_ORDER_RELEASE_STATUS" >
+			<Indices>
+				<Index Name="IX_ACAD_ODR_REL_04">
+					<Column Name="STATUS" />
+					<Column Name="STATUS_QUANTITY" />
+					<Column Name="ORDER_HEADER_KEY" />
+				</Index>
+			</Indices>  
+		</Entity>
+		<Entity TableName="YFS_ORDER_HOLD_TYPE" >
+			<Indices>
+				<Index Name="IX_ACAD_ODR_HLD_05">
+					<Column Name="ORDER_HEADER_KEY" />
+					<Column Name="ORDER_LINE_KEY" />
+					<Column Name="STATUS" />
+				</Index>
+			</Indices>  
+		</Entity>
+		<Entity TableName="YFS_ORDER_HEADER_H" >
+			<Indices>
+				<Index Name="IX_ACAD_ODR_HIS_03">
+					<Column Name="BUYER_USER_ID" />
+					<Column Name="DOCUMENT_TYPE" />
+					<Column Name="BILL_TO_ID" />
+					<Column Name="SELLER_ORGANIZATION_CODE" />
+					<Column Name="BUYER_ORGANIZATION_CODE" />
+					<Column Name="ENTERPRISE_KEY" />
+				</Index>
+			</Indices> 
+		</Entity>
+		<Entity TableName="YFS_CALENDAR_DAY_EXCP" >
+			<Indices>
+				<Index Name="IX_ACAD_CND_EX_012">
+					<Column Name="CALENDAR_KEY" />
+					<Column Name="MODIFYPROGID" />
+					<Column Name="CREATEPROGID" />
+					<Column Name="MODIFYUSERID" />
+					<Column Name="CREATEUSERID" />
+					<Column Name="MODIFYTS" />
+					<Column Name="CREATETS" />
+					<Column Name="LOCKID" />
+					<Column Name="EXCEPTION_TYPE" />
+					<Column Name="EXCEPTION_DATE" />
+					<Column Name="CALENDAR_DAY_EXCP_KEY" />
+				</Index>
+			</Indices>      
+		</Entity>
+		<Entity TableName="YFS_CUSTOMER" >
+	        <Indices>
+				<Index Name="IX_ACAD_CUST_01">
+					<Column Name="CUSTOMER_ID" />
+				</Index>
+			</Indices>                  
+		</Entity>
+		<Entity TableName="YFS_INVENTORY_ITEM" >
+            <Indices>
+				<Index Name="IX_ACAD_INV_ITM_09">
+					<Column Name="ORGANIZATION_CODE" />
+				</Index>
+			</Indices>  
+		</Entity>
+		<Entity TableName="YFS_ITEM_ALIAS" >
+            <Indices>
+				<Index Name="IX_ACAD_ITEM_010">
+					<Column Name="ALIAS_VALUE" />
+				</Index>
+			</Indices>  
+		</Entity>
+		<Entity TableName="YFS_LOAD_SHIPMENT" >
+            <Indices>
+				<Index Name="IX_ACAD_LD_SPMT_08">
+					<Column Name="LOAD_KEY" />
+					<Column Name="SHIPMENT_KEY" />
+				</Index>
+			</Indices>  
+		</Entity>
+		<Entity TableName="YFS_SHIPMENT_CONTAINER" >
+            <Indices>
+				<Index Name="IX_ACAD_SPMT_CR_07">
+					<Column Name="MANIFEST_KEY" />
+					<Column Name="SHIPMENT_KEY" />
+					<Column Name="LOAD_KEY" />
+					<Column Name="PARENT_CONTAINER_GROUP" />
+					<Column Name="PARENT_CONTAINER_KEY" />
+				</Index>
+			</Indices>  
+		</Entity>
+		<Entity TableName="YFS_SHIPMENT" >
+            <Indices>
+                <Index Name="IX_ACAD_SPMNT_011">
+                    <Column Name="SHIPNODE_KEY" />
+					<Column Name="PICKTICKET_NO" />
+				</Index>
+		<!--		<Index Name="IX_ACAD_SPMNT_012">
+                    <Column Name="EXTN_EXETER_CONTAINER_ID" />					
+				</Index>  
+				
+				<Index Name="IDX1809171846490">
+                    <Column Name="RECEIVING_NODE" />
+				</Index>
+				<Index Name="IDX1809171846560">
+                    <Column Name="SHIPNODE_KEY" />
+				</Index>
+				-->
+				<Index Name="IX_ACAD_SPMNT_012">
+                    <Column Name="SHIPMENT_KEY" />
+					<Column Name="SHIPNODE_KEY" />
+					<Column Name="RECEIVING_NODE" />
+					<Column Name="ENTERPRISE_CODE" />
+				</Index>
+				<Index Name="ACAD_YFS_SHIPMENT_IX100">
+                    <Column Name="BILL_TO_ADDRESS_KEY" />
+					<Column Name="ENTERPRISE_CODE" />
+					<Column Name="DELIVERY_METHOD" />
+				</Index>
+				<Index Name="IDX1809190750120">
+                    <!--<Column Name="EXTN_EXETER_CONTAINER_ID" />-->
+					<Column Name="SHIPNODE_KEY" />
+					<Column Name="SHIPMENT_NO" />
+					<Column Name="SHIPMENT_KEY" />
+					<Column Name="RECEIVING_NODE" />
+				</Index>
+			</Indices>                                          
+      </Entity>
+	   <Entity TableName="YFS_ORDER_INVOICE" >
+			<Indices>
+				<Index Name="IX_ACAD_ODR_INV_01">
+					<Column Name="ORDER_NO" />
+					<Column Name="DOCUMENT_TYPE" />
+					<Column Name="ENTERPRISE_CODE" />
+				</Index>
+				<!-- Start of Change BOPIS-1176 -->
+				 <Index  Name="ACAD_ORDER_INVOICE_PERF1">
+                    <Column Name="SELLER_ORGANIZATION_CODE"/>
+                    <Column Name="SHIPNODE_KEY"/>
+                    <Column Name="SHIPMENT_NO"/>
+                </Index>
+				<!-- End of Change BOPIS-1176 -->
+			</Indices>  
+		</Entity>	
+		<Entity TableName="YCS_MANIFEST_UPS_HDR" >
+			<Indices>
+				<Index Name="IX_ACAD_MAN_HDR_01">
+					<Column Name="MANIFEST_NUMBER" />
+					<Column Name="PICKUP_DATE" />
+					<Column Name="SHIPPER_ACCOUNT_NUMBER" />
+					<Column Name="CARRIER" />
+				</Index>
+			</Indices>  
+		</Entity>	
+		<!--  Start of Change SHIN-1 -->		
+		<Entity TableName="YFS_ORDER_RELEASE" >
+			<Indices>
+		<!--		<Index Name="IX_ACAD_ODR_REL_05">
+					<Column Name="EXTN_SHARED_INVENTORY" />
+				</Index>-->
+			</Indices>  
+		</Entity>
+		<Entity TableName="YFS_LPN_HDR" >
+			<Indices>
+				<Index Name="IDX1809171847180">
+					<Column Name="LPN_NO" />
+					<Column Name="ORGANIZATION_CODE" />
+				</Index>
+			</Indices>  
+		</Entity>	
+		<Entity TableName="YFS_PERSON_INFO" >
+			<Indices>
+				<Index Name="IDX1809202006470">
+					<Column Name="LAST_NAME" />
+					<Column Name="PERSON_INFO_KEY" />
+				</Index>
+			</Indices>  
+		</Entity>	
+		<Entity TableName="YFS_LOAD" >
+			<Indices>
+				<Index Name="IDX1809171847130">
+					<Column Name="LOAD_KEY" />
+					<Column Name="ENTERPRISE_CODE" />
+				</Index>
+			</Indices>  
+		</Entity>
+		<Entity TableName="YFS_ORDER_LINE" >
+			<Indices>
+				<Index Name="IDX1809190748040">
+					<Column Name="ORDER_LINE_KEY" />
+					<Column Name="DELIVERY_METHOD" />
+				</Index>
+			</Indices>  
+		</Entity>
+		<Entity TableName="YCS_MANIFEST_UPS_DTL" >
+			 <Indices>
+				<Index Name="IDX_MANIFEST_UPS_IX1">
+					<Column Name="PACKAGE_TRACKING_NUMBER" />
+				</Index>
+			</Indices>  
+		</Entity>		
+		<!--  End of Change SHIN-1  -->
+		
+    </Entities>
+</DBSchema>

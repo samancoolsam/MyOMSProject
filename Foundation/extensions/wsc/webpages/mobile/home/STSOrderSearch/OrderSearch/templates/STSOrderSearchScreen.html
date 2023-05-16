@@ -1,0 +1,330 @@
+<div class="sc-platform-screen-default STSOrderSearchScreen" role="region" aria-label="region_screenHeader" >
+
+<!-- 	Search Screen : Start -->
+
+<div data-dojo-type="idx/layout/ContentPane" data-dojo-props="		spanLabel : true , 
+		title : 'Top Content' , 
+		'class' : 'mobileCommonScreen screenHeader' , 
+		colspan : 1 , 
+		uId : 'TopContent' , 
+		layoutAlign : 'top'  
+ ">
+        <div data-dojo-type="idx/layout/ContentPane" data-dojo-props="		spanLabel : true , 
+		'class' : 'screenTitle' , 
+		uId : 'pnlScreenDescription'  
+ ">
+      <div data-dojo-type="sc/plat/dojo/widgets/Label" data-dojo-props="		spanLabel : true , 
+		uId : 'lbl_ScreenTitle'  
+ 		,scParamDataFn :
+		 function() { 
+			return { 
+			 	value : 			this.getSimpleBundleString('Label_SearchShipToStoreOrders')
+			}
+		}
+	"></div>
+        </div>
+	    <div data-dojo-type="idx/layout/ContentPane" data-dojo-props="		spanLabel : true , 
+		'class' : 'rightPanel'  
+ ">
+      <div data-dojo-type="idx/layout/ContentPane" data-dojo-props="		spanLabel : true , 
+		uId : 'pnlScreenTasks'  
+ "></div>
+        </div>
+    </div>	
+
+<div data-dojo-type="idx/layout/ContentPane" data-dojo-props="		spanLabel : true , 
+		'class' : 'searchContent' , 
+		uId : 'pnl_SearchContents' , 
+		renderHidden : false  
+ ">
+        <div data-dojo-type="idx/form/TextBox" data-dojo-props="		'class' : 'autoLabelZeroWidth longTextbox' , 
+		uId : 'txt_SearchContiainerNo'  
+ 		,scParamDataFn :
+		 function() { 
+			return { 
+			 	label : 			this.getSimpleBundleString('extn_Container_Number')
+,
+
+				 hint : 			this.getSimpleBundleString('extn_Scan_or_enter_Container_ID')
+,	
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 path : 			'Shipment.Containers.Container.ContainerNo'
+,
+		 namespace : 			'SavedSearchCriteria'
+	}
+,
+		 targetBinding : 	[
+	 		{
+		 path : 			'Shipment.Containers.Container.ContainerNo'
+,
+		 namespace : 			'getShipmentSearch_input'
+	}
+	]
+	}
+			}
+		}
+"></div>
+        <div data-dojo-type="idx/form/TextBox" data-dojo-props="		'class' : 'autoLabelZeroWidth longTextbox' , 
+		uId : 'txt_SearchOrderNo'  
+ 		,scParamDataFn :
+		 function() { 
+			return { 
+			 	label : 			this.getSimpleBundleString('extn_Order_No_WOColon')
+,
+				 hint : 			this.getSimpleBundleString('extn_scan_sales_order_number')
+,	
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 path : 			'Shipment.refNo'
+,
+		 namespace : 			'SavedSearchCriteria'
+	}
+,
+		 targetBinding : 	[
+	 		{
+		 path : 			'Shipment.refNo'
+,
+		 namespace : 			'getShipmentSearch_input'
+	}
+	]
+	}
+			}
+		}
+"></div>
+ <div data-dojo-type="idx/layout/ContentPane" data-dojo-props="		spanLabel : true , 
+		'class' : '', 
+		uId : 'pnl_AdvancedSearchContents' , 
+		renderHidden : false  
+ ">
+        <div data-dojo-type="sc/plat/dojo/widgets/Label" data-dojo-props="		'class' : 'fieldLabel', 
+		uId : 'lblCustomerDetails'
+		,style: 'padding-left: 10px ! important;'  
+ 		,scParamDataFn :
+		 function() { 
+			return { 
+			 	value : 			this.getSimpleBundleString('Label_CustomerDetails')
+			}
+		}
+"></div>
+        <div data-dojo-type="idx/layout/ContentPane" data-dojo-props="		spanLabel : true ,
+		uId : 'pnl_customerDtls1',
+                style: 'margin-left:10px;' , colSpan:2  
+ ">
+            <div data-dojo-type="idx/form/TextBox" data-dojo-props="		uId : 'txt_SearchCustLastName' , 
+		showTitle : false,  
+		'class' : ''
+		, style: 'width:160px; padding-bottom:1px !important'
+ 		,scParamDataFn :
+		 function() { 
+			return { 
+			 	hint : 			this.getSimpleBundleString('TextField_CustLastNameHint')
+,	
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 path : 			'Shipment.BillToAddress.LastName'
+,
+		 namespace : 			'SavedAdvancedSearchCriteria'
+	}
+,
+		 targetBinding : 	[
+	 		{
+		 path : 			'Shipment.BillToAddress.LastName'
+,
+		 namespace : 			'getShipmentSearch_input'
+	}
+	]
+	}
+			}
+		}
+"></div>
+            <div data-dojo-type="idx/form/TextBox" data-dojo-props="		uId : 'txt_SearchCustFirstName' , 
+		showTitle : false,
+		'class' : ''
+,		 style: 'width:160px; padding-bottom:1px !important; margin-left:1px; '  
+ 		,scParamDataFn :
+		 function() { 
+			return { 
+			 	hint : 			this.getSimpleBundleString('TextField_CustFirstNameHint')
+,	
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 path : 			'Shipment.BillToAddress.FirstName'
+,
+		 namespace : 			'SavedAdvancedSearchCriteria'
+	}
+,
+		 targetBinding : 	[
+	 		{
+		 path : 			'Shipment.BillToAddress.FirstName'
+,
+		 namespace : 			'getShipmentSearch_input'
+	}
+	]
+	}
+			}
+		}
+"></div></div>
+     
+        <div data-dojo-type="idx/layout/ContentPane" data-dojo-props="		spanLabel : true , 
+		'class' : '',
+                style: 'margin-left:10px;', 
+		uId : 'pnl_customerDtls2' , colSpan:2  
+ ">
+            <div data-dojo-type="idx/form/TextBox" data-dojo-props="		uId : 'txt_SearchCustEmail' , 
+		showTitle : false 
+		,'class' : ''
+		, style: 'width:160px; padding-bottom: 1px !important;'  
+ 		,scParamDataFn :
+		 function() { 
+			return { 
+			 	hint : 			this.getSimpleBundleString('TextField_CustEmailHint')
+,	
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 path : 			'Shipment.BillToAddress.EMailID'
+,
+		 namespace : 			'SavedAdvancedSearchCriteria'
+	}
+,
+		 targetBinding : 	[
+	 		{
+		 path : 			'Shipment.BillToAddress.EMailID'
+,
+		 queryType : 			'FLIKE'
+,
+		 namespace : 			'getShipmentSearch_input'
+	}
+	]
+	}
+			}
+		}
+"></div>
+            <div data-dojo-type="idx/form/TextBox" data-dojo-props="		uId : 'txt_SearchCustPhoneNo' , 
+		showTitle : false
+		,'class' : ''  
+		, style: 'width:160px; padding-bottom:1px !important;' 
+ 		,scParamDataFn :
+		 function() { 
+			return { 
+			 	hint : 			this.getSimpleBundleString('TextField_CustPhoneNoHint')
+,	
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 path : 			'Shipment.BillToAddress.DayPhone'
+,
+		 namespace : 			'SavedAdvancedSearchCriteria'
+	}
+,
+		 targetBinding : 	[
+	 		{
+		 path : 			'Shipment.BillToAddress.DayPhone'
+,
+		 namespace : 			'getShipmentSearch_input'
+	}
+	]
+	}
+			}
+		}
+"></div>
+        </div>
+        <div data-dojo-type="idx/form/FilteringSelect" data-dojo-props="		highlightMatch : 'false' , 
+		'class' : 'autoLabelZeroWidth longTextbox nonEditable' , 
+                style: 'margin-top:3px;' ,
+		autoComplete : true , 
+		uId : 'filteringSelectOrderStatus' , 
+		required : false  
+ 		,scParamDataFn :
+		 function() { 
+			return { 
+			 	label : 			this.getSimpleBundleString('FilteringSelect_OrderStatus')
+,	
+			 	bindingData : 	{
+		 optionsBinding : 	{
+		 formatter : 			wsc.mobile.home.utils.MobileHomeUtils.getDescription
+,
+		 formatterString : 			'wsc.mobile.home.utils.MobileHomeUtils.getDescription'
+,
+		 descriptionField : 			'StatusKey'
+,
+		 addEmptyOption : 			true
+,
+		 valueField : 			'StatusCode'
+,
+		 path : 			'StatusList.Status'
+,
+		 emptyOptionValue : 			''
+,
+		 emptyOptionDesc : 			this.getSimpleBundleString('Label_AllStatus')
+,
+		 namespace : 			'getShipmentStatusList_output'
+	}
+,
+		 targetBinding : 	[
+	 		{
+		 path : 			'Shipment.Status'
+,
+		 namespace : 			'getShipmentSearch_input'
+	}
+	]
+,
+		 sourceBinding : 	{
+		 path : 			'Shipment.Status'
+,
+		 namespace : 			'SavedAdvancedSearchCriteria'
+	}
+	}
+			}
+		}
+"></div>
+<div data-dojo-type="idx/form/FilteringSelect" data-dojo-props="		highlightMatch : 'false' , 
+		'class' : 'autoLabelZeroWidth longTextbox nonEditable' , 
+                style: 'margin-top:3px;' ,
+		autoComplete : true , 
+		uId : 'extn_filtering_select_shipment_type' ,
+		renderHidden : true,
+		required : false  
+ 		,scParamDataFn :
+		 function() { 
+			return { 
+			 	label : 			this.getSimpleBundleString('extn_FilteringSelect_Shipment'),	
+			 	bindingData : 	{
+				optionsBinding : 	{
+					descriptionField : 			'TypeKey',
+					addEmptyOption : 			true,
+					valueField : 			'TypeCode',
+					path : 			'ShipmentList.NodeType',
+					emptyOptionValue : 			'',
+					emptyOptionDesc : 			this.getSimpleBundleString('Label_AllStatus'),
+					namespace : 			'getShipmentTypeList_output'
+				},
+		 targetBinding : 	[
+	 		{
+				path : 			'Shipment.NodeType',
+				namespace : 			'getShipmentSearch_input'
+			}
+		],
+		 sourceBinding : 	{
+				path : 			'Shipment.NodeType',
+				namespace : 			'SavedAdvancedSearchCriteria'
+				}
+			}
+		}
+	}
+"></div>
+	</div>	
+</div>
+<div data-dojo-type="dijit/form/Button" data-dojo-props="		'class' : 'idxSpecialButton longButtons' , 
+		uId : 'extn_btnSearch'  
+ 		,scParamDataFn :
+		 function() { 
+			return { 
+			 	label : 			this.getSimpleBundleString('Action_Search')
+			}
+		}
+"></div>
+
+
+<!-- 	Search Screen : End -->		
+
+</div>

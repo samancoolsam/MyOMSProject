@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- 
+Licensed Materials - Property of IBM
+IBM Sterling Selling And Fulfillment Suite
+(C) Copyright IBM Corp. 2016 All Rights Reserved.
+US Government Users Restricted Rights - Use, duplication or disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+ -->
+<StoreBatch StoreBatchKey="" BatchNo="" OrganizationCode=""
+	AssignedToUserId="" BatchType="" Status="">
+	<StoreBatchLines TotalNumberOfRecords="">
+		<StoreBatchLine OriginalQuantity="" Quantity="" PickQuantity="" ShipQuantity="" BackroomPickedQuantity="" ItemID=""
+			UnitOfMeasure="" BackroomPickComplete="" ShortageQty=""
+			PickLocation="" PickLocationSeq="" DepartmentCode="" StagingComplete="" StagedQuantity=""
+			PickBackroomPickedQuantity="" PickStagedQuantity="" ShipBackroomPickedQuantity="" ShipStagedQuantity="">	
+			<ItemDetails CanUseAsServiceTool="" GlobalItemID=""
+                IsItemSuperseded="" ItemGroupCode="" ItemID=""
+                ItemKey="" OrganizationCode="Required"
+                SubCatalogOrganizationCode="" UnitOfMeasure="">
+                <PrimaryInformation ExtendedDisplayDescription="" ImageID="" ImageLabel="" ImageLocation="" />
+				<ClassificationCodes Model="" />
+                <Extn ExtnDepartment="" />
+            </ItemDetails>			
+		</StoreBatchLine>
+	</StoreBatchLines>
+</StoreBatch>

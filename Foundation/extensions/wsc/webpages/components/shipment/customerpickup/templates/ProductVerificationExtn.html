@@ -1,0 +1,2443 @@
+		<div>
+  <!--Combining Customer Pickup screen OMNI-8660 -Start -->
+		 	<div data-dojo-type="idx/form/FilteringSelect" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_cmbCustVerfMethod' , 
+		_sc_extensibility_moveOrder : '64' , 
+		_sc_extensibility_operation : 'insert' , 
+		'class' : 'zeroWidthLabelKey longTextbox nonEditable' , 
+		_sc_extensibility_position : 'first' , 
+		style : 'padding-left:10px' , 
+		_sc_extensibility_referenceUId : 'extn_custVerfMethodPanel' , 
+		required : true  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	bindingData : 	{
+		 optionsBinding : 	{
+		 path : 			'CommonCodeList.CommonCode'
+,
+		 namespace : 			'extn_CustomerVerficationMethodList'
+,
+		 descriptionField : 			'CodeShortDescription'
+,
+		 valueField : 			'CodeValue'
+	}
+,
+		 targetBinding : 	[
+	 		{
+		 path : 			'Notes.Note.NoteText'
+,
+		 namespace : 			'extn_CustomerVerificationNotes_Input'
+,
+		 scExtensibilityArrayItemId : 			'extn_TargetBindings_0'
+	}
+,
+	 		{
+		 path : 			'CustomerVerification.Method'
+,
+		 namespace : 			'extn_CustomerVerificationMethodSelected'
+,
+		 scExtensibilityArrayItemId : 			'extn_TargetBindings_1'
+	}
+	]
+	}
+,	
+			 	label : 			this.getSimpleBundleString('Label_Customer_Verification_Method')
+			}
+		}
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="idx/form/FilteringSelect" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_filteringselect' , 
+		_sc_extensibility_moveOrder : '65' , 
+		_sc_extensibility_operation : 'insert' , 
+		'class' : 'longTextBox' , 
+		_sc_extensibility_position : 'after' , 
+		style : 'padding-left:10px' , 
+		_sc_extensibility_referenceUId : 'extn_cmbCustVerfMethod' , 
+		required : true  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	bindingData : 	{
+		 optionsBinding : 	{
+		 path : 			'CustomerName'
+,
+		 namespace : 			'extn_customerOptionNS'
+,
+		 descriptionField : 			'Customer'
+,
+		 valueField : 			'Customer_Name'
+	}
+,
+		 targetBinding : 	[
+	 		{
+		 path : 			'customerName'
+,
+		 namespace : 			'extn_Test'
+,
+		 scExtensibilityArrayItemId : 			'extn_TargetBindings_0'
+	}
+	]
+,
+		 sourceBinding : 	{
+		 path : 			'CustomerName[0].Customer_Name'
+,
+		 dynamicBindingFunc : 			'extn_getDefaultCustomerName'
+,
+		 namespace : 			'extn_DefaultCustomerName'
+	}
+	}
+,	
+			 	label : 			this.getSimpleBundleString('extn_Picked_Up_By')
+			}
+		}
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="idx/layout/ContentPane" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								_sc_extensibility_operation : 'change' , 
+		style : 'width:260px;' , 
+		_sc_extensibility_referenceUId : 'shipmentDetails'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="idx/layout/ContentPane" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_FinishPickbuttonPanel' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '103' , 
+		'class' : 'scanPanel' , 
+		_sc_extensibility_position : 'before' , 
+		_sc_extensibility_referenceUId : 'scanPanel'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="idx/layout/ContentPane" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_CurbsideReset' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '120' , 
+		_sc_extensibility_position : 'before' , 
+		_sc_extensibility_referenceUId : 'scanPanel'  
+	 					}">
+		 	</div>
+		<!--omni- 80092- Assign Curbside Order-Start -->
+			<div data-dojo-type="idx/layout/ContentPane" 
+	 					data-dojo-props="data_dojo_props_diff: {						
+	 	uId : 'extn_assigncurbsideorder' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '192' , 
+		_sc_extensibility_position : 'before' , 
+		_sc_extensibility_referenceUId : 'extn_ExtendInfoPane'  
+	 					}">
+		 	</div>  
+		<!--omni- 80092- Assign Curbside Order-End -->			
+			<!-- OMNI-79883 Complete Curbside Order By Start -->
+		 	<div data-dojo-type="idx/layout/ContentPane" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_completeCurbsideOrderBy' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '198' , 
+		_sc_extensibility_position : 'before' , 
+		_sc_extensibility_referenceUId : 'extn_ExtendInfoPane'  
+	 					}">
+		 	</div> 
+			<!-- OMNI-79883 Complete Curbside Order By End --> 
+		 	<div data-dojo-type="idx/layout/ContentPane" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								renderHidden : false , 
+		_sc_extensibility_operation : 'change' , 
+		_sc_extensibility_referenceUId : 'productScanForm'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="idx/layout/ContentPane" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_DST_DetailScreenPanel' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '61' , 
+		'class' : 'screen detailScreen' , 
+		_sc_extensibility_position : 'before' , 
+		_sc_extensibility_referenceUId : 'tpProductLines'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="idx/layout/ContentPane" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_DST_PrimaryInfoPanel' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '66' , 
+		'class' : 'detailsPrimaryInfoPanel' , 
+		_sc_extensibility_position : 'after' , 
+		_sc_extensibility_referenceUId : 'extn_DST_AdditionalPanel'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="idx/layout/ContentPane" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_pnlPrimaryInfo' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '67' , 
+		_sc_extensibility_position : 'first' , 
+		_sc_extensibility_referenceUId : 'extn_DST_PrimaryInfoPanel'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="idx/layout/ContentPane" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_PersonInfoContainer' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '68' , 
+		'class' : 'personInfoPanel testClass extnBlock' , 
+		_sc_extensibility_position : 'first' , 
+		_sc_extensibility_referenceUId : 'extn_pnlPrimaryInfo'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="idx/layout/ContentPane" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_pnlPhoneHolder' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '70' , 
+		'class' : 'displayPhone blockComponent' , 
+		_sc_extensibility_position : 'after' , 
+		_sc_extensibility_referenceUId : 'extn_lblName'  
+	 					}">
+		 	</div>
+			<!-- OMNI-8710, 8717: UI Align and Payment Info - Start -->
+			<div data-dojo-type="idx/layout/ContentPane" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_pnlSpilt' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '137' , 
+		_sc_extensibility_position : 'before' , 
+		_sc_extensibility_referenceUId : 'extn_lblOrderNo'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="idx/layout/ContentPane" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_pnlLeft' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '138' , 
+		'class' : 'split left' , 
+		_sc_extensibility_position : 'first' , 
+		_sc_extensibility_referenceUId : 'extn_pnlSpilt'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="idx/layout/ContentPane" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_pnlAddress' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '140' , 
+		'class' : 'extn_ShpPnl' , 
+		_sc_extensibility_position : 'first' , 
+		_sc_extensibility_referenceUId : 'extn_pnlLeft'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="idx/layout/ContentPane" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_Address' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '142' , 
+		'class' : 'extn_ShpPnl' , 
+		_sc_extensibility_position : 'last' , 
+		_sc_extensibility_referenceUId : 'extn_pnlLeft'  
+	 					}">
+		 	</div>
+			<!--
+		 	<div data-dojo-type="idx/layout/ContentPane" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_contentpane' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '76' , 
+		'class' : 'extn_ShpPnlDigit' , 
+		_sc_extensibility_position : 'after' , 
+		_sc_extensibility_referenceUId : 'extn_PersonInfoContainer'  
+	 					}">
+		 	</div>
+			-->
+		 	<div data-dojo-type="idx/layout/ContentPane" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_contentpane' , 
+		_sc_extensibility_operation : 'move' , 
+		_sc_extensibility_moveOrder : '145' , 
+		_sc_extensibility_position : 'after' , 
+		_sc_extensibility_referenceUId : 'extn_Address'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="idx/layout/ContentPane" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_pnlPersonInfoContainer' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '146' , 
+		'class' : 'personInfoPanel testClass extnBlock' , 
+		_sc_extensibility_position : 'last' , 
+		_sc_extensibility_referenceUId : 'extn_pnlLeft'  
+	 					}">
+		 	</div>
+			<div data-dojo-type="idx/layout/ContentPane" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_pnlPhoneHolder' , 
+		_sc_extensibility_operation : 'move' , 
+		_sc_extensibility_moveOrder : '147' , 
+		_sc_extensibility_position : 'first' , 
+		_sc_extensibility_referenceUId : 'extn_pnlPersonInfoContainer'  
+	 					}">
+		 	</div>
+			<!-- OMNI-8710, 8717: UI Align and Payment Info - End -->
+		 	<div data-dojo-type="idx/layout/ContentPane" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_pnlEmailHolder' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '73' , 
+		'class' : 'displayEmail' , 
+		_sc_extensibility_position : 'after' , 
+		_sc_extensibility_referenceUId : 'extn_pnlPhoneHolder'  
+	 					}">
+		 	</div>
+			<!-- OMNI-8710, 8717: UI Align and Payment Info - Start -->
+			<div data-dojo-type="idx/layout/ContentPane" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_pnlEmailHolder' , 
+		_sc_extensibility_operation : 'move' , 
+		_sc_extensibility_moveOrder : '148' , 
+		_sc_extensibility_position : 'last' , 
+		_sc_extensibility_referenceUId : 'extn_pnlPersonInfoContainer'  
+	 					}">
+		 	</div>
+			<!-- OMNI-8710, 8717: UI Align and Payment Info - End -->  
+		 	<div data-dojo-type="idx/layout/ContentPane" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_contentpane' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '76' , 
+		'class' : 'testClass alternateCustomer marginTop marginTopCSS' , 
+		_sc_extensibility_position : 'after' , 
+		_sc_extensibility_referenceUId : 'extn_PersonInfoContainer'  
+	 					}">
+		 	</div>
+			<!-- OMNI-8710, 8717: UI Align and Payment Info - Start --> 
+			<div data-dojo-type="idx/layout/ContentPane" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_pnlRight' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '139' , 
+		'class' : 'split right' , 
+		_sc_extensibility_position : 'last' , 
+		_sc_extensibility_referenceUId : 'extn_pnlSpilt'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="idx/layout/ContentPane" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_Combine' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '159' , 
+		_sc_extensibility_position : 'last' , 
+		_sc_extensibility_referenceUId : 'extn_pnlPrimaryInfo'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="idx/layout/ContentPane" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_Combine' , 
+		_sc_extensibility_operation : 'move' , 
+		_sc_extensibility_moveOrder : '160' , 
+		_sc_extensibility_position : 'before' , 
+		_sc_extensibility_referenceUId : 'extn_pnlPaymentInfo'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="idx/layout/ContentPane" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_pnlPaymentInfo' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '153' , 
+		'class' : 'extn_ShpPnlDigit extn_ShpPnl' , 
+		_sc_extensibility_position : 'before' , 
+		_sc_extensibility_referenceUId : 'extn_orderInfoPanel'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="idx/layout/ContentPane" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_pnlPaymentInfo' , 
+		_sc_extensibility_operation : 'move' , 
+		_sc_extensibility_moveOrder : '161' , 
+		_sc_extensibility_position : 'first' , 
+		_sc_extensibility_referenceUId : 'extn_Combine'  
+	 					}">
+		 	</div>
+			<!-- OMNI-8710, 8717: UI Align and Payment Info - End -->
+		 	<div data-dojo-type="idx/layout/ContentPane" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_orderInfoPanel' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '80' , 
+		'class' : 'orderInfoPanel' , 
+		_sc_extensibility_position : 'after' , 
+		_sc_extensibility_referenceUId : 'extn_contentpane'  
+	 					}">
+		 	</div>
+			<!-- OMNI-8710, 8717: UI Align and Payment Info - Start -->
+			<div data-dojo-type="idx/layout/ContentPane" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_orderInfoPanel' , 
+		_sc_extensibility_operation : 'move' , 
+		_sc_extensibility_moveOrder : '155' , 
+		_sc_extensibility_position : 'before' , 
+		_sc_extensibility_referenceUId : 'extn_DST_AdditionalPanel'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="idx/layout/ContentPane" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_orderInfoPanel' , 
+		_sc_extensibility_operation : 'move' , 
+		_sc_extensibility_moveOrder : '156' , 
+		_sc_extensibility_position : 'last' , 
+		_sc_extensibility_referenceUId : 'extn_pnlPrimaryInfo'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="idx/layout/ContentPane" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_orderInfoPanel' , 
+		_sc_extensibility_operation : 'move' , 
+		_sc_extensibility_moveOrder : '157' , 
+		_sc_extensibility_position : 'last' , 
+		_sc_extensibility_referenceUId : 'extn_DST_PrimaryInfoPanel'  
+	 					}">
+		 	</div>
+			<!--
+		 	<div data-dojo-type="idx/layout/ContentPane" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_orderInfoPanel' , 
+		_sc_extensibility_operation : 'move' , 
+		_sc_extensibility_moveOrder : '158' , 
+		_sc_extensibility_position : 'last' , 
+		_sc_extensibility_referenceUId : 'extn_pnlPrimaryInfo'  
+	 					}">
+		 	</div> 
+			-->			
+		 	<div data-dojo-type="idx/layout/ContentPane" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_orderInfoPanel' , 
+		_sc_extensibility_operation : 'move' , 
+		_sc_extensibility_moveOrder : '162' , 
+		_sc_extensibility_position : 'last' , 
+		_sc_extensibility_referenceUId : 'extn_Combine'  
+	 					}">
+		 	</div> 
+			<!-- OMNI-8710, 8717: UI Align and Payment Info - End -->
+		 	<div data-dojo-type="idx/layout/ContentPane" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_DST_AdditionalPanel' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '62' , 
+		'class' : 'detailsAdditionalInfoPanel' , 
+		_sc_extensibility_position : 'first' , 
+		_sc_extensibility_referenceUId : 'extn_DST_DetailScreenPanel'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="idx/layout/ContentPane" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_DST_AdditionalPanel' , 
+		_sc_extensibility_operation : 'move' , 
+		_sc_extensibility_moveOrder : '85' , 
+		_sc_extensibility_position : 'after' , 
+		_sc_extensibility_referenceUId : 'extn_DST_PrimaryInfoPanel'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="idx/layout/ContentPane" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_custVerfMethodPanel' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '63' , 
+		'class' : 'custVerfMethodPanel' , 
+		_sc_extensibility_position : 'first' , 
+		_sc_extensibility_referenceUId : 'extn_DST_AdditionalPanel'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="idx/layout/ContentPane" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_resetCurbsideOrder' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '109' , 
+		_sc_extensibility_position : 'after' , 
+		_sc_extensibility_referenceUId : 'extn_DST_DetailScreenPanel'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	title : 			this.getSimpleBundleString('extn_Reset_Curbside_Order')
+			}
+		}
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="idx/layout/ContentPane" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_FinishPick_newcontentpane' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '50' , 
+		'class' : 'scanPanel' , 
+		_sc_extensibility_position : 'before' , 
+		style : 'margin-bottom: 30px;' , 
+		_sc_extensibility_referenceUId : 'extn_FinishPick_button2new'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="idx/layout/ContentPane" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_FinishPick_newcontentpane' , 
+		_sc_extensibility_operation : 'move' , 
+		_sc_extensibility_moveOrder : '108' , 
+		_sc_extensibility_position : 'before' , 
+		_sc_extensibility_referenceUId : 'extn_FinishPickupButtonpanel1'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="idx/layout/ContentPane" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								renderHidden : false , 
+		_sc_extensibility_operation : 'change' , 
+		'class' : ' extnScanBarCode' , 
+		_sc_extensibility_referenceUId : 'barcodeScanPanelForm'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="idx/layout/ContentPane" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'barcodeScanPanelForm' , 
+		_sc_extensibility_operation : 'move' , 
+		_sc_extensibility_moveOrder : '130' , 
+		_sc_extensibility_position : 'before' , 
+		_sc_extensibility_referenceUId : 'extn_FinishPickupButtonpanel1'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="idx/layout/ContentPane" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_CurbsideResetDownButton' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '126' , 
+		_sc_extensibility_position : 'before' , 
+		_sc_extensibility_referenceUId : 'extn_FinishPickupButtonpanel1'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="idx/layout/ContentPane" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_CurbsideResetDownButton' , 
+		_sc_extensibility_operation : 'move' , 
+		_sc_extensibility_moveOrder : '132' , 
+		_sc_extensibility_position : 'after' , 
+		_sc_extensibility_referenceUId : 'barcodeScanPanelForm'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="idx/layout/ContentPane" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_FinishPickupButtonpanel1' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '105' , 
+		_sc_extensibility_position : 'before' , 
+		_sc_extensibility_referenceUId : 'extn_FinishPick_newcontentpane'  
+	 					}">
+		 	</div>
+			<div data-dojo-type="idx/layout/ContentPane" 
+		 					data-dojo-props="data_dojo_props_diff: {
+		 								uId : 'extn_InStoreAssignee' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '212' , 
+		_sc_extensibility_position : 'after' , 
+		_sc_extensibility_referenceUId : 'extn_completeInstoreOrderBy'  
+		 					}">
+		 	</div>  
+		 	<div data-dojo-type="idx/layout/ContentPane" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_FinishPick_newcontentpane' , 
+		_sc_extensibility_operation : 'move' , 
+		_sc_extensibility_moveOrder : '135' , 
+		_sc_extensibility_position : 'after' , 
+		_sc_extensibility_referenceUId : 'barcodeScanPanelForm'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="dijit/form/Button" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								renderHidden : true , 
+		_sc_extensibility_operation : 'change' , 
+		_sc_extensibility_referenceUId : 'pickAll'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="dijit/form/Button" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_FinishPickuButton' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '104' , 
+		'class' : 'idxSpecialButton extnFinishbuttoncss longButtons' , 
+		_sc_extensibility_position : 'first' , 
+		style : 'padding-top:20px' , 
+		_sc_extensibility_referenceUId : 'extn_FinishPickbuttonPanel'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	label : 			this.getSimpleBundleString('extn_Click_here_to_Complete_Order')
+			}
+		}
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="dijit/form/Button" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_FinishPickupButton' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '123' , 
+		'class' : 'floatRight idxSpecialButton extnCompleteOrderbuttoncss' , 
+		_sc_extensibility_position : 'before' , 
+		_sc_extensibility_referenceUId : 'extn_resetCurbsideOrder1'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	label : 			this.getSimpleBundleString('extn_CLICK_HERE_TO_br_COMPLETE_ORDER')
+			}
+		}
+	 					}">
+		 	</div>  
+			<!--OMNI-105500 - Start -->
+			<div data-dojo-type="idx/layout/ContentPane" 
+		 					data-dojo-props="data_dojo_props_diff: {
+		 								uId : 'extn_InstoreReset' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '205' , 
+		_sc_extensibility_position : 'after' , 
+		_sc_extensibility_referenceUId : 'productScanPanel'  
+		 					}">
+		 	</div> 
+			<!--OMNI-105500 - End -->
+		<!--OMNI-105502 - Start -->
+			<div data-dojo-type="idx/layout/ContentPane" 
+		 					data-dojo-props="data_dojo_props_diff: {
+		 								uId : 'extn_completeInstoreOrderBy' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '201' , 
+		_sc_extensibility_position : 'after' , 
+		_sc_extensibility_referenceUId : 'productScanPanel'  
+		 					}">
+		 	</div>  
+		 	<div data-dojo-type="idx/layout/ContentPane" 
+		 					data-dojo-props="data_dojo_props_diff: {
+		 								uId : 'extn_completeInstoreOrderBy' , 
+		_sc_extensibility_operation : 'move' , 
+		_sc_extensibility_moveOrder : '202' , 
+		_sc_extensibility_position : 'after' , 
+		_sc_extensibility_referenceUId : 'extn_finishCurbsideOrderBy'  
+		 					}">
+		 	</div>  
+		 	<div data-dojo-type="idx/layout/ContentPane" 
+		 					data-dojo-props="data_dojo_props_diff: {
+		 								uId : 'extn_completeInstoreOrderBy' , 
+		_sc_extensibility_operation : 'move' , 
+		_sc_extensibility_moveOrder : '203' , 
+		_sc_extensibility_position : 'after' , 
+		_sc_extensibility_referenceUId : 'productScanPanel'  
+		 					}">
+		 	</div>	
+		<!--OMNI-105502 - End -->
+		 	<div data-dojo-type="dijit/form/Button" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_FinishPickupButton' , 
+		_sc_extensibility_operation : 'move' , 
+		_sc_extensibility_moveOrder : '124' , 
+		_sc_extensibility_position : 'after' , 
+		_sc_extensibility_referenceUId : 'extn_resetCurbsideOrder1'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="dijit/form/Button" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_FinishPickupButton' , 
+		_sc_extensibility_operation : 'move' , 
+		_sc_extensibility_moveOrder : '125' , 
+		_sc_extensibility_position : 'before' , 
+		_sc_extensibility_referenceUId : 'extn_resetCurbsideOrder1'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="dijit/form/Button" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_resetCurbsideOrder1' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '117' , 
+		'class' : 'idxSpecialButton extnresetcurbsidebuttoncss ' , 
+		_sc_extensibility_position : 'after' , 
+		style : 'padding-left:9px; margin-top:5px;' , 
+		_sc_extensibility_referenceUId : 'extn_PersonInfoContainer'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 path : 			'Shipment'
+,
+		 namespace : 			'extn_resetCurbsideOrders_output'
+	}
+	}
+,	
+			 	label : 			this.getSimpleBundleString('extn_RESET_CURBSIDE_ORDER')
+			}
+		}
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="dijit/form/Button" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_resetCurbsideOrder1' , 
+		_sc_extensibility_operation : 'move' , 
+		_sc_extensibility_moveOrder : '118' , 
+		_sc_extensibility_position : 'before' , 
+		_sc_extensibility_referenceUId : 'extn_pnlPrimaryInfo'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="dijit/form/Button" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_resetCurbsideOrder1' , 
+		_sc_extensibility_operation : 'move' , 
+		_sc_extensibility_moveOrder : '121' , 
+		_sc_extensibility_position : 'after' , 
+		_sc_extensibility_referenceUId : 'extn_FinishPickbuttonPanel'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="dijit/form/Button" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_resetCurbsideOrder1' , 
+		_sc_extensibility_operation : 'move' , 
+		_sc_extensibility_moveOrder : '122' , 
+		_sc_extensibility_position : 'first' , 
+		_sc_extensibility_referenceUId : 'extn_CurbsideReset'  
+	 					}">
+		 	</div>  
+<!--  Combining Customer Pickup screen OMNI-8660 -End -->
+<!--omni- 80092- Assign Curbside Order-Start -->
+		<div data-dojo-type="dijit/form/Button" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_assigncurbsideorder_button' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '193' , 
+		'class' : 'extnAssignOrderToMeButtoncss' , 
+		_sc_extensibility_position : 'first' , 
+		style : 'margin-top:10px;' , 
+		_sc_extensibility_referenceUId : 'extn_assigncurbsideorder'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	label :this.getSimpleBundleString('extn_assign_curbsideorder_to_me')
+			}
+		}
+	 					}">
+		 	</div> 
+<!--omni- 80092- Assign Curbside Order-End -->
+<!--OMNI-79056 Curbside Estimated Time delay Changes - START -->
+<div data-dojo-type="idx/layout/ContentPane" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_ExtendInfoPane' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '187' , 
+		_sc_extensibility_position : 'before' , 
+		_sc_extensibility_referenceUId : 'extn_CurbsideTimeDelay'  
+	 					}">
+		 	</div>  
+<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_Estimated_Info' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '177' , 
+		'class' : 'extn_marginleftestimatedinfo extn_estimatedinfocolor extn_estimatedinfoColorCss' , 
+		_sc_extensibility_position : 'after' , 
+		style : 'padding-top:10px; ' , 
+		_sc_extensibility_referenceUId : 'extn_CurbsideTimeDelay'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	label : 			this.getBundleString('extn_Estimated_Delay_in_mins_')
+,	
+			 	title : 			this.getBundleString('extn_Estimated_Delay_in_mins_')
+,	
+			 	value : 			this.getSimpleBundleString('extn_Will_Inform_Customer_Accordingly')
+			}
+		}
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_Estimated_Info' , 
+		_sc_extensibility_operation : 'move' , 
+		_sc_extensibility_moveOrder : '182' , 
+		_sc_extensibility_position : 'first' , 
+		_sc_extensibility_referenceUId : 'extn_CurbsideTimeDelay'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_Estimated_Info' , 
+		_sc_extensibility_operation : 'move' , 
+		_sc_extensibility_moveOrder : '188' , 
+		_sc_extensibility_position : 'first' , 
+		_sc_extensibility_referenceUId : 'extn_ExtendInfoPane'  
+	 					}">
+		 	</div>  			
+			<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_Attended_by' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '176' , 
+		'class' : 'extn_marginleftestimatedinfo extn_estimatedinfocolor' , 
+		_sc_extensibility_position : 'after' , 
+		style : 'padding-right:0px; margin-top:5px;' , 
+		_sc_extensibility_referenceUId : 'extn_CurbsideTimeDelay'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	label : 			this.getBundleString('extn_Assignee')
+,	
+			 	value : 			this.getSimpleBundleString('blank')
+,	
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 path : 			'Shipment.Extn.ExtnCurbsideAttendedBy'
+,
+		 namespace : 			'ShipmentDetails'
+	}
+	}
+			}
+		}
+	 					}">
+		 	</div>
+			<!--OMNI-79668 Curbside Initiated At - Date Time Display - START-->
+			<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_CurbsideInitiatedAt' , 
+				_sc_extensibility_operation : 'insert' , 
+				_sc_extensibility_moveOrder : '195' , 
+				'class' : 'extn_marginleftestimatedinfo extn_estimatedinfocolor' , 
+				_sc_extensibility_position : 'first' , 
+				style : 'padding-right:0px; margin-top:12.5px;' , 
+				renderHidden : true ,
+				_sc_extensibility_referenceUId : 'extn_CurbsideInitiatedPane'  
+				,scExtensionDataFn :
+				 function() { 
+					return { 
+						label : this.getSimpleBundleString('extn_Curbside_Initiated_At')
+					}
+				}
+			}">
+		 	</div> 
+			<!--OMNI-79668 Curbside Initiated At - Date Time Display - END-->
+		 	<div data-dojo-type="idx/layout/ContentPane" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_CurbsideTimeDelay' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '176' , 
+		_sc_extensibility_position : 'before' , 
+		_sc_extensibility_referenceUId : 'scanPanel'  
+	 					}">
+		 	<div data-dojo-type="sc/plat/dojo/layout/AdvancedTableLayout" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								cols : 4  
+	 					}">
+		 	</div>  
+		 	</div> 
+<div data-dojo-type="dijit/form/Button" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_EstimatedDelay1' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '178' , 
+		'class' : 'idxBorderButton idxSpecialButton delaybutton ' , 
+		_sc_extensibility_position : 'after' , 
+		style : 'padding-top:10px; padding-right:0px;' , 
+		_sc_extensibility_referenceUId : 'extn_Estimated_Info'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 path : 			'CommonCodeList.CommonCode.0.CodeShortDescription'
+,
+		 namespace : 			'extn_CurbsideCommomCodeList'
+	}
+	}
+			}
+		}
+	 					}">
+		 	</div>  
+			<div data-dojo-type="dijit/form/Button" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_EstimatedDelay1' , 
+		_sc_extensibility_operation : 'move' , 
+		_sc_extensibility_moveOrder : '189' , 
+		_sc_extensibility_position : 'before' , 
+		_sc_extensibility_referenceUId : 'extn_EstimatedDelay4'  
+	 					}">
+		 	</div> 
+			<div data-dojo-type="dijit/form/Button" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_EstimatedDelay1' , 
+		_sc_extensibility_operation : 'move' , 
+		_sc_extensibility_moveOrder : '186' , 
+		_sc_extensibility_position : 'after' , 
+		_sc_extensibility_referenceUId : 'extn_EstimatedDelay2'  
+	 					}">
+		 	</div> 
+			<div data-dojo-type="dijit/form/Button" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_EstimatedDelay2' , 
+		_sc_extensibility_operation : 'move' , 
+		_sc_extensibility_moveOrder : '190' , 
+		_sc_extensibility_position : 'before' , 
+		_sc_extensibility_referenceUId : 'extn_EstimatedDelay4'  
+	 					}">
+		 	</div> 
+			<div data-dojo-type="dijit/form/Button" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_EstimatedDelay2' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '179' , 
+		'class' : 'idxBorderButton idxSpecialButton delaybutton ' , 
+		_sc_extensibility_position : 'after' , 
+		style : 'padding-top:10px; padding-right:0px;' , 
+		_sc_extensibility_referenceUId : 'extn_Estimated_Info'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 path : 			'CommonCodeList.CommonCode.1.CodeShortDescription'
+,
+		 namespace : 			'extn_CurbsideCommomCodeList'
+	}
+	}
+			}
+		}
+	 					}">
+		 	</div>  
+			<div data-dojo-type="dijit/form/Button" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_EstimatedDelay3' , 
+		_sc_extensibility_operation : 'move' , 
+		_sc_extensibility_moveOrder : '191' , 
+		_sc_extensibility_position : 'before' , 
+		_sc_extensibility_referenceUId : 'extn_EstimatedDelay4'  
+	 					}">
+		 	</div> 
+			<div data-dojo-type="dijit/form/Button" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_EstimatedDelay2' , 
+		_sc_extensibility_operation : 'move' , 
+		_sc_extensibility_moveOrder : '185' , 
+		_sc_extensibility_position : 'after' , 
+		_sc_extensibility_referenceUId : 'extn_EstimatedDelay3'  
+	 					}">
+		 	</div>  
+			<div data-dojo-type="dijit/form/Button" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_EstimatedDelay3' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '180' , 
+		'class' : 'idxBorderButton idxSpecialButton delaybutton ' , 
+		_sc_extensibility_position : 'after' , 
+		style : 'padding-top:10px; padding-right:0px;' , 
+		_sc_extensibility_referenceUId : 'extn_Estimated_Info'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 path : 			'CommonCodeList.CommonCode.2.CodeShortDescription'
+,
+		 namespace : 			'extn_CurbsideCommomCodeList'
+	}
+	}
+			}
+		}
+	 					}">
+		 	</div>  
+			<div data-dojo-type="dijit/form/Button" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_EstimatedDelay3' , 
+		_sc_extensibility_operation : 'move' , 
+		_sc_extensibility_moveOrder : '184' , 
+		_sc_extensibility_position : 'after' , 
+		_sc_extensibility_referenceUId : 'extn_EstimatedDelay4'  
+	 					}">
+		 	</div>
+	<div data-dojo-type="dijit/form/Button" 
+	 					data-dojo-props="data_dojo_props_diff: {	
+		uId : 'extn_EstimatedDelay4' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '181' , 
+		'class' : 'idxBorderButton idxSpecialButton dijitFourButton' , 
+		_sc_extensibility_position : 'after' , 
+		style : 'padding-top:10px; padding-right:0px;' , 
+		_sc_extensibility_referenceUId : 'extn_Estimated_Info'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 path : 			'CommonCodeList.CommonCode.3.CodeShortDescription'
+,
+		 namespace : 			'extn_CurbsideCommomCodeList'
+	}
+	}
+			}
+		}
+	 					}">
+		 	</div>  	
+<div data-dojo-type="dijit/form/Button" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_EstimatedDelay4' , 
+		_sc_extensibility_operation : 'move' , 
+		_sc_extensibility_moveOrder : '183' , 
+		_sc_extensibility_position : 'after' , 
+		_sc_extensibility_referenceUId : 'extn_Estimated_Info'  
+	 					}">
+		 	</div>  			
+<!--OMNI-79056 Curbside Estimated Time delay Changes - END -->
+			<!--OMNI-79668 Curbside Initiated At - Date Time Display - START-->
+			<div data-dojo-type="idx/layout/ContentPane" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_CurbsideInitiatedPane' , 
+					_sc_extensibility_operation : 'insert' , 
+					_sc_extensibility_moveOrder : '194' , 
+					_sc_extensibility_position : 'after' , 
+					_sc_extensibility_referenceUId : 'extn_Attended_by'  
+	 			}">
+		 	</div>  
+			<!--OMNI-79668 Curbside Initiated At - Date Time Display - END-->
+		 	<div data-dojo-type="dijit/form/Button" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_FinishPick_button' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '2' , 
+		'class' : 'floatRight idxSpecialButton extnFinishbuttoncss' , 
+		spanLabel : true , 
+		_sc_extensibility_position : 'after' , 
+		style : 'padding-top:3px;' , 
+		_sc_extensibility_referenceUId : 'productScanPanel'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	label : 			this.getSimpleBundleString('extn_Click_here_to_Complete_Order')
+			}
+		}
+	 					}">
+		 	</div>  
+		<!--  END - (OMNI - 1409)  : BOPIS: Finish Pickup Button for BOPIS orders -->
+		 	<div data-dojo-type="dijit/form/Button" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_FinishPick_button' , 
+		_sc_extensibility_operation : 'move' , 
+		_sc_extensibility_moveOrder : '3' , 
+		_sc_extensibility_position : 'before' , 
+		_sc_extensibility_referenceUId : 'shipmentDetails'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="dijit/form/Button" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_FinishPick_button' , 
+		_sc_extensibility_operation : 'move' , 
+		_sc_extensibility_moveOrder : '4' , 
+		_sc_extensibility_position : 'before' , 
+		_sc_extensibility_referenceUId : 'lblOrderNo'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="dijit/form/Button" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_FinishPick_button' , 
+		_sc_extensibility_operation : 'move' , 
+		_sc_extensibility_moveOrder : '5' , 
+		_sc_extensibility_position : 'before' , 
+		_sc_extensibility_referenceUId : 'productScanPanel'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="dijit/form/Button" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_FinishPick_button' , 
+		_sc_extensibility_operation : 'move' , 
+		_sc_extensibility_moveOrder : '6' , 
+		_sc_extensibility_position : 'before' , 
+		_sc_extensibility_referenceUId : 'shipmentDetails'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="dijit/form/Button" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_FinishPick_button' , 
+		_sc_extensibility_operation : 'move' , 
+		_sc_extensibility_moveOrder : '7' , 
+		_sc_extensibility_position : 'last' , 
+		_sc_extensibility_referenceUId : 'shipmentDetails'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="dijit/form/Button" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_FinishPick_button' , 
+		_sc_extensibility_operation : 'move' , 
+		_sc_extensibility_moveOrder : '8' , 
+		_sc_extensibility_position : 'before' , 
+		_sc_extensibility_referenceUId : 'lblOrderNo'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="dijit/form/Button" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_FinishPick_button' , 
+		_sc_extensibility_operation : 'move' , 
+		_sc_extensibility_moveOrder : '9' , 
+		_sc_extensibility_position : 'before' , 
+		_sc_extensibility_referenceUId : 'productScanForm'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="dijit/form/Button" 
+	 					data-dojo-props="data_dojo_props_diff: {
+<!--  //Combining Customer Pickup screen OMNI-8660 -Start -->
+	 								uId : 'extn_FinishPick_button' , 
+		_sc_extensibility_operation : 'move' , 
+		_sc_extensibility_moveOrder : '59' , 
+		_sc_extensibility_position : 'before' , 
+		_sc_extensibility_referenceUId : 'extn_Previous_button'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="dijit/form/Button" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_FinishPick_button' , 
+		_sc_extensibility_operation : 'move' , 
+		_sc_extensibility_moveOrder : '60' , 
+		_sc_extensibility_position : 'before' , 
+		_sc_extensibility_referenceUId : 'extn_Close_button'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="dijit/form/Button" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_FinishPick_button' , 
+		_sc_extensibility_operation : 'move' , 
+		_sc_extensibility_moveOrder : '99' , 
+		_sc_extensibility_position : 'after' , 
+		_sc_extensibility_referenceUId : 'extn_Previous_button'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="dijit/form/Button" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_FinishPick_button' , 
+		_sc_extensibility_operation : 'move' , 
+		_sc_extensibility_moveOrder : '100' , 
+		_sc_extensibility_position : 'before' , 
+		_sc_extensibility_referenceUId : 'extn_Close_button'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="dijit/form/Button" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_FinishPick_button' , 
+		_sc_extensibility_operation : 'move' , 
+		_sc_extensibility_moveOrder : '101' , 
+		_sc_extensibility_position : 'after' , 
+		_sc_extensibility_referenceUId : 'extn_Previous_button'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="dijit/form/Button" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_FinishPick_button' , 
+		_sc_extensibility_operation : 'move' , 
+		_sc_extensibility_moveOrder : '102' , 
+		_sc_extensibility_position : 'before' , 
+		_sc_extensibility_referenceUId : 'extn_Close_button'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="dijit/form/Button" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_Close_button' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '54' , 
+		'class' : 'floatRight idxSpecialButton' , 
+		_sc_extensibility_position : 'before' , 
+		style : 'padding-right: 9px;margin-top:3px' , 
+		_sc_extensibility_referenceUId : 'extn_FinishPick_button'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	label : 			this.getSimpleBundleString('Action_Close')
+			}
+		}
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="dijit/form/Button" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_Close_button' , 
+		_sc_extensibility_operation : 'move' , 
+		_sc_extensibility_moveOrder : '55' , 
+		_sc_extensibility_position : 'after' , 
+		_sc_extensibility_referenceUId : 'extn_FinishPick_button'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="dijit/form/Button" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_Close_button' , 
+		_sc_extensibility_operation : 'move' , 
+		_sc_extensibility_moveOrder : '56' , 
+		_sc_extensibility_position : 'before' , 
+		_sc_extensibility_referenceUId : 'extn_FinishPick_button'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="dijit/form/Button" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_Close_button' , 
+		_sc_extensibility_operation : 'move' , 
+		_sc_extensibility_moveOrder : '94' , 
+		_sc_extensibility_position : 'before' , 
+		_sc_extensibility_referenceUId : 'extn_FinishPick_button'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="dijit/form/Button" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_Close_button' , 
+		_sc_extensibility_operation : 'move' , 
+		_sc_extensibility_moveOrder : '96' , 
+		_sc_extensibility_position : 'after' , 
+		_sc_extensibility_referenceUId : 'extn_FinishPick_button'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="dijit/form/Button" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_Close_button' , 
+		_sc_extensibility_operation : 'move' , 
+		_sc_extensibility_moveOrder : '97' , 
+		_sc_extensibility_position : 'after' , 
+		_sc_extensibility_referenceUId : 'extn_Previous_button'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="dijit/form/Button" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_Close_button' , 
+		_sc_extensibility_operation : 'move' , 
+		_sc_extensibility_moveOrder : '98' , 
+		_sc_extensibility_position : 'before' , 
+		_sc_extensibility_referenceUId : 'extn_Previous_button'  
+	 					}">
+		 	</div>  
+			<!--  OMNI - 10509 In web SOM "Previous" button on customer pickup page is not responding. - START -->
+		 	<div data-dojo-type="dijit/form/Button" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								renderHidden : true , 
+		uId : 'extn_Previous_button' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '57' , 
+		'class' : 'floatRight idxSpecialButton' , 
+		_sc_extensibility_position : 'before' , 
+		style : 'padding-right:9px;margin-top:3px' , 
+		_sc_extensibility_referenceUId : 'extn_Close_button'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	label : 			this.getSimpleBundleString('b_Previous')
+			}
+		}
+	 					}">
+		 	</div>  
+			<!-- OMNI - 10509 In web SOM "Previous" button on customer pickup page is not responding. - END -->
+		 	<div data-dojo-type="dijit/form/Button" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_Previous_button' , 
+		_sc_extensibility_operation : 'move' , 
+		_sc_extensibility_moveOrder : '58' , 
+		_sc_extensibility_position : 'after' , 
+		_sc_extensibility_referenceUId : 'extn_Close_button'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="dijit/form/Button" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_Previous_button' , 
+		_sc_extensibility_operation : 'move' , 
+		_sc_extensibility_moveOrder : '95' , 
+		_sc_extensibility_position : 'before' , 
+		_sc_extensibility_referenceUId : 'extn_FinishPick_button'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="dijit/form/Button" 
+	 					data-dojo-props="data_dojo_props_diff: {
+<!--   //Combining Customer Pickup screen OMNI-8660 -END-->
+	 								uId : 'extn_FinishPick_button2new' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '46' , 
+		'class' : 'floatRight idxSpecialButton extnFinishbuttoncss' , 
+		_sc_extensibility_position : 'after' , 
+		style : 'float:right;margin-top:9px;margin-right:9px' , 
+		_sc_extensibility_referenceUId : 'extn_Close_button2new'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	label : 			this.getSimpleBundleString('extn_Click_here_to_Complete_Order')
+			}
+		}
+	 					}">
+		<!--  END - (OMNI - 1409)  : BOPIS: Finish Pickup Button for BOPIS orders -->
+		 	</div>  
+		 	<div data-dojo-type="dijit/form/Button" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_FinishPick_button2new' , 
+		_sc_extensibility_operation : 'move' , 
+		_sc_extensibility_moveOrder : '47' , 
+		_sc_extensibility_position : 'before' , 
+		_sc_extensibility_referenceUId : 'extn_Close_button2new'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="dijit/form/Button" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_FinishPick_button2new' , 
+		_sc_extensibility_operation : 'move' , 
+		_sc_extensibility_moveOrder : '48' , 
+		_sc_extensibility_position : 'before' , 
+		_sc_extensibility_referenceUId : 'extn_Previous_button2new'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="dijit/form/Button" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_FinishPick_button2new' , 
+		_sc_extensibility_operation : 'move' , 
+		_sc_extensibility_moveOrder : '51' , 
+		_sc_extensibility_position : 'first' , 
+		_sc_extensibility_referenceUId : 'extn_FinishPick_newcontentpane'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="dijit/form/Button" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_FinishPick_button2new' , 
+		_sc_extensibility_operation : 'move' , 
+		_sc_extensibility_moveOrder : '90' , 
+		_sc_extensibility_position : 'last' , 
+		_sc_extensibility_referenceUId : 'extn_FinishPick_newcontentpane'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="dijit/form/Button" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_FinishPick_button2new' , 
+		_sc_extensibility_operation : 'move' , 
+		_sc_extensibility_moveOrder : '91' , 
+		_sc_extensibility_position : 'before' , 
+		_sc_extensibility_referenceUId : 'extn_Previous_button2new'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="dijit/form/Button" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_FinishPick_button2new' , 
+		_sc_extensibility_operation : 'move' , 
+		_sc_extensibility_moveOrder : '106' , 
+		_sc_extensibility_position : 'before' , 
+		_sc_extensibility_referenceUId : 'extn_Close_button2new'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="dijit/form/Button" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_Close_button2new' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '45' , 
+		'class' : 'idxSpecialButton' , 
+		_sc_extensibility_position : 'after' , 
+		style : 'float:right; padding-right:9px;margin-top:9px;' , 
+		_sc_extensibility_referenceUId : 'extn_Previous_button2new'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	label : 			this.getSimpleBundleString('Action_Close')
+			}
+		}
+	 					}">
+		 	</div>  
+		<!--  END - (OMNI - 1409)  : BOPIS: Finish Pickup Button for BOPIS orders -->
+		 	<div data-dojo-type="dijit/form/Button" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_Close_button2new' , 
+		_sc_extensibility_operation : 'move' , 
+		_sc_extensibility_moveOrder : '49' , 
+		_sc_extensibility_position : 'before' , 
+		_sc_extensibility_referenceUId : 'extn_Previous_button2new'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="dijit/form/Button" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_Close_button2new' , 
+		_sc_extensibility_operation : 'move' , 
+		_sc_extensibility_moveOrder : '52' , 
+		_sc_extensibility_position : 'last' , 
+		_sc_extensibility_referenceUId : 'extn_FinishPick_newcontentpane'  
+	 					}">
+		 	</div>  
+		<!--OMNI- 105500 Start-->
+			<div data-dojo-type="dijit/form/Button" 
+		 					data-dojo-props="data_dojo_props_diff: {
+		 								uId : 'extn_resetInstoreOrder' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '206' , 
+		'class' : 'idxSpecialButton extnresetcurbsidebuttoncss ' , 
+		_sc_extensibility_position : 'first' , 
+		style : 'padding-left:9px; margin-top:5px;' , 
+		_sc_extensibility_referenceUId : 'extn_InstoreReset'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	label : 			this.getSimpleBundleString('extn_Reset_Instore_Pickup')
+			}
+		}
+		 					}">
+		 	</div>
+		<!--OMNI- 105500 End-->
+		<!--  START - (OMNI - 1409)  : BOPIS: Finish Pickup Button for BOPIS orders -->
+		  <!-- OMNI - 10509 In web SOM "Previous" button on customer pickup page is not responding. - START -->
+		 	<div data-dojo-type="dijit/form/Button" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								renderHidden : true , 
+		uId : 'extn_Previous_button2new' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '44' , 
+		'class' : 'idxSpecialButton' , 
+		_sc_extensibility_position : 'after' , 
+		style : 'float:right; padding-right:9px; margin-top:9px;' , 
+		_sc_extensibility_referenceUId : 'tpProductLines'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	label : 			this.getSimpleBundleString('b_Previous')
+			}
+		}
+	 					}">
+		 	</div>
+<!-- OMNI - 10509 In web SOM "Previous" button on customer pickup page is not responding. - END -->
+		<!--  END - (OMNI - 1409)  : BOPIS: Finish Pickup Button for BOPIS orders -->
+		 	<div data-dojo-type="dijit/form/Button" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_Previous_button2new' , 
+		_sc_extensibility_operation : 'move' , 
+		_sc_extensibility_moveOrder : '53' , 
+		_sc_extensibility_position : 'last' , 
+		_sc_extensibility_referenceUId : 'extn_FinishPick_newcontentpane'  
+	 					}">
+		 	</div> 
+        <!--  START - (OMNI - 1409)  : BOPIS: Finish Pickup Button for BOPIS orders -->			
+		 	<div data-dojo-type="dijit/form/Button" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								renderHidden : false , 
+		uId : 'extn_customer_piickup_button' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '1' , 
+		'class' : 'idxSpecialButton longButtons' , 
+		_sc_extensibility_position : 'after' , 
+		_sc_extensibility_referenceUId : 'scanProductIdTxt'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	label : 			this.getSimpleBundleString('extn_Start_Paper_Work')
+			}
+		}
+	 					}">
+		 	</div> 
+        <!--  END - (OMNI - 1409)  : BOPIS: Finish Pickup Button for BOPIS orders -->			
+		 	<div data-dojo-type="dijit/form/Button" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_customer_piickup_button' , 
+		_sc_extensibility_operation : 'move' , 
+		_sc_extensibility_moveOrder : '129' , 
+		_sc_extensibility_position : 'before' , 
+		_sc_extensibility_referenceUId : 'extn_FinishPickupButton1'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="dijit/form/Button" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_customer_piickup_button' , 
+		_sc_extensibility_operation : 'move' , 
+		_sc_extensibility_moveOrder : '131' , 
+		_sc_extensibility_position : 'before' , 
+		_sc_extensibility_referenceUId : 'extn_FinishPickupButtonpanel1'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="dijit/form/Button" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_customer_piickup_button' , 
+		_sc_extensibility_operation : 'move' , 
+		_sc_extensibility_moveOrder : '133' , 
+		_sc_extensibility_position : 'after' , 
+		_sc_extensibility_referenceUId : 'extn_resetCurbsideButton'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="dijit/form/Button" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_customer_piickup_button' , 
+		_sc_extensibility_operation : 'move' , 
+		_sc_extensibility_moveOrder : '134' , 
+		_sc_extensibility_position : 'after' , 
+		_sc_extensibility_referenceUId : 'scanProductIdTxt'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="dijit/form/Button" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_FinishPickUpButton1' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '128' , 
+		'class' : 'floatRight idxSpecialButton extnCompleteOrderbuttoncss' , 
+		_sc_extensibility_position : 'before' , 
+		_sc_extensibility_referenceUId : 'extn_resetCurbsideButton'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	label : 			this.getSimpleBundleString('extn_CLICK_HERE_TO_br_COMPLETE_ORDER')
+			}
+		}
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="dijit/form/Button" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_resetCurbsideButton' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '119' , 
+		'class' : 'idxSpecialButton extnresetcurbsidebuttoncss' , 
+		_sc_extensibility_position : 'after' , 
+		style : 'padding-left:9px; margin-bottom:5px;' , 
+		_sc_extensibility_referenceUId : 'extn_FinishPick_newcontentpane'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 path : 			'Shipment'
+,
+		 namespace : 			'extn_resetCurbsideOrders_output'
+	}
+	}
+,	
+			 	label : 			this.getSimpleBundleString('extn_RESET_CURBSIDE_ORDER')
+			}
+		}
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="dijit/form/Button" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_resetCurbsideButton' , 
+		_sc_extensibility_operation : 'move' , 
+		_sc_extensibility_moveOrder : '127' , 
+		_sc_extensibility_position : 'first' , 
+		_sc_extensibility_referenceUId : 'extn_CurbsideResetDownButton'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="dijit/form/Button" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_FinishPickupButton1' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '107' , 
+		'class' : 'idxSpecialButton extnFinishbuttoncss longButtons' , 
+		_sc_extensibility_position : 'first' , 
+		_sc_extensibility_referenceUId : 'extn_FinishPickupButtonpanel1'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	label : 			this.getSimpleBundleString('extn_Click_here_to_Complete_Order')
+			}
+		}
+	 					}">
+		 	</div>  
+			<!-- OMNI-8710, 8717: UI Align and Payment Info - Start -->
+			<div data-dojo-type="sc/plat/dojo/widgets/Label" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_CityStateZip' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '144' , 
+		'class' : 'blockComponent noColonLabels comappsWrapWord zeroWidthLabelValueDesktop extn_ShpPnlfont' , 
+		_sc_extensibility_position : 'last' , 
+		_sc_extensibility_referenceUId : 'extn_Address'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 path : 			'Shipment.BillToAddress'
+,
+		 dynamicBindingFunc : 			'getCityStateZip'
+,
+		 namespace : 			'ShipmentDetails'
+	}
+	}
+			}
+		}
+	 					}">
+		 	</div>
+			<!-- OMNI-8710, 8717: UI Align and Payment Info - End -->
+		 	<div data-dojo-type="sc/plat/dojo/widgets/Label" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_label' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '86' , 
+		'class' : 'blockComponent' , 
+		_sc_extensibility_position : 'first' , 
+		_sc_extensibility_referenceUId : 'extn_contentpane'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/Label" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_label1' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '87' , 
+		'class' : 'blockComponent' , 
+		_sc_extensibility_position : 'last' , 
+		_sc_extensibility_referenceUId : 'extn_contentpane'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/Label" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_label2' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '88' , 
+		'class' : 'blockComponent' , 
+		_sc_extensibility_position : 'last' , 
+		_sc_extensibility_referenceUId : 'extn_contentpane'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="idx/form/TextBox" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								renderHidden : true , 
+		_sc_extensibility_operation : 'change' , 
+		_sc_extensibility_referenceUId : 'scanProductIdTxt'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/Image" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_imgPhoneNo' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '71' , 
+		'class' : 'defaultImageSize floatLeft' , 
+		_sc_extensibility_position : 'first' , 
+		imageSrc : 'wsc/resources/css/icons/images/phone.png' , 
+		appendToContextRoot : true , 
+		_sc_extensibility_referenceUId : 'extn_pnlPhoneHolder'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	title : 			this.getSimpleBundleString('Tooltip_PhoneNo')
+,	
+			 	imageAlt : 			this.getSimpleBundleString('Tooltip_PhoneNo')
+			}
+		}
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/Image" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_imgEmailLabel' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '74' , 
+		'class' : 'defaultImageSize floatLeft' , 
+		_sc_extensibility_position : 'first' , 
+		imageSrc : 'wsc/resources/css/icons/images/email.png' , 
+		appendToContextRoot : true , 
+		_sc_extensibility_referenceUId : 'extn_pnlEmailHolder'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	title : 			this.getSimpleBundleString('Tooltip_Email')
+,	
+			 	imageAlt : 			this.getSimpleBundleString('Tooltip_Email')
+			}
+		}
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								renderHidden : true , 
+		_sc_extensibility_operation : 'change' , 
+		_sc_extensibility_referenceUId : 'Hold_LocationLabel'  
+	 					}">
+		 	</div>
+			<!-- OMNI-79883 Complete Curbside Order By Start -->
+		 	<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_finishCurbsideOrderBy' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '199' , 
+		'class' : 'extn_marginleftestimatedinfo extn_estimatedinfocolor extn_curbsideinfoColorCss' , 
+		_sc_extensibility_position : 'first' , 
+		style : 'padding-top:10px; ' , 
+		_sc_extensibility_referenceUId : 'extn_completeCurbsideOrderBy'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	label : 			this.getSimpleBundleString('extn_Complete_Curbside_Order_By')
+			}
+		}
+	 					}">
+		 	</div>  
+			<!-- OMNI-79883 Complete Curbside Order By End -->
+			<!-- OMNI-8710, 8717: UI Align and Payment Info - Start --> 
+			<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_lblCustomerInfo' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '136' , 
+		'class' : 'extn_CustomerInfo' , 
+		_sc_extensibility_position : 'before' , 
+		_sc_extensibility_referenceUId : 'extn_lblOrderNo'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	label : 			this.getSimpleBundleString('Title_CustomerFields')
+			}
+		}
+	 					}">
+		 	</div>
+			<!-- OMNI-8710, 8717: UI Align and Payment Info - End -->
+		 	<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								renderHidden : true , 
+		uId : 'extn_lblOrderNo' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '92' , 
+		'class' : 'groupHeader comappsWrapWord autoLabelZeroWidth hashNumberAlign' , 
+		_sc_extensibility_position : 'after' , 
+		_sc_extensibility_referenceUId : 'extn_PersonInfoContainer'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 path : 			'Shipment.DisplayOrderNo'
+,
+		 namespace : 			'ShipmentDetails'
+	}
+	}
+,	
+			 	label : 			this.getSimpleBundleString('Label_OrderNo')
+			}
+		}
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_lblOrderNo' , 
+		_sc_extensibility_operation : 'move' , 
+		_sc_extensibility_moveOrder : '93' , 
+		_sc_extensibility_position : 'before' , 
+		_sc_extensibility_referenceUId : 'extn_lblName'  
+	 					}">
+		 	</div>
+			<!-- OMNI-8710, 8717: UI Align and Payment Info - Start -->
+			<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_lblOrderNo' , 
+		_sc_extensibility_operation : 'move' , 
+		_sc_extensibility_moveOrder : '152' , 
+		_sc_extensibility_position : 'before' , 
+		_sc_extensibility_referenceUId : 'extn_pnlSpilt'  
+	 					}">
+		 	</div>
+			<!-- OMNI-8710, 8717: UI Align and Payment Info - End --> 
+		 	<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_lblName' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '69' , 
+		'class' : 'blockComponent a11yHiddenLabel extn_receivedLabel' , 
+		_sc_extensibility_position : 'first' , 
+		_sc_extensibility_referenceUId : 'extn_PersonInfoContainer'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 path : 			'Shipment.BillToAddress.FirstName'
+,
+		 dynamicBindingFunc : 			'getFormattedNameDisplay'
+,
+		 namespace : 			'ShipmentDetails'
+	}
+	}
+,	
+			 	label : 			this.getSimpleBundleString('Label_Customername')
+			}
+		}
+	 					}">
+		 	</div>  
+		<!-- OMNI-8710, 8717: UI Align and Payment Info - Start -->
+		<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_lblName' , 
+		_sc_extensibility_operation : 'move' , 
+		_sc_extensibility_moveOrder : '141' , 
+		_sc_extensibility_position : 'first' , 
+		_sc_extensibility_referenceUId : 'extn_pnlAddress'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_AddressLine1' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '143' , 
+		'class' : 'blockComponent a11yHiddenLabel extn_ShpPnlfont' , 
+		_sc_extensibility_position : 'first' , 
+		_sc_extensibility_referenceUId : 'extn_Address'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 path : 			'Shipment.BillToAddress.AddressLine1'
+,
+		 namespace : 			'ShipmentDetails'
+	}
+	}
+			}
+		}
+	 					}">
+		 	</div>
+			<!-- OMNI-8710, 8717: UI Align and Payment Info - End -->
+		 	<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_lblDayPhone' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '72' , 
+		'class' : 'icon-image-label  a11yHiddenLabel zeroWidthLabelKey' , 
+		_sc_extensibility_position : 'after' , 
+		_sc_extensibility_referenceUId : 'extn_imgPhoneNo'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 path : 			'Shipment.BillToAddress.DayPhone'
+,
+		 namespace : 			'ShipmentDetails'
+	}
+	}
+,	
+			 	label : 			this.getSimpleBundleString('Label_Phone_number')
+			}
+		}
+	 					}">
+		 	</div>
+			<!-- OMNI-8710, 8717: UI Align and Payment Info - Start -->
+			<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								renderHidden : true , 
+		uId : 'extn_VehicleMake' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '149' , 
+		'class' : 'extn_marginleft extn_CarMakeColor extn_CarMakeColorCss' , 
+		_sc_extensibility_position : 'first' , 
+		_sc_extensibility_referenceUId : 'extn_pnlRight'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 path : 			'Shipment.Extn.VehicleMake'
+,
+		 namespace : 			'ShipmentDetails'
+	}
+	}
+,	
+			 	label : 			this.getSimpleBundleString('extn_Vehicle_Make')
+			}
+		}
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								renderHidden : true , 
+		uId : 'extn_VehicleColor' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '150' , 
+		'class' : 'extn_marginleft extn_CarMakeColor extn_CarMakeColorCss' , 
+		_sc_extensibility_position : 'last' , 
+		_sc_extensibility_referenceUId : 'extn_pnlRight'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 path : 			'Shipment.Extn.VehicleColor'
+,
+		 namespace : 			'ShipmentDetails'
+	}
+	}
+,	
+			 	label : 			this.getSimpleBundleString('extn_Vehicle_Color')
+			}
+		}
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								renderHidden : true , 
+		uId : 'extn_ParkingSpot' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '151' , 
+		'class' : 'extn_marginleft extn_CarMakeColor extn_CarMakeColorCss' , 
+		_sc_extensibility_position : 'last' , 
+		_sc_extensibility_referenceUId : 'extn_pnlRight'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 path : 			'Shipment.Extn.ParkingSpot'
+,
+		 namespace : 			'ShipmentDetails'
+	}
+	}
+,	
+			 	label : 			this.getSimpleBundleString('extn_Parking_Spot')
+			}
+		}
+	 					}">
+		 	</div>  
+			<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								renderHidden : true , 
+		uId : 'extn_VehicleType' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '171' , 
+		'class' : 'extn_marginleft extn_CarMakeColor extn_CarMakeColorCss' , 
+		_sc_extensibility_position : 'before' , 
+		_sc_extensibility_referenceUId : 'extn_VehicleMake'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 path : 			'Shipment.Extn.VehicleType'
+,
+		 namespace : 			'ShipmentDetails'
+	}
+	}
+,	
+			 	label : 			this.getSimpleBundleString('extn_Vehicle_Type')
+			}
+		}
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" 
+	 					data-dojo-props="data_dojo_props_diff: {
+						       renderHidden : true ,
+	 	uId : 'extn_UploadPlace' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '172' , 
+		'class' : 'extn_marginleft extn_CarMakeColor extn_CarMakeColorCss' , 
+		_sc_extensibility_position : 'after' , 
+		_sc_extensibility_referenceUId : 'extn_ParkingSpot'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 path : 			'Shipment.Extn.UploadPlace'
+,
+		 namespace : 			'ShipmentDetails'
+	}
+	}
+,	
+			 	label : 			this.getSimpleBundleString('extn_Customer_Preference')
+			}
+		}
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								renderHidden : true , 
+		uId : 'extn_PaymentInfo' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '154' , 
+		'class' : 'blockComponent extn_receivedLabel extn_textalign' , 
+		_sc_extensibility_position : 'first' , 
+		_sc_extensibility_referenceUId : 'extn_pnlPaymentInfo'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+	
+			 	label : 			this.getSimpleBundleString('extn_Visa_ending_in')
+			}
+		}
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								renderHidden : true , 
+		uId : 'extn_GiftCard' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '163' , 
+		'class' : 'blockComponent extn_receivedLabel extn_textalign' , 
+		_sc_extensibility_position : 'last' , 
+		_sc_extensibility_referenceUId : 'extn_pnlPaymentInfo'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 path : 			'Shipment.ShipmentLines.ShipmentLine.0.Order.PaymentMethods.PaymentMethod'
+,
+		 dynamicBindingFunc : 			'getPaymentType'
+,
+		 namespace : 			'ShipmentDetails'
+	}
+	}
+,	
+			 	label : 			this.getSimpleBundleString('extn_GiftCard_ending_in')
+			}
+		}
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								renderHidden : true , 
+		uId : 'extn_PaymentMethod' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '164' , 
+		'class' : 'blockComponent extn_receivedLabel extn_textalign' , 
+		_sc_extensibility_position : 'last' , 
+		_sc_extensibility_referenceUId : 'extn_pnlPaymentInfo'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 path : 			'Shipment.ShipmentLines.ShipmentLine.0.Order.PaymentMethods.PaymentMethod'
+,
+		 dynamicBindingFunc : 			'getPaymentType'
+,
+		 namespace : 			'ShipmentDetails'
+	}
+	}
+,	
+			 	label : 			this.getSimpleBundleString('Payment_Method')
+			}
+		}
+	 					}">
+		 	</div>
+			<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								renderHidden : true , 
+		uId : 'extn_PLCC' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '165' , 
+		'class' : 'blockComponent extn_receivedLabel extn_textalign' , 
+		_sc_extensibility_position : 'last' , 
+		_sc_extensibility_referenceUId : 'extn_pnlPaymentInfo'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 path : 			'Shipment.ShipmentLines.ShipmentLine.0.Order.PaymentMethods.PaymentMethod'
+,
+		 dynamicBindingFunc : 			'getPaymentType'
+,
+		 namespace : 			'ShipmentDetails'
+	}
+	}
+,	
+			 	label : 			this.getSimpleBundleString('extn_Academy_CreditCard_ending_in')
+			}
+		}
+	 					}">
+		 	</div> 
+			<!-- OMNI-8710, 8717: UI Align and Payment Info - End --> 
+		 	<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								renderHidden : true , 
+		uId : 'extn_Curbsidelbl' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '81' , 
+		'class' : 'blockComponent noColonLabels comappsWrapWord zeroWidthLabelValueDesktop extn_labelCss' , 
+		_sc_extensibility_position : 'first' , 
+		_sc_extensibility_referenceUId : 'extn_orderInfoPanel'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 path : 			'Shipment.Extn.ExtnCurbsidePickupInfo'
+,
+		 namespace : 			'ShipmentDetails'
+	}
+	}
+,	
+			 	label : 			this.getSimpleBundleString('extn_Curbbside_Make_Color')
+			}
+		}
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_lblShipmentNo' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '82' , 
+		'class' : 'blockComponent comappsWrapWord zeroWidthLabelValueDesktop extn_labelCssPadding' , 
+		_sc_extensibility_position : 'after' , 
+		_sc_extensibility_referenceUId : 'extn_Curbsidelbl'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 path : 			'Shipment.ShipmentNo'
+,
+		 namespace : 			'ShipmentDetails'
+	}
+	}
+,	
+			 	label : 			this.getSimpleBundleString('extn_Shipment_number')
+			}
+		}
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_datalabel3' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '83' , 
+		'class' : 'blockComponent comappsWrapWord zeroWidthLabelValueDesktop extn_labelCssPadding' , 
+		_sc_extensibility_position : 'after' , 
+		_sc_extensibility_referenceUId : 'extn_lblShipmentNo'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	label : 			this.getSimpleBundleString('extn_Max_Pick_Date')
+			}
+		}
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_lblAssignedToUsr' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '84' , 
+		'class' : 'blockComponent comappsWrapWord zeroWidthLabelValueDesktop extn_labelCssPadding' , 
+		_sc_extensibility_position : 'after' , 
+		_sc_extensibility_referenceUId : 'extn_datalabel3'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 path : 			'Shipment.AssignedToUserId'
+,
+		 namespace : 			'ShipmentDetails'
+	}
+	}
+,	
+			 	label : 			this.getSimpleBundleString('Label_Picker_ID')
+			}
+		}
+	 					}">
+		 	</div>
+			<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" 
+		 					data-dojo-props="data_dojo_props_diff: {
+		 								uId : 'extn_InStoreAttendedBy' , 
+		_sc_extensibility_operation : 'move' , 
+		_sc_extensibility_moveOrder : '213' , 
+		_sc_extensibility_position : 'first' , 
+		_sc_extensibility_referenceUId : 'extn_InStoreAssignee'  
+		 					}">
+		 	</div>
+			<!-- OMNI-8710, 8717: UI Align and Payment Info - Start --> 
+		 	<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								renderHidden : true , 
+		uId : 'extn_Visa' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '166' , 
+		'class' : 'blockComponent extn_receivedLabel extn_textalign' , 
+		_sc_extensibility_position : 'after' , 
+		_sc_extensibility_referenceUId : 'extn_PaymentInfo'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 path : 			'Shipment.ShipmentLines.ShipmentLine.0.Order'
+,
+		 dynamicBindingFunc : 			'getPaymentType'
+,
+		 namespace : 			'ShipmentDetails'
+	}
+	}
+,	
+			 	label : 			this.getSimpleBundleString('extn_Visa_ending_in')
+			}
+		}
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								renderHidden : true , 
+		uId : 'extn_AmericanExpress' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '167' , 
+		'class' : 'blockComponent extn_receivedLabel extn_textalign' , 
+		_sc_extensibility_position : 'after' , 
+		_sc_extensibility_referenceUId : 'extn_PaymentInfo'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 path : 			'Shipment.ShipmentLines.ShipmentLine.0.Order'
+,
+		 dynamicBindingFunc : 			'getPaymentType'
+,
+		 namespace : 			'ShipmentDetails'
+	}
+	}
+,	
+			 	label : 			this.getSimpleBundleString('extn_American_Express_ending_in')
+			}
+		}
+	 					}">
+		 	</div>  
+	<!-- OMNI-72389 Curbside customer pick up screen UI – Notification of related orders  START -->
+		 	<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_lblRelatedOrders' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '175' , 
+		'class' : 'extn_marginleft extn_Cancelled_PopUp_bold' , 
+		_sc_extensibility_position : 'after' , 
+		_sc_extensibility_referenceUId : 'extn_UploadPlace'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	label : 			this.getSimpleBundleString('extn_Related_Orders')
+			}
+		}
+	 					}">
+	 	</div>  
+	<!-- OMNI-72389 Curbside customer pick up screen UI – Notification of related orders  END -->
+		
+		 	<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								renderHidden : true , 
+		uId : 'extn_Discover' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '168' , 
+		'class' : 'blockComponent extn_receivedLabel extn_textalign' , 
+		_sc_extensibility_position : 'before' , 
+		_sc_extensibility_referenceUId : 'extn_GiftCard'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 path : 			'Shipment.ShipmentLines.ShipmentLine.0.Order'
+,
+		 dynamicBindingFunc : 			'getPaymentType'
+,
+		 namespace : 			'ShipmentDetails'
+	}
+	}
+,	
+			 	label : 			this.getSimpleBundleString('extn_Discover_ending_in')
+			}
+		}
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								renderHidden : true , 
+		uId : 'extn_MasterCard' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '169' , 
+		'class' : 'blockComponent extn_receivedLabel extn_textalign' , 
+		_sc_extensibility_position : 'after' , 
+		_sc_extensibility_referenceUId : 'extn_Discover'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 path : 			'Shipment.ShipmentLines.ShipmentLine.0.Order'
+,
+		 dynamicBindingFunc : 			'getPaymentType'
+,
+		 namespace : 			'ShipmentDetails'
+	}
+	}
+,	
+			 	label : 			this.getSimpleBundleString('extn_MasterCard_ending_in')
+			}
+		}
+	 					}">
+		 	</div>
+			<!-- OMNI-8710, 8717: UI Align and Payment Info - End -->  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/Link" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_FinishPickMobile_link' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '13' , 
+		'class' : 'idxSpecialButton' , 
+		_sc_extensibility_position : 'before' , 
+		style : 'margin-left:259px;' , 
+		_sc_extensibility_referenceUId : 'productScanForm'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	value : 			this.getSimpleBundleString('Label_Finish_Pickup')
+			}
+		}
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/Link" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_lnkEmail' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '75' , 
+		'class' : 'icon-image-label ellipsisText disableLink' , 
+		_sc_extensibility_position : 'after' , 
+		_sc_extensibility_referenceUId : 'extn_imgEmailLabel'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	title : 			this.getSimpleBundleString('Tooltip_Email')
+,	
+			 	imageAlt : 			this.getSimpleBundleString('Tooltip_Email')
+,	
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 path : 			'Shipment.BillToAddress.EMailID'
+,
+		 namespace : 			'ShipmentDetails'
+	}
+	}
+			}
+		}
+	 					}">
+		 	</div>  
+	<!-- OMNI-105502 - Start-->
+			<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" 
+		 					data-dojo-props="data_dojo_props_diff: {
+		 								uId : 'extn_finishInstoreOrderBy' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '204' , 
+		'class' : 'extn_marginleftestimatedinfo extn_estimatedinfocolor extn_curbsideinfoColorCss' , 
+		_sc_extensibility_position : 'first' , 
+		style : 'padding-top:10px;' , 
+		_sc_extensibility_referenceUId : 'extn_completeInstoreOrderBy'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	label : 			this.getBundleString('extn_Complete_In_Store_Order_By')
+			}
+		}
+		 					}">
+		 	</div>
+	<!-- OMNI-105502 - End-->
+	<!--OMNI-105503 - In Store Pick Up - Assignee - Start/End-->
+		 	<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" 
+		 					data-dojo-props="data_dojo_props_diff: {
+		 								uId : 'extn_InStoreAttendedBy' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '210' , 
+		'class' : 'extn_marginleftestimatedinfo extn_estimatedinfocolor' , 
+		_sc_extensibility_position : 'after' , 
+		style : 'padding-right:0px; margin-top:10px;' , 
+		_sc_extensibility_referenceUId : 'extn_finishInstoreOrderBy'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 path : 			'Shipment.Extn.ExtnInstoreAttendedBy'
+,
+		 namespace : 			'ShipmentDetails'
+	}
+	}
+,	
+			 	label : 			this.getBundleString('extn_Attended_by')
+			}
+		}
+		 					}">
+		 	</div>
+	<!-- OMNI-83819, OMNI-85035 Curbside Consolidation - Start-->
+	<div data-dojo-type="idx/layout/ContentPane" 
+	 	data-dojo-props="data_dojo_props_diff: {
+	 	uId : 'extn_APP_contentpane' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '196' ,
+		'class' : 'blockComponent' ,		
+		_sc_extensibility_position : 'after' , 
+		_sc_extensibility_referenceUId : 'extn_pnlEmailHolder'  
+	}">
+	</div>
+	<div data-dojo-type="sc/plat/dojo/widgets/Label" 
+	 	data-dojo-props="data_dojo_props_diff: {
+	 	uId : 'extn_AlternatePickupDetails' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '197' , 
+		'class' : 'blockComponent extn_APPColorCss' , 
+		_sc_extensibility_position : 'first' , 
+		_sc_extensibility_referenceUId : 'extn_APP_contentpane' 
+		,scExtensionDataFn :
+		function() { 
+			return { 
+			 	value : 			this.getSimpleBundleString('extn_AlternatePickupDetails')
+			}
+		}
+	}">
+	</div>
+	<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" 
+	 	data-dojo-props="data_dojo_props_diff: {
+	 	renderHidden : true , 
+		uId : 'extn_APP_Name' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '198' , 
+		'class' : 'blockComponent extn_APPColor extn_APPEmail' , 
+		_sc_extensibility_position : 'after' , 
+		_sc_extensibility_referenceUId : 'extn_AlternatePickupDetails'  
+ 		,scExtensionDataFn :
+		function() { 
+			return { 
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 path : 			'Shipment.Extn.APPName',
+		namespace : 			'ShipmentDetails'
+			}
+		},	
+		label : 			this.getSimpleBundleString('extn_APP_Name')
+			}
+		}
+		}">
+	</div>
+	<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" 
+	 	data-dojo-props="data_dojo_props_diff: {
+	 	renderHidden : true , 
+		uId : 'extn_APP_Email' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '199' , 
+		'class' : 'blockComponent extn_APPColor extn_APPEmail' , 
+		_sc_extensibility_position : 'last' , 
+		_sc_extensibility_referenceUId : 'extn_APP_contentpane'  
+ 		,scExtensionDataFn :
+		function() { 
+			return { 
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 path : 			'Shipment.Extn.APPEmail',
+		 namespace : 			'ShipmentDetails'
+			}
+		},	
+		label : 			this.getSimpleBundleString('extn_APP_Email')
+			}
+		}
+		}">
+	</div>
+	<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" 
+	 	data-dojo-props="data_dojo_props_diff: {
+	 	renderHidden : true , 
+		uId : 'extn_Total_ShipLines' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '200' , 
+		'class' : 'blockComponent comappsWrapWord zeroWidthLabelValueDesktop extn_labelCssPadding' , 
+		_sc_extensibility_position : 'before' , 
+		_sc_extensibility_referenceUId : 'extn_datalabel3'  
+ 		,scExtensionDataFn :
+		function() { 
+			return { 
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 path : 			'Shipment.TotalShipmentLines',
+		 namespace : 			'ShipmentDetails'
+			}
+		},	
+		label : 			this.getSimpleBundleString('extn_Total_ShipLines')
+			}
+		}
+		}">
+	</div>
+	<!-- OMNI-83819, OMNI-85035 Curbside Consolidation - End-->
+		 	<div data-dojo-type="sc/plat/dojo/widgets/Link" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								renderHidden : true , 
+		_sc_extensibility_operation : 'change' , 
+		_sc_extensibility_referenceUId : 'scanProduct'  
+	 					}">
+		</div>	
+		<!--  END - (OMNI - 1409)  : BOPIS: Finish Pickup Button for BOPIS orders -->
+		</div>

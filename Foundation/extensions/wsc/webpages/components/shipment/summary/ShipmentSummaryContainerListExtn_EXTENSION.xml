@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExtensionMetaData>
+    <ScreenExtension extnClassName="ShipmentSummaryContainerListExtn"
+        extnPackage="extn.components.shipment.summary"
+        originalScreen="wsc.components.shipment.summary.ShipmentSummaryContainerList"
+        originalScreenPackage="wsc.components.shipment.summary" type="diffrential">
+        <Items>
+            <DataLabel _sc_extensibility_operation="change"
+                _sc_extensibility_referenceUId="lbl_ContainerNo" label="$(_scSimpleBundle:extn_Container_)"/>
+		<!--OMNI-6583 Mobile Store - STS - TO Detailed Receiving Report Screen Start-->
+			 <ContentPane _sc_extensibility_moveOrder="1"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="lbl_ContainerWeight" uId="extn_contentpane_DR"/>
+            <ContentPane _sc_extensibility_moveOrder="3"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="cp_ContainerDetails" uId="extn_contentpane_DR"/>
+            <ContentPane _sc_extensibility_moveOrder="4"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="cp_ContainerDetails" uId="extn_contentpane_DR"/>
+			<Link _sc_extensibility_moveOrder="2"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="first"
+                _sc_extensibility_referenceUId="extn_contentpane_DR"
+                class="extnidxLinkRC"
+                label="$(_scBundle:Label_container_id)"
+                renderHidden="true" scuiDataType="ContainerNo" uId="extn_PendingContainerLink">
+                <BindingData>
+                    <SourceBinding namespace="container_Src" path="Container.ContainerNo"/>
+                </BindingData>
+            </Link>
+	  <!-- OMNI-6583 Mobile Store - STS - TO Detailed Receiving Report Screen END -->
+        </Items>
+	<!--OMNI-6583 Mobile Store - STS - TO Detailed Receiving Report Screen Start -->
+		 <Subscribers>
+            <Local>
+                <Subscriber description="extn_intializescreen"
+                    eventId="afterScreenInit" isExtn="true" sequence="51">
+                    <Handler methodName="extn_intializescreen"/>
+                </Subscriber>
+                <Subscriber description="extn_openTOSummaryScreen"
+                    eventId="extn_PendingContainerLink_onClick"
+                    isExtn="true" sequence="51">
+                    <Handler methodName="extn_openTOSummaryScreen"/>
+                </Subscriber>
+            </Local>
+        </Subscribers>
+	<!-- OMNI-6583 Mobile Store - STS - TO Detailed Receiving Report Screen END-->
+    </ScreenExtension>
+</ExtensionMetaData>

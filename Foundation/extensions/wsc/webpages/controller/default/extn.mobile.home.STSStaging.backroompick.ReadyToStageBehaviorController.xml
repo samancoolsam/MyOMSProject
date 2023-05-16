@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Controller className="com.sterlingcommerce.ui.web.platform.controller.SCUIXAPIMashupController" controllerId="extn.mobile.home.STSStaging.backroompick.ReadyToStageBehaviorController" requestMethodSupported="POST" screenId="extn.mobile.home.STSStaging.backroompick.ReadyToStage">
+	<MashupRefs>
+		<MashupRef mashupId="extn_readyToStage_ValidateScannedContainerID"
+			mashupRefId="extn_validateScannedContainerID" permissionId=""/>
+		<!-- OMNI-9142: Start -->
+		<MashupRef mashupId="extn_readyToStage_getSOOrderStatus"
+			mashupRefId="extn_getSOOrderStatus" permissionId=""/>
+		<!-- OMNI-9142: End -->			
+		<MashupRef mashupId="extn_readyToStage_getSOShipmentList"
+			mashupRefId="extn_getSOShipmentList" permissionId=""/>
+		<MashupRef mashupId="extn_readyToStage_updateExtnCancellationActioned"
+			mashupRefId="extn_updateExtnCancellationActionedOnSOCancellationByCustomer" permissionId=""/>
+		<MashupRef mashupId="extn_readyToStage_assignStagingLocationAtContainerLevel"
+			mashupRefId="extn_assignStagingLocationAtContainerLevel" permissionId=""/>
+		<MashupRef mashupId="extn_readyToStage_assignStagingLocationAtShpLineLevel"
+			mashupRefId="extn_assignStagingLocationAtShpLineLevel" permissionId=""/>
+		<MashupRef mashupId="extn_readyToStage_getTOShipmentList"
+			mashupRefId="extn_getTOShipmentList" permissionId=""/>
+		<MashupRef mashupId="extn_readyToStage_changeSOShipmentStatus"
+			mashupRefId="extn_changeSOShipmentStatus" permissionId=""/>
+		<!-- OMNI-9200: Start -->
+		<MashupRef mashupId="extn_readyToStage_UpdatePickUpQty"
+			mashupRefId="extn_changeShipment_UpdatePickUpQty" permissionId=""/>
+		<!-- OMNI-9200: End -->
+		<!-- OMNI-34725: Start -->
+		<MashupRef mashupId="extn_readyToStage_getCompleteOrderDetails"
+			mashupRefId="extn_getCompleteOrderDetails" permissionId=""/>
+		<!-- OMNI-34725: End -->
+		<!-- OMNI-63938: Start -->		
+		<MashupRef extnType="" mashupId="getPrinterDevice"
+		    mashupRefId="getPrinterDeviceRef" permissionId=""/>
+		<!-- OMNI-63938: End -->
+		<!--OMNI- 62990 Start-->
+		<MashupRef mashupId="extn_PrintOrderTicket"
+			mashupRefId="extn_PrintSTSOrderTicket_ref" permissionId=""/>	
+		<!--OMNI- 62990 End-->
+	 </MashupRefs>
+</Controller>

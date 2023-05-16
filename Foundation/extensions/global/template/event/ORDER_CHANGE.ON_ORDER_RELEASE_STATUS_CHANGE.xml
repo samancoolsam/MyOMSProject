@@ -1,0 +1,20 @@
+<Order BillToID="" CustomerRewardsNo="" DocumentType="" EnterpriseCode="" OrderHeaderKey="" OrderNo="" TeamCode="" SellerOrganizationCode="" OrganizationCode="">
+	<OrderLines>
+		<OrderLine OrderLineKey="" PrimeLineNo="" SubLineNo="" OrderedQty="" DeliveryMethod="" ShipNode="" LineType="" FulfillmentType="" PackListType="">
+			<OrderStatuses>
+				<OrderStatus OrderHeaderKey="" OrderLineKey="" OrderLineScheduleKey="" OrderReleaseKey="" OrderReleaseStatusKey="" PipelineKey="" ReceivingNode="" ShipNode="" Status="" StatusDate="" StatusDescription="" StatusQty="" StatusReason="" TotalQuantity="" ProcureFromNode=""/>
+			</OrderStatuses>
+			<Item ItemID="" ProductClass="" UnitOfMeasure=""/>
+			<FromOrderReleaseStatuses>
+				<FromOrderReleaseStatus DatesChanged="" MovedQty="" OrderReleaseStatusKey="" PipelineKey="" Status="" StatusDate="" StatusQty="" StatusReason="" TotalQuantity="">
+					<FromOrderLineSchedule BatchNo="" ExpectedDeliveryDate="" ExpectedShipmentDate="" LotNumber="" OrderLineScheduleKey="" ReceivingNode="" RevisionNo="" ShipByDate="" ShipNode="" TagNumber="" ProcureFromNode=""/>
+					<ToOrderReleaseStatuses>
+						<ToOrderReleaseStatus MovedQty="" OrderReleaseStatusKey="" PipelineKey="" Status="" StatusDate="" StatusQty="" StatusReason="" TotalQuantity="">
+							<ToOrderLineSchedule BatchNo="" ExpectedDeliveryDate="" ExpectedShipmentDate="" LotNumber="" OrderLineScheduleKey="" ReceivingNode="" RevisionNo="" ShipByDate="" ShipNode="" TagNumber="" ProcureFromNode=""/>
+						</ToOrderReleaseStatus>
+					</ToOrderReleaseStatuses>
+				</FromOrderReleaseStatus>
+			</FromOrderReleaseStatuses>
+		</OrderLine>
+	</OrderLines>
+</Order>

@@ -1,0 +1,441 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Order Action="" AuthorizationExpirationDate="" AutoCancelDate=""
+	BillToID="" BillToKey="" CancelOrderOnBackorder="Y" CarrierAccountNo=""
+	CarrierServiceCode="" CustCustPONo="" CustomerEMailID=""
+	CustomerPONo="" DefaultTemplate="" DeliveryCode="" 
+	 DocumentType="" DraftOrderFlag="" DriverDate=""
+	EnteredBy="" EnterpriseCode="" HoldFlag="" HoldReasonCode=""
+	IsShipComplete="Y" IsShipSingleNode="Y" MaxOrderStatus=""
+	MaxOrderStatusDesc="" MinOrderStatus="" MinOrderStatusDesc=""
+	OrderDate="" OrderHeaderKey="" OrderName="" OrderNo="" OrderPurpose=""
+	OrderType="" OriginalContainerKey="" OriginalTax=""
+	OriginalTotalAmount="" OtherCharges="" PaymentRuleId=""
+	PaymentStatus="" ReturnOrderHeaderKeyForExchange="" SCAC=""
+	 ScacAndService="" ScacAndServiceKey=""  SellerOrganizationCode="" ShipNode="" ShipToID=""
+	ShipToKey="" SourcingClassification="" Status=""
+	TotalAdjustmentAmount="" >
+		<OrderLines TotalNumberOfRecords="">
+		<OrderLine CanAddServiceLines="" CarrierAccountNo=""
+			CarrierServiceCode="" ChainedFromOrderHeaderKey=""
+			ChainedFromOrderLineKey="" CustomerLinePONo="" CustomerPONo=""
+			DeliveryCode="" DeliveryMethod="" 
+			DerivedFromOrderHeaderKey="" DerivedFromOrderLineKey=""
+			DerivedFromOrderReleaseKey="" DistributionRuleId="" FillQuantity=""
+			 FulfillmentType=""
+			FutureAvailabilityDate="" GiftFlag="" HoldFlag="" HoldReasonCode=""
+			InvoicedExtendedPrice="" InvoicedQty="" InvoicedQuantity=""
+			IsBundleParent="" ItemGroupCode="" KitCode="" KitQty=""
+			OrderHeaderKey="" OrderLineKey="" OrderedQty="" OrigOrderLineKey=""
+			OriginalOrderedQty="" OtherCharges=""  PipelineKey=""
+			PrimeLineNo="" ProcureFromNode="" ReceivingNode="" RemainingQty=""
+			ReqCancelDate="" ReqDeliveryDate="" ReqShipDate="" ReservationID=""
+			 ReturnReason=""
+			ReturnReasonLongDesc="" ReturnReasonShortDesc="" SCAC=""
+			ScacAndService="" ScacAndServiceKey="" SchedFailureReasonCode=""
+			ShipNode="" ShipToID=""
+			ShipToKey="" Status="" StatusQuantity="" SubLineNo="">
+			<ModificationTypes>
+				<!-- ModificationTypes and its child elements are not template-driven element-->
+				<ModificationType ImpactsPricing="" Level="" Name="" />
+			</ModificationTypes>
+
+			<Item CustomerItem="" CustomerItemDesc="" HarmonizedCode=""
+				ItemDesc="" ItemID="" ItemShortDesc="" ItemWeight=""
+				ItemWeightUOM="" ManufacturerItem="" ManufacturerItemDesc=""
+				ManufacturerName="" NMFCCode="" NMFCDescription="" ProductClass=""
+				ProductLine="" UnitCost="" UnitOfMeasure="">
+			</Item>
+
+			<!--Optional-->
+			<LinePriceInfo ActualPricingQty="" BundleTotal=""
+				DiscountPercentage="" InvoicedLineTotal="" InvoicedPricingQty=""
+				IsLinePriceForInformationOnly="" IsPriceLocked="" LineTotal=""
+				ListPrice="" OrderedPricingQty="" PricingQtyConversionFactor=""
+				PricingUOM="" RepricingQty="" RetailPrice="" SettledAmount=""
+				SettledQuantity="" TaxExemptionCertificate="" TaxableFlag=""
+				UnitPrice="" />
+
+			<!--Awards>
+				<Award AwardAmount="" AwardApplied="" AwardId=""
+				AwardKey="" AwardType="" DenialReason=""
+				Description="" PosReasonCode="" PromotionId="" PromotionKey=""/>
+				</Awards-->
+			<OrderLineOptions>
+				<OrderLineOption InvoicedOptionPrice=""
+					OptionDescription="" OptionItemID="" OptionPrice="" OptionUOM=""
+					OrderLineOptionKey="" PricingUOM="" Quantity="" />
+			</OrderLineOptions>
+
+			<DerivedFromOrder DocumentType="" EnterpriseCode=""
+				OrderNo="" />
+
+			<PersonInfoShipTo AddressLine1="" AddressLine2=""
+				AddressLine3="" AddressLine4="" AddressLine5="" AddressLine6=""
+				AlternateEmailID="" Beeper="" City="" Company="" Country=""
+				DayFaxNo="" DayPhone="" Department="" EMailID="" EveningFaxNo=""
+				EveningPhone="" FirstName="" IsCommercialAddress="" JobTitle=""
+				LastName="" MiddleName="" MobilePhone="" OtherPhone="" PersonID=""
+				PersonInfoKey="" State="" Suffix="" TaxGeoCode="" Title=""
+				ZipCode="" />
+
+			<!--Optional-->
+			<Instructions NumberOfInstructions="">
+				<!-- NumberOfInstructions is not a template driven attribute. -->
+				<Instruction InstructionText="" InstructionType=""
+					InstructionURL="" SequenceNo="" />
+			</Instructions>
+
+			<References>
+				<Reference Name="" Value="" />
+			</References>
+
+			<!--Optional-->
+			<KitLines NumberOfKitLines="">
+				<!-- NumberOfKitLines is not a template driven attribute. -->
+				<KitLine ComponentQty="" CustomerItem=""
+					CustomerItemDesc="" DepartmentCode="" ItemDesc="" ItemID=""
+					ItemShortDesc="" ItemWeight="" ItemWeightUOM="" KitQty=""
+					ProductClass="" SupplierItem="" SupplierItemDesc="" UPCCode=""
+					UnitCost="" UnitOfMeasure="">
+					<KitLineTranQuantity ComponentQty="" KitQty=""
+						TransactionalUOM="" />
+				</KitLine>
+			</KitLines>
+
+			<ProductItems>
+				<ProductItem ItemID="" Quantity="" UnitOfMeasure="" />
+			</ProductItems>
+
+			<OrderDates>
+				<OrderDate ActualDate="" CommittedDate="" DateTypeId=""
+					ExpectedDate="" OrderHeaderKey="" OrderLineKey=""
+					OrderReleaseKey="" RequestedDate="" />
+			</OrderDates>
+
+			<OrderLineInvAttRequest BatchNo="" LotAttribute1=""
+				LotAttribute2="" LotAttribute3="" LotKeyReference="" LotNumber=""
+				ManufacturingDate="" RevisionNo="" TagNumber="" />
+
+			<OrderLineSourcingControls>
+				<OrderLineSourcingCntrl InventoryCheckCode=""
+					Node="Required" ReasonText="" SuppressProcurement="Y"
+					SuppressSourcing="Y" />
+			</OrderLineSourcingControls>
+
+			<Notes NumberOfNotes="">
+				<Note AuditTransactionId="" ContactReference=""
+					ContactTime="" ContactType="" ContactUser=""
+					CustomerSatIndicator="" NoteText="" Priority="" ReasonCode=""
+					SequenceNo="" Tranid="" Tranname="" />
+			</Notes>
+
+			<OrderLineReservations>
+				<OrderLineReservation BatchNo="" DemandType="" ItemID=""
+					LotNumber="" Node="" ProductAvailabilityDate="" ProductClass=""
+					Quantity="" RequestedReservationDate="" RevisionNo="" TagNumber=""
+					UnitOfMeasure="" />
+			</OrderLineReservations>
+
+			<BundleParentLine OrderLineKey="" PrimeLineNo=""
+				SubLineNo="" />
+
+			<ChildOrderLineRelationships>
+				<OrderLineRelationship ChildOrderLineKey=""
+					OrderHeaderKey="" OrderLineRelationshipKey="" ParentOrderLineKey=""
+					RelationshipType="">
+					<ParentLine OrderLineKey="" PrimeLineNo=""
+						SubLineNo="" />
+
+					<ChildLine OrderLineKey="" PrimeLineNo=""
+						SubLineNo="" />
+				</OrderLineRelationship>
+			</ChildOrderLineRelationships>
+
+			<ParentOrderLineRelationships>
+				<OrderLineRelationship ChildOrderLineKey=""
+					OrderHeaderKey="" OrderLineRelationshipKey="" ParentOrderLineKey=""
+					RelationshipType="">
+					<ParentLine OrderLineKey="" PrimeLineNo=""
+						SubLineNo="" />
+
+					<ChildLine OrderLineKey="" PrimeLineNo=""
+						SubLineNo="" />
+				</OrderLineRelationship>
+			</ParentOrderLineRelationships>
+
+			<LineOverallTotals Charges="" Discount="" ExtendedPrice=""
+				LineTotal="" OptionPrice="" PricingQty="" Tax="" UnitPrice="" />
+
+			<!-- LineOverallTotals is a template-driven element but its attributes are not. The element can be removed from the template, and prevented from appearing in the output. But if the attributes are removed from the template, they will still be present in the output xml. -->
+			<LineInvoicedTotals Charges="" Discount="" ExtendedPrice=""
+				LineTotal="" OptionPrice="" PricingQty="" Tax="" UnitPrice="" />
+
+			<!-- LineInvoicedTotals is a template-driven element but its attributes are not. The element can be removed from the template, and prevented from appearing in the output. But if the attributes are removed from the template, they will still be present in the output xml. -->
+			<LineRemainingTotals Charges="" Discount="" ExtendedPrice=""
+				LineTotal="" OptionPrice="" PricingQty="" Tax="" UnitPrice="" />
+
+			<!-- LineRemainingTotals is a template-driven element but its attributes are not. The element can be removed from the template, and prevented from appearing in the output. But if the attributes are removed from the template, they will still be present in the output xml. -->
+			<LineOverallTotalsInEnterpriseCurrency Charges=""
+				Discount="" ExtendedPrice="" LineTotal="" OptionPrice=""
+				PricingQty="" Tax="" UnitPrice="" />
+
+			<!-- LineOverallTotalsInEnterpriseCurrency is a template-driven element but its attributes are not. The element can be removed from the template, and prevented from appearing in the output. But if only the attributes are removed from the template, they will still be present in the output xml. -->
+			<LineRemainingTotalsInEnterpriseCurrency Charges=""
+				Discount="" ExtendedPrice="" LineTotal="" OptionPrice=""
+				PricingQty="" Tax="" UnitPrice="" />
+
+			<!-- LineRemainingTotalsInEnterpriseCurrency is a template-driven element but its attributes are not. The element can be removed from the template, and prevented from appearing in the output. But if only the attributes are removed from the template, they will still be present in the output xml. -->
+			<LineCharges>
+				<LineCharge ChargeAmount="" ChargeCategory=""
+					ChargeName="" ChargeNameKey="" ChargePerLine="" ChargePerUnit=""
+					InvoicedChargeAmount="" InvoicedChargePerLine=""
+					InvoicedChargePerUnit="" IsBillable="" IsDiscount="" Reference=""
+					RemainingChargeAmount="" RemainingChargePerLine=""
+					RemainingChargePerUnit="" />
+			</LineCharges>
+
+			<!-- LineCharge is not a template driven element. If the template contains either of LineCharge or LineTax elements, both will appear in the output, alongwith all their attributes. -->
+			<!-- LineTax is not a template driven element. If the template contains either of LineCharge or LineTax elements, both will appear in the output, alongwith all their attributes. -->
+			<!--Optional-->
+			<OrderStatuses>
+				<OrderStatus OrderHeaderKey="" OrderLineKey=""
+					OrderLineScheduleKey="" OrderReleaseKey="" OrderReleaseStatusKey=""
+					PipelineKey="" ReceivingNode="" ShipNode="" Status="" StatusDate=""
+					StatusDescription="" StatusQty="" StatusReason=""
+					TotalQuantity="">
+					<Details ExpectedDeliveryDate=""
+						ExpectedShipmentDate="" ShipByDate="" TagNumber="">
+						<KitDetails>
+							<KitDetail OrderKitLineKey="" Quantity=""
+								ShipByDate="" TagNumber="">
+								<KitDetailTranQuantity Quantity=""
+									TransactionalUOM="" />
+							</KitDetail>
+						</KitDetails>
+					</Details>
+
+					<OrderStatusTranQuantity StatusQty=""
+						TotalQuantity="" TransactionalUOM="" />
+				</OrderStatus>
+			</OrderStatuses>
+
+			<OrderLineTranQuantity FillQuantity="" InvoicedQuantity=""
+				OpenQty="" OrderedQty="" OriginalOrderedQty="" ReceivedQty=""
+				RemainingQty="" SettledQuantity="" ShippedQuantity="" SplitQty=""
+				StatusQuantity="" TranDiscrepancyQty="" TransactionalUOM="" />
+
+			<DerivedFromOrderLine PrimeLineNo="" SubLineNo="">
+				<Item ItemID="" UnitOfMeasure="" />
+			</DerivedFromOrderLine>
+
+			<BundleComponents>
+				<BundleComponent PrimeLineNo="" SubLineNo="">
+					<Item ItemID="" UnitOfMeasure="" />
+				</BundleComponent>
+			</BundleComponents>
+
+			<OrderHoldTypes>
+				<OrderHoldType HoldType="" LastHoldTypeDate=""
+					OrderAuditKey="" OrderHeaderKey="" OrderLineKey="" ReasonText=""
+					ResolverUserId="" Status="" StatusDescription="" TransactionId=""
+					TransactionName="">
+					<OrderHoldTypeLogs>
+						<OrderHoldTypeLog OrderAuditKey=""
+							OrderHoldTypeLogKey="" ReasonText="" ResolverUserId="" Status=""
+							StatusDescription="" TransactionId="" TransactionName=""
+							UserId="" />
+					</OrderHoldTypeLogs>
+				</OrderHoldType>
+			</OrderHoldTypes>
+		</OrderLine>
+	</OrderLines>
+
+	<PriceInfo Currency="" EnterpriseCurrency=""
+		ReportingConversionDate="" ReportingConversionRate="" TotalAmount="" />
+
+	<Instructions NumberOfInstructions="">
+		<!-- NumberOfInstructions is not a template driven attribute. -->
+		<Instruction InstructionText="" InstructionType=""
+			InstructionURL="" SequenceNo="" />
+	</Instructions>
+
+	<Notes NumberOfNotes="">
+		<Note AuditTransactionId="" ContactReference="" ContactTime=""
+			ContactType="" ContactUser="" CustomerSatIndicator="" NoteText=""
+			Priority="" ReasonCode="" SequenceNo="" Tranid="" Tranname="" />
+	</Notes>
+
+	<!--Optional-->
+	<PersonInfoShipTo AddressLine1="" AddressLine2="" AddressLine3=""
+		AddressLine4="" AddressLine5="" AddressLine6="" AlternateEmailID=""
+		Beeper="" City="" Company="" Country="" DayFaxNo="" DayPhone=""
+		Department="" EMailID="" EveningFaxNo="" EveningPhone="" FirstName=""
+		IsCommercialAddress="" JobTitle="" LastName="" MiddleName=""
+		MobilePhone="" OtherPhone="" PersonID="" PersonInfoKey="" State=""
+		Suffix="" TaxGeoCode="" Title="" ZipCode="" />
+
+	<!--Either at  line level or at header
+		level-->
+	<PersonInfoBillTo AddressLine1="" AddressLine2="" AddressLine3=""
+		AddressLine4="" AddressLine5="" AddressLine6="" AlternateEmailID=""
+		Beeper="" City="" Company="" Country="" DayFaxNo="" DayPhone=""
+		Department="" EMailID="" EveningFaxNo="" EveningPhone="" FirstName=""
+		IsCommercialAddress="" JobTitle="" LastName="" MiddleName=""
+		MobilePhone="" OtherPhone="" PersonID="" PersonInfoKey="" State=""
+		Suffix="" TaxGeoCode="" Title="" ZipCode="" />
+
+	<PersonInfoContact AddressLine1="" AddressLine2="" AddressLine3=""
+		AddressLine4="" AddressLine5="" AddressLine6="" AlternateEmailID=""
+		Beeper="" City="" Company="" Country="" DayFaxNo="" DayPhone=""
+		Department="" EMailID="" EveningFaxNo="" EveningPhone="" FirstName=""
+		IsCommercialAddress="" JobTitle="" LastName="" MiddleName=""
+		MobilePhone="" OtherPhone="" PersonID="" PersonInfoKey="" State=""
+		Suffix="" TaxGeoCode="" Title="" ZipCode="" />
+
+	<OverallTotalsInEnterpriseCurrency GrandCharges="" GrandDiscount=""
+		GrandTax="" GrandTotal="" HdrCharges="" HdrDiscount="" HdrTax=""
+		HdrTotal="" LineSubTotal="" />
+
+	<!-- OverallTotalsInEnterpriseCurrency is a template-driven element but its attributes are not. The element can be removed from the template, and prevented from appearing in the output. But if only the attributes are removed from the template, they will still be present in the output xml. -->
+	<RemainingTotalsInEnterpriseCurrency GrandCharges=""
+		GrandDiscount="" GrandTax="" GrandTotal="" HdrCharges=""
+		HdrDiscount="" HdrTax="" HdrTotal="" LineSubTotal="" />
+
+	<!-- RemainingTotalsInEnterpriseCurrency is a template-driven element but its attributes are not. The element can be removed from the template, and prevented from appearing in the output. But if only the attributes are removed from the template, they will still be present in the output xml. -->
+	<References>
+		<Reference Name="" Value="" />
+	</References>
+
+	<!--Optional-->
+	<PaymentMethods>
+		<PaymentMethod AwaitingAuthInterfaceAmount=""
+			AwaitingChargeInterfaceAmount="" BillToKey="" ChargeSequence=""
+			CheckNo="" CheckReference="" CreditCardExpDate="" CreditCardName=""
+			CreditCardNo="" CreditCardType="" CustomerAccountNo=""
+			CustomerPONo="" DisplayCreditCardNo="" DisplayCustomerAccountNo=""
+			DisplayPaymentReference1="" DisplaySvcNo="" FirstName=""
+			FundsAvailable="" GetFundsAvailableUserExitInvoked=""
+			IncompletePaymentType="" LastName="" MaxChargeLimit="" MiddleName=""
+			PaymentKey="" PaymentReference1="" PaymentReference2=""
+			PaymentReference3="" PaymentType="" RequestedAuthAmount=""
+			RequestedChargeAmount="" SuspendAnyMoreCharges="" SvcNo=""
+			TotalAuthorized="" TotalCharged="" TotalRefundedAmount=""
+			UnlimitedCharges="">
+			<PersonInfoBillTo AddressLine1="" AddressLine2=""
+				AddressLine3="" AddressLine4="" AddressLine5="" AddressLine6=""
+				AlternateEmailID="" Beeper="" City="" Company="" Country=""
+				DayFaxNo="" DayPhone="" Department="" EMailID="" EveningFaxNo=""
+				EveningPhone="" FirstName="" IsCommercialAddress="" JobTitle=""
+				LastName="" MiddleName="" MobilePhone="" OtherPhone="" PersonID=""
+				PersonInfoKey="" State="" Suffix="" TaxGeoCode="" Title=""
+				ZipCode="" />
+		</PaymentMethod>
+	</PaymentMethods>
+
+	<ChargeTransactionDetails AdditionalExpectedAuthorizations=""
+		TotalCredits="" TotalDebits="" TotalOpenAuthorizations=""
+		TotalOpenBookings="" TotalTransferredIn="" TotalTransferredOut="">
+		<!-- The attributes of ChargeTransactionDetails element are not template driven. If the element is present in the template, all the attributes will be output, regardless of their presence or absence in the template. -->
+		<ChargeTransactionDetail AuditTransactionID=""
+			AuthorizationExpirationDate="" AuthorizationID="" BookAmount=""
+			ChargeTransactionKey="" ChargeType="" CollectionDate=""
+			CreditAmount="" DebitAmount="" DistributedAmount="" ExecutionDate=""
+			HoldAgainstBook="" OpenAuthorizedAmount="" OrderHeaderKey=""
+			OrderInvoiceKey="" PaymentKey="" RequestAmount="" SettledAmount=""
+			Status="" StatusReason="" TransactionDate="" TransferFromOhKey=""
+			TransferToOhKey="" UserExitStatus="">
+			<InvoiceCollectionDetails>
+				<InvoiceCollectionDetail AmountCollected=""
+					DateInvoiced="" InvoiceNo="" InvoiceType="" MasterInvoiceNo=""
+					OrderInvoiceKey="" ReturnReleaseKey="" ShipmentKey=""
+					TotalAmount="" />
+			</InvoiceCollectionDetails>
+
+			<CreditCardTransactions>
+				<CreditCardTransaction AuthAmount="" AuthAvs=""
+					AuthCode="" AuthReturnCode="" AuthReturnFlag=""
+					AuthReturnMessage="" AuthTime="" CVVAuthCode=""
+					ChargeTransactionKey="" CreditCardTransactionKey=""
+					InternalReturnCode="" InternalReturnFlag=""
+					InternalReturnMessage="" ParentKey="" Reference1="" Reference2=""
+					RequestId="" TranAmount="" TranRequestTime="" TranReturnCode=""
+					TranReturnFlag="" TranReturnMessage="" TranType="" />
+			</CreditCardTransactions>
+
+			<PaymentMethod AwaitingAuthInterfaceAmount=""
+				AwaitingChargeInterfaceAmount="" ChargeSequence="" CheckNo=""
+				CheckReference="" CreditCardExpDate="" CreditCardName=""
+				CreditCardNo="" CreditCardType="" CustomerAccountNo=""
+				CustomerPONo="" DisplayCreditCardNo="" DisplayPaymentReference1=""
+				DisplaySvcNo="" FirstName="" IncompletePaymentType="" LastName=""
+				MaxChargeLimit="" MiddleName="" PaymentKey="" PaymentReference1=""
+				PaymentReference2="" PaymentReference3="" PaymentType=""
+				RequestedAuthAmount="" RequestedChargeAmount=""
+				SuspendAnyMoreCharges="" SvcNo="" TotalAltRefundedAmount=""
+				TotalAuthorized="" TotalCharged="" TotalRefundedAmount=""
+				UnlimitedCharges="" />
+
+
+		</ChargeTransactionDetail>
+	</ChargeTransactionDetails>
+
+	<OrderDates>
+		<OrderDate ActualDate="" CommittedDate="" DateTypeId=""
+			ExpectedDate="" OrderHeaderKey="" OrderLineKey="" OrderReleaseKey=""
+			RequestedDate="" />
+	</OrderDates>
+
+	<OrderHoldTypes>
+		<OrderHoldType HoldType="" LastHoldTypeDate="" OrderAuditKey=""
+			OrderHeaderKey="" OrderLineKey="" ReasonText="" ResolverUserId=""
+			Status="" StatusDescription="" TransactionId="" TransactionName="">
+			<OrderHoldTypeLogs>
+				<OrderHoldTypeLog OrderAuditKey=""
+					OrderHoldTypeLogKey="" ReasonText="" ResolverUserId="" Status=""
+					StatusDescription="" TransactionId="" TransactionName="" UserId="" />
+			</OrderHoldTypeLogs>
+		</OrderHoldType>
+	</OrderHoldTypes>
+
+	<OverallTotals GrandCharges="" GrandDiscount="" GrandTax=""
+		GrandTotal="" HdrCharges="" HdrDiscount="" HdrTax="" HdrTotal=""
+		LineSubTotal="" />
+
+	<!-- OverallTotals is a template-driven element but its attributes are not. The element can be removed from the template, and prevented from appearing in the output. But if the attributes are removed from the template, they will still be present in the output xml. -->
+	<InvoicedTotals GrandCharges="" GrandDiscount="" GrandTax=""
+		GrandTotal="" HdrCharges="" HdrDiscount="" HdrTax="" HdrTotal=""
+		LineSubTotal="" />
+
+	<!-- InvoicedTotals is a template-driven element but its attributes are not. The element can be removed from the template, and prevented from appearing in the output. But if the attributes are removed from the template, they will still be present in the output xml. -->
+	<RemainingTotals GrandCharges="" GrandDiscount="" GrandTax=""
+		GrandTotal="" HdrCharges="" HdrDiscount="" HdrTax="" HdrTotal=""
+		LineSubTotal="" />
+
+	<!-- RemainingTotals is a template-driven element but its attributes are not. The element can be removed from the template, and prevented from appearing in the output. But if the attributes are removed from the template, they will still be present in the output xml. -->
+	<HeaderCharges>
+		<HeaderCharge ChargeAmount="" ChargeCategory="" ChargeName=""
+			ChargeNameKey="" InvoicedChargeAmount="" IsBillable="" IsDiscount=""
+			Reference="" RemainingChargeAmount="" />
+	</HeaderCharges>
+	<!-- HeaderCharge is not a template driven element. If the template contains either of HeaderCharge or HeaderTax elements, both will appear in the output, alongwith all their attributes. -->
+	<OrderStatuses>
+		<OrderStatus OrderHeaderKey="" OrderLineKey=""
+			OrderLineScheduleKey="" OrderReleaseKey="" OrderReleaseStatusKey=""
+			PipelineKey="" ReceivingNode="" ShipNode="" Status="" StatusDate=""
+			StatusDescription="" StatusQty="" StatusReason="" TotalQuantity="">
+			<Details ExpectedDeliveryDate="" ExpectedShipmentDate=""
+				ReceivingNode="" ShipByDate="" ShipNode="" TagNumber="">
+				<KitDetails>
+					<KitDetail OrderKitLineKey="" Quantity=""
+						ShipByDate="" TagNumber="">
+						<KitDetailTranQuantity Quantity=""
+							TransactionalUOM="" />
+					</KitDetail>
+				</KitDetails>
+			</Details>
+			<OrderStatusTranQuantity StatusQty="" TotalQuantity=""
+				TransactionalUOM="" />
+		</OrderStatus>
+	</OrderStatuses>
+</Order>
+

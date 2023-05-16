@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExtensionMetaData>
+    <ScreenExtension extnClassName="ContainerPackContainerViewExtn"
+        extnPackage="extn.components.shipment.container.pack"
+        originalScreen="wsc.components.shipment.container.pack.ContainerPackContainerView"
+        originalScreenPackage="wsc.components.shipment.container.pack" type="diffrential">
+        <Items>
+            <Button _sc_extensibility_operation="change"
+                _sc_extensibility_referenceUId="addNewContainerButton"
+                class="longButtons" label="$(_scSimpleBundle:extn_Add_New_Container)"/>
+            <DataLabel _sc_extensibility_operation="change"
+                _sc_extensibility_referenceUId="lblCurrentPackage"
+                class="noColonLabels currentPackageLabel blockComponent" label="$(_scSimpleBundle:extn_Current_)"/>
+        </Items>
+        <Namespaces>
+            <SourceNamespaces>
+                <Source isExtn="true"
+                    scExtensibilityArrayItemId="extn_SourceNamespaces_4" value="extn_dropDownValues"/>
+				<Source isExtn="true"
+                    scExtensibilityArrayItemId="extn_SourceNamespaces_5" value="extn_ContainerRecomToggle"/>
+            </SourceNamespaces>
+        </Namespaces>
+        <Subscribers>
+            <Local>
+                <Subscriber eventId="afterScreenInit" isExtn="true" sequence="19">
+                    <Handler methodName="beforeScreenInit"/>
+                </Subscriber>
+                <Subscriber eventId="extn_textfield_BarCode_onKeyDown"
+                    isExtn="true" sequence="30">
+                    <Handler methodName="ExtnhandleBarcodeScan"/>
+                </Subscriber>
+            </Local>
+        </Subscribers>
+        <MashupRefs>
+            <Behavior>
+                <MashupRef extnType="ADD" mashupId="extn_dropDownValues" mashupRefId="extn_dropDownValues_ref"/>
+            </Behavior>
+			<Behavior>
+                <MashupRef extnType="ADD" mashupId="extn_ContainerRecommToggle" mashupRefId="extn_ContainerRecommToggle_ref"/>
+            </Behavior>
+        </MashupRefs>
+    </ScreenExtension>
+</ExtensionMetaData>

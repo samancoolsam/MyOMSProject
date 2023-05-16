@@ -1,0 +1,8 @@
+<ShipmentList>
+<Shipment ShipmentKey="" ShipmentGroupId="" ShipNode="">
+<ShipmentLines>
+<ShipmentLine OrderLineKey="" ShipmentLineKey="" WaveNo="" ShipmentKey=""/>
+</ShipmentLines>
+<Status Status=""/>
+</Shipment>
+</ShipmentList>

@@ -1,0 +1,53 @@
+/*
+ * Licensed Materials - Property of IBM
+ * IBM Sterling Order Management Store (5725-D10)
+ * (C) Copyright IBM Corp. 2014 , 2015 All Rights Reserved. , 2015 All Rights Reserved.
+ * US Government Users Restricted Rights - Use, duplication or disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+ */
+{
+	Entities: {	
+		"Default":{
+			"PageSize": 5,			
+			"PageSizes": "5,10,20",
+			"PageSizeMobile": 3,
+			"PageSizesMobile": "3,5,10"
+		
+		},
+		"Shipment": {
+			"PageSize": 20,			
+			"PageSizes": "20,30,50",
+			"PageSizeMobile": 5,
+			"PageSizesMobile": "5,10,15"
+		},
+		"Container": {
+			"PageSize": 200,
+			"PageSizes": "200,300,400",
+			"PageSizeMobile": 200,			
+			"PageSizesMobile": "200,300,400"
+		},
+		"ShipmentLine": {
+			"PageSize": 5,
+			"PageSizes": "5,10,20",
+			"PageSizeMobile": 10,			
+			"PageSizesMobile": "3,5,10"
+		},
+		"StoreBatchLine": {
+			"PageSize": 10,
+			"PageSizes": "10,16,20",
+			"PageSizeMobile": 4,			
+			"PageSizesMobile": "4,8,10"
+		},
+		"StoreBatch": {
+			"PageSize": 10,
+			"PageSizes": "10,16,20",
+			"PageSizeMobile": 4,			
+			"PageSizesMobile": "4,8,10"
+		},
+		"StoreBatchLocation": {
+			"PageSize": 10,
+			"PageSizes": "10,16,20",
+			"PageSizeMobile": 4,			
+			"PageSizesMobile": "4,8,10"
+		}
+	}
+}

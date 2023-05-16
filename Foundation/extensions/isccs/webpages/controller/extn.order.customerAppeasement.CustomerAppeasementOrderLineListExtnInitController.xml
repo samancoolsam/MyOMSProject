@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Controller
+    className="com.sterlingcommerce.ui.web.platform.controller.SCUIXAPIMashupController"
+    controllerId="extn.order.customerAppeasement.CustomerAppeasementOrderLineListExtnInitController"
+    requestMethodSupported="POST" screenId="extn.order.customerAppeasement.CustomerAppeasementOrderLineListExtn">
+    <Group isAggregator="Y"/>
+    <MashupRefs>
+        <MashupRef extnType="MODIFY"
+            mashupId="customerAppeasement_getCompleteOrderLineList"
+            mashupRefId="getCompleteOrderLineList_Init" pageSize="1"
+            pageSizeType="OrderLine" paginationStrategy="NEXTPAGE" permissionId=""/>
+    </MashupRefs>
+</Controller>

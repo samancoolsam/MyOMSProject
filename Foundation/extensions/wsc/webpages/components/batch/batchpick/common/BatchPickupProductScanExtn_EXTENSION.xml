@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExtensionMetaData>
+    <ScreenExtension extnClassName="BatchPickupProductScanExtn"
+        extnPackage="extn.components.batch.batchpick.common"
+        originalScreen="wsc.components.batch.batchpick.common.BatchPickupProductScan"
+        originalScreenPackage="wsc.components.batch.batchpick.common" type="diffrential">
+        <Items>
+            <DataLabel _sc_extensibility_moveOrder="1"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="BatchNolbl"
+                class="screenHeader"
+                label="$(_scSimpleBundle:Label_Batch)"
+                renderHidden="true" uId="extn_datalabel1">
+                <BindingData>
+                    <SourceBinding dynamicBindingFunc="getBatchNoLabel"
+                        namespace="StoreBatchLines" path="Page.Output.StoreBatch.BatchNo"/>
+                </BindingData>
+            </DataLabel>
+        </Items>
+        <Subscribers>
+            <Local>
+                <Subscriber eventId="afterScreenLoad" isExtn="true" sequence="51">
+                    <Handler methodName="extn_afterScreenLoad"/>
+                </Subscriber>
+            </Local>
+        </Subscribers>
+        <MashupRefs>
+            <Init>
+                <MashupRef extnType="MODIFY"
+                    mashupId="batchPickup_getToBePickedStoreBatchLines"
+                    mashupRefId="getStoreBatchLinesListInit"
+                    pageSize="5" pageSizeType="ShipmentLine"
+                    paginationStrategy="NEXTPAGE" sourceNamespace="StoreBatchLines"/>
+            </Init>
+            <Behavior>
+                <MashupRef extnType="ADD"
+                    mashupId="extn_ItemPropertiesService" mashupRefId="extn_ItemPropertiesService"/>
+                <MashupRef extnType="ADD"
+                    mashupId="extn_BatchCycleCount" mashupRefId="extn_BatchCycleCount"/>
+                <MashupRef extnType="ADD"
+                    mashupId="extn_CloseCancelledBatch" mashupRefId="extn_CloseCancelledBatchRef"/>
+            </Behavior>
+        </MashupRefs>
+    </ScreenExtension>
+</ExtensionMetaData>

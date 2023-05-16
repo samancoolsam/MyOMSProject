@@ -1,0 +1,46 @@
+<Order BillToID="" CustomerRewardsNo="" DocumentType=""
+    EnterpriseCode="" OrderHeaderKey="" OrderNo="" OrganizationCode="" OrderName=""
+    SellerOrganizationCode="" TeamCode="">	
+    <OrderLines>
+        <OrderLine DeliveryMethod="" FulfillmentType="" LineType=""
+            OrderLineKey="" OrderedQty="" PrimeLineNo="" ShipNode="" SubLineNo="" OriginalOrderedQty="" StatusQty="" >
+            <OrderStatuses>
+                <OrderStatus OrderHeaderKey="" OrderLineKey=""
+                    OrderLineScheduleKey="" OrderReleaseKey=""
+                    OrderReleaseStatusKey="" PipelineKey=""
+                    ProcureFromNode="" ReceivingNode="" ShipNode=""
+                    Status="" StatusDate="" StatusDescription=""
+                    StatusQty="" StatusReason="" TotalQuantity=""/>
+            </OrderStatuses>
+            <Item ItemID="" ProductClass="" UnitOfMeasure=""/>
+			<Extn ExtnWCOrderItemIdentifier=""/>
+			<Shipnode Description="" OwnerKey="" ShipNode="">
+            <Organization OrganizationCode="" XrefOrganizationCode=""/>
+            </Shipnode>
+            <FromOrderReleaseStatuses>
+                <FromOrderReleaseStatus DatesChanged="" MovedQty=""
+                    OrderReleaseStatusKey="" PipelineKey="" Status=""
+                    StatusDate="" StatusQty="" StatusReason="" TotalQuantity="">
+                    <FromOrderLineSchedule BatchNo=""
+                        ExpectedDeliveryDate="" ExpectedShipmentDate=""
+                        LotNumber="" OrderLineScheduleKey=""
+                        ProcureFromNode="" ReceivingNode=""
+                        RevisionNo="" ShipByDate="" ShipNode="" TagNumber=""/>
+                    <ToOrderReleaseStatuses>
+                        <ToOrderReleaseStatus MovedQty=""
+                            OrderReleaseStatusKey="" PipelineKey=""
+                            Status="" StatusDate="" StatusQty=""
+                            StatusReason="" TotalQuantity="">
+                            <ToOrderLineSchedule BatchNo=""
+                                ExpectedDeliveryDate=""
+                                ExpectedShipmentDate="" LotNumber=""
+                                OrderLineScheduleKey=""
+                                ProcureFromNode="" ReceivingNode=""
+                                RevisionNo="" ShipByDate="" ShipNode="" TagNumber=""/>
+                        </ToOrderReleaseStatus>
+                    </ToOrderReleaseStatuses>
+                </FromOrderReleaseStatus>
+            </FromOrderReleaseStatuses>
+        </OrderLine>
+    </OrderLines>
+</Order>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ScreenBundle
+    screenBundleId="extn.components.shipment.summary.ShipmentRTExtnBundle" screenId="extn.components.shipment.summary.ShipmentRTExtn">
+    <BundleEntries>
+        <BundleEntry bundleEntryId="lnk_RT_PrintPackSlip_Link_value"
+            bundleKey="Action_PrintPackSlip"
+            bundleValueFn="_scSimpleBundle" property="value"
+            type="WIDGET" uId="lnk_RT_PrintPackSlip"/>
+        <BundleEntry
+            bundleEntryId="extn_printOrderTicketLink_Link_value"
+            bundleKey="extn_Print_Order_Ticket"
+            bundleValueFn="_scSimpleBundle" property="value"
+            type="WIDGET" uId="extn_printOrderTicketLink"/>
+        <BundleEntry bundleEntryId="extn_printShippingLabel_Link_value"
+            bundleKey="extn_Print_Shipping_Label"
+            bundleValueFn="_scSimpleBundle" property="value"
+            type="WIDGET" uId="extn_printShippingLabel"/>
+        <BundleEntry bundleEntryId="extn_printReturnLabel_Link_value"
+            bundleKey="extn_Print_Return_Label"
+            bundleValueFn="_scSimpleBundle" property="value"
+            type="WIDGET" uId="extn_printReturnLabel"/>
+        <BundleEntry bundleEntryId="extn_printORMDLabel_Link_value"
+            bundleKey="extn_Print_ORM_D_Label"
+            bundleValueFn="_scSimpleBundle" property="value"
+            type="WIDGET" uId="extn_printORMDLabel"/>
+       
+        <BundleEntry
+            bundleEntryId="extn_printOrderTicektMobile_Link_value"
+            bundleKey="extn_Print_Order_Ticket"
+            bundleValueFn="_scSimpleBundle" property="value"
+            type="WIDGET" uId="extn_printOrderTicektMobile"/>
+        <BundleEntry
+            bundleEntryId="extn_m_lnk_printShippingLabel_Link_value"
+            bundleKey="extn_Print_Shipping_Label"
+            bundleValueFn="_scSimpleBundle" property="value"
+            type="WIDGET" uId="extn_m_lnk_printShippingLabel"/>
+        <BundleEntry
+            bundleEntryId="extn_m_lnk_printReturnLabel_Link_value"
+            bundleKey="extn_Print_Return_Label"
+            bundleValueFn="_scSimpleBundle" property="value"
+            type="WIDGET" uId="extn_m_lnk_printReturnLabel"/>
+        <BundleEntry
+            bundleEntryId="extn_m_lnk_printORMDLabel_Link_value"
+            bundleKey="extn_Print_ORM_D_Label"
+            bundleValueFn="_scSimpleBundle" property="value"
+            type="WIDGET" uId="extn_m_lnk_printORMDLabel"/>
+        <BundleEntry
+            bundleEntryId="extn_m_link_Reprint_STS_Shipping_Label_Link_value"
+            bundleKey="extn_Reprint_STS_Shipping_Label"
+            bundleValueFn="_scBundle" property="value" type="WIDGET" uId="extn_m_link_Reprint_STS_Shipping_Label"/>
+    </BundleEntries>
+</ScreenBundle>

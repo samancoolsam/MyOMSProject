@@ -1,0 +1,31 @@
+<Shipments TotalNumberOfRecords="">
+    <Shipment Createts="" DocumentType=""
+        EnterpriseCode=""
+        ExpectedDeliveryDate=""
+        IsPickTicketPrinted="" OrderNo="" ReceivingNode=""
+        SCAC="" ShipNode="" ShipmentKey="" ShipmentNo="">
+        <ShipmentLines>
+            <ShipmentLine OrderNo=""/>
+        </ShipmentLines>
+        <ToAddress AddressLine1="" AddressLine2=""
+            AddressLine3="" AddressLine4="" AddressLine5=""
+            AddressLine6="" AlternateEmailID="" Beeper="" City=""
+            Company="" Country=""
+            Createprogid=""
+            Createts=""
+            Createuserid="" DayFaxNo=""
+            DayPhone="" Department=""
+            EMailID="" ErrorTxt=""
+            EveningFaxNo="" EveningPhone="" FirstName=""
+            HttpUrl="" IsAddressVerified="" JobTitle="" LastName=""
+            Lockid="" MiddleName="" MobilePhone=""
+            Modifyprogid=""
+            Modifyts=""
+            Modifyuserid=""
+            OtherPhone="" PersonID=""
+            PersonInfoKey=""
+            PreferredShipAddress="" State="" Suffix="" Title=""
+            UseCount="" VerificationStatus="" ZipCode="" isHistory=""/>
+        <Status Description=""/>
+    </Shipment>
+</Shipments>

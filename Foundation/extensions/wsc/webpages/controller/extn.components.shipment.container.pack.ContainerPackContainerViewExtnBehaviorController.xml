@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Controller
+    className="com.sterlingcommerce.ui.web.platform.controller.SCUIXAPIMashupController"
+    controllerId="extn.components.shipment.container.pack.ContainerPackContainerViewExtnBehaviorController"
+    requestMethodSupported="POST" screenId="extn.components.shipment.container.pack.ContainerPackContainerViewExtn">
+    <MashupRefs>
+        <MashupRef extnType="ADD"
+            mashupId="extn_SFSBeforeCreateContainersAndPrint"
+            mashupRefId="extn_SFSBeforeCreateContainersAndPrint_ref" permissionId=""/>
+        <MashupRef extnType="ADD" mashupId="extn_dropDownValues"
+            mashupRefId="extn_dropDownValues_ref" permissionId=""/>
+		<MashupRef extnType="ADD" mashupId="extn_ContainerRecommToggle"
+            mashupRefId="extn_ContainerRecommToggle_ref" permissionId=""/>
+    </MashupRefs>
+</Controller>

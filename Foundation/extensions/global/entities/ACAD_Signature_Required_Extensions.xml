@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DBSchema>
+	<Entities>
+		<!-- Start :: OMNI-41994 : Signature Required Changes - Level of service -->
+		<Entity TableName="YFS_ORDER_LINE">
+			<Attributes>
+				<Attribute ColumnName="EXTN_IS_SIGNATURE_REQUIRED"
+					DataType="IsSignatureRequiredFlag" DecimalDigits=""
+					DefaultValue="N" Description="Signature Required" Type="CHAR" Nullable="false"
+					Size="1" XMLName="ExtnIsSignatureRequired" XMLGroup="Extn"
+					SqlServerDataType="" />
+			</Attributes>
+		</Entity>
+		<!-- End :: OMNI-41994 : Signature Required Changes - Level of service -->
+	</Entities>
+</DBSchema>

@@ -1,0 +1,163 @@
+		<div>
+		 	<div data-dojo-type="sc/plat/dojo/widgets/Label" 
+		 				data-ibmsc-uid="extn_ItemDetails"
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_ItemDetails' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '1' , 
+		'class' : 'autoLabelZeroWidth department blockComponent' , 
+		_sc_extensibility_position : 'before' , 
+		style : 'padding-left:2px' , 
+		_sc_extensibility_referenceUId : 'itemVariationPanelHolder'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 path : 			'StoreBatchLine'
+,
+		 dynamicBindingFunc : 			'extnGetItemDetails'
+,
+		 namespace : 			'extn_BatchLine'
+	}
+	}
+			}
+		}
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/Label" 
+		 				data-ibmsc-uid="extn_ItemOnHandStock"
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								renderHidden : true , 
+		uId : 'extn_ItemOnHandStock' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '3' , 
+		'class' : 'autoLabelZeroWidth department blockComponent' , 
+		_sc_extensibility_position : 'before' , 
+		style : 'padding-left:2px' , 
+		_sc_extensibility_referenceUId : 'itemVariationPanelHolder'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 path : 			'StoreBatchLine'
+,
+		 dynamicBindingFunc : 			'extnGetItemOnhandStock'
+,
+		 namespace : 			'extn_BatchLine'
+	}
+	}
+,	
+			 	label : 			this.getSimpleBundleString('blank')
+			}
+		}
+	 					}">
+		 	</div>  
+			
+			
+		<!--OMNI-45645-SIM Integration Changes -- Start -->
+		 	<div data-dojo-type="sc/plat/dojo/widgets/Label" 
+		 				data-ibmsc-uid="extn_AvlStockOnHand"
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_AvlStockOnHand' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '9' , 
+		'class' : 'autoLabelZeroWidth department blockComponent' , 
+		_sc_extensibility_position : 'after' , 
+		_sc_extensibility_referenceUId : 'extn_ItemOnHandStock'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/Label" 
+		 				data-ibmsc-uid="extn_ItemLRD"
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_ItemLRD' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '11' , 
+		'class' : 'autoLabelZeroWidth department blockComponent' , 
+		_sc_extensibility_position : 'after' , 
+		_sc_extensibility_referenceUId : 'extn_AvlStockOnHand'  
+	 					}">
+		 	</div>  
+		<!--OMNI-45645-SIM Integration Changes -- End -->
+
+
+			<div data-dojo-type="sc/plat/dojo/widgets/Label" 
+		 				data-ibmsc-uid="extn_ItemLiveDate"
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_ItemLiveDate' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '5' , 
+		'class' : 'autoLabelZeroWidth department blockComponent' , 
+		_sc_extensibility_position : 'after' , 
+		style : 'padding-left:2px' , 
+		_sc_extensibility_referenceUId : 'extn_ItemOnHandStock'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 path : 			'StoreBatchLine'
+,
+		 dynamicBindingFunc : 			'extnGetItemLiveDate'
+,
+		 namespace : 			'extn_BatchLine'
+	}
+	}
+,	
+			 	label : 			this.getSimpleBundleString('blank')
+			}
+		}
+	 					}">
+		 	</div>  
+
+		<!--OMNI-45645-SIM Integration Changes -- Start -->
+		 	<div data-dojo-type="sc/plat/dojo/widgets/Label" 
+		 				data-ibmsc-uid="extn_ItemPriceLabel"
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_ItemPriceLabel' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '14' , 
+		'class' : 'quantityLabel' , 
+		_sc_extensibility_position : 'after' , 
+		_sc_extensibility_referenceUId : 'totalShipQty'  
+	 					}">
+		 	</div>  
+		<!--OMNI-45645-SIM Integration Changes -- End -->
+
+		 	<div data-dojo-type="sc/plat/dojo/widgets/Link" 
+		 				data-ibmsc-uid="itemdescriptionLink"
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								_sc_extensibility_operation : 'change' , 
+		'class' : 'groupHeader blockComponent disableLink' , 
+		_sc_extensibility_referenceUId : 'itemdescriptionLink'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" 
+		 				data-ibmsc-uid="extn_ItemPlanogram"
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_ItemPlanogram' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '7' , 
+		'class' : 'autoLabelZeroWidth blockComponent' , 
+		_sc_extensibility_position : 'after' , 
+		_sc_extensibility_referenceUId : 'extn_ItemLiveDate'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 path : 			'StoreBatchLine'
+,
+		 dynamicBindingFunc : 			'extnGetPlanogramDetails'
+,
+		 namespace : 			'extn_BatchLine'
+	}
+	}
+,	
+			 	label : 			this.getBundleString('extn_Pog_ID_Dept_Section_Pog_')
+			}
+		}
+	 					}">
+		 	</div>  
+		</div>

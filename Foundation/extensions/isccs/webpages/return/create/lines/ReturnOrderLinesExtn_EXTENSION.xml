@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExtensionMetaData>
+    <ScreenExtension extnClassName="ReturnOrderLinesExtn"
+        extnPackage="extn.return.create.lines"
+        originalScreen="isccs.return.create.lines.ReturnOrderLines"
+        originalScreenPackage="isccs.return.create.lines" type="diffrential">
+        <Items>
+            <GridX _sc_extensibility_operation="change" _sc_extensibility_referenceUId="OLST_listGrid"/>
+        </Items>
+        <Subscribers>
+            <Local>
+                <Subscriber eventId="OLST_listGrid_ScRowSelect"
+                    isExtn="true" sequence="51">
+                    <Handler methodName="extnEGCLineCheck"/>
+                </Subscriber>
+            </Local>
+        </Subscribers>
+    </ScreenExtension>
+</ExtensionMetaData>

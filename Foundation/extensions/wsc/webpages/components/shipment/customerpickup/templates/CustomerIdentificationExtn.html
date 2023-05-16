@@ -1,0 +1,206 @@
+		<div>
+		 	<div data-dojo-type="idx/layout/ContentPane" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								_sc_extensibility_operation : 'change' , 
+		'class' : 'personInfoPanel testClass extnBlock' , 
+		_sc_extensibility_referenceUId : 'PersonInfoContainer'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="idx/layout/ContentPane" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								_sc_extensibility_operation : 'insert' , 
+		'class' : 'testClass alternateCustomer marginTop marginTopCSS' , 
+		_sc_extensibility_moveOrder : '2' , 
+		_sc_extensibility_referenceUId : 'orderInfoPanel' , 
+		uId : 'extn_contentpane' , 
+		_sc_extensibility_position : 'before'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="idx/form/FilteringSelect" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								_sc_extensibility_operation : 'change' , 
+		_sc_extensibility_referenceUId : 'cmbCustVerfMethod' , 
+		required : true  
+	 					}">
+		 	</div> 
+		 	<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								_sc_extensibility_operation : 'change' , 
+		_sc_extensibility_referenceUId : 'Hold_LocationLabel' , 
+		renderHidden : true  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="idx/form/FilteringSelect" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '1' , 
+		'class': 'longTextBox' ,
+		_sc_extensibility_referenceUId : 'cmbCustVerfMethod' , 
+		uId : 'extn_filteringselect' , 
+		required : true , 
+		_sc_extensibility_position : 'after'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	label : 			this.getSimpleBundleString('extn_Picked_Up_By')
+,	
+			 	bindingData : 	{
+		 optionsBinding : 	{
+		 valueField : 			'Customer_Name'
+,
+		 path : 			'CustomerName'
+,
+		 descriptionField : 			'Customer'
+,
+		 namespace : 			'extn_customerOptionNS'
+	}
+,
+		 targetBinding : 	[
+	 		{
+		 path : 			'customerName'
+,
+		 scExtensibilityArrayItemId : 			'extn_TargetBindings_0'
+,
+		 namespace : 			'extn_Test'
+	}
+	],
+	sourceBinding : 	{
+		 path : 			'CustomerName[0].Customer_Name'
+,
+		 namespace : 			'extn_DefaultCustomerName',
+		  dynamicBindingFunc :                   'extn_getDefaultCustomerName'
+	}
+	}
+			}
+		}
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								_sc_extensibility_operation : 'change' , 
+		_sc_extensibility_referenceUId : 'lblPickupDate' , 
+		renderHidden : true  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '7' , 
+		'class': 'blockComponent noColonLabels comappsWrapWord zeroWidthLabelValueDesktop extn_labelCssPadding',
+		_sc_extensibility_referenceUId : 'lblPickupDate' , 
+		uId : 'extn_datalabel' , 
+		_sc_extensibility_position : 'after'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	label : 			this.getSimpleBundleString('extn_Max_Pick_Date')
+,	
+			 	value : 			this.getSimpleBundleString('')
+			}
+		}
+	 					}">
+		 	</div>
+		 	<div data-dojo-type="sc/plat/dojo/widgets/Label" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								_sc_extensibility_operation : 'insert' , 
+		'class' : 'blockComponent' , 
+		_sc_extensibility_moveOrder : '3' , 
+		_sc_extensibility_referenceUId : 'extn_contentpane' , 
+		uId : 'extn_label' , 
+		_sc_extensibility_position : 'first'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/Label" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								_sc_extensibility_operation : 'insert' , 
+		'class' : 'blockComponent' , 
+		_sc_extensibility_moveOrder : '4' , 
+		_sc_extensibility_referenceUId : 'extn_contentpane' , 
+		uId : 'extn_label1' , 
+		_sc_extensibility_position : 'last'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/Label" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								_sc_extensibility_operation : 'insert' , 
+		'class' : 'blockComponent' , 
+		_sc_extensibility_moveOrder : '5' , 
+		_sc_extensibility_referenceUId : 'extn_contentpane' , 
+		uId : 'extn_label2' , 
+		_sc_extensibility_position : 'last'  
+	 					}">
+		 	</div>
+		 	<div data-dojo-type="sc/plat/dojo/widgets/Link" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								_sc_extensibility_operation : 'change' , 
+		'class' : 'icon-image-label ellipsisText disableLink' , 
+		_sc_extensibility_referenceUId : 'lnkEmail'  
+	 					}">
+		 	</div>
+	    <!-- OMNI- 5402 Mobile Web SOM Home Page: Ready For Curbside PickUp Section  - Start -->			
+		 	<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								renderHidden : true , 
+		uId : 'extn_Curbsidelbl' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '8' , 
+		'class' : 'blockComponent noColonLabels comappsWrapWord zeroWidthLabelValueDesktop extn_labelCss' , 
+		_sc_extensibility_position : 'last' ,
+		_sc_extensibility_referenceUId : 'orderInfoPanel'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 namespace : 			'ShipmentDetails'
+,
+		 path : 			'Shipment.Extn.ExtnCurbsidePickupInfo'
+	}
+	}
+,	
+			 	label : 			this.getSimpleBundleString('extn_Curbbside_Make_Color')
+			}
+		}
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_Curbsidelbl' , 
+		_sc_extensibility_operation : 'move' , 
+		_sc_extensibility_moveOrder : '9' , 
+		_sc_extensibility_position : 'before' , 
+		_sc_extensibility_referenceUId : 'Hold_LocationLabel'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_Curbsidelbl' , 
+		_sc_extensibility_operation : 'move' , 
+		_sc_extensibility_moveOrder : '10' , 
+		_sc_extensibility_position : 'before' , 
+		_sc_extensibility_referenceUId : 'lblShipmentNo'  
+	 					}">
+		 	</div>  
+			<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								_sc_extensibility_operation : 'change' , 
+		'class' : 'blockComponent noColonLabels comappsWrapWord zeroWidthLabelValueDesktop extn_labelCssPadding' , 
+		_sc_extensibility_referenceUId : 'lblShipmentNo'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								_sc_extensibility_operation : 'change' , 
+		'class' : 'blockComponent noColonLabels zeroWidthLabelValueDesktop extn_labelCssPadding' , 
+		_sc_extensibility_referenceUId : 'lblAssignedToUsr'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								_sc_extensibility_operation : 'change' , 
+		'class' : 'paymentMethod noColonLabels zeroWidthLabelValueDesktop extn_labelCssPadding' , 
+		_sc_extensibility_referenceUId : 'lblPaymentMethod'  
+	 					}">
+		 	</div> 
+	    <!-- OMNI- 5402 Mobile Web SOM Home Page: Ready For Curbside PickUp Section  - End -->			
+		</div>

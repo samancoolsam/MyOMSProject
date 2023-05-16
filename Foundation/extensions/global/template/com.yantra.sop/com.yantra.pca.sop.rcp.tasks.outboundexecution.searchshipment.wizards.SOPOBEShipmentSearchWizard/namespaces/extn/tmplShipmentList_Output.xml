@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Shipments>
+	<Shipment ShipmentNo="" DocumentType="" ExpectedDeliveryDate="" Status="" ShipmentKey="" Createts="" ManifestKey="" ManifestNo="" ShipNode="" RequestedShipmentDate="" OrderNo="">
+		<ToAddress LastName="" FirstName="" AddressLine1="" AddressLine2="" AddressLine3=""/>		
+		<BillToAddress LastName="" FirstName="" AddressLine1="" AddressLine2="" AddressLine3=""/>				
+		<Status Status="" Description=""/>
+		<Containers>
+			<Container ShipmentContainerKey="" ManifestKey=""/>
+		</Containers>
+		<AllowedTransactions>
+			<Transaction  BaseTransactionKey="" /> 
+		</AllowedTransactions>	
+		<LoadShipments >
+			<LoadShipment LoadKey="" />
+		</LoadShipments>			
+	</Shipment>	
+</Shipments>
+

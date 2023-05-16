@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Order>
+    <PersonInfoShipTo>
+	<Extn ExtnIsAPOFPO="" ExtnIsPOBOXADDRESS="" ExtnIsSignatureRequired="" ExtnAddressNickName="" ExtnIsAddressVerified="" ExtnIsMilitary="" />
+							
+	</PersonInfoShipTo>
+	   <PersonInfoBillTo>
+	   <Extn ExtnIsAPOFPO="" ExtnIsPOBOXADDRESS="" ExtnIsSignatureRequired="" ExtnAddressNickName="" ExtnIsAddressVerified="" ExtnIsMilitary="" />
+	</PersonInfoBillTo>
+    <PersonInfoSoldTo>
+	   <Extn ExtnIsAPOFPO="" ExtnIsPOBOXADDRESS="" ExtnIsSignatureRequired="" ExtnAddressNickName="" ExtnIsAddressVerified="" ExtnIsMilitary="" />
+	</PersonInfoSoldTo>
+</Order>

@@ -1,0 +1,958 @@
+		<div>
+			<!-- Start - OMNI-5402 : Curbside Pickup home screen -->
+		 	<div data-dojo-type="idx/layout/ContentPane" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_pnlCurbsidePickupOrders' , 
+								'class' : 'extn_reducePanelHeight' ,
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '8' , 
+		_sc_extensibility_position : 'last' , 
+		_sc_extensibility_referenceUId : 'mainContainer'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="idx/layout/ContentPane" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_pnlCurbsidePickupOrders' , 
+		_sc_extensibility_operation : 'move' , 
+		_sc_extensibility_moveOrder : '9' , 
+		_sc_extensibility_position : 'before' , 
+		_sc_extensibility_referenceUId : 'pnlConfirmOrders'  
+	 					}">
+		 	</div> 
+			<!-- End - OMNI-5402 : Curbside Pickup home screen -->
+		 	<div data-dojo-type="sc/plat/dojo/widgets/Label" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								_sc_extensibility_operation : 'change' , 
+		_sc_extensibility_referenceUId : 'lblPickup'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	value : 			this.getSimpleBundleString('extn_New_Pick_up_Orders')
+			}
+		}
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/Label" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_lblBatchCount' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '1' , 
+		'class' : 'orderCount' , 
+		spanLabel : true , 
+		_sc_extensibility_position : 'before' , 
+		_sc_extensibility_referenceUId : 'lblBatchPick'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 namespace : 			'extn_SFSOrderCountMobile'
+,
+		 path : 			'Shipments.TotalNumberOfRecords'
+,
+		 dynamicBindingFunc : 			'extn_batchCountBindingFunc'
+	}
+	}
+			}
+		}
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/Label" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								_sc_extensibility_operation : 'change' , 
+		'class' : 'taskLabel' , 
+		_sc_extensibility_referenceUId : 'lblBatchPick'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	value : 			this.getSimpleBundleString('extn_SFS_Orders_Pick_')
+			}
+		}
+	 					}">
+		 	</div> 
+	<div data-dojo-type="idx/layout/ContentPane" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_pnlSearchEComOrders' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '1' , 
+		_sc_extensibility_position : 'after' , 
+		_sc_extensibility_referenceUId : 'img_ConfirmOrdersArrow'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="idx/layout/ContentPane" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_pnlSearchEComOrders' , 
+		_sc_extensibility_operation : 'move' , 
+		_sc_extensibility_moveOrder : '3' , 
+		_sc_extensibility_position : 'before' , 
+		_sc_extensibility_referenceUId : 'pnlOrderCapture'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="idx/layout/ContentPane" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_pnlSearchEComOrders' , 
+		_sc_extensibility_operation : 'move' , 
+		_sc_extensibility_moveOrder : '6' , 
+		_sc_extensibility_position : 'before' , 
+		_sc_extensibility_referenceUId : 'pnlConfirmOrders'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="idx/layout/ContentPane" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								renderHidden : true , 
+		_sc_extensibility_operation : 'change' , 
+		_sc_extensibility_referenceUId : 'pnlConfirmOrders'  
+	 					}">
+		 	</div> 
+		<!-- Start - OMNI-6579,6580 : STS home screen changes-->
+		<div data-dojo-type="idx/layout/ContentPane" 
+ 					data-dojo-props="data_dojo_props_diff: {
+ 								uId : 'extn_STSReceiveContainers' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '13' , 
+		'class' : 'extn_reducePanelHeight' , 
+		_sc_extensibility_position : 'before' , 
+		_sc_extensibility_referenceUId : 'pnlOrderCapture'  
+	 					}">
+		 	</div> 
+			<div data-dojo-type="idx/layout/ContentPane" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_STSReceiveContainers' , 
+		_sc_extensibility_operation : 'move' , 
+		_sc_extensibility_moveOrder : '16' , 
+		_sc_extensibility_position : 'after' , 
+		_sc_extensibility_referenceUId : 'extn_img_SearchEComOrdersArrow'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="idx/layout/ContentPane" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_STSReceiveContainers' , 
+		_sc_extensibility_operation : 'move' , 
+		_sc_extensibility_moveOrder : '17' , 
+		_sc_extensibility_position : 'after' , 
+		_sc_extensibility_referenceUId : 'extn_img_SearchEComOrdersArrow'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="idx/layout/ContentPane" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_STSReceiveContainers' , 
+		_sc_extensibility_operation : 'move' , 
+		_sc_extensibility_moveOrder : '18' , 
+		_sc_extensibility_position : 'last' , 
+		_sc_extensibility_referenceUId : 'mainContainer'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="idx/layout/ContentPane" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_STSReadytoStage' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '20' , 
+		'class' : 'extn_reducePanelHeight' ,
+		_sc_extensibility_position : 'last' , 
+		_sc_extensibility_referenceUId : 'mainContainer'  
+	 					}">
+		 	</div> 
+
+
+
+         <!--OMNI-102286 OMNI-102102 Begin-->
+
+         <div data-dojo-type="idx/layout/ContentPane" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_STS_Intransit_contentpane' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '49' , 
+		'class' : 'extn_reducePanelHeight' , 
+		_sc_extensibility_position : 'after' , 
+		_sc_extensibility_referenceUId : 'extn_STSReadytoStage'  
+	 					}">
+		 	</div>
+
+
+			
+		 	<div data-dojo-type="idx/layout/ContentPane" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_STS_Delivered_contentpane' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '53' , 
+		'class' : 'extn_reducePanelHeight' , 
+		_sc_extensibility_position : 'after' , 
+		_sc_extensibility_referenceUId : 'extn_STS_Intransit_contentpane'  
+	 					}">
+		 	</div>
+
+         <!--OMNI-102286 OMNI-102102 END-->
+		<!--OMNI-105498 Begin-->
+			 <div data-dojo-type="idx/layout/ContentPane" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_InStorePickupMainPane' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '60' , 
+		'class' : 'extn_reducePanelHeight',
+		_sc_extensibility_position : 'before' , 
+		_sc_extensibility_referenceUId : 'extn_OnMyWayMainPane'  
+	 					}">
+		 	</div>   
+			<!--OMNI-105498 End-->
+			<!--OMNI-71303 Begin-->
+			<div data-dojo-type="idx/layout/ContentPane" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_OnMyWayMainPane' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '44' , 
+		'class' : 'extn_reducePanelHeight',
+		_sc_extensibility_position : 'before' , 
+		_sc_extensibility_referenceUId : 'pnlOpenPicks'  
+	 					}">
+		 	</div>  
+			<!--OMNI-71303 End-->
+		 	<div data-dojo-type="idx/layout/ContentPane" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_STSOrderSearch' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '24' , 
+		'class' : 'extn_reduceSTSURLPanelHeight' , 
+		_sc_extensibility_position : 'last' , 
+		_sc_extensibility_referenceUId : 'mainContainer'  
+	 					}">
+		 	</div> 
+			<!-- End - OMNI-6579,6580 : STS home screen changes-->
+		 	<div data-dojo-type="idx/layout/ContentPane" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'pnlConfirmOrders' , 
+		_sc_extensibility_operation : 'move' , 
+		_sc_extensibility_moveOrder : '7' , 
+		_sc_extensibility_position : 'before' , 
+		_sc_extensibility_referenceUId : 'extn_pnlSearchEComOrders'  
+	 					}">
+		 	</div> 
+			<!-- Start - OMNI-5402 : Curbside Pickup home screen -->
+			<div data-dojo-type="idx/layout/ContentPane" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_pnlCurbsidePickupOrders' , 
+		_sc_extensibility_operation : 'move' , 
+		_sc_extensibility_moveOrder : '27' , 
+		_sc_extensibility_position : 'before' , 
+		_sc_extensibility_referenceUId : 'pnlOpenPicks'  
+	 					}">
+		 	</div> 
+			<div data-dojo-type="sc/plat/dojo/widgets/Label" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_label:lblCurbOrdersCount' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '10' , 
+		'class' : 'orderCount' , 
+		_sc_extensibility_position : 'first' , 
+		_sc_extensibility_referenceUId : 'extn_pnlCurbsidePickupOrders'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 namespace : 			'extn_CurbsidePickupOrders_output'
+,
+		 path : 			'Shipments.TotalNumberOfRecords'
+,
+		 dynamicBindingFunc : 			'extn_curbCountBindingFunc'
+	}
+	}
+			}
+		}
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/Label" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_lblCurbOrders' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '11' , 
+		'class' : 'taskLabel' , 
+		_sc_extensibility_position : 'last' , 
+		_sc_extensibility_referenceUId : 'extn_pnlCurbsidePickupOrders'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	value : 			this.getSimpleBundleString('extn_Waiting_for_Curbside_Pickup')
+			}
+		}
+	 					}">
+		 	</div> 
+			<!-- End - OMNI-5402 : Curbside Pickup home screen -->
+		 	<div data-dojo-type="sc/plat/dojo/widgets/Label" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_lblSearchEComOrders' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '2' , 
+		'class' : 'taskLabel noCount' , 
+		spanLabel : true , 
+		_sc_extensibility_position : 'first' , 
+		_sc_extensibility_referenceUId : 'extn_pnlSearchEComOrders'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	value : 			this.getSimpleBundleString('extn_Search_eCom_Orders')
+			}
+		}
+	 					}">
+		 	</div>  
+			<!-- Start - OMNI-6579,6580 : STS home screen changes-->
+		 	<div data-dojo-type="sc/plat/dojo/widgets/Label" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_STSReceiveContainersCount' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '14' , 
+		'class' : 'orderCount' , 
+		_sc_extensibility_position : 'first' , 
+		_sc_extensibility_referenceUId : 'extn_STSReceiveContainers'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 path : 			'Containers.TotalNumberOfRecords'
+,
+		 dynamicBindingFunc : 			'STSReceviveContainers'
+,
+		 namespace : 			'extn_STSReceiveContainersCount_output'
+	}
+	}
+			}
+		}
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/Label" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_STSReadytoReceiveContainers' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '15' , 
+		'class' : 'taskLabel' , 
+		_sc_extensibility_position : 'last' , 
+		_sc_extensibility_referenceUId : 'extn_STSReceiveContainers'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	value : 			this.getSimpleBundleString('extn_STS_Ready_To_Receive_Containers1')
+			}
+		}
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/Label" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_STSReadytoStageCount' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '21' , 
+		'class' : 'orderCount' , 
+		_sc_extensibility_position : 'first' , 
+		_sc_extensibility_referenceUId : 'extn_STSReadytoStage'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 path : 			'Containers.TotalNumberOfRecords'
+,
+		 dynamicBindingFunc : 			'STSReadyToStage'
+,
+		 namespace : 			'extn_STSStageContainersCount_output'
+	}
+	}
+			}
+		}
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/Label" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_ReadytoStageContainers' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '22' , 
+		'class' : 'taskLabel' , 
+		_sc_extensibility_position : 'last' , 
+		_sc_extensibility_referenceUId : 'extn_STSReadytoStage'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	value : 			this.getSimpleBundleString('extn_STS_Ready_To_Stage_Containers')
+			}
+		}
+	 					}">
+		 	</div> 
+
+
+     <!--OMNI-102286 OMNI-102102 Begin-->
+
+     <div data-dojo-type="sc/plat/dojo/widgets/Label" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_STSIntransitCount' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '50' , 
+		'class' : 'orderCount' , 
+		_sc_extensibility_position : 'first' , 
+		_sc_extensibility_referenceUId : 'extn_STS_Intransit_contentpane'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 path : 			'Containers.TotalNumberOfRecords'
+,
+		 dynamicBindingFunc : 			'STSIntransitContainers'
+,
+		 namespace : 			'extn_STSIntransitContainersCount_output'
+	}
+	}
+			}
+		}
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/Label" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_STSIntransitContainer' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '51' , 
+		'class' : 'taskLabel' , 
+		_sc_extensibility_position : 'after' , 
+		_sc_extensibility_referenceUId : 'extn_STSIntransitCount'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	value : 			this.getSimpleBundleString('extn_STS_Intransit_Containers')
+			}
+		}
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/Label" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_STSDeliveredCount' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '54' , 
+		'class' : 'orderCount' , 
+		_sc_extensibility_position : 'after' , 
+		_sc_extensibility_referenceUId : 'extn_STS_Delivered_contentpane'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 path : 			'Containers.TotalNumberOfRecords'
+,
+		 dynamicBindingFunc : 			'STSDeliveredContainers'
+,
+		 namespace : 			'extn_STSDeliveredContainersCount_output'
+	}
+	}
+			}
+		}
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/Label" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_STSDeliveredCount' , 
+		_sc_extensibility_operation : 'move' , 
+		_sc_extensibility_moveOrder : '57' , 
+		_sc_extensibility_position : 'first' , 
+		_sc_extensibility_referenceUId : 'extn_STS_Delivered_contentpane'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/Label" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_STSDeliveredContainer' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '55' , 
+		'class' : 'taskLabel' , 
+		_sc_extensibility_position : 'after' , 
+		_sc_extensibility_referenceUId : 'extn_STSDeliveredCount'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	value : 			this.getSimpleBundleString('extn_STS_Delivered_Containers')
+			}
+		}
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/Label" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_STSDeliveredContainer' , 
+		_sc_extensibility_operation : 'move' , 
+		_sc_extensibility_moveOrder : '58' , 
+		_sc_extensibility_position : 'after' , 
+		_sc_extensibility_referenceUId : 'extn_STSDeliveredCount'  
+	 					}">
+		 	</div>
+
+
+     <!--OMNI-102286 OMNI-102102 END-->
+		<!--OMNI-105498 Begin-->
+		<div data-dojo-type="sc/plat/dojo/widgets/Label" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_InStorePickupCount' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '61' , 
+		'class' : 'orderCount' , 
+		_sc_extensibility_position : 'first' , 
+		_sc_extensibility_referenceUId : 'extn_InStorePickupMainPane'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 path : 			'Shipments.TotalNumberOfRecords'
+,
+		 dynamicBindingFunc : 			'extn_InStorePickupFunction'
+,
+		 namespace : 			'extn_InStorePickupOrdersCount_output'
+	}
+	}
+			}
+		}
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/Label" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_InStorePickupLabel' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '62' , 
+		'class' : 'taskLabel' , 
+		_sc_extensibility_position : 'after' , 
+		_sc_extensibility_referenceUId : 'extn_InStorePickupCount'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	value : 			this.getSimpleBundleString('extn_In_Store_Pickup_Orders')
+			}
+		}
+	 					}">
+		 	</div>  
+			
+			
+			<!--OMNI-105498 End-->
+			<!--OMNI-71303 Begin-->
+			<div data-dojo-type="sc/plat/dojo/widgets/Label" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_OnMyWayCount' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '46' , 
+		'class' : 'OrderCount' , 
+		_sc_extensibility_position : 'first' , 
+		_sc_extensibility_referenceUId : 'extn_OnMyWayMainPane'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 path : 			'Shipments.TotalNumberOfRecords'
+,
+		 dynamicBindingFunc : 			'extn_OnMyWayFunction'
+,
+		 namespace : 			'extn_OnMyWayOrdersCount_output'
+	}
+	}
+			}
+		}
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/Label" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_OnMyWayLabel' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '47' , 
+		'class' : 'taskLabel' , 
+		_sc_extensibility_position : 'after' , 
+		_sc_extensibility_referenceUId : 'extn_OnMyWayCount'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	value : 			this.getSimpleBundleString('extn_On_My_Way_Orders')
+			}
+		}
+	 					}">
+		 	</div>  
+			
+			
+			<!--OMNI-71303 End-->
+			<!-- End - OMNI-6579,6580 : STS home screen changes-->
+			<!-- Start - OMNI-5402 : Curbside Pickup home screen -->
+		 	<div data-dojo-type="sc/plat/dojo/widgets/Link" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_link:img_CurbOrdersArrow' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '12' , 
+		'class' : 'panelCollapse' , 
+		_sc_extensibility_position : 'last' , 
+		hasImage : true , 
+		appendToContextRoot : true , 
+		imageSrc : 'wsc/resources/css/icons/images/arrow-piano-key.png' , 
+		_sc_extensibility_referenceUId : 'extn_pnlCurbsidePickupOrders'  
+	 					}">
+		 	</div> 
+			<!-- End - OMNI-5402 : Curbside Pickup home screen --> 
+		 	<div data-dojo-type="sc/plat/dojo/widgets/Link" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_img_SearchEComOrdersArrow' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '4' , 
+		'class' : 'panelCollapse' , 
+		_sc_extensibility_position : 'before' , 
+		hasImage : true , 
+		appendToContextRoot : true , 
+		imageSrc : 'wsc/resources/css/icons/images/arrow-piano-key.png' , 
+		_sc_extensibility_referenceUId : 'pnlOrderCapture'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	title : 			this.getSimpleBundleString('extn_Click_to_search_ecom_orders')
+,	
+			 	imageAlt : 			this.getSimpleBundleString('extn_Click_to_search_ecom_orders')
+			}
+		}
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/Link" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_img_SearchEComOrdersArrow' , 
+		_sc_extensibility_operation : 'move' , 
+		_sc_extensibility_moveOrder : '5' , 
+		_sc_extensibility_position : 'after' , 
+		_sc_extensibility_referenceUId : 'extn_lblSearchEComOrders'  
+	 					}">
+		 	</div>  
+		<!-- Start - OMNI-6579,6580 : STS home screen changes--> 
+	 	<div data-dojo-type="sc/plat/dojo/widgets/Link" 
+ 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_STSReceiveContainersArrow' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '19' , 
+		'class' : 'panelCollapse' , 
+		_sc_extensibility_position : 'last' , 
+		hasImage : true , 
+		appendToContextRoot : true , 
+		imageSrc : 'wsc/resources/css/icons/images/arrow-piano-key.png' , 
+		_sc_extensibility_referenceUId : 'extn_STSReceiveContainers'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/Link" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_STSStageContainersArrow' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '23' , 
+		'class' : 'panelCollapse' , 
+		_sc_extensibility_position : 'last' , 
+		hasImage : true , 
+		appendToContextRoot : true , 
+		imageSrc : 'wsc/resources/css/icons/images/arrow-piano-key.png' , 
+		_sc_extensibility_referenceUId : 'extn_STSReadytoStage'  
+	 					}">
+		 	</div> 
+
+
+
+         <!--OMNI-102286 OMNI-102102 Begin-->
+
+
+          <div data-dojo-type="sc/plat/dojo/widgets/Link" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_STSIntransitArrow' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '52' , 
+		'class' : 'panelCollapse' , 
+		_sc_extensibility_position : 'after' , 
+		hasImage : true , 
+		appendToContextRoot : true , 
+		imageSrc : 'wsc/resources/css/icons/images/arrow-piano-key.png' , 
+		_sc_extensibility_referenceUId : 'extn_STSIntransitContainer'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/Link" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_STSDeliveredArrow' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '56' , 
+		'class' : 'panelCollapse' , 
+		_sc_extensibility_position : 'after' , 
+		hasImage : true , 
+		appendToContextRoot : true , 
+		imageSrc : 'wsc/resources/css/icons/images/arrow-piano-key.png' , 
+		_sc_extensibility_referenceUId : 'extn_STSDeliveredContainer'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/Link" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_STSDeliveredArrow' , 
+		_sc_extensibility_operation : 'move' , 
+		_sc_extensibility_moveOrder : '59' , 
+		_sc_extensibility_position : 'after' , 
+		_sc_extensibility_referenceUId : 'extn_STSDeliveredContainer'  
+	 					}">
+		 	</div>  
+
+
+          <!--OMNI-102286 OMNI-102102 END-->
+		<!--OMNI-105498 Begin-->
+		 <div data-dojo-type="sc/plat/dojo/widgets/Link" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_InStorePickupLnk' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '63' , 
+		'class' : 'panelCollapse' , 
+		_sc_extensibility_position : 'after' , 
+		hasImage : true , 
+		appendToContextRoot : true , 
+		imageSrc : 'wsc/resources/css/icons/images/arrow-piano-key.png' , 
+		_sc_extensibility_referenceUId : 'extn_InStorePickupLabel'  
+	 					}">
+		 	</div>   
+		
+		<!--OMNI-105498 End-->
+
+		<!--OMNI-71303 Begin-->
+		<div data-dojo-type="sc/plat/dojo/widgets/Link" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_OnMyWayOrdersLnk' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '48' , 
+		'class' : 'panelCollapse' , 
+		_sc_extensibility_position : 'after' , 
+		hasImage : true , 
+		appendToContextRoot : true , 
+		imageSrc : 'wsc/resources/css/icons/images/arrow-piano-key.png' , 
+		_sc_extensibility_referenceUId : 'extn_OnMyWayLabel'  
+	 					}">
+		 	</div>  
+		
+		<!--OMNI-71303 End-->
+		 	<div data-dojo-type="sc/plat/dojo/widgets/Link" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_SearchOrder' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '25' , 
+		'class' : 'extnidxLink taskLabel' , 
+		_sc_extensibility_position : 'first' , 
+		_sc_extensibility_referenceUId : 'extn_STSOrderSearch'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	value : 			this.getSimpleBundleString('extn_Ship_To_Store_Order_Search')
+			}
+		}
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/Link" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_SerachOrderArrow' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '26' , 
+		'class' : 'panelCollapse' , 
+		_sc_extensibility_position : 'last' , 
+		hasImage : true , 
+		appendToContextRoot : true , 
+		imageSrc : 'wsc/resources/css/icons/images/arrow-piano-key.png' , 
+		_sc_extensibility_referenceUId : 'extn_STSOrderSearch'  
+	 					}">
+		 	</div>  
+		<!-- End - OMNI-6579,6580 : STS home screen changes-->
+		<div data-dojo-type="idx/layout/ContentPane" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								_sc_extensibility_operation : 'change' , 
+		'class' : 'extn_reducePanelHeight' , 
+		_sc_extensibility_referenceUId : 'pnlTasksInProgress'  
+	 					}">
+		 	</div> 
+<div data-dojo-type="idx/layout/ContentPane" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								_sc_extensibility_operation : 'change' , 
+		'class' : 'extn_reducePanelHeight' , 
+		_sc_extensibility_referenceUId : 'pnlOpenPicks'  
+	 					}">
+		 	</div>			
+	<div data-dojo-type="idx/layout/ContentPane" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								_sc_extensibility_operation : 'change' , 
+		'class' : 'extn_reducePanelHeight' , 
+		_sc_extensibility_referenceUId : 'pnlBatchPick'  
+	 					}">
+		 	</div> 
+			
+			<div data-dojo-type="idx/layout/ContentPane" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								_sc_extensibility_operation : 'change' , 
+		'class' : 'extn_reducePanelHeight' , 
+		_sc_extensibility_referenceUId : 'pnlReadyForPacking'  
+	 					}">
+		 	</div>  
+			
+			
+<!-- OMNI-66978 START-->
+
+	<div data-dojo-type="idx/layout/ContentPane" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_AuditStagingLocation' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '34' , 
+		'class' : 'extn_reduceSTSURLPanelHeight' , 
+		_sc_extensibility_position : 'after' , 
+		_sc_extensibility_referenceUId : 'extn_STSOrderSearch'  
+	 					}">
+						
+						
+				</div>		
+	
+	<div data-dojo-type="sc/plat/dojo/widgets/Link" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_AuditStaging' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '35' , 
+		'class' : 'extnidxLink taskLabel' , 
+		_sc_extensibility_position : 'first' , 
+		_sc_extensibility_referenceUId : 'extn_AuditStagingLocation'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	value : 			this.getSimpleBundleString('extn_Audit_Staging_Location')
+			}
+		}
+	 					}">
+				</div>
+						
+		<div data-dojo-type="sc/plat/dojo/widgets/Link" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_AuditStagingArrow' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '36' , 
+		'class' : 'panelCollapse' , 
+		_sc_extensibility_position : 'after' , 
+		hasImage : true , 
+		appendToContextRoot : true , 
+		imageSrc : 'wsc/resources/css/icons/images/arrow-piano-key.png' , 
+		_sc_extensibility_referenceUId : 'extn_AuditStaging'  
+	 					}">
+				</div>
+<!--OMNI 66978 END-->
+
+	<!--OMNI-67538 Feature Toggle Changes - START-->	
+		<div data-dojo-type="idx/layout/ContentPane" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_AuditStagingLocation1' , 
+									renderHidden : true ,
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '37' , 
+		'class' : 'extn_reduceSTSURLPanelHeight' , 
+		_sc_extensibility_position : 'after' , 
+		_sc_extensibility_referenceUId : 'extn_AuditStagingLocation'  
+	 					}">
+		 	</div>
+
+		<div data-dojo-type="sc/plat/dojo/widgets/Link" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_AuditStaging1' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '38' , 
+		'class' : 'extnidxLink taskLabel extnidxLinktoggle' , 
+		_sc_extensibility_position : 'first' , 
+		_sc_extensibility_referenceUId : 'extn_AuditStagingLocation1'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			title :this.getSimpleBundleString('Tooltip_AuditShipment_Toggle'),	
+			 	value : this.getSimpleBundleString('extn_Audit_Staging_Location')
+			} 
+			
+		}
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/Link" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_AuditStagingArrow1' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '39' , 
+		'class' : 'panelCollapse' , 
+		_sc_extensibility_position : 'last' , 
+		hasImage : true , 
+		appendToContextRoot : true , 
+		imageSrc : 'wsc/resources/css/icons/images/arrow-piano-key.png' , 
+		_sc_extensibility_referenceUId : 'extn_AuditStagingLocation1'  
+	 					}">
+		 	</div>  
+	<!--OMNI-67538 Feature Toggle Changes - END-->
+    <!--OMNI-82213 Miised Shipment Link - Start-->
+		<div data-dojo-type="idx/layout/ContentPane" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_MissedShipment' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '40' , 
+		'class' : 'extn_reduceSTSURLPanelHeight' , 
+		_sc_extensibility_position : 'after' , 
+		_sc_extensibility_referenceUId : 'extn_AuditStagingLocation1'  
+	 					}">					
+				</div>		
+	<div data-dojo-type="sc/plat/dojo/widgets/Link" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_MissedShipmentLink' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '41' , 
+		'class' : 'extnidxLink taskLabel' , 
+		_sc_extensibility_position : 'first' , 
+		_sc_extensibility_referenceUId : 'extn_MissedShipment'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	value : 			this.getSimpleBundleString('extn_Missed_Shipment')
+			}
+		}
+	 					}">
+				</div>					
+		<div data-dojo-type="sc/plat/dojo/widgets/Link" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'MissedShipmentArrow' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '42' , 
+		'class' : 'panelCollapse' , 
+		_sc_extensibility_position : 'last' , 
+		hasImage : true , 
+		appendToContextRoot : true , 
+		imageSrc : 'wsc/resources/css/icons/images/arrow-piano-key.png' , 
+		_sc_extensibility_referenceUId : 'extn_MissedShipment'  
+	 					}">
+				</div>
+			<!--OMNI-82213 Missed Shipment Link - End-->
+			<!--OMNI-81802 Missed Shipment Toggle Change - Start-->
+			 <div data-dojo-type="idx/layout/ContentPane" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_MissedShipment1' ,
+                                    renderHidden : true ,
+        _sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '43' , 
+		'class' : 'extn_reduceSTSURLPanelHeight' , 
+		_sc_extensibility_position : 'after' , 
+		_sc_extensibility_referenceUId : 'extn_MissedShipment'  
+	 					}">					
+				</div>	
+         <div data-dojo-type="sc/plat/dojo/widgets/Link" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_MissedFeatureDisabledLink' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '44' , 
+		'class' : 'extnidxLink taskLabel extnidxLinktoggle' , 
+		_sc_extensibility_position : 'first' , 
+		_sc_extensibility_referenceUId : 'extn_MissedShipment1'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+                           title :this.getSimpleBundleString('Tooltip_AuditShipment_Toggle'),
+			 	value : 			this.getSimpleBundleString('extn_Missed_Shipment')
+			}
+		}
+	 					}">
+				</div>	
+                 <div data-dojo-type="sc/plat/dojo/widgets/Link" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_MissedFeatureDisabledArrow1' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '45' , 
+		'class' : 'panelCollapse' , 
+		_sc_extensibility_position : 'last' , 
+		hasImage : true , 
+		appendToContextRoot : true , 
+		imageSrc : 'wsc/resources/css/icons/images/arrow-piano-key.png' , 
+		_sc_extensibility_referenceUId : 'extn_MissedShipment1'  
+	 					}">
+		 	</div> 
+			<!--OMNI-81802 Missed Shipment Toggle Change - End-->	
+		</div>

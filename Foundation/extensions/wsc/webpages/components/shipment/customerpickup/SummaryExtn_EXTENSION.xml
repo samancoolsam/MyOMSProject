@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExtensionMetaData>
+    <ScreenExtension extnClassName="SummaryExtn"
+        extnPackage="extn.components.shipment.customerpickup"
+        originalScreen="wsc.components.shipment.customerpickup.Summary"
+        originalScreenPackage="wsc.components.shipment.customerpickup" type="diffrential">
+		<Namespaces>
+            <SourceNamespaces>
+		<!--OMNI-85085 - START-->	
+		<Source description="extn_getCurbsideGetShipmentLine"
+                    isExtn="true"
+                    scExtensibilityArrayItemId="extn_SourceNamespaces_8" value="extn_getCurbsideGetShipmentLine"/>	
+		<!--OMNI-85085 - END-->	
+            </SourceNamespaces>
+        </Namespaces>
+        <Subscribers>
+            <Local>
+                <Subscriber eventId="saveCurrentPage" isExtn="true" sequence="19">
+                    <Handler methodName="extn_before_save"/>
+                </Subscriber>
+            </Local>
+        </Subscribers>
+        <MashupRefs>
+			<Init>
+				<!--OMNI-85085 - Start-->
+				<MashupRef extnType="ADD"
+                    mashupId="extn_getCurbsideGetShipmentLine"
+                    mashupRefId="extn_getCurbsideGetShipmentLine" sourceNamespace="extn_curbside"/>	
+				<!--OMNI-85085 - End-->
+            </Init>
+            <Behavior>
+                <MashupRef extnType="ADD"
+                    mashupId="UnResrvMsgToSIMOnShrtg" mashupRefId="extn_UnResrvMsgToSIMOnShrtg"/>
+				<MashupRef extnType="ADD"
+                    mashupId="extn_getUserListByUserID" mashupRefId="extn_getUserListByUserID"/>
+				<!--OMNI-85085 - Start-->
+				<MashupRef extnType="ADD"
+                    mashupId="extn_recordCustomerPickForCurbsideConsolidation" mashupRefId="extn_recordCustomerPickForCurbsideConsolidation"/>
+				<!--OMNI-85085 - End-->
+            </Behavior>
+        </MashupRefs>
+    </ScreenExtension>
+</ExtensionMetaData>

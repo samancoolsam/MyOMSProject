@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExtensionMetaData>
+    <ScreenDisplayExtension extnClassName="ShipmentPickDetailsExtn"
+        identifierId="Ship"
+        originalScreen="wsc.mobile.common.screens.shipment.picking.ShipmentPickDetails" originalScreenPackage="wsc.mobile.common.screens.shipment.picking">
+        <Items>
+            <ContentPane _sc_extensibility_operation="change"
+                _sc_extensibility_referenceUId="pnlIdentifierHolder" style="dueInLabel groupLabelSpacing"/>
+            <ContentPane _sc_extensibility_moveOrder="7"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="extn_deliveryMethod" uId="extn_contentpane2"/>
+            <Label _sc_extensibility_moveOrder="2"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="lbl_Status"
+                class=" dueInLabel groupLabelSpacing" uId="extn_deliveryMethod"/>
+            <Label _sc_extensibility_moveOrder="3"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="lbl_Products" uId="extn_deliveryMethod"/>
+            <Label _sc_extensibility_moveOrder="6"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="lbl_IncludedInBatch" uId="extn_deliveryMethod"/>
+            <Label _sc_extensibility_moveOrder="8"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="first"
+                _sc_extensibility_referenceUId="extn_contentpane2" uId="extn_deliveryMethod"/>
+            <DataLabel _sc_extensibility_operation="change"
+                _sc_extensibility_referenceUId="lbl_timeRemaining" renderHidden="false"/>
+            <DataLabel _sc_extensibility_moveOrder="5"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="lbl_timeRemaining" uId="extn_shipmentNo"/>
+        </Items>
+    </ScreenDisplayExtension>
+</ExtensionMetaData>

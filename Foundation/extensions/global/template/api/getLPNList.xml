@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LPNs TotalNumberOfRecords="">
+<LPN CaseId="" FreezeOnVariance="" Height="" IsOutboundContainer="" LPNHdrKey="" Length="" OrganizationCode="" OuterMostCaseId="" OuterMostPalletId="" PalletId="" ParentCaseId="" ParentPalletId="" ReceiptHeaderKey="" Segment="" SegmentType="" Volume="" Weight="" Width="" DimensionUom="" WeightUom="">
+<Receipt ReceiptNo=""/>
+<LPNLocation LocationId="" Node="" ZoneId=""/>
+</LPN>
+</LPNs>

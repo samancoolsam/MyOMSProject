@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<DBSchema> 
+   <Entities> 
+      <Entity ApiNeeded="Y" AuditRequired="N" Description="This table is to store the input of GC activation which got failed" HasHistory="false" Prefix="ACAD" TableName="ACAD_REPROCESS_GC_ACTIVATION" XMLName="ACADReprocessGCActivation"> 
+         <Attributes> 
+            <Attribute ColumnName="REP_GC_ACT_KEY" DataType="Key" DefaultValue="' '" Description="System generated primary key" Nullable="false" XMLName="RepGcActKey" Name="RepGcActKey" /> 
+			<Attribute ColumnName="SVC_NO" DataType="Key" DefaultValue="' '" Description="System generated Gift Card no" Nullable="false" XMLName="SvcNo" Name="SvcNo" /> 
+			<Attribute ColumnName="ORDER_NO" Type="VARCHAR2" Size="40" DefaultValue="' '" Description="Order number of GC activation" Nullable="false" XMLName="OrderNo" Name="OrderNo" /> 
+			<Attribute ColumnName="MESSAGE_XML" DataType="CLOB" DefaultValue="' '" Description="The Message XML which failed to execute" Nullable="false" XMLName="MessageXml" Name="MessageXml" /> 
+			<Attribute ColumnName="SHIPMENT_NO" DataType="Text-50" DefaultValue="' '" Description="Shipment Number" Nullable="false" XMLName="ShipmentNo" Name="ShipmentNo" /> 
+			<Attribute ColumnName="COUNT" Type="NUMBER" DefaultValue="0" Description="no of times failed" Nullable="false" XMLName="Count" Name="Count" />
+			<Attribute ColumnName="GC_AMOUNT" DecimalDigits="2" Size="10" DefaultValue="0.00" Description="Tender Amount of Gift Card"
+			Nullable="false" Type="NUMBER" XMLName="GCAmount" Name="GCAmount" />
+			<Attribute ColumnName="AVAILABLE_DATE" Type="DATETIME" DefaultValue="SYSDATE" Description="available date" Nullable="false" XMLName="AvailableDate" Name="AvailableDate" /> 
+			<Attribute ColumnName="PROCESSED" Type="CHAR" Size="1" DefaultValue="N" Description="This flag describes whether the GC activation is processed or not" Nullable="false" XMLName="Processed" Name="Processed" /> 
+			<Attribute ColumnName="CREATETS" DataType="TimeStamp" DefaultValue="SYSDATE" Description="Create TimeStamp" /> 
+			<Attribute ColumnName="MODIFYTS" DataType="TimeStamp" DefaultValue="SYSDATE" Description="Modify TimeStamp" /> 
+			<Attribute ColumnName="CREATEUSERID" DataType="UserId" DefaultValue="' '" Description="Creating User ID" /> 
+			<Attribute ColumnName="MODIFYUSERID" DataType="UserId" DefaultValue="' '" Description="Modifying User ID" /> 
+			<Attribute ColumnName="CREATEPROGID" DataType="ProgramID" DefaultValue="' '" Description="Creating Program ID" /> 
+			<Attribute ColumnName="MODIFYPROGID" DataType="ProgramID" DefaultValue="' '" Description="Modifying Program ID" /> 
+			<Attribute ColumnName="LOCKID" DataType="Lockid" DefaultValue="0" Description="Lock ID" /> 
+         </Attributes> 
+		 <PrimaryKey Name="REP_GC_ACT_KEY_PK"> 
+            <Attribute ColumnName="REP_GC_ACT_KEY" Name="RepGcActKey" /> 
+         </PrimaryKey> 
+      </Entity> 
+   </Entities> 
+</DBSchema> 

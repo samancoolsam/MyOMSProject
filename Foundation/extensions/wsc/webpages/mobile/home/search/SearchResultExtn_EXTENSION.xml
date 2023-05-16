@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExtensionMetaData>
+    <ScreenExtension extnClassName="SearchResultExtn"
+        extnPackage="extn.mobile.home.search"
+        originalScreen="wsc.mobile.home.search.SearchResult"
+        originalScreenPackage="wsc.mobile.home.search" type="diffrential">
+        <MashupRefs>
+            <Init>
+                <MashupRef extnType="MODIFY"
+                    mashupId="mobileHomeSearch_getShipmentList"
+                    mashupRefId="getShipmentListInit" pageSize="5"
+                    pageSizeType="Shipment" paginationStrategy="NEXTPAGE"/>
+            </Init>
+        </MashupRefs>
+    </ScreenExtension>
+</ExtensionMetaData>

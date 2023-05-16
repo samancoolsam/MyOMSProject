@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ScreenBundle identifierId="Pick"
+    screenBundleId="extn.mobile.common.screens.shipment.picking.ShipmentPickDetailsExtnBundle" screenId="extn.mobile.common.screens.shipment.picking.ShipmentPickDetailsExtn">
+    <BundleEntries>
+        <BundleEntry bundleEntryId="extn_shipmentNo_DataLabel_label"
+            bundleKey="extn_Shipment_number"
+            bundleValueFn="_scSimpleBundle" property="label"
+            type="WIDGET" uId="extn_shipmentNo"/>
+    </BundleEntries>
+</ScreenBundle>

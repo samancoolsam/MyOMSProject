@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<InvoiceDetail>
+    <!-- InvoiceHeader is a template-driven element but some of its attributes are not. Attributes that are not template driven: TotalCharges, TotalDiscount, TotalHeaderCharges, HeaderCharges, HeaderDiscount, HeaderTax and LineSubTotal.   -->
+    <InvoiceHeader ActualFreightCharge="" AmountCollected="REQUIRED"
+        ChargedActualFreight="" CollectedExternally=""
+        CollectedThroughAR="" DateInvoiced=""
+        DerivedFromOrderHeaderKey="" HeaderCharges="" HeaderDiscount=""
+        HeaderTax="" InvoiceNo="" InvoiceType="" LineSubTotal=""
+        MasterInvoiceNo="" OrderInvoiceKey="" Reference1=""
+        TotalAmount="" TotalCharges="" TotalDiscount=""
+        TotalHeaderCharges="" TotalTax="">
+        <Order BillToID="" CustomerEMailID="" OrderName="" BuyerOrganizationCode="" DeliveryCode="" EnteredBy="" OrderDate="" 
+            EnterpriseCode="" EntryType="" OrderHeaderKey="" DocumentType="" OrderNo="" OrderPurpose="" OrderType=""
+            SellerOrganizationCode="" TermsCode="">
+            <PriceInfo Currency=""/>
+            <PersonInfoBillTo AddressLine1="" AddressLine2=""
+                AddressLine3="" AddressLine4="" AddressLine5=""
+                AddressLine6="" AlternateEmailID="" Beeper="" City=""
+                Company="" Country="" DayFaxNo="" DayPhone=""
+                Department="" EMailID="" EveningFaxNo="" EveningPhone=""
+                FirstName="" JobTitle="" LastName="" MiddleName=""
+                MobilePhone="" OtherPhone="" PersonID=""
+                PersonInfoKey="" State="" Suffix="" Title="" ZipCode=""/>
+            <AdditionalAddresses NumberOfAdditionalAddresses="">
+                <AdditionalAddress AddressType="">
+                    <PersonInfo AddressLine1="" AddressLine2=""
+                        AddressLine3="" AddressLine4="" AddressLine5=""
+                        AddressLine6="" AddressType=""
+                        AlternateEmailID="" Beeper="" City="" Company=""
+                        Country="" DayFaxNo="" DayPhone="" Department=""
+                        EMailID="" EveningFaxNo="" EveningPhone=""
+                        FirstName="" JobTitle="" LastName=""
+                        MiddleName="" MobilePhone="" OtherPhone=""
+                        PersonID="" State="" Suffix="" Title="" ZipCode=""/>
+                </AdditionalAddress>
+            </AdditionalAddresses>
+            <References>
+                <Reference Name="" Value=""/>
+            </References>
+          <OrderLines>
+			<OrderLine AllocationDate="" AllocationLeadTime="" ApptStatus="" AvailableQtyForCancelAndStopDelivery="" 
+			AvailableQtyForStopDelivery="" AwaitingDeliveryRequest="" CanAddServiceLines="" CarrierAccountNo="" CarrierServiceCode="" 
+			ChainedFromOrderHeaderKey="" ChainedFromOrderLineKey="" ComponentShipped="" ConditionVariable1="" ConditionVariable2="" CustomerLinePONo="" 
+			CustomerPONo="" DeliveryCode="" DeliveryMethod="" DepartmentCode="" DependencyShippingRule="" DependentOnLineKey="" 
+			DerivedFromOrderHeaderKey="" DerivedFromOrderLineKey="" DerivedFromOrderReleaseKey="" DistributionRuleId="" FillQuantity="" FreightTerms=""
+			 FulfillmentType="" GiftFlag="" HasChainedLines="" HasDeliveryLines="" HasDerivedChild="" HasLocalShipment="" HasServiceLines="" HoldFlag="" 
+			 HoldReasonCode="" ImportLicenseNo="" IntentionalBackorder="" InvoicedExtendedPrice="" InvoicedQty="" InvoicedQuantity="" IsBundleParent="" 
+			 IsFirmPredefinedNode="" ItemGroupCode="" KitCode="" LineSeqNo="" LineType="" MaxLineStatus="" MaxLineStatusDesc="" MergeNode="" MinLineStatus="" 
+			 MinLineStatusDesc="" ModificationAllowed="" ModificationQty="" ModificationReleaseKey="" MultipleStatusesExist="" NoShipmentModificationQty="" 
+			 OpenQty="" OrderHeaderKey="" OrderLineKey="" OrderedQty="" OrigOrderLineKey="" OriginalOrderedQty="" OtherCharges="" OverallStatus="" PackListType="" 
+			 ParentOfDependentGroup="" PersonalizeCode="" PersonalizeFlag="" PickableFlag="" PipelineKey="" PostReleaseModificationQty="" 
+			 PreReleaseModificationQty="" PrimeLineNo="" ProcureFromNode="" Purpose="" ReceivingNode="" RemainingQty="" ReservationID="" ReservationMandatory="" 
+			 ReservationPool="" ReshippedQty="" ReturnReason="" ReturnReasonLongDesc="" ReturnReasonShortDesc="" SCAC="" ScacAndService="" ScacAndServiceKey="" 
+			 SchedFailureReasonCode="" Segment="" SegmentType="" SerialNo="" ShipNode="" ShipToID="" ShipToKey="" ShipTogetherNo="" SourceFromOrganization="" 
+			 SplitQty="" Status="" StatusQuantity="" SubLineNo="" SubstituteItemID="" SubstituteItemUOM="" Timezone="" TranDiscrepancyQty="" isHistory="">
+			 <DerivedFromOrder OrderNo=""/>
+			   <Item ItemDesc="" CanUseAsServiceTool="" GlobalItemID="" ItemGroupCode="" ItemID="" ItemKey="" OrganizationCode="" UnitOfMeasure="">
+                <Extn ExtnIsGiftCard="" ExtnWhiteGloveEligible=""/>
+                <PrimaryInformation AssumeInfiniteInventory="" BundleFulfillmentMode="" CapacityPerOrderedQty="" CapacityQuantityStrategy="" ColorCode="" ComputedUnitCost="" CostCurrency="" CountryOfOrigin="" CreditWOReceipt="" DefaultProductClass="" Description="" DisplayItemDescription="" ExtendedDescription="" FixedCapacityQtyPerLine="" FixedPricingQtyPerLine="" InvoiceBasedOnActuals="" InvolvesSegmentChange="" IsAirShippingAllowed="" IsDeliveryAllowed="" IsFreezerRequired="" IsHazmat="" IsModelItem="" IsParcelShippingAllowed="" IsPickupAllowed="" IsReturnService="" IsReturnable="" IsShippingAllowed="" IsStandaloneService="" IsSubOnOrderAllowed="" ItemType="" KitCode="" ManufacturerItem="" ManufacturerItemDesc="" ManufacturerName="" MasterCatalogID="" MaxOrderQuantity="" MinOrderQuantity="" MinimumCapacityQuantity="" ModelItemUnitOfMeasure="" NumSecondarySerials="" OrderingQuantityStrategy="" PricingQuantityConvFactor="" PricingQuantityStrategy="" PricingUOM="" PricingUOMStrategy="" PrimaryEnterpriseCode="" PrimarySupplier="" ProductLine="" RequiresProdAssociation="" ReturnWindow="" RunQuantity="" SerializedFlag="" ServiceTypeID="" ShortDescription="" SizeCode="" Status="" TaxableFlag="" UnitCost="" UnitHeight="" UnitHeightUOM="" UnitLength="" UnitLengthUOM="" UnitVolume="" UnitVolumeUOM="" UnitWeight="" UnitWeightUOM="" UnitWidth="" UnitWidthUOM=""/>
+                <InventoryParameters ATPRule="" AdvanceNotificationTime="" DefaultExpirationDays="" InventoryMonitorRule="" IsFifoTracked="" IsItemBasedAllocationAllowed="" IsSerialTracked="" LeadTime="" MinNotificationTime="" NodeLevelInventoryMonitorRule="" ProcessingTime="" TagControlFlag="" TagReqAtReceipt="" TagReqAtShipment="" TimeSensitive="" UseUnplannedInventory=""/>
+                <ChildItemList/>
+            </Item>
+            <LineOverallTotals Charges="" Discount="" ExtendedPrice="" LineTotal="" OptionPrice="" PricingQty="" Tax="" UnitPrice=""/>
+			 </OrderLine>
+		</OrderLines>
+		  <OverallTotals GrandCharges="" GrandDiscount="" GrandTax="" GrandTotal="" HdrCharges="" HdrDiscount="" HdrTax="" HdrTotal="" LineSubTotal=""/>
+		  <PaymentMethods>
+		  <PaymentMethod/>
+		  </PaymentMethods>
+        </Order>
+        <Shipment ManifestNo="" ReceivingNode="" SCAC="" ShipDate="" ScacAndService="" 
+            ShipNode="" ShipmentKey="" CarrierServiceCode="" ShipmentNo="">
+            <ToAddress AddressLine1="" AddressLine2="" AddressLine3=""
+                AddressLine4="" AddressLine5="" AddressLine6=""
+                AlternateEmailID="" Beeper="" City="" Company=""
+                Country="" DayFaxNo="" DayPhone="" Department=""
+                EMailID="" EveningFaxNo="" EveningPhone="" FirstName=""
+                HttpUrl="" JobTitle="" LastName="" MiddleName=""
+                MobilePhone="" OtherPhone="" PersonID="" State=""
+                Suffix="" Title="" ZipCode=""/>
+            <ShipNode ShipnodeKey="">
+                <ShipNodePersonInfo AddressLine1="" AddressLine2=""
+                    AddressLine3="" AddressLine4="" AddressLine5=""
+                    AddressLine6="" AlternateEmailID="" Beeper=""
+                    City="" Company="" Country="" DayFaxNo=""
+                    DayPhone="" Department="" EMailID="" EveningFaxNo=""
+                    EveningPhone="" FirstName="" HttpUrl="" JobTitle=""
+                    LastName="" MiddleName="" MobilePhone=""
+                    OtherPhone="" PersonID="" State="" Suffix=""
+                    Title="" ZipCode=""/>
+            </ShipNode>
+        </Shipment>
+        <!-- TotalLines is not a template driven attribute. -->
+        <LineDetails TotalLines="">
+            <LineDetail Charges="" ExtendedPrice="" LineTotal=""
+                OrderInvoiceDetailKey="REQUIRED" OrderLineKey=""
+                ShippedQty="" Tax="" UnitPrice="">
+                <OrderLine OrderLineKey="" PrimeLineNo="" SubLineNo="" ReturnReason="" SCAC="" ScacAndService="" CarrierServiceCode="" >
+                    <Item ItemID="" ProductClass="" UnitOfMeasure="" ItemDesc="">
+                        <LanguageDescriptionList>
+                            <LanguageDescription Description=""
+                                ExtendedDescription="" LocaleCode="" ShortDescription=""/>
+                        </LanguageDescriptionList>
+                    </Item>
+                    <DerivedFromOrderLine OrderLineKey="" SCAC="" ScacAndService="" CarrierServiceCode=""/>
+                    <LinePriceInfo DiscountPercentage=""
+                        DiscountReference="" DiscountType=""
+                        ListPrice="" RetailPrice="" UnitPrice=""/>
+                    <References>
+                        <Reference Name="" Value=""/>
+                    </References>
+                </OrderLine>
+                <!-- LineCharges is not a template driven element.  If a line has line charges, LineCharges will appear in the output alongwith all its child elements.-->
+                <LineCharges>
+                    <LineCharge ChargeAmount="" ChargeCategory=""
+                        ChargeName="" ChargeNameKey="" ChargePerLine=""
+                        ChargePerUnit="" Reference=""/>
+                </LineCharges>
+                <!-- LineTaxes is not a template driven element.  If a line has line taxes, LineTaxes will appear in the output alongwith all its child elements.-->
+                <LineTaxes>
+                    <LineTax ChargeCategory="" ChargeName=""
+                        ChargeNameKey="" Reference_1="" Reference_2=""
+                        Reference_3="" Tax="" TaxName="" TaxPercentage=""/>
+                    <TaxSummary>
+                        <TaxSummaryDetail Tax="REQUIRED" TaxName=""/>
+                    </TaxSummary>
+                </LineTaxes>
+                <References>
+                    <Reference Name="" Value=""/>
+                </References>
+            </LineDetail>
+        </LineDetails>
+        <TotalSummary>
+            <ChargeSummary>
+                <!-- ChargeSummaryDetail is not a template-driven element. -->
+                <ChargeSummaryDetail ChargeAmount="" ChargeCategory=""
+                    ChargeName="" ChargeNameKey="" Reference=""/>
+            </ChargeSummary>
+            <TaxSummary>
+                <!-- ChargeSummaryDetail is not a template-driven element. -->
+                <TaxSummaryDetail Tax="REQUIRED" TaxName=""/>
+            </TaxSummary>
+        </TotalSummary>
+        <HeaderCharges>
+            <!-- HeaderCharge is not a template driven element. If the template contains HeaderCharges element, HeaderCharge will appear in the output, alongwith all its attributes. -->
+            <HeaderCharge ChargeAmount="" ChargeCategory=""
+                ChargeName="" ChargeNameKey="" Reference=""/>
+        </HeaderCharges>
+        <!-- HeaderTaxes is not a template driven element. If the template contains HeaderCharges element, HeaderTaxes will appear in the output, alongwith all its child elements -->
+        <HeaderTaxes>
+            <HeaderTax ChargeCategory="" ChargeName="" ChargeNameKey=""
+                Reference_1="" Reference_2="" Reference_3="" Tax=""
+                TaxName="" TaxPercentage=""/>
+            <TaxSummary>
+                <TaxSummaryDetail Tax="REQUIRED" TaxName=""/>
+            </TaxSummary>
+        </HeaderTaxes>
+        <CollectionDetails TotalLines="">
+            <CollectionDetail AmountCollected="REQUIRED"
+                AuditTransactionID="" AuthorizationExpirationDate=""
+                AuthorizationID="" BookAmount="" ChargeTransactionKey=""
+                ChargeType="" CollectionDate="" CreditAmount=""
+                DebitAmount="" DistributedAmount="" HoldAgainstBook=""
+                OpenAuthorizedAmount="" OrderHeaderKey=""
+                OrderInvoiceKey="" PaymentKey="" RequestAmount=""
+                SettledAmount="" Status="" StatusReason="" TransferFromOhKey="" TransferToOhKey="" 
+                TransactionDate="" UserExitStatus="">
+                <CreditCardTransactions>
+                    <CreditCardTransaction AuthAmount="" AuthAvs=""
+                        AuthCode="" AuthReturnCode="" AuthReturnFlag=""
+                        AuthReturnMessage="" AuthTime=""
+                        ChargeTransactionKey=""
+                        CreditCardTransactionKey=""
+                        InternalReturnCode="" InternalReturnFlag=""
+                        InternalReturnMessage="" ParentKey=""
+                        Reference1="" Reference2="" RequestId=""
+                        TranAmount="" TranRequestTime=""
+                        TranReturnCode="" TranReturnFlag=""
+                        TranReturnMessage="" TranType=""/>
+                </CreditCardTransactions>
+                <PaymentMethod AwaitingAuthInterfaceAmount=""
+                    AwaitingChargeInterfaceAmount="" ChargeSequence=""
+                    CheckNo="" CheckReference="" CreditCardExpDate=""
+                    CreditCardName="" CreditCardNo="" CreditCardType=""
+                    CustomerAccountNo="" CustomerPONo=""
+                    DisplayCreditCardNo="" IncompletePaymentType=""
+                    MaxChargeLimit="" PaymentKey="" PaymentReference1=""
+                    PaymentReference2="" PaymentReference3=""
+                    PaymentType="" RequestedAuthAmount=""
+                    RequestedChargeAmount="" SuspendAnyMoreCharges=""
+                    SvcNo="" TotalAuthorized="" TotalCharged=""
+                    TotalRefundedAmount="" UnlimitedCharges=""/>
+            </CollectionDetail>
+        </CollectionDetails>
+    </InvoiceHeader>
+</InvoiceDetail>

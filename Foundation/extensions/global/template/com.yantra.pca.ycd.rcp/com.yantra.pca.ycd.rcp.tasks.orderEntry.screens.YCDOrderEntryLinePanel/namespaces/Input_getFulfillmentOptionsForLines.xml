@@ -1,0 +1,12 @@
+<Promise OrganizationCode="">
+	<PromiseLines>
+		<PromiseLine ItemID=""
+			ProductClass="" RequiredQty="" UnitOfMeasure=""/>
+	</PromiseLines>
+	<EvaluateOptions>
+		<EvaluateOption DeliveryMethod="" OptionNo="">
+			<ShipToAddress PersonInfoKey=""/>
+		</EvaluateOption>
+		<EvaluateOption DeliveryMethod="" Node="" OptionNo=""/>
+	</EvaluateOptions>
+</Promise>

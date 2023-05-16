@@ -1,0 +1,111 @@
+<div class="sc-platform-screen-default backroompickproductscan">
+	<div data-dojo-type="sc/plat/dojo/widgets/Label" data-dojo-props="     spanLabel : true ,
+        shouldEncodeValue : false ,
+		 renderHidden : true ,
+        'class' : 'highLightRed' ,
+        uId : 'extn_InvalidSerialNolbl'
+        ,scParamDataFn :
+         function() {
+            return {
+                value :             this.getSimpleBundleString('extn_invalid_serial_no_scanned'),
+				style: 'margin-left: 21%',
+            }
+        }
+	"></div>
+	<div data-dojo-type="idx/layout/ContentPane" data-dojo-props="      spanLabel : true ,
+        'class' : 'screenTitlePanel' ,
+        uId : 'pnlTitleBar' ,
+        'aria-live' : 'assertive'  
+        ,scParamDataFn :
+         function() {
+            return {
+                'aria-label' :          this.getSimpleBundleString('arialabel_screenTitle')
+            }
+        }
+" role='region' ></div>
+   <div data-dojo-type="idx/layout/ContentPane" data-dojo-props="		'class' : 'screen 		headerScanPanel' , 
+		uId : 'productScanPanel' , 
+		layoutAlign : 'top'  
+ ">
+    <div data-dojo-type="sc/plat/dojo/widgets/DataLabel" data-dojo-props="		highlightMatch : 'false' , 
+		'class' : 'hashNumberAlign autoLabelZeroWidth blockComponent comappsWrapWord', 
+		uId : 'extn_scanSummaryHeader',
+ 		scParamDataFn :
+		function() { 
+			return { 
+			    label :'Please Scan or Enter Serial Number',	
+				style:'text-align: center',
+			}
+		}">
+	</div>
+<div data-dojo-type="idx/layout/ContentPane" data-dojo-props="		'class' : 'scanPanelData' , 
+		uId : 'productScanForm' , 
+		layoutAlign : 'top'  
+ ">
+<div data-dojo-type="idx/layout/ContentPane" data-dojo-props="		'class' : 'barcodeScanPanel' , 
+		uId : 'barcodeScanPanelForm' , 
+		layoutAlign : 'top'  
+ ">
+<div data-dojo-type="sc/plat/dojo/widgets/Link" data-dojo-props="		spanLabel : true , 
+		hasImage : true , 
+		imageSrc : 'wsc/resources/css/icons/images/barcode_blue.png' , 
+		'class' : 'buttonConnect' , 
+		appendToContextRoot : true , 
+		uId : 'scanSerialNoButton'  
+ 		,scParamDataFn :
+		 function() { 
+			return { 
+			 	'aria-label' : this.getSimpleBundleString('extn_Scan_or_Enter_Serial_No'),
+			 	title : 			this.getSimpleBundleString('extn_Scan_or_Enter_Serial_No')
+	
+			 	
+			}
+		}
+" role='button'></div>
+<div data-dojo-type="idx/form/TextBox" data-dojo-props="		spanLabel : true , 
+		scExcludeForDirtyCheck : true , 
+		uId : 'scanProductIdTxt' , 
+		showTitle : true,
+ 		scParamDataFn :
+		function() { 
+			return { 
+			 	title : 			this.getSimpleBundleString('extn_Scan_or_Enter_Serial_No')
+,	
+			 	hint : 			this.getSimpleBundleString('extn_Scan_or_Enter_Serial_No')
+,
+				 	bindingData : 	{
+		 sourceBinding : 	{
+		 path : 			'SerialNo'
+,
+		 namespace : 			'extn_SerialNo_output'
+	}
+,
+		 targetBinding : 	[
+	 		{
+		 path : 			'Shipment.SerialNo'
+,
+		 namespace : 			'extn_SerialNo_input'
+	}
+	]
+	}
+			}
+					}
+"></div>
+                </div>
+            </div>           
+    </div>
+	<div data-dojo-type="dijit/form/Button" data-dojo-props="		spanLabel : true , 
+		'class' : 'idxSpecialButton zeroWidthLabelKey' , 
+		<!--style : 'padding-left:200px' ,-->
+	style:'margin-left: 36%',
+		showLabel : true , 
+		uId : 'extn_Popup_btnCancel',
+		scParamDataFn :
+		 function() { 
+			return { 
+			 	label : 			this.getSimpleBundleString('Cancel')
+			}
+		}
+"></div>
+<br/>
+</div>

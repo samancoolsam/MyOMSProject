@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LabelFieldMap>
+	<!-- Displaying the Nodes Address -->
+	<LabelField
+		Binding="Shipment/FromAddress/@Company"
+		LabelFieldName="FromName" RepeatingElement="" />
+	<LabelField
+		Binding="Shipment/FromAddress/@AddressLine1"
+		LabelFieldName="FromAddressLine1" RepeatingElement="" />
+	<LabelField
+		Binding="Shipment/FromAddress/@City"
+		LabelFieldName="FromCity" RepeatingElement="" />
+	<LabelField
+		Binding="Shipment/FromAddress/@State"
+		LabelFieldName="FromState" RepeatingElement="" />
+	<LabelField
+		Binding="Shipment/FromAddress/@ZipCode"
+		LabelFieldName="FromZip" RepeatingElement="" />
+	<!--
+		<LabelField Binding="/Shipment/@SellerOrganizationCode"
+		LabelFieldName="SID" RepeatingElement=""/>
+	-->
+
+	<!-- <LabelField
+		Binding="Shipment/@AgentCompany"
+		LabelFieldName="AgentName" RepeatingElement="" />
+	<LabelField
+		Binding="Shipment/@AgentAddressLine1"
+		LabelFieldName="AgentAddressLine1" RepeatingElement="" />
+	<LabelField
+		Binding="Shipment/@AgentAddressLine2"
+		LabelFieldName="AgentAddressLine2" RepeatingElement="" />
+	<LabelField
+		Binding="Shipment/@AgentCity"
+		LabelFieldName="AgentCity" RepeatingElement="" />
+	<LabelField
+		Binding="Shipment/@AgentState"
+		LabelFieldName="AgentState" RepeatingElement="" />
+	<LabelField
+		Binding="Shipment/@AgentZipCode"
+		LabelFieldName="AgentZip" RepeatingElement="" />
+	<LabelField
+		Binding="Shipment/@AgentCountryName"
+		LabelFieldName="AgentCountry" RepeatingElement="" /> -->
+	<LabelField
+		Binding="Shipment/ToAddress/@Company"
+		LabelFieldName="ToName" RepeatingElement="" />
+	<LabelField
+		Binding="Shipment/ToAddress/@AddressLine1"
+		LabelFieldName="ToAddressLine1" RepeatingElement="" />
+	<LabelField
+		Binding="Shipment/ToAddress/@AddressLine2"
+		LabelFieldName="ToAddressLine2" RepeatingElement="" />
+	<LabelField
+		Binding="Shipment/ToAddress/@City"
+		LabelFieldName="ToCity" RepeatingElement="" />
+	<!--
+		<LabelField Binding="/Shipment/@BuyerOrganizationCode"
+		LabelFieldName="CID" RepeatingElement=""/>
+	-->
+	<LabelField
+		Binding="Shipment/ToAddress/@State"
+		LabelFieldName="ToState" RepeatingElement="" />
+	<LabelField
+		Binding="Shipment/ToAddress/@ZipCode"
+		LabelFieldName="ToZip" RepeatingElement="" />
+	<LabelField
+		Binding="Shipment/@ShipmentNo"
+		LabelFieldName="BolNo" RepeatingElement="" />
+	<LabelField
+		Binding="Shipment/Carrier/@ScacDesc"
+		LabelFieldName="CarrierName" RepeatingElement="" />
+	<LabelField
+		Binding="Shipment/@SCAC"
+		LabelFieldName="Scac" RepeatingElement="" />
+	<LabelField
+		Binding="Shipment/@TrailerNo"
+		LabelFieldName="TrailerNo" RepeatingElement="" />
+<!-- 	<LabelField
+		Binding="AcademyMergedDocument/EnvironmentDocument/Container/ContainerDetails/ContainerDetail/ShipmentLine/OrderLine/@SerialNo"
+		LabelFieldName="SerialNo" RepeatingElement="" />
+ -->	<LabelField
+		Binding="Shipment/@ProNo"
+		LabelFieldName="ProNo" RepeatingElement="" />
+	<LabelField
+		Binding="Shipment/ShipmentLines/ShipmentLine/@OrderNo"
+		LabelFieldName="CustomerPONo" RepeatingElement="" />
+	<LabelField
+		Binding="Shipment/Containers/@TotalNumberOfRecords"
+		LabelFieldName="NoOfPackages" RepeatingElement="" />
+
+	<LabelField
+		Binding="Shipment/@TotalWeight"
+		LabelFieldName="TotalWeight" RepeatingElement="" />
+
+	
+	
+	<LabelField
+		Binding="Shipment/OrderInvoiceList/OrderInvoice/Extn/@ExtnInvoiceNo"
+		LabelFieldName="ShipmentInvoiceNo" RepeatingElement="" />
+	<LabelField
+		Binding="Shipment/ShipmentLines/ShipmentLine/OrderLine/Item/@NMFCDescription"
+		LabelFieldName="NMFCDescription" RepeatingElement="ShipmentLine" />
+	<LabelField
+		Binding="Shipment/ShipmentLines/ShipmentLine/OrderLine/Item/@NMFCCode"
+		LabelFieldName="NMFCCode" RepeatingElement="ShipmentLine" />
+	<LabelField
+		Binding="Shipment/ShipmentLines/ShipmentLine/OrderLine/Item/@NMFCClass"
+		LabelFieldName="NMFCClass" RepeatingElement="ShipmentLine" />
+	
+	<LabelField
+		Binding="Shipment/ShipmentLines/ShipmentLine/OrderLine/Item/@ItemShortDesc"
+		LabelFieldName="ItemDesc" RepeatingElement="ShipmentLine" />
+	
+	<LabelField
+		Binding="Shipment/ShipmentLines/ShipmentLine/@Quantity"
+		LabelFieldName="ItemQty" RepeatingElement="ShipmentLine" />
+
+<!-- 	<LabelField
+		Binding="Shipment/ShipmentLines/ShipmentLine/OrderLine/Item/@ItemWeight"
+		LabelFieldName="ItemWeight" RepeatingElement="ShipmentLine" />
+ -->
+	<LabelField
+		Binding="Shipment/ShipmentLines/ShipmentLine/OrderLine/Item/@ItemWeight"
+		LabelFieldName="ItemWeight" RepeatingElement="ShipmentLine" />
+	
+	<LabelField
+		Binding="Shipment/ToAddress/@EMailID"
+		LabelFieldName="SpecialInstrEmailID" RepeatingElement="" />
+	<LabelField
+		Binding="Shipment/ToAddress/@DayPhone"
+		LabelFieldName="SpecialInstrPhoneNo" RepeatingElement="" />
+	<LabelField
+		Binding="Shipment/ToAddress/@FirstName"
+		LabelFieldName="SpecialInstrName" RepeatingElement="" />
+	<LabelField
+		Binding="Shipment/ToAddress/@LastName"
+		LabelFieldName="SpecialInstrLastName" RepeatingElement="" />
+	<LabelField
+		Binding="Shipment/ToAddress/@AddressLine1"
+		LabelFieldName="SpecialInstrAddress1" RepeatingElement="" />
+	<!-- <LabelField
+		Binding="AcademyMergedDocument/EnvironmentDocument/Container/Shipment/@ProNo"
+		LabelFieldName="ProNoBarCode" RepeatingElement="" /> -->
+	
+	<!-- EFP-16 : Start-->
+	<LabelField
+		Binding="Shipment/ShipmentLines/ShipmentLine/Order/@OrderDate"
+		LabelFieldName="OrderDate" RepeatingElement="" />
+    	<!-- EFP-16 : End-->
+
+	<RepeatingFields>
+		<RepeatingField LabelFieldName="NMFCDescription"
+			MaxFirstPage="5" MaxLastPage="5" MaxMidPage="5" />
+		<RepeatingField LabelFieldName="NMFCCode" MaxFirstPage="5"
+			MaxLastPage="5" MaxMidPage="5" />
+		<RepeatingField LabelFieldName="NMFCClass"
+			MaxFirstPage="5" MaxLastPage="5" MaxMidPage="5" />
+		<RepeatingField LabelFieldName="ItemDesc"
+			MaxFirstPage="5" MaxLastPage="5" MaxMidPage="5" />
+		<RepeatingField LabelFieldName="ItemQty"
+			MaxFirstPage="5" MaxLastPage="5" MaxMidPage="5" />
+		<RepeatingField LabelFieldName="ItemWeight"
+			MaxFirstPage="5" MaxLastPage="5" MaxMidPage="5" />
+
+	
+	
+	</RepeatingFields>
+</LabelFieldMap>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Inbox ActiveFlag=" " ApiName=" " AssignedToUserId=" " AssignedToUserKey=" " AutoResolvedFlag=" " ClosedOn=" "   ConsolidationCount=" "  Description=" " DetailDescription=" " ErrorReason=" " ErrorType=" " EnterpriseKey=" " ExpirationDays=" " FlowName=" " ListDescription="" ExceptionEscalatedFlag=" " ExceptionType=" " FollowupDate=" " GeneratedOn=" " InboxKey=" " InboxType=" " ItemId=" " LastOccurredOn=" " LocationId =" " LastExceedAlert=" " LastUnassignAlert=" " LastUnresolveAlert=" " LockedByUserKey=" " LockedFlag=" " LockedOn=" "     OrderHeaderKey=" " OrderLineKey=" " OrderNo=" " OwnerKey=" " OwnerType=" " ParentInboxKey=" " Priority=" " QueueId=" " QueueKey=" " ResolutionDate=" " ResolveBy=" " ShipmentKey="" ShipmentNo="" ShipnodeKey=" " Status=" " SubFlowName=" " SupplierKey=" " ViewId=" ">
+   <User Activateflag=" " BillingaddressKey=" " BusinessKey=" " ContactaddressKey=" "    CreatorOrganizationKey=" " Imagefile=" " Localecode=" "  Loginid=" " Longdesc=" " MenuId=" "    NoteKey=" " OrganizationKey=" " ParentUserKey=" " Password=" " PreferenceKey=" " Pwdlastchangedon=" " Theme=" " UserKey=" " UsergroupKey=" " Username=" " Usertype=" "/>
+	<Order BuyerOrganizationCode="" CarrierServiceCode="" OrderNo="" OrderHeaderKey="" PaymentStatus="" ReqDeliveryDate="" SellerOrganizationCode="">
+		<PriceInfo Currency="" TotalAmount=""/>
+	</Order>
+	<Queue AuditThisQueue=" "    HoursAssignExceedAction=" " HoursForAssignRealert=" " HoursForAssignment=" " HoursForExceedRealert=" " HoursForResolution=" " HoursForResolveRealert=" " HoursResolveExceedAction=" " LastQueueExceedAlert=" "  MaximumActiveSize=" " MaximumSizeExceedAction=" "    OwnerKey=" " OwnerType=" " Priority=" " QKeyForAssignAlert=" " QKeyForExceedAlert=" " QKeyForResolveAlert=" " QueueDescription=" " QueueGroup=" " QueueId=" " QueueKey=" " QueueName=" ">   <ActionList>
+      <Action ActionKey=" " Actioncode=" " Actionname=" " Actiontype=" " ComExtensionFlag=" " ComExtensionProgid=" "    DbExtensionFlag=" " DbExtensionSpName=" " EmailAddress=" " EmailFlag=" " EmailTemplateFile=" " ExecuteFlag=" " ExecuteProgram=" " ExtendableCode=" " FaxFlag=" " FaxStylesheet=" " GroupId=" " HttpFlag=" " HttpUrl=" " InboxFlag=" " InboxTemplate=" " InboxUserKey=" " JavaExtensionFlag=" " JavaExtensionProgid=" "     OwnerKey=" " OwnerType=" " PublishFlag=" " PublishReceivers=" " QueueKey=" " RealtimeFlag=" " ReferenceKey=" " ReferenceType=" "/>
+   </ActionList>
+	<QueueSubscriptionList>
+		<QueueSubscription        QueueKey="" QueueSubscriptionKey="" UserKey=""/>  
+	</QueueSubscriptionList> 
+	</Queue>
+   <InboxReferencesList>
+      <InboxReferences    InboxKey=" " InboxReferenceKey=" "     Name=" " ReferenceType=" " Value=" "/>
+   </InboxReferencesList>
+   <InboxAuditList>
+      <InboxAudit    FromStatus="" ToStatus="" FromQueueKey=" " FromUserKey=" " InboxAuditKey=" " InboxKey=" "     OwnerKey=" " OwnerType=" " ReasonCode=" " ReasonText=" " ToQueueKey=" " ToUserKey=" " TransactionType=" "/>
+   </InboxAuditList>
+   <Extn ExtnAlertKey="" ExtnAssociatedCustID=""/>
+</Inbox>

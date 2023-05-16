@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ItemList CallingOrganizationCode="" Currency="" DemandType="" FulfillmentType="" LastItemKey="" LastRecordSet="" TotalItemList="">
+
+    <Item CanUseAsServiceTool="" GlobalItemID="" InheritAttributesFromClassification="" ItemGroupCode="" ItemID="" ItemKey="" OrganizationCode="" UnitOfMeasure="">
+
+       <PrimaryInformation AssumeInfiniteInventory="" CapacityPerOrderedQty="" CapacityQuantityStrategy="" ComputedUnitCost="" ConfiguredModelKey="" CostCurrency="" CountryOfOrigin="" CreditWOReceipt="" DefaultProductClass="" Description="" ExtendedDescription="" FixedCapacityQtyPerLine="" FixedPricingQtyPerLine="" InvoiceBasedOnActuals="" InvolvesSegmentChange="" IsAirShippingAllowed="" IsConfigurable="" IsDeliveryAllowed="" IsForwardingAllowed="" IsFreezerRequired="" IsHazmat="" IsModelItem="" IsParcelShippingAllowed="" IsPickupAllowed="" IsPreConfigured="" IsProcurementAllowed="" IsReturnService="" IsReturnable="" IsShippingAllowed="" IsStandaloneService="" ItemType="" KitCode="" ManufacturerItem="" ManufacturerItemDesc="" ManufacturerName="" MasterCatalogID="" MaxOrderQuantity="" MinOrderQuantity="" MinimumCapacityQuantity="" OrderingQuantityStrategy="" PricingQuantityConvFactor="" PricingQuantityStrategy="" PricingUOM="" PricingUOMStrategy="" PrimaryEnterpriseCode="" PrimarySupplier="" ProductLine="" RequiresProdAssociation="" ReturnWindow="" RunQuantity="" SerializedFlag="" ServiceTypeID="" ShortDescription="" Status="" TaxableFlag="" UnitCost="" UnitHeight="" UnitHeightUOM="" UnitLength="" UnitLengthUOM="" UnitVolume="" UnitVolumeUOM="" UnitWeight="" UnitWeightUOM="" UnitWidth="" UnitWidthUOM=""/>
+		<Extn ExtnStreetDate="" ExtnEndDate="" ExtnDropShipFlag="" ExtnECommerceFlag="" ExtnQuantityRestrictions="" ExtnHazmatName="" ExtnCountryOfOriginDescription="" ExtnEASTag="" ExtnRebate="" ExtnRebateStartDate="" ExtnRebateEndDate="" ExtnItemDivisionName="" ExtnItemDivision="" ExtnLabelPick="" ExtnIsGiftCard="" ExtnWhiteGloveEligible="" ExtnKit="" ExtnConveyable="" ExtnShipAlone="" ExtnHighValue="" ExtnVendorColorName=""/>
+        <InventoryParameters ATPRule="" AdvanceNotificationTime="" DefaultExpirationDays="" FutureSafetyFactorPercentage="" InventoryMonitorRule="" IsFifoTracked="" IsSerialTracked="" LeadTime="" MinNotificationTime="" NodeLevelInventoryMonitorRule="" OnhandSafetyFactorPercentage="" OnhandSafetyFactorQuantity="" ProcessingTime="" TagControlFlag="" TagReqAtReceipt="" TagReqAtShipment="" TimeSensitive=""/>
+        <ClassificationCodes CommodityCode="" ECCNNo="" HarmonizedCode="" HazmatClass="" Model="" NAICSCode="" NMFCClass="" NMFCCode="" OperationalConfigurationComplete="" PickingType="" PostingClassification="" Schedule_B_Code="" StorageType="" TaxProductCode="" UNSPSC="" VelocityCode=""/>
+        <HazmatInformation CargoAir="" Exception="" HazardClass="" HazmatComplianceKey="" Label="" PackingGroup="" PassengerAir="" ProperShippingName="" QtyBulk="" QtyNonBulk="" SortOrder="" SpecialProvisions="" Symbols="" UNNumber="" Vessel="" VesselSP=""/>
+        <Components>
+            <Component ComponentItemID="" ComponentItemKey="" ComponentOrganizationCode="" ComponentUnitOfMeasure="" ItemKey="" KitQuantity=""/>
+        </Components>
+        <ComputedPrice ListPrice="" RetailPrice="" UnitPrice="">
+            <QuantityRangePriceList>
+                <QuantityRangePrice BreakQtyHigh="" BreakQtyLow="" UnitPrice=""/>
+            </QuantityRangePriceList>
+        </ComputedPrice>
+        <ItemAttributeGroupTypeList>
+            <ItemAttributeGroupType ClassificationPurposeCode="" Description="" IsAdditionalAttributeAllowed="" IsSingleGroup="" ItemAttributeGroupType="" ItemAttributeGroupTypeKey="">
+                <ItemAttributeGroupList>
+                    <ItemAttributeGroup CategoryKey="" IsInherited="" ItemAttributeGroupDescription="" ItemAttributeGroupID="" ItemAttributeGroupKey="" SequenceNo="">
+                        <ItemAttributeList>
+                            <ItemAttribute IsKeyAttribute="" ItemAttributeDescription="" ItemAttributeGroupKey="" ItemAttributeKey="" ItemAttributeName="" SequenceNo="" Value=""/>
+                        </ItemAttributeList>
+                    </ItemAttributeGroup>
+                </ItemAttributeGroupList>
+            </ItemAttributeGroupType>
+        </ItemAttributeGroupTypeList>
+        <ItemAliasList>
+            <ItemAlias AliasName="" AliasValue=""/>
+        </ItemAliasList>
+        <ItemExclusionList>
+            <ItemExclusion ExclusionCode=""/>
+        </ItemExclusionList>
+        <AdditionalAttributeList>
+            <AdditionalAttribute Name="" Value=""/>
+        </AdditionalAttributeList>
+        <LanguageDescriptionList>
+            <LanguageDescription Description="" ExtendedDescription="" LocaleCode="" ShortDescription=""/>
+        </LanguageDescriptionList>
+        <InventoryTagAttributes BatchNo="" ItemKey="" ItemTagKey="" LotAttribute1="" LotAttribute2="" LotAttribute3="" LotKeyReference="" LotNumber="" ManufacturingDate="" RevisionNo=""/>
+		<ItemInstructionList>
+			 <ItemInstruction InstructionCode="" InstructionText="" InstructionType="" ItemInstructionKey="" ItemKey="" SeqNo="" /> 
+	 </ItemInstructionList>
+    </Item>
+</ItemList>

@@ -1,0 +1,15 @@
+<Order OrderNo="" OrderDate="" OrderHeaderKey="" MaxOrderStatus="" MinOrderStatus="" Status="">
+  <OrderLines>
+	<!-- WN-920 Hot Market - Ignore cancel agent , Added a new attribute  EarliestScheduleDate at OrderLine level -->
+	   <OrderLine DeliveryMethod="" OrderHeaderKey="" OrderLineKey="" MinLineStatus="" MaxLineStatus="" OrderedQty="" FulfillmentType="" EarliestScheduleDate="">
+		   <Extn/>
+		   <OrderLineTranQuantity InvoicedQuantity="" ModificationQty="" OpenQty="" OrderedQty="" OriginalOrderedQty="" ReceivedQty="" RemainingQty="" SettledQuantity="" ShippedQuantity="" SplitQty="" StatusQuantity="" />
+	       <ShipmentLines>
+		       <ShipmentLine OrderHeaderKey="" OrderLineKey="" ShipmentKey="" ShipmentLineKey="" OrderNo="" 
+	                  OriginalQuantity="" BackroomPickedQuantity="" ActualQuantity="" ShortageQty="" Quantity="" ShipNode="" ItemId="">
+	              <Shipment ShipmentNo="" ManifestNo="" ShipmentKey="" Status="" ShipNode="" IsPackProcessComplete="" ShipmentType="" DocumentType="" Quantity=""/>     
+		       </ShipmentLine>
+	      </ShipmentLines>
+	   </OrderLine>
+  </OrderLines>
+</Order>

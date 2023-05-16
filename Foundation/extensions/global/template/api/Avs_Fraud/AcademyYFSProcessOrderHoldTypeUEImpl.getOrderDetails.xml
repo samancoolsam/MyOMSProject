@@ -1,0 +1,32 @@
+<Order>
+<PaymentMethods>
+ <PaymentMethod 
+            Createts="" Createuserid=""
+            CreditCardExpDate="" CreditCardName=""
+            CreditCardNo="" CreditCardType=""
+            CustomerAccountNo="" CustomerPONo=""
+            DisplayCreditCardNo="" DisplayCustomerAccountNo=""
+            DisplayPaymentReference1="" DisplaySvcNo="" ExtendedFlag=""
+            FirstName="" IncompletePaymentType="" LastName="" Lockid=""
+            MaxChargeLimit="" MiddleName="" Modifyprogid=""
+            Modifyts="" Modifyuserid=""
+            OrderHeaderKey="" PayMethodOverride=""
+            PaymentKey="" PaymentReference1=""
+            PaymentReference2="" PaymentReference3=""
+            PaymentType="" RequestedAuthAmount=""
+            RequestedChargeAmount="" SuspendAnyMoreCharges=""
+            SvcNo="" TotalAltRefundedAmount=""
+            TotalAuthorized="" TotalCharged=""
+            TotalRefundedAmount="" UnlimitedCharges="" isHistory="">
+            
+        </PaymentMethod>
+</PaymentMethods>
+<ChargeTransactionDetails>
+<ChargeTransactionDetail>
+</ChargeTransactionDetail>
+</ChargeTransactionDetails>
+<OrderHoldTypes>
+<OrderHoldType>
+</OrderHoldType>
+</OrderHoldTypes>
+</Order>

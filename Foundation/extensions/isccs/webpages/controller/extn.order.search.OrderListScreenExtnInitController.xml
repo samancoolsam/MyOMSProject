@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Start - OMNI-3717 Payment Tender Type Search-->
+<Controller
+    className="com.sterlingcommerce.ui.web.platform.controller.SCUIXAPIMashupController"
+    controllerId="extn.order.search.OrderListScreenExtnInitController"
+    requestMethodSupported="POST" screenId="extn.order.search.OrderListScreenExtn"/>
+<!--End - OMNI-3717 Payment Tender Type Search-->

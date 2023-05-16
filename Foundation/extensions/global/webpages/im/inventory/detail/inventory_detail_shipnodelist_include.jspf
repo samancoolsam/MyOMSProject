@@ -1,0 +1,71 @@
+<%/*******************************************************************************
+Licensed Materials - Property of IBM
+IBM Sterling Selling And Fulfillment Suite
+(C) Copyright IBM Corp. 2005, 2013 All Rights Reserved.
+US Government Users Restricted Rights - Use, duplication or disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+ ********************************************************************************/%>
+<%@ page import="com.yantra.yfc.util.*" %>
+<%@ page import="com.yantra.yfs.ui.backend.*" %>
+<%@ page import="com.yantra.yfc.ui.laf.YFCTheme" %>
+<%@ page import="com.yantra.ycp.ui.backend.*" %>
+<%@ page import="com.yantra.yfc.dom.*" %>
+<%@ page import="com.yantra.yfc.ui.backend.util.*" %>
+<%
+    double iMax = 0;
+    YFCElement root = (YFCElement)request.getAttribute("ShipNodeInventory");
+    YFCElement oNode = null;
+	String supplyColor =" " ;
+	String demandColor = " ";
+//    String sTheme = getValue((YFCElement)request.getSession().getAttribute("CurrentUser"),"xml:/User/@Theme");
+//    String sLocaleCode = getValue((YFCElement)request.getSession().getAttribute("CurrentUser"),"xml:/User/@Localecode");
+    String sTheme =getTheme();
+    String sLocaleCode = getLocale().getLocaleCode();
+    YFCTheme oTheme = APIManager.getInstance().getThemeObj(request,sTheme, sLocaleCode); 
+	if(oTheme == null){
+		sTheme ="sapphire";
+		oTheme = APIManager.getInstance().getThemeObj(request,sTheme, sLocaleCode); 
+	}    
+	if(oTheme != null){
+    //Two colors for the ShipNode Graphs
+	    supplyColor = getColor(oTheme.getColor("SupplyColor"));
+		demandColor = getColor(oTheme.getColor("DemandColor"));
+    }
+    if(root != null)
+    {   
+        YFCElement oItem = (YFCElement)root.getElementsByTagName("Item").item(0);
+        YFCElement oShipNodes = (YFCElement)oItem.getElementsByTagName("ShipNodes").item(0);
+        if(oShipNodes != null)
+        {
+            YFCNodeList oNodeList = oShipNodes.getElementsByTagName("ShipNode");
+            for (int i = 0; i < oNodeList.getLength(); i++)
+            {
+                oNode = (YFCElement)oNodeList.item(i);
+                if(oNode.getDoubleAttribute("TotalSupply") > iMax)
+                    iMax = oNode.getDoubleAttribute("TotalSupply");
+                if(oNode.getDoubleAttribute("TotalDemand") > iMax)
+                    iMax = oNode.getDoubleAttribute("TotalDemand");
+            }
+        }
+    }
+    
+%>
+<%!
+    String getPixels(double dMax,String sVal)
+    {
+		int iMax=(int)dMax;
+		double iVal = getDoubleFromLocalizedString(getLocale(),sVal);
+        String sRetVal = "";
+        int iWidth = 0;
+        if(iMax > 0 && iVal >0)
+        {
+          double iPercentage = (iVal*100)/iMax;
+          iWidth = (int)(iPercentage*5);
+          sRetVal = "height:8px;width:" + iWidth + "px";
+        }
+        else
+        {
+            sRetVal = "height:8px;width:0px";
+        }
+        return(sRetVal);
+    }
+%>

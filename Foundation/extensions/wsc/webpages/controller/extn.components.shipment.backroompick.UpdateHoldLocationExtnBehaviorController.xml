@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Controller
+    className="com.sterlingcommerce.ui.web.platform.controller.SCUIXAPIMashupController"
+    controllerId="extn.components.shipment.backroompick.UpdateHoldLocationExtnBehaviorController"
+    requestMethodSupported="POST" screenId="extn.components.shipment.backroompick.UpdateHoldLocationExtn">
+    <MashupRefs>
+        <MashupRef extnType="ADD" mashupId="extn_PrintOrderTicket"
+            mashupRefId="extn_PrintOrderTicket_ref" permissionId=""/>
+        <MashupRef extnType="" mashupId="getPrinterDevice"
+            mashupRefId="getPrinterDeviceInit1" permissionId=""/>
+        <MashupRef extnType="ADD"
+            mashupId="backroomPickUp_changeShipmentStatusToReadyForCustomerPick"
+            mashupRefId="saveShipmentStatusForPickUpOrder" permissionId=""/>
+	<!-- OMNI- 3676 BOPIS: Apply All Staging Locations START  -->
+        <MashupRef extnType="ADD"
+            mashupId="extn_AssignStagingLocationALLMashup"
+            mashupRefId="extn_AssignStagingLocationMashup" permissionId=""/>
+	 <!-- OMNI- 3676 BOPIS: Apply All Staging Locations END --> 
+    </MashupRefs>
+</Controller>

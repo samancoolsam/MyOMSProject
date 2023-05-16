@@ -1,0 +1,7 @@
+<ItemList>
+	<Item ItemID="" ItemKey="">
+		<PrimaryInformation UnitHeight="" UnitHeightUOM="" UnitLength="" UnitLengthUOM="" UnitVolume="" UnitVolumeUOM="" UnitWeight="" UnitWeightUOM="" UnitWidth="" UnitWidthUOM="" ItemType="" />
+		<ClassificationCodes StorageType=""/>
+		<Extn ExtnConveyable="" ExtnShipAlone="" ExtnWhiteGloveEligible="" ExtnIsGiftCard="" ExtnMultibox="" ExtnClassDescription="" ExtnClass="" ExtnSizeCodeDescription="" />
+	</Item>
+</ItemList>

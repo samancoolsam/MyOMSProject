@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shipment  DeliveryMethod="" Modifyprogid="" ReasonCode=" " ReasonText=" "
+    NextAlertTs=" " NumOfCartons=" " NumOfPallets=" "
+    DocumentType=" " ShipNode=" " ShipmentKey=" " ShipmentNo=" "
+	ShipmentType=" " Status=" " StatusDate=" " PackListType="" OrderNo=" " >
+	<Extn />
+	<BillToAddress DayPhone="" FirstName="" LastName=""/>
+    <ShipmentLines>
+		<ShipmentLine  ShipmentLineKey=" " ItemID=" " ItemDesc=" " ProductClass=" " OrderHeaderKey=" " OrderLineKey=" " OrderNo=" " OrderReleaseKey=" "
+			PrimeLineNo=" " Quantity=" " ShipmentKey=" " UnitOfMeasure=" " ShipmentLineNo=" " SubLineNo=" " QuantityReduced="" ActualQuantity="" ShortageQty="" BackroomPickedQuantity="" Modifyprogid="">
+			<OrderLine ChainedFromOrderHeaderKey="" ChainedFromOrderLineKey="" FulfillmentType="" OrderHeaderKey="" OrderLineKey="" OrderedQty="" PackListType="" MaxLineStatus="" MaxLineStatusDesc="" MinLineStatus="" MinLineStatusDesc="" Modifyprogid="">
+			<!-- Start : OMNI-6358 : STS Cancellations -->
+				<ChainedFromOrderLine OrderHeaderKey="" OrderLineKey="" FulfillmentType=""  OrderedQty="" 
+					MaxLineStatus="" MaxLineStatusDesc="" MinLineStatus="" MinLineStatusDesc="">
+					<OrderStatuses>
+						<OrderStatus OrderLineKey="" Status="" StatusDescription="" StatusQty="" StatusReason="" >
+						</OrderStatus>
+					</OrderStatuses>
+				</ChainedFromOrderLine>
+			<!-- End : OMNI-6358 : STS Cancellations -->
+			</OrderLine>
+			<ShipmentTagSerials>
+				<ShipmentTagSerial SerialNo="" ShipmentLineKey="" />
+			</ShipmentTagSerials>				
+			<Extn ExtnMsgToSIM="" ExtnReasonCode=""/>
+        </ShipmentLine>
+    </ShipmentLines>
+	<!-- Start : OMNI-56207 -->
+	<ShipmentStatusAudits TotalNumberOfRecords="">
+		<ShipmentStatusAudit Createts="" Createuserid=""  NewStatus=""
+            NewStatusDate="" OldStatus="" OldStatusDate="" ReasonCode=""
+            ReasonText="" ShipmentKey="" ShipmentStatusAuditKey=""
+			Createprogid="" Modifyprogid="">
+            <OldStatus Description=""/>
+            <NewStatus Description=""/>
+        </ShipmentStatusAudit>
+    </ShipmentStatusAudits>
+	<!-- End : OMNI-56207 -->
+</Shipment>

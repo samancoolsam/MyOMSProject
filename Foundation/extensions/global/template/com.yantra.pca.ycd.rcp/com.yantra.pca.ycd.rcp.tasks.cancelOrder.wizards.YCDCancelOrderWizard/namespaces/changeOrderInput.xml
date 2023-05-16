@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Order IgnoreOrdering="" ModificationReasonCode="" OrderHeaderKey="">
+    <OrderLines>
+        <OrderLine Checked="" FulfillmentType="" ItemGroupCode=""
+            OpenQty="" OrderLineKey=""
+            OrderedQty="" PrimeLineNo="" QtyToCancel=""
+            Status="" StatusQuantity="">
+            <Item ItemDesc=""
+                ItemID="" ItemShortDesc=""/>
+            <LinePriceInfo UnitPrice=""/>
+            <Order OrderHeaderKey="">
+                <PriceInfo Currency=""/>
+            </Order>
+            <OrderLineTranQuantity OrderedQty=""/>
+            		   <ShipmentLines>
+                <ShipmentLine Quantity="" ShipmentLineKey="" ShipmentKey="" OrderLineKey="" WaveNo="">
+                    <Shipment ShipmentKey="" ShipmentGroupId="" Status="">
+					<Status Status=""/>
+				</Shipment>
+                </ShipmentLine>
+            </ShipmentLines>
+        </OrderLine>
+    </OrderLines>
+    <Notes>
+        <Note ContactReference="" ContactType="" ContactUser=""
+            NoteText="" Priority="" ReasonCode=""/>
+    </Notes>
+</Order>

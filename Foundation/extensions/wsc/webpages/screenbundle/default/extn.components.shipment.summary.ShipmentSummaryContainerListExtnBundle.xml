@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ScreenBundle
+    screenBundleId="extn.components.shipment.summary.ShipmentSummaryContainerListExtnBundle" screenId="extn.components.shipment.summary.ShipmentSummaryContainerListExtn">
+    <BundleEntries>
+        <BundleEntry bundleEntryId="lbl_ContainerNo_DataLabel_label"
+            bundleKey="extn_Container_" bundleValueFn="_scSimpleBundle"
+            property="label" type="WIDGET" uId="lbl_ContainerNo"/>
+    </BundleEntries>
+</ScreenBundle>

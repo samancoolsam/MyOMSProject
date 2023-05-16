@@ -1,0 +1,29 @@
+<!-- Begin: OMNI-42367-->
+<OrderList>
+	<Order CarrierServiceCode="" CustomerEMailID="" CustomerPONo="" DocumentType="" DraftOrderFlag="" MaxOrderStatus="" MaxOrderStatusDesc="" MinOrderStatus="" MinOrderStatusDesc="" OrderDate="" OrderHeaderKey="" OrderName="" OrderNo="" OrderPurpose="" OverallStatus="" PaymentRuleId="" PaymentStatus="" SCAC="">
+		<OrderLines>
+			<OrderLine Action="" CarrierServiceCode="" DerivedFromOrderHeaderKey="" DerivedFromOrderLineKey="" HoldFlag="" MaxLineStatus="" MaxLineStatusDesc="" MinLineStatus="" MinLineStatusDesc="" OrderHeaderKey="" OrderLineKey="" OrderedQty="" OverallStatus="" PrimeLineNo="" ReservationID="" ReturnReason="" ReturnReasonLongDesc="" ReturnReasonShortDesc="" SCAC="" ScacAndService="" ShipNode="" Status="" StatusQuantity="">
+				<ItemDetails ItemID="" ItemKey="" OrganizationCode="" UnitOfMeasure=""/>
+				<Item IsReturnable="" ItemDesc="" ItemID="" ProductClass="" UnitOfMeasure=""/>
+				<LinePriceInfo LineTotal="" ListPrice="" PricingUOM="" UnitPrice=""/>
+				<PersonInfoShipTo AddressLine1="" AddressLine2="" AddressLine3="" AddressLine4="" AddressLine5="" AddressLine6="" AlternateEmailID="" City="" Company="" Country="" DayFaxNo="" DayPhone="" Department="" EMailID="" FirstName="" LastName="" MiddleName="" MobilePhone="" OtherPhone="" PersonInfoKey="" State="" ZipCode=""/>
+				<OrderStatuses>
+					<OrderStatus OrderHeaderKey="" OrderLineKey="" OrderReleaseKey="" OrderReleaseStatusKey="" PipelineKey="" ShipNode="" Status="" StatusDate="" StatusDescription="" StatusQty="" TotalQuantity="">
+						<OrderStatusTranQuantity StatusQty="" TotalQuantity="" TransactionalUOM=""/>
+					</OrderStatus>
+				</OrderStatuses>
+				<LineCharges>
+					<LineCharge ChargeAmount="" ChargeCategory="" ChargeName="" ChargeNameKey="" ChargePerLine="" ChargePerUnit="" InvoicedChargeAmount="" InvoicedChargePerLine="" InvoicedChargePerUnit="" IsBillable="" IsDiscount="" Reference="" RemainingChargeAmount="" RemainingChargePerLine="" RemainingChargePerUnit=""/>
+				</LineCharges>
+				<LineTaxes>
+					<LineTax ChargeCategory="" ChargeName="" ChargeNameKey="" InvoicedTax="" Reference_1="" Reference_2="" Reference_3="" RemainingTax="" Tax="" TaxName="" TaxPercentage=""/>
+				</LineTaxes>
+				<Extn/>
+			</OrderLine>
+		</OrderLines>
+		<PersonInfoShipTo AddressLine1="" AddressLine2="" AddressLine3="" AddressLine4="" AddressLine5="" AddressLine6="" AlternateEmailID="" City="" Company="" Country="" DayFaxNo="" DayPhone="" Department="" EMailID="" EveningPhone="" FirstName="" LastName="" MiddleName="" MobilePhone="" OtherPhone="" PersonInfoKey="" State="" ZipCode=""/>
+		<PersonInfoBillTo AddressLine1="" AddressLine2="" AddressLine3="" AddressLine4="" AddressLine5="" AddressLine6="" AlternateEmailID="" City="" Company="" Country="" DayFaxNo="" DayPhone="" Department="" EMailID="" EveningPhone="" FirstName="" LastName="" MiddleName="" MobilePhone="" OtherPhone="" PersonInfoKey="" State="" ZipCode=""/>
+		<Extn/>
+	</Order>
+</OrderList>
+<!-- End: OMNI-42367-->

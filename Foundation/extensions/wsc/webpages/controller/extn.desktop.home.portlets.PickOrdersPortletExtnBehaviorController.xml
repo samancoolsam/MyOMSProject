@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Controller
+    className="com.sterlingcommerce.ui.web.platform.controller.SCUIXAPIMashupController"
+    controllerId="extn.desktop.home.portlets.PickOrdersPortletExtnBehaviorController"
+    requestMethodSupported="POST" screenId="extn.desktop.home.portlets.PickOrdersPortletExtn">
+    <MashupRefs>
+        <MashupRef extnType="ADD" mashupId="extn_SFSOrdersCount"
+            mashupRefId="extn_SFSOrdersCount" permissionId=""/>
+    </MashupRefs>
+</Controller>

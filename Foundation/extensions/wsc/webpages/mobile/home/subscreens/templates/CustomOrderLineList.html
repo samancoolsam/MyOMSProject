@@ -1,0 +1,145 @@
+<div class="sc-platform-screen-default shipmentsummaryshipmentlinedetails"> 
+    <div data-dojo-type="idx/layout/ContentPane" data-ibmsc-uid="pnlImageHolder" data_dojo_props_identifier="{
+ spanLabel: true,
+style: 'display: inline-block;',
+uId: 'pnlImageHolder'
+}
+">
+ <div data-dojo-type="idx/layout/ContentPane" data-dojo-props="		spanLabel : true , 
+ 'class': 'screen itemImageSmallDivAlt showCursorPointer',
+colspan: 1,
+uId: 'imagePanel' ">
+ <div data-dojo-type="sc/plat/dojo/widgets/Image" data-dojo-props="		'class' : '' , 
+ uId: 'itemImage',
+scParamDataFn: function() {
+    return {
+        bindingData: {
+            sourceBinding: {
+                path: 'ItemDetails.PrimaryInformation', namespace: 'OrderLine'
+            }
+            ,
+            imageBindings: {
+                defaultImage: {
+                    style: '', src: '', styleClass: 'noItemImage'
+                }
+                ,
+                imageUrl: {
+                    path: 'ImageLocation', dynamicBindingPackage: 'ias.utils', dynamicBindingFunc: 'getItemImageLocation', dynamicBindingClassName: 'ScreenUtils'
+                }
+                ,
+                imageIcon: {
+                    path: 'ImageID', dynamicBindingPackage: 'ias.utils', dynamicBindingFunc: 'getItemImageId', dynamicBindingClassName: 'ScreenUtils'
+                }
+            }
+        }
+    }
+}
+"></div>
+ </div> </div> <div data-dojo-type="idx/layout/ContentPane" data-ibmsc-uid="pnlOrderLineListDataHolder" data_dojo_props_identifier="{
+ spanLabel: true,
+'class': 'detailsPanel',
+colspan: 1,
+style: ' display: inline-block; vertical-align: top; padding-left: 10px; width: 80%; ',
+uId: 'pnlOrderLineListDataHolder'
+}
+">
+ <div data-dojo-type="sc/plat/dojo/widgets/Link" data-dojo-props="		spanLabel : true , 
+ 'class': 'productdesclink',
+uId: 'itemdescriptionLink',
+scParamDataFn: function() {
+    return {
+        'aria-label': this.getSimpleBundleString('arialabel_product_title'),
+        bindingData: {
+            sourceBinding: {
+                path: 'ItemDetails.PrimaryInformation.ExtendedDisplayDescription', namespace: 'OrderLine'
+            }
+        }
+    }
+}
+"></div>
+
+<div style="display: block;">
+ <div data-dojo-type="sc/plat/dojo/widgets/DataLabel" data-dojo-props="		spanLabel : true , 
+ 'class': 'a11yHiddenLabel comappsWrapWord autoLabelZeroWidth groupLabelSpacing',
+uId: 'lbl_DeliveryMethod',
+scParamDataFn: function() {
+    return {
+        label: this.getBundleString('Label_DeliveryMethod'),
+        bindingData: {
+            sourceBinding: {
+                path: 'DeliveryMethod',
+                dynamicBindingFunc :           'getDeliveryMethod', 
+                namespace: 'OrderLine'
+            }
+        }
+    }
+}
+"></div>
+
+
+
+<div id="testid2" style="display: table-cell; float: right;">
+ <div style="border-style: solid; border-width: 1px 1px 1px 1px; border-color: #00768e;" data-dojo-type="sc/plat/dojo/widgets/Link" data-ibmsc-uid="lnkVeiwLineDetails" data-dojo-props="     uId : 'lnkVeiwLineDetails' , 
+ scParamDataFn: function() {
+    return {
+        value: this.getSimpleBundleString('extn_Label_View_Line_Details')
+    }
+}
+">
+ </div> 
+</div>
+</div>
+
+
+
+ <div data-dojo-type="idx/layout/ContentPane" data-ibmsc-uid="pnlOrderLineListInfoHolder" data_dojo_props_identifier="{
+ spanLabel: true,
+colspan: 1,
+uId: 'pnlOrderLineListInfoHolder'
+}
+">
+
+<div style="display: -webkit-inline-box;" id ="testid1" >
+ <div data-dojo-type="sc/plat/dojo/widgets/DataLabel" data-dojo-props="		spanLabel : true , 
+ 'class': 'comappsWrapWord autoLabelZeroWidth groupLabelSpacing',
+uId: 'lbl_Quantity',
+scParamDataFn: function() {
+    return {
+        label: this.getBundleString('Label_Quantity'),
+        bindingData: {
+            sourceBinding: {
+                path: 'OriginalOrderedQty', namespace: 'OrderLine'
+            }
+        }
+    }
+}
+"></div>
+ <div data-dojo-type="sc/plat/dojo/widgets/DataLabel" data-ibmsc-uid="lbl_CustName" data-dojo-props="		'class' : 'a11yHiddenLabel comappsWrapWord autoLabelZeroWidth groupLabelSpacing' ,  spanLabel : true,
+ uId: 'lbl_UOM',
+scParamDataFn: function() {
+    return {
+        label: this.getBundleString('Label_UnitOfMeasure'),
+        bindingData: {
+            sourceBinding: {
+                path: 'Item.UnitOfMeasure', 
+                dynamicBindingFunc :           'getUOM', 
+                namespace: 'OrderLine'
+            }
+            
+            ,
+        }
+    }
+}
+"></div>
+    </div>
+<!-- <div id="testid2" style="display: table-cell; float: right;">
+ <div style="" data-dojo-type="sc/plat/dojo/widgets/Link" data-ibmsc-uid="lnkVeiwLineDetails" data-dojo-props="		uId : 'lnkVeiwLineDetails' , 
+ scParamDataFn: function() {
+    return {
+        value: this.getSimpleBundleString('extn_Label_View_Line_Details')
+    }
+}
+">
+ </div> 
+</div> -->
+</div> </div> </div>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Inbox Createts=""  Modifyts="" FollowupDate="" InboxKey="" Status="">
+    <InboxNotesList>
+        <InboxNotes ContactReference="" ContactType=""
+            ContactUser="" CustomerSatIndicator=""
+            NoteText="" NoteType="" SaveOnOrder=""/>
+    </InboxNotesList>
+    <Extn ExtnAlertKey="" ExtnAssociatedCustID=""/>
+</Inbox>

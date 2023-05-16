@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mashups>
+    <mashup id="customerAppeasement_getReasonCodes">
+        <API Name="getCommonCodeList">
+            <Input/>
+            <Template>
+                <CommonCodeList>
+                    <CommonCode CodeLongDescription=""/>
+                </CommonCodeList>
+            </Template>
+        </API>
+    </mashup>
+    <mashup id="customerAppeasement_getCompleteOrderDetails">
+        <API Name="getCompleteOrderDetails">
+            <Input>
+                <Order>
+                    <SpecificOrderLines>
+                        <OrderLine/>
+                    </SpecificOrderLines>
+                </Order>
+            </Input>
+            <Template>
+                <Order>
+                    <OverallTotals/>
+                    <PriceInfo/>
+                    <OrderLines>
+                        <OrderLine>
+                            <ItemDetails ItemID="">
+                                <Extn ExtnWhiteGloveEligible=""/>
+                            </ItemDetails>
+                        </OrderLine>
+                    </OrderLines>
+                </Order>
+            </Template>
+        </API>
+    </mashup>
+    <mashup id="customerAppeasement_getAppeasementOffersUE">
+        <API Name="invokeUE">
+            <Input>
+                <InvokeUE>
+                    <XMLData>
+                        <AppeasementOffers>
+                            <Order>
+                                <AppeasementReason
+                                    CodeLongDescription="" PreventImmedeateAppeasementFromWC=""/>
+                                <OrderLines>
+                                    <OrderLine>
+                                    <ItemDetails ItemID="">
+                                      <Extn ExtnWhiteGloveEligible=""/>
+                                    </ItemDetails>
+                                    </OrderLine>
+                                </OrderLines>
+                            </Order>
+                        </AppeasementOffers>
+                    </XMLData>
+                </InvokeUE>
+            </Input>
+            <Template>
+                <InvokeUE>
+                    <XMLData/>
+                </InvokeUE>
+            </Template>
+        </API>
+    </mashup>
+    <mashup id="customerAppeasement_getCompleteOrderLineList">
+        <API Name="getCompleteOrderLineList">
+            <Input/>
+            <Template>
+                <OrderLineList>
+                    <Order>
+                        <PaymentMethods>
+                            <PaymentMethod PaymentType=""/>
+                        </PaymentMethods>
+                    </Order>
+                    <OrderLine LineType="" MaxLineStatus="" MinLineStatus="">
+                        <Extn ExtnInitialPromiseDate="" ExtnIsSignatureRequired=""/>
+                        <PersonInfoShipTo AddressLine1=""
+                            AddressLine2="" AddressLine3=""
+                            AddressLine4="" AddressLine5=""
+                            AddressLine6="" AlternateEmailID=""
+                            Beeper="" City="" Company="" Country=""
+                            DayFaxNo="" DayPhone="" Department=""
+                            EMailID="" EveningFaxNo="" EveningPhone=""
+                            FirstName="" JobTitle="" LastName=""
+                            MiddleName="" MobilePhone="" OtherPhone=""
+                            PersonID="" PersonInfoKey="" State=""
+                            Suffix="" Title="" ZipCode=""/>
+                        <ItemDetails>
+                            <Extn ExtnWhiteGloveEligible=""/>
+                        </ItemDetails>
+                        <ShipmentLines>
+                            <ShipmentLine ShipmentKey="" ShipmentLineKey="">
+                                <Shipment Status=""/>
+                            </ShipmentLine>
+                        </ShipmentLines>
+                    </OrderLine>
+                </OrderLineList>
+            </Template>
+        </API>
+    </mashup>
+    <mashup id="cancelOrder_getCompleteOrderDetails">
+        <API Name="getCompleteOrderDetails">
+            <Input/>
+            <Template>
+                <Order CustomerFirstName="" CustomerLastName=""/>
+            </Template>
+        </API>
+    </mashup>
+    <mashup id="cancelOrder_cancelOrderAPI">
+        <API Name="cancelOrder">
+            <Input>
+                <Order>
+                    <Notes>
+                        <Note NoteText=""/>
+                    </Notes>
+                </Order>
+            </Input>
+            <Template/>
+        </API>
+    </mashup>
+    <mashup id="OrderSummaryLines_getCompleteOrderLineList">
+        <API Name="getCompleteOrderLineList">
+            <Input/>
+            <Template>
+                <OrderLineList>
+                    <OrderLine CarrierServiceCode="" MinLineStatus="">
+			<!--OMNI-30154-WCC: Display Save The Sale  Start -->
+				<Extn ExtnOriginalFulfillmentType="" ExtnIsSignatureRequired=""  ExtnIsASP="" />
+			<!--OMNI-30154-WCC: Display Save The Sale End -->
+				<!-- Start - OMNI-63467 - Customer Care - Updates to WCC Homepage -->
+				<ShipmentLines>
+					<ShipmentLine ShipmentKey="" ShipmentLineKey="">
+						<Shipment ShipmentNo="" DocumentType="" ShipmentType="" Status="" ShipNode=""/>
+					</ShipmentLine>
+				</ShipmentLines>
+				<!-- End - OMNI-63467 - Customer Care - Updates to WCC Homepage -->
+			</OrderLine>
+                    <Order>
+                         <!-- OMNI-105580 : Alternate Store- Start -->
+                        <Extn ExtnASShipNode="" />
+                         <!-- OMNI-105580 : Alternate Store- End -->
+                        <PriceInfo/>
+                    </Order>
+                </OrderLineList>
+            </Template>
+        </API>
+    </mashup>
+    <!-- OMNI-1923 Customer Care: Sterling WCC: Y order Link - Start -->
+    <mashup id="paymentInquiry-getPaymentInquiryDetails">
+        <API Name="getPaymentInquiryDetails">
+            <Input/>
+            <Template>
+                <Order>
+                    <ChargeDetails>
+                        <ChargeTransactionDetail>
+                            <TransferToOrder OrderDate=""
+                                OrderHeaderKey="" OrderNo=""/>
+                        </ChargeTransactionDetail>
+                    </ChargeDetails>
+					<!-- OMNI-20858 Customer Care: Sterling WCC: Display Deffered Interest Promo Start -->
+					<PaymentMethods>
+						<PaymentMethod PaymentType="" PaymentReference5=""/>
+					</PaymentMethods>
+					<!-- OMNI-20858 Customer Care: Sterling WCC: Display Deffered Interest Promo End -->
+                </Order>
+            </Template>
+        </API>
+    </mashup>
+    <!-- OMNI-1923 Customer Care: Sterling WCC: Y order Link - End -->
+    <!--Start - OMNI-3717 Payment Tender Type Search-->
+    <mashup id="orderList_getOrderList">
+        <API Name="getOrderList">
+            <Input>
+                <Order>
+                    <PaymentMethod DisplayCreditCardNo=""
+                        PaymentReference2="" SvcNo=""/>
+                </Order>
+            </Input>
+            <Template/>
+        </API>
+    </mashup>
+    <!--End - OMNI-3717 Payment Tender Type Search-->
+    <!-- OMNI- 8718 Prevent STS Line Cancellation WEB COM - START -->
+    <mashup id="CancelOrderListScreen_getCompleteOrderLineList">
+        <API Name="getCompleteOrderLineList">
+            <Input/>
+            <Template>
+                <OrderLineList>
+                    <OrderLine ChildOrderLineRelationships=""
+                        FulfillmentType="" OrderLineTranQuantity=""/>
+                </OrderLineList>
+            </Template>
+        </API>
+    </mashup>
+    <!-- OMNI- 8718 Prevent STS Line Cancellation WEB COM - End -->
+    <mashup id="lineSummary_getCompleteOrderLineDetails">
+        <API Name="getCompleteOrderLineDetails">
+            <Input/>
+            <Template>
+                <OrderLine>
+                    <Extn ExtnInitialPromiseDate="" ExtnIsSignatureRequired=""/>
+                </OrderLine>
+            </Template>
+        </API>
+    </mashup>
+    <mashup id="lineTrack_getCompleteOrderLineDetails_Output">
+        <API Name="getCompleteOrderLineDetails">
+            <Input/>
+            <Template>
+                <OrderLine FulfillmentType="">
+                    <Order/>
+                    <Item/>
+                    <OrderDates>
+                        <OrderDate ActualDate="" DateTypeId=""/>
+                    </OrderDates>
+                    <LineTracking>
+                        <LineBreakups>
+                            <LineBreakup>
+                                <ShipNode>
+                                    <ShipNodePersonInfo/>
+                                </ShipNode>
+                                <ShipmentLine>
+                                    <Shipment ShipNode=""/>
+                                </ShipmentLine>
+                            </LineBreakup>
+                            <LineBreakup Quantity="" Status="">
+                                <OrderStatus Status="" StatusDate=""
+                                    StatusDescription="" StatusQty="">
+                                    <Details ExpectedShipmentDate=""/>
+                                    <ShipNode Description=""/>
+                                </OrderStatus>
+                                <ReshipOrderLine OrderLineKey=""/>
+                                <PersonInfoShipTo MashupTemplateRef="PersonInfoShipTo"/>
+                                <ShipNode Description="">
+                                    <ShipNodePersonInfo/>
+                                </ShipNode>
+                                <ShipmentLine DocumentType=""
+                                    OrderHeaderKey="" OrderLineKey=""
+                                    OrderNo="" ShipmentKey="" ShipmentLineKey="">
+                                    <OrderLine>
+                                    <Extn ExtnInitialPromiseDate="" ExtnIsSignatureRequired=""/>
+                                    </OrderLine>
+                                    <Shipment ActualShipmentDate=""
+                                    CarrierServiceCode=""
+                                    EnterpriseCode=""
+                                    ExpectedDeliveryDate=""
+                                    ExpectedShipmentDate=""
+                                    ShipmentNo="" Status=""
+                                    TrackingNo="" URL="">
+                                    <ShipmentLines>
+                                    <ShipmentLine>
+                                    <OrderLine>
+                                    <Extn ExtnInitialPromiseDate="" ExtnIsSignatureRequired=""/>
+                                    </OrderLine>
+                                    </ShipmentLine>
+                                    </ShipmentLines>
+                                    </Shipment>
+                                </ShipmentLine>
+                                <ContainerDetail ContainerDetailsKey="">
+                                    <Container ContainerNo=""
+                                    ShipmentContainerKey=""
+                                    TrackingNo="" URL=""/>
+                                </ContainerDetail>
+                            </LineBreakup>
+                            <LineBreakup Quantity="" Status="">
+                                <OrderStatus Status="" StatusDate=""
+                                    StatusDescription="" StatusQty="">
+                                    <Details ExpectedShipmentDate=""/>
+                                    <ShipNode Description=""/>
+                                </OrderStatus>
+                                <ReshipOrderLine OrderLineKey=""/>
+                                <PersonInfoShipTo MashupTemplateRef="PersonInfoShipTo"/>
+                                <ShipNode Description="">
+                                    <ShipNodePersonInfo/>
+                                </ShipNode>
+                                <ShipmentLine DocumentType=""
+                                    OrderHeaderKey="" OrderLineKey=""
+                                    OrderNo="" ShipmentKey="" ShipmentLineKey="">
+                                    <Shipment ActualShipmentDate=""
+                                    CarrierServiceCode=""
+                                    EnterpriseCode=""
+                                    ExpectedDeliveryDate=""
+                                    ExpectedShipmentDate=""
+                                    ShipmentNo="" Status=""
+                                    TrackingNo="" URL=""/>
+                                </ShipmentLine>
+                                <ContainerDetail ContainerDetailsKey="">
+                                    <Container ContainerNo=""
+                                    ShipmentContainerKey=""
+                                    TrackingNo="" URL=""/>
+                                </ContainerDetail>
+                            </LineBreakup>
+                            <LineBreakup Quantity="" Status="">
+                                <OrderStatus Status="" StatusDate=""
+                                    StatusDescription="" StatusQty="">
+                                    <Details ExpectedShipmentDate=""/>
+                                    <ShipNode Description=""/>
+                                </OrderStatus>
+                                <ReshipOrderLine OrderLineKey=""/>
+                                <PersonInfoShipTo MashupTemplateRef="PersonInfoShipTo"/>
+                                <ShipNode Description="">
+                                    <ShipNodePersonInfo/>
+                                </ShipNode>
+                                <ShipmentLine DocumentType=""
+                                    OrderHeaderKey="" OrderLineKey=""
+                                    OrderNo="" ShipmentKey="" ShipmentLineKey="">
+                                    <Shipment ActualShipmentDate=""
+                                    CarrierServiceCode=""
+                                    EnterpriseCode=""
+                                    ExpectedDeliveryDate=""
+                                    ExpectedShipmentDate=""
+                                    ShipmentNo="" Status=""
+                                    TrackingNo="" URL=""/>
+                                </ShipmentLine>
+                                <ContainerDetail ContainerDetailsKey="">
+                                    <Container ContainerNo=""
+                                    ShipmentContainerKey=""
+                                    TrackingNo="" URL=""/>
+                                </ContainerDetail>
+                            </LineBreakup>
+                        </LineBreakups>
+                    </LineTracking>
+                    <OrderLineTranQuantity/>
+                    <Extn ExtnInitialPromiseDate="" ExtnIsSignatureRequired=""/>
+                    <PriceInfo/>
+                </OrderLine>
+            </Template>
+        </API>
+    </mashup>
+	<!-- OMNI-14551:  Ship to Address in Sterling WCC - START -->
+	<mashup id="orderSummary_getCompleteOrderDetails">
+        <API Name="getCompleteOrderDetails">
+            <Input/>
+            <Template>
+                <Order CustomerEMailID="" CustomerPhoneNo="">
+                    <OrderLines>
+                        <OrderLine LineType="" FulfillmentType="" DeliveryMethod="">
+							<PersonInfoShipTo AddressLine1=""
+								AddressLine2="" City="" Company="" Country=""
+								DayPhone="" Department=""
+								EMailID="" EveningPhone=""
+								FirstName="" IsAddressVerified="" LastName=""
+								MiddleName="" MobilePhone="" PersonID=""
+								PersonInfoKey="" State=""
+								Suffix="" Title="" ZipCode="" isHistory=""/>
+						</OrderLine>
+                    </OrderLines>
+                    <OverallTotals/>
+                    <Extn ExtnEGCCartID=""/>
+                    <PriceInfo/>
+                </Order>
+            </Template>
+        </API>
+    </mashup>
+	<!-- OMNI-14551:  Ship to Address in Sterling WCC - END -->
+    <!-- OMNI-12936: Return Tracking Number - Begin -->
+    <mashup id="returnSummary_getCompleteOrderDetails">
+        <API Name="getCompleteOrderDetails">
+            <Input/>
+            <Template>
+                <Order>
+                    <Extn ExtnTrackingNo=""/>
+                </Order>
+            </Template>
+        </API>
+    </mashup>
+    <!-- OMNI-12936: Return Tracking Number - End -->
+	<!-- OMNI-20155: Line Type For order Line - Begin -->
+    <mashup id="ReturnOrderLines_getCompleteOrderLineList">
+        <API Name="getCompleteOrderLineList">
+            <Input/>
+            <Template>
+                <OrderLineList>
+                    <OrderLine LineType=""/>
+                </OrderLineList>
+            </Template>
+        </API>
+    </mashup>
+	<!-- OMNI-20155: Line Type For order Line - END -->
+   <!-- OMNI-65600: Klarna VCN - Sterling to display "Klarna" memo (WCC Only) - START -->
+       <mashup id="paymentConfirmation_capturePayment">
+        <API Name="capturePayment">
+            <Input/>
+            <Template>
+                <Order>
+                    <PaymentMethods>
+                        <PaymentMethod PaymentReference5=""/>
+                    </PaymentMethods>
+                </Order>
+            </Template>
+        </API>
+    </mashup>
+   <!-- OMNI-65600: Klarna VCN - Sterling to display "Klarna" memo (WCC Only) - END -->
+</mashups>

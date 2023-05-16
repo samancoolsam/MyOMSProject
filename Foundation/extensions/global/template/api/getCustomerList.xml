@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<CustomerList>
+	<Customer OrganizationCode="" BuyerOrganizationCode="" CanConsumeSupplementalCapacity=""
+		CustomerID="" CustomerKey="" CustomerType="" ExternalCustomerID="">
+		<CustomerContactList>
+			<CustomerContact EmailID="" CustomerContactID="" FirstName="" LastName="">
+				<Extn />
+			</CustomerContact>
+		</CustomerContactList>
+		<NoteList TotalNumberOfRecords="">
+  <Note NoteText=""  SequenceNo="" /> 
+  </NoteList>
+	</Customer>
+</CustomerList>

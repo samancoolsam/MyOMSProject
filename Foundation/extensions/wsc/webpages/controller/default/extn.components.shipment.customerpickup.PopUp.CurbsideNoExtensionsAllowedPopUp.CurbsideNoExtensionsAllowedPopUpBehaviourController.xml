@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Controller className="com.sterlingcommerce.ui.web.platform.controller.SCUIXAPIMashupController" 
+controllerId="extn.components.shipment.customerpickup.PopUp.
+CurbsideNoExtensionsAllowedPopUp.CurbsideNoExtensionsAllowedPopUpBehaviourController" 
+requestMethodSupported="POST" 
+screenId="extn.components.shipment.customerpickup.PopUp.CurbsideNoExtensionsAllowedPopUp.CurbsideNoExtensionsAllowedPopUp">
+<MashupRefs>
+		
+ </MashupRefs>
+</Controller>

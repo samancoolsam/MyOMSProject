@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<InboxList>
+    <Inbox ActiveFlag="" ApiName="" AssignedToUserId=""
+        AssignedToUserKey="" AutoResolvedFlag="" ClosedOn=""
+        ConsolidationCount="" Createprogid="" Createts=""
+        Createuserid="" Description="" DetailDescription=""
+        EnterpriseKey="" ErrorReason="" ErrorType=""
+        ExceptionEscalatedFlag="" ExceptionType="" ExpirationDays=""
+        FlowName="" FollowupDate="" GeneratedOn="" InboxKey=""
+        InboxType="" ItemId="" LastExceedAlert="" LastOccurredOn=""
+        LastUnassignAlert="" LastUnresolveAlert="" ListDescription=""
+        LoadDocumentType="" LoadNo="" LocationId="" LockedByUserKey=""
+        LockedFlag="" LockedOn="" Lockid="" Modifyprogid="" Modifyts=""
+        Modifyuserid="" MoveRequestKey="" OrderDocumentType=""
+        OrderHeaderKey="" OrderLineKey="" OrderNo="" OwnerKey=""
+        OwnerType="" ParentInboxKey="" Priority="" QueueId=""
+        QueueKey="" ResolutionDate="" ResolveBy=""
+        ShipmentDocumentType="" ShipmentKey="" ShipmentNo=""
+        ShipnodeKey="" Status=" " SubFlowName="" SupplierKey=""
+        ViewId="" WaveKey="" WaveNo="">
+        <Queue AuditThisQueue=" " Createprogid="" Createts=""
+            Createuserid="" HoursAssignExceedAction=" "
+            HoursForAssignRealert=" " HoursForAssignment=" "
+            HoursForExceedRealert=" " HoursForResolution=" "
+            HoursForResolveRealert=" " HoursResolveExceedAction=" "
+            InboxAddnlDataXml="" LastQueueExceedAlert=" " Lockid=""
+            MaximumActiveSize=" " MaximumSizeExceedAction=" "
+            Modifyprogid="" Modifyts="" Modifyuserid="" OwnerKey=" "
+            OwnerType=" " Priority=" " QKeyForAssignAlert=" "
+            QKeyForExceedAlert=" " QKeyForResolveAlert=" "
+            QueueDescription=" " QueueGroup=" " QueueId=" " QueueKey=" " QueueName=" "/>
+        <User Activateflag="" BillingaddressKey="" BusinessKey=""
+            ContactaddressKey="" CreatorOrganizationKey="" Imagefile=""
+            Localecode="" Loginid="" Longdesc="" MenuId="" NoteKey=""
+            OrganizationKey="" ParentUserKey="" Password=""
+            PreferenceKey="" Pwdlastchangedon="" UserKey=""
+            UsergroupKey="" Username="" Usertype=""/>
+        <InboxReferencesList>
+            <InboxReferences Createprogid="" Createts="" Createuserid=""
+                InboxKey="" InboxReferenceKey="" Lockid=""
+                Modifyprogid="" Modifyts="" Modifyuserid="" Name=""
+                ReferenceType="" Value=""/>
+        </InboxReferencesList>
+        <InboxAuditList>
+            <InboxAudit FromQueueId="" FromQueueKey=""
+                FromQueueOwnerKey=" " FromStatus="" FromUserId=" "
+                FromUserKey="" InboxAuditKey="" InboxKey="" OwnerKey=""
+                OwnerType="" ReasonCode="" ReasonText="" ToQueueId=""
+                ToQueueKey="" ToQueueOwnerKey=" " ToStatus=""
+                ToUserId="" ToUserKey="" TransactionType=""/>
+        </InboxAuditList>
+        <Extn ExtnAlertKey="" ExtnAssociatedCustID="" ExtnOrderTotal="" ExtnCustomerKey="" ExtnCustomerEmailID="" ExtnCustomerFName="" ExtnCustomerLName="" ExtnNonCCExceptionType=""/>
+    </Inbox>
+</InboxList>

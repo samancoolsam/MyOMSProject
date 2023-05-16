@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExtensionMetaData>
+    <ScreenExtension extnClassName="ShipmentSummaryExtn"
+        extnPackage="extn.components.shipment.summary"
+        originalScreen="wsc.components.shipment.summary.ShipmentSummary"
+        originalScreenPackage="wsc.components.shipment.summary" type="diffrential">
+        <Items>
+            <TitlePane _sc_extensibility_operation="change"
+                _sc_extensibility_referenceUId="tpShipmentLineDetails" open="true"/>
+            <!--OMNI-72013 Begin-->
+            <ContentPane _sc_extensibility_moveOrder="18"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="extn_contentpane1"
+                class="topPanel" uId="extn_CompleteOMYPane"/> 
+            <!--OMNI-72013 End-->
+            <ContentPane _sc_extensibility_operation="change"
+                _sc_extensibility_referenceUId="pnlPrimaryInfo" class="customerInfo testClass"/>
+            <ContentPane _sc_extensibility_operation="change"
+                _sc_extensibility_referenceUId="pnlPhoneHolder" class="displayPhone"/>
+            <ContentPane _sc_extensibility_operation="change"
+                _sc_extensibility_referenceUId="pnlEmailHolder" class="displayEmail extnEmailDiv"/>
+            <ContentPane _sc_extensibility_moveOrder="2"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="pnlPrimaryInfo"
+                class="testClass alternateCustomer" renderHidden="false"
+                style="font-size: 14px; line-height: 1.6; color: #4c4d53;" uId="extn_contentpane1"/>
+            <ContentPane _sc_extensibility_moveOrder="4"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="extn_label" uId="extn_contentpane"/>
+            <ContentPane _sc_extensibility_moveOrder="8"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="extn_contentpane" uId="extn_contentpane2"/>
+            <!--OMNI-72013 Begin-->
+            <Button _sc_extensibility_moveOrder="17"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="lblAssignedToUsr"
+                class="longButtons"
+                label="$(_scSimpleBundle:extn_Complete)"
+                showLabel="true" uId="extn_CompleteOnMyWaybutton"/>
+            <Button _sc_extensibility_moveOrder="19"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="first"
+                _sc_extensibility_referenceUId="extn_CompleteOMYPane" uId="extn_CompleteOnMyWaybutton"/> 
+            <!--OMNI-72013 End-->    
+            <Button _sc_extensibility_moveOrder="14"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="pnlPrimaryInfo"
+                disabled="true"
+                label="$(_scSimpleBundle:extn_Cancel_Shipment_from_other_stores_)"
+                renderHidden="true" resourceId="WSCACA01"
+                style="padding-top:10px;padding-bottom:10px;" uId="extn_CancelShipmentOtherStoresSummary"/>
+            <Button _sc_extensibility_moveOrder="15"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="extn_contentpane1" uId="extn_CancelShipmentOtherStoresSummary"/>
+            <Label _sc_extensibility_moveOrder="16"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="lblShipmentDesc"
+                style="float: right;" uId="extn_label3">
+                <BindingData>
+                    <SourceBinding
+                        dynamicBindingFunc="getDeliveryMethod"
+                        namespace="getShipmentDetails_output" path="DeliveryMethod"/>
+                </BindingData>
+            </Label>
+            <Label _sc_extensibility_moveOrder="3"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="first"
+                _sc_extensibility_referenceUId="extn_contentpane1" uId="extn_label">
+                <BindingData>
+                    <SourceBinding namespace="getShipmentDetails_output" path="Shipment.ShipmentLines.ShipmentLine.0.OrderLine.PersonInfoMarkFor.FirstName"/>
+                </BindingData>
+            </Label>
+            <Label _sc_extensibility_moveOrder="6"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="extn_contentpane" uId="extn_label1">
+                <BindingData>
+                    <SourceBinding namespace="getShipmentDetails_output" path="Shipment.ShipmentLines.ShipmentLine.0.OrderLine.PersonInfoMarkFor.DayPhone"/>
+                </BindingData>
+            </Label>
+            <Label _sc_extensibility_moveOrder="7"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="first"
+                _sc_extensibility_referenceUId="extn_contentpane" uId="extn_label1"/>
+            <Label _sc_extensibility_moveOrder="9"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="first"
+                _sc_extensibility_referenceUId="extn_contentpane2" uId="extn_label2">
+                <BindingData>
+                    <SourceBinding namespace="getShipmentDetails_output" path="Shipment.ShipmentLines.ShipmentLine.0.OrderLine.PersonInfoMarkFor.EMailID"/>
+                </BindingData>
+            </Label>
+            <DataLabel _sc_extensibility_moveOrder="11"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="lblShipmentDesc"
+                class="a11yHiddenLabel duein blockComponent groupLabelSpacing"
+                style="margin-left: 2px" uId="extn_timeRemaining">
+                <BindingData>
+                    <SourceBinding
+                        dynamicBindingClassName="ShipmentUtils"
+                        dynamicBindingFunc="applyOverdueStyling"
+                        dynamicBindingPackage="wsc.components.shipment.common.utils"
+                        namespace="getShipmentDetails_output" path="Shipment.TimeRemaining"/>
+                </BindingData>
+            </DataLabel>
+            <DataLabel _sc_extensibility_operation="change"
+                _sc_extensibility_referenceUId="lblExpectedShipDate"
+                label="$(_scSimpleBundle:pickupDate)" renderHidden="true"/>
+            <DataLabel _sc_extensibility_moveOrder="12"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="lblExpectedShipDate"
+                class="blockComponent noColonLabels comappsWrapWord zeroWidthLabelValueDesktop"
+                label="$(_scSimpleBundle:extn_Max_Pick_Date)"
+                renderHidden="true" uId="extn_datalabel1" value="$(_scSimpleBundle:blank)"/>
+            <DataLabel _sc_extensibility_moveOrder="13"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="extn_datalabel1"
+                class="blockComponent noColonLabels comappsWrapWord zeroWidthLabelValueDesktop"
+                label="$(_scBundle:extn_Picked_Up_Date)"
+                renderHidden="true" uId="extn_datalabel2"/>
+            <DataLabel _sc_extensibility_moveOrder="10"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="lblHoldLocation"
+                class="blockComponent noColonLabels comappsWrapWord zeroWidthLabelValueDesktop"
+                label="$(_scSimpleBundle:extn_Picked_Up_By)"
+                renderHidden="true" uId="extn_pickedUpBy">
+                <BindingData>
+                    <SourceBinding
+                        dynamicBindingFunc="extn_getPickedUpCustomer"
+                        namespace="getShipmentDetails_output" path="Shipment"/>
+                </BindingData>
+            </DataLabel>
+            <Link _sc_extensibility_operation="change"
+                _sc_extensibility_referenceUId="lnkEmail"
+                class="icon-image-label extnEmail" style="width: 140px; word-break: break-all;"/>
+        </Items>
+        <Subscribers>
+            <Local>
+                <Subscriber eventId="afterScreenInit" isExtn="true" sequence="51">
+                    <Handler methodName="extn_afterInitializeScreen"/>
+                </Subscriber>
+                <Subscriber
+                    description="extn_CancelShipmentOtherStoresSummary"
+                    eventId="extn_CancelShipmentOtherStoresSummary_onClick"
+                    isExtn="true" sequence="51">
+                    <Handler methodName="extnCancelShipmentForOtherStores"/>
+                </Subscriber>
+                <Subscriber eventId="lnkStartCustomerPickup_onClick"
+                    isExtn="true" sequence="19">
+                    <Handler methodName="extn_RecordStoreUserAction"/>
+                </Subscriber>
+                <!--OMNI-72013 Begin-->
+                <Subscriber eventId="extn_CompleteOnMyWaybutton_onClick"
+                    isExtn="true" sequence="51">
+                    <Handler methodName="extnOnCompleteClick"/>
+                </Subscriber>
+                <!--OMNI-72013 End-->
+            </Local>
+        </Subscribers>
+        <MashupRefs>
+            <Init>
+                <MashupRef mashupId="shipSummary_getShipmentDetails"
+                    mashupRefId="getShipmentDetails" sourceNamespace="getShipmentDetails_output"/>
+            </Init>
+            <Behavior>
+                <MashupRef mashupId="shipSummary_getShipmentLineList" mashupRefId="getShipmentLineList"/>
+                <MashupRef extnType="ADD"
+                    mashupId="extn_CancelShipmentOtherStoreMashup" mashupRefId="extn_CancelShipmentOtherStoreMashupSummary"/>
+                <MashupRef extnType="ADD"
+                    mashupId="shipSummary_getShipmentDetails" mashupRefId="extn_getShipmentDetailsAfterCancellation"/>
+                <MashupRef extnType="ADD"
+                    mashupId="extn_getUserListByUserID" mashupRefId="extn_getUserListByUserID"/>
+                <MashupRef extnType="ADD"
+                    mashupId="extn_RecordStoreUserActionMashup" mashupRefId="extn_RecordStoreUserActionMashup"/>
+                <!--OMNI-72013 Begin-->
+                <MashupRef extnType="ADD"
+                    mashupId="extn_CompleteOnMyWayOrder" mashupRefId="extn_CompleteOnMyWayOrder"/>
+                <!--OMNI-72013 End-->
+				<!-- OMNI-85180 : Start -->
+                    <MashupRef extnType="ADD"
+                    mashupId="extn_RecordStoreUserActionConsldCurbside" mashupRefId="extn_RecordStoreUserActionConsldCurbside"/>
+				<!-- OMNI-85180 : End -->
+               <!--OMNI-96066 Complete Assembly Start-->    
+                <MashupRef extnType="ADD"
+                    mashupId="extn_CompleteAssemblyChangeShipment" mashupRefId="extn_CompleteAssemblyChangeShipment_Ref"/>
+                    <!--OMNI-96066 Complete Assembly END-->   
+				<!--OMNI-99079 Begin-->
+				<MashupRef extnType="ADD" mashupId="extn_getCommonCodeListForProductRegistration"
+				mashupRefId="extn_getCommonCodeListForProductRegistration_ref"/>
+				<!--OMNI-99079 End-->
+             </Behavior>
+        </MashupRefs>
+    </ScreenExtension>
+</ExtensionMetaData>

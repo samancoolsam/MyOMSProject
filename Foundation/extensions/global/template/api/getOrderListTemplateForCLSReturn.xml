@@ -1,0 +1,28 @@
+<OrderList TotalOrderList="" ReadFromHistory="" LastRecordSet="" LastOrderHeaderKey="">
+	<Order Status="Shipped" OrderNo="" OrderHeaderKey="">
+		<OrderInvoiceList TotalNumberOfRecords="">
+			<OrderInvoice InvoiceType="" InvoiceNo="">
+				<Shipment Status="" ShipmentNo="" ShipmentKey="">
+					<Containers>
+						<Container TrackingNo=""/>
+					</Containers>
+					<ShipmentLines>
+						<ShipmentLine ItemID="">
+							<OrderLine ShippedQuantity=""/>
+						</ShipmentLine>
+					</ShipmentLines>
+				</Shipment>
+			</OrderInvoice>
+	</OrderInvoiceList>
+	<!--START  OMNI-81582 -->
+		<OrderStatuses>
+            <OrderStatus Status=""  StatusDescription=""
+                StatusQty="" StatusReason="" TotalQuantity="">
+			<OrderLine OrderHeaderKey="" OrderLineKey="" >
+				<Item ItemID=""/>
+			</OrderLine>
+            </OrderStatus>
+        </OrderStatuses>
+	<!--END  OMNI-81582 -->
+	</Order>
+</OrderList>

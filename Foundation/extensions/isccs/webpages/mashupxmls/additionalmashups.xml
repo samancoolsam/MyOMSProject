@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mashups>
+    <mashup description="" endpoint="EP_CONFIG"
+        id="extn_getAppeasementsOnOrderMashup" mashuptype="XAPI"
+        resourceId="" transactional="true">
+        <API FlowName="AcademyGetAppeasementListForOrderService">
+            <Input>
+                <ACADOrderAppeasement
+                    AcademyOrderHeaderKey="xml:scControllerInput:/Order/@OrderHeaderKey" DisplayLocalizedFieldInLocale="xml:CurrentUser:/User/@Localecode"/>
+            </Input>
+            <Template>
+                <ACADOrderAppeasementList>
+                    <ACADOrderAppeasement/>
+                </ACADOrderAppeasementList>
+            </Template>
+        </API>
+        <classInformation name="com.ibm.isccs.common.mashups.SCCSBaseMashup"/>
+        <APINamespace inputNS="extn_getAppeasementsOnOrderMashup_input" outputNS="extn_getAppeasementsOnOrderMashup_output"/>
+        <AlternateResourceIds/>
+    </mashup>
+    <!-- OMNI-1925 : Customer Care: Sterling Ship Node Details display - Start -->
+    <mashup description="" endpoint="EP_CONFIG"
+        id="extn_getShipNodeListMashup" mashuptype="XAPI" resourceId="" transactional="true">
+        <API Name="getShipNodeList">
+            <Input>
+                <ShipNode ShipNode=""/>
+            </Input>
+            <Template>
+                <ShipNodeList>
+                    <ShipNode ShipNode="">
+                        <ShipNodePersonInfo AddressID="" AddressLine1=""
+                            AddressLine2="" AddressLine3=""
+                            AddressLine4="" AddressLine5=""
+                            AddressLine6="" AlternateEmailID=""
+                            Beeper="" City="" Company="" Country=""
+                            DayFaxNo="" DayPhone="" Department=""
+                            EMailID="" ErrorTxt="" EveningFaxNo=""
+                            EveningPhone="" FirstName="" HttpUrl=""
+                            IsCommercialAddress="" JobTitle=""
+                            LastName="" Latitude="" Longitude=""
+                            MiddleName="" MobilePhone="" OtherPhone=""
+                            PersonID="" PersonInfoKey=""
+                            PreferredShipAddress="" State="" Suffix=""
+                            TaxGeoCode="" Title="" UseCount=""
+                            VerificationStatus="" ZipCode=""/>
+                    </ShipNode>
+                </ShipNodeList>
+            </Template>
+        </API>
+        <classInformation name="com.ibm.isccs.common.mashups.SCCSBaseMashup"/>
+        <APINamespace inputNS="extn_getShipNodeListMashup_input" outputNS="extn_getShipNodeListMashup_output"/>
+        <AlternateResourceIds/>
+    </mashup>
+    <!-- OMNI-1925 : Customer Care: Sterling Ship Node Details display - End -->
+ <!-- Start:OMNI-63312: WCC Cancellations -->
+    <mashup description="" endpoint="EP_CONFIG" id="extn_CancelOrder"
+        mashuptype="XAPI" resourceId="" transactional="true">
+        <API FlowName="AcademyCancelOrderFromWCC">
+            <Input>
+                <Order Action=""
+                    DisplayLocalizedFieldInLocale="xml:CurrentUser:/User/@Localecode"
+                    EnterpriseCode="" ModificationReasonCode=""
+                    OrderHeaderKey="" OrderNo="">
+                    <OrderLines>
+                        <OrderLine Action="" OrderLineKey=""
+                            OrderedQty="" PrimeLineNo=""
+                            QuantityToCancel="" SubLineNo="" TransactionalLineId=""/>
+                    </OrderLines>
+                    <Notes>
+                        <Note NoteText=""/>
+                    </Notes>
+                </Order>
+            </Input>
+            <Template>
+                <Order DocumentType="" OrderHeaderKey=""/>
+            </Template>
+        </API>
+        <classInformation name="com.ibm.isccs.common.mashups.SCCSBaseMashup"/>
+        <APINamespace inputNS="extn_CancelOrder_input" outputNS="extn_CancelOrder_output"/>
+        <AlternateResourceIds/>
+    </mashup>
+<!--Start OMNI-63466-->
+    <mashup description="" endpoint="EP_CONFIG"
+        id="extn_getCancelReasons" mashuptype="XAPI" resourceId="" transactional="true">
+        <API FlowName="AcademyGetCancelReasonWCC">
+            <Input>
+                <OrderAudit OrderHeaderKey="xml:scControllerInput:/Order/@OrderHeaderKey"/>
+            </Input>
+            <Template>
+                <Order>
+                    <OrderLines>
+                        <OrderLine CancelReason="" PrimeLineNo=""/>
+                    </OrderLines>
+                </Order>
+            </Template>
+        </API>
+        <classInformation name="com.ibm.isccs.common.mashups.SCCSBaseMashup"/>
+        <APINamespace inputNS="extn_getCancelReasons_input" outputNS="extn_getCancelReasons_output"/>
+        <AlternateResourceIds/>
+    </mashup>
+    <!--END OMNI-63466-->
+</mashups>
+	

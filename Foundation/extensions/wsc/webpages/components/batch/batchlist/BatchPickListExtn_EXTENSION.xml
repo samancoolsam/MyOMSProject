@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExtensionMetaData>
+    <ScreenExtension extnClassName="BatchPickListExtn"
+        extnPackage="extn.components.batch.batchlist"
+        originalScreen="wsc.components.batch.batchlist.BatchPickList"
+        originalScreenPackage="wsc.components.batch.batchlist" type="diffrential">
+        <Items>
+            <DataLabel _sc_extensibility_moveOrder="1"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="lbl_ScreenTitle" uId="extn_test"/>
+        </Items>
+        <Subscribers>
+            <Local>
+                <Subscriber description="extnBatchSortMethod"
+                    eventId="afterScreenInit" isExtn="true" sequence="19">
+                    <Handler methodName="extnBatchSortMethod"/>
+                </Subscriber>
+            </Local>
+        </Subscribers>
+        <MashupRefs>
+            <Init>
+                <MashupRef extnType="MODIFY"
+                    mashupId="batchPick_getBatchListForStore"
+                    mashupRefId="batchPick_getBatchListForStore" 
+                    pageSize="10" pageSizeType="ShipmentLine" paginationStrategy="NEXTPAGE"/>
+            </Init>
+            <Behavior>
+                <MashupRef extnType="ADD"
+                    mashupId="manageUserUiState_batchSortMethod" mashupRefId="extn_manageUserUiState_batchSortMethod"/>
+            </Behavior>
+        </MashupRefs>
+    </ScreenExtension>
+</ExtensionMetaData>

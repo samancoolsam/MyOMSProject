@@ -1,0 +1,29 @@
+<LabelFieldMap>
+	
+	<LabelField Binding="Shipment/BillToAddress/@CustomerName" DataType="Text" LabelFieldName="CUSTOMERNAME" RepeatingElement="" Sequence="N" /> 
+	<LabelField Binding="Shipment/@HEADER" DataType="Text" LabelFieldName="HEADER" RepeatingElement="" Sequence="N" /> 
+	<LabelField Binding="Shipment/@DISCLAIMER" DataType="Text" LabelFieldName="DISCLAIMER" RepeatingElement="" Sequence="N" />
+	<LabelField Binding="Shipment/@TotalPageCount" DataType="Text" LabelFieldName="TOTALPAGENO" RepeatingElement="" Sequence="N" />
+	<LabelField Binding="Shipment/@PageNo" DataType="Text" LabelFieldName="PAGENOS" RepeatingElement="" Sequence="N" />
+	<LabelField Binding="Shipment/@PickedupDate" DataType="Text" LabelFieldName="PICKUPDATE" RepeatingElement="" Sequence="N" />
+	<LabelField Binding="Shipment/@PickupPerson" DataType="Text" LabelFieldName="PICKUPPERSON" RepeatingElement="" Sequence="N" />
+	<LabelField Binding="Shipment/ShipmentLines/ShipmentLine/@OrderNo" DataType="Text" LabelFieldName="OrderNo" RepeatingElement="" Sequence="N" />
+
+	<LabelField Binding="Shipment/ShipmentLines/ShipmentLine/OrderLine/PersonInfoShipTo/@LastName" DataType="Text" LabelFieldName="STORE" RepeatingElement="" Sequence="N" />
+	<LabelField Binding="Shipment/ShipmentLines/ShipmentLine/OrderLine/PersonInfoShipTo/@AddressLine1" DataType="Text" LabelFieldName="AddressLineF" RepeatingElement="" Sequence="N" />
+	<LabelField Binding="Shipment/ShipmentLines/ShipmentLine/OrderLine/PersonInfoShipTo/@AddressLine2" DataType="Text" LabelFieldName="AddressLineS" RepeatingElement="" Sequence="N" />
+	<LabelField Binding="Shipment/ShipmentLines/ShipmentLine/OrderLine/PersonInfoShipTo/@Location" DataType="Text" LabelFieldName="LOCATION" RepeatingElement="" Sequence="N" />
+	
+	<LabelField Binding="Shipment/ShipmentLines/ShipmentLine/OrderLine/Item/@ItemShortDesc" DataType="Text" LabelFieldName="ItemDesc" RepeatingElement="ShipmentLine" Sequence="N" />
+	<LabelField Binding="Shipment/ShipmentLines/ShipmentLine/@Quantity" DataType="Text" LabelFieldName="Quantity" RepeatingElement="ShipmentLine" Sequence="N" />
+	<LabelField Binding="Shipment/ShipmentLines/ShipmentLine/OrderLine/LinePriceInfo/@UnitPrice" DataType="Text" LabelFieldName="UNITPRICE" RepeatingElement="ShipmentLine" Sequence="N" />
+	<LabelField Binding="Shipment/ShipmentLines/ShipmentLine/@SerialNo" DataType="Text" LabelFieldName="SERIALNO" RepeatingElement="ShipmentLine" Sequence="N" />
+	
+	<RepeatingFields>
+		<RepeatingField LabelFieldName="Quantity" MaxFirstPage="40" MaxLastPage="0" MaxMidPage="0"/> 
+		<RepeatingField LabelFieldName="ItemDesc" MaxFirstPage="40" MaxLastPage="0" MaxMidPage="0"/> 
+		<RepeatingField LabelFieldName="UNITPRICE" MaxFirstPage="40" MaxLastPage="0" MaxMidPage="0"/>
+		<RepeatingField LabelFieldName="SERIALNO" MaxFirstPage="40" MaxLastPage="0" MaxMidPage="0"/>		
+	</RepeatingFields>
+	
+</LabelFieldMap>

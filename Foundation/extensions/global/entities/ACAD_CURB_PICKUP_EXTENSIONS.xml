@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DBSchema>
+	<Entities>
+		<!-- Start - OMNI-5402 : Curbside Pickup home screen -->
+		<Entity TableName="YFS_SHIPMENT">
+			<Attributes>
+				<Attribute ColumnName="EXTN_IS_CURBSIDE_PICKUP_OPTED" XMLName="ExtnIsCurbsidePickupOpted" DataType="Flag" Nullable="true" Description="Contains flag details if the shipment has curb pickup enabled" XMLGroup="Extn" />
+				<Attribute ColumnName="EXTN_CURBSIDE_PICKUP_INFO" XMLName="ExtnCurbsidePickupInfo" Size="200" Type="VARCHAR2" Nullable="true" Description="Contains Customer Parking info for Curbside pickup" XMLGroup="Extn" />
+				<!-- Start - OMNI-72006 : On My Way Flag -->
+				<Attribute ColumnName="EXTN_ON_MY_WAY_OPTED" XMLName="ExtnOnMyWayOpted" DataType="Flag" Nullable="true" Description="Contains flag details if the on my way is opted" XMLGroup="Extn" />
+				<!-- End - OMNI-72006 : On My Way Flag -->
+				
+				<!-- OMNI-79064 Start-->
+				<Attribute ColumnName="EXTN_CURBSIDE_DELAY_COUNT" XMLName="ExtnCurbsideDelayCount" Type="NUMBER" Size="10" Nullable="true" Description="Contains how many times the Delay is requested by TM for Curbside pickup" DefaultValue="0" XMLGroup="Extn" />
+				<!-- OMNI-79064 End-->
+				<!-- OMNI-79642, OMNI-79627 start-->
+				<Attribute ColumnName="EXTN_CURBSIDE_ATTENDED_BY" Type="VARCHAR2" Size="110" XMLName="ExtnCurbsideAttendedBy" DefaultValue="' '" 
+				Nullable="true" Description="Contains user id of the TM who is attending the curbside pick up" XMLGroup="Extn" />
+				<!-- OMNI-79642, OMNI-79627 End-->
+				<!-- OMNI-81683 START -->
+				<Attribute ColumnName="EXTN_CURBSIDE_DELAY_MINS" XMLName="ExtnCurbsideDelayMins" Type="NUMBER" Size="2" Nullable="true" Description="Contains how many Minutes the Delay is requested by TM for Curbside pickup" DefaultValue="0" XMLGroup="Extn" />
+				<!-- OMNI-81683 END -->
+				<!-- OMNI-81715 START -->
+				<Attribute ColumnName="EXTN_CURBSIDE_DELAY_REQ_TS" XMLName="ExtnCurbsideDelayRequestTS"  DataType="TimeStamp" Nullable="true" Description="Current TimeStamp when Delay is requested by TM for Curbside pickup" XMLGroup="Extn" />
+				<!-- OMNI-81715 END -->
+				<!-- OMNI-79673 START -->
+				<Attribute ColumnName="EXTN_CURBSIDE_EXPECTED_DELIVERY_TS" XMLName="ExtnCurbsideExpectedDeliveryTS" DataType="TimeStamp" Nullable="true" Description="TimeStamp when the Curbside Order is to be Delivered to Customer" XMLGroup="Extn" />
+				<!-- OMNI-79673 END -->
+			</Attributes>
+		</Entity>
+		<!-- End - OMNI-5402 : Curbside Pickup home screen -->
+		
+		<!-- OMNI-79112 start-->
+		<Entity TableName="YFS_ORDER_HEADER">
+			<Attributes>
+				<Attribute ColumnName="EXTN_IS_CURBSIDE_OPTED" XMLName="ExtnIsCurbsideOpted" DataType="Flag" DefaultValue="N"
+				Nullable="true" Description="Contains flag details if the order has curbside pick up enabled" XMLGroup="Extn" />
+			</Attributes>
+		</Entity>
+		<!-- OMNI-79112 end-->
+		
+		</Entities>
+</DBSchema>

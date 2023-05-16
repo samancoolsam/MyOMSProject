@@ -1,0 +1,28 @@
+<Order DocumentType="" EnterpriseCode=""
+    OrderHeaderKey="" OrderNo="" SellerOrganizationCode="">
+    <PriceInfo ChangeInTotalAmount="" Currency=""
+        EnterpriseCurrency=""
+        ReportingConversionDate=""
+        ReportingConversionRate="" TotalAmount=""/>
+    <OrderLines>
+        <OrderLine ChangeInOrderedQty=""
+            OrderLineKey="" OrderedQty=""
+            PrimeLineNo="" SubLineNo="" DeliveryMethod="" >
+            <Item ItemID="" ProductClass="" UnitOfMeasure=""/>
+            <LinePriceInfo ChangeInLineTotal="" LineTotal=""/>
+            <StatusBreakupForCanceledQty>
+                <CanceledFrom
+                    OrderLineScheduleKey=""
+                    OrderReleaseKey=""
+                    OrderReleaseStatusKey=""
+                    Quantity="" Status=""
+                    StatusDate="" StatusDescription="">
+                    <Details
+                        ExpectedDeliveryDate=""
+                        ExpectedShipmentDate=""
+                        ShipNode="" TagNumber=""/>
+                </CanceledFrom>
+            </StatusBreakupForCanceledQty>
+        </OrderLine>
+    </OrderLines>
+</Order>

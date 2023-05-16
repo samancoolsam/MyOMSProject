@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+<Task  EnterpriseKey="" ExceptionHold="" IsSummaryTask=""  Node=""  OrganizationCode="" ParentTaskId="" PredecessorTaskId="" SourceAisle="" SourceLocationId="" SourceZoneId=""
+       TargetAisle="" TargetCaseId="" TargetLocationId="" TargetPalletId=""
+      TargetZoneId="" TaskId="" TaskKey=""
+        TaskStatus="" TaskType="">
+        <Inventory CountryOfOrigin="" FifoNo="" InventoryStatus=""
+            ItemId="" ProductClass="" Quantity="" ReceiptHeaderKey=""
+            Segment="" SegmentType="" SerialNo="" ShipByDate=""
+            SourceCaseId="" SourcePalletId="" TagNumber="" UnitOfMeasure="">
+            <TagAttributes BatchNo="" LotAttribute1="" LotAttribute2=""
+                LotAttribute3="" LotKeyReference="" LotNumber=""
+                ManufacturingDate="" RevisionNo="" TagNumber=""/>
+            <Item CanUseAsServiceTool="" GlobalItemID=""
+                InheritAttributesFromClassification="" ItemGroupCode=""
+                ItemID="" ItemKey="" MaxModifyTS=""
+                OrganizationCode="Required" UnitOfMeasure="">     
+                <Components>
+                    <Component ComponentDescription=""
+                        ComponentItemGroupCode="" ComponentItemID=""
+                        ComponentItemKey="" ComponentKitCode=""
+                        ComponentOrganizationCode=""
+                        ComponentUnitOfMeasure="" ItemKey="" KitQuantity=""/>
+                </Components> 
+            </Item>
+        </Inventory>
+        <TaskReferences ContainerNo=""
+          MoveRequestKey=""
+            MoveRequestLineKey="" MoveRequestNo="" OrderHeaderKey=""
+            PrimeLineNo=""
+            ReceiptNo=""  ShipmentContainerKey=""
+            ShipmentKey="" ShipmentNo="" SubLineNo="" />
+        <TaskType ActivityCode="" ActivityGroupId="" 
+            Node="" OrganizationCode="" 
+            TargetTaskSuggestion="" TaskType="" TaskTypeKey="">            
+        </TaskType>      
+    </Task>

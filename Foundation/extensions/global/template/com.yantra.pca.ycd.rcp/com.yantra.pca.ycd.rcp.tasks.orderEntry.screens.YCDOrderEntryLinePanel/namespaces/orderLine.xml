@@ -1,0 +1,5 @@
+<OrderLine OrderLineKey="" Action="" DeliveryMethod="" ShipNode="" TransactionalLineId="" ReqDeliveryDate="" ReqShipDate="">
+    <Item ItemID="" ProductClass="" UnitOfMeasure=""/>
+    <OrderLineTranQuantity OrderedQty="" TransactionalUOM=""/>
+    <LinePriceInfo IsPriceLocked="" ListPrice="" UnitPrice=""/>
+</OrderLine>

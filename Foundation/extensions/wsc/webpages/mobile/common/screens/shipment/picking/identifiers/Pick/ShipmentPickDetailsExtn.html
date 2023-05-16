@@ -1,0 +1,256 @@
+	<div>
+		 	<div data-dojo-type="idx/layout/ContentPane" 
+		 				data-ibmsc-uid="extn_pnlSTSPickInfoCol2" data-dojo-props="data_dojo_props_identifier_diff: {
+		 							uId : 'extn_pnlSTSPickInfoCol2' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '10' , 
+		_sc_extensibility_position : 'last' , 
+		_sc_extensibility_referenceUId : 'Pnllinedetails'  
+		 				}">
+		 	</div>  
+		 	<div data-dojo-type="idx/layout/ContentPane" 
+		 				data-ibmsc-uid="extn_pnlSTSPickInfoCol2" data-dojo-props="data_dojo_props_identifier_diff: {
+		 							uId : 'extn_pnlSTSPickInfoCol2' , 
+		_sc_extensibility_operation : 'move' , 
+		_sc_extensibility_moveOrder : '14' , 
+		_sc_extensibility_position : 'before' , 
+		_sc_extensibility_referenceUId : 'lnk_PickAction'  
+		 				}">
+		 	</div>  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/Label" 
+		 				data-ibmsc-uid="extn_deliveryMethod" data-dojo-props="data_dojo_props_identifier_diff: {
+		 							uId : 'extn_deliveryMethod' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '2' , 
+		_sc_extensibility_position : 'before' , 
+		_sc_extensibility_referenceUId : 'lbl_Products'  
+		 				}">
+		 	</div>  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/Label" 
+		 				data-ibmsc-uid="extn_deliveryMethod" data-dojo-props="data_dojo_props_identifier_diff: {
+		 							uId : 'extn_deliveryMethod' , 
+		_sc_extensibility_operation : 'move' , 
+		_sc_extensibility_moveOrder : '3' , 
+		_sc_extensibility_position : 'after' , 
+		_sc_extensibility_referenceUId : 'lbl_timeRemaining'  
+		 				}">
+		 	</div>  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/Label" 
+		 				data-ibmsc-uid="extn_deliveryMethod" data-dojo-props="data_dojo_props_identifier_diff: {
+		 							uId : 'extn_deliveryMethod' , 
+		_sc_extensibility_operation : 'move' , 
+		_sc_extensibility_moveOrder : '4' , 
+		_sc_extensibility_position : 'after' , 
+		_sc_extensibility_referenceUId : 'lbl_Products'  
+		 				}">
+		 	</div>  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/Label" 
+		 				data-ibmsc-uid="extn_deliveryMethod" data-dojo-props="data_dojo_props_identifier_diff: {
+		 							uId : 'extn_deliveryMethod' , 
+		_sc_extensibility_operation : 'move' , 
+		_sc_extensibility_moveOrder : '8' , 
+		_sc_extensibility_position : 'after' , 
+		_sc_extensibility_referenceUId : 'lbl_OrderNum'  
+		 				}">
+		 	</div> 
+		<!-- OMNI- 10393 STS Identifier on the customer pick up screen  - START --> 
+		 	<div data-dojo-type="sc/plat/dojo/widgets/Label" 
+		 				data-ibmsc-uid="extn_sts_tag_label" data-dojo-props="data_dojo_props_identifier_diff: {
+		 							uId : 'extn_sts_tag_label' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '20' , 
+		'class' : ' dueInLabel groupLabelSpacing' , 
+		_sc_extensibility_position : 'before' , 
+		_sc_extensibility_referenceUId : 'extn_STSContainers'  
+		 				}">
+		 	</div>
+		<!--Start - OMNI-102104 -->	
+			<div data-dojo-type="sc/plat/dojo/widgets/Label" 
+		 				data-ibmsc-uid="extn_lblShipmentSource" data-dojo-props="data_dojo_props_identifier_diff: {
+		 							uId : 'extn_lblShipmentSource' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '36' , 
+		'class' : ' dueInLabel groupLabelSpacing extn_DisplayShipSource' , 
+		_sc_extensibility_position : 'before' , 
+		_sc_extensibility_referenceUId : 'extn_lbl_timeRemaining'  
+		 				}">
+		 	</div>	
+		<!--End - OMNI-102104 -->			
+		   <!-- OMNI- 10393 STS Identifier on the customer pick up screen  - END -->
+		 	<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" 
+		 				data-ibmsc-uid="lbl_timeRemaining" data-dojo-props="data_dojo_props_identifier_diff: {
+		 							_sc_extensibility_operation : 'change' , 
+		'class' : 'a11yHiddenLabel duein dueInLabel groupLabelSpacing extnBlockforShipmentNo' , 
+		_sc_extensibility_referenceUId : 'lbl_timeRemaining'  
+		 				}">
+		 	</div>  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" 
+		 				data-ibmsc-uid="extn_shipmentNo" data-dojo-props="data_dojo_props_identifier_diff: {
+		 							uId : 'extn_shipmentNo' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '6' , 
+		'class' : 'blockComponent autoLabelZeroWidth' , 
+		_sc_extensibility_position : 'after' , 
+		_sc_extensibility_referenceUId : 'lbl_Status'  
+ 		,scIdentifierExtensionDataFn :
+		 function() { 
+			return { 
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 path : 			'Shipment.ShipmentNo'
+,
+		 namespace : 			'Shipment'
+	}
+	}
+,	
+			 	label : 			this.getSimpleBundleString('extn_Shipment_number')
+			}
+		}
+		 				}">
+		 	</div>			
+		 	<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" 
+		 				data-ibmsc-uid="extn_shipmentNo" data-dojo-props="data_dojo_props_identifier_diff: {
+		 							uId : 'extn_shipmentNo' , 
+		_sc_extensibility_operation : 'move' , 
+		_sc_extensibility_moveOrder : '7' , 
+		_sc_extensibility_position : 'before' , 
+		_sc_extensibility_referenceUId : 'lbl_Status'  
+		 				}">
+		 	</div> 
+			<!--Start: OMNI-6585--> 
+		 	<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" 
+		 				data-ibmsc-uid="extn_STSOrderNum" data-dojo-props="data_dojo_props_identifier_diff: {
+		 							uId : 'extn_STSOrderNum' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '11' , 
+		'class' : 'blockComponent autoLabelZeroWidth comappsWrapWord orderNumber' , 
+		_sc_extensibility_position : 'first' , 
+		_sc_extensibility_referenceUId : 'extn_pnlSTSPickInfoCol2'  
+		 				}">
+		 	</div> 
+			<!--Start: STS Curbside SLA Changes-->
+			<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" 
+		 				data-ibmsc-uid="extn_lbl_timeRemaining" data-dojo-props="data_dojo_props_identifier_diff: {
+		 							uId : 'extn_lbl_timeRemaining' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '22' , 
+		'class' : 'a11yHiddenLabel duein dueInLabel groupLabelSpacing extnBlockforShipmentNo' , 
+		_sc_extensibility_position : 'after' , 
+		_sc_extensibility_referenceUId : 'extn_sts_tag_label'  
+		 				}">
+		 	</div> 
+			<!--End : STS Curbside SLA Changes-->
+			<!-- OMNI-87502, OMNI-87879 - Start -->
+			<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" 
+		 				data-ibmsc-uid="extn_STS_ShipmentNo" data-dojo-props="data_dojo_props_identifier_diff: {
+		 							uId : 'extn_STS_ShipmentNo' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '32' , 
+		'class' : 'blockComponent autoLabelZeroWidth' , 
+		_sc_extensibility_position : 'before' , 
+		_sc_extensibility_referenceUId : 'extn_lbl_timeRemaining'  
+		 				}">
+		 	</div>  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" 
+		 				data-ibmsc-uid="extn_STS_ShipmentNo" data-dojo-props="data_dojo_props_identifier_diff: {
+		 							uId : 'extn_STS_ShipmentNo' , 
+		_sc_extensibility_operation : 'move' , 
+		_sc_extensibility_moveOrder : '33' , 
+		_sc_extensibility_position : 'after' , 
+		_sc_extensibility_referenceUId : 'extn_lbl_timeRemaining'  
+		 				}">
+		 	</div>  
+			<!-- OMNI-87502, OMNI-87879 - End -->
+		 	<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" 
+		 				data-ibmsc-uid="extn_STSContainers" data-dojo-props="data_dojo_props_identifier_diff: {
+		 							uId : 'extn_STSContainers' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '13' , 
+		'class' : 'blockComponent a11yHiddenLabel autoLabelZeroWidth groupLabelSpacing' , 
+		_sc_extensibility_position : 'last' , 
+		_sc_extensibility_referenceUId : 'extn_pnlSTSPickInfoCol2'  
+		 				}">
+		 	</div> 
+			<!--End: OMNI-6585--> 
+			<!--OMNI -6624 - START  --> 
+		 	<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" 
+		 				data-ibmsc-uid="extn_stsCustomerName" data-dojo-props="data_dojo_props_identifier_diff: {
+		 							uId : 'extn_stsCustomerName' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '16' , 
+		'class' : 'blockComponent a11yHiddenLabel autoLabelZeroWidth groupLabelSpacing' , 
+		_sc_extensibility_position : 'before' , 
+		_sc_extensibility_referenceUId : 'extn_STSContainers'  
+		 				}">
+		 	</div>  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" 
+		 				data-ibmsc-uid="extn_stsCustomerName" data-dojo-props="data_dojo_props_identifier_diff: {
+		 							uId : 'extn_stsCustomerName' , 
+		_sc_extensibility_operation : 'move' , 
+		_sc_extensibility_moveOrder : '17' , 
+		_sc_extensibility_position : 'after' , 
+		_sc_extensibility_referenceUId : 'extn_STSContainers'  
+		 				}">
+		 	</div>  
+				<!--OMNI -6624 - END  --> 
+				<!--OMNI -72475 - START  --> 
+			<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" 
+		 				data-ibmsc-uid="extn_OMWStatusTimer" data-dojo-props="data_dojo_props_identifier_diff: {
+		 							uId : 'extn_OMWStatusTimer' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '24' , 
+		_sc_extensibility_position : 'after' , 
+		_sc_extensibility_referenceUId : 'lnk_RecordCustomerPickupAction'  
+		 				}">
+		 	</div> 
+			<!--OMNI -72475 - END  --> 
+			<!--OMNI-81595-MSL: Last Scan date Changes-START-->		
+		 	<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" 
+		 				data-ibmsc-uid="extn_STS_LastScan_Date" data-dojo-props="data_dojo_props_identifier_diff: {
+		 							uId : 'extn_STS_LastScan_Date' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '29' , 
+		'class' : 'extn_lastscandatecolor extn_lastscandatecolorCss' , 
+		_sc_extensibility_position : 'after' , 
+		_sc_extensibility_referenceUId : 'extn_stsCustomerName'  
+		 				}">
+		 	</div> 
+			<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" 
+		 				data-ibmsc-uid="extn_Last_Scanned_On" data-dojo-props="data_dojo_props_identifier_diff: {
+		 							uId : 'extn_Last_Scanned_On' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '30' , 
+		'class' : 'extn_lastscandatecolor extn_lastscandatecolorCss' , 
+		_sc_extensibility_position : 'after' , 
+		_sc_extensibility_referenceUId : 'lbl_Status'  
+		 				}">
+		 	</div>  
+			<!--OMNI-81595-MSL: Last Scan date Changes-END-->	
+			<!--OMNI-98327 - Start -->
+			<div data-dojo-type="sc/plat/dojo/widgets/Link" 
+		 				data-ibmsc-uid="extn_screenbase_link_Assembly" data-dojo-props="data_dojo_props_identifier_diff: {
+		 							uId : 'extn_screenbase_link_Assembly' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '34' , 
+		'class' : 'blockComponent actionLinks extn_CompleteAssembly' , 
+		_sc_extensibility_position : 'before' , 
+		_sc_extensibility_referenceUId : 'lnk_RecordCustomerPickupAction'  
+		 				}">
+		 	</div>  
+			<!--OMNI-98327 - End -->
+			<!--OMNI-102418 OMNI-102127 - Start -->
+			
+			
+		 	<div data-dojo-type="sc/plat/dojo/widgets/Link" 
+		 				data-ibmsc-uid="extn_Receive_link" data-dojo-props="data_dojo_props_identifier_diff: {
+		 							uId : 'extn_Receive_link' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '34' , 
+		'class' : 'blockComponent actionLinks extn_Receive_link' , 
+		_sc_extensibility_position : 'before' , 
+		_sc_extensibility_referenceUId : 'lnk_RecordCustomerPickupAction'  
+		 				}">
+		 	</div> 
+			
+				<!--OMNI-102418 OMNI-102127 - END --> 
+	</div> 

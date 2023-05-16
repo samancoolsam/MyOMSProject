@@ -1,0 +1,22 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:ebay:api:PayPalAPI" xmlns:urn1="urn:ebay:apis:eBLBaseComponents">
+   <soapenv:Header>
+      <urn:RequesterCredentials>
+         <urn1:Credentials>
+            <urn1:Username></urn1:Username>
+            <urn1:Password></urn1:Password>
+            <urn1:Signature></urn1:Signature>
+            <urn1:Subject></urn1:Subject>
+         </urn1:Credentials>
+      </urn:RequesterCredentials>
+   </soapenv:Header>
+   <soapenv:Body>
+      <urn:RefundTransactionReq>
+         <urn:RefundTransactionRequest>
+			<urn1:Version>2.0</urn1:Version>
+            <urn:TransactionID></urn:TransactionID>
+            <urn:RefundType></urn:RefundType>
+            <urn:Amount currencyID="USD"></urn:Amount>
+         </urn:RefundTransactionRequest>
+      </urn:RefundTransactionReq>
+   </soapenv:Body>
+</soapenv:Envelope>

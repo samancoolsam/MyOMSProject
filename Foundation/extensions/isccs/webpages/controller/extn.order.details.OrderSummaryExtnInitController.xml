@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Controller
+    className="com.sterlingcommerce.ui.web.platform.controller.SCUIXAPIMashupController"
+    controllerId="extn.order.details.OrderSummaryExtnInitController"
+    requestMethodSupported="POST" screenId="extn.order.details.OrderSummaryExtn">
+    <Group isAggregator="Y"/>
+<!--OMNI-63466 Begin-->
+<MashupRefs>
+        <MashupRef extnType="ADD" mashupId="extn_getCancelReasons"
+            mashupRefId="extn_getCancelReasons" permissionId=""/>
+    </MashupRefs>
+    <!--OMNI-63466 End-->
+</Controller>

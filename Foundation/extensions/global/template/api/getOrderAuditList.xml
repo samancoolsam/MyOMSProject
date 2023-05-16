@@ -1,0 +1,40 @@
+<OrderAuditList LastOrderAuditKey='' LastRecordSet='' ReadFromHistory=''
+	TotalOrderAuditList=''>
+	<OrderAudit AuditTransactionId='' CreateUserName='' Createts=''
+		Createuserid='' ModifyUserName='' Modifyts='' Modifyuserid=''
+		NewBuffer='' OldBuffer='' OrderAuditKey='' OrderHeaderKey=''
+		OrderLineKey='' OrderReleaseKey='' ReasonCode='' ReasonText=''
+		Reference1='' Reference2='' Reference3='' Reference4='' XMLFlag=''
+		isHistory=''>
+		<Order DocumentType='' EnterpriseCode='' OrderNo='' />
+		<OrderAuditLevels>
+			<OrderAuditLevel ModificationLevel=''
+				ModificationLevelScreenName='' OrderLineKey='' OrderReleaseKey=''>
+				<OrderLine OrderLineKey='' OrderedQty='' PrimeLineNo=''
+					SubLineNo=''>
+				</OrderLine>
+				<ModificationTypes>
+					<ModificationType Name='' ScreenName='' />
+				</ModificationTypes>
+				<OrderRelease ReleaseNo='' />
+				<OrderAuditDetails>
+					<OrderAuditDetail Action='' AuditType=''>
+						<IDs>
+							<ID Name='' Value='' />
+						</IDs>
+						<CustomAuditDetails>
+							<OrderAuditDetails>
+								<OrderAuditDetail Action=''
+									AuditType=''>
+									<IDs>
+										<ID Name='' Value='' />
+									</IDs>
+								</OrderAuditDetail>
+							</OrderAuditDetails>
+						</CustomAuditDetails>
+					</OrderAuditDetail>
+				</OrderAuditDetails>
+			</OrderAuditLevel>
+		</OrderAuditLevels>
+	</OrderAudit>
+</OrderAuditList>

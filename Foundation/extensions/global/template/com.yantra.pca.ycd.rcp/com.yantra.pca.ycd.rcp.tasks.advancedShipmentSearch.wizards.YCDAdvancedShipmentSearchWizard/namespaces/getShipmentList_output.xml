@@ -1,0 +1,44 @@
+	<!--
+	Licensed Materials - Property of IBM
+	IBM Sterling Call Center and Store
+	(C) Copyright IBM Corp. 2008, 2012 All Rights Reserved.
+	US Government Users Restricted Rights - Use, duplication or disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+	-->
+	<Shipments>
+		<Shipment ActualDeliveryDate="" ActualShipmentDate=""  BillToAddressKey=""
+			BillToCustomerId=""   BuyerOrganizationCode=""  CarrierAccountNo=""
+			CarrierType=""  Createts="" Currency="" DeliveryCode="" DeliveryMethod="" 
+			DocumentType=""   EnterpriseCode="" ExpectedDeliveryDate="" 
+			ExpectedShipmentDate=""
+			 FreightTerms=""     
+			 OrderHeaderKey="" OrderNo="" OrderReleaseKey=""
+			  PickticketNo=""
+			  PickTicketPrinted="" PipelineKey="" 
+			 RequestedDeliveryDate="" RequestedShipmentDate=""  
+				  SCAC="" ScacAndService="" ScacIntegrationRequired=""  
+			SellerOrganizationCode="" ShipDate=""  ShipNode="" ShipToCustomerId=""
+			  ShipmentContainerizedFlag=""  ShipmentKey="" ShipmentNo=""
+			 ShipmentType="" Status=""  ToAddressKey=""  
+			 TrackingNo="" ManifestNo="">
+			<BillToAddress AddressLine1="" AddressLine2="" AddressLine3="" AddressLine4="" AddressLine5="" AddressLine6="" City="" Company="" Country="" DayFaxNo=""
+				DayPhone="" Department="" EMailID=""  EveningPhone="" FirstName="" HttpUrl=""  JobTitle="" LastName="" MiddleName="" MobilePhone=""
+				 PersonID="" PersonInfoKey=""  State="" Suffix=""  Title=""  ZipCode=""/>
+			<Status Description="" OwnerKey="" ProcessTypeKey=""  Status="" />
+			<ShipmentLines>
+				<ShipmentLine OrderHeaderKey="" OrderNo="" ShipmentKey="">
+					<!-- OMNI-7980 : Added attribute 'LineType' -->
+					<OrderLine GiftFlag="" GiftWrap="" LineType="" >
+						<PersonInfoMarkFor DayPhone="" FirstName="" LastName=""/>
+					</OrderLine>
+				</ShipmentLine>
+			</ShipmentLines>
+			<ShipNode   Description=""
+				Localecode=""  ReceivingNode=""
+				 ShipNode="" ShipNodeAddressKey=""  ShipnodeKey="" ShipnodeType="" ShippingNode="" >
+				<ShipNodePersonInfo AddressLine1="" AddressLine2="" AddressLine3="" AddressLine4="" AddressLine5="" AddressLine6="" City="" Company="" Country="" 
+					DayPhone="" Department="" EMailID=""  EveningPhone="" FirstName="" HttpUrl="" JobTitle="" LastName="" MiddleName="" MobilePhone=""
+					OtherPhone="" PersonID="" PersonInfoKey="" PreferredShipAddress="" State="" 
+					Title="" ZipCode=""/>
+			</ShipNode>
+		</Shipment>
+	</Shipments>

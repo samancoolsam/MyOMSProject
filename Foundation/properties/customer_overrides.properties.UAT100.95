@@ -1,0 +1,742 @@
+## Miscellaneous
+yfs.yfs.uidev.refreshResources=Y
+yfs.yfs.deposit.units.separately.for.tasktypes=PUT-BULK,PUT-MEZ,IPM,IPB,ADHOC
+yfs.yfs.consider.other.zones.for.alternate.deposit=Y
+
+#Changed for WN-834 :: Red Hat properties change
+yfs.MQ_PROVIDER_URL=corbaloc::slapoms101e.academy.com:2810,:slapoms102e.academy.com:2810
+yfs.MQ_PROVIDER_URL_WMS=corbaloc::ulapwms801e.academy.com:2810,:ulapwms802e.academy.com:2810
+yfs.AGENT_QCF=STERLING_QCF
+yfs.IMG_FOLDER_LOCATION=/apps/SterlingOMS/Foundation/Images/
+
+#Changed for WN-834 :: Red Hat properties change
+yfs.APP_LW_FOLDER_SHARE=\\\\pefsfile01\\Loftware_Images_UAT\\UAT100\\
+yfs.AGT_LW_FOLDER_SHARE=\\\\pefsfile01\\Loftware_Images_UAT\\UAT100\\
+yfs.WCS_URL=http://ulwswcs801e.academy.com:8007/webapp/wcs/component/order/services/OrderServices
+yfs.OMS_URL=http://ssterlingoms100.academy.com/axis2/services/AcademyItemPrice.AcademyItemPriceHttpSoap11Endpoint/
+yfs.httpOnlyCookie=false
+yfs.IsListrakProdEnabled=Y
+
+yfs.yfs.queue.unresolvedAlerts=Y
+yfs.yfs.rcp.devmode=Y
+yfs.yfs.jms.session.disable.pooling=Y 
+#Made Y as part of Upgrade 9.5
+yfs.yfs.closemanifest.online=Y
+#Made Y as part of Upgrade 9.5
+yfs.log4j.configuration=/resources/extn/log4jconfig_custom.xml
+jdbcService.db2Pool.datasource=jdbc/strloms
+jdbcService.db2Pool.testOnReserve=false
+yfs.yfs.ui.MaxRecords=500
+
+## For Backward Compatibility:
+yfs.interopservlet.security.enabled=false
+yfs.userauthfilter.enabled=false
+yfs.api.security.enabled=N
+yfs.api.security.token.enabled=N
+yfs.yfs.manageItem.EnableUpdateOfAdditionalAttribute=Y
+
+## Loftware properties
+yfs.yfs.loftware.tcpip.sockets=Y
+yfs.PRINT_SERVER_HOST_1=uwaplof01e
+yfs.PRINT_SERVER_HOST_2=uwaplof02e
+yfs.PRINT_SERVER_PORT=2723
+yfs.PRINT_DROP_DIR=/apps/SterlingOMS/Foundation/PrintsDropDir
+yfs.PRINT_SAVE_DIR=/apps/SterlingOMS/Foundation/PrintsSaveDir
+
+## PayPal properties
+yfs.academy.paypal.sandbox.refund.endpoint=https://api-3t.sandbox.paypal.com/2.0/
+yfs.academy.paypal.sandbox.refund.username=pradee_1249992854_biz_api1.stercomm.com
+yfs.academy.paypal.sandbox.refund.password=1249992884
+yfs.academy.paypal.sandbox.refund.signature=AT1-.x4QW5lgyGAZ.Z1iAp4jghAjARgqjfzAZ0p-lx-VZiC4PlcGuOeM
+yfs.academy.paypal.sandbox.refund.version=2.0
+yfs.academy.paypal.sandbox.refund.type=Partial
+yfs.academy.paypal.sandbox.refund.currency=USD
+
+## CyberSource properties
+yfs.academy.cybersource.sandbox.endpoint=https://ics2wstest.ic3.com/commerce/1.x/transactionProcessor
+yfs.academy.cybersource.sandbox.username=cybersourcet1
+yfs.academy.cybersource.sandbox.password=8V3mPd8TJhWNtEDelcjOASZ6kt1uwIO1x7x0XuF/Wfmz3ozAvvaaGQ8FRdeZsTl+NIoTcB8//KifsXYyIEpzI1fFpSU6R9WC9IOaSND2+3foKT764l9l12OJe9OcvRY0wfFJDQr9XrakHDXOwCfJRzdSJOcIa5nL8x6C9jCgpZFi6fNEOnETGt9WLiOVyM4BJnqS3W7Ag7XHvHRe4X9Z+bPejMC+9poZDwVF15mxOX40ihNwHz/8qJ+xdjIgSnMjV8WlJTpH1YL0g5pI0Pb7d+gpPvriX2XXY4l705y9FjTB8UkNCv1etqQcNc7AJ8lHN1Ik5whrmcvzHoL2MKClkQ==
+yfs.academy.cybersource.sandbox.merchantid=cybersourcet1
+#yfs.academy.cybersource.sandbox.mrc=MRC-123456
+
+## FEDEX Properties
+yfs.academy.fedex.shipment.pickup.request.endpoint=https://wsbeta.fedex.com:443/web-services
+yfs.academy.fedex.shipment.pickup.request.key=CZ7n4FRn4wNjYtio
+yfs.academy.fedex.shipment.pickup.request.password=rXmJHSuGbGObHNaKytCupe4PH
+yfs.academy.fedex.shipment.pickup.request.accountNumber=510087127
+yfs.academy.fedex.shipment.pickup.request.meterNumber=118579762
+
+## Proxy Settings
+yfs.academy.http.proxyHost=ulpxgen.academy.com
+yfs.academy.http.proxyPort=3128
+yfs.academy.http.nonProxyHosts=*.academy.com|*.fedex.com
+
+## Pierbridge properties
+yfs.ycs.pierbridge.server.url=http://uagileship.academy.com/AgileElite%20Shipping/Services/XmlService.aspx
+yfs.ycs.pierbridge.default.rate.request.user=STR005
+yfs.ycs.pierbridge.db.url=
+yfs.ycs.pierbridge.db.username=
+yfs.ycs.pierbridge.db.password=
+yfs.ycs.log.directory=/apps/SterlingOMS/Foundation/Pierbridge
+yfs.ycs.xmlDump.directory=/apps/SterlingOMS/Foundation/Pierbridge
+
+## LDAP Authentication properties
+yfs.yfs.security.ldap.factory=com.sun.jndi.ldap.LdapCtxFactory
+#yfs.yfs.security.ldap.url=ldaps://uldsedir.academy.com:636/
+yfs.yfs.security.authenticator=com.academy.ecommerce.ldap.AcademyLdapAuthenticator
+yfs.yfs.security.ldap.o=academy
+yfs.yfs.security.ldap.ou=users
+yfs.yfs.security.ldap.ad.url=ldaps://ldapad.academy.com:636/
+yfs.yfs.security.ldap.ed.url=ldaps://uldsedir.academy.com:636/
+yfs.academy.ldap.activedirectory.enabled=Y
+
+## Cognos BI URL 
+yfs.analytics.reportnet.url=http://uwapcog02e.ecommerce.com/ibmcognos10/cgi-bin/cognos.cgi
+yfs.analytics.namespace=sscap
+yfs.yfs.analytics.namespace=sscap
+
+## COM Client Updates
+yfs.yfs.rcp.pca.updates.dir=/apps/SterlingOMS/Foundation/pcaUpdates
+yfs.yfs.rcp.pca.updates.cache.dir=/apps/SterlingOMS/Foundation/pcaUpdates/pca_cache_Updates
+
+## Begin: OMNI-1755 :Cardinal Technical Cleanup
+## Cardinal properties
+yfs.academy.cardinal.sandbox.endpoint=https://centineltest.cardinalcommerce.com/maps/txns.asp 
+yfs.academy.cardinal.sandbox.version=1.7
+yfs.academy.cardinal.sandbox.processorId=202
+yfs.academy.cardinal.sandbox.merchantId=50515
+yfs.academy.cardinal.sandbox.transcationPwd=@cAd3M7
+## WN-1626 Sterling code changes and properties changes for Cardinal Cruise
+## yfs.academy.cardinal.sandbox.transcationType=HC
+yfs.academy.cardinal.sandbox.transcationType.hc=HC
+yfs.academy.cardinal.sandbox.transcationType.cc=CC
+yfs.academy.cardinal.sandbox.transcationType.pp=PP
+yfs.academy.cardinal.sandbox.sourceversion=2.8
+yfs.academy.cardinal.sandbox.source=JTC
+yfs.academy.cardinal.sandbox.merchantdata=50515
+
+## Cardinal Paypal Properties
+##yfs.academy.cardinal.paypal.sandbox.endpoint=https://centineltest.cardinalcommerce.com/maps/txns.asp
+##yfs.academy.cardinal.paypal.sandbox.version=1.7
+##yfs.academy.cardinal.paypal.sandbox.processorId=202
+##yfs.academy.cardinal.paypal.sandbox.merchantId=50515
+##yfs.academy.cardinal.paypal.sandbox.transcationPwd=@cAd3M7
+## WN-1626 Sterling code changes and properties changes for Cardinal Cruise
+## yfs.academy.cardinal.paypal.sandbox.transcationType=HC
+##yfs.academy.cardinal.paypal.sandbox.transcationType.hc=HC
+##yfs.academy.cardinal.paypal.sandbox.transcationType.cc=CC
+##yfs.academy.cardinal.paypal.sandbox.transcationType.pp=PP
+##yfs.academy.cardinal.paypal.sandbox.sourceversion=2.8
+##yfs.academy.cardinal.paypal.sandbox.source=JTC
+##yfs.academy.cardinal.paypal.sandbox.merchantdata=50515
+##yfs.academy.paypal.keystore=/apps/CentinelCertificate/centinalstore2
+##yfs.academy.paypal.keypassword=password
+
+## WN-3141::Sterling Changes to support Cardinal TLS1.2
+##yfs.academy.cardinal.CipherSuites=TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256
+##yfs.academy.cardinal.Protocol=TLSv1.2
+## Begin: OMNI-1755 :Cardinal Technical Cleanup
+
+## DB Cache Properties
+dbclassCache.YFS_ITEM_ALIAS.enabled=false
+dbclassCache.YFS_ITEM.enabled=false
+dbclassCache.YFS_USER_AISLE.enabled=false
+dbclassCache.YFS_ITEM_INSTRUCTION.enabled=false
+dbclassCache.YFS_LANGUAGE_DESCRIPTION.enabled=false
+dbclassCache.YFS_ITEM_UOM.enabled=false
+dbclassCache.YFS_ITEM_EXCLUSION.enabled=false
+dbclassCache.YFS_ITEM_TAG.enabled=false
+dbclassCache.YFS_CUSTOMER.enabled=false
+dbclassCache.YFS_CUSTOMER_ADDNL_ADDRESS.enabled=false
+dbclassCache.YFS_CUSTOMER_CONTACT.enabled=false
+dbclassCache.YFS_CUSTOMER_PAYMENT_METHOD.enabled=false
+dbclassCache.YFS_CUSTOMER_SCH_PREFERENCE.enabled=false
+dbclassCache.YFS_CUSTOMER_SLOT_PREFERENCE.enabled=false
+dbclassCache.YFS_CONSUMER.enabled=false
+dbclassCache.YFS_ERROR_CODE.enabled=false
+dbclassCache.YFS_CALENDAR.enabled=false
+dbclassCache.YFS_CALENDAR_SHIFT.enabled=false
+dbclassCache.YFS_CALENDAR_SHIFT_EFF_PERD.enabled=false
+dbclassCache.YFS_CALENDAR_DAY_EXCP.enabled=false
+dbclassCache.YFS_PARTICIPANT_NOTE.enabled=false
+dbclassCache.YFS_ZIP_CODE_LOCATION.enabled=false
+
+#dbclassCache.YFS_RESOURCE.objects=14000
+#dbclassCache.YFS_RESOURCE_PERMISSION.objects=26000
+
+dbclassCache.YFS_RESOURCE_PERMISSION.object.size=27000
+dbclassCache.YFS_RESOURCE_PERMISSION.select.size=27000
+dbclassCache.YFS_RESOURCE_PERMISSION.list.size=27000
+
+dbclassCache.YFS_RESOURCE.object.size=14000
+dbclassCache.YFS_RESOURCE.select.size=14000
+dbclassCache.YFS_RESOURCE.list.size=14000
+
+dbclassCache.YPM_PRICELIST_LINE.enabled=false
+dbclassCache.YFS_ADDITIONAL_ATTRIBUTE.enabled=false
+
+## Hot SKU feature to avoid inventory locking
+yfs.yfs.hotsku.useHotSKUFeature=Y
+
+## WN-3024 :: Changing the below property to 1 as this was changed in prod during peak season
+yfs.yfs.hotsku.numberOfAbnormalLocksForSwitchToHotSKU=1
+
+## WN-1364 : Changing below properties for HotSKU as per IBM
+yfs.yfs.hotsku.showExtraMessagesAsInfo=Y
+yfs.yfs.hotsku.windowTimeInMinutes=20.0
+
+## OMNI-456 : Modifying HotSKU features to resolve Inventory locking issues
+yfs.yfs.hotsku.numRequestsInTrackingWindowToKeepAsHotSku=1
+#-------------------------------------------------------------------------------
+##Below property is used to enable HotSku feature for required items
+##Benefits for Order creation, schedule, release and reserve inventory functions
+##No benefits for adjust inventory, sync loaded inventory operations 
+#yfs.yfs.hotsku.skipLockInventoryitemList=
+#-------------------------------------------------------------------------------
+
+#---------------------------------------------------------------------------
+# Installation locale code
+# This localecode has to match the underlying OS default timezone where the 
+# database is installed to avoid timezone calculation errors.
+#---------------------------------------------------------------------------
+yfs.yfs.install.localecode=en_US_CST
+
+# The interoperability agent will close a pooled connection if it has not been
+# used for the timeout specified by the following property. This property is specified 
+# in seconds. The default is 10*60 seconds.
+yfs.yfs.context.timeout=15*60
+
+# The frequency at which the connection reaper thread will examine the connection pool
+# for connections that are eligible to be closed.
+# However, the eligibility will be determined by the yfs.context.timeout property.
+# The property is specified in seconds.
+
+yfs.yfs.context.reaptime=15*60
+
+####################################################################################################
+# When this property is set to Y, system will warn user when he picks same reference (Shipment/Move request/Batch etc)
+# onto multiple totes/target LPN while picking through mobile application using cart pick functionality.
+# If this property is not set or set to N, system will retain the current behavior.
+###################################################################################
+yfs.yfs.split.reference.across.totes=Y
+
+shell.cacheManager.forcesyncloading=false
+
+### Academy Service Argument Properties ###
+
+yfs.ACAD_ENVIRONMENT=(UAT)
+
+#Below parameter is for opening Configurator and Systems Management through netscaler
+#yfs.httpOnlyCookie=false
+
+yfs.GC_LOOKUP_URL=http://ugc.academy.com:80/GiftCardService/GiftCardService
+yfs.INVOKE_GC_PAYMENT_URL=http://ugc.academy.com:80/GiftCardService/GiftCardService
+yfs.GC_ACTIVATION_URL=http://ugc.academy.com:80/GiftCardService/GiftCardService
+
+yfs.AGENT_ADDRESS_SOAP_URL=http://ushipws.academy.com/AcademyWhiteGlove/Service.asmx
+
+#yfs.RATE_SHOP_URL=http://ushipws.academy.com//pierbridge%20shipping/services/xmlservice.aspx
+
+yfs.RATE_SHOP_URL=http://uagileship.academy.com/AgileElite%20Shipping/Services/XmlService.aspx
+
+################
+
+### CaseInsensitive Property
+CaseInsensitiveSearch.Mode=ENABLED
+
+########################################
+## Node Capacity Load Testing related
+########################################
+yfs.yfs.nodecapacity.lock=Y
+yfs.yfs.nodecapacity.threshold=3
+yfs.yfs.nodecapacity.timeout=1
+#STL-1725 START
+#It holds the shipment status which need to be cancelled by agent
+yfs.academy.cancel.shipment.status=1100,1100.70.06.10,1100.70.06.20,1100.70.06.50,1100.70.06.70
+
+#It holds the MinOrderStatus which need to be excluded
+yfs.academy.exclude.min.order.status=2100.100,2100.200,3350.300,3700,3700.01,3700.02,3700.7777,9000
+
+#It holds the MinLineStatus which need to be excluded
+yfs.academy.exclude.min.line.status=2100.100,2100.200,3350.300,3700,3700.01,3700.02,3700.7777,9000
+
+#It holds the ShipmentStatus for 005 which need to be excluded
+yfs.academy.exclude.005.shipment.status=1400,1600.002,1600.002.100,1600.002.51,1600.002.52,1600.002.99,9000
+
+#It holds the ShipmentStatus for DSV which need to be excluded
+yfs.academy.exclude.dsv.shipment.status=1600.02,1600.02.100
+#STL-1725 END
+
+## RTS Gift Card Properties
+##GCD-64
+##GCD-97 RTS Gift Card connection properties
+#yfs.academy.RTS.GiftCard.sandbox.endpoint=https://testrtspayments.academy.com:3000/ajbcom_ssl
+yfs.academy.RTS.GiftCard.sandbox.endpoint=https://testpayments.academy.com:3000/ajbcom_ssl
+yfs.academy.RTS.GiftCard.sandbox.terminalnumber=100
+yfs.academy.RTS.GiftCard.sandbox.MerchTerminalnumber=200
+yfs.academy.RTS.GiftCard.sandbox.storenumber=005
+
+## RTS Credit Card properties
+yfs.academy.rts.cmd=100
+yfs.academy.rts.storenumber=005
+yfs.academy.rts.terminalnumber=300
+yfs.academy.rts.tran.seqnumber=SEQ_RTS_TRAN
+
+## Begin: OMNI-1755 :Cardinal Technical Cleanup
+## Start GCD-200
+##yfs.academy.cardinal.uat.env=Y
+##yfs.academy.cardinal.uat.error=2852,1015
+## End GCD-200
+## End: OMNI-1755 :Cardinal Technical Cleanup
+
+## Start : Payeezy Properties
+yfs.academy.payz.serv.unavailble.exact.respcode=07,12,16,19,21,23,26,40,42,61,62
+yfs.academy.payz.hard.declined.exact.respcode=11,14,15,28,32,52,53,57,64,69,89,93
+#yfs.academy.payz.retry.respcode=07
+yfs.academy.payz.creditcard.auth.expiry.days=7
+yfs.academy.payz.socket.timeout=30000
+yfs.academy.payz.exact.id=FF9734-53
+yfs.academy.payz.password=ePsmERRuvM0uUUZJquae4MvavUwRZdj3
+yfs.academy.payz.key=5NSyYV8qqKx~ZJWASVaPhzKn_2ycFCgB
+yfs.academy.payz.auth.header.id=439985
+yfs.academy.payz.secretkey.algorithm=HmacSHA1
+yfs.academy.payz.message.digest.algorithm=SHA1
+yfs.academy.payz.host=api.demo.globalgatewaye4.firstdata.com
+yfs.academy.payz.port=443
+yfs.academy.payz.length=2330
+yfs.academy.payz.endpoint.url=https://api.demo.globalgatewaye4.firstdata.com:443/transaction/v22
+yfs.academy.payz.webservicepath=/transaction/v22
+yfs.academy.payz.soapaction=http://secure2.e-xact.com/vplug-in/transaction/rpc-enc/SendAndCommit
+yfs.academy.payz.methodname=SendAndCommit
+yfs.academy.payz.xmlnamespace=http://secure2.e-xact.com/vplug-in/transaction/rpc-enc/Request
+yfs.academy.payz.host.proxy=52.22.64.70
+yfs.academy.payz.port.proxy=8443
+## End : Payeezy Properties
+
+###WN-1295 : Adding property for Pierbridge call timeout in milliseconds
+yfs.ycs.connection.timeout.millis=30000
+
+
+## Image Icon and URL
+yfs.URL_AcademyHomePage=https://www.academy.com
+yfs.URL_CLOTHING=https://www.academy.com/shop/browse/apparel#
+yfs.URL_FOOTWEAR=https://www.academy.com/shop/browse/footwear#
+yfs.URL_SPORTS=https://www.academy.com/shop/browse/sports#
+yfs.URL_OUTDOORS=https://www.academy.com/shop/browse/outdoors#
+yfs.URL_ACCESSORIES=https://www.academy.com/shop/browse/all-accessories#
+yfs.URL_HOTDEALS=https://www.academy.com/shop/browse/SearchDisplay?searchTerm=AcademyHotDeals&amp;amp;amp;orderBy=7
+yfs.URL_CLEARANCE=https://www.academy.com/shop/browse/SearchDisplay?searchTerm=academyclearance&amp;amp;amp;orderBy=7
+yfs.URL_STORELOCATOR=https://uat4www.academy.com/shop/storelocator/@@@@/####/store-0$$$$
+yfs.URL_AssemblyInstructions=https://academy.custhelp.com/app/answers/detail/a_id/245
+##yfs.URL_ViewOrderDetails=https://uat4www.academy.com/webapp/wcs/stores/servlet/UserAccountOrderStatus?orderId=@@@@&zipCode=$$$$&langId=-1&storeId=10151&catalogId=10051&isSubmitted=true&URL=NonAjaxOrderDetail&errorViewName=GuestOrderStatusView&splitshipstatus=true&isDisplayLeftNav=false
+yfs.URL_ViewOrderDetails=https://uat4www.academy.com/myaccount/orderSearch/@@@@/$$$$
+yfs.URL_CancelDelayedItems=https://uat4www.academy.com/myaccount/orderSearch/@@@@/$$$$?shipmentUpdate=false
+yfs.URL_ReturnOrderInstructions=https://academy.custhelp.com/app/answers/detail/a_id/203/kw/return%20policy
+yfs.URL_GETANSWER=https://academy.custhelp.com/
+yfs.URL_OrdPickFAQ=https://www.academy.com/buy-online-pick-up-in-store
+yfs.URL_LiveChat=https://academy.custhelp.com/app/chat/chat_launch/request_source/7/chat_data/aGFzaD0xNTMwMTkzMzgyMDYzOTB5bXI
+yfs.URL_UpdateProfile=https://uat9www.academy.com/shop/AYRAccountSummary#personalInformationPage
+yfs.URL_PrivacyPolicy=https://academy.custhelp.com/app/answers/detail/a_id/649/kw/privacy
+yfs.URL_Facebook=https://facebook.com/academy
+yfs.URL_Twitter=https://twitter.com/academy
+yfs.URL_PinRest=https://pinterest.com/academy/
+yfs.URL_YouTube=https://www.youtube.com/user/academydotcom
+yfs.URL_Instagram=https://instagram.com/academy
+yfs.IMG_AcademyLOGO=https://www.academy.com/content/dam/academysports/Logo.png
+yfs.IMG_HOME=https://ulwswcs401e.academy.com/wcsstore/AuroraAcademyStorefrontAssetStore/images/icons/EmailHome.png
+yfs.IMG_NOIMAGE=https://content.academy.com/weblib/images/favicon/touch-icon-60px.png
+yfs.IMG_GetAnswer=https://ulwswcs401e.academy.com/wcsstore/AuroraAcademyStorefrontAssetStore/images/icons/GetAnswer.png
+yfs.IMG_OrdPickFAQ=https://ulwswcs401e.academy.com/wcsstore/AuroraAcademyStorefrontAssetStore/images/icons/OrderPickFaq.png
+yfs.IMG_Facebook=http://s7d2.scene7.com/is/image/academy/facebook_social
+yfs.IMG_Twitter=http://s7d2.scene7.com/is/image/academy/twiter_social
+yfs.IMG_Pinrest=http://s7d2.scene7.com/is/image/academy/pinterest_social
+yfs.IMG_Youtube=http://s7d2.scene7.com/is/image/academy/youtube_social
+yfs.IMG_Instagram=http://s7d2.scene7.com/is/image/academy/instagram_social
+yfs.URL_TakeSurvey=https://assemblersinc.net/academy/
+yfs.IMG_TakeSurvey=https://ulwswcs401e.academy.com/wcsstore/AuroraAcademyStorefrontAssetStore/images/icons/TakeSurvey.png
+## Start : Payment Migration Properties
+yfs.academy.payz.rest.apikey=yvmDvaGdgdFLoSrpAW19gIAx6ai2AzTT
+yfs.academy.payz.rest.apisecret=af781b52d8d03228c125929a58aa431c0fa001b21d833bc58aa3048db19d7bdb
+yfs.academy.payz.rest.bank.retry.respcode=000,235,236,301,351,902,904
+yfs.academy.payz.rest.bank.success.respcode=100,101,102,103,104,105,106,107,108,109,110,111,164
+yfs.academy.payz.rest.creditcard.auth.expiry.days=7
+yfs.academy.payz.rest.endpoint.url=https://api-cert.payeezy.com/v1/transactions
+yfs.academy.payz.rest.gateway.success.respcode=00
+yfs.academy.payz.rest.hmac=HmacSHA256
+yfs.academy.payz.rest.nonce=SHA1PRNG
+yfs.academy.payz.rest.paypal.auth.expiry.days=7
+yfs.academy.payz.rest.proxy.host=52.22.64.70
+yfs.academy.payz.rest.proxy.port=8443
+yfs.academy.payz.rest.token=fdoa-3d01df7316dfa72aa2cdb3976d9291793d01df7316dfa72a
+
+yfs.academy.payment.connection.timeout=30000
+yfs.academy.payment.response.timeout=30000
+
+yfs.academy.paypal.rest.password=EPHFGXDN1_GrYqczB5AvaEL5YkZkBSZg85XLu0oSkTUN77dFUeXray2Q1ptM3vfYplVHynKmEW3IashF
+yfs.academy.paypal.rest.url.token=https://api.sandbox.paypal.com/v1/oauth2/token
+yfs.academy.paypal.rest.userid=AZIoy7wkXiDML9-c9Vz712AghG_XejVMyT0HHrUgxfGIt5Ch-V7i2SuUPiR4Xry-ds9kfsKZPdxDnyFL
+yfs.academy.paypal.rest.url.authorization=https://api.sandbox.paypal.com/v1/payments/orders/{OrderId}/authorize
+yfs.academy.paypal.rest.url.void=https://api.sandbox.paypal.com/v1/payments/authorization/{AuthorizationId}/void
+yfs.academy.paypal.rest.retry.error.name=AUTHORIZATION_AMOUNT_LIMIT_EXCEEDED
+
+#yfs.academy.payz.cardinal.retry.enabled=Y
+#yfs.academy.payz.cardinal.delay.seconds=60
+yfs.academy.payz.cardinal.retry.using.app=N
+yfs.academy.payz.cardinal.retry.using.app.userid=yantra
+yfs.academy.payz.cardinal.retry.using.app.password= 
+yfs.academy.payz.cardinal.environment=http://ssterlingoms100.academy.com/smcfs/interop/InteropHttpServlet
+yfs.academy.payz.cardinal.environment.protocol=HTTP
+
+#Commenting below property as it is being read as system argument. 
+#Changes for OMNI-1435 : Option to Enable/Disable Proxy for PayPal and Payeezy
+#yfs.academy.enable.proxy=Y
+#Changes for OMNI-1435 : Option to Enable/Disable Proxy for PayPal and Payeezy
+## End : Payment Migration Properties
+
+
+
+
+=============================================================================================================================
+## BOPIS:Start Properties to allow Doctype Declaration
+yfs.yantra.document.allow.dtd=true
+
+##BOPIS:Planogram Webservice URL
+yfs.Planogram_EndpointURL=http://uaapmbr05:7810/merchplanning/poglocations/v1
+#yfs.Planogram_EndpointURL=http://apiaso.academy.com/merchplanning/poglocations/v1
+
+#BOPIS Resource permission
+yfs.enable.resource.addition=true
+
+#BOPIS Performance change
+dbclassCache.YFS_INVENTORY_NODE_CONTROL.enabled=false
+
+# Bopis-1181 - bopisFlag Webservice url - Start
+yfs.bopisFlag.Webservice.url=https://uat5int.academy.com/wcs/resources/store/10151/xstore/updatebopisflag
+
+## RTAM Fix for Store ON-OFF Flag
+#yfs.yfs.rtam.algorithm=01
+
+##Start : KER-15763
+#yfs.academy.payz.cancel.declined.orderline.status=1400,2100.100,2100.200,3350,3350.300,3700,3700.01,3700.02,3700.7777,9000
+#yfs.academy.payz.cancel.declined.shipment.status=1300,1400,1600.002,1600.002.100,1600.002.51,1600.002.52,1600.002.99,9000
+##OMNI-23767: BOPIS/STS/STS1.1 Hard Decline
+yfs.academy.payz.cancel.declined.orderline.status=1400,2100.100,2100.200,3350,3350.300,3700,3700.01,3700.02,3700.7777,9000,3350.400,3700.100
+yfs.academy.payz.cancel.declined.shipment.status=1300,1400,1600.002,1600.002.100,1600.002.51,1600.002.52,1600.002.99,9000,1100.70.06.30.5,1100.70.06.30.7
+##OMNI-23767: BOPIS/STS/STS1.1 Hard Decline
+##End : KER-15763
+
+## Start : PLCC Payments Properties
+yfs.academy.rts.plcc.auth.expiry.days=7
+#RTS QA URL
+#yfs.academy.rts.plcc.endpoint.url=https://testrtspayments.academy.com:3000/ajbcom_ssl
+yfs.academy.rts.plcc.endpoint.url=https://testpayments.academy.com:3000/ajbcom_ssl
+#RTS DEV URL
+#yfs.academy.rts.plcc.endpoint.url=https://swappay01e:3000/ajbcom_ssl
+yfs.academy.rts.plcc.auth.limit=1
+yfs.academy.rts.plcc.auth.interval=30
+yfs.academy.rts.plcc.auth.timeout.limit=5
+yfs.academy.rts.plcc.auth.timeout.interval=30
+yfs.academy.rts.plcc.void.timeout.limit=5
+yfs.academy.rts.plcc.void.timeout.interval=30
+yfs.academy.rts.plcc.settle.timeout.limit=5
+yfs.academy.rts.plcc.settle.timeout.interval=30
+yfs.academy.rts.plcc.refund.timeout.limit=5
+yfs.academy.rts.plcc.refund.timeout.interval=30
+## End : PLCC Payments Properties
+
+## Start : Kount Properties
+yfs.academy.kount.http.proxyhost=uawsproxy.academy.com
+yfs.academy.kount.http.proxyport=8443
+yfs.academy.kount.endpoint.url.status=https://api.test.kount.net/rpc/v1/orders/status.json
+yfs.academy.kount.endpoint.url.detail=https://api.test.kount.net/rpc/v1/orders/detail.json
+yfs.academy.kount.endpoint.url.rfcb=https://api.test.kount.net/rpc/v1/orders/rfcb.json
+yfs.academy.kount.content.type.value=application/x-www-form-urlencoded
+yfs.academy.kount.connect.timeout=25000
+yfs.academy.kount.read.timeout=25000
+yfs.academy.kount.api.key=x-kount-api-key
+yfs.academy.kount.api.key.value=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiIxNzE0ODAiLCJhdWQiOiJLb3VudC4xIiwiaWF0IjoxNTU1NDMxMDg0LCJzY3AiOnsia2EiOm51bGwsImtjIjpudWxsLCJhcGkiOnRydWUsInJpcyI6dHJ1ZX19.Rdd-bBVCLekY32KQDMx3HvdctJvh_eWsk2oHmTwn7pk
+## End : Kount Properties
+
+## Start : Included as part of Upgrade
+yfs.templatemanager.file.pattern=(?:\w|\/|\.)+(?:.xml)?
+## End : Included as part of Upgrade
+
+### Start : Agile Stabilization Properties
+yfs.academy.pierbridge.url.SharedInventoryDC=http://shipdctest.iglb.academy.com/AgileElite%20Shipping/Services/XmlService.aspx
+yfs.academy.pierbridge.url.Store=http://shipstoretest.iglb.academy.com/AgileElite%20Shipping/Services/XmlService.aspx
+yfs.academy.rateshop.dc.url=http://shipdctest.iglb.academy.com/AgileElite%20Shipping/Services/XmlService.aspx
+yfs.academy.rateshop.store.url=http://shipstoretest.iglb.academy.com/AgileElite%20Shipping/Services/XmlService.aspx
+## End : Agile Stabilization Properties
+
+## Start: Curb Side Pick Up
+yfs.academy.curbside.pick.url=https://uat1www.academy.com/curbside?details=$Order_No-$Shipment_No-$Store_No
+## End: Curb Side PIck Up
+
+## Start: Curbside delay
+yfs.academy.curbside.delay.url=https://uat1www.academy.com/curbside?details=$Order_No-$Store_No&billingZipCode=$Billing_Zipcode&timeExtension=true
+## End: Curbside delay
+
+##Added as part of FP 35 changes
+yfs.ycd.ignorepickupstatus=Y
+
+##Start : Ship To Store 
+yfs.academy.sts.wsc.homepage.daystoconsider=45
+yfs.yfs.rcp.bcmode.version85=Y
+##End : Ship To Store 
+
+# OMNI-6378 - STSFlag Webservice url - Start
+yfs.sts.flag.webservice.url=https://uat1www.academy.com/wcs/resources/store/10151/xstore/shipToStoreFlag?storeNbr=$StoreID&stsFlag=$STSFlag&debug=aso
+# OMNI-6378 - STSFlag Webservice url - End
+
+##Start : BOPIS 2.0 MSTR URL Properties
+yfs.academy.mstr.endpoint.url=http://uwapsim01e.academy.com/MicroStrategy/asp/TaskProc.aspx?taskId=academyPrint&taskEnv=xml&taskContentType=xml&Project=SIMUAT&UserID=BOPISUSER&Password=Bopis@123&ObjectID=E65F0C1C49A096D055BBC8B380F4BB7E&NumberOfCopies=2&ValuePromptAnswers=$ValueAnswers&DeliveryType=1&Printer=$PrinterIp
+#yfs.academy.mstr.endpoint.url=http://umstrsim.academy.com/MicroStrategy/asp/TaskProc.aspx?taskId=academyPrint&taskEnv=xml&taskContentType=xml&Project=SIMUAT&UserID=BOPISUSER&Password=Bopis@123&ObjectID=E65F0C1C49A096D055BBC8B380F4BB7E&NumberOfCopies=2&ValuePromptAnswers=$ValueAnswers&DeliveryType=1&Printer=$PrinterIp
+yfs.academy.mstr.connect.timeout=60000
+yfs.academy.mstr.read.timeout=60000
+##End : BOPIS 2.0 MSTR URL Properties
+
+## OMNI- 13739 - eGift Card: Interface STL & WCS Egift Fulfillment Integration for Refunds/Appeasements - START
+yfs.academy.egc.wcs.appeaserefund.url=https://uat1www.academy.com/api/orders/egiftCard/appeaserefund?debug=aso
+yfs.academy.egc.wcs.fraud.url=https://uat1www.academy.com/api/orders/egiftCard/updateKountStatus?debug=aso
+yfs.academy.egc.read.timeout=60000
+yfs.academy.egc.connect.timeout=60000
+## OMNI- 13739 - eGift Card: Interface STL & WCS Egift Fulfillment Integration for Refunds/Appeasements - END
+
+## OMNI-17588 - egift - Incorporate Security features from OMS side for the Fraud and Cart Call Webservice calls - START
+yfs.academy.egc.apikey=c90fac3783b5be81ca498edc8a7aadf0
+yfs.academy.egc.apisecret=f015442d412053a2cc8307e80d8d9f2fe5dc3559cd1091f8f833fabc30b30d9e
+yfs.academy.egc.rest.hmac=HmacSHA256
+## OMNI-17588 - egift - Incorporate Security features from OMS side for the Fraud and Cart Call Webservice calls - END
+
+## OMNI-17789 : Return Tracking Number in DOM Console - START
+yfs.academy.return.tracking.fedex.url=https://www.fedex.com/apps/fedextrack/?action=track&tracknumbers=
+## OMNI-17789 : Return Tracking Number in DOM Console - END
+
+## Start OMNI-23546  Enable/Disable DI functionality in OMS
+yfs.academy.DeferredInterest.enabled=N
+##End OMNI-23546  Enable/Disable DI functionality in OMS
+
+## Vertex Properties: Start
+yfs.oms.vertex.quotation.request.company=00000
+yfs.oms.vertex.quotation.request.division=00001
+#yfs.oms.vertex.quotation.request.trustedid=281646587
+yfs.oms.vertex.quotation.request.trustedid=$tr.iC26yH
+yfs.oms.vertex.quotation.request.country=USA
+
+#yfs.VERTEX_URL=http://utaxws.academy.com:80/vertex-ws/services/CalculateTaxDoc
+#yfs.VERTEX_URL=http://utaxws7.academy.com/vertex-ws/services/CalculateTax70
+#yfs.VERTEX_URL=http://slapvlt01e.academy.com/vertex-ws/services/CalculateTax90
+yfs.VERTEX_URL=http://vertexlitedev.academy.com/vertex-ws/services/CalculateTax90
+
+##Changes for OMNI-28018: Start
+#Option to Enable/Disable Proxy for Vertex
+yfs.academy.vertex.disable.proxy=Y
+##Changes for OMNI-28018: End
+
+##Changes for OMNI-26977: Start
+#Option to Enable/Disable Vertex Version 9
+yfs.academy.vertex.lite.enabled=Y
+yfs.VERTEX_7_URL=http://utaxws7.academy.com/vertex-ws/services/CalculateTax70
+yfs.oms.vertex_7.quotation.request.trustedid=281646587
+##Changes for OMNI-26977: End
+
+##Changes for OMNI-22670 and OMNI-29859: Start
+#For time-out and retry the vertex-lite calls
+yfs.academy.vertex_7.hostname=utaxws7.academy.com
+yfs.academy.vertex.lite.hostname=vertexlitedev.academy.com
+yfs.academy.vertex.connection.timeout=10000
+#vertex.maxretrycount should always be number of retries + 1
+yfs.academy.vertex.maxretrycount=4
+##Changes for OMNI-22670 and OMNI-29859: End
+
+##Changes for OMNI-24737: Start
+#For time-out and retry the vertex-ondemand calls
+yfs.academy.vertex.ondemand.retry.enabled=Y
+yfs.VERTEX_ONDEMAND_URL=https://academy.ondemand.vertexinc.com/vertex-ws/services/CalculateTax90
+yfs.oms.vertex.ondemand.quotation.request.trustedid=$tr.iC26yH
+yfs.academy.vertex.ondemand.hostname=academy.ondemand.vertexinc.com
+yfs.academy.vertex.ondemand.connection.timeout=10000
+#vertex.ondemand.maxretrycount should always be number of retries + 1
+yfs.academy.vertex.ondemand.maxretrycount=1
+##Changes for OMNI-24737: End
+## Vertex Properties: End
+
+## Yantriks OAuth Properties--Start
+yfs.audience=saas-yantriks-academy-dev
+yfs.privateKeyId=dd9e79448cd623663aaf838254a2da877bb054cd
+yfs.private_key=-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDWcCHD2uwyEV8q\n+Uif73GNzMZfJuUKO5y+E2r3s/mwOTN5VFQMJb9xWDucNWNSMscg/LHVrV2wrn9D\nE3/QDKeGPIyCpi9+yNqoGjotKLakTtW4tcXBUmeIDOEofB93qSgQSUpNCG7zpcST\n4gekZpaNpAUUfUUzhf51ZRTOuxfGQnRuPwug5lTHIQfRUU9jk281uPeI9KgpGvIo\nyZud1YWErVw8g8LhaXZOV5bYMeKMUeCdGptAX3e3n3IIWLQCKhVDjNpc5ZuGxDo2\nTFX4Yo+TcJyDNunsgJbUOACVabzNzU9ppnSlbte6N38HxahQfc+MY4rLygOlxz/r\n3RVSUbt9AgMBAAECggEAA5x4em45uLohf9LE41Sf9UMJOtmn1R1IjXbm6pb6/Hm/\ndn/yDmZQVrNQBa3B0ho4JO5nJvG4IzKSbWnAUZufnUYbGP7Sy/AhUTVn3LzTyT6T\n9iaxgYjxZLwldTi/OupRWhIx5cw05MuE3PdbKOyar8tJqUesHlWtAa3FxO7SVAIL\nQfhN0YEVuadKE/4+0b5HVstGEZOR30MAUIE7tWh6tczgs7D9wvUnzhibLEu2FRjR\nZZDbq27UyZqizx3uUO88NG8Z9VxrFK8cyHAR70xVZU/UrO/gGwW+2l9B0scw2X7B\npx8wIk0x4DMrgbRjBH8MnyFUdxAbA3ftgE/aU3pPwQKBgQD1+HgFKUdhXYMwFtHP\ne4MZco20iboR3KctEqo4YLKl0UPuF9rvXhfFp9JPuRe+QDOU4Vqt6EcetX5QpIVt\ntmcwuThn4i7B+Y1Dht0zxVIRpqpSRW97bixxjeajSpQr4zFCzYlRDMYtlIF5lrlp\nPPLCZ6AJGWZs4hYRGgPdBXOFkQKBgQDfLoO6+Nd+kYJhNjWMvnGoyPr4Q+TQjuXV\nvz6m5eC9ToezIi3c4Vto6xVp3CvqHxCmkgQk8hLiYPpMW9gzJvwTZP3WWCSdwtQe\nw1bE8iHh0yE4DFKEUiMnpO33JaQXcgHri8Jiupo+Ct79lZEQ3gYJd9CDOrkVvfv0\n2llD5gqxLQKBgHgIjxmFsW3UYqbfG/hyv+F1Q63s4D7DPVoDl8n3dnbxDoNsZM0X\nT+aHJVz+aJXRYtqutr/TcJGN5FyaTPrjXqwqV1pqyIKks8lWUTBohMpUWR3ZALRt\naYboxrq9NF3Oe0WsY+yHnVa0+BJL+aNfuOAiDbkjChbspfQmi+gaNuvhAoGBAI2C\nXsAkm+6CsJqW1qlg74xHsunLkr+ye4Rl+IG2bCNcMaqhV1cgBOendzJiCe4uuE4F\nc19BpjunpczYx2LXqylY9aH8zWrCZ+EBlnjV1inrxrpVBdUkh2nRp5j3Yu4Cubjy\nKtSS4M3J8s3zEcISJN3H/IvYphZlGeaMs+DbcZgZAoGAapITw9bqkhpabEwRasUE\nlc9FO26um+X/E9L4LQYfA8OeGThMJ4mU/pvwNTTy4WD+xEEYl3s3SXIWOPJBrYwx\nIk3dhdjRSn48jTy4Ykl3YFjrNRrJKD9W68WSmkwKaXsSu6tjFmIMTDtE5zk/1eTa\n+gLihXKYzp1jQyFZsyUYmFA=\n-----END PRIVATE KEY-----\n
+yfs.issuer=academy-dev
+yfs.timeToLive=5
+
+## Yantriks OAuth Properties--End
+
+## Yantriks Properties--Start
+
+## Reservation URL to make/modify the reservation in Yantriks
+yfs.yantriks.reservation.url=https://academy-dev-pfpa.yantriks.in/availability-services/reservations-extensions/v3.0/ACADEMY.COM/OMS?considerCapacity=false&operation=manage&ignoreAvailabilityCheck=true
+
+## Availability URL to fetch the availability from Yantriks for a particular product
+yfs.yantriks.availablity.url=https://academy-dev-pfpa.yantriks.in/availability-services/availability/aggregator/v3.0?ignoreNetworkBalancing=true&showAtpForHorizon=true
+
+## Retry attempts property is used if the yantriks call fails for first time. After failure, same call will be retired as many times as configured unless success
+yfs.yantriks.retryattempts=2
+
+## Property to specify the timeout interval for any Yantriks URL invocation
+yfs.yantriks.timeout=2500
+
+## Reprocess codes are the error/failure response codes from Yantriks which need to be retried before actually throwing the exception
+yfs.yantriks.reprocess.code=500,502
+
+## NonReprocess response codes will not be retried. These are either success or failure/exception responses from Yantriks
+yfs.yantriks.nonreprocess.code=200,204,401,404,400,201,409
+
+## log enabled property is used during Yantriks exception handling to log the error messsages  if the below property is set to Y
+yfs.yantriks.enable.log=Y
+
+## Kafka updates to Yantriks will be communicated using below URL
+yfs.yantriks.kafka.url=https://academy-dev-pfpcs.yantriks.in/kafka-rest-services
+
+## Yantriks Properties--End
+## Yantriks  Sprint 3 --- Begin
+
+## When a fulfillment update is enabled/disabled in OMS for any location, same will be updated to Yantriks using below URL
+yfs.yantriks.fulfillment.update.url=https://academy-dev-pfpa.yantriks.in/availability-services/location-transaction-type-configs/v3.0
+
+## When a new location is on-boarded in OMS, same needs to be created in Yantriks. Below URL will be used to send the newly added location details to Yantriks 
+yfs.yantriks.location.url=https://academy-dev-pfpcs.yantriks.in/location-services/location
+
+## During inventory shortage, node control is created in OMS for that particular Item-Node combination. Same will be created in Yantriks using below URL
+yfs.yantriks.node.control.url =https://academy-dev-pfpa.yantriks.in/availability-services/product-location-controls/v3.0
+yfs.yantriks.tdet.config.hours =48
+
+## OMNI-31382 Inventory Console--Start
+yfs.yantriks.node.supply.url=https://academy-dev-pfpi.yantriks.in/inventory-services/search-detail/ACADEMY/$strItemID/$strUnitOfMeasure/$strNodeType/$strShipNode/ONHAND
+yfs.yantriks.shipnodes.supply.url=https://academy-dev-pfpi.yantriks.in/inventory-services/search/ACADEMY/$strItemID/$strUnitOfMeasure/ONHAND
+## OMNI-31382 Inventory Console--End
+
+##OMNI-34716 Supply Corrections
+yfs.yantriks.supply.correction.status=3350.240_1400,3200_9000,2160.00.01_1310
+
+##OMNI-46123 For controlling turn ON/OFF of the logic handled for exception scenario on STS Arrived At store
+yfs.exceptionAISatreceive=Y
+
+##OMNI-45645 Start - SIM Interface to fetch Lastrecived date, item price and available Onhand - start 
+yfs.academy.sim.interface.url=https://simapidev.academy.com/v1/items/stockinfo
+yfs.academy.sim.read.timeout=60000
+yfs.academy.sim.connect.timeout=60000
+##OMNI-45645 Start - SIM Interface to fetch Lastrecived date, item price and available Onhand - End
+
+##OMNI-47440 Start - Enabling XAPI REST properties in customer overrides
+xapirest.servlet.authstyle=BASIC
+##OMNI-47440 Start - Enabling XAPI REST properties in customer overrides
+
+##OMNI-52209 Start - From & To Release Status combinations for backorder demand update
+yfs.yantriks.backorder.demandupdate.status=3350.240_1400,3350_1400
+##OMNI-52209 End - From & To Release Status combinations for backorder demand update
+
+##OMNI-54374 Start - Flag to enable/disable the mapping of blank order id in yantriks getavailability request for backorder scenario
+yfs.yantriks.blank.orderid.enabled=Y
+##OMNI-54374 End - Flag to enable/disable the mapping of blank order id in yantriks getavailability request for backorder scenario
+
+##OMNI-54148 Property to override the default EmailID length of ConsigneeEmailAddress and ShipperEmailAddress attributes in the ShipCarton XML as part of FP Defect ID 591532
+yfs.yfs.shipcartondoc.attr.length=100
+
+##FP52 changes for shipment container query performance improvement - Start
+yfs.yfs.applyChildContainerQueryOptimization=Y
+##FP52 changes for shipment container query performance improvement – End
+
+#OMNI-66399 Duplicate Tlog issue Start
+yfs.academy.tlog.change.file.name=N
+#OMNI-66399 Duplicate Tlog issue End
+
+#OMNI-69067 Enable/Disable ApplePay Reauth - Start
+yfs.academy.applepay.reauth.enabled=N
+#OMNI-69067 Enable/Disable ApplePay Reauth - End
+
+#OMNI-79750 Enable/Disable GooglePay Reauth - Start
+yfs.academy.googlepay.reauth.enabled=N
+#OMNI-79750 Enable/Disable GooglePay Reauth - End
+
+#OMNI-57405 Paypal Direct Start
+yfs.academy.paypal.rest.url.capture=https://api.sandbox.paypal.com/v1/payments/authorization/{AuthorizationId}/capture
+yfs.academy.paypal.auth.expiry.days=7
+yfs.academy.paypal.rest.url.refund=https://api.sandbox.paypal.com/v1/payments/capture/{CaptureId}/refund
+#successful transaction
+yfs.academy.paypal.success.name=2XX/authorized/authorize,2XX/pending/authorize,2XX/completed/capture,2XX/pending/capture,2XX/voided/void,2XX/pending/void,2XX/completed/refund,2XX/pending/refund,2XX/completed/purchase,2XX/pending/purchase
+#retry after block time
+yfs.academy.paypal.ratelimit.retry.error.name=400/RATE_LIMIT_REACHED/void,400/RATE_LIMIT_REACHED/refund
+#harddecline.error
+yfs.academy.paypal.harddecline.error.name=2XX/denied/capture,2XX/denied/void
+#dummy settlement error
+yfs.academy.paypal.dummysettlement.error.name=2XX/denied/capture,2XX/denied/void,2XX/failed/refund,4XX/X/X,INVALID/NO_VALID_SETTLEMENT/refund
+#reprocess.error->max limit retry+dummysettlement || harddecline
+yfs.academy.paypal.reprocess.error.name=5XX/X/X,4XX/INTERNAL_SERVICE_ERROR/X
+#infinite retry after a configurable time
+yfs.academy.paypal.caught.error.name=504/X/X,ERROR/X/X,SQLException/X/X
+yfs.academy.paypal.token.auth.error.name=4XX/AUTHENTICATION_FAILURE/X,401/invalid_token/X
+#No dummy settlement, no hard decline, no retry
+yfs.academy.paypal.ignoreall.error.name=4XX/INVALID_REQUEST/X,4XX/VALIDATION_ERROR/X
+#OMNI-57405 Paypal Direct End
+
+#OMNI-69575 PO Creation Start
+yfs.academy.dsco.rest.token.granttype=client_credentials
+yfs.academy.dsco.rest.token.clientid=3njov58qppqdgms7i9nrsepl6o
+yfs.academy.dsco.rest.token.clientsecret=ffu38r1eq8crgm5cl4nrua68r0k2leniei36g7i1q5d9jequ7k5
+yfs.academy.dsco.rest.token.url=https://staging-api.dsco.io/api/v3/oauth2/token
+
+yfs.academy.dsco.rest.createpo.url=https://staging-api.dsco.io/api/v3/order/
+yfs.academy.dsco.rest.createpo.timeout=30000
+#OMNI-69575 PO Creation End
+
+#PO Create ComHub-start
+yfs.academy.chub.success.name=2XX/POCreate,2XX/Token,200/POCancel,2XX/POCancel
+yfs.academy.chub.retry.name=4XX/POCreate,5XX/POCreate,4XX/Token,5XX/Token,201/POCancel
+yfs.academy.chub.error.name=408/POCreate,4XX/Token,5XX/Token,4XX/POCancel,5XX/POCancel
+#PO Create ComHub-End
+
+#Klarna EndPoints-Start
+yfs.academy.klarna.rest.endpoint.url=https://api-na.playground.klarna.com/ordermanagement/v1/orders/{OrderId}/{TransactionType}
+yfs.academy.klarna.rest.username=UG100579_6be329f8b01b
+yfs.academy.klarna.rest.password=pIByK4DIwkO3IYzl
+yfs.academy.klarna.rest.conn.timeout=30000
+yfs.academy.klarna.rest.response.timeout=30000
+#Klarna EndPoints-End
+
+#Chub PO Cancel Endpoints-Start
+#yfs.academy.dsco.rest.cancelpo.url=https://staging-api.dsco.io/api/v3/order/item/cancel
+#yfs.academy.dsco.rest.cancelpo.requestType=POST
+yfs.academy.dsco.rest.cancelpo.url=https://staging-api.dsco.io/api/v3/order/request/cancel
+yfs.academy.dsco.rest.cancelpo.requestType=PUT
+#Chub PO Cancel Endpoints-End
+
+#OMNI-101705-start
+yfs.academy.kafka.suppliercode.url=http://10.117.84.12/v1/dsv/suppliers
+yfs.academy.kafka.unitcost.url=http://10.117.84.12/v1/dsv/items
+#OMNI-101705-end
+
+#DSV Kafka Update-start
+yfs.academy.kafka.success.name=2XX/KafkaSupplierCode,2XX/KafkaUnitCost,4XX/KafkaUnitCost,5XX/KafkaUnitCost
+yfs.academy.kafka.retry.name=
+yfs.academy.kafka.error.name=4XX/KafkaSupplierCode,5XX/KafkaSupplierCode
+#DSV Kafka Update-End
+
+#Alternate Store SMS Change Start
+yfs.academy.cust.bopis.as.msg=Academy.com Pick Up: Your Item(s) in the order #$Order_No is ready for pick up at $Store_Address. Please bring your ID to the store when picking up your order.\n\nHowever, some of the item(s) are pending. You will receive the notification on the pending items as soon as possible.\n\nClick $MyAccount_Url for order details.
+yfs.academy.cust.as.msg=Academy.com Order Update: Item(s) are unavailable at your selected store but are available at another store nearby.\n\nGreat news! Your Items are ready for Pick Up at $Store_Address. Please bring your ID to the store to complete your Pick Up.
+yfs.academy.curb.bopis.as.msg=Academy.com Pick Up: Your Item(s) in the order #$Order_No is ready for pick up at $Store_Address. Please bring your ID to the store when picking up your order.\n\nHowever, some of the item(s) are pending. You will receive the notification on the pending items as soon as possible.\n\nClick $MyAccount_Url for order details.\n\n(Optional) Curbside Pick Up Instructions:\n\n1. Park in or nearby one of the designated Pick Up parking spaces.\n\n2. After parking, tap this link to let us know you have arrived:$CurbPick_Link \n\n3. An Academy team member will bring your order to you shortly.\n\n4. If you have any questions, please contact the store at $Store_Mobile.
+yfs.academy.curb.as.msg=Academy.com Order Update: Item(s) are unavailable at your selected store but are available at another store nearby.\n\nGreat news! Your Items are ready for Pick Up at $Store_Address. Please bring your ID to the store to complete your Pick Up.\n\n(Optional) Curbside Pick Up Instructions:\n\n1. Park in or nearby one of the designated Pick Up parking spaces.\n\n2. After parking, tap this link to let us know you have arrived:$CurbPick_Link \n\n3. An Academy team member will bring your order to you shortly.\n\n4. If you have any questions, please contact the store at $Store_Mobile.
+yfs.academy.myaccount.url=https://uat4www.academy.com/myaccount/orders/$Order_No
+#Alternate Store SMS Change End
+
+#Alternate Store EMAIL Change Start
+yfs.URL_CancelASItems=https://uat4www.academy.com/myaccount/orderSearch/@@@@/$$$$?shipmentUpdate=false
+#Alternate Store EMAIL Change End
+
+#Convey Email Changes Start OMNI-108945
+yfs.URL_ShipmentTracking_Convey=https://tracking.getconvey.com/academy/{$scac}?tn={$currTrackingNo}
+#Convey Email Changes End OMNI-108945
+
+#Convey SMS Changes-Start
+yfs.academy.packed.sms=Academy.com Great news! Your Items in the order $Order_No have been packed and are awaiting carrier pick up. Your order details can be found at $Order_Details_Link. If you have any questions, please contact Customer Care at $Academy_Support_Link
+yfs.URL_Help_Academy=https://help.academy.com/
+#Convey SMS Changes-End

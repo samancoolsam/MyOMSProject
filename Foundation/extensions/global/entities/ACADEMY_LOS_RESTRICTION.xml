@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DBSchema>
+   <Entities>
+
+      <Entity ApiNeeded="Y" AuditRequired="N" Description="Los Restrictions for Academy" HasHistory="False" Prefix="ACAD" TableName="ACAD_LOS_REST">
+         <Attributes>
+			  <Attribute ColumnName="ACAD_LOS_RES_KEY" DataType="Key" DefaultValue="' '" Description="System generated primary ky for this table" Name="AcademyLosRestrictionKey" Nullable="false" XMLGroup="" XMLName="AcademyLosRestrictionKey"/> 
+			  <Attribute ColumnName="SHIPMENT_TYPE" DataType="Text-40" DefaultValue="' '" Description="Item Key for this title" Name="TitleKey" Nullable="false" XMLGroup="" XMLName="ShipmentType"/> 
+			  <Attribute ColumnName="IS_REGULAR_ADDRESS" DataType="Flag" DefaultValue="' '" Description="Is Regular Address" Name="IsRegularAddress" Nullable="false" XMLGroup="" XMLName="IsRegularAddress"/> 
+			  <Attribute ColumnName="IS_APO_FPO" DataType="Flag" DefaultValue="' '" Description="Is APO FPO" Name="IsAPOFPO" Nullable="false" XMLGroup="" XMLName="IsAPOFPO"/>
+			  <Attribute ColumnName="IS_PO_BOX" DataType="Flag" DefaultValue="' '" Description="Is PO BOX" Name="IsPOBOX" Nullable="false" XMLGroup="" XMLName="IsPOBOX"/>  
+			  <Attribute ColumnName="LOS" DataType="Text-37" DefaultValue="' '" Description="LOS Value" Name="LosValue" Nullable="false" XMLGroup="" XMLName="LosValue"/>
+			  <Attribute ColumnName="LOSNAME" DataType="Text-37" DefaultValue="' '" Description="LOS Name" Name="LosName" Nullable="false" XMLGroup="" XMLName="LosName"/>
+			 
+            <Attribute ColumnName="CREATETS" DataType="TimeStamp" DefaultValue="SYSDATE" Description="Create TimeStamp"/>
+			<Attribute ColumnName="MODIFYTS" DataType="TimeStamp" DefaultValue=" SYSDATE" Description="Modify TimeStamp"/>
+			<Attribute ColumnName="CREATEUSERID" DataType="UserId" DefaultValue="' '" Description="Creating User ID"/>
+			<Attribute ColumnName="MODIFYUSERID" DataType="UserId" DefaultValue="' '" Description="Modifying User ID"/>
+			<Attribute ColumnName="CREATEPROGID" DataType="ProgramID" DefaultValue="' '" Description="Creating Program ID"/>
+			<Attribute ColumnName="MODIFYPROGID" DataType="ProgramID" DefaultValue="' '" Description="Modifying Program ID"/>
+			<Attribute ColumnName="LOCKID" DataType="Lockid" DefaultValue="0" Description="Lock ID"/>
+
+         </Attributes>
+
+		 
+			<PrimaryKey Name="ACAD_LOS_REST_PK">
+				<Attribute ColumnName="ACAD_LOS_RES_KEY" Name="AcademyLosRestrictionKey"/>
+			</PrimaryKey>
+      </Entity>
+     
+   </Entities>
+</DBSchema>

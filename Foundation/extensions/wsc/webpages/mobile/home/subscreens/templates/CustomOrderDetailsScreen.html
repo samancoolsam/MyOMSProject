@@ -1,0 +1,297 @@
+<div class="sc-platform-screen-default search" role="region" aria-label="region_screenHeader">
+   <div data-dojo-type="idx/layout/ContentPane" data-dojo-props="       spanLabel : true , 
+      title: 'Top Content',
+      'class': 'mobileCommonScreen screenHeader',
+      colspan: 1,
+      uId: 'TopContent',
+      layoutAlign: 'top' ">
+      <div id="customOrderSummaryScreen" data-dojo-type="idx/layout/ContentPane" data-dojo-props="        spanLabel : true , 
+         'class': 'screenTitle',
+         uId: 'pnlScreenDescription' ">
+         <div id="titleLabel" data-dojo-type="sc/plat/dojo/widgets/DataLabel" data-dojo-props=" 
+            'class': 'autoLabelZeroWidth',
+            uId: 'lblOrderNo',
+            scParamDataFn: function() {
+            return {
+            label: this.getSimpleBundleString('Label_Order_number_mobile'),
+            bindingData: {
+            sourceBinding: {
+            path: 'Order.OrderNo', namespace: 'getOrderDetails_output'
+            }
+            }
+            }
+            }
+            "></div>
+
+           
+
+         <div data-dojo-type="sc/plat/dojo/widgets/DataLabel" data-dojo-props="     spanLabel : true , 
+            'class': 'blockComponent shipmentStatus a11yHiddenLabel secondaryLabel statusLabel',
+            uId: 'lblOrderStatus',
+            scParamDataFn: function() {
+            return {
+            label: this.getBundleString('Label_Shipment_description'),
+            title: this.getSimpleBundleString('Tooltip_Status'),
+            bindingData: {
+            sourceBinding: {
+            path: 'Order.Status', namespace: 'getOrderDetails_output'
+            }
+            }
+            }
+            }
+            "></div>
+      </div>
+   </div>
+   <div data-dojo-type="idx/layout/ContentPane" data-dojo-props="       spanLabel : true , 
+      'class': 'searchContent',
+      style : 'line-height: 2;',
+      uId: 'pnl_SearchContents',
+      renderHidden: false ">
+      <!-- User Message --> 
+      <div data-dojo-type="idx/layout/ContentPane" data-dojo-props="      spanLabel : true , 
+         style : 'margin-left: 10px;margin-right: 10px;',
+         uId : 'systemMessagePanelPopup' , 
+         renderHidden : true  
+         "></div>
+      <div data-dojo-type="idx/layout/ContentPane" data-ibmsc-uid="pnlDataHolder" data_dojo_props_identifier="{
+         spanLabel: true,
+         style: 'margin-left: 10px;',
+         uId: 'pnlDataHolder'
+         }
+         ">
+         <!-- Customer Details --> 
+         <div data-dojo-type="sc/plat/dojo/widgets/DataLabel" data-ibmsc-uid="lbl_CustName" data-dojo-props="       'class' : ' a11yHiddenLabel comappsWrapWord autoLabelZeroWidth groupLabelSpacing' , spanLabel : true,
+            uId: 'lbl_CustName',
+            scParamDataFn: function() {
+            return {
+            label: this.getBundleString('Label_FirstName'),
+            bindingData: {
+            sourceBinding: {
+            path: 'Order.CustomerFirstName', namespace: 'getOrderDetails_output'
+            }
+            ,
+            }
+            }
+            }
+            "></div>
+         <div data-dojo-type="sc/plat/dojo/widgets/DataLabel" data-ibmsc-uid="lbl_CustName" data-dojo-props="       'class' : 'a11yHiddenLabel comappsWrapWord autoLabelZeroWidth groupLabelSpacing' ,  spanLabel : true,
+            uId: 'lbl_CustName',
+            scParamDataFn: function() {
+            return {
+            label: this.getBundleString('Label_LastName'),
+            bindingData: {
+            sourceBinding: {
+            path: 'Order.CustomerLastName', namespace: 'getOrderDetails_output'
+            }
+            ,
+            }
+            }
+            }
+            "></div>
+         <div data-dojo-type="idx/layout/ContentPane" data-dojo-props="      spanLabel : true , 
+            'class' : 'customerInfo' , 
+            uId : 'pnlPrimaryInfo' , 
+            layoutAlign : 'top'  
+            ">
+            <!-- Phone No --> 
+            <div data-dojo-type="idx/layout/ContentPane" data-dojo-props="      'class' : 'displayPhone blockComponent' , 
+               uId: 'pnlPhoneHolder' ">
+               <div data-dojo-type="sc/plat/dojo/widgets/Image" data-dojo-props="       imageSrc : 'wsc/resources/css/icons/images/phone.png' , 
+                  'class': 'defaultImageSize floatLeft',
+                  appendToContextRoot: true,
+                  uId: 'imgPhoneNo',
+                  scParamDataFn: function() {
+                  return {
+                  title: this.getSimpleBundleString('Tooltip_PhoneNo'), imageAlt: this.getSimpleBundleString('Tooltip_PhoneNo')
+                  }
+                  }
+                  "></div>
+               <div data-dojo-type="sc/plat/dojo/widgets/DataLabel" data-dojo-props="       'class' : 'icon-image-label  a11yHiddenLabel zeroWidthLabelKey' , 
+                  uId: 'lblDayPhone',
+                  scParamDataFn: function() {
+                  return {
+                  label: this.getBundleString('Label_Phone_number'),
+                  bindingData: {
+                  sourceBinding: {
+                  path: 'Order.CustomerPhoneNo', namespace: 'getOrderDetails_output'
+                  }
+                  }
+                  }
+                  }
+                  "></div>
+            </div>
+            <!-- Email --> 
+            <div data-dojo-type="idx/layout/ContentPane" data-dojo-props="       'class' : 'displayEmail' , style: 'margin-top: 5;', 
+               uId: 'pnlEmailHolder' ">
+               <div data-dojo-type="sc/plat/dojo/widgets/Image" data-dojo-props="     imageSrc : 'wsc/resources/css/icons/images/email.png' , 
+                  'class': 'defaultImageSize floatLeft',
+                  appendToContextRoot: true,
+                  uId: 'imgEmailLabel',
+                  scParamDataFn: function() {
+                  return {
+                  title: this.getSimpleBundleString('Tooltip_Email'), imageAlt: this.getSimpleBundleString('Tooltip_Email')
+                  }
+                  }
+                  "></div>
+               <div data-dojo-type="sc/plat/dojo/widgets/Link" data-dojo-props="      'class' : 'icon-image-label ellipsisText' , 
+                  uId: 'lnkEmail',
+                  scParamDataFn: function() {
+                  return {
+                  bindingData: {
+                  sourceBinding: {
+                  path: 'Order.CustomerEMailID', namespace: 'getOrderDetails_output'
+                  }
+                  }
+                  }
+                  }
+                  "></div>
+            </div>
+         </div>
+      </div>
+      <!-- Action Holder  -->
+      <div data-dojo-type="idx/layout/ContentPane" data-ibmsc-uid="pnlActionHolder" data_dojo_props_identifier="{
+         spanLabel: true,
+         style: 'padding-top: inherit; margin: 10px;',
+         uId: 'pnlActionHolder'
+         }
+         ">
+         <div data-dojo-type="dijit/form/Button" data-dojo-props="      'class' : 'idxSpecialButton' ,
+            resourceId : 'WSCACA02' ,  
+            uId : 'btnCancelOrder'  
+            ,scParamDataFn :
+            function() { 
+            return { 
+            label :             this.getSimpleBundleString('extn_Label_Cancel_Order')
+            }
+            }
+            "></div>
+      </div>
+      <!-- Additional Information -->
+      <div data-dojo-type="idx/layout/ContentPane" data-dojo-props="      'class' : 'detailsSecondaryInfoPanel' , 
+         uId : 'DST_SecondaryInfoPanel'  
+         ">
+         <div data-dojo-type="idx/layout/TitlePane" data-dojo-props="      open : true , 
+            spanLabel : true , 
+            'class' : 'collapsablePane boxLayout' , 
+            style : 'padding: initial;',
+            toggleable : true , 
+            uId : 'tpAddressPanel' , 
+            renderHidden : false  
+            ,scParamDataFn :
+            function() { 
+            return { 
+            'aria-label' :          this.getSimpleBundleString('arialabel_AdditionalInformation')
+            ,   
+            title :             this.getSimpleBundleString('Title_Additional_Information')
+            }
+            }
+            " role='region'>
+            <!-- BillTo -->
+            <div data-dojo-type="idx/layout/ContentPane" data-dojo-props="      spanLabel : true , 
+               'class' : 'addressInformation' , 
+               uId : 'pnlBillToAddress' , 
+               renderHidden : true  
+               ">
+               <div data-dojo-type="sc/plat/dojo/widgets/IdentifierControllerWidget"
+                  data-dojo-props="
+                  identifierQuery: 'Address:PersonInfo.Country',
+                  uId: 'billingAddressPanel',
+                  packageName: 'ias.common.address.display',
+                  className: 'AddressDisplay',
+                  handleInit: true,
+                  scParamDataFn: function() {
+                  return {
+                  titleDesc :            'BillTo'
+                  ,
+                  bindingData :   {
+                  fwdbindingData :   {
+                  sourceMapping :    [
+                  {
+                  childpath :            'PersonInfo'
+                  ,
+                  childnamespace :           'Address'
+                  ,
+                  parentpath :           'Order.PersonInfoBillTo'
+                  ,
+                  parentnamespace :          'getOrderDetails_output'
+                  }
+                  ]
+                  }
+                  }
+                  }
+                  }"></div>
+            </div>
+            <!-- ShipTo -->
+            <div data-dojo-type="idx/layout/ContentPane" data-dojo-props="      spanLabel : true , 
+               'class' : 'addressInformation' , 
+               uId : 'pnlShipToAddress' , 
+               renderHidden : true  
+               ">
+               <div data-dojo-type="sc/plat/dojo/widgets/IdentifierControllerWidget"
+                  data-dojo-props="
+                  identifierQuery: 'Address:PersonInfo.Country',
+                  uId: 'shippingAddressPanel',
+                  packageName: 'ias.common.address.display',
+                  className: 'AddressDisplay',
+                  handleInit: true,
+                  scParamDataFn: function() {
+                  return {
+                  titleDesc :            'ShipTo'
+                  ,
+                  bindingData :   {
+                  fwdbindingData :   {
+                  sourceMapping :    [
+                  {
+                  childpath :            'PersonInfo'
+                  ,
+                  childnamespace :           'Address'
+                  ,
+                  parentpath :           'Order.PersonInfoShipTo'
+                  ,
+                  parentnamespace :          'getOrderDetails_output'
+                  }
+                  ]
+                  }
+                  }
+                  }
+                  }"></div>
+            </div>
+         </div>
+      </div>
+      <!--  Products -->
+      <div data-dojo-type="idx/layout/TitlePane" data-dojo-props="       open : true , 
+         spanLabel : true , 
+         'class' : 'collapsablePane boxLayout repeatingContent' , 
+         style : 'padding: initial;',
+         toggleable : true , 
+         uId : 'tpOrderLineDetails' , 
+         renderHidden : false  
+         ,scParamDataFn :
+         function() { 
+         return { 
+         'aria-label' :          this.getSimpleBundleString('arialabel_ProductsDetails')
+         ,   
+         title :             this.getSimpleBundleString('Title_Products')
+         }
+         }
+         " role='region'>
+         <!-- Repeating screen -->
+         <div style="margin-top: -10px;" data-dojo-type="idx/layout/ContentPane" data-dojo-props="      'class' : 'repeatingpanel showCursorPointer' ,
+            uId: 'productsRepeatingScreen',
+            scParamDataFn: function() {
+            return {
+            bindingData: {
+            repeatingScreen: {
+            repeatingnamespace: 'OrderLine',
+            path: 'Order.OrderLines.OrderLine',sourcenamespace: 'repeatingScreenInput'
+            },
+            repeatingscreenID :'extn.mobile.home.subscreens.CustomOrderLineList'
+            ,
+            }
+            }
+            }
+            ">
+         </div>
+      </div>
+   </div>
+</div>

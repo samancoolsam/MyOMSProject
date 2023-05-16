@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright 2006-2008, Sterling Commerce, Inc. All rights reserved. -->
+<DBSchema>
+	<Entities>        
+		<Entity TableName="EXTN_STORE_ITEM_COUNT_QTY_VW" EntityType="VIEW" ApiNeeded="Y" AuditRequired="N" Description="" Prefix="EXTN" HasHistory="false" View="true" XMLName="StoreItemCountQuantity">
+			<Attributes>
+				<Attribute ColumnName="SHIP_NODE"  DataType="ShipNode" DefaultValue="' '" Description="" Nullable="False" XMLName="ShipNode" />
+				<Attribute ColumnName="COUNT_OF_ITEM_ID"  DataType="Count" DefaultValue="0" Description="" Nullable="False" XMLName="CountOfItemID" />
+			</Attributes>
+			<PrimaryKey Name="TABLE_KEY_PK">
+				<Attribute ColumnName="SHIP_NODE" />
+				<Attribute ColumnName="COUNT_OF_ITEM_ID" />
+			</PrimaryKey>
+		</Entity>
+	</Entities>
+</DBSchema>

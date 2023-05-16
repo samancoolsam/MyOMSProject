@@ -1,0 +1,50 @@
+		<div>
+		 	<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								renderHidden : true , 
+		_sc_extensibility_operation : 'change' , 
+		_sc_extensibility_referenceUId : 'lblPromisedDate'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_promiseDate' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '1' , 
+		_sc_extensibility_position : 'after' , 
+		_sc_extensibility_referenceUId : 'lblShipNode'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 path : 			'OrderLine.Extn.ExtnInitialPromiseDate'
+,
+		 dynamicBindingFunc : 			'extn_getPromisedDate'
+,
+		 namespace : 			'getCompleteOrderLineDetails_output'
+	}
+	}
+,	
+			 	label : 			this.getBundleString('extn_Promised_Date')
+			}
+		}
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								renderHidden : true , 
+		_sc_extensibility_operation : 'change' , 
+		_sc_extensibility_referenceUId : 'lblPromisedDate'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'lblPromisedDate' , 
+		_sc_extensibility_operation : 'remove' , 
+		_sc_extensibility_moveOrder : '2' , 
+		_sc_extensibility_position : 'first' , 
+		_sc_extensibility_referenceUId : '_extensibilityHiddenWidgetsHolder'  
+	 					}">
+		 	</div>  
+		</div>

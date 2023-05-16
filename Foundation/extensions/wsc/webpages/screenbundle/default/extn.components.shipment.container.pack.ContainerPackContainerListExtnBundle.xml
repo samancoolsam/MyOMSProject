@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ScreenBundle
+    screenBundleId="extn.components.shipment.container.pack.ContainerPackContainerListExtnBundle" screenId="extn.components.shipment.container.pack.ContainerPackContainerListExtn">
+    <BundleEntries>
+        <BundleEntry bundleEntryId="lbl_containerId_DataLabel_label"
+            bundleKey="extn_Container_" bundleValueFn="_scSimpleBundle"
+            property="label" type="WIDGET" uId="lbl_containerId"/>
+        <BundleEntry bundleEntryId="extn_textfield_TextField_hint"
+            bundleKey="extn__Scan_products_to_be_packed_into_current_Container_"
+            bundleValueFn="_scSimpleBundle" property="hint"
+            type="WIDGET" uId="extn_textfield"/>
+    </BundleEntries>
+</ScreenBundle>

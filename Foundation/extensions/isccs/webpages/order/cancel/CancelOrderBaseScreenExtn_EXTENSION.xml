@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExtensionMetaData>
+    <ScreenExtension extnClassName="CancelOrderBaseScreenExtn"
+        extnPackage="extn.order.cancel"
+        originalScreen="isccs.order.cancel.CancelOrderBaseScreen"
+        originalScreenPackage="isccs.order.cancel" type="diffrential">
+        <Items>
+            <FilteringSelect _sc_extensibility_operation="change" _sc_extensibility_referenceUId="cmbReasoncode"/>
+            <Textarea _sc_extensibility_moveOrder="2"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="cancelOrderListScreen"
+                class="noteText" cols="80"
+                label="$(_scSimpleBundle:extn_Notes)"
+                scuiDataType="NoteText" uId="extn_CancelNotes">
+                <BindingData>
+                    <TargetBindings>
+                        <TargetBinding namespace="getCancelProp_input"
+                            path="Order.Notes.Note.NoteText" scExtensibilityArrayItemId="extn_TargetBindings_0"/>
+                    </TargetBindings>
+                </BindingData>
+            </Textarea>
+        </Items>
+        <Subscribers>
+            <Local>
+	    <!-- OMNI- 8718 Prevent STS Line Cancellation WEB COM - START -->
+                <Subscriber description="extn_initializeLayout"
+                    eventId="initializeLayout" isExtn="true" sequence="51">
+                    <Handler methodName="extn_initializeLayout"/>
+                </Subscriber>
+	    <!-- OMNI- 8718 Prevent STS Line Cancellation WEB COM - END -->
+                <Subscriber description="On Reason code change"
+                    eventId="cmbReasoncode_onChange" isExtn="true" sequence="51">
+                    <Handler methodName="ExtnReasonCodeChange"/>
+                </Subscriber>
+    <!-- Start:OMNI-63312: WCC Cancellations --> 
+                <Subscriber eventId="onExtnMashupCompletion"
+                    isExtn="true" sequence="51">
+                    <Handler methodName="extn_handleMashupOutput"/>
+                </Subscriber>
+    <!-- End:OMNI-63312: WCC Cancellations --> 
+            </Local>
+        </Subscribers>
+        <MashupRefs>
+            <Behavior>
+                <MashupRef extnType="MODIFY"
+                    mashupId="cancelOrder_cancelOrderAPI" mashupRefId="cancelOrderMashupRef"/>
+    <!-- Start:OMNI-63312: WCC Cancellations --> 
+                <MashupRef extnType="ADD" mashupId="extn_CancelOrder" mashupRefId="extn_CancelOrderRef"/>
+    <!-- End:OMNI-63312: WCC Cancellations --> 
+            </Behavior>
+        </MashupRefs>
+    </ScreenExtension>
+</ExtensionMetaData>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Shipment ShipmentKey="" ShipmentNo="" Status="" StatusDate="" SCAC="" ScacAndService="" CarrierServiceCode="" OrderNo="" DeliveryMethod="" ShipNode="" DocumentType="" PackListType="" >
+	<BillToAddress DayPhone="" FirstName="" LastName=""/>
+	<ShipmentLines>
+		<ShipmentLine OrderHeaderKey="" Quantity="" OrderNo="" ShipmentLineKey="" ItemID="" ShipmentLineNo="" ShortageQty="" ActualQuantity="" ItemDesc="" ProductClass="" PrimeLineNo="" SubLineNo="">
+			<OrderLine OriginalOrderedQty="" OrderedQty="" FulfillmentType="">
+				<Extn />
+				<OrderStatuses>
+					<OrderStatus StatusDescription="" />
+				</OrderStatuses>
+				<Order OrderHeaderKey="" OrderNo="" DocumentType="" >
+					<OrderLines>
+						<OrderLine FulfillmentType="" DeliveryMethod="" PackListType="" >
+							<Extn />
+						</OrderLine>
+					</OrderLines>
+				</Order>
+			</OrderLine>
+			<Extn/>
+			<ShipmentTagSerials>
+			<ShipmentTagSerial SerialNo=""/> 
+			</ShipmentTagSerials>
+		</ShipmentLine>
+	</ShipmentLines>
+	<ToAddress EMailID="" FirstName="" LastName="" MiddleName="" PersonID="" />
+	<OrderInvoiceList>
+		<OrderInvoice ActualFreightCharge="" AmountCollected=""
+			DateInvoiced="" HeaderTax="" InvoiceNo="" InvoiceType=""
+			LineSubTotal="" MasterInvoiceNo="" OrderHeaderKey=""
+			OrderInvoiceKey="" OrderNo="" OtherCharges="" 
+			ShipmentKey="" Status="" TotalAmount="" TotalTax="" />
+	</OrderInvoiceList>
+	<ShipmentStatusAudits>
+		<ShipmentStatusAudit ShipmentStatusAuditKey="" OldStatus="" NewStatus="" OldStatusDate="" NewStatusDate="" ReasonCode="" ReasonText=""/>
+	</ShipmentStatusAudits>
+	<!-- START STL-1435 Packing in SI DCs doesn't generate ShipAckMsg to Exeter -->
+	<!-- OMNI-5703 : Begin -->	
+	<ShipNode NodeType="" Localecode="">
+		<ShipNodePersonInfo AddressLine1="" City="" Country="" FirstName="" State="" ZipCode="" /> 
+	</ShipNode>	
+	<!-- OMNI-5703 : End -->
+	<!-- END STL-1435 Packing in SI DCs doesn't generate ShipAckMsg to Exeter -->
+</Shipment>

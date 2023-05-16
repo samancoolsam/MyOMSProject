@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DBSchema>
+	<Entities>
+		<Entity ApiNeeded="Y" 
+			Description=""
+			HasHistory="False" Prefix="ACAD" TableName="ACAD_CEVA_ZIP_CODE" XMLName="AcadCevaZipCode">
+			<Attributes>
+					<Attribute ColumnName="POST_CODE" DataType="Text-37" DefaultValue="' '" Description="Primary key for the table"      		Name="PostCode" Nullable="false" XMLGroup="" XMLName="PostCode" />
+					<Attribute ColumnName="COUNTRY_CODE" DataType="Text-37" DefaultValue="' '" Description="Country Code"           		Name="CountryCode" Nullable="false" XMLGroup="" XMLName="CountryCode" />
+					<Attribute ColumnName="POSTAL_CITY_NAME" DataType="Text-37" DefaultValue="' '" Description="City Name"        			Name="PostalCityName" Nullable="false" XMLGroup="" XMLName="PostalCityName" />
+					<Attribute ColumnName="STATE_CODE" DataType="Text-37" DefaultValue="' '" Description="State Code"                		Name="StateCode" Nullable="false" XMLGroup="" XMLName="StateCode" />
+					<Attribute ColumnName="STATE_NAME" DataType="Text-37" DefaultValue="' '" Description="State Name"              			Name="StateName" Nullable="false" XMLGroup="" XMLName="StateName" />
+					<Attribute ColumnName="DELIVERY_ZONE_CODE" DataType="Text-37" DefaultValue="' '" Description="Zone Code"       			Name="DeliveryZoneCode" Nullable="false" XMLGroup="" XMLName="DeliveryZoneCode" />
+					<Attribute ColumnName="AIR_LOC_CODE" DataType="Text-37" DefaultValue="' '" Description="AirLocCode"  					Name="AirLocCode" Nullable="false" XMLGroup="" XMLName="AirLocCode" />
+			    
+					<Attribute ColumnName="CREATETS" DataType="TimeStamp" DefaultValue="sysdate" Description="Create TimeStamp" />
+					<Attribute ColumnName="MODIFYTS" DataType="TimeStamp" DefaultValue="sysdate" Description="Modify TimeStamp" />
+					<Attribute ColumnName="CREATEUSERID" DataType="UserId" DefaultValue="&apos; &apos;" Description="Creating User ID" />
+					<Attribute ColumnName="MODIFYUSERID" DataType="UserId" DefaultValue="&apos; &apos;" Description="Modifying User ID" />
+					<Attribute ColumnName="CREATEPROGID" DataType="ProgramID" DefaultValue="&apos; &apos;" Description="Creating Program ID" />
+					<Attribute ColumnName="MODIFYPROGID" DataType="ProgramID" DefaultValue="&apos; &apos;" Description="Modifying Program ID" />
+					<Attribute ColumnName="LOCKID" DataType="Lockid" DefaultValue="0" Description="Lock ID" />
+			</Attributes>
+			
+			<!-- PrimaryKey is a mandatory attribute in entity definition. This
+				element can have ONLY ONE attribute element -->
+					<PrimaryKey Name="POST_CODE_PK">
+				       <Attribute ColumnName="POST_CODE"
+					    Name="PostCode" />
+			       </PrimaryKey>
+
+		</Entity>
+	</Entities>
+</DBSchema>

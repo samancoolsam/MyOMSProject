@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright 2006-2008, Sterling Commerce, Inc. All rights reserved. -->
+<DBSchema>
+   <Entities>
+      <Entity TableName="YFS_CUSTOMER_CONTACT">
+         <Attributes>
+            <Attribute ColumnName="EXTN_IS_CORPORATE_CUSTOMER" DataType="CorporateCustomerFlag" DecimalDigits="" DefaultValue="N" Description=" " Nullable="true" Type="CHAR" Size="1" XMLName="ExtnIsCorporateCustomer" XMLGroup="Extn" SqlServerDataType="" />
+
+            <Attribute ColumnName="EXTN_REQUIRES_WEBPROFILEID" DataType="RequiresWebprofileIDFlag" DecimalDigits="" DefaultValue="N" Description=" " Nullable="true" Type="CHAR" Size="1" XMLName="ExtnRequiresWebprofileID" XMLGroup="Extn" SqlServerDataType="" />
+
+            <Attribute ColumnName="EXTN_IS_REDLINED" DataType="IsRedLinedFlag" DecimalDigits="" DefaultValue="N" Description=" " Nullable="true" Type="CHAR" Size="1" XMLName="ExtnIsRedLined" XMLGroup="Extn" SqlServerDataType="" />
+<Attribute ColumnName="EXTN_CUST_REDLINE_COUNT" DecimalDigits="0"
+					XMLGroup="Extn"  DataType="UnitPrice" DefaultValue="0"
+					Name="ExtnCustRedLineCount" Nullable="false"
+					XMLName="ExtnCustRedLineCount"
+					Description="ExtnCustRedLineCount Tracking" />
+			<Attribute ColumnName="EXTN_OPT_IN" DataType="IsOptInFlag" DecimalDigits="" DefaultValue="N" Description=" " Nullable="true" Type="CHAR" Size="1" XMLName="ExtnOptIn" XMLGroup="Extn" SqlServerDataType="" />
+			
+         </Attributes>
+         <Indices>
+				<Index Name="ACAD_EMAILID">
+					<Column Name="EMAILID" />
+				</Index>
+		</Indices>
+      </Entity>
+      <Entity TableName="YFS_CUSTOMER">
+         <Attributes>
+<Attribute ColumnName="EXTN_TAX_EXEMPT_ID"
+					DataType="ExtnTaxExemptID" DecimalDigits="" DefaultValue="' '"
+					Description=" " Nullable="true" Type="VARCHAR2" Size="40"
+					XMLName="ExtnTaxExemptID" XMLGroup="Extn"
+					SqlServerDataType="" />
+         </Attributes>
+      </Entity>
+
+      <Entity TableName="YFS_PERSON_INFO">
+         <Attributes>
+            <Attribute ColumnName="EXTN_IS_SIGNATURE_REQURIED" DataType="IsSignatureRequiredFlag" DecimalDigits="" DefaultValue="N" Description=" " Type="CHAR" Nullable="true" Size="1" XMLName="ExtnIsSignatureRequired" XMLGroup="Extn" SqlServerDataType="" />
+
+            <Attribute ColumnName="EXTN_IS_PO_BOX_ADDRESS" DataType="IsPOBOXADDRESSFlag" DecimalDigits="" DefaultValue="N" Description=" " Type="CHAR" Nullable="true" Size="1" XMLName="ExtnIsPOBOXADDRESS" XMLGroup="Extn" SqlServerDataType="" />
+
+            <Attribute ColumnName="EXTN_IS_APO_FPO" DataType="IsAPOFPOFlag" DecimalDigits="" DefaultValue="N" Description=" " Type="CHAR" Nullable="true" Size="1" XMLName="ExtnIsAPOFPO" XMLGroup="Extn" SqlServerDataType="" />
+           
+			<Attribute ColumnName="EXTN_ADDRESS_NICK_NAME" DataType="ExtnAddressNickName" DecimalDigits="" DefaultValue="" Description=" " Type="VARCHAR2" Nullable="true" Size="40" XMLName="ExtnAddressNickName" XMLGroup="Extn" SqlServerDataType="" />
+
+			<Attribute ColumnName="EXTN_IS_ADDRESS_VERIFIED" DataType="ExtnIsAddressVerified" DecimalDigits="" DefaultValue="N" Description=" " Type="CHAR" Nullable="true" Size="1" XMLName="ExtnIsAddressVerified" XMLGroup="Extn" SqlServerDataType="" />
+
+			<Attribute ColumnName="EXTN_IS_MILITARY" DataType="ExtnIsMilitary" DecimalDigits="" DefaultValue="N" Description=" " Type="CHAR" Nullable="true" Size="1" XMLName="ExtnIsMilitary" XMLGroup="Extn" SqlServerDataType="" />
+
+         </Attributes>
+      </Entity>
+
+      <Entity TableName="YFS_ORDER_HEADER">
+         <Attributes>
+            <Attribute ColumnName="EXTN_EXTERNAL_CUSTOMERID" DataType="ExternalCustomerID" DecimalDigits="" DefaultValue="' '" Description=" " Nullable="true" Type="VARCHAR2" Size="40" XMLName="ExtnExternalCustomerID" XMLGroup="Extn" SqlServerDataType="" />
+<Attribute ColumnName="EXTN_IS_WEB_ORDER"
+					DataType="Flag" DefaultValue="'N'" Name="ExtnIsWebOrder"
+					Nullable="true" XMLGroup="Extn" XMLName="ExtnIsWebOrder" />
+            <Attribute ColumnName="EXTN_IS_CORPORATE_CUSTOMER" DataType="ExtnIsCorporateCustomer" DecimalDigits="" DefaultValue="' '" Description=" " Nullable="true" Type="CHAR" Size="1" XMLName="ExtnIsCorporateCustomer" XMLGroup="Extn" SqlServerDataType="" />
+			<!-- Added by Dipanshu for Customer Appeasement. -->
+            <Attribute ColumnName="EXTN_USER_GROUP_NAME" DataType="ExtnUserGroupName" DecimalDigits="" DefaultValue="' '" Description=" " Nullable="true" Type="VARCHAR2" Size="40" XMLName="ExtnUserGroupName" XMLGroup="Extn" SqlServerDataType="" />
+         <Attribute ColumnName="EXTN_TRACKING_NO"
+					DataType="ExtnTrackingNo" DecimalDigits="" DefaultValue="' '"
+					Description=" " Nullable="true" Type="VARCHAR2" Size="40"
+					XMLName="ExtnTrackingNo" XMLGroup="Extn"
+					SqlServerDataType="" />
+		<Attribute ColumnName="EXTN_PRO_NO"
+					DataType="ExtnProNo" DecimalDigits="" DefaultValue="' '"
+					Description=" " Nullable="true" Type="VARCHAR2" Size="40"
+					XMLName="ExtnProNo" XMLGroup="Extn"
+					SqlServerDataType="" />
+		
+					<Attribute ColumnName="EXTN_WEB_FRAUD_CHECK" DataType="ExtnWebFraudCheck" DecimalDigits="" DefaultValue="' '" Description=" " 
+		Nullable="true" Type="VARCHAR2" Size="40" XMLName="ExtnWebFraudCheck" XMLGroup="Extn" SqlServerDataType="" />
+		
+		<!-- Case Insensitive for Oracle Right Now -->
+		
+		<Attribute ColumnName="CUSTOMER_EMAILID" 
+					DataType="EMailID" DecimalDigits="" Name="Customer_Emailid" 
+					DefaultValue="' '" Description="The E-mail ID of the customer." 
+					Nullable="true" Type="VARCHAR2" Size="300" XMLName="CustomerEMailID" 
+					CaseInsensitiveSearch ="Y" ShadowColumnName="CUSTOMER_EMAILID_LC">
+					<UsedForIndexing>
+						<Entity EntityName="Order"/>
+					</UsedForIndexing>
+		</Attribute>
+			
+		<Attribute ColumnName="CUSTOMER_FIRST_NAME" DataType="Text-64"
+                    Description="First name of the customer placing the order."
+                    Name="Customer_First_Name" Nullable="true" XMLName="CustomerFirstName" 
+					DecimalDigits="" DefaultValue="' '" Type="VARCHAR2" Size="64"
+					CaseInsensitiveSearch ="Y" ShadowColumnName="CUSTOMER_FNAME_LC">
+					<UsedForIndexing>
+						<Entity EntityName="Order"/>
+					</UsedForIndexing>
+		</Attribute>					
+					
+        <Attribute ColumnName="CUSTOMER_LAST_NAME" DataType="Text-64"
+                    Description="Last name of the customer placing the order."
+                    Name="Customer_Last_Name" Nullable="true" XMLName="CustomerLastName" 
+					DecimalDigits="" DefaultValue="' '" Type="VARCHAR2" Size="64"
+					CaseInsensitiveSearch ="Y" ShadowColumnName="CUSTOMER_LNAME_LC">
+					<UsedForIndexing>
+						<Entity EntityName="Order"/>
+					</UsedForIndexing>
+		</Attribute> 
+											
+		<!-- Case Insensitive for Oracle Right Now -->	
+		
+         </Attributes>
+         <Indices>
+				<Index Name="ACAD_CUSTID">
+					<Column Name="EXTN_EXTERNAL_CUSTOMERID" />
+				</Index>
+		</Indices>
+      </Entity>
+      
+<Entity TableName="YFS_ORDER_LINE">
+			<Attributes>
+					<Attribute ColumnName="EXTN_RETURN_REASON_CODE"
+					DataType="ExtnReturnReasonCode" DecimalDigits="" DefaultValue="' '"
+					Description=" " Nullable="true" Type="VARCHAR2" Size="40"
+					XMLName="ExtnReturnReasonCode" XMLGroup="Extn"
+					SqlServerDataType="" />
+						</Attributes>
+		</Entity>
+
+	<!-- Start of Change SHIN-1 
+	 Valid Values can be D(Default), S (Shared Inventory), P (Processed), C(Cancelled), B (Backordered), X (All other statuses) -->
+<Entity TableName="YFS_ORDER_RELEASE">
+			<Attributes>
+					<Attribute ColumnName="EXTN_SHARED_INVENTORY" DataType="ExtnSharedInventory" DecimalDigits="" DefaultValue="D" Description="Flag is maintained to identify shared inventory node record" Nullable="false" Type="CHAR" Size="1" XMLName="ExtnSharedInventory" XMLGroup="Extn" SqlServerDataType="" />	
+			</Attributes>
+</Entity>
+	<!-- End of Change SHIN-1  -->
+		
+		<!-- Adding by Veeru. -->
+ <Entity TableName="YFS_SHIPMENT">
+         <Attributes>
+         <Attribute ColumnName="EXTN_GC_ACTIVATION_CODE" DataType="ExtnGCActivationCode" DecimalDigits="" DefaultValue="' '" Description=" " 
+		Nullable="true" Type="VARCHAR2" Size="40" XMLName="ExtnGCActivationCode" XMLGroup="Extn" SqlServerDataType="" />
+       <Attribute ColumnName="EXTN_GC_BULK_ACTIVATION_FLAG" DataType="ExtnGCBulkActivationFlag" DecimalDigits="" DefaultValue="N" Description=" " 
+		Nullable="true" Type="CHAR" Size="1" XMLName="ExtnGCBulkActivationFlag" XMLGroup="Extn" SqlServerDataType="" />
+		
+		 <Attribute ColumnName="EXTN_NONBULK_GC_ACT_STATUS" DataType="ExtnNonBulkGCActStatus" DecimalDigits="" DefaultValue="'ReadyToProcess'" Description=" " 
+		Nullable="true" Type="VARCHAR2" Size="40" XMLName="ExtnNonBulkGCActStatus" XMLGroup="Extn" SqlServerDataType="" />
+		  <Attribute ColumnName="EXTN_BULK_GC_ACTIVATION_STATUS" DataType="ExtnBulkGCActivationStatus" DecimalDigits="" DefaultValue="'ReadyToProcess'" Description="" 
+		Nullable="true" Type="VARCHAR2" Size="40" XMLName="ExtnBulkGCActivationStatus" XMLGroup="Extn" SqlServerDataType="" />
+		
+		<Attribute ColumnName="EXTN_SHIPMENTLINE_CANCELLED" DataType="ExtnLinesCancelled" DecimalDigits="" DefaultValue="N" Description=" " 
+		Nullable="false" Type="CHAR" Size="1" XMLName="ExtnLinesCancelled" XMLGroup="Extn" SqlServerDataType="" />
+		
+		
+<Attribute ColumnName="EXTN_SCAC_PRIORITY" Size="5" Type="NUMBER" Description=""  Nullable="true" XMLName="ExtnSCACPriority" XMLGroup="Extn" SqlServerDataType="" />
+<!-- Start Change for STL-244. -->
+<Attribute ColumnName="EXTN_INVOICE_NO" Size="40" Type="VARCHAR2" Description=""  Nullable="true" XMLName="ExtnInvoiceNo" XMLGroup="Extn" SqlServerDataType="" />
+<!-- End Change for STL-244. -->
+<Attribute ColumnName="EXTN_SOP_ERRORS" Size="50" Type="VARCHAR2" Description="" Nullable="true" XMLName="ExtnSopErrors" XMLGroup="Extn" SqlServerDataType="" />
+              
+<Attribute ColumnName="EXTN_SOP_MODIFYTS" XMLName="ExtnSopModifyts" DataType="TimeStamp" DefaultValue="sysdate" Description="" XMLGroup="Extn" SqlServerDataType=""/>
+		 
+<Attribute ColumnName="EXTN_ORIGINAL_SHIPMENT_SCAC" DataType="ExtnOriginalShipmentScac" DecimalDigits="" DefaultValue="' '" Description=" " Nullable="false" XMLName="ExtnOriginalShipmentScac" XMLGroup="Extn" SqlServerDataType="" />
+<Attribute ColumnName="EXTN_ORIGINAL_SHIPMENT_LOS" DataType="ExtnOriginalShipmentLos" DecimalDigits="" DefaultValue="' '" Description=" "  Nullable="false" XMLName="ExtnOriginalShipmentLos" XMLGroup="Extn" SqlServerDataType="" />
+<Attribute ColumnName="EXTN_SHIP_UPGRD_OR_DOWNGRD" DataType="ExtnShipUpgrdOrDowngrd" DecimalDigits="" DefaultValue="' '" Description=" " Nullable="false" XMLName="ExtnShipUpgrdOrDowngrd" XMLGroup="Extn" SqlServerDataType="" />	
+<!-- Start Change for STL-721. -->
+<Attribute ColumnName="EXTN_OVERRIDE_SHIP_U_OR_D" DataType="ExtnOverrideUOrD" DefaultValue="N" Description="" Nullable="true" XMLName="ExtnOverrideUOrD" XMLGroup="Extn" SqlServerDataType="" /> 
+<!-- End Change for STL-721. -->
+<!-- Start Change for Shared Inventory-STL-947 -->
+<Attribute ColumnName="EXTN_RMS_TRANSFER_NO"
+					 DecimalDigits="0" DefaultValue="' '"
+					Description="Inventory TransferNo for the Shipment" Nullable="true" Type="VARCHAR2" Size="40"
+					XMLName="ExtnRMSTransferNo" XMLGroup="Extn"
+					SqlServerDataType="" />
+
+<Attribute ColumnName="EXTN_EXETER_CONTAINER_ID"
+					 DecimalDigits="0" DefaultValue="' '"
+					Description="ContainerId in Exeter" Nullable="true" Type="VARCHAR2" Size="40"
+					XMLName="ExtnExeterContainerId" XMLGroup="Extn"
+					SqlServerDataType="" />
+<!-- End Change for Shared Inventory-STL-947 -->
+<!-- Start Changes for STL-679 -->
+<Attribute ColumnName="EXTN_SHORTPICK_REASON_CODE" DataType="Text-40" DecimalDigits="" DefaultValue="' '" Description=" " 
+		Nullable="true" XMLName="ExtnShortpickReasonCode" XMLGroup="Extn" SqlServerDataType="" />
+<!-- End Changes for STL-679 -->
+
+<!-- Start Changes for DSA-9 -->
+		<Attribute ColumnName="EXTN_VENDOR_SHIPMENT_NO" DataType="Key" DecimalDigits="" DefaultValue="' '" Description="Extn Vendor Shipment No for Shipment" 
+		Nullable="true" Type="VARCHAR2" Size="40" XMLName="ExtnVendorShipmentNo" XMLGroup="Extn" SqlServerDataType="" />
+<!-- End Changes for DSA-9-->	
+<!-- Start Changes for Alternate Pickup -->
+		<Attribute ColumnName="EXTN_SHIPMENT_PICKED_BY" DataType="Text-10" DecimalDigits="" DefaultValue="' '" Description="Extn Shipemnt Picked up person" 
+		Nullable="true" Type="VARCHAR2" Size="10" XMLName="ExtnShipmentPickedBy" XMLGroup="Extn" SqlServerDataType="" />
+<!-- End Changes for Alternate Pickup-->
+ </Attributes>
+      </Entity>
+		
+		<Entity TableName="YFS_SHIPMENT_LINE">
+         <Attributes>
+            <Attribute ColumnName="EXTN_NONBULK_GC_ACT_STATUS" DataType="ExtnNonBulkGCActStatus" DecimalDigits="" DefaultValue="' '" Description=" " 
+		Nullable="true" Type="VARCHAR2" Size="40" XMLName="ExtnNonBulkGCActStatus" XMLGroup="Extn" SqlServerDataType="" />
+			
+			<!-- Start Changes for WN-2041 Acquisition interface,WN-2042 Disposition interface -->
+			<Attribute ColumnName="EXTN_SOF_RDY_FOR_CUSTPICK_QTY" DataType="Quantity" DefaultValue="0" Description="Extn SOF Ready for Customer Pick Quantity" Nullable="false" XMLName="ExtnSOFRdyForCustPickQty" XMLGroup="Extn" /> 
+			<Attribute ColumnName="EXTN_SOF_CUST_PICKED_QTY" DataType="Quantity" DefaultValue="0" Description="Extn SOF Customer Picked Quantity" Nullable="false" XMLName="ExtnSOFCustPickedQty" XMLGroup="Extn" /> 
+			<Attribute ColumnName="EXTN_SOF_CANCELED_QTY" DataType="Quantity" DefaultValue="0" Description="Extn SOF Canceled Quantity" Nullable="false" XMLName="ExtnSOFCanceledQty" XMLGroup="Extn" /> 
+			<!-- END Changes for WN-2041 Acquisition interface,WN-2042 Disposition interface -->
+			
+		 </Attributes>
+      </Entity>
+      
+		
+      <Entity TableName="YFS_INSTRUCTION_DETAIL">
+         <Attributes>
+            <Attribute ColumnName="EXTN_INSTURCTION_NAME" DataType="InstructionName" DecimalDigits="" DefaultValue="' '" Description=" " Nullable="true" Type="VARCHAR2" Size="40" XMLName="ExtnInstructionName" XMLGroup="Extn" SqlServerDataType="" />
+         </Attributes>
+      </Entity>
+
+		<Entity TableName="YFS_INBOX">
+			<Attributes>
+			   <Attribute ColumnName="EXTN_ALERT_KEY" DataType="ExtnAlertKey" DecimalDigits="" DefaultValue="' '" Description=" " Nullable="true" Type="VARCHAR2" Size="20" XMLName="ExtnAlertKey" XMLGroup="Extn" SqlServerDataType="" />
+			   <Attribute ColumnName="EXTN_ASSOCIATED_CUST_ID" DataType="ExtnAssociatedCustID" DecimalDigits="" DefaultValue="' '" Description=" " Nullable="true" Type="VARCHAR2" Size="40" XMLName="ExtnAssociatedCustID" XMLGroup="Extn" SqlServerDataType="" />
+			   <Attribute ColumnName="EXTN_ORDER_TOTAL" DataType="ExtnOrderTotal" Description=" " Nullable="true" XMLName="ExtnOrderTotal" XMLGroup="Extn" SqlServerDataType="" />
+			<Attribute ColumnName="EXTN_CUSTOMERKEY" DataType="ExtnCustomerKey" DecimalDigits="" DefaultValue="' '" Description=" " Nullable="true" Type="CHAR" Size="24" XMLName="ExtnCustomerKey" XMLGroup="Extn" SqlServerDataType="" />
+			<Attribute ColumnName="EXTN_CUSTOMER_EMAILID" DataType="ExtnCustomerEmailID" DecimalDigits="" DefaultValue="' '" Description=" " Nullable="true" Type="VARCHAR2" Size="150" XMLName="ExtnCustomerEmailID" XMLGroup="Extn" SqlServerDataType="" />
+			<Attribute ColumnName="EXTN_CUSTOMER_FNAME" DataType="ExtnCustomerFName" DecimalDigits="" DefaultValue="' '" Description=" " Nullable="true" Type="VARCHAR2" Size="40" XMLName="ExtnCustomerFName" XMLGroup="Extn" SqlServerDataType="" />
+			<Attribute ColumnName="EXTN_CUSTOMER_LNAME" DataType="ExtnCustomerLName" DecimalDigits="" DefaultValue="' '" Description=" " Nullable="true" Type="VARCHAR2" Size="40" XMLName="ExtnCustomerLName" XMLGroup="Extn" SqlServerDataType="" />
+			<Attribute ColumnName="EXTN_NONCC_EXPN_TYPE" DataType="ExtnNonCCExceptionType" DecimalDigits="" DefaultValue="N" Description=" " Nullable="false" Type="CHAR" Size="1" XMLName="ExtnNonCCExceptionType" XMLGroup="Extn" SqlServerDataType="" />
+			<Attribute ColumnName="EXTN_CLOSED_ALERT" DataType="ExtnClosedAlert" DecimalDigits="" DefaultValue="N" Description=" " Nullable="true" Type="CHAR" Size="20" XMLName="ExtnClosedAlert" XMLGroup="Extn" SqlServerDataType="" />
+			</Attributes>
+			<Indices>
+				<Index Name="ACAD_ALERTKEY">
+					<Column Name="EXTN_ALERT_KEY" />
+				</Index>
+				<Index Name="ACAD_ORDERTOTAL">
+					<Column Name="EXTN_ORDER_TOTAL" />
+				</Index>
+				<Index Name="ACAD_NONCCEXPNTYPE">
+					<Column Name="EXTN_NONCC_EXPN_TYPE" />
+				</Index>
+				<Index Name="ACAD_EXPNTYPE">
+					<Column Name="EXCEPTION_TYPE" />
+				</Index>
+				<Index Name="ACAD_GENERATEDON">
+					<Column Name="GENERATED_ON" />
+				</Index>
+			</Indices>
+		</Entity>
+
+        <Sequence Name="SEQ_EXTN_ALERT_KEY" 
+               Increment="1" Startwith="1" 
+               Maxvalue="99999999" Minvalue="1" Cachesize="10">
+		</Sequence>
+
+   </Entities>
+</DBSchema>

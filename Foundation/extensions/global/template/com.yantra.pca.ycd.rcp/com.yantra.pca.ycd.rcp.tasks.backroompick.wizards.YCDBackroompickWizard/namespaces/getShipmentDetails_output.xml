@@ -1,0 +1,13 @@
+<Shipment CarrierServiceCode="" DocumentType="" EnterpriseCode="" OrderNo="" ShipNode="" SCAC=""  SellerOrganizationCode="" ShipmentNo="" ShipmentKey="" ShipDate="" Createts="" Status="" ShipmentType="">
+	<ToAddress/>
+   	<ShipmentLines TotalNumberOfRecords="">
+		<!-- OMNI-6615 : Attributes ShipToCustomerId and ReceivingNode were added-->
+		<ShipmentLine DocumentType="" ItemDesc="" ItemID="" OrderHeaderKey="" OrderLineKey="" OrderNo="" Quantity="" ReceivedQuantity="" ShipmentKey="" ShipmentLineKey="" 	ShortageQty="" BackroomPickedQuantity="" UnitOfMeasure="" ProductClass="" ShipToCustomerId="" >
+		<!--  OMNI-6616 : FulfillmentType and LineType were added -->
+		<OrderLine OrderHeaderKey="" OrderLineKey="" OrderedQty="" Status="" StatusQuantity="" ReceivingNode="" FulfillmentType="" LineType="">
+			<Item ItemDesc="" ItemID="" ItemShortDesc="" ProductClass="" ProductLine="" UnitOfMeasure=""></Item>
+		</OrderLine>
+		</ShipmentLine>
+	</ShipmentLines>
+	<Extn ExtnExeterContainerId="" ExtnInvoiceNo=""/>
+</Shipment>

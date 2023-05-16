@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Controller
+    className="com.sterlingcommerce.ui.web.platform.controller.SCUIXAPIMashupController"
+    controllerId="extn.components.batch.batchpick.scanlist.BatchLineDetailsExtnBehaviorController"
+    requestMethodSupported="POST" screenId="extn.components.batch.batchpick.scanlist.BatchLineDetailsExtn">
+    <!--OMNI:66083 - START -->
+     <MashupRefs>
+        <MashupRef extnType="ADD"
+            mashupId="extn_getFlagToDisableAddQtyAndReadOnlyScannedQty"
+            mashupRefId="extn_getFlagToDisableAddQtyAndReadOnlyScannedQty" permissionId=""/>
+    </MashupRefs>
+    <!--OMNI:66083 - END -->
+</Controller>

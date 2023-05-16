@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright 2006-2008, Sterling Commerce, Inc. All rights reserved. -->
+<DBSchema>
+   <Entities>        
+      <Entity TableName="EXTN_STORE_ITEM_PICK_QTY_VW" EntityType="VIEW" ApiNeeded="Y" AuditRequired="N" Description="" Prefix="EXTN" HasHistory="false" View="true" XMLName="StoreItemPickQuantity">
+        <Attributes>
+			<Attribute ColumnName="SHIP_NODE"  DataType="ShipNode" DefaultValue="' '" Description="" Nullable="False" XMLName="ShipNode" />
+			<Attribute ColumnName="ITEM_ID"  DataType="ItemID" DefaultValue="' '" Description="" Nullable="False" XMLName="ItemID" />
+			<Attribute ColumnName="QUANTITY"  DataType="Quantity" DefaultValue="0" Description="" Nullable="False" XMLName="Quantity" />
+			<Attribute ColumnName="IMAGE_URL"  DataType="Text-2048" DefaultValue="' '" Description="" Nullable="true" XMLName="ItemImageUrl" />
+			<Attribute ColumnName="SHORT_DESCRIPTION"  DataType="Text-100" DefaultValue="' '" Description="" Nullable="true" XMLName="Description" />
+			<Attribute ColumnName="PICKTICKET_NO"  DataType="ID-24" DefaultValue="' '" Description="" Nullable="true" XMLName="PickticketNo" />
+			<Attribute ColumnName="LONG_SKU"  DataType="ID-24" DefaultValue="' '" Description="" Nullable="true" XMLName="LongSku" />
+			<Attribute ColumnName="POG_ID"  DataType="Text-100" DefaultValue="' '" Description="" Nullable="true" XMLName="PogId" />
+			<Attribute ColumnName="DEPARTMENT"  DataType="Text-100" DefaultValue="' '" Description="" Nullable="true" XMLName="Department" />
+			<Attribute ColumnName="SECTION"  DataType="Text-100" DefaultValue="' '" Description="" Nullable="true" XMLName="Section" />
+			<Attribute ColumnName="POG_NUMBER"  DataType="Text-100" DefaultValue="' '" Description="" Nullable="true" XMLName="PogNumber" />
+			<Attribute ColumnName="LIVE_DATE"  DataType="TimeStamp" DefaultValue="' '" Description="" Nullable="true" XMLName="LiveDate" />
+	</Attributes>
+	<PrimaryKey Name="TABLE_KEY_PK">
+		<Attribute ColumnName="SHIP_NODE" />
+		<Attribute ColumnName="ITEM_ID" />
+	</PrimaryKey>
+ </Entity>
+</Entities>
+</DBSchema>

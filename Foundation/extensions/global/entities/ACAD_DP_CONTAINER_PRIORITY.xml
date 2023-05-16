@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DBSchema>
+	<Entities>
+		<Entity ApiNeeded="Y" 	Description=""	HasHistory="False" Prefix="ACAD" TableName="ACAD_DP_CONTAINER_PRIORITY" XMLName="AcadDPContainerPriority">
+			<Attributes>
+				<Attribute ColumnName="DP_CONTAINER_PRIORITY_KEY" Size="40" DataType="Key" DefaultValue="' '" Description="Primary key for the 	table" Name="DPContainerPriorityKey" Nullable="false" XMLGroup="" XMLName="DPContainerPriorityKey" />				
+				<Attribute ColumnName="CONTAINER" DataType="Text-40" DefaultValue="' '" Description="Container"      		Name="Container" Nullable="false" XMLGroup="" XMLName="Container" />
+				<Attribute ColumnName="PRIORITY" DataType="Text-40" DefaultValue="' '" Description="Priority"      		Name="Priority" Nullable="false" XMLGroup="" XMLName="Priority" />				
+				<Attribute ColumnName="CREATETS" DataType="TimeStamp" DefaultValue="sysdate" Description="Create TimeStamp" />
+				<Attribute ColumnName="MODIFYTS" DataType="TimeStamp" DefaultValue="sysdate" Description="Modify TimeStamp" />
+				<Attribute ColumnName="CREATEUSERID" DataType="UserId" DefaultValue="&apos; &apos;" Description="Creating User ID" />
+				<Attribute ColumnName="MODIFYUSERID" DataType="UserId" DefaultValue="&apos; &apos;" Description="Modifying User ID" />
+				<Attribute ColumnName="CREATEPROGID" DataType="ProgramID" DefaultValue="&apos; &apos;" Description="Creating Program ID" />
+				<Attribute ColumnName="MODIFYPROGID" DataType="ProgramID" DefaultValue="&apos; &apos;" Description="Modifying Program ID" />
+				<Attribute ColumnName="LOCKID" DataType="Lockid" DefaultValue="0" Description="Lock ID" />
+			</Attributes>
+			<!-- PrimaryKey is a mandatory attribute in entity definition. This	element can have ONLY ONE attribute element -->
+			<PrimaryKey Name="ACAD_DP_CON_PK">
+				<Attribute ColumnName="DP_CONTAINER_PRIORITY_KEY" Name="DPContainerPriorityKey" />							
+			</PrimaryKey>
+			<Indices>
+				<Index Name="IND_CONTNR" Unique="True">
+					<Column Name="CONTAINER" />					
+				</Index>
+			</Indices>
+		</Entity>
+	</Entities>
+</DBSchema>

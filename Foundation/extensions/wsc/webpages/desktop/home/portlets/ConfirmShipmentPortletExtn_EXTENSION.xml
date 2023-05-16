@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExtensionMetaData>
+    <ScreenExtension extnClassName="ConfirmShipmentPortletExtn"
+        extnPackage="extn.desktop.home.portlets"
+        originalScreen="wsc.desktop.home.portlets.ConfirmShipmentPortlet"
+        originalScreenPackage="wsc.desktop.home.portlets" type="diffrential">
+        <Items>
+            <Label _sc_extensibility_operation="change"
+                _sc_extensibility_referenceUId="portletName" value="$(_scSimpleBundle:extn_View_)"/>
+        </Items>
+    </ScreenExtension>
+</ExtensionMetaData>

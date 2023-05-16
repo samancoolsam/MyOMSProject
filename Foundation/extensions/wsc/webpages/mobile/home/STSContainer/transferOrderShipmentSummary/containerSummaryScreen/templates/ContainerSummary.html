@@ -1,0 +1,563 @@
+<div class="sc-platform-screen-default containerSummary">
+    <div data-dojo-type="idx/layout/ContentPane" data-dojo-props="		spanLabel : true , 
+		'class' : 'screen containerpackcontainerlist' , 
+		colspan : 1 , 
+		uId : 'cp_ContainerDetails'  
+ ">        
+        <div data-dojo-type="idx/layout/ContentPane" data-dojo-props="		'class' : 'containerDetails' , 
+		uId : 'primaryInfo'  
+ ">
+ 
+ <!--OMNI-101512--START-->
+ 
+  <div data-dojo-type="sc/plat/dojo/widgets/DataLabel" data-dojo-props="		spanLabel : true , 
+		'class' : 'hashNumberAlign autoLabelZeroWidth blockComponent comappsWrapWord' , 
+		uId : 'lbl_TrackingNo' , 
+		style : 'display: inline-block;'
+ 		,scParamDataFn :
+		 function() { 
+			return { 
+			 	label : 			this.getSimpleBundleString('extn_Label_TOTrackingNo')
+,	
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 path : 			''
+,
+		 namespace : 			'container_Src'
+	}
+	}
+			}
+		}
+"></div>
+ <!--OMNI-101512--END-->
+  <div data-dojo-type="idx/layout/ContentPane" data-dojo-props="		'class' : 'containerDetails' , 
+		uId : 'primaryInfo'  
+ ">
+ 
+ <div data-dojo-type="sc/plat/dojo/widgets/DataLabel" data-dojo-props="		spanLabel : true , 
+		'class' : 'hashNumberAlign autoLabelZeroWidth blockComponent comappsWrapWord' , 
+		uId : 'lbl_ContainerNo' , 
+		style:'display: inline-block; padding-top:10px;'
+ 		,scParamDataFn :
+		 function() { 
+			return { 
+			 	label : 			this.getSimpleBundleString('extn_Label_TOContainerID')
+,	
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 path : 			'Container.ContainerNo'
+,
+		 namespace : 			'container_Src'
+	}
+	}
+			}
+		}
+"></div>
+<!--OMNI-6360,6361,71645: Start-->
+<div>
+<div data-dojo-type="dijit/form/Button" data-dojo-props="		spanLabel : true ,	 				
+	 	uId : 'extn_btnCancel' , 		
+		'class' : 'buttonConnect idxSpecialButton' , 
+		style : 'display: inline-block; float:right; padding-right:5px; padding-top:10px;',
+		showLabel : true , 			
+ 		scParamDataFn :
+		 function() { 
+			return { 
+			
+			 	label : 			this.getSimpleBundleString('extn_Cancel')
+			}
+		}
+	 		">
+</div>	
+<!-- OMNI-101574 - STS Shipments: Display shipped on date for STS shipments (TC70) - Start -->
+<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" data-dojo-props="		spanLabel : true , 
+		'class' : 'hashNumberAlign autoLabelZeroWidth blockComponent comappsWrapWord' , 
+		uId : 'lbl_ShippedOn' , 
+		style:'display: block; padding-top:10px;'
+ 		,scParamDataFn :
+		 function() { 
+			return { 
+			 	label : 			this.getSimpleBundleString('extn_Label_ShippedOn')
+,	
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 path : 			''
+,
+		 namespace : 			'container_Src'
+	}
+	}
+			}
+		}
+"></div>
+<!-- OMNI-101574 - STS Shipments: Display shipped on date for STS shipments (TC70) - End -->
+<!-- OMNI-106224 - STS Shipments: Display "Shipped From" on container summary page - Start -->
+<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" data-dojo-props="		spanLabel : true , 
+		'class' : 'hashNumberAlign autoLabelZeroWidth blockComponent comappsWrapWord' , 
+		uId : 'lbl_ShippedFrom' , 
+		style:'display: block; padding-top:10px;'
+ 		,scParamDataFn :
+		 function() { 
+			return { 
+			 	label : 			this.getSimpleBundleString('extn_Label_ShippedFrom')
+,	
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 path : 			''
+,
+		 namespace : 			'container_Src'
+	}
+	}
+			}
+		}
+"></div>
+<!-- OMNI-106224 - STS Shipments: Display "Shipped From" on container summary page - End -->
+<!--OMNI-101571 - Start -->
+<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" data-dojo-props="		spanLabel : true , 
+		'class' : 'hashNumberAlign autoLabelZeroWidth blockComponent comappsWrapWord' , 
+		uId : 'lbl_TrackingStatus' , 
+		style : 'display: inline-block;padding-top:10px;'
+ 		,scParamDataFn :
+		 function() { 
+			return { 
+			 	label : 			this.getSimpleBundleString('extn_Label_TODeliveryStatus')
+,	
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 path : 			''
+,
+		 namespace : 			'container_Src'
+	}
+	}
+			}
+		}
+"></div>
+<!--OMNI-101571 - End -->
+<!--OMNI-6360,6361: End-->
+<!--OMNI-68038: Start-->
+ <div data-dojo-type="sc/plat/dojo/widgets/DataLabel" data-dojo-props="		spanLabel : true , 
+		'class' : 'hashNumberAlign autoLabelZeroWidth blockComponent comappsWrapWord' , 
+		uId : 'lbl_LostReasonCode' ,
+		style : 'display: inline-block; float:right; padding-right:40px; padding-top:10px;' , 	
+ 		scParamDataFn :
+		 function() { 
+			return { 
+			 	 	bindingData : 	{
+		 sourceBinding : 	{
+		 path : 			'Container.AstraCode'
+,
+		 namespace : 			'container_Src'
+	}
+	}
+			}
+	}
+"></div>
+<div  data-dojo-type="idx/form/FilteringSelect" 
+	 					data-dojo-props=" highlightMatch : 'false', spanClass : true , 
+		'class' : 'autoLabelZeroWidth nonEditable' , 
+		renderHidden : false ,
+		autoComplete : true , 
+		uId : 'extn_LostReasonCode' , 
+		style : 'display: inline-block; float:right; padding-right:15px; padding-top:10px;' , 		
+		required : false, 
+		scParamDataFn :
+		 function() { 
+			return { 
+			 	bindingData : 	{
+					optionsBinding : 
+					{
+						addEmptyOption : true,
+						path : 	'CommonCodeList.CommonCode',
+						namespace : 'getLostContainerList_ns',
+						descriptionField : 	'CodeShortDescription',
+						valueField :'CodeShortDescription',
+						emptyOptionValue : '',
+						emptyOptionDesc : ''
+					},
+					targetBinding : 
+					{
+						path : 	'CommonCode.Reason',
+						namespace : 'getLostContainerRsn_output_ns'
+					},
+					
+				},	
+				
+			}
+			}
+			
+		
+		">
+</div>
+</div>
+<!--OMNI-68038,71645: End-->
+<!-- style:'float:right;padding-right: 20px !important'  -->
+ <div data-dojo-type="sc/plat/dojo/widgets/DataLabel" data-dojo-props="		spanLabel : true , 
+		'class' : 'hashNumberAlign autoLabelZeroWidth blockComponent comappsWrapWord' , 
+		uId : 'lbl_isReceived' ,
+		style:'display: inline-block; padding-left:240px !important; padding-top:10px;' 
+ 		,scParamDataFn :
+		 function() { 
+			return { 
+			 	label : 			this.getSimpleBundleString('extn_Received')
+,	
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 path : 			'Container.IsReceived'
+,
+		 namespace : 			'container_Src'
+	}
+	}
+			}
+		}
+"></div>
+
+  <div data-dojo-type="idx/layout/ContentPane" data-dojo-props="		'class' : 'containerDetails' , 
+		uId : 'primaryInfo'  
+ ">
+            <div data-dojo-type="sc/plat/dojo/widgets/DataLabel" data-dojo-props="		spanLabel : true , 
+		'class' : 'extn_ContainerNC hashNumberAlign autoLabelZeroWidth blockComponent comappsWrapWord' , 
+		uId : 'lbl_ContainerNo1' , 
+		style:'display: inline-block; padding-top:10px;'
+ 		,scParamDataFn :
+		 function() { 
+			return { 
+			 	label : 			this.getSimpleBundleString('extn_Label_TOContainerID')
+,	
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 path : 			'Container.ContainerNo'
+,
+		 namespace : 			'container_Src'
+	}
+	}
+			}
+		}
+"></div>
+ <div data-dojo-type="sc/plat/dojo/widgets/DataLabel" data-dojo-props="		spanLabel : true , 
+		'class' : 'extn_ReceivedNC hashNumberAlign autoLabelZeroWidth blockComponent comappsWrapWord' , 
+		uId : 'lbl_isReceived_NC' ,
+		style:'display: inline-block; padding-top:10px; padding-left: 73px !important' 
+ 		,scParamDataFn :
+		 function() { 
+			return { 
+			 	label : 			this.getSimpleBundleString('extn_Received')
+,	
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 path : 			'Container.IsReceived'
+,
+		 namespace : 			'container_Src'
+	}
+	}
+			}
+		}
+"></div>
+<!-- OMNI-9190  STS Order Search - Container Status - START -->
+ <div data-dojo-type="sc/plat/dojo/widgets/DataLabel" data-dojo-props="		spanLabel : true , 
+		'class' : 'extn_ReceivedNC hashNumberAlign autoLabelZeroWidth blockComponent comappsWrapWord' , 
+		uId : 'lbl_isReceived_NC1' ,
+		style:'display: inline-block; padding-left: 87px !important' 
+ 		,scParamDataFn :
+		 function() { 
+			return { 
+			 	label : 			this.getSimpleBundleString('extn_Received')
+,	
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 path : 			'Container.IsReceived'
+,
+		 namespace : 			'container_Src'
+	}
+	}
+			}
+		}
+"></div>
+<!-- OMNI-9190  STS Order Search - Container Status - END -->
+
+<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" data-dojo-props="		spanLabel : true , 
+		'class' : 'extn_ContainerNC extn_ContainerCncldLbl hashNumberAlign autoLabelZeroWidth blockComponent comappsWrapWord' , 
+		uId : 'lbl_ContainerCancelled' , 
+		style:'display: inline-block; '
+ 		,scParamDataFn :
+		 function() { 
+			return { 
+			 	label : 			this.getSimpleBundleString('extn_ContainerCncld')
+,	
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 path : 			''
+,
+		 namespace : 			'container_Src'
+	}
+	}
+			}
+		}
+"></div>
+ <div data-dojo-type="sc/plat/dojo/widgets/DataLabel" data-dojo-props="		spanLabel : true , 
+		'class' : 'hashNumberAlign autoLabelZeroWidth blockComponent comappsWrapWord' , 
+		uId : 'lbl_stagingLoc' ,
+		style:'display: inline-block; padding-left:240px !important' 
+ 		,scParamDataFn :
+		 function() { 
+			return { 
+			 	label : 			this.getSimpleBundleString('extn_StagingLoc')
+,	
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 path : 			'Container.Zone'
+,
+		 namespace : 			'container_Src'
+	}
+	}
+			}
+		}
+"></div>
+ <div data-dojo-type="sc/plat/dojo/widgets/DataLabel" data-dojo-props="		spanLabel : true , 
+		'class' : 'hashNumberAlign autoLabelZeroWidth blockComponent comappsWrapWord' , 
+		uId : 'lbl_stagingLocLostCancel' ,
+		style:'display: inline-block; padding-left:95px !important' 
+ 		,scParamDataFn :
+		 function() { 
+			return { 
+			 	label : 			this.getSimpleBundleString('extn_StagingLoc')
+,	
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 path : 			''
+,
+		 namespace : 			'container_Src'
+	}
+	}
+			}
+		}
+"></div>
+ <div data-dojo-type="sc/plat/dojo/widgets/DataLabel" data-dojo-props="		spanLabel : true , 
+		'class' : 'hashNumberAlign autoLabelZeroWidth blockComponent comappsWrapWord' , 
+		uId : 'lbl_stagingLocLost' ,
+		style:'display: inline-block; padding-left:240px !important' 
+ 		,scParamDataFn :
+		 function() { 
+			return { 
+			 	label : 			this.getSimpleBundleString('extn_StagingLoc')
+,	
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 path : 			''
+,
+		 namespace : 			'container_Src'
+	}
+	}
+			}
+		}
+"></div>
+<!--
+ <div data-dojo-type="sc/plat/dojo/widgets/DataLabel" data-dojo-props="		spanLabel : true , 
+		'class' : 'hashNumberAlign autoLabelZeroWidth blockComponent comappsWrapWord' , 
+		uId : 'lbl_PackedON' , 
+		style:'display: inline-block; width:100% !important;'
+ 		,scParamDataFn :
+		 function() { 
+			return { 
+			 	label : 			this.getSimpleBundleString('Packed On:')
+,	
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 path : 			'Container.ContainerNo1'
+,
+		 namespace : 			'container_Src'
+	}
+	}
+			}
+		}
+"></div>
+ <div data-dojo-type="sc/plat/dojo/widgets/DataLabel" data-dojo-props="		spanLabel : true , 
+		'class' : 'hashNumberAlign autoLabelZeroWidth blockComponent comappsWrapWord' , 
+		uId :'lbl_ExpectedOn' , 
+		style:'display: inline-block; width:100% !important;'
+ 		,scParamDataFn :
+		 function() { 
+			return { 
+			 	label : 			this.getSimpleBundleString('Expected On:')
+,	
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 path : 			'Container.ContainerNo1'
+,
+		 namespace : 			'container_Src'
+	}
+	}
+			}
+		}
+"></div>
+
+ <div data-dojo-type="sc/plat/dojo/widgets/DataLabel" data-dojo-props="		spanLabel : true , 
+		'class' : 'hashNumberAlign autoLabelZeroWidth blockComponent comappsWrapWord' , 
+		uId :'lbl_ReceivedOn' , 
+		style:'display: inline-block; width:100% !important;'
+ 		,scParamDataFn :
+		 function() { 
+			return { 
+			 	label : 			this.getSimpleBundleString('Received On:')
+,	
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 path : 			'Container.ContainerNo1'
+,
+		 namespace : 			'container_Src'
+	}
+	}
+			}
+		}
+"></div>
+ <div data-dojo-type="sc/plat/dojo/widgets/DataLabel" data-dojo-props="		spanLabel : true , 
+		'class' : 'groupHeader hashNumberAlign autoLabelZeroWidth blockComponent comappsWrapWord' , 
+		uId :'lbl_StagingLoc' , 
+		style:'display: inline-block; width:200px !important;'
+ 		,scParamDataFn :
+		 function() { 
+			return { 
+			 	label : 			this.getSimpleBundleString('Staging Loc:')
+,	
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 path : 			'Container.ContainerNo1'
+,
+		 namespace : 			'container_Src'
+	}
+	}
+			}
+		}
+"></div>
+ <div data-dojo-type="sc/plat/dojo/widgets/DataLabel" data-dojo-props="		spanLabel : true , 
+		'class' : 'hashNumberAlign autoLabelZeroWidth blockComponent comappsWrapWord' , 
+		uId : 'lbl_isStaged' ,
+		style:'float:right;padding-right: 20px !important' 
+ 		,scParamDataFn :
+		 function() { 
+			return { 
+			 	label : 			this.getSimpleBundleString('Staged:')
+,	
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 path : 			'Container.IsReceived1'
+,
+		 namespace : 			'container_Src'
+	}
+	}
+			}
+		}
+"></div> -->
+           
+ <!-- OMNI-71679 - Editable Staging Location - Start -->
+<div style="padding:15px;" id="editStagingLoc">
+<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" data-dojo-props="
+		'class' : 'hashNumberAlign autoLabelZeroWidth blockComponent comappsWrapWord' , 
+		uId : 'lbl_stagingLocEdit' ,
+		style:'display: inline-block;' 
+ 		,scParamDataFn :
+		 function() { 
+			return { 
+			 	label : 			this.getSimpleBundleString('extn_StagingLoc'),	
+			}
+		}
+"></div>
+ <div data-dojo-type="idx/form/TextBox" data-dojo-props="		spanLabel : true , 
+		'class' : 'autoLabelZeroWidth' , 
+		regExp : '[^,][^,]*' , 
+		uId : 'txt_assignStagingLoc' ,
+		style : 'display: inline-block;' ,  
+ 		scParamDataFn :
+		 function() { 
+			return { 
+			 	hint : 			this.getSimpleBundleString('extn_Enter_Staging_Loc1')
+,	
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 path : 			'Container.Zone'
+,
+		 namespace : 			'container_Src'
+	}
+,
+		 targetBinding : 	[
+	 		{
+		 path : 			'HoldLocation'
+,
+		 namespace : 			'HoldLocation_Add_staging'
+	}
+	]
+	}
+,	
+			 	invalidMessage : 			this.getSimpleBundleString('Message_InvalidHoldLocationText')
+			}
+		}
+"></div>
+   <div data-dojo-type="dijit/form/Button" data-dojo-props="		spanLabel : true , 
+		'class' : 'idxSpecialButton' , 
+		showLabel : true , 
+		uId : 'btn_editStagingButton'  ,
+		style : 'display: inline-block; padding:10px;' , 
+ 		scParamDataFn :
+		 function() { 
+			return { 
+			 	'aria-label' : 			this.getSimpleBundleString('ariaAction_Edit')
+,	
+			 	label : 			this.getSimpleBundleString('Action_Edit')
+			}
+		}
+"></div>
+ <div data-dojo-type="dijit/form/Button" data-dojo-props="		spanLabel : true , 
+		'class' : 'idxSpecialButton' , 
+		showLabel : true , 
+		uId : 'btn_updateStagingButton'  ,
+		style : 'display: inline-block;' , 
+ 		scParamDataFn :
+		 function() { 
+			return { 
+			 	'aria-label' : 			this.getSimpleBundleString('ariaAction_Update')
+,	
+			 	label : 			this.getSimpleBundleString('Action_Update')
+			}
+		}
+"></div>
+</div>
+<!-- OMNI-71679 - Editable Staging Location - End -->   
+   <div data-dojo-type="idx/layout/TitlePane" data-dojo-props="		open : false , 
+		spanLabel : true , 
+		'class' : 'collapsablePane boxLayout repeatingContent containerList extn_NoProductBorder' ,  
+		uId : 'extn_Products' ,
+		toggleable : true , 
+		style : 'width:100% ! important' 
+ 		,scParamDataFn :
+		 function() { 
+			return { 
+			 	'aria-label' : 			this.getSimpleBundleString('Title_Products')
+,	
+			 	title : 			this.getSimpleBundleString('Title_Products')
+			}
+		}
+" role='region'>
+                <div data-dojo-type="idx/layout/ContentPane" data-dojo-props="		'class' : 'repeatingpanel' , 
+		uId : 'extn_ProductsCP'  
+ 		,scParamDataFn :
+		 function() { 
+			return { 
+ 	bindingData : 	{
+		 repeatingscreenID : 			'extn.mobile.home.STSContainer.transferOrderShipmentSummary.containerProductsDetailsScreen.ContainerProductDetails'
+,
+		 repeatingScreen : 	{
+		 repeatingscreenpath : 			'ContainerDetail'
+,
+		 path : 			'Container.ContainerDetails.ContainerDetail'
+,
+		 repeatingnamespace : 			'containerDetail_Src'
+,
+		 sourcenamespace : 			'container_Src'
+	}
+	}
+			}
+			}
+		
+"></div>
+         
+    </div>
+</div>
+</div>

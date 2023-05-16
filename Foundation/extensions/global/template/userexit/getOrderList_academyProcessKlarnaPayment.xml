@@ -1,0 +1,28 @@
+<OrderList>
+	<Order MaxOrderStatus="" MinOrderStatus="" OrderHeaderKey="" OrderNo="">
+		<OrderLines>
+			<OrderLine MinLineStatus="" MaxLineStatus="" />
+		</OrderLines>
+		<ChargeTransactionDetails
+			RemainingAmountToAuth="" AdditionalExpectedAuthorizations=""
+			TotalCredits="" TotalDebits="" TotalOpenAuthorizations=""
+			TotalOpenBookings="" TotalTransferredIn="" TotalTransferredOut="">
+			<ChargeTransactionDetail AuthorizationID=""
+				ChargeTransactionKey="" ChargeType="" PaymentKey="" RequestAmount=""
+				SettledAmount="" Status="">
+				<CreditCardTransactions>
+					<CreditCardTransaction AuthAmount=""
+						AuthCode="" AuthReturnCode="" AuthReturnMessage="" RequestId=""
+						TranReturnMessage="" />
+				</CreditCardTransactions>
+				<PaymentTransactionErrorList>
+					<PaymentTransactionError />
+				</PaymentTransactionErrorList>
+				<PaymentMethod DisplayCreditCardNo="" />
+			</ChargeTransactionDetail>
+		</ChargeTransactionDetails>
+		<References>
+			<Reference Name="" Value="" />
+		</References>
+	</Order>
+</OrderList>

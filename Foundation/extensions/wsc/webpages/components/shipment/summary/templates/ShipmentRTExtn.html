@@ -1,0 +1,288 @@
+		<div>
+		 	<div data-dojo-type="sc/plat/dojo/widgets/Link" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								renderHidden : true , 
+		_sc_extensibility_operation : 'change' , 
+		disabled : true , 
+		_sc_extensibility_referenceUId : 'lnk_RT_PrintPickTicket'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/Link" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								_sc_extensibility_operation : 'change' , 
+		_sc_extensibility_referenceUId : 'lnk_RT_RecordCustomerPick'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/Link" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								_sc_extensibility_operation : 'change' , 
+		_sc_extensibility_referenceUId : 'lnk_RT_PrintPackSlip'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	value : 			this.getSimpleBundleString('Action_PrintPackSlip')
+			}
+		}
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/Link" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'lnk_RT_PrintPackSlip' , 
+		_sc_extensibility_operation : 'move' , 
+		_sc_extensibility_moveOrder : '6' , 
+		_sc_extensibility_position : 'after' , 
+		_sc_extensibility_referenceUId : 'lnk_RT_UnpackShipment'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/Link" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								renderHidden : true , 
+		uId : 'extn_printOrderTicketLink' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '1' , 
+		'class' : 'relatedTaskLink' , 
+		_sc_extensibility_position : 'after' , 
+		disabled : true , 
+		_sc_extensibility_referenceUId : 'lnk_RT_UnpackShipment'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	value : 			this.getSimpleBundleString('extn_Print_Order_Ticket')
+			}
+		}
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/Link" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								renderHidden : false , 
+		uId : 'extn_ChangePrinterLink' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '11' , 
+		'class' : 'relatedTaskLink' , 
+		_sc_extensibility_position : 'after' , 
+		disabled : false , 
+		_sc_extensibility_referenceUId : 'extn_printOrderTicketLink'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	value : 			this.getSimpleBundleString('Change Printer')
+			}
+		}
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/Link" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								renderHidden : true , 
+		uId : 'extn_printShippingLabel' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '3' , 
+		'class' : 'relatedTaskLink' , 
+		_sc_extensibility_position : 'after' , 
+		disabled : true , 
+		_sc_extensibility_referenceUId : 'extn_printOrderTicketLink'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	value : 			this.getSimpleBundleString('extn_Print_Shipping_Label')
+			}
+		}
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/Link" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								renderHidden : true , 
+		uId : 'extn_printReturnLabel' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '4' , 
+		'class' : 'relatedTaskLink' , 
+		_sc_extensibility_position : 'after' , 
+		disabled : true , 
+		_sc_extensibility_referenceUId : 'extn_printShippingLabel'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	value : 			this.getSimpleBundleString('extn_Print_Return_Label')
+			}
+		}
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/Link" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								renderHidden : true , 
+		uId : 'extn_printORMDLabel' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '5' , 
+		'class' : 'relatedTaskLink' , 
+		_sc_extensibility_position : 'after' , 
+		disabled : true , 
+		_sc_extensibility_referenceUId : 'extn_printReturnLabel'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	value : 			this.getSimpleBundleString('extn_Print_ORM_D_Label')
+			}
+		}
+	 					}">
+		 	</div>  
+		 	
+		 	<div data-dojo-type="sc/plat/dojo/widgets/Link" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'm_lnk_RT_PrintPackSlip' , 
+		_sc_extensibility_operation : 'move' , 
+		_sc_extensibility_moveOrder : '10' , 
+		_sc_extensibility_position : 'after' , 
+		_sc_extensibility_referenceUId : 'm_lnk_RT_UnpackShipment'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/Link" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								renderHidden : false , 
+		uId : 'extn_printOrderTicektMobile' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '2' , 
+		'class' : 'relatedTaskLink' , 
+		_sc_extensibility_position : 'after' , 
+		disabled : false , 
+		_sc_extensibility_referenceUId : 'm_lnk_RT_UnpackShipment'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	value : 			this.getSimpleBundleString('extn_Print_Order_Ticket')
+			}
+		}
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/Link" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_ChangePrinterMobile' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '12' , 
+		'class' : 'relatedTaskLink' , 
+		_sc_extensibility_position : 'after' , 
+		_sc_extensibility_referenceUId : 'extn_printOrderTicektMobile'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	value : 			this.getSimpleBundleString('Change Printer')
+			}
+		}
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/Link" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_ChangePrinterMobile' , 
+		_sc_extensibility_operation : 'move' , 
+		_sc_extensibility_moveOrder : '13' , 
+		_sc_extensibility_position : 'before' , 
+		_sc_extensibility_referenceUId : 'relatedTaskContainerMobile'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/Link" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_ChangePrinterMobile' , 
+		_sc_extensibility_operation : 'move' , 
+		_sc_extensibility_moveOrder : '14' , 
+		_sc_extensibility_position : 'after' , 
+		_sc_extensibility_referenceUId : 'extn_ChangePrinterLink'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/Link" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_ChangePrinterMobile' , 
+		_sc_extensibility_operation : 'move' , 
+		_sc_extensibility_moveOrder : '15' , 
+		_sc_extensibility_position : 'after' , 
+		_sc_extensibility_referenceUId : 'extn_printOrderTicektMobile'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/Link" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								renderHidden : true , 
+		uId : 'extn_m_lnk_printShippingLabel' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '7' , 
+		'class' : 'relatedTaskLink' , 
+		_sc_extensibility_position : 'after' , 
+		disabled : true , 
+		_sc_extensibility_referenceUId : 'extn_printOrderTicektMobile'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	value : 			this.getSimpleBundleString('extn_Print_Shipping_Label')
+			}
+		}
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/Link" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								renderHidden : true , 
+		uId : 'extn_m_lnk_printReturnLabel' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '8' , 
+		'class' : 'relatedTaskLink' , 
+		_sc_extensibility_position : 'after' , 
+		disabled : true , 
+		_sc_extensibility_referenceUId : 'extn_m_lnk_printShippingLabel'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	value : 			this.getSimpleBundleString('extn_Print_Return_Label')
+			}
+		}
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/Link" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								renderHidden : true , 
+		uId : 'extn_m_lnk_printORMDLabel' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '9' , 
+		'class' : 'relatedTaskLink' , 
+		_sc_extensibility_position : 'after' , 
+		disabled : true , 
+		_sc_extensibility_referenceUId : 'extn_m_lnk_printReturnLabel'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	value : 			this.getSimpleBundleString('extn_Print_ORM_D_Label')
+			}
+		}
+	 					}">
+		 	</div> 
+		<div data-dojo-type="sc/plat/dojo/widgets/Link" 
+	 					data-dojo-props="data_dojo_props_diff: {
+								renderHidden : true ,
+	 								uId : 'extn_m_link_Reprint_STS_Shipping_Label' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '17' , 
+		'class' : 'relatedTaskLink' , 
+		_sc_extensibility_position : 'after' , 
+		disabled : true , 
+		_sc_extensibility_referenceUId : 'extn_m_lnk_printORMDLabel'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	value : 			this.getSimpleBundleString('extn_Reprint_STS_Shipping_Label')
+			}
+		}
+	 					}">
+		 	</div>  
+			<div data-dojo-type="sc/plat/dojo/widgets/Link" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_link_reprintSTSShippingLabel' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '18' , 
+		'class' : 'relatedTaskLink' , 
+		_sc_extensibility_position : 'after' , 
+		disabled : true , 
+		_sc_extensibility_referenceUId : 'extn_printReturnLabel'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	value : 			this.getSimpleBundleString('extn_Reprint_STS_Shipping_Label')
+			}
+		}
+	 					}">
+		 	</div>  
+		 	
+		</div>

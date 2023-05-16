@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExtensionMetaData>
+    <ScreenExtension
+        extnClassName="ShipmentSummaryShipmentLineDetailsExtn"
+        extnPackage="extn.components.shipment.summary"
+        originalScreen="wsc.components.shipment.summary.ShipmentSummaryShipmentLineDetails"
+        originalScreenPackage="wsc.components.shipment.summary" type="diffrential">
+        <Namespaces>
+            <TargetNamespaces>
+                <Target isExtn="true"
+                    scExtensibilityArrayItemId="extn_TargetNamespaces_1" value="extn_HoldLocation_Add_staging"/>
+            </TargetNamespaces>
+        </Namespaces>
+        <Items>
+        <!-- OMNI-71678 - Editable Staging Location - Start -->
+        	<TextField _sc_extensibility_moveOrder="13"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="lbl_Quantity"
+                label="$(_scSimpleBundle:extn_Staging_Location)" uId="extn_txtStagingLoc">
+                <BindingData>
+                    <SourceBinding namespace="shipmentLine_Src" path="ShipmentLine.Extn.ExtnStagingLocation"/>
+                    <TargetBindings>
+                        <TargetBinding
+                            namespace="extn_HoldLocation_Add_staging"
+                            path="HoldLocation" scExtensibilityArrayItemId="extn_TargetBindings_0"/>
+                    </TargetBindings>
+                </BindingData>
+            </TextField>
+            <ContentPane _sc_extensibility_moveOrder="1"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="lbl_PackedQty"
+                class="inline shortageQty" uId="extn_ShortageReason"/>
+            <Button _sc_extensibility_moveOrder="14"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="extn_txtStagingLoc"
+                label="$(_scSimpleBundle:Action_Edit)" uId="extn_btnEdit"/>
+            <Button _sc_extensibility_moveOrder="15"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="extn_btnEdit"
+                label="$(_scSimpleBundle:Action_Update)" uId="extn_btnUpdate"/>
+            <!-- OMNI-71678 - Editable Staging Location - END -->
+            <DataLabel _sc_extensibility_moveOrder="2"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="first"
+                _sc_extensibility_referenceUId="extn_ShortageReason"
+                class="autoLabelZeroWidth"
+                label="$(_scBundle:Label_CancelReason)"
+                renderHidden="true" uId="extn_CancelReason">
+                <BindingData>
+                    <SourceBinding dynamicBindingFunc="getCancelReason"
+                        namespace="shipmentLine_Src" path="ShipmentLine.CancelReason"/>
+                </BindingData>
+            </DataLabel>
+        </Items>
+        <!-- OMNI-71678 - Editable Staging Location - Start -->
+        <Subscribers>
+            <Local>
+                <Subscriber eventId="extn_btnEdit_onClick" isExtn="true" sequence="51">
+                    <Handler methodName="enableEditStagingLoc"/>
+                </Subscriber>
+                <Subscriber eventId="extn_btnUpdate_onClick"
+                    isExtn="true" sequence="51">
+                    <Handler methodName="assignStagingLocation"/>
+                </Subscriber>
+        <!-- OMNI-71678 - Editable Staging Location - END -->
+            </Local>
+        </Subscribers>
+    </ScreenExtension>
+</ExtensionMetaData>

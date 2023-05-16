@@ -1,0 +1,41 @@
+<div class="sc-platform-screen-default CancelledPopUp">
+	<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" data-dojo-props="		highlightMatch : 'false' , 
+		'class' : 'extn_Cancelled_PopUp_bold hashNumberAlign autoLabelZeroWidth blockComponent comappsWrapWord', 
+		uId : 'CancelledPopUpUID',
+ 		scParamDataFn :
+		function() { 
+			return { 
+			    label :this.getSimpleBundleString('extn_cancelled_text'),	
+				style:'text-align: center',
+			}
+		}">
+	</div>
+	<br/>
+	
+	<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" data-dojo-props="		highlightMatch : 'false' , 
+		'class' : 'extn_ContainerNC hashNumberAlign autoLabelZeroWidth blockComponent comappsWrapWord', 
+		uId : 'CancellUID',
+ 		scParamDataFn :
+		function() { 
+			return { 
+			    label :this.getSimpleBundleString('extn_cancelled_string'),	
+				style:'text-align: center',	
+			}
+		}">
+	</div>
+	<br/>
+
+    <div data-dojo-type="dijit/form/Button" data-dojo-props="		spanLabel : true , 
+	'class' : 'idxSpecialButton zeroWidthLabelKey' , 
+	style:'margin-left: 40%',
+	showLabel : true , 
+	uId : 'Popup_btnOK'  ,
+	scParamDataFn :
+	function() { 
+		return { 
+		 	label : 			this.getSimpleBundleString('OK')
+		}
+	}">
+	</div>
+	<br/>
+</div>

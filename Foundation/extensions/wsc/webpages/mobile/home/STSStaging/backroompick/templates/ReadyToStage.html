@@ -1,0 +1,516 @@
+<div class="sc-platform-screen-default ReadyToStage" role="region" aria-label="region_screenHeader" >
+
+ <div data-dojo-type="idx/layout/ContentPane" data-dojo-props="		spanLabel : true , 
+		title : 'Top Content' , 
+		'class' : 'mobileCommonScreen screenHeader' ,
+		colspan : 1 , 
+		uId : 'TopContent' , 
+		layoutAlign : 'top'  
+ ">
+        <div data-dojo-type="idx/layout/ContentPane" data-dojo-props="		spanLabel : true , 
+		'class' : 'screenTitle' , 
+		uId : 'pnlScreenDescription'  
+ ">
+            <div data-dojo-type="sc/plat/dojo/widgets/Label" data-dojo-props="		spanLabel : true , 
+		uId : 'lbl_ScreenTitle'  
+ 		,scParamDataFn :
+		 function() { 
+			return { 
+			 	value : 			this.getSimpleBundleString('Label_STSReadyToStage')
+			}
+		}
+"></div>
+        </div>
+	    <div data-dojo-type="idx/layout/ContentPane" data-dojo-props="		spanLabel : true , 
+		'class' : 'rightPanel'  
+ ">
+            <div data-dojo-type="idx/layout/ContentPane" data-dojo-props="		spanLabel : true , 
+		uId : 'pnlScreenTasks'  
+ "></div>
+        </div>
+    </div>	
+	
+<div data-dojo-type="idx/layout/ContentPane" data-dojo-props="		'class' : 'scanPanelData' , 
+		uId : 'productScanForm' ,   
+		style : 'padding-top:0px !important' ,  
+ ">
+	<div data-dojo-type="idx/layout/ContentPane" data-dojo-props="		spanLabel : true , 
+			'class' : 'barcodeScanPanel' , 
+			uId : 'extn_containerPanel'  
+	 ">		
+	 <div data-dojo-type="sc/plat/dojo/widgets/Link" 
+			data-dojo-props="spanLabel : true,
+			uId : 'extn_scanTOContainerBarCode' , 		
+			'class' : 'buttonConnect' , 		
+			style : 'padding-top:15px; padding-right:8px',
+			hasImage : true ,
+			appendToContextRoot : true , 		
+			imageSrc : 'wsc/resources/css/icons/images/barcode_blue.png' , 
+			scParamDataFn :
+			 function() { 
+				return { 
+					title : 			this.getSimpleBundleString('Tooltip_arialabel_scanProduct')
+	,	
+					imageAlt : 			this.getSimpleBundleString('Tooltip_arialabel_scanProduct')
+				}
+			}
+						">
+		</div>
+		<div data-dojo-type="idx/form/TextBox"
+									data-dojo-props="	spanLabel : true,
+								'class' : 'autoLabelZeroWidth longTextbox' ,
+						selectOnClick : true , 
+			style : 'margin-left:1px;  margin-right:2px !important' , 
+			uId : 'extn_ScanContainerNo',		
+			scParamDataFn :
+			 function() { 
+				return { 			 	
+				hint : 	this.getSimpleBundleString('extn_Scan_or_enter_Container_ID')
+			,	
+							label : this.getSimpleBundleString('extn_ContainerNo')
+			,
+							bindingData : 	{
+					 sourceBinding : 	{
+					 path : 			'Container.ContainerNo'
+			,
+					 namespace : 			'ContainerNo_Input'
+				}
+			,
+					 targetBinding : 	[
+						{
+					 path : 			'Container.ContainerID'
+			,
+					 namespace : 			'ContainerIDFromUI'
+				}
+				]
+				}
+			,	
+							invalidMessage : 			this.getSimpleBundleString('Message_InvalidContainerNo')
+						}
+					}				
+					
+			">
+		</div>
+	</div>
+	
+	<div data-dojo-type="idx/layout/ContentPane" data-dojo-props="		spanLabel : true , 
+			'class' : '' , 
+			uId : 'extn_lastScannedContainer1'  
+	 ">
+	 <div data-dojo-type="sc/plat/dojo/widgets/Link" 
+	 					data-dojo-props="		spanLabel : true , 
+		'class' : 'extnidxLink longTextbox extnidxLabelSC' ,		
+	 	uId : 'extn_lastScannedContainerID' , 
+		style : 'padding-top:0px; padding-left:0px;' , 		
+ 		scParamDataFn :
+		 function() { 
+			return { 
+			 	label : 			this.getBundleString('extn_LastScannedContainer'),
+				bindingData : 	{
+		 sourceBinding : 	{
+		 path : 			''
+,
+		 namespace : 			''
+	}
+,
+		 targetBinding : 	[
+	 		{
+		 path : 			'LastScannedContainer'
+,
+		 namespace : 			'Last_Scanned_Container'
+	}
+	]
+	}
+					}
+					}
+		">
+		</div>
+	</div>
+	
+	 <div data-dojo-type="idx/form/FilteringSelect" 
+	 					data-dojo-props=" spanClass : true , 
+		'class' : 'autoLabelZeroWidth longTextbox nonEditable' , 
+		renderHidden : false ,		
+	 	uId : 'extn_filterning_select_print_to' , 
+		style : 'padding-top: 10px; margin-left: 1px; margin-right: 2px !important' , 		
+		scParamDataFn :
+		 function() { 
+			return { 
+			 	bindingData : 	{
+					optionsBinding : 
+					{
+						path : 	'Devices.Device',
+						namespace : 'getPrinterDeviceList_output_ns',
+						descriptionField : 	'DeviceId',
+						valueField : 'DeviceId'
+					},
+					targetBinding : 
+					{
+						path : 	'Devices.Device.DeviceId',
+						namespace : 'extn_getChangedPrinterDeviceID'
+					},
+					sourceBinding : 
+					{
+						path : 'Devices.Device.DeviceId',
+						namespace : 'extn_printerFromSession1'
+					}
+				},	
+				label : 			this.getSimpleBundleString('Print To')
+			}
+			}
+			
+		
+		">
+		</div>
+		
+	<div data-dojo-type="idx/layout/ContentPane" data-dojo-props="
+	 	uId : 'extn_Print_to1' , 
+		renderHidden : 'false'
+	">
+	</div>  
+			
+	<!--
+		<div data-dojo-type="idx/layout/ContentPane" data-dojo-props="		spanLabel : true , 
+			'class' : 'barcodeScanPanel' , 
+			uId : 'extn_assignStagingLocLabel'  
+	 ">		
+	 <div data-dojo-type="sc/plat/dojo/widgets/Link" 
+			data-dojo-props="spanLabel : true,
+			uId : 'extn_scanTOStagingBarCode' , 		
+			'class' : 'buttonConnect' , 		
+			style : 'padding-top:15px; padding-right:8px',
+			hasImage : true ,
+			appendToContextRoot : true , 		
+			imageSrc : 'wsc/resources/css/icons/images/barcode_blue.png' , 
+			scParamDataFn :
+			 function() { 
+				return { 
+					title : 			this.getSimpleBundleString('Tooltip_arialabel_scanProduct')
+	,	
+					imageAlt : 			this.getSimpleBundleString('Tooltip_arialabel_scanProduct')
+				}
+			}
+						">
+		</div>
+		<div data-dojo-type="idx/form/TextBox"
+									data-dojo-props="	spanLabel : true,
+								'class' : 'autoLabelZeroWidth longTextbox' ,
+						selectOnClick : true , 
+			style : 'margin-left:1px; padding-top:20px; margin-right:2px !important' , 
+			uId : 'extn_assignStagingLoc',		
+			scParamDataFn :
+			 function() { 
+					return { 
+						label : 			this.getSimpleBundleString('Label_Hold_Location')
+				,	
+								hint : 			this.getSimpleBundleString('extn_Enter_Staging_Loc')
+				,	
+								bindingData : 	{
+						 sourceBinding : 	{
+						 path : 			'HoldLocation'
+				,
+						 namespace : 			'HoldLocation_Input_staging'
+					}
+				,
+						 targetBinding : 	[
+							{
+						 path : 			'HoldLocation'
+				,
+						 namespace : 			'HoldLocation_Add_staging'
+					}
+					]
+					}
+				,	
+								invalidMessage : 			this.getSimpleBundleString('Message_InvalidHoldLocationText')
+							}
+						}				
+					
+			">
+		</div>
+	</div>
+	-->
+	
+	
+	
+	<div data-dojo-type="idx/layout/ContentPane" data-dojo-props="		spanLabel : true , 
+			'class' : 'contentSeparator' , 
+			uId : 'extn_assignStagingLocLabel'  
+	 ">
+	<div data-dojo-type="idx/form/TextBox" data-dojo-props="		spanLabel : true , 
+		'class' : 'longTextbox autoLabelZeroWidth' , 
+		regExp : '[^,][^,]*' , 
+		uId : 'extn_assignStagingLoc' ,
+		style : 'padding-top:20px; margin-right:2px !important;' ,  
+		required : true ,
+ 		scParamDataFn :
+		 function() { 
+			return { 
+			 	label : 			this.getSimpleBundleString('Label_Hold_Location')
+,	
+			 	hint : 			this.getSimpleBundleString('extn_Enter_Staging_Loc1')
+,	
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 path : 			'HoldLocation'
+,
+		 namespace : 			'HoldLocation_Input_staging'
+	}
+,
+		 targetBinding : 	[
+	 		{
+		 path : 			'HoldLocation'
+,
+		 namespace : 			'HoldLocation_Add_staging'
+	}
+	]
+	}
+,	
+			 	invalidMessage : 			this.getSimpleBundleString('Message_InvalidHoldLocationText')
+			}
+		}
+"></div>
+
+</div>
+
+
+<!--
+<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" 
+							data-dojo-props="		spanLabel : true , 
+			'class' : 'longTextbox zeroWidthLabelKey' ,		
+			uId : 'extn_lastScannedStagingLoc' , 
+			style : 'padding-top:0px' , 		
+			scParamDataFn :
+			 function() { 
+				return { 
+					label : 			this.getBundleString('extn_Last_Scanned_Staging_Loc'),
+					bindingData :  {
+	  
+	   sourceBinding :  {
+	   path :    ''
+	,
+	   namespace :    ''
+	 }
+	 }
+				}
+				}
+	">
+	</div>
+	-->
+</div>	
+   <div data-dojo-type="dijit/form/Button" data-dojo-props="		spanLabel : true , 
+		'class' : 'idxSpecialButton longButtons' , 
+		showLabel : true , 
+		uId : 'assignStagingButton'  ,
+		style : 'padding-top:10px' , 
+ 		scParamDataFn :
+		 function() { 
+			return { 
+			 	'aria-label' : 			this.getSimpleBundleString('arialabel_Add_Location')
+,	
+			 	label : 			this.getSimpleBundleString('Action_Add_Location')
+			}
+		}
+"></div>
+
+<div data-dojo-type="idx/layout/ContentPane" data-dojo-props="		spanLabel : true , 
+			'class' : '' , 
+			uId : 'containerStagedPanel'  
+	 ">		
+	 <div data-dojo-type="sc/plat/dojo/widgets/Link" 
+			data-dojo-props="spanLabel : true,
+			uId : 'extn_scanTOStagingBarCode' , 		
+			'class' : 'blockComponent scanComplete' , 		
+			style : 'display: inline-block; padding-top:0px; padding-left:10px',
+			hasImage : true ,
+			appendToContextRoot : true , 		
+			imageSrc : 'wsc/resources/css/icons/images/completelyScanned.png' , 
+			scParamDataFn :
+			 function() { 
+				return { 
+					title : 			this.getSimpleBundleString('Tooltip_arialabel_scanProduct')
+	,	
+					imageAlt : 			this.getSimpleBundleString('Tooltip_arialabel_scanProduct')
+				}
+			}
+						">
+		</div>
+		<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" data-dojo-props="		spanLabel : true , 
+		'class' : 'inline idxLabel zeroWidthLabelKey scanCompleteLabel extn_Staged' , 
+		uId : 'lbl_ContainerCancelled' , 
+		style:'display: inline-block;'
+ 		,scParamDataFn :
+		 function() { 
+			return { 
+			 	label : 			this.getSimpleBundleString('extn_ContainerStaged')
+		,	
+						bindingData : 	{
+				 sourceBinding : 	{
+				 path : 			''
+		,
+				 namespace : 			'container_Src'
+			}
+			}
+					}
+				}
+		"></div>
+</div>
+		
+<!--
+<div data-dojo-type="idx/layout/TitlePane" data-dojo-props="		open : true , 
+		spanLabel : true , 
+		'class' : 'collapsablePane boxLayout repeatingContent containerList' ,  
+		style : 'padding-top:10px' ,
+		uId : 'extn_tpContainerDetails'  
+ 		,scParamDataFn :
+		 function() { 
+			return { 
+			 	'aria-label' : 			this.getSimpleBundleString('arialabel_PackagesDetails')
+,	
+			 	title : 			this.getSimpleBundleString('extn_Last_Scanned_Container_Details')
+			}
+		}
+" role='region'>
+     <!-- 
+	  <div data-dojo-type="idx/layout/ContentPane" data-dojo-props="		'class' : 'repeatingpanel' , 
+		uId : 'extn_cpContainerLinesPaginationPanel'  
+ 		,scParamDataFn :
+		 function() { 
+			return { 
+			 	bindingData : 	{
+		 customNoRecordsFoundMessageBundleKey : 			'Message_NoPackagesFound'
+		,
+				 isPaginated : 			false
+		,
+				 mashupRefId : 			'extn_getSTSContainerList'
+		,
+				 repeatingscreenID : 			'wsc.components.shipment.summary.ShipmentSummaryContainerList'
+		,
+				 repeatingScreen : 	{
+				 repeatingnamespace : 			'container_Src'
+		,
+				 path : 			'Containers.Container'
+		,
+				 repeatingscreenpath : 			'Container'
+		,
+				 sourcenamespace : 			'ContainerList'
+					}
+					  }
+				   }
+				}
+		"></div> -->
+		<!--
+    </div>
+	-->
+	<!--	
+	<div data-dojo-type="idx/layout/ContentPane" data-dojo-props="		spanLabel : true , 
+		'class' : 'contentSeparator' , 
+		uId : 'extn_viewstagedsoshipments'  
+ ">		
+		<div data-dojo-type="sc/plat/dojo/widgets/Link" 
+	 					data-dojo-props="spanLabel : true ,
+	 								uId : 'extn_ViewStagedSOShipments' , 
+		'class' : 'headerLink',  
+		style : 'padding-top:20px; margin-left:10px !important' , 
+ 		scParamDataFn :
+		 function() { 
+			return { 
+			 	value : 			this.getSimpleBundleString('extn_ViewStagedSOShipments')
+			}
+		}
+	 					">
+		 	</div> 
+		</div>
+	<div data-dojo-type="idx/layout/ContentPane" data-dojo-props="		spanLabel : true , 
+		'class' : 'contentSeparator' , 
+		uId : 'extn_viewpendingsoshipments'  
+ ">		
+		<div data-dojo-type="sc/plat/dojo/widgets/Link" 
+	 					data-dojo-props="spanLabel : true ,
+	 								uId : 'extn_ViewPendingSOShipments' , 
+		'class' : 'headerLink',  
+		style : 'padding-top:20px; margin-left:10px !important' , 
+ 		scParamDataFn :
+		 function() { 
+			return { 
+			 	value : 			this.getSimpleBundleString('extn_ViewPendingSOShipments')
+			}
+		}
+	 					">
+		 	</div> 
+			</div>
+	<div data-dojo-type="idx/layout/ContentPane" data-dojo-props="		spanLabel : true , 
+		'class' : 'contentSeparator' , 
+		uId : 'extn_searchsoshipments'  
+ ">
+			<div data-dojo-type="sc/plat/dojo/widgets/Link" 
+	 					data-dojo-props="spanLabel : true ,
+	 								uId : 'extn_SearchSOShipments' , 
+		'class' : 'headerLink', 
+		style : 'padding-top:20px; margin-left:10px !important' ,  		
+ 		scParamDataFn :
+		 function() { 
+			return { 
+			 	value : 			this.getSimpleBundleString('extn_SearchSOShipments')
+			}
+		}
+	 					">
+		 	</div>
+</div>	
+
+-->	
+
+<!--
+<div data-dojo-type="idx/layout/ContentPane" data-dojo-props="		spanLabel : true , 
+		'class' : 'contentSeparator' , 
+		uId : 'extn_searchsoshipments'  
+ ">
+<div data-dojo-type="sc/plat/dojo/widgets/Link" 
+	 					data-dojo-props="spanLabel : true ,
+	 								uId : 'extn_LastScannedContainer' , 
+		'class' : 'headerLink extnidxLink', 
+		style : 'padding-top:10px; padding-left:10px;' , 		
+ 		scParamDataFn :
+		 function() { 
+			return { 
+			 	value : 			this.getSimpleBundleString('extn_LastScanned_Container')
+			}
+		}
+	 					">
+</div>
+</div>
+-->
+
+<div data-dojo-type="idx/layout/ContentPane" data-dojo-props="		spanLabel : true , 
+		'class' : 'contentSeparator' , 
+		uId : 'extn_searchsoshipments'  
+ ">
+<div data-dojo-type="sc/plat/dojo/widgets/Link" 
+	 					data-dojo-props="spanLabel : true ,
+	 								uId : 'extn_ShipToStoreOrderSearch' , 
+		'class' : 'headerLink extnidxLink', 
+		style : 'padding-top:30px; padding-left:10px;' , 		
+ 		scParamDataFn :
+		 function() { 
+			return { 
+			 	value : 			this.getSimpleBundleString('extn_Ship_To_Store_Order_Search')
+			}
+		}
+	 					">
+</div>
+	</div>		
+<div data-dojo-type="dijit/form/Button" data-dojo-props="		spanLabel : true ,	 				
+	 								uId : 'extn_btnClose' , 		
+		'class' : 'idxSpecialButton' , 
+		style : 'float:right; padding-right:10px; padding-top:30px',
+		showLabel : true , 			
+ 		scParamDataFn :
+		 function() { 
+			return { 
+			
+			 	label : 			this.getSimpleBundleString('extn_Close')
+			}
+		}
+	 		">
+		 	</div>		
+
+</div>

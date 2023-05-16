@@ -1,0 +1,30 @@
+<OrderLineList>
+	<OrderLine ChainedFromOrderHeaderKey="" ChainedFromOrderLineKey="" Status="" LineType="" MaxLineStatus="" MinLineStatus="" FulfillmentType="" OrderLineKey="" OrderHeaderKey="" >
+		<ChainedFromOrderLine />
+		<ShipmentLines>
+			<ShipmentLine ActualQuantity="" BackroomPickComplete="" BackroomPickedQuantity="" ChainedFromOrderHeaderKey="" ItemID="" ProductClass="" UnitOfMeasure=""
+				ChainedFromOrderLineKey=""  IsCustomerPickComplete="" IsPackComplete="" OrderHeaderKey="" OrderLineKey="" OrderNo="" ShipmentKey="" ShipmentLineKey="" >
+				<Shipment DocumentType=" " ShipNode=" " ShipmentKey=" " ShipmentNo=" "	ShipmentType=" " Status=" " StatusDate=" ">
+					<Containers>
+						<Container ShipmentContainerKey="" ContainerNo="" ContainerScm="" IsReceived="" >
+							<ContainerDetails>
+								<ContainerDetail>
+								</ContainerDetail>
+							</ContainerDetails>
+						</Container>
+					</Containers>
+				</Shipment>
+				<ContainerDetails>
+					<ContainerDetail>
+						<Container ShipmentContainerKey="" ContainerNo="" ContainerScm="" IsReceived="" />
+					</ContainerDetail>
+				</ContainerDetails>
+				<OrderLine ChainedFromOrderHeaderKey="" ChainedFromOrderLineKey="" FulfillmentType="" OrderHeaderKey="" OrderLineKey="" OrderedQty="" MaxLineStatus="" MaxLineStatusDesc="" MinLineStatus="" MinLineStatusDesc="">
+					<ChainedFromOrderLine OrderHeaderKey="" OrderLineKey="" FulfillmentType=""  OrderedQty="" 
+					MaxLineStatus="" MaxLineStatusDesc="" MinLineStatus="" MinLineStatusDesc=""/>
+				</OrderLine>
+			</ShipmentLine>
+		</ShipmentLines>
+		<Order OrderHeaderKey="" OrderName="" OrderNo="" MaxOrderStatus="" MinOrderStatus="" />
+	</OrderLine>
+</OrderLineList>

@@ -1,0 +1,2378 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mashups>
+    <mashup
+        description="This service is to Reset the Batch which have eligible shipments for reset."
+        endpoint="EP_ORDER" id="extn_ResetBatch" mashuptype="XAPI"
+        resourceId="" transactional="true">
+        <API FlowName="AcademyResetBatchService">
+            <Input/>
+            <Template/>
+        </API>
+        <classInformation name="com.ibm.wsc.common.mashups.WSCBaseMashup"/>
+        <APINamespace inputNS="extn_ResetBatch_input" outputNS="extn_ResetBatch_output"/>
+        <AlternateResourceIds/>
+    </mashup>
+    <!-- Paper work button service -->
+    <mashup description="" endpoint="EP_CONFIG" id="Extn_startPaperWork"
+        mashuptype="XAPI" resourceId="" transactional="true">
+        <API FlowName="AcademyBeginPaperWorkService">
+            <Input>
+                <Shipment ShipmentKey=""/>
+            </Input>
+            <Template>
+                <Shipment ShipmentKey=""/>
+            </Template>
+        </API>
+        <classInformation name="com.ibm.wsc.common.mashups.WSCBaseMashup"/>
+        <APINamespace inputNS="Extn_startPaperWork_input" outputNS="Extn_startPaperWork_output"/>
+        <AlternateResourceIds/>
+    </mashup>
+    <mashup description="" endpoint="EP_CONFIG"
+        id="UnResrvMsgToSIMOnShrtg" mashuptype="XAPI" resourceId="" transactional="true">
+        <API FlowName="AcademyStoreRecordShortageService">
+            <Input>
+			<!--OMNI-102218 - added Instore Consolidation attributes -->
+                <Shipment DeliveryMethod="" ShipNode="" ShipmentKey=""
+                    ShipmentNo="" Status="" CurbsideShipmentKey="" CurbsideConsToggle="" ConsolidatedShipmentKey="" InstoreConsToggle="">
+                    <ShipmentLines>
+                        <ShipmentLine ActualQuantity=""
+                            CustomerPickedQuantity="" ItemID=""
+                            OldShortageQty="" OrderNo="" Quantity=""
+                            ShipmentLineKey="" ShortageQty="" ShipmentKey="">
+                            <Extn ExtnMsgToSIM="" ExtnReasonCode=""/>
+                        </ShipmentLine>
+                    </ShipmentLines>
+                </Shipment>
+            </Input>
+            <Template/>
+        </API>
+        <classInformation name="com.ibm.wsc.common.mashups.WSCBaseMashup"/>
+        <APINamespace inputNS="UnResrvMsgToSIMOnShrtg_input" outputNS="UnResrvMsgToSIMOnShrtg_output"/>
+        <AlternateResourceIds/>
+    </mashup>
+    <mashup
+        description="This service is to print the batch list which are part of the Batch created."
+        endpoint="EP_ORDER" id="extn_PrintBatch" mashuptype="XAPI"
+        resourceId="" transactional="true">
+        <API FlowName="AcademyPrintBatchPickTickets">
+            <Input>
+                <Print
+                    DisplayLocalizedFieldInLocale="xml:CurrentUser:/User/@Localecode"
+                    PageNo="" PickTicketPrinted="" PickticketNo=""
+                    PrinterID="" ShipNode="xml:CurrentStore:/Store/@ShipNode">
+                    <Login LoginID="xml:CurrentUser:/User/@Loginid"/>
+                </Print>
+            </Input>
+            <Template/>
+        </API>
+        <classInformation name="com.ibm.wsc.common.mashups.WSCBaseMashup"/>
+        <APINamespace inputNS="extn_PrintBatch_input" outputNS="extn_PrintBatch_output"/>
+        <AlternateResourceIds/>
+    </mashup>
+    <mashup
+        description="This mashup is called on click of Print Batch button and when the batch is not created.This creates a new batch and prints."
+        endpoint="EP_ORDER" id="extn_PrintBatchNew" mashuptype="XAPI"
+        resourceId="" transactional="true">
+        <API FlowName="AcademyPrintBatchPickTickets">
+            <Input>
+                <StoreBatch
+                    AssignedToUserId="xml:CurrentUser:/User/@Loginid"
+                    BatchNo="" BatchType=""
+                    DisplayLocalizedFieldInLocale="xml:CurrentUser:/User/@Localecode"
+                    IgnoreInvalidLines="N" IgnoreOrdering="Y"
+                    OrganizationCode="xml:CurrentStore:/Store/@ShipNode" SkipValidations="Y">
+                    <ShipmentLines>
+                        <ShipmentLine ShipmentLineKey=""/>
+                    </ShipmentLines>
+                    <StoreBatchConfigList>
+                        <StoreBatchConfig Entity="" Name="" Value=""/>
+                    </StoreBatchConfigList>
+                </StoreBatch>
+            </Input>
+            <Template/>
+        </API>
+        <classInformation name="com.ibm.wsc.common.mashups.WSCBaseMashup"/>
+        <APINamespace inputNS="extn_PrintBatchNew_input" outputNS="extn_PrintBatchNew_output"/>
+        <AlternateResourceIds/>
+    </mashup>
+    <mashup
+        description="This mashup is to get all the information related to item such as style,color,size,onhand inventory and planogram details"
+        endpoint="EP_ORDER" id="extn_ItemPropertiesService"
+        mashuptype="XAPI" resourceId="" transactional="true">
+        <API FlowName="AcademyGetItemAndPlanogramInfo">
+            <Input/>
+            <Template/>
+        </API>
+        <classInformation name="com.ibm.wsc.common.mashups.WSCBaseMashup"/>
+        <APINamespace inputNS="extn_ItemPropertiesService_input" outputNS="extn_ItemPropertiesService_output"/>
+        <AlternateResourceIds/>
+    </mashup>		
+	<mashup description="" endpoint="EP_CONFIG"
+		 id="extn_resetCurbsideOrders" mashuptype="XAPI" resourceId="" transactional="true">
+        <API FlowName="AcademyProcessCurbsidePickupRequestService">
+            <Input>
+			    <Order ShipmentKey="" ResetCurbside="" CustomerDetails="" OrderNo="" CurbsideShipmentNo="" 
+				ShipmentNo="" StoreNo="xml:CurrentStore:/Store/@ShipNode"/>
+            </Input>
+            <Template/>
+        </API>
+        <classInformation name="com.ibm.wsc.common.mashups.WSCBaseMashup"/>
+        <APINamespace inputNS="extn_resetCurbsideOrders_input" outputNS="extn_resetCurbsideOrders_output"/>
+        <AlternateResourceIds/>
+	</mashup>
+    <mashup description="" endpoint="EP_CONFIG"
+        id="extn_PrintOrderTicket" mashuptype="XAPI" resourceId="" transactional="true">
+        <API FlowName="AcademyBOPISPrintOrderTicketService">
+            <Input>
+                        <Shipment ShipmentKey="" ShipmentNo="" IsHipPrinterEnabled="" IsReprint="" NumberOfLabels="" PrinterID="" PrinterIP="" ShipNode="" FulfillmentType=""/>
+	 
+		</Input>
+            <Template/>
+        </API>
+        <classInformation name="com.ibm.wsc.common.mashups.WSCBaseMashup"/>
+        <APINamespace inputNS="extn_PrintOrderTicket_input" outputNS="extn_PrintOrderTicket_output"/>
+        <AlternateResourceIds/>
+    </mashup>
+    <mashup description="" endpoint="EP_CONFIG"
+        id="extn_PrintShipmentPickTickets" mashuptype="XAPI"
+        resourceId="" transactional="true">
+        <API FlowName="AcademySFSPrintShipmentPickTickets">
+            <Input>
+                <Print
+                    DisplayLocalizedFieldInLocale="xml:CurrentUser:/User/@Localecode"
+                    IsWebStoreFlow="Y" PickTicketPrinted=""
+                    PrinterID="PCK_TICKET_STN1" ShipNode=""
+                    ShipmentKey="" ShipmentType="">
+                    <Login LoginID=""/>
+                </Print>
+            </Input>
+            <Template/>
+        </API>
+        <classInformation name="com.ibm.wsc.common.mashups.WSCBaseMashup"/>
+        <APINamespace inputNS="extn_PrintShipmentPickTickets_input" outputNS="extn_PrintShipmentPickTickets_output"/>
+        <AlternateResourceIds/>
+    </mashup>
+    <mashup description="" endpoint="EP_CONFIG"
+        id="extn_PlanogramDetialsForBackroomPickItemScanScreen"
+        mashuptype="XAPI" resourceId="" transactional="true">
+        <API FlowName="AcademyGetItemAndPlanogramInfo">
+            <Input>
+                <Page GeneratedOn="" IsFirstPage="" IsLastPage=""
+                    IsValidPage="" PageNumber="" PageSize=""
+                    StartRowNumber="" TotalNumberOfPages="">
+                    <Output>
+                        <ShipmentLines TotalNumberOfRecords="">
+                            <ShipmentLine BackroomPickComplete=""
+                                BackroomPickedQuantity="" ItemID=""
+                                OrderHeaderKey="" OrderLineKey=""
+                                OrderNo="" OriginalQuantity=""
+                                PickLocation="" ProductClass=""
+                                Quantity="" ShipmentKey=""
+                                ShipmentLineKey="" ShipmentLineNo=""
+                                ShipmentSubLineNo="" ShortageQty="" UnitOfMeasure="">
+                                <OrderLine IsBundleParent=""
+                                    ItemGroupCode="" ShipNode="">
+                                    <ItemDetails DisplayUnitOfMeasure=""
+                                    ItemGroupCode="" ItemID=""
+                                    UOMDisplayFormat="" UnitOfMeasure="">
+                                    <PrimaryInformation
+                                    ExtendedDisplayDescription=""
+                                    ImageID="" ImageLabel="" ImageLocation=""/>
+                                    <Extn/>
+                                    </ItemDetails>
+                                </OrderLine>
+                                <Extn/>
+                                <Shipment ShipNode=""/>
+                                <!-- OMNI-93071 Serial No - START --> 
+								<ShipmentTagSerials>
+									<ShipmentTagSerial Quantity="" SerialNo="" ShipmentLineKey=""/>
+								</ShipmentTagSerials>
+                                <!-- OMNI-93071 Serial No - END --> 
+                            </ShipmentLine>
+                        </ShipmentLines>
+                    </Output>
+                </Page>
+                <LastRecord>
+                    <ShipmentLines TotalNumberOfRecords="">
+                        <ShipmentLine BackroomPickComplete=""
+                            BackroomPickedQuantity="" ItemID=""
+                            OrderHeaderKey="" OrderLineKey="" OrderNo=""
+                            OriginalQuantity="" PickLocation=""
+                            ProductClass="" Quantity="" ShipmentKey=""
+                            ShipmentLineKey="" ShipmentLineNo=""
+                            ShipmentSubLineNo="" ShortageQty="" UnitOfMeasure="">
+                            <OrderLine IsBundleParent=""
+                                ItemGroupCode="" ShipNode="">
+                                <ItemDetails DisplayUnitOfMeasure=""
+                                    ItemGroupCode="" ItemID=""
+                                    UOMDisplayFormat="" UnitOfMeasure="">
+                                    <PrimaryInformation
+                                    ExtendedDisplayDescription=""
+                                    ImageID="" ImageLabel="" ImageLocation=""/>
+                                    <Extn/>
+                                </ItemDetails>
+                            </OrderLine>
+                            <Extn/>
+                            <Shipment ShipNode=""/>
+                            <!-- OMNI-93071 Serial No - START --> 
+							<ShipmentTagSerials>
+									<ShipmentTagSerial Quantity="" SerialNo="" ShipmentLineKey=""/>
+							</ShipmentTagSerials>
+                            <!-- OMNI-93071 Serial No - END --> 
+                        </ShipmentLine>
+                    </ShipmentLines>
+                </LastRecord>
+            </Input>
+            <Template/>
+        </API>
+        <classInformation name="com.ibm.wsc.common.mashups.WSCBaseMashup"/>
+        <APINamespace inputNS="UnResrvMsgToSIMOnShrtg_input1" outputNS="UnResrvMsgToSIMOnShrtg_output1"/>
+        <AlternateResourceIds/>
+    </mashup>
+    <mashup description="" endpoint="EP_CONFIG" id="extn_changeShipment"
+        mashuptype="XAPI" resourceId="" transactional="true">
+        <API Name="changeShipment">
+            <Input>
+                <Shipment ShipmentKey="">
+                    <Extn ExtnShipmentPickedBy=""/>
+                    <AdditionalDates>
+                        <AdditionalDate ActualDate="" DateTypeId="ACADEMY_CUSTOMER_PICKEDUP_DATE"/>
+                    </AdditionalDates>
+                </Shipment>
+            </Input>
+            <Template/>
+        </API>
+        <classInformation name="com.ibm.wsc.common.mashups.WSCBaseMashup"/>
+        <APINamespace inputNS="extn_changeShipment_input" outputNS="extn_changeShipment_output"/>
+        <AlternateResourceIds/>
+    </mashup>
+    <mashup
+        description="This mashup is to send the messages to SIM when shortage is recorded from Batch Screens"
+        endpoint="EP_Order" id="extn_BatchCycleCount" mashuptype="XAPI"
+        resourceId="" transactional="true">
+        <API FlowName="AcademyBOPISBatchPickShrtgMsgs">
+            <Input>
+                <StoreBatch ShipNode="xml:CurrentStore:/Store/@ShipNode" StoreBatchKey="">
+                    <Item ItemID="" ShortageQty="" ShortageReason="" UnitOfMeasure=""/>
+                </StoreBatch>
+            </Input>
+            <Template/>
+        </API>
+        <classInformation name="com.ibm.wsc.common.mashups.WSCBaseMashup"/>
+        <APINamespace inputNS="extn_BatchCycleCount_input" outputNS="extn_BatchCycleCount_output"/>
+        <AlternateResourceIds/>
+    </mashup>
+    <mashup description="" endpoint="EP_CONFIG"
+        id="extn_recordShortageForPack" mashuptype="XAPI" resourceId="" transactional="true">
+        <API FlowName="AcademyStoreRecordShortageService">
+            <Input>
+                <Shipment BackOrderRemovedQuantity="" DeliveryMethod=""
+                    ShipNode="" ShipmentKey="" ShipmentNo="" Status="">
+                    <ShipmentLines>
+                        <ShipmentLine OldShortageQty="" Quantity=""
+                            ShipmentLineKey="" ShortageQty="">
+                            <Extn ExtnMsgToSIM="" ExtnReasonCode=""/>
+                        </ShipmentLine>
+                    </ShipmentLines>
+                </Shipment>
+            </Input>
+            <Template>
+                <Shipment ShipmentContainerizedFlag="" ShipmentKey="" Status=""/>
+            </Template>
+        </API>
+        <classInformation name="com.ibm.wsc.shipment.container.pack.GetUpdateShortedLineInfo"/>
+        <APINamespace inputNS="extn_recordShortageForPack_input" outputNS="extn_recordShortageForPack_output"/>
+        <AlternateResourceIds/>
+    </mashup>
+    <mashup description="" endpoint="EP_CONFIG"
+        id="extn_BeforeChangeShipmentOnFinishPack" mashuptype="XAPI"
+        resourceId="" transactional="true">
+        <API FlowName="AcademyAddContainersToManifestWrapperService">
+            <Input>
+                <Container ShipmentKey=""/>
+            </Input>
+            <Template/>
+        </API>
+        <classInformation name="com.ibm.wsc.common.mashups.WSCBaseMashup"/>
+        <APINamespace
+            inputNS="extn_BeforeChangeShipmentOnFinishPack_input" outputNS="extn_BeforeChangeShipmentOnFinishPack_output"/>
+        <AlternateResourceIds/>
+    </mashup>
+    <mashup
+        description="This service is to print the shipping label when clicked from related tasks"
+        endpoint="EP_CONFIG" id="extn_PrintShippingLabel"
+        mashuptype="XAPI" resourceId="" transactional="true">
+        <API FlowName="AcademySFSRePrintShippingLabel">
+            <Input>
+                <Print DisplayLocalizedFieldInLocale="en_US_EST"
+                    PickTicketPrinted="" RePrintPackStn="PACK_STATION1"
+                    ShipNode="xml:CurrentStore:/Store/@ShipNode"
+                    ShipmentContainerKey="" ShipmentKey="" ShipmentType="CON">
+                    <Login LoginID="xml:CurrentUser:/User/@Loginid"/>
+                </Print>
+            </Input>
+            <Template/>
+        </API>
+        <classInformation name="com.ibm.wsc.common.mashups.WSCBaseMashup"/>
+        <APINamespace inputNS="extn_PrintShippingLabel_input" outputNS="extn_PrintShippingLabel_output"/>
+        <AlternateResourceIds/>
+    </mashup>
+    <mashup
+        description="This service is to print the return label when clicked from related tasks"
+        endpoint="EP_CONFIG" id="extn_PrintReturnLabel"
+        mashuptype="XAPI" resourceId="" transactional="true">
+        <API FlowName="AcademySFSRePrintInvoice">
+            <Input>
+                <Print DisplayLocalizedFieldInLocale="en_US_EST"
+                    PickTicketPrinted="" RePrintPackStn="PACK_STATION1"
+                    ShipNode="xml:CurrentStore:/Store/@ShipNode"
+                    ShipmentContainerKey="" ShipmentKey="" ShipmentType="CON">
+                    <Login LoginID="xml:CurrentUser:/User/@Loginid"/>
+                </Print>
+            </Input>
+            <Template/>
+        </API>
+        <classInformation name="com.ibm.wsc.common.mashups.WSCBaseMashup"/>
+        <APINamespace inputNS="extn_PrintReturnLabel_input" outputNS="extn_PrintReturnLabel_output"/>
+        <AlternateResourceIds/>
+    </mashup>
+    <mashup
+        description="This service is to print the ORM-D label when clicked from related tasks"
+        endpoint="EP_CONFIG" id="extn_PrintORMDLabel" mashuptype="XAPI"
+        resourceId="" transactional="true">
+        <API FlowName="AcademySFSRePrintORMDLabel">
+            <Input>
+                <Print DisplayLocalizedFieldInLocale="en_US_EST"
+                    PickTicketPrinted="" RePrintPackStn="PACK_STATION1"
+                    ShipNode="xml:CurrentStore:/Store/@ShipNode"
+                    ShipmentContainerKey="" ShipmentKey="" ShipmentType="CON">
+                    <Login LoginID="xml:CurrentUser:/User/@Loginid"/>
+                </Print>
+            </Input>
+            <Template/>
+        </API>
+        <classInformation name="com.ibm.wsc.common.mashups.WSCBaseMashup"/>
+        <APINamespace inputNS="extn_PrintORMDLabel_input" outputNS="extn_PrintORMDLabel_output"/>
+        <AlternateResourceIds/>
+    </mashup>
+    <mashup description="" endpoint="EP_CONFIG"
+        id="extn_getContainerDetail" mashuptype="XAPI" resourceId="" transactional="true">
+        <API Name="getItemList">
+            <Input>
+                <Item>
+                    <ItemAliasList>
+                        <ItemAlias AliasValue="">
+                            <ComplexQuery Operator="OR">
+                                <Or>
+                                    <Exp Name="AliasValue" QryType="EQ" Value=""/>
+                                </Or>
+                            </ComplexQuery>
+                        </ItemAlias>
+                    </ItemAliasList>
+                </Item>
+            </Input>
+            <Template>
+                <ItemList>
+                    <Item IsShippingCntr="" ItemID="" ItemKey="">
+                        <PrimaryInformation Description="" ItemType=""/>
+                    </Item>
+                </ItemList>
+            </Template>
+        </API>
+        <classInformation name="com.ibm.wsc.common.mashups.WSCBaseMashup"/>
+        <APINamespace inputNS="extn_getContainerDetail_input" outputNS="extn_getContainerDetail_output"/>
+        <AlternateResourceIds/>
+    </mashup>
+    <mashup description="" endpoint="EP_CONFIG"
+        id="extn_SFSBeforeCreateContainersAndPrint" mashuptype="XAPI"
+        resourceId="" transactional="true">
+        <API FlowName="AcademySFSBeforeCreateContainersAndPrintService">
+            <Input>
+                <Shipment ContainerGrossWeight="" ContainerScm=""
+                    ContainerType="" ContainerTypeKey=""
+                    DisplayLocalizedFieldInLocale="xml:CurrentUser:/User/@Localecode"
+                    IsWebStoreFlow="Y" OrderNo=""
+                    ShipmentContainerKey="" ShipmentKey=""/>
+            </Input>
+            <Template/>
+        </API>
+        <classInformation name="com.ibm.wsc.common.mashups.WSCBaseMashup"/>
+        <APINamespace
+            inputNS="extn_SFSBeforeCreateContainersAndPrint_input" outputNS="extn_SFSBeforeCreateContainersAndPrint_output"/>
+        <AlternateResourceIds/>
+    </mashup>
+    <mashup description="" endpoint="EP-COFIG" id="extn_dropDownValues"
+        mashuptype="XAPI" resourceId="" transactional="true">
+        <API FlowName="AcademyContainerPackDropDownFlag">
+            <Input>
+                <Item DisplayLocalizedFieldInLocale="en_US_EST" IsShippingCntr="Y">
+                    <PrimaryInformation/>
+                </Item>
+            </Input>
+            <Template>
+                <ItemList EnableContainerDropDown="">
+                    <Item ItemID="" ItemKey="">
+                        <OrderBy>
+                            <Attribute Desc="N" Name="ItemID"/>
+                        </OrderBy>
+                        <PrimaryInformation Description="" ItemType=""/>
+                    </Item>
+                </ItemList>
+            </Template>
+        </API>
+        <classInformation name="com.ibm.wsc.common.mashups.WSCBaseMashup"/>
+        <APINamespace inputNS="extn_dropDownValues_input" outputNS="extn_dropDownValues_output"/>
+        <AlternateResourceIds/>
+    </mashup>
+    <mashup
+        description="This mashup is to cancel the shipment if the shipment is from a store different than that of logged in store"
+        endpoint="EP_CONFIG" id="extn_CancelShipmentOtherStoreMashup"
+        mashuptype="XAPI" resourceId="" transactional="true">
+        <API FlowName="AcademyStoreRecordShortageService">
+            <Input/>
+            <Template/>
+        </API>
+        <classInformation name="com.ibm.wsc.common.mashups.WSCBaseMashup"/>
+        <APINamespace
+            inputNS="extn_CancelShipmentOtherStoreMashup_input" outputNS="extn_CancelShipmentOtherStoreMashup_output"/>
+        <AlternateResourceIds/>
+    </mashup>
+    <mashup description="" endpoint="EP_CONFIG"
+        id="extn_stampInvoiceNoOnBOPISOrders" mashuptype="XAPI"
+        resourceId="" transactional="true">
+        <API FlowName="AcademyStampInvoiceNoOnBOPISOrders">
+            <Input>
+                <Shipment DeliveryMethod="" ShipmentKey=""/>
+            </Input>
+            <Template/>
+        </API>
+        <classInformation name="com.ibm.wsc.common.mashups.WSCBaseMashup"/>
+        <APINamespace inputNS="extn_stampInvoiceNoOnBOPISOrders_input" outputNS="extn_stampInvoiceNoOnBOPISOrders_output"/>
+        <AlternateResourceIds/>
+    </mashup>
+    <mashup description="" endpoint="EP_CONFIG"
+        id="common_getReasonCodeList_new" mashuptype="XAPI"
+        resourceId="" transactional="true">
+        <API Name="getCommonCodeList">
+            <Input>
+                <CommonCode CodeType="ACAD_OTHER_STRCANCEL"/>
+            </Input>
+            <Template/>
+        </API>
+        <classInformation name="com.ibm.wsc.common.mashups.WSCBaseMashup"/>
+        <APINamespace inputNS="extn_stampInvoiceNoOnBOPISOrders_input" outputNS="extn_stampInvoiceNoOnBOPISOrders_output"/>
+        <AlternateResourceIds/>
+    </mashup>
+		<mashup description="Mashup for getting available Hip printer devices for a Store" endpoint="EP_CONFIG"
+        id="getPrinterDevice" mashuptype="XAPI"
+        resourceId="" skipDataProvider="false" transactional="true">
+        <classInformation name="com.ibm.wsc.common.mashups.WSCBaseMashup"/>
+        <API Name="getDeviceList">
+            <Input>
+				<Device OrganizationCode="xml:CurrentStore:/Store/@ShipNode" DeviceSubType="HIP Printer" DeviceParamsXML="Value=&quot;ENABLED&quot;" DeviceParamsXMLQryType="LIKE">
+					<OrderBy>
+                        	<Attribute Desc="N" Name="DeviceId"/>
+					</OrderBy>
+				</Device> 
+			</Input>
+
+			<Template>
+				<Devices>
+					<Device DeviceId="" DeviceParamsXML=""/>
+				</Devices>	
+			</Template>	
+		</API>
+        <classInformation name="com.ibm.wsc.common.mashups.WSCBaseMashup"/>
+        <APINamespace inputNS="getPrinterDeviceList_input" outputNS="getPrinterDeviceList_output"/>
+        <AlternateResourceIds/>
+    </mashup>
+    <mashup
+        description="Mashup for getting the SFS orders count for Backroom Pick statuses"
+        endpoint="EP_CONFIG" id="extn_SFSOrdersCount" mashuptype="XAPI"
+        resourceId="" transactional="true">
+        <API Name="getShipmentList">
+            <Input>
+                <Shipment DeliveryMethod="SHP"
+                    DisplayLocalizedFieldInLocale="xml:CurrentUser:/User/@Localecode"
+                    MaximumRecords="" ShipNode="xml:CurrentStore:/Store/@ShipNode">
+                    <ComplexQuery>
+                        <And>
+                            <Exp Name="Status" QryType="GE" Value="1100.70.06.10"/>
+                            <Exp Name="Status" QryType="LE" Value="1100.70.06.20"/>
+                        </And>
+                    </ComplexQuery>
+                </Shipment>
+            </Input>
+            <Template>
+                <Shipments TotalNumberOfRecords=""/>
+            </Template>
+        </API>
+        <classInformation name="com.ibm.wsc.common.mashups.WSCBaseMashup"/>
+        <APINamespace inputNS="extn_SFSOrdersCount_input" outputNS="extn_SFSOrdersCount_output"/>
+        <AlternateResourceIds/>
+    </mashup>
+    <mashup description="This mashup is to get the user related details"
+        endpoint="EP_ORDER" id="extn_getUserListByUserID"
+        mashuptype="XAPI" resourceId="" transactional="true">
+        <API Name="getUserList">
+            <Input>
+                <User ApplyQueryTimeout="Y"
+                    DisplayLocalizedFieldInLocale="xml:CurrentUser:/User/@Localecode"
+                    DisplayUserID="" OrganizationKey=""/>
+            </Input>
+            <Template>
+                <UserList>
+                    <User DisplayUserID="" EnterpriseCode="" Username=""/>
+                </UserList>
+            </Template>
+        </API>
+        <classInformation name="com.ibm.wsc.common.mashups.WSCBaseMashup"/>
+        <APINamespace inputNS="extn_getUserListByUserID_input" outputNS="extn_getUserListByUserID_output"/>
+        <AlternateResourceIds/>
+    </mashup>
+    <!-- Added for Mobile Search eCom Orders -->
+    <mashup description="Get Order list matching search criteria"
+        endpoint="EP_CONFIG" id="eComOrderSearch_getOrderList"
+        mashuptype="XAPI" transactional="true">
+        <classInformation name="com.academy.wsc.extn.mashups.AcademyeComOrderSearchMashup"/>
+        <API Name="getOrderList">
+            <Input>
+                <Order
+                    CustomerEMailID="xml:scControllerInput:/Order/PersonInfoBillTo/@EMailID"
+                    CustomerEMailIDQryType="FLIKE"
+                    CustomerFirstName="xml:scControllerInput:/Order/PersonInfoBillTo/@FirstName"
+                    CustomerLastName="xml:scControllerInput:/Order/PersonInfoBillTo/@LastName"
+                    CustomerPhoneNo="xml:scControllerInput:/Order/PersonInfoBillTo/@DayPhone"
+                    DocumentType="0001" FromOrderDate=""
+                    NumberOfDays="xml:scControllerInput:/Order/@NumberOfDays"
+                    OrderDateQryType="BETWEEN"
+                    OrderNo="xml:scControllerInput:/Order/@OrderNo" ToOrderDate="">
+                    <OrderBy>
+                        <Attribute Desc="Y" Name="OrderDate"/>
+                    </OrderBy>
+                </Order>
+            </Input>
+            <Template>
+                <OrderList FirstOrderHeaderKey="" LastOrderHeaderKey="" TotalNumberOfRecords="">
+                    <Order CustomerEMailID="" CustomerFirstName=""
+                        CustomerLastName="" CustomerPhoneNo=""
+                        EnterpriseCode="" MaxOrderStatus=""
+                        MaxOrderStatusDesc="" MinOrderStatus=""
+                        MinOrderStatusDesc="" OrderDate=""
+                        OrderHeaderKey="" OrderNo="" Status="">
+                        <PersonInfoBillTo AddressLine1=""
+                            AddressLine2="" City="" Country=""
+                            DayFaxNo="" DayPhone="" EMailID=""
+                            EveningFaxNo="" EveningPhone="" FirstName=""
+                            IsCommercialAddress="" LastName=""
+                            MiddleName="" MobilePhone=""
+                            PersonInfoKey="" PreferredShipAddress=""
+                            State="" ZipCode=""/>
+                    </Order>
+                </OrderList>
+            </Template>
+        </API>
+        <APINamespace inputNS="getOrderList_input" outputNS="getOrderList_output"/>
+        <AlternateResourceIds/>
+    </mashup>
+    <!--  get Order Details -->
+    <mashup description="Get Order Details matching search criteria"
+        endpoint="EP_CONFIG" id="eComOrderSearch_getOrderDetails"
+        mashuptype="XAPI" transactional="true">
+        <classInformation name="com.ibm.wsc.common.mashups.WSCBaseMashup"/>
+        <API Name="getCompleteOrderDetails">
+            <Input>
+                <Order OrderHeaderKey="xml:scControllerInput:/Order/@OrderHeaderKey"/>
+            </Input>
+            <Template>
+                <Order CustomerEMailID="" CustomerFirstName=""
+                    CustomerLastName="" CustomerPhoneNo=""
+                    EnterpriseCode="" MaxOrderStatus=""
+                    MaxOrderStatusDesc="" MinOrderStatus=""
+                    MinOrderStatusDesc="" OrderDate="" OrderHeaderKey=""
+                    OrderNo="" Status="">
+                    <PersonInfoBillTo/>
+                    <PersonInfoShipTo/>
+                    <OrderLines TotalNumberOfRecords="">
+                        <OrderLine CarrierServiceCode=""
+                            DeliveryMethod="" FulfillmentType=""
+                            MaxLineStatus="" MaxLineStatusDesc=""
+                            MinLineStatus="" MinLineStatusDesc=""
+                            OpenQty="" OrderHeaderKey="" OrderLineKey=""
+                            OrderedQty="" OriginalOrderedQty="" Status="">
+                            <Extn ExtnWCOrderItemIdentifier=""/>
+                            <ItemDetails ItemID="">
+                                <PrimaryInformation
+                                    DisplayItemDescription=""
+                                    ExtendedDescription=""
+                                    ExtendedDisplayDescription=""
+                                    ImageID="" ImageLabel="" ImageLocation=""/>
+                            </ItemDetails>
+                            <Item ItemDesc="" ItemID="" ItemShortDesc=""
+                                ProductClass="" UnitCost="" UnitOfMeasure=""/>
+                            <LinePriceInfo ActualPricingQty=""
+                                LineTotal="" ListPrice=""
+                                OrderedPricingQty="" PricingUOM="" UnitPrice=""/>
+                            <OrderStatuses>
+                                <OrderStatus OrderHeaderKey=""
+                                    OrderLineKey=""
+                                    OrderLineScheduleKey=""
+                                    OrderReleaseKey=""
+                                    OrderReleaseStatusKey=""
+                                    PipelineKey="" ReceivingNode=""
+                                    ShipNode="" Status="" StatusDate=""
+                                    StatusDescription="" StatusQty=""
+                                    StatusReason="" TotalQuantity=""/>
+                            </OrderStatuses>
+                        </OrderLine>
+                    </OrderLines>
+                </Order>
+            </Template>
+        </API>
+        <APINamespace inputNS="getOrderDetails_input" outputNS="getOrderDetails_output"/>
+        <AlternateResourceIds/>
+    </mashup>
+    <mashup description="Get Order Line specific shipment information"
+        endpoint="EP_CONFIG" id="eComOrder_getShipmentListForOrder"
+        mashuptype="XAPI" transactional="true">
+        <classInformation name="com.ibm.wsc.common.mashups.WSCBaseMashup"/>
+        <API Name="getShipmentListForOrder">
+            <Input>
+                <Order DocumentType="0001" OrderHeaderKey="" OrderLineKey=""/>
+            </Input>
+            <Template>
+                <ShipmentList>
+                    <Shipment CarrierServiceCode="" DeliveryMethod=""
+                        DocumentType="" ShipNode="" ShipmentNo=""
+                        Status="" TrackingNo="">
+                        <Status Description=""/>
+                        <ShipmentLines>
+                            <ShipmentLine OrderLineKey=""
+                                OriginalQuantity="" Quantity=""
+                                ShipmentLineNo="" Status="">
+                                <OrderLine FulfillmentType="" OrderLineKey=""/>
+                            </ShipmentLine>
+                        </ShipmentLines>
+                        <Containers>
+                            <Container TrackingNo=""/>
+                        </Containers>
+                    </Shipment>
+                </ShipmentList>
+            </Template>
+        </API>
+        <APINamespace inputNS="eComOrder_getShipmentListForOrder_input" outputNS="eComOrder_getShipmentListForOrder_output"/>
+        <AlternateResourceIds/>
+    </mashup>
+    <mashup
+        description="Academy Cancel Order Service to cancel from search criteria"
+        endpoint="EP_CONFIG" id="eComOrderSearch_AcademyCancelOrder"
+        mashuptype="XAPI" transactional="true">
+        <classInformation name="com.ibm.wsc.common.mashups.WSCBaseMashup"/>
+        <API FlowName="AcademyCancelOrderService">
+            <Input>
+                <Order Action="Cancel"
+                    CancelledBy="xml:CurrentUser:/User/@Loginid"
+                    CancellingSystem="xml:CurrentStore:/Store/@ShipNode"
+                    OrderNo="" ReasonCode="" SourceID="Webstore"/>
+            </Input>
+            <Template/>
+        </API>
+        <APINamespace inputNS="eComOrderSearch_AcademyCancelOrder_input" outputNS="eComOrderSearch_AcademyCancelOrder_output"/>
+        <AlternateResourceIds/>
+    </mashup>
+    <!--
+	<mashup description="Service invoked on click of Finish Pack for an SFS order"
+        endpoint="EP_CONFIG"
+        id="extn_FinishPackCustomized" mashuptype="XAPI"
+        transactional="true">
+        <classInformation name="com.ibm.wsc.common.mashups.WSCBaseMashup"/>
+        <API FlowName="AcademySFSProcessFinishPackService">
+            <Input>
+                <Shipments> 
+                  <Shipment ContainerGrossWeight="" ContainerScm=""  ContainerType="" ContainerTypeKey=""
+                    DisplayLocalizedFieldInLocale="xml:CurrentUser:/User/@Localecode"  IsWebStoreFlow="Y" 
+                    ShipmentContainerKey="" ShipmentKey="" OrderNo=""/>				
+				</Shipments>        
+			</Input>
+            <Template/>
+        </API>
+        <APINamespace inputNS="extn_FinishPackCustomized_input" outputNS="extn_FinishPackCustomized_output"/>
+        <AlternateResourceIds/>
+    </mashup>
+	-->
+    <mashup
+        description="This service is to print the customer pickup acknowledgement"
+        endpoint="EP_ORDER" id="extn_AcademyBOPISPrintAckSlip"
+        mashuptype="XAPI" resourceId="" transactional="true">
+        <API FlowName="AcademyBOPISPrintAckSlip">
+            <Input>
+                <Shipment ShipmentKey=""/>
+            </Input>
+            <Template/>
+        </API>
+        <classInformation name="com.ibm.wsc.common.mashups.WSCBaseMashup"/>
+        <APINamespace inputNS="extn_AcademyBOPISPrintAckSlip_input" outputNS="extn_AcademyBOPISPrintAckSlip_output"/>
+        <AlternateResourceIds/>
+    </mashup>
+    <mashup description="" endpoint="EP_CONFIG"
+        id="eComOrderSearch_getNumberofDays" mashuptype="XAPI"
+        resourceId="" transactional="true">
+        <API Name="getCommonCodeList">
+            <Input>
+                <CommonCode CodeType="ASO_ECOM_SEARCH_DAYS"/>
+            </Input>
+            <Template/>
+        </API>
+        <classInformation name="com.ibm.wsc.common.mashups.WSCBaseMashup"/>
+        <APINamespace inputNS="eComOrderSearch_getNumberofDays_input" outputNS="eComOrderSearch_getNumberofDays_output"/>
+        <AlternateResourceIds/>
+    </mashup>
+    <mashup description="" endpoint="EP_CONFIG"
+        id="extn_getUserIDFromUsername" mashuptype="XAPI" resourceId="" transactional="true">
+        <API Name="getUserList">
+            <Input>
+                <User
+                    OrganizationKey="xml:CurrentStore:/Store/@ShipNode" Username=""/>
+            </Input>
+            <Template/>
+        </API>
+        <classInformation name="com.ibm.wsc.common.mashups.WSCBaseMashup"/>
+        <APINamespace inputNS="extn_getUserIDFromUsername_input" outputNS="extn_getUserIDFromUsername_output"/>
+        <AlternateResourceIds/>
+    </mashup>
+    <mashup description="" endpoint="EP_CONFIG"
+        id="extn_AgeVerifiedChangeShipment" mashuptype="XAPI"
+        resourceId="" transactional="true">
+		<!--OMNI-102472 -->
+        <API FlowName="AcademyUpdateAgeVerifiedForShipmentLines">
+            <Input/>
+            <Template/>
+        </API>
+        <classInformation name="com.ibm.wsc.common.mashups.WSCBaseMashup"/>
+        <APINamespace inputNS="extn_AgeVerifiedChangeShipment_input" outputNS="extn_AgeVerifiedChangeShipment_output"/>
+        <AlternateResourceIds/>
+    </mashup>
+    <mashup description="" endpoint="EP_CONFIG"
+        id="mobileHomeSearch_getDefaultStatuses" mashuptype="XAPI"
+        resourceId="" transactional="true">
+        <API Name="getCommonCodeList">
+            <Input>
+                <CommonCode CodeType="ASO_MOB_SRCH_STATUS"/>
+            </Input>
+            <Template/>
+        </API>
+        <classInformation name="com.ibm.wsc.common.mashups.WSCBaseMashup"/>
+        <APINamespace
+            inputNS="mobileHomeSearch_getDefaultStatuses_input" outputNS="mobileHomeSearch_getDefaultStatuses_output"/>
+        <AlternateResourceIds/>
+    </mashup>
+    <mashup description="" endpoint="EP_CONFIG"
+        id="startOverFromBatchPick_manageBatch" mashuptype="XAPI"
+        resourceId="" transactional="true">
+        <API FlowName="AcademyManageBatchOnShipmentCancelandIndvPicked">
+            <Input>
+                <Shipment IsPulledForIndividualPicking="Y"
+                    ShipmentKey="" StoreBatchKey=""/>
+            </Input>
+            <Template/>
+        </API>
+        <classInformation name="com.ibm.wsc.common.mashups.WSCBaseMashup"/>
+        <APINamespace inputNS="startOverFromBatchPick_manageBatch_input" outputNS="startOverFromBatchPick_manageBatch_output"/>
+        <AlternateResourceIds/>
+    </mashup>
+    <mashup description="" endpoint="EP_ORDER" id="extn_getShipmentList"
+        mashuptype="XAPI" resourceId="" transactional="true">
+        <API Name="getShipmentList">
+            <Input/>
+            <Template>
+                <Shipments TotalNumberOfRecords="">
+                    <Shipment AssignedToUserId="" ShipmentKey=""
+                        ShipmentNo="" Status=""/>
+                </Shipments>
+            </Template>
+        </API>
+        <classInformation name="com.ibm.wsc.common.mashups.WSCBaseMashup"/>
+        <APINamespace inputNS="extn_getShipmentList_input" outputNS="extn_getShipmentList_output"/>
+        <AlternateResourceIds/>
+    </mashup>
+    <mashup
+        description="This api call is made to save the package weight and call Finish Pack service in a single transaction boundary."
+        endpoint="EP_CONFIG" id="extn_AcademyUpdateWeightAndFinishPack"
+        mashuptype="XAPI" resourceId="" transactional="true">
+        <API FlowName="AcademyUpdateWeightAndFinishPack">
+            <Input>
+                <Shipment OrderNo="" SCAC="" ShipmentKey="">
+                    <Containers>
+                        <Container ActualWeight="" ActualWeightUOM=""
+                            ContainerGrossWeight="" ContainerScm=""
+                            ContainerType="" ContainerTypeKey=""
+                            IsPackProcessComplete="" ShipmentContainerKey=""/>
+                    </Containers>
+                </Shipment>
+            </Input>
+            <Template>
+                <Shipment ShipmentKey=""/>
+            </Template>
+        </API>
+        <classInformation name="com.ibm.wsc.common.mashups.WSCBaseMashup"/>
+        <APINamespace
+            inputNS="extn_AcademyUpdateWeightAndFinishPack_input" outputNS="extn_AcademyUpdateWeightAndFinishPack_output"/>
+        <AlternateResourceIds>
+            <AlternateResourceId altResourceId="WSC000019"/>
+        </AlternateResourceIds>
+    </mashup>
+    <mashup description="Pick all shipment quantities"
+        endpoint="EP_CONFIG"
+        id="extn_customerpickup_updateShipmentQuantity"
+        mashuptype="XAPI" resourceId="" transactional="true">
+        <API Name="changeShipment">
+            <Input>
+                <Shipment ShipmentKey="">
+                    <ShipmentLines>
+                        <ShipmentLine CancelReason="" ShipmentKey=""
+                            CustomerPickedQuantity="" Quantity=""
+                            ShipmentLineKey="" ShortageQty="" ShortageResolutionReason=""/>
+                    </ShipmentLines>
+                </Shipment>
+            </Input>
+            <Template>
+                <Shipment ShipmentKey="" ShipmentNo="" Status=""/>
+            </Template>
+        </API>
+        <classInformation name="com.ibm.wsc.common.mashups.WSCBaseMashup"/>
+        <APINamespace
+            inputNS="extn_customerpickup_updateShipmentQuantity_input" outputNS="extn_customerpickup_updateShipmentQuantity_output"/>
+        <AlternateResourceIds/>
+    </mashup>
+    <!-- START - (OMNI - 1434)  : BOPIS Page Tagging/Reporting -->
+	<!-- OMNI - 79480 Added  NotifyStore attribute -->
+    <mashup description="" endpoint="EP_CONFIG"
+        id="extn_RecordStoreUserActionMashup" mashuptype="XAPI"
+        resourceId="" transactional="true">
+        <API FlowName="AcademyCreateStoreActionData">
+            <Input>
+                <AcadStoreActionData Delivery_Method="" OrderNo=""
+                    ShipmentNo="" UserID="" NotifyStore="" />
+            </Input>
+            <Template/>
+        </API>
+        <classInformation name="com.ibm.wsc.common.mashups.WSCBaseMashup"/>
+        <APINamespace inputNS="extn_RecordStoreUserActionMashup_input" outputNS="extn_RecordStoreUserActionMashup_output"/>
+        <AlternateResourceIds/>
+    </mashup>
+    <!-- END - (OMNI - 1434)  : BOPIS Page Tagging/Reporting -->
+    
+    <!-- Start - OMNI-5402 : Curbside Pickup home screen -->
+    <mashup
+        description="Mashup for getting the Curbside Pickup orders count for Customer pick"
+        endpoint="EP_CONFIG" id="extn_CurbsidePickupOrders"
+        mashuptype="XAPI" resourceId="" transactional="true">
+        <API Name="getShipmentList">
+            <Input>
+                <Shipment DeliveryMethod="PICK"
+                    DisplayLocalizedFieldInLocale="xml:CurrentUser:/User/@Localecode"
+                    MaximumRecords=""
+                    ShipNode="xml:CurrentStore:/Store/@ShipNode" Status="">
+					<!--OMNI-88749 - Start -->
+					<!--OMNI-89343 - Removed complex query values-->
+					<ComplexQuery Operator=""> 
+							<Or> 
+								<Exp Name="" QryType="" Value=""/> 
+							</Or> 
+					</ComplexQuery> 
+					<!--OMNI-88749 - End -->	
+                    <Extn ExtnIsCurbsidePickupOpted="Y"/>
+				</Shipment>
+            </Input>
+            <Template>
+                <Shipments TotalNumberOfRecords=""/>
+            </Template>
+        </API>
+        <classInformation name="com.ibm.wsc.common.mashups.WSCBaseMashup"/>
+        <APINamespace inputNS="extn_CurbsidePickupOrders_input" outputNS="extn_CurbsidePickupOrders_output"/>
+        <AlternateResourceIds/>
+    </mashup>
+    <!-- End - OMNI-5402 : Curbside Pickup home screen -->
+	
+     <!-- OMNI- 4017, 5888, 5885, 30146 BOPIS: Cancel Email consolidation at Order level for cancellations START --> 
+    <mashup description="" endpoint="EP_CONFIG"
+        id="extn_SendBOPISCancelMailMashup" mashuptype="XAPI"
+        resourceId="" transactional="true">
+        <API FlowName="AcademySendBOPISCancelEmailService">
+            <Input>
+                <Shipment CustomerEMailID="" DeliveryMethod="" OrderNo="" ShipmentNo="">
+                    <ShipmentLines>
+                        <ShipmentLine ShipmentLineKey="" ShipmentLineNo="">
+                            <OrderLine OrderedQty="" OriginalOrderedQty="">
+                                <Item ItemDesc="" ItemID=""/>
+                                <Order CustomerEMailID="" OrderNo="">
+                                     <PersonInfoBillTo DayPhone=""
+                                    FirstName="" LastName=""/>
+                                    <PersonInfoShipTo DayPhone=""
+                                    FirstName="" LastName=""/>
+                                </Order>
+                            </OrderLine>
+                        </ShipmentLine>
+                    </ShipmentLines>
+                </Shipment>
+            </Input>
+            <Template/>
+        </API>
+        <classInformation name="com.ibm.wsc.common.mashups.WSCBaseMashup"/>
+        <APINamespace inputNS="extn_SendBOPISCancelMailMashup_input" outputNS="extn_SendBOPISCancelMailMashup_output"/>
+        <AlternateResourceIds/>
+    </mashup>
+     <!-- OMNI- 4017, 5888, 5885, 30146 BOPIS: Cancel Email consolidation at Order level for cancellations END -->
+	 
+     <!--  OMNI- 3676 BOPIS: Apply All Staging Locations START  -->
+    <mashup description="" endpoint="EP_CONFIG"
+        id="extn_AssignStagingLocationALLMashup" mashuptype="XAPI"
+        resourceId="" transactional="true">
+        <API Name="changeShipment">
+            <Input>
+                <Shipment Action="" ShipmentKey="">
+                    <ShipmentLines>
+                        <ShipmentLine ShipmentLineKey=""/>
+                        <Extn ExtnStagingLocation=""/>
+                    </ShipmentLines>
+                </Shipment>
+            </Input>
+            <Template>
+                <Shipment ShipmentKey="">
+                    <ShipmentLines>
+                        <ShipmentLine ShipmentLineKey="">
+                            <Extn ExtnStagingLocation=""/>
+                        </ShipmentLine>
+                    </ShipmentLines>
+                </Shipment>
+            </Template>
+        </API>
+        <classInformation name="com.ibm.wsc.common.mashups.WSCBaseMashup"/>
+        <APINamespace
+            inputNS="extn_AssignStagingLocationALLMashup_input" outputNS="extn_AssignStagingLocationALLMashup_output"/>
+        <AlternateResourceIds/>
+    </mashup>
+    <!-- OMNI- 3676 BOPIS: Apply All Staging Locations END -->
+	
+	<!-- Start - OMNI-6579 : STS Ready To Recieve Containers-home screen -->
+    <mashup
+        description="Display the Count of STS Ready to Receive Containers"
+        endpoint="EP_CONFIG" id="extn_STSReceiveContainersCount"
+        mashuptype="XAPI" resourceId="" transactional="true">
+        <API FlowName="AcademyGetSTSReadyToReceiveContainerCountService">
+            <Input>
+				<Container IsReceived="N" Zone="" Createts="" CreatetsQryType="GT" 
+					DisplayLocalizedFieldInLocale="xml:CurrentUser:/User/@Localecode">
+					<Extn ExtnIsSOCancelledQryType="NE" ExtnIsSOCancelled="Y" />
+					<Shipment CarrierServiceCode="" DeliveryMethod="SHP" 
+						DocumentType="0006" SCAC="" ReceivingNode="xml:CurrentStore:/Store/@ShipNode" 
+						ShipmentType="STS" PackListType="FA" PackListTypeQryType="NE">
+						<ComplexQuery Operator="AND"> 
+							<Or> 
+								<Exp Name="Status" QryType="EQ" Value="1400"/> 
+								<Exp Name="Status" QryType="EQ" Value="1600"/> 
+							</Or> 
+						</ComplexQuery> 
+					</Shipment>		
+				</Container>
+            </Input>
+            <Template>
+                <Containers TotalNumberOfRecords=""/>
+            </Template>
+        </API>
+        <classInformation name="com.ibm.wsc.common.mashups.WSCBaseMashup"/>
+        <APINamespace inputNS="extn_STSReceiveContainersCount_input" outputNS="extn_STSReceiveContainersCount_output"/>
+        <AlternateResourceIds/>
+    </mashup>
+	<!-- End - OMNI-6579 : STS Ready To Recieve Containers-home screen -->
+	
+	<!-- Start - OMNI-6580 : STS Stage Containers-home screen -->
+    <mashup
+        description="Display the STS Ready to Stage Containers Count"
+        endpoint="EP_CONFIG" id="extn_STSStageContainersCount"
+        mashuptype="XAPI" resourceId="" transactional="true">
+        <API FlowName="AcademyGetSTSReadyToStageContainerCountService">
+            <Input>
+                <Container CarrierServiceCode="STS" DeliveryMethod="PICK"
+                    DisplayLocalizedFieldInLocale="xml:CurrentUser:/User/@Localecode"
+                    DocumentType="0001" MaximumRecords="" SCAC="LOCAL"
+                    ShipNode="xml:CurrentStore:/Store/@ShipNode"
+                    ShipmentType="STS" Status="1100.70.06.10"/>
+            </Input>
+            <Template>
+                <Containers TotalNumberOfRecords=""/>
+            </Template>
+        </API>
+        <classInformation name="com.ibm.wsc.common.mashups.WSCBaseMashup"/>
+        <APINamespace inputNS="extn_STSStageContainersCount_input" outputNS="extn_STSStageContainersCount_output"/>
+        <AlternateResourceIds/>
+    </mashup>
+	<!-- End - OMNI-6580 : STS Stage Containers-home screen -->
+
+ <!-- Start - OMNI-102102 OMNI-102286 : STS Delivered Intransit Containers-home screen -->
+    <mashup
+        description="Display the STS Ready to Stage Containers Count"
+        endpoint="EP_CONFIG" id="extn_STSDeliveredContainersCount"
+        mashuptype="XAPI" resourceId="" transactional="true">
+        <API FlowName="AcademySTSDeliveredContainerCountService">
+            <Input>
+                <Container IsReceived="N" Zone="" 
+                    DisplayLocalizedFieldInLocale="xml:CurrentUser:/User/@Localecode">
+                    <Extn ExtnIsSOCancelledQryType="NE" ExtnIsSOCancelled="Y" ExtnTrackingStatus="Delivered" ExtnTrackingStatusQryType="EQ" />
+                    <Shipment CarrierServiceCode="" DeliveryMethod="SHP" 
+                        DocumentType="0006" SCAC="" ReceivingNode="xml:CurrentStore:/Store/@ShipNode" 
+                        ShipmentType="STS" PackListType="FA" PackListTypeQryType="NE">
+                        <ComplexQuery Operator="AND"> 
+                            <Or> 
+                                <Exp Name="Status" QryType="EQ" Value="1400"/> 
+                                <Exp Name="Status" QryType="EQ" Value="1600"/> 
+                            </Or> 
+                        </ComplexQuery> 
+                    </Shipment>     
+                </Container>
+            </Input>
+            <Template>
+                <Containers TotalNumberOfRecords=""/>
+            </Template>
+        </API>
+        <classInformation name="com.ibm.wsc.common.mashups.WSCBaseMashup"/>
+        <APINamespace inputNS="extn_STSDeliveredContainersCount_input" outputNS="extn_STSDeliveredContainersCount_output"/>
+        <AlternateResourceIds/>
+    </mashup>
+
+
+    <mashup
+        description="Display the STS Ready to Stage Containers Count"
+        endpoint="EP_CONFIG" id="extn_STSIntransitContainersCount"
+        mashuptype="XAPI" resourceId="" transactional="true">
+        <API FlowName="AcademySTSInTransitContainerCountService">
+            <Input>
+                 <Container IsReceived="N" Zone="" 
+                    DisplayLocalizedFieldInLocale="xml:CurrentUser:/User/@Localecode">
+                    <Extn ExtnIsSOCancelledQryType="NE" ExtnIsSOCancelled="Y" ExtnTrackingStatus="Delivered" ExtnTrackingStatusQryType="NE" />
+                    <Shipment CarrierServiceCode="" DeliveryMethod="SHP" 
+                        DocumentType="0006" SCAC="" ReceivingNode="xml:CurrentStore:/Store/@ShipNode" 
+                        ShipmentType="STS" PackListType="FA" PackListTypeQryType="NE">
+                        <ComplexQuery Operator="AND"> 
+                            <Or> 
+                                <Exp Name="Status" QryType="EQ" Value="1400"/> 
+                                <Exp Name="Status" QryType="EQ" Value="1600"/> 
+                            </Or> 
+                        </ComplexQuery> 
+                    </Shipment>     
+                </Container>
+            </Input>
+            <Template>
+                <Containers TotalNumberOfRecords=""/>
+            </Template>
+        </API>
+        <classInformation name="com.ibm.wsc.common.mashups.WSCBaseMashup"/>
+        <APINamespace inputNS="extn_STSIntransitContainersCount_input" outputNS="extn_STSIntransitContainersCount_output"/>
+        <AlternateResourceIds/>
+    </mashup>
+
+   <!-- END - OMNI-102102 OMNI-102286 : STS Delivered Intransit Containers-home screen -->
+   
+   
+
+
+
+
+	
+	<!--OMNI-6583 Mobile Store - STS - TO Detailed Receiving Report Screen Start-->
+	<mashup
+        description="Mashup for getting the Pending container list on search of container no or order no"
+        endpoint="EP_CONFIG"
+        id="extn_transferOrderSummary_getTOShipmentDetails"
+        mashuptype="XAPI" resourceId="" transactional="true">
+        <API FlowName="AcademyGetSTSOrderDetailsForWSC">
+            <Input>
+                <Shipment ShipmentKey="" OrderHeaderKey=""/>
+            </Input>
+            <Template>
+			   <Shipments>
+					<Shipment DeliveryMethod="" DocumentType=""
+						ShipmentKey="" ShipmentNo="" Status="">
+						<Order DocumentType="" OrderNo="" MaxOrderStatus="" MinOrderStatus=""/>
+						<Containers TotalNumberOfRecords="">
+							<Container ContainerNo="" IsReceived="" Zone="">
+								<ContainerDetails>
+									<ContainerDetail ShipmentContainerKey="" ShipmentKey="" ShipmentLineKey="" Quantity="">
+										<ShipmentLine ShipmentLineKey="" Quantity="">
+											<OrderLine OrderLineKey="" OrderedQty="">
+												<ItemDetails ItemID="">
+													<PrimaryInformation	ExtendedDisplayDescription="" ItemDesc=""/>
+												</ItemDetails>
+												<Item ItemDesc="" ItemID=""/>
+											</OrderLine>
+										</ShipmentLine>
+									</ContainerDetail>				
+								</ContainerDetails>
+								<Extn ExtnIsSOCancelled="" ExtnTrackingStatus=""/>
+								<!-- OMNI-101574 - STS Shipments: Display shipped on date for STS shipments (TC70) - Added ActualShipmentDate Start/End -->
+                                <!-- OMNI-106224 - STS Shipments: Display "Shipped From" on container summary page - Added ShipNode Start/End -->
+								<Shipment ActualShipmentDate="">
+                                <ShipNode ShipNode=""/>
+                                </Shipment>
+							</Container>
+						</Containers>
+						<Status Description="" Status=""/>
+						<ShipmentLines>
+							<ShipmentLine ShipmentLineKey="">
+								<OrderLine OrderLineKey="">
+									<ItemDetails>
+										<PrimaryInformation
+										ExtendedDisplayDescription="" ItemDesc=""/>
+									</ItemDetails>
+									<Order DocumentType="" OrderNo="" MaxOrderStatusDesc="" MinOrderStatusDesc="" />
+									<ChainedFromOrderLine OrderHeaderKey="" OrderLineKey="" OrderNo="">
+										<Order DocumentType="" OrderNo="" MaxOrderStatus="" MinOrderStatus="" OrderDate="" Status="">
+											<PersonInfoShipTo/>
+											<PersonInfoBillTo/>
+										</Order>
+									</ChainedFromOrderLine>
+									<DerivedFromOrder/>
+								</OrderLine>
+								<DerivedFromOrder/>
+							</ShipmentLine>
+						</ShipmentLines>
+						<DerivedFromOrder/>
+					</Shipment>
+				 </Shipments>
+            </Template>
+        </API>
+        <classInformation name="com.ibm.wsc.common.mashups.WSCBaseMashup"/>
+        <APINamespace inputNS="extn_getTOShipmentDetails_input" outputNS="extn_getTOShipmentDetails_output"/>
+        <AlternateResourceIds/>
+    </mashup>
+    <mashup description="Mashup to get the scanned containers"
+        endpoint="EP_ORDER"
+        id="detailedReceivedReport_getScannedContainerCount"
+        mashuptype="XAPI" resourceId="" transactional="true">
+        <API FlowName="AcademySTSGetScannedContainerCount">
+            <Input>
+                <AcadSTSTOContainers ClosedFlag=""
+                    Createuserid="xml:CurrentUser:/User/@UserId" StoreNo="xml:CurrentStore:/Store/@ShipNode"/>
+            </Input>
+            <Template/>
+        </API>
+        <classInformation name="com.ibm.wsc.common.mashups.WSCBaseMashup"/>
+        <APINamespace
+            inputNS="detailedReceivedReport_getScannedContainerCount_input" outputNS="detailedReceivedReport_getScannedContainerCount_output"/>
+        <AlternateResourceIds/>
+    </mashup>
+    <!--OMNI-6583 Mobile Store - STS - TO Detailed Receiving Report Screen END-->
+	
+	<!-- Start - OMNI-6581 Receive Container -->
+    <mashup
+        description="Mashup to have the container receiving recorded in sterling DB"
+        endpoint="EP_ORDER"
+        id="receiveContainer_createAndReceiveTOContainer"
+        mashuptype="XAPI" resourceId="" transactional="true">
+        <API FlowName="AcademyReceiveTOContainer">
+            <Input>
+                <Container BatchNo="" ClosedFlag="N" ContainerNo="" StoreNo="xml:CurrentStore:/Store/@ShipNode" Createuserid="xml:CurrentUser:/User/@UserId"/>
+            </Input>
+            <Template/>
+        </API>
+        <classInformation name="com.ibm.wsc.common.mashups.WSCBaseMashup"/>
+        <APINamespace
+            inputNS="receiveContainer_createAndReceiveContainer_input" outputNS="receiveContainer_createAndReceiveContainer_output"/>
+        <AlternateResourceIds/>
+    </mashup>
+    <mashup
+        description="Mashup to fetch the container list from custom table"
+        endpoint="EP_ORDER"
+        id="receiveContainer_getExtnSTSContainerList" mashuptype="XAPI"
+        resourceId="" transactional="true">
+        <API FlowName="AcademyGetSTSContainerList">
+            <Input>
+				<!-- OMNI-10249  STS - Container ID Belongs To a Different Store - START -->
+                <Container ContainerNo="" StoreNo="xml:CurrentStore:/Store/@ShipNode"/>
+				<!-- OMNI-10249  STS - Container ID Belongs To a Different Store - END -->
+            </Input>
+            <Template>
+                <AcadSTSTOContainersList>
+                    <AcadSTSTOContainers ContainerNo=""/>
+                </AcadSTSTOContainersList>
+            </Template>
+        </API>
+        <classInformation name="com.ibm.wsc.common.mashups.WSCBaseMashup"/>
+        <APINamespace
+            inputNS="receiveContainer_getExtnSTSContainerList_input" outputNS="receiveContainer_getExtnSTSContainerList_output"/>
+        <AlternateResourceIds/>
+    </mashup>
+	<mashup description="Mashup to fetch the received container count from custom table for a batch" endpoint="EP_ORDER"
+        id="receiveContainerCount_getExtnSTSContainerList" mashuptype="XAPI"
+        resourceId="" transactional="true">
+        <API FlowName="AcademyGetSTSContainerList">
+            <Input>
+                <Container BatchNo="" StoreNo="xml:CurrentStore:/Store/@ShipNode" Createuserid="xml:CurrentUser:/User/@UserId"/>
+            </Input>
+            <Template>
+				<AcadSTSTOContainersList TotalNumberOfRecords="">
+					<AcadSTSTOContainers ContainerNo="" BatchNo=""/>
+				</AcadSTSTOContainersList>
+			</Template>
+        </API>
+        <classInformation name="com.ibm.wsc.common.mashups.WSCBaseMashup"/>
+        <APINamespace inputNS="receiveContainerCount_getExtnSTSContainerList_input" outputNS="receiveContainerCount_getExtnSTSContainerList_output"/>
+        <AlternateResourceIds/>
+    </mashup>
+	 <mashup
+        description="Mashup for getting the zone, receiving node of the container"
+        endpoint="EP_CONFIG"
+        id="receiveContainer_getShipmentContainerList"
+        mashuptype="XAPI" resourceId="" transactional="true">
+        <API Name="getShipmentContainerList">
+            <Input>
+				<!-- OMNI-10249  STS - Container ID Belongs To a Different Store - START -->
+                <Container ContainerNo="">
+					<Shipment ShipmentType="STS" ReceivingNode="xml:CurrentStore:/Store/@ShipNode"/>
+					<OrderBy>
+						<Attribute Desc="Y" Name="ShipmentContainerKey"/>
+					</OrderBy>
+				</Container>
+				<!-- OMNI-10249  STS - Container ID Belongs To a Different Store - START -->
+            </Input>
+              <Template>
+			    <Containers>
+					<Container ContainerNo="" Zone="" ShipmentContainerKey="">
+						<Shipment OrderHeaderKey="" OrderNo="" ReceivingNode="" ShipNode="" Status="" ShipmentKey="" Code="" PackListType=""/>
+						<Extn ExtnIsSOCancelled=""/>
+					</Container>
+				</Containers>
+			</Template>
+        </API>
+        <classInformation name="com.ibm.wsc.common.mashups.WSCBaseMashup"/>
+        <APINamespace
+            inputNS="receiveContainer_getShipmentContainerList_input" outputNS="receiveContainer_getShipmentContainerList_output"/>
+        <AlternateResourceIds/>
+    </mashup>
+	<!-- End - OMNI-6581 Receive Container -->
+	
+	<!-- Start - OMNI-6588 : Ready to Stage -->
+    <mashup
+        description="Mashup for getting the container list on scan of container no from Ready to Stage screen"
+        endpoint="EP_CONFIG"
+        id="extn_readyToStage_ValidateScannedContainerID"
+        mashuptype="XAPI" resourceId="" transactional="true">
+        <API Name="getShipmentContainerList">
+            <Input>
+				 <!-- OMNI-10249  STS - Container ID Belongs To a Different Store - START -->
+                 <Container ContainerNo="">
+					 <Shipment ShipmentType="STS" ReceivingNode="xml:CurrentStore:/Store/@ShipNode"/>
+					 <OrderBy>
+						 <Attribute Desc="Y" Name="ShipmentContainerKey"/>
+					 </OrderBy>
+				</Container>
+				<!-- OMNI-10249  STS - Container ID Belongs To a Different Store - END -->
+            </Input>
+            <Template>
+				<Containers>
+					<Container ContainerNo="" ShipmentContainerKey="" ShipmentKey="" Zone="">
+						<Shipment OrderNo="" OrderHeaderKey="" ShipNode="" ReceivingNode="" 
+						DocumentType="" ShipmentNo="" ShipmentType="" Status="" PackListType="">						
+							<ShipmentLines> 
+								<ShipmentLine ChainedFromOrderHeaderKey="" ChainedFromOrderLineKey="" ShipmentLineNo=""/> 
+							</ShipmentLines> 
+						</Shipment>					
+						<!-- OMNI-30157  STS 1.1 - added ExtnSOShipmentNo attribute - START -->
+						<Extn ExtnIsSOCancelled="" ExtnSOShipmentNo=""></Extn>
+						<!-- OMNI-30157  STS 1.1 - End -->
+					</Container>
+				</Containers>
+            </Template>
+        </API>
+        <classInformation name="com.ibm.wsc.common.mashups.WSCBaseMashup"/>
+        <APINamespace
+            inputNS="extn_readyToStage_ValidateScannedContainerID_input" outputNS="extn_readyToStage_ValidateScannedContainerID_output"/>
+        <AlternateResourceIds/>
+    </mashup>
+	
+    <!-- OMNI-9142: Start -->	
+	<mashup
+        description="Mashup for getting the SO status"
+        endpoint="EP_CONFIG"
+        id="extn_readyToStage_getSOOrderStatus"
+        mashuptype="XAPI" resourceId="" transactional="true">
+        <API Name="getOrderDetails">
+            <Input>
+                <Order OrderHeaderKey=""/>
+            </Input>
+            <Template>
+                <Order MaxOrderStatus="" MinOrderStatus="" OrderHeaderKey="" OrderNo="" Status="">
+					<OrderLines>
+						<OrderLine FulfillmentType="" PrimeLineNo="" Status="" MaxLineStatus="" MinLineStatus=""/>
+					</OrderLines>
+				</Order>
+            </Template>
+        </API>
+        <classInformation name="com.ibm.wsc.common.mashups.WSCBaseMashup"/>
+        <APINamespace
+            inputNS="extn_readyToStage_getSOOrderStatus_input" outputNS="extn_readyToStage_getSOOrderStatus_output"/>
+        <AlternateResourceIds/>
+    </mashup>
+    <!-- OMNI-9142: End -->
+	
+	<mashup
+        description="Mashup for getting the shipment list on scan of container no from Ready to Stage screen"
+        endpoint="EP_CONFIG"
+        id="extn_readyToStage_getSOShipmentList"
+        mashuptype="XAPI" resourceId="" transactional="true">
+        <API Name="getShipmentList">
+            <Input>
+				<!-- OMNI-10249:  STS - Container ID Belongs To a Different Store - START -->
+                <Shipment OrderHeaderKey="" ShipmentType="STS"/>
+				<!-- OMNI-10249:  STS - Container ID Belongs To a Different Store - END -->
+            </Input>
+            <Template>
+				<Shipments>
+					<!-- OMNI-34725:  STS 1.1 - added OrderHeaderKey attribute - START -->
+					<Shipment OrderHeaderKey="" DeliveryMethod="" DocumentType="" ShipNode="" ShipmentNo="" Status="" ShipmentKey="" ShipmentType="">
+					<!-- OMNI-34725:  STS 1.1 - added OrderHeaderKey attribute - End -->
+						<ShipmentLines>
+							<ShipmentLine ShipmentLineKey="" ShipmentLineNo="" BackroomPickComplete="" BackroomPickedQuantity="" OriginalQuantity="" Quantity="">
+								<OrderLine FulfillmentType="" OrderLineKey="">
+								<!--OMNI-98331 Added ExtnIsAssemblyRequired --> 
++									<Extn ExtnIsAssemblyRequired="" />
+								</OrderLine>
+								<Extn ExtnStagingLocation=""/>
+							</ShipmentLine>
+						</ShipmentLines>
+						<Status Description="" Status="" StatusName="" />
+					</Shipment>
+				</Shipments>
+            </Template>
+        </API>
+        <classInformation name="com.ibm.wsc.common.mashups.WSCBaseMashup"/>
+        <APINamespace
+            inputNS="extn_readyToStage_getSOShipmentList_input" outputNS="extn_readyToStage_getSOShipmentList_output"/>
+        <AlternateResourceIds/>
+    </mashup>
+	<mashup
+        description="Mashup for update Extn field on scan of container no from Ready to Stage screen"
+        endpoint="EP_CONFIG"
+        id="extn_readyToStage_updateExtnCancellationActioned"
+        mashuptype="XAPI" resourceId="" transactional="true">
+        <API Name="changeShipment">
+            <Input>
+                <Shipment ShipmentKey="">
+					<Containers>
+						<Container ShipmentContainerKey="" IsReceived="">
+							<Extn ExtnCancellationActionedAt=""/>
+						</Container>
+					</Containers>
+				</Shipment>
+            </Input>
+            <Template/>
+        </API>
+        <classInformation name="com.ibm.wsc.common.mashups.WSCBaseMashup"/>
+        <APINamespace
+            inputNS="extn_readyToStage_updateExtnCancellationActioned_input" outputNS="extn_readyToStage_updateExtnCancellationActioned_output"/>
+        <AlternateResourceIds/>
+    </mashup>
+    <mashup
+        description="Mashup is assign staging location at container level for scanned container in Ready to Stage screen"
+        endpoint="EP_CONFIG"
+        id="extn_readyToStage_assignStagingLocationAtContainerLevel" mashuptype="XAPI"
+        resourceId="" transactional="true">
+        <API Name="changeShipment">
+            <Input>
+                <Shipment ShipmentKey="">
+                    <Containers>
+                    	<!-- OMNI-68038 Added AstraCode -->
+                        <Container ShipmentContainerKey="" Zone="" IsReceived="" AstraCode="" />
+                    </Containers>
+                </Shipment>
+            </Input>
+            <Template>
+				<Shipment ShipmentKey="" OrderHeaderKey="">
+                    <Containers>
+                         <Container ContainerNo="" ShipmentContainerKey="" Zone="">
+							<Extn ExtnTrackingStatus=""/>
+						</Container>
+                    </Containers>
+					<ShipmentLines> 
+						<ShipmentLine ShipmentLineKey="" ChainedFromOrderHeaderKey="" ChainedFromOrderLineKey="" ShipmentLineNo="" /> 
+					</ShipmentLines> 
+                </Shipment>
+			</Template>
+        </API>
+        <classInformation name="com.ibm.wsc.common.mashups.WSCBaseMashup"/>
+        <APINamespace
+            inputNS="extn_readyToStage_assignStagingLocationAtContainerLevel_input" outputNS="extn_readyToStage_assignStagingLocationAtContainerLevel_output"/>
+        <AlternateResourceIds/>
+    </mashup>
+	<mashup
+        description="Mashup is assign staging location at shipment line level for scanned container in Ready to Stage screen"
+        endpoint="EP_CONFIG"
+        id="extn_readyToStage_assignStagingLocationAtShpLineLevel" mashuptype="XAPI"
+        resourceId="" transactional="true">
+        <API Name="changeShipment">
+            <Input>
+				<Shipment ShipmentKey="">
+					<ShipmentLines>
+						<ShipmentLine ShipmentLineKey="">
+							<Extn ExtnStagingLocation=""/>
+						</ShipmentLine>
+					</ShipmentLines>
+				</Shipment>
+            </Input>
+            <Template/>
+        </API>
+        <classInformation name="com.ibm.wsc.common.mashups.WSCBaseMashup"/>
+        <APINamespace
+            inputNS="extn_readyToStage_assignStagingLocationAtShpLineLevel_input" outputNS="extn_readyToStage_assignStagingLocationAtShpLineLevel_output"/>
+        <AlternateResourceIds/>
+    </mashup>
+	<mashup
+        description="Mashup fetch the TO shipment list along with containers"
+        endpoint="EP_CONFIG"
+        id="extn_readyToStage_getTOShipmentList" mashuptype="XAPI"
+        resourceId="" transactional="true">
+        <API Name="getShipmentList">
+            <Input>
+				<Shipment OrderHeaderKey=""/>
+            </Input>
+            <Template>
+				<Shipments>
+					<Shipment DeliveryMethod="" DocumentType="" ShipNode=""
+						  ShipmentNo="" Status="" ShipmentKey="">						
+						<Containers>
+							<Container ContainerNo="" ShipmentContainerKey="" Zone=""/>
+						</Containers>
+					</Shipment>
+				</Shipments>
+			</Template>
+        </API>
+        <classInformation name="com.ibm.wsc.common.mashups.WSCBaseMashup"/>
+        <APINamespace
+            inputNS="extn_readyToStage_getTOShipmentList_input" outputNS="extn_readyToStage_getTOShipmentList_output"/>
+        <AlternateResourceIds/>
+    </mashup>
+	<mashup
+        description="Mashup is cahnge the shipment status to BackroomPickInProgress/ReadyForCustPickup status if all the containers staged"
+        endpoint="EP_CONFIG"
+        id="extn_readyToStage_changeSOShipmentStatus" mashuptype="XAPI"
+        resourceId="" transactional="true">
+        <API Name="changeShipmentStatus">
+            <Input>
+				<Shipment ShipmentKey="" BaseDropStatus="" TransactionId=""/>					
+            </Input>
+            <Template>
+				<!--OMNI-98331 -->
+				<Shipment ShipmentKey="" ShipmentNo="" Status=""/>	
+			</Template>
+        </API>
+        <classInformation name="com.ibm.wsc.common.mashups.WSCBaseMashup"/>
+        <APINamespace
+            inputNS="extn_readyToStage_changeSOShipmentStatus_input" outputNS="extn_readyToStage_changeSOShipmentStatus_output"/>
+        <AlternateResourceIds/>
+    </mashup>
+	<!-- OMNI-9200: Start -->
+	<mashup
+        description="Mashup is auto update the pickup quantity while customer pickup"
+        endpoint="EP_CONFIG"
+        id="extn_readyToStage_UpdatePickUpQty" mashuptype="XAPI"
+        resourceId="" transactional="true">
+        <API Name="changeShipment">
+            <Input>						
+				<Shipment ShipmentKey="">
+					<ShipmentLines>
+						<ShipmentLine ShipmentLineKey="" BackroomPickComplete="" BackroomPickedQuantity="" OriginalQuantity="" Quantity=""/>
+					</ShipmentLines>
+				</Shipment>				
+            </Input>
+            <Template/>
+        </API>
+        <classInformation name="com.ibm.wsc.common.mashups.WSCBaseMashup"/>
+        <APINamespace
+            inputNS="extn_readyToStage_UpdatePickUpQty_input" outputNS="extn_readyToStage_UpdatePickUpQty_output"/>
+        <AlternateResourceIds/>
+    </mashup>
+	<!-- OMNI-9200: End -->
+	
+	<!-- OMNI-34725: Start -->
+	<mashup
+		description="This mashup fetch the all TO containers which are associated to SO shipments"
+		endpoint="EP_CONFIG"
+		id="extn_readyToStage_getCompleteOrderDetails" mashuptype="XAPI"
+		resourceId="" transactional="true">
+		<API Name="getCompleteOrderDetails">
+			<Input>						
+				<Order DocumentType="" EnterpriseCode="" OrderHeaderKey=""/>				
+			</Input>
+			<Template>
+				<Order DocumentType="" OrderHeaderKey="" OrderNo="">
+					<Containers>
+						<Container ContainerNo="" ShipmentContainerKey="" ShipmentKey="" IsReceived="" Zone="">
+							<Extn ExtnIsCancelled="" ExtnSOShipmentNo=""/>
+						</Container>
+					</Containers>
+				</Order>
+			</Template>
+		</API>
+		<classInformation name="com.ibm.wsc.common.mashups.WSCBaseMashup"/>
+		<APINamespace
+			inputNS="eextn_readyToStage_getCompleteOrderDetails_input" outputNS="extn_readyToStage_getCompleteOrderDetails_output"/>
+		<AlternateResourceIds/>
+	</mashup>
+	<!-- OMNI-34725: End -->
+	
+    <!-- End - OMNI-6588 : Ready to Stage -->
+	
+	
+	<!-- Lost Scenarios - START -->
+	<!-- OMNI-66585 - Input Template is updated for STS2.0 SIM Update -->
+	<mashup description="Mashup to get the scanned containers"
+        endpoint="EP_ORDER"
+        id="extn_containerSummary_markContainerAsLost"
+        mashuptype="XAPI" resourceId="" transactional="true">
+        <API FlowName="AcademySTSProcessLostContainerQueueService">
+            <Input>
+              <Container ContainerNo="" IsReceived="" Zone="" AstraCode="" TrackingNo="">
+                <ContainerDetails>
+                    <ContainerDetail OrderHeaderKey="" Quantity=""
+                        ShipmentContainerKey="" ShipmentKey="" ShipmentLineKey="" ItemID="">
+                        <ShipmentLine BackroomPickedQuantity="" ExtnShortPickedReasonCode="" OrderLineKey="" Quantity="" ShipmentLineKey="" OrderReleaseKey="">
+                            <OrderLine OrderLineKey="" OrderedQty="" OriginalOrderedQty="">
+                                 <ItemDetails ItemID="" UnitOfMeasure="" DisplayUnitOfMeasure="" UOMDisplayFormat="">
+                                    <PrimaryInformation
+                                    ExtendedDisplayDescription="" ItemDesc="" ImageID="" ImageLocation=""/>
+                                </ItemDetails>
+                                <Item ItemDesc="" ItemID=""/>
+                                <ChainedFromOrderLine OrderHeaderKey=""
+                                    OrderLineKey="" OrderedQty="" FulfillmentType="">
+                                    <Order OrderNo="" />
+                                </ChainedFromOrderLine>
+                            </OrderLine>
+                        </ShipmentLine>
+                    </ContainerDetail>
+                </ContainerDetails>
+                <Extn ExtnArrivedAtStore=""
+                    ExtnCancellationActionedAt="" ExtnIsSOCancelled="" ExtnSOShipmentNo="" ExtnTrackingStatus=""/>
+                <Shipment OrderHeaderKey="" OrderNo="" ReceivingNode="" ShipmentKey="" ShipmentNo="" ActualShipmentDate="">
+                    <Status Description="" Status=""/>
+                    <ShipNode ShipNode="" NodeType=""/>
+                </Shipment>
+            </Container>       
+            </Input>
+            <Template/>
+        </API>
+        <classInformation name="com.ibm.wsc.common.mashups.WSCBaseMashup"/>
+        <APINamespace
+            inputNS="extn_containerSummary_markContainerAsLost_input" outputNS="extn_containerSummary_markContainerAsLost_output"/>
+        <AlternateResourceIds/>
+    </mashup>
+	<!-- Lost Scenarios - END -->
+	<!-- OMNI - 9236 - Ship to Store Order Search "customer pick up" - START -->
+    <mashup description="" endpoint="EP_CONFIG"
+        id="extn_RFCP_getSOShipmentList" mashuptype="XAPI" resourceId="" transactional="true">
+        <API Name="getShipmentList">
+            <Input>
+                <Shipment OrderHeaderKey="" ShipmentType="STS"/>
+            </Input>
+            <Template>
+                <Shipments TotalNumberOfRecords="">
+                    <Shipment ShipmentKey="" PackListType="" OrderNo="" ShipmentType="">
+                        <Status Description="" Status=""/>
+						<!--OMNI-108854 -->
+						<Extn ExtnIsCurbsidePickupOpted="" ExtnCurbsideAttendedBy="" ExtnIsInstorePickupOpted="" ExtnInstoreAttendedBy=""/>
+                    </Shipment>
+                </Shipments>
+            </Template>
+        </API>
+        <classInformation name="com.ibm.wsc.common.mashups.WSCBaseMashup"/>
+        <APINamespace inputNS="extn_RFCP_getSOShipmentList_input" outputNS="extn_RFCP_getSOShipmentList_output"/>
+        <AlternateResourceIds/>
+    </mashup>
+	<!-- OMNI - 9236 - Ship to Store Order Search "customer pick up" - END -->
+	<!--OMNI-47066 -START -->
+    <mashup
+        description="This service is to print the STS shipping label when clicked from related tasks"
+        endpoint="EP_CONFIG" id="extn_STS_RePrintShippingLabel"
+        mashuptype="XAPI" resourceId="" transactional="true">
+        <API FlowName="AcademySTS2.0RePrintShippingLabel">
+            <Input>
+                <Print DisplayLocalizedFieldInLocale="en_US_EST"
+                       PickTicketPrinted="" RePrintPackStn="PACK_STATION1"
+                    ShipNode="xml:CurrentStore:/Store/@ShipNode"
+                    ShipmentContainerKey="" ShipmentKey="" ShipmentType="">
+                    <Login LoginID="xml:CurrentUser:/User/@Loginid"/>
+                </Print>
+            </Input>
+            <Template/>
+        </API>
+        <classInformation name="com.ibm.wsc.common.mashups.WSCBaseMashup"/>
+        <APINamespace inputNS="extn_PrintShippingLabel_input" outputNS="extn_PrintShippingLabel_output"/>
+        <AlternateResourceIds/>
+    </mashup>
+     <!--OMNI-47066 -END -->
+     <!--OMNI-61489 -START -->
+    <mashup description="Mashup to remove the cancelled batch products"
+        endpoint="EP_CONFIG" id="extn_CloseCancelledBatch"
+        mashuptype="XAPI" resourceId="" transactional="true">
+        <API Name="manageStoreBatch">
+            <Input/>
+            <Template/>
+        </API>
+        <classInformation name="com.ibm.wsc.common.mashups.WSCBaseMashup"/>
+        <APINamespace inputNS="extn_CloseCancelledBatch_input" outputNS="extn_CloseCancelledBatch_output"/>
+        <AlternateResourceIds/>
+    </mashup>
+    <!--OMNI-61489 -END -->
+    <!-- OMNI:66083 START -->
+        <mashup description="" endpoint="EP_CONFIG"
+        id="extn_getFlagToDisableAddQtyAndReadOnlyScannedQty" mashuptype="XAPI"
+        resourceId="" transactional="true">
+        <API Name="getCommonCodeList">
+            <Input>
+                <CommonCode CodeType="" CodeValue=""/>
+            </Input>
+            <Template>
+                <CommonCodeList>
+                    <CommonCode CodeLongDescription=""
+                        CodeShortDescription="" CodeType="" CodeValue=""/>
+                </CommonCodeList>
+            </Template>
+        </API>
+        <classInformation name="com.ibm.wsc.common.mashups.WSCBaseMashup"/>
+        <APINamespace inputNS="extn_getFlagToDisableAddQtyAndReadOnlyScannedQty_input" 
+		outputNS="extn_getFlagToDisableAddQtyAndReadOnlyScannedQty_output"/>
+        <AlternateResourceIds/>
+    </mashup>
+    <!-- OMNI-66083 END-->
+	<!-- OMNI 66999 START -->
+  <mashup description="Mashup to fetch scanned label details from sterling DB" endpoint="EP_ORDER" mashuptype="XAPI" transactional="true"
+    resourceId="" id="getScannedLabelDetails_ScanShipmentLabel" >
+    <API FlowName="AcademyScanLabelReportCreateService">
+        <Input>
+            <ACADScanBatchDetails LabelNo="" AcadScanBatchHeaderKey="" StoreNo="xml:CurrentStore:/Store/@ShipNode" UserId="xml:CurrentUser:/User/@UserId"/>
+        </Input>
+        <Template/>
+        </API>
+        <classInformation name="com.ibm.wsc.common.mashups.WSCBaseMashup"/>
+        <APINamespace
+            inputNS="getScannedLabelDetails_ScanShipmentLabel_input" outputNS="getScannedLabelDetails_ScanShipmentLabel_output"/>
+        <AlternateResourceIds/>
+	</mashup>
+	<!-- OMNI 66999 END -->
+    <!--OMNI-66978 START-->
+  <mashup description="Mashup to fetch scanned label details from sterling DB" endpoint="EP_ORDER" mashuptype="XAPI" transactional="true"
+    resourceId="" id="startBatchScanProcess_AuditShipmentHomeScreen" >
+    <API FlowName="AcademyManageScanBatchService">
+        <Input>
+            <ACADScanBatchHeader AcadScanBatchHeaderKey="" Action="" BatchScanStatus="" EndTime="" StoreNo="" UserID="" MissedScanTotal="" 
+			CancelledNotScannedTotal=""  Createuserid="xml:CurrentUser:/User/@UserId"/>
+        </Input>
+        <Template/>
+        </API>
+        <classInformation name="com.ibm.wsc.common.mashups.WSCBaseMashup"/>
+        <APINamespace
+            inputNS="startBatchScanProcess_AuditShipmentHomeScreen_input" outputNS="startBatchScanProcess_AuditShipmentHomeScreen_output"/>
+        <AlternateResourceIds/>
+  </mashup>
+	<!--OMNI-66978 END-->
+	<!--OMNI-67538 Feature Toggle Changes - START -->
+	<mashup description="Mashup to get the common code of feature toggle"
+        endpoint="EP_CONFIG" mashuptype="XAPI" transactional="true" resourceId="" id="extn_AuditShipmentToggle">
+        <API Name="getCommonCodeList">  
+            <Input>
+				<CommonCode CodeType="AUDITSHIPMENT_TOGGLE"/>
+			</Input>
+            <Template>
+			<CommonCodeList>
+			<CommonCode CodeLongDescription="" CodeShortDescription="" CodeType="" CodeValue="" CommonCodeKey="" OrganizationCode=""/>
+			</CommonCodeList>
+			</Template>
+        </API>
+        <classInformation name="com.ibm.wsc.common.mashups.WSCBaseMashup"/>
+        <APINamespace inputNS="extn_AuditShipmentToggle_input" outputNS="extn_AuditShipmentToggle_output"/>
+        <AlternateResourceIds/>
+    </mashup>
+	<!--OMNI-67538 Feature Toggle Changes - END -->
+	<!--OMNI-79056 Curbside Estimated Time Delay Changes - START -->
+	<mashup description="Mashup to get the common code of Curbside Estimated Time Delays"
+        endpoint="EP_CONFIG" mashuptype="XAPI" transactional="true" resourceId="" id="extn_CurbsideEstimatedTimeDelay">
+        <API Name="getCommonCodeList">  
+            <Input>
+				<CommonCode CodeType="CURBSIDE_DELAY_OPTNS"/>
+			</Input>
+            <Template>
+			<CommonCodeList>
+			<CommonCode CodeLongDescription="" CodeShortDescription="" CodeType="" CodeValue="" CommonCodeKey="" OrganizationCode=""/>
+			</CommonCodeList>
+			</Template>
+        </API>
+        <classInformation name="com.ibm.wsc.common.mashups.WSCBaseMashup"/>
+        <APINamespace inputNS="extn_CurbsideCommomCodeList_input" outputNS="extn_CurbsideCommomCodeList_output"/>
+        <AlternateResourceIds/>
+    </mashup>
+	<!--OMNI-79056 Curbside Estimated Time Delay Changes - END -->
+    <!--OMNI-79563 Curbside Estimated Delay Timer Count Changes - START -->
+	<mashup description="Mashup to get the common code of Curbside Toggle and Estimated Delay Timer Count Delays"
+        endpoint="EP_CONFIG" mashuptype="XAPI" transactional="true" resourceId="" id="extn_CurbsideExtensions">
+        <API Name="getCommonCodeList">  
+            <Input>
+				<CommonCode CodeType="CURBSIDE_EXTENSIONS"/>
+			</Input>
+            <Template>
+			<CommonCodeList>
+			<CommonCode CodeLongDescription="" CodeShortDescription="" CodeType="" CodeValue="" CommonCodeKey="" OrganizationCode=""/>
+			</CommonCodeList>
+			</Template>
+        </API>
+        <classInformation name="com.ibm.wsc.common.mashups.WSCBaseMashup"/>
+        <APINamespace inputNS="extn_CurbsideExtnsionCommomCodeList_input" outputNS="extn_CurbsideExtnsionCommomCodeList_output"/>
+        <AlternateResourceIds/>
+    </mashup>
+	<!--OMNI-79563 Curbside Estimated Delay Timer Count Changes - END -->
+	<!-- OMNI-68038 Start-->
+    <mashup description="Mashup for getting lost container reasons" endpoint="EP_CONFIG"
+        id="getLostContainerReasonCode" mashuptype="XAPI"
+        resourceId="" skipDataProvider="false" transactional="true">
+        <classInformation name="com.ibm.wsc.common.mashups.WSCBaseMashup"/>
+        <API FlowName="AcademyGetCommonCodeLostCont">
+            <Input>
+				 <CommonCode CodeType="ASO_LOST_RSN_CODE"/>
+			</Input>
+			<Template />
+		</API>
+        <classInformation name="com.ibm.wsc.common.mashups.WSCBaseMashup"/>
+        <APINamespace inputNS="getLostContainerReasonCode_input" outputNS="getLostContainerReasonCode_output"/>
+        <AlternateResourceIds/>
+    </mashup>
+	<!--OMNI-68038 END -->
+	<!--OMNI-69706 Scan Summary PopUp -START -->
+	<mashup description="Mashup for getting Scan Summary Data for a batch" endpoint="EP_ORDER" mashuptype="XAPI" transactional="true"
+    resourceId="" id="getScanSummaryData" >
+    <API FlowName="AcademyFetchScanBatchDetailsService">
+        <Input>
+             <ACADScanBatchHeader AcadScanBatchHeaderKey="" StoreNo="" />
+        </Input>
+        <Template/>
+        </API>
+        <classInformation name="com.ibm.wsc.common.mashups.WSCBaseMashup"/>
+        <APINamespace
+            inputNS="getScanSummaryData_input" outputNS="getScanSummaryData_output"/>
+        <AlternateResourceIds/>
+	</mashup>
+	<!--OMNI-69706 Scan Summary PopUp -END -->
+ <!--OMNI-71303 Begin-->
+    <mashup description="" endpoint="EP_CONFIG"
+        id="extn_OnMyWayOrdersCount" mashuptype="XAPI" resourceId="" transactional="true">
+        <API Name="getShipmentList">
+            <Input>
+                <Shipment DeliveryMethod="PICK"
+                    DisplayLocalizedFieldInLocale="xml:CurrentUser:/User/@Localecode"
+                    MaximumRecords=""
+                    ShipNode="xml:CurrentStore:/Store/@ShipNode" Status="1100.70.06.30.5">
+                    <Extn ExtnOnMyWayOpted="Y" ExtnIsCurbsidePickupOpted="Y" ExtnIsCurbsidePickupOptedQryType="NE"/>
+                </Shipment>
+            </Input>
+            <Template>
+                <Shipments TotalNumberOfRecords=""/>
+            </Template>
+        </API>
+        <classInformation name="com.ibm.wsc.common.mashups.WSCBaseMashup"/>
+        <APINamespace inputNS="extn_OnMyWayOrdersCount_input" outputNS="extn_OnMyWayOrdersCount_output"/>
+        <AlternateResourceIds/>
+    </mashup>
+    <mashup description="" endpoint="EP_CONFIG"
+        id="extn_CompleteOnMyWayOrder" mashuptype="XAPI" resourceId="" transactional="true">
+        <API Name="changeShipment">
+            <Input/>
+            <Template/>
+        </API>
+        <classInformation name="com.ibm.wsc.common.mashups.WSCBaseMashup"/>
+        <APINamespace inputNS="extn_CompleteOnMyWayOrder_input" outputNS="extn_CompleteOnMyWayOrder_output"/>
+        <AlternateResourceIds/>
+    </mashup>
+    <!--OMNI-71303 End-->
+
+	<!--OMNI-72389 Curbside customer pick up screen UI – Notification of related orders  START-->   
+   <mashup
+        description="This mashup determines whether to display the RelatedOrders notification"
+        endpoint="EP_CONFIG" id="extn_NotifyRelatedOrders"
+        mashuptype="XAPI" resourceId="" transactional="true">
+        <API FlowName="AcademyNotifyRelatedOrders">
+            <Input/>
+            <Template/>
+        </API>
+        <classInformation name="com.ibm.wsc.common.mashups.WSCBaseMashup"/>
+        <APINamespace inputNS="extn_NotifyRelatedOrders_input" outputNS="extn_NotifyRelatedOrders_output"/>
+        <AlternateResourceIds/>
+    </mashup>
+	<!--OMNI-72389 Curbside customer pick up screen UI – Notification of related orders  END-->    
+ <mashup
+        description="This mashup determines whether to display the OnMyWay functionality in UI"
+        endpoint="EP_CONFIG" id="extn_OnMyWayFeatureToggle"
+        mashuptype="XAPI" resourceId="" transactional="true">
+        <API FlowName="AcademyOnMyWayFeatureToggle">
+            <Input>
+                <Shipment/>
+            </Input>
+            <Template>
+                <Shipment IsOnMyWayEnabled=""/>
+            </Template>
+        </API>
+        <classInformation name="com.ibm.wsc.common.mashups.WSCBaseMashup"/>
+        <APINamespace inputNS="extn_OnMyWayFeatureToggle_input" outputNS="extn_OnMyWayFeatureToggle_output"/>
+        <AlternateResourceIds/>
+    </mashup>
+	<mashup
+        description="This mashup fetches the container type recommended for the container"
+        endpoint="EP_CONFIG" id="extn_getAcadDirectPackLookup"
+        mashuptype="XAPI" resourceId="" transactional="true">
+        <API FlowName="AcademyGetRecommendedContainer">
+            <Input/> 
+            <Template/>
+        </API>
+        <classInformation name="com.ibm.wsc.common.mashups.WSCBaseMashup"/>
+        <APINamespace inputNS="extn_getAcadDirectPackLookup_input" outputNS="extn_getAcadDirectPackLookup_output"/>
+        <AlternateResourceIds/>
+    </mashup>
+	<mashup description="This mashup determines whether to display the Container recommendation in UI" endpoint="EP-COFIG" id="extn_ContainerRecommToggle"
+        mashuptype="XAPI" resourceId="" transactional="true">
+        <API FlowName="AcademyContainerRecomFeatureToggle">
+            <Input>
+				<CommonCode CodeType="CONTAINER_THRESHOLD"/>
+			</Input>
+            <Template>
+			<CommonCodeList>
+				<CommonCode CodeLongDescription="" CodeShortDescription="" CodeType="" CodeValue="" CommonCodeKey="" OrganizationCode=""/>
+			</CommonCodeList>
+			</Template>
+        </API>
+        <classInformation name="com.ibm.wsc.common.mashups.WSCBaseMashup"/>
+        <APINamespace inputNS="extn_ContainerRecommToggle_input" outputNS="extn_ContainerRecommToggle_output"/>
+        <AlternateResourceIds/>
+    </mashup>
+	<mashup
+        description="This mashup determines whether to display the OnMyWay timer functionality in UI"
+        endpoint="EP_CONFIG" id="extn_OnMyWayTimerToggle"
+        mashuptype="XAPI" resourceId="" transactional="true">
+        <API FlowName="AcademyOnMyWayTimerToggle">
+            <Input>
+                <OnMyWayTimer/>
+            </Input>
+            <Template>
+                <OnMyWayTimer IsOnMyWayTimerEnabled=""/>
+            </Template>
+        </API>
+        <classInformation name="com.ibm.wsc.common.mashups.WSCBaseMashup"/>
+        <APINamespace inputNS="extn_OnMyWayTimerToggle_input" outputNS="extn_OnMyWayTimerToggle_output"/>
+        <AlternateResourceIds/>
+    </mashup>
+	<!--OMNI-72474 Begin-->
+	<mashup description="This mashup gets the Store working hours to triage OnMyWay orders" endpoint="EP_CONFIG"
+        id="extn_StoreWorkingHours" mashuptype="XAPI"
+        resourceId="" transactional="true">
+        <API Name="getCommonCodeList">
+            <Input>
+                <CommonCode CodeType="STORE_HOURS_FOR_OMW"/>
+            </Input>
+            <Template>
+                <CommonCodeList>
+                    <CommonCode CodeLongDescription=""
+                        CodeShortDescription="" CodeType="" CodeValue=""/>
+                </CommonCodeList>
+            </Template>
+        </API>
+        <classInformation name="com.ibm.wsc.common.mashups.WSCBaseMashup"/>
+        <APINamespace inputNS="extn_StoreWorkingHours_input" outputNS="extn_StoreWorkingHours_output"/>
+        <AlternateResourceIds/>
+    </mashup>
+	<!--OMNI-72474 End-->
+	  <!--OMNI -80092 - Assign Curbside Order Start-->
+    <mashup description="This mashup updates userid along with user name and Curbside delay counter in the shipment table  " endpoint="EP_ORDER" mashuptype="XAPI" transactional="true" resourceId="" id="extn_CurbsideChangeShipmentForAssignee" >
+    <API FlowName="AcademyCurbsideChangeShipmentForAssignee">
+        <Input>
+            <Shipment ConsolidatedShipmentKey="" CurbsideConsolidationToggle="" ShipmentKey="" OrderNo="" ShipNode="" BillToDayPhone="" BillToZipCode="" MarkForDayPhone="" Msg1="" Msg2="" Msg3="" NotifyDelayToCustFlag="" CurbsideDelayMaxCounter="">
+                 <Extn />
+			</Shipment >
+		</Input>
+        <Template>
+			 <Shipment ShipmentKey="" >
+                 <Extn />
+			</Shipment >
+		</Template>
+        </API>
+        <classInformation name="com.ibm.wsc.common.mashups.WSCBaseMashup"/>
+        <APINamespace
+            inputNS="extn_CurbsideChangeShipmentForAssignee_input" outputNS="extn_CurbsideChangeShipmentForAssignee_output"/>
+        <AlternateResourceIds/>
+	</mashup>
+      <!--OMNI -80092 - Assign Curbside Order End-->
+
+   <!--OMNI-82354 UI Missed Shipments Reconciliation records on Click of YES button present in info popup - START -->
+	<mashup description="This mashup is used to insert the Missed Shipment Details into the ACAD_MISSED_SCAN_DETAILS Table on click of YES button in the Scan Summary Popup" endpoint="EP_ORDER" mashuptype="XAPI" transactional="true" resourceId="" id="insertMissedShipments_AcadMissedScanDetails" >
+		<API FlowName="AcademyManageMissedShipmentsService">
+			<Input>
+				<ACADScanBatchHeader AcadScanBatchHeaderKey ="" StoreNo=""/>
+			</Input>
+			<Template/>
+		</API>
+		<classInformation name="com.ibm.wsc.common.mashups.WSCBaseMashup"/>
+		<APINamespace
+			inputNS="insertMissedShipments_AcadMissedScanDetails_input" outputNS="insertMissedShipments_AcadMissedScanDetails_output"/>
+		<AlternateResourceIds/>
+	</mashup>
+	<!--OMNI-82354 UI Missed Shipments Reconciliation records on Click of YES button present in info popup - END -->
+	<!--OMNI-81802 MSL : Shipment listing page - Flag based Toggle feature - START -->
+      <mashup description="Mashup to get the common code of feature toggle"
+        endpoint="EP_CONFIG" mashuptype="XAPI" transactional="true" resourceId="" id="extn_CommonCodeMashup">
+        <API Name="getCommonCodeList">  
+            <Input>
+				<CommonCode CodeType="" CodeValue=""/>
+			</Input>
+            <Template>
+			<CommonCodeList>
+			<CommonCode CodeLongDescription="" CodeShortDescription="" CodeType="" CodeValue="" CommonCodeKey="" OrganizationCode=""/>
+			</CommonCodeList>
+			</Template>
+        </API>
+        <classInformation name="com.ibm.wsc.common.mashups.WSCBaseMashup"/>
+        <APINamespace inputNS="extn_CommonCodeMashup_input" outputNS="extn_CommonCodeMashup_output"/>
+        <AlternateResourceIds/>
+    </mashup>
+     <!--OMNI-81802 MSL : Shipment listing page - Flag based Toggle feature - END -->
+	<!--OMNI-85180 Starts-->
+	<mashup description="Mashup to store curbside consolidated shipments" endpoint="EP_CONFIG"
+        id="extn_RecordStoreUserActionConsldCurbside" mashuptype="XAPI"
+        resourceId="" transactional="true">
+        <API FlowName="AcademyRecordStoreActionForConsolidatedCurbside">
+            <Input>
+                <AcadStoreActionData Delivery_Method="" NotifyStore=""
+                    OrderNo="" ShipmentNo="" UserID=""/>
+            </Input>
+            <Template/>
+        </API>
+        <classInformation name="com.ibm.wsc.common.mashups.WSCBaseMashup"/>
+        <APINamespace inputNS="extn_RecordStoreUserActionConsldCurbside_input" outputNS="extn_RecordStoreUserActionConsldCurbside_output"/>
+        <AlternateResourceIds/>
+    </mashup>
+	<!--OMNI-85180 Ends-->	
+    <!--OMNI-85081 Starts-->
+    <mashup description="Mashup to get Shipment Lines which are at RFCP" endpoint="EP_CONFIG"
+        id="extn_customerpickup_getPickupShipmentLineList"
+        mashuptype="XAPI" resourceId="" transactional="true">
+        <API FlowName="AcademyGetShipmentLineListForCurbsideConsolidation">
+            <Input>
+				<ShipmentLine ShipmentKey="" DisplayLocalizedFieldInLocale="xml:CurrentUser:/User/@Localecode"
+				IgnoreOrdering="Y" IsPickable="Y" OrderNo="" Quantity="0.00"
+				QuantityQryType="NE">
+					<Shipment DeliveryMethod="PICK" Status="" PackListType="" PackListTypeQryType=""
+						ShipmentType="" ShipmentTypeQryType="" ShipNode="xml:CurrentStore:/Store/@ShipNode">
+					<!--OMNI-88832 - Add PWI status - Start-->
+						<ComplexQuery Operator=""> 
+							<Or> 
+								<Exp Name="" QryType="" Value=""/> 
+							</Or> 
+						</ComplexQuery>
+					<!--OMNI-88832 - Add PWI status - End-->
+						<Extn ExtnIsCurbsidePickupOpted="" ExtnIsCurbsidePickupOptedQryType=""/>
+					</Shipment>
+				</ShipmentLine>
+            </Input>
+            <Template>
+                 <ShipmentLines TotalNumberOfRecords=""> 					
+					<ShipmentLine OriginalQuantity="" UnitOfMeasure="" IsCustomerPickComplete="" Quantity="" 
+					OrderNo="" ItemID="" ShipmentKey="" ShipmentLineKey="" 
+					ShortageQty="" ShortageResolutionReason="" CancelReason="" 
+					ShipmentSubLineNo="" OrderHeaderKey="" CustomerPickedQuantity="" ShipmentLineNo="" OrderLineKey="" > 
+						<Extn ExtnStagingLocation="" /> 
+						<OrderLine ItemGroupCode="" IsBundleParent="" > 
+						<ItemDetails UnitOfMeasure="" ItemGroupCode="" ItemID="" > 
+						<ClassificationCodes Model="" > 
+						</ClassificationCodes> 
+						<PrimaryInformation ImageLabel="" ImageID="" ExtendedDisplayDescription="" ImageLocation="" > 
+						</PrimaryInformation> 
+						</ItemDetails> 
+						</OrderLine> 
+						<Shipment ShipmentNo="" >
+							<Extn ExtnIsCurbsidePickupOpted=""/>	
+						</Shipment>
+					</ShipmentLine> 
+				</ShipmentLines> 
+            </Template>
+        </API>
+        <classInformation name="com.ibm.wsc.shipment.common.mashups.ShipmentLineListPaginatedMashup"/>
+        <APINamespace
+            inputNS="extn_customerpickup_getPickupShipmentLineList_input" outputNS="extn_customerpickup_getPickupShipmentLineList_output"/>
+        <AlternateResourceIds/>
+    </mashup>
+	<!--OMNI-85081 Ends-->
+	<!--OMNI-85079 Start-->
+    <!--OMNI-105778 - Added ExtnIsInstorePickupOpted, InStorePickupFlagEnabled in input 
+    and ExtnInstoreAttendedBy, ExtnIsInstorePickupOpted in template-->
+	<mashup description="Intialize mashup to get curbside shipment line details" endpoint="EP_CONFIG"
+        id="extn_getCurbsideGetShipmentLine"
+        mashuptype="XAPI" resourceId="" transactional="true">
+        <API FlowName="AcademyGetCurbsideShipmentDetails">
+            <Input>
+                <ShipmentLine ShipmentKey="xml:scControllerInput:/Shipment/@ShipmentKey"
+				Status="xml:scControllerInput:/Shipment/@Status"
+				OrderNo="xml:scControllerInput:/Shipment/@OrderNo"
+				IsMobile="xml:scControllerInput:/Shipment/@IsMobile"
+				ExtnIsCurbsidePickupOpted="xml:scControllerInput:/Shipment/@ExtnIsCurbsidePickupOpted"
+				EnableCurbsideConsolidation="xml:scControllerInput:/Shipment/@EnableCurbsideConsolidation"
+				EnableInstoreConsolidation="xml:scControllerInput:/Shipment/@EnableInstoreConsolidation"
+                ExtnIsInstorePickupOpted="xml:scControllerInput:/Shipment/@ExtnIsInstorePickupOpted"
+                InStorePickupFlagEnabled="xml:scControllerInput:/Shipment/@InStorePickupFlagEnabled"
+				PackListType="xml:scControllerInput:/Shipment/@PackListType"
+				ShipmentType="xml:scControllerInput:/Shipment/@ShipmentType"
+				LoginID="xml:CurrentUser:/User/@Loginid"
+				ShipNode="xml:CurrentStore:/Store/@ShipNode" />
+            </Input>
+            <Template>
+                <ShipmentLines TotalNumberOfRecords="" TotalShipmentLines="" CurbsideShipment="" 
+                               CurbsideConsolidationFlag="" CurbsideShipmenKey="" CurbsideShipmentNo="" InstoreConsolidationFlag="" 
+							   ConsolidatedShipmentNo="" ConsolidatedShipmentKey="" ConsolidatedShipment="">			
+					<ShipmentLine> 
+					 <Order PaymentStatus="">
+                                <PaymentMethods>
+                                    <PaymentMethod CreditCardName=""
+                                    CreditCardNo=""
+                                    CreditCardType=""
+                                    DisplayCreditCardNo=""
+                                    PaymentKey=""
+                                    PaymentReference2="" PaymentReference5=""
+                                    PaymentType="" PaymentTypeGroup="" DisplaySvcNo="" SvcNo=""/>
+                                </PaymentMethods>
+                            </Order>
+                            <OrderLine>
+                                <ItemDetails>
+                                    <AdditionalAttributeList>
+                                    <AdditionalAttribute Name="" Value=""/>
+                                    </AdditionalAttributeList>
+                                </ItemDetails>
+				<PersonInfoMarkFor DayPhone=""
+                                    EMailID="" FirstName="" LastName="" PersonInfoKey=""/>
+                                <Extn/>
+                            </OrderLine>
+						<Extn ExtnStagingLocation="" /> 					
+						<Shipment ShipmentNo="" Status="" ShipmentKey="">
+                            <Extn ExtnIsCurbsidePickupOpted="" ExtnCurbsideAttendedBy=""  ExtnIsInstorePickupOpted="" ExtnInstoreAttendedBy=""/>
+                        </Shipment>
+					</ShipmentLine> 
+				</ShipmentLines> 
+            </Template>
+        </API>
+        <classInformation name="com.ibm.wsc.common.mashups.WSCBaseMashup"/>
+        <APINamespace
+            inputNS="extn_getCurbsideGetShipmentLine" outputNS="extn_getCurbsideGetShipmentLine"/>
+        <AlternateResourceIds/>
+    </mashup>
+	<!--OMNI-85079 End-->
+	<!--OMNI-85081 Start-->
+	<mashup description="Mashup to update curbside shipment line details" endpoint="EP_CONFIG"
+        id="extn_updateShipmentlinesForCurbConsolidation"
+        mashuptype="XAPI" resourceId="" transactional="true">
+        <API FlowName="AcademyUpdateShipmentlinesForCurbsideConsolidation">
+            <Input/>
+            <Template/>
+        </API>
+        <classInformation name="com.ibm.wsc.common.mashups.WSCBaseMashup"/>
+        <APINamespace
+            inputNS="extn_updateShipmentlinesForCurbConsolidation" outputNS="extn_updateShipmentlinesForCurbConsolidation"/>
+        <AlternateResourceIds/>
+    </mashup>
+	<!--OMNI-85081 End-->
+	<!--OMNI -85179 - complete order changes START-->
+	<mashup description="Mashup to invoke Record Customer pick for Curbside Consolidation" endpoint="EP_CONFIG"
+        id="extn_recordCustomerPickForCurbsideConsolidation"
+        mashuptype="XAPI" resourceId="" transactional="true">
+        <API FlowName="AcademyRecordCustPickForCurbsideConsolidation">
+            <Input>
+                <Shipment AddVerificationMethod="Y"
+                    DisplayLocalizedFieldInLocale="xml:CurrentUser:/User/@Localecode"
+                    SellerOrganizationCode="" ShipNode="" ShipmentKey=""
+                    ShipmentNo="" TransactionId="CONFIRM_SHIPMENT" CurbsideShipment="" ConsolidatedShipment="">
+					<Extn/>
+                    <ShipmentLines>
+                        <ShipmentLine PickedQty="" Quantity=""
+                            ReasonCode="" ShipmentLineKey=""
+                            ShipmentLineNo="" ShipmentSubLineNo=""
+                            ShortageQuantity="" ShortageReason=""/>
+                    </ShipmentLines>
+                    <Notes>
+                        <Note ContactReference="" ContactType=""
+                            ContactUser="" NoteText="" Priority="0"
+                            ReasonCode="YCD_CUSTOMER_VERIFICATION" VisibleToAll="Y"/>
+                    </Notes>
+                </Shipment>
+            </Input>
+            <Template>
+                <Shipment AssignedToUserId="" Currency=""
+                    DeliveryCode="" DeliveryMethod="" DisplayOrderNo=""
+                    EnterpriseCode="" ExpectedShipmentDate=""
+                    HoldLocation="" IsOverdue="" OrderNo=""
+                    ScacAndService="" ScacIntegrationRequired=""
+                    ShipmentKey="" ShipmentNo="" TimeRemaining="" Status="" ShipNode="">
+                    <ShipmentLines>
+                        <ShipmentLine CancelReason=""
+                            CustomerPickedQuantity="" ShipmentLineKey="" ShortageQty="">
+                            <OrderLine PrimeLineNo="">
+                                <Notes>
+                                    <Note NoteText="" ReasonCode=""/>
+                                </Notes>
+                                <PersonInfoMarkFor />
+                            </OrderLine>
+                        </ShipmentLine>
+                    </ShipmentLines>
+                    <BillToAddress AddressLine1="" AddressLine2=""
+                        City="" Country="" CountryDesc="" DayFaxNo=""
+                        DayPhone="" EMailID="" EveningFaxNo=""
+                        EveningPhone="" FirstName=""
+                        IsCommercialAddress="" LastName="" MiddleName=""
+                        MobilePhone="" PersonInfoKey=""
+                        PreferredShipAddress="" State="" TitleDesc="" ZipCode=""/>
+                    <AllowedTransactions>
+                        <Transaction ProcessTypeKey="" TranType="" Tranid=""/>
+                    </AllowedTransactions>
+                    <ShipNode ShipNode="" ShipNodeAddressKey=""
+                        ShipnodeKey="" ShipnodeType="" ShippingNode="">
+                        <ShipNodePersonInfo AddressLine1=""
+                            AddressLine2="" City="" Country=""
+                            CountryDesc="" DayFaxNo="" DayPhone=""
+                            EMailID="" EveningFaxNo="" EveningPhone=""
+                            FirstName="" IsCommercialAddress=""
+                            LastName="" MiddleName="" MobilePhone=""
+                            PersonInfoKey="" PreferredShipAddress=""
+                            State="" TitleDesc="" ZipCode=""/>
+                    </ShipNode>
+                    <ToAddress AddressLine1="" AddressLine2="" City=""
+                        Country="" CountryDesc="" DayFaxNo=""
+                        DayPhone="" EMailID="" EveningFaxNo=""
+                        EveningPhone="" FirstName=""
+                        IsCommercialAddress="" LastName="" MiddleName=""
+                        MobilePhone="" PersonInfoKey=""
+                        PreferredShipAddress="" State="" TitleDesc="" ZipCode=""/>
+                    <AdditionalDates>
+                        <AdditionalDate  ExpectedDate="" DateTypeId="BOPIS_SLA_DATE" />
+                    </AdditionalDates>
+                    <Extn ExtnShipmentPickedBy="" />
+                </Shipment>
+            </Template>
+        </API>
+        <classInformation name="com.ibm.wsc.common.mashups.WSCBaseMashup"/>
+        <APINamespace
+            inputNS="extn_recordCustomerPickForCurbsideConsolidation_input" outputNS="extn_recordCustomerPickForCurbsideConsolidation_output"/>
+        <AlternateResourceIds/>
+    </mashup>
+	<!--OMNI -85179 - complete order changes START-->
+	<!--OMNI -85085 - Start-->
+		<mashup
+        description="Update the customer picked qty for curbside consolidation shipment"
+        endpoint="EP_CONFIG"
+        id="extn_changeShipmentForCurbsideConsoldiation"
+        mashuptype="XAPI" resourceId="" transactional="true">
+         <API FlowName="AcademyChangeShipmentForCurbsideConsolidation">
+            <Input>
+                <Shipment
+                    DisplayLocalizedFieldInLocale="xml:CurrentUser:/User/@Localecode" ShipmentKey="xml:scControllerInput:/Shipment/@ShipmentKey"
+                    CurbsideShipmentKey="" ConsolidatedShipmentKey="">
+                    <ShipmentLines>
+                        <ShipmentLine CancelReason="" ShipmentKey=""
+                            CustomerPickedQuantity="" Quantity=""
+                            ShipmentLineKey="" ShortageQty="" ShortageResolutionReason="">
+                            <Extn ExtnMsgToSIM=""/>
+                        </ShipmentLine>
+                    </ShipmentLines>
+                </Shipment>
+            </Input>
+            <Template>
+                <Shipment ShipmentKey="" ShipmentNo="" Status="">
+                    <ShipmentLines>
+                        <ShipmentLine CancelReason="" ShipmentKey=""
+                            CustomerPickedQuantity="" Quantity=""
+                            ShipmentLineKey="" ShortageQty=""/>
+                    </ShipmentLines>
+                </Shipment>
+            </Template>
+        </API>
+        <classInformation name="com.ibm.wsc.common.mashups.WSCBaseMashup"/>
+        <APINamespace
+            inputNS="extn_changeShipmentForCurbsideConsoldiation_input" outputNS="extn_changeShipmentForCurbsideConsoldiation_output"/>
+        <AlternateResourceIds>
+            <AlternateResourceId altResourceId="WSCSYS00001"/>
+            <AlternateResourceId altResourceId="WSC000001"/>
+        </AlternateResourceIds>
+    </mashup>
+	<!--OMNI -85085 - End-->
+	<!--OMNI -90674 - Start-->
+    <mashup description="Mashup to invoke translateBarcode"
+        endpoint="EP_CONFIG" id="extn_translateBarcode"
+        mashuptype="XAPI" resourceId="" transactional="true">
+        <API FlowName="AcademyRegisterBarCodeForRecordBackroomPick">
+            <Input>
+				<BarCode BarCodeData="" BarCodeType="Item" DisplayLocalizedFieldInLocale="xml:CurrentUser:/User/@Localecode">
+                    <ContextualInfo
+                        EnterpriseCode="xml:CurrentStore:/Store/@EnterpriseCode" OrganizationCode="xml:CurrentStore:/Store/@ShipNode"/>
+                    <ShipmentContextualInfo
+                        SellerOrganizationCode="xml:CurrentStore:/Store/@EnterpriseCode"
+                        ShipNode="xml:CurrentStore:/Store/@ShipNode"
+                        ShipmentKey="" SerialNo="" ShipmentNo=""/>
+                </BarCode>
+			</Input>
+            <Template>
+				<BarCode BarCodeData="" BarCodeType="">
+                    <Translations BarCodeTranslationSource="" TotalNumberOfRecords="">
+                        <Translation>
+                            <ContextualInfo BuyerOrganizationCode=""
+                                EnterpriseCode="" OrganizationCode="" SellerOrganizationCode=""/>
+                            <ItemContextualInfo AlternateUOM=""
+                                InventoryUOM="" ItemID="" KitCode=""
+                                ProductClass="" Quantity=""/>
+                            <ShipmentContextualInfo SellerOrganizationCode="" ShipNode="" ShipmentKey="" 
+                                ShipmentLineKey="" ShipmentNo=""/>
+                        </Translation>                        
+                    </Translations>
+                    <Shipment ShipmentKey="" >                      
+                        <ShipmentLine   BackroomPickComplete=""
+                        BackroomPickedQuantity="" ItemID=""
+                        OrderHeaderKey="" OrderLineKey="" OrderNo=""
+                        PickLocation="" OriginalQuantity="" Quantity="" ShipmentKey=""
+                        ShipmentLineKey="" ShipmentLineNo=""
+                        ShipmentSubLineNo="" ShortageQty="" UnitOfMeasure="">
+                            <OrderLine IsBundleParent="" ItemGroupCode="">
+                                <ItemDetails ItemGroupCode="" ItemID="" UnitOfMeasure="">
+                                    <PrimaryInformation
+                                        ExtendedDisplayDescription=""
+                                        ImageID="" ImageLabel="" ImageLocation=""/>
+                                    <ClassificationCodes Model=""/>
+                                </ItemDetails>
+                            </OrderLine>
+							<ShipmentTagSerials>
+								<ShipmentTagSerial Quantity="" SerialNo="" ShipmentLineKey=""/>
+							</ShipmentTagSerials>
+                        </ShipmentLine>
+                    </Shipment>
+                </BarCode>
+			</Template>
+        </API>
+        <classInformation name="com.ibm.wsc.shipment.common.mashups.RegisterBarcodeCustomMashup"/>
+        <APINamespace inputNS="extn_translateBarcode_input" outputNS="extn_translateBarcode_output"/>
+        <AlternateResourceIds/>
+    </mashup>
+	<!--OMNI -90674 - End-->
+
+<!--OMNI -96066 - start-->
+  <mashup
+        description="Mashup is cahnge the shipment status from AssemblyInprogress to ReadyForCustPickup  if all the containers staged"
+        endpoint="EP_CONFIG"
+        id="extn_CompleteAssemblyChangeShipment" mashuptype="XAPI"
+        resourceId="" transactional="true">
+        <API Name="changeShipmentStatus">
+            <Input>
+                <Shipment ShipmentKey="" BaseDropStatus="" TransactionId=""/>                   
+            </Input>
+             <Template>
+            <Shipment ShipmentKey="" Status="" ShipmentNo="" >
+            <Status Description="" Status=""/>
+          </Shipment>
+           </Template>
+        </API>
+        <classInformation name="com.ibm.wsc.common.mashups.WSCBaseMashup"/>
+        <APINamespace
+            inputNS="extn_CompleteAssemblyChangeShipment_input" outputNS="extn_CompleteAssemblyChangeShipment_output"/>
+        <AlternateResourceIds/>
+    </mashup>
+<!--OMNI -96066 - End-->
+<!--OMNI-99079 Start-->
+	 <mashup description="" endpoint="EP_CONFIG"
+        id="extn_getCommonCodeListForProductRegistration" mashuptype="XAPI"
+        resourceId="" transactional="true">
+        <API Name="getCommonCodeList">
+            <Input>
+                <CommonCode CodeType="" CodeValue=""/>
+            </Input>
+            <Template>
+                <CommonCodeList>
+                    <CommonCode CodeLongDescription=""
+                        CodeShortDescription="" CodeType="" CodeValue=""/>
+                </CommonCodeList>
+            </Template>
+        </API>
+        <classInformation name="com.ibm.wsc.common.mashups.WSCBaseMashup"/>
+        <APINamespace inputNS="extn_getCommonCodeListForProductRegistration_input" outputNS="extn_getCommonCodeListForProductRegistration_output"/>
+        <AlternateResourceIds/>
+    </mashup>
+	<!--OMNI-99079 End -->
+		<!--START : OMNI-101859,OMNI-102131,OMNI-85177 OMNI-108769-->
+		 <mashup description="This mashup fetches the flag details related to UI features" endpoint="EP_CONFIG"
+        id="extn_DetermineUIToggle" mashuptype="XAPI"
+        resourceId="" transactional="true">
+        <API Name="getCommonCodeList">
+            <Input>
+                <CommonCode CodeType="TGL_RCP_WEB_SOM_UI">
+					<ComplexQuery>
+						<Or>
+							<Exp Name="CodeValue" QryType="EQ" Value="ENABLE_CURBSIDE_CONSOLIDATION"/>
+							<Exp Name="CodeValue" QryType="EQ" Value="ENABLE_INSTORE_CONSOLIDATION"/>
+							<Exp Name="CodeValue" QryType="EQ" Value="STS_SHIPMENT_UI_FEATURES"/>
+                            <Exp Name="CodeValue" QryType="EQ" Value="ENABLE_INSTORE_PICKUP"/>
+						<!--	OMNI-108769-->
+							 <Exp Name="CodeValue" QryType="EQ" Value="ASSEMBLY_OVRDUE_HRS"/>
+							 <!--	OMNI-108769-->
+						</Or>
+					</ComplexQuery>
+				</CommonCode>
+            </Input>
+            <Template>
+                <CommonCodeList>
+                    <CommonCode CodeLongDescription=""
+                        CodeShortDescription="" CodeType="" CodeValue=""
+                        CommonCodeKey="" OrganizationCode=""/>
+                </CommonCodeList>
+            </Template>
+        </API>
+        <classInformation name="com.ibm.wsc.common.mashups.WSCBaseMashup"/>
+        <APINamespace inputNS="extn_DetermineUIToggle_ref_input" outputNS="extn_DetermineUIToggle_ref_output"/>
+        <AlternateResourceIds/>
+    </mashup>
+	<!--END : OMNI-101859,OMNI-102131,OMNI-85177 -->
+	<!--OMNI-105498 Begin-->
+    <mashup description="" endpoint="EP_CONFIG"
+        id="extn_InStorePickupOrdersCount" mashuptype="XAPI" resourceId="" transactional="true">
+        <API Name="getShipmentList">
+            <Input>
+                 <Shipment DeliveryMethod="PICK"
+                    DisplayLocalizedFieldInLocale="xml:CurrentUser:/User/@Localecode"
+                    MaximumRecords=""
+                    ShipNode="xml:CurrentStore:/Store/@ShipNode" Status="">
+					<ComplexQuery Operator=""> 
+							<Or> 
+								<Exp Name="" QryType="" Value=""/> 
+							</Or> 
+					</ComplexQuery> 
+                    <Extn ExtnIsInstorePickupOpted="Y"/>
+				</Shipment>
+            </Input>
+            <Template>
+                <Shipments TotalNumberOfRecords=""/>
+            </Template>
+        </API>
+        <classInformation name="com.ibm.wsc.common.mashups.WSCBaseMashup"/>
+        <APINamespace inputNS="extn_InStorePickupOrdersCount_input" outputNS="extn_InStorePickupOrdersCount_output"/>
+        <AlternateResourceIds/>
+    </mashup>
+   <!--OMNI-105498 End-->
+   <!--OMNI-105674 Start-->
+   <mashup description="" endpoint="EP_CONFIG"
+		 id="extn_resetInstoreOrders" mashuptype="XAPI" resourceId="" transactional="true">
+        <API FlowName="AcademyProcessInStorePickupRequestService">
+            <Input>
+			    <Order ShipmentKey="" ResetInstorePickUp="" CustomerDetails="" OrderNo="" 
+				ShipmentNo="" StoreNo="xml:CurrentStore:/Store/@ShipNode"/>
+            </Input>
+            <Template/>
+        </API>
+        <classInformation name="com.ibm.wsc.common.mashups.WSCBaseMashup"/>
+        <APINamespace inputNS="extn_resetInstoreOrders_input" outputNS="extn_resetInstoreOrders_output"/>
+        <AlternateResourceIds/>
+	</mashup>
+	<!--OMNI-105674 End-->
+</mashups>

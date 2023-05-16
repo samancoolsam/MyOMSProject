@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DBSchema>
+    <Entities>
+        <Entity ApiNeeded="Y" AuditRequired="N" Description="This table records the store user action"
+            Prefix="ACAD" HasHistory="False"
+            TableName="ACAD_STORE_ACTION_DATA" XMLName="AcadStoreActionData">
+			<Attributes>			
+				<Attribute ColumnName="STORE_ACTION_DATA_KEY"
+							DataType="Key" DefaultValue="' '"
+							Description="The primary key of the ACAD_STORE_ACTION_DATA table."
+							Name="StoreActionDataKey" Nullable="false" XMLName="StoreActionDataKey"/>
+				<Attribute ColumnName="SHIPMENT_NO"
+							Size="50" Type="VARCHAR2" DefaultValue="' '"
+							Description="The unique identifier for the Shipment."
+							Name="ShipmentNo" Nullable="false" XMLName="ShipmentNo"/>						
+				<Attribute ColumnName="ORDER_NO"
+							Size="50" Type="VARCHAR2" DefaultValue="' '" 
+							Description="The Unique Identifier of the Order"
+							Name="OrderNo" Nullable="false" XMLName="OrderNo"/>							
+				<Attribute ColumnName="USER_ID"
+							Size="50" Type="VARCHAR2" DefaultValue="' '"
+							Description="Store User ID"
+							Name="UserID" Nullable="false" XMLName="UserID"/>						
+				 <Attribute ColumnName="DELIVERY_METHOD"
+							Size="30" Type="VARCHAR2" DefaultValue="' '" 
+							Description="The Delivery Method of the Order"
+							Name="Delivery_Method" Nullable="false" XMLName="Delivery_Method"/>
+				<!--OMNI-79559 : Starts -->
+				<Attribute ColumnName="NOTIFY_STORE"
+							Size="1" Type="VARCHAR2" DefaultValue="' '" 
+							Description="Indicates the status or instance of the Instore Pick Notification sent"
+							Name="NotifyStore" Nullable="false" XMLName="NotifyStore"/>
+				<!--OMNI-79559 : Ends -->
+				<Attribute ColumnName="CREATETS" DataType="TimeStamp"
+					DefaultValue="SYSDATE" Description="Create TimeStamp" />
+				<Attribute ColumnName="MODIFYTS" DataType="TimeStamp"
+					DefaultValue="SYSDATE" Description="Modify TimeStamp" />
+				<Attribute ColumnName="CREATEUSERID" DataType="UserId"
+					DefaultValue="' '" Description="Creating User ID" />
+				<Attribute ColumnName="MODIFYUSERID" DataType="UserId"
+					DefaultValue="' '" Description="Modifying User ID" />
+				<Attribute ColumnName="CREATEPROGID"
+					DataType="ProgramID" DefaultValue="' '"
+					Description="Creating Program ID" />
+				<Attribute ColumnName="MODIFYPROGID"
+					DataType="ProgramID" DefaultValue="' '"
+					Description="Modifying Program ID" />
+				<Attribute ColumnName="LOCKID" DataType="Lockid"
+					DefaultValue="0" Description="Lock ID" />
+            </Attributes>  
+			<PrimaryKey Name="DATA_KEY_PK">
+                <Attribute ColumnName="STORE_ACTION_DATA_KEY" Name="StoreActionDataKey"/>
+            </PrimaryKey>
+		</Entity>
+	</Entities>
+</DBSchema>

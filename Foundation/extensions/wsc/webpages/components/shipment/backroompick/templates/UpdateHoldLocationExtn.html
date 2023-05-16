@@ -1,0 +1,206 @@
+		<div>
+		<div data-dojo-type="idx/form/FilteringSelect" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_filteringselect' , 
+		_sc_extensibility_moveOrder : '10' , 
+		_sc_extensibility_operation : 'insert' , 
+		'class' : 'autoLabelZeroWidth longTextbox nonEditable' , 
+		_sc_extensibility_position : 'last' , 
+		_sc_extensibility_referenceUId : 'extn_Print_to'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	bindingData : 	{
+		 optionsBinding : 	{
+		 path : 			'Devices.Device'
+,
+		 namespace : 			'extn_getPrinterDevice_output1'
+,
+		 descriptionField : 			'DeviceId'
+,
+		 valueField : 			'DeviceId'
+	}
+,
+		 targetBinding : 	[
+	 		{
+		 path : 			'Devices.Device.DeviceId'
+,
+		 namespace : 			'extn_getChangedPrinterID'
+,
+		 scExtensibilityArrayItemId : 			'extn_TargetBindings_0'
+	}
+	]
+,
+		 sourceBinding : 	{
+		 path : 			'Devices.Device.DeviceId'
+,
+		 namespace : 			'extn_printerFromSession'
+	}
+	}
+,	
+			 	label : 			this.getSimpleBundleString('Print To')
+			}
+		}
+	 					}">
+		 	</div>
+			<!-- OMNI-21999: Full name of customer on BOPIS staging screen - Start --> 
+		 	<div data-dojo-type="idx/layout/ContentPane" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_custname' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '11' , 
+		'class' : 'extn_CustomerName' , 
+		_sc_extensibility_position : 'before' , 
+		_sc_extensibility_referenceUId : 'extn_Print_to'  
+	 					}">		
+		 	</div>  
+			<!-- OMNI-21999: Full name of customer on BOPIS staging screen - End -->
+			<div data-dojo-type="idx/layout/ContentPane" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_Print_to' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '8' , 
+		_sc_extensibility_position : 'before' , 
+		_sc_extensibility_referenceUId : 'extn_AssignStagingLocCP'  
+	 					}">
+		 	</div>  
+  
+		 	<div data-dojo-type="idx/layout/ContentPane" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '1' , 
+		_sc_extensibility_referenceUId : 'HoldLocationListContainer' , 
+		uId : 'extn_repeate_holdLocation' , 
+		_sc_extensibility_position : 'before'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	bindingData : 	{
+		 repeatingscreenGeneratorFunction : 			'extn_getRepetingScreen'
+,
+		 repeatingScreen : 	{
+		 repeatingnamespace : 			'getCustomerList_output'
+,
+		 path : 			'Shipment.ShipmentLines.ShipmentLine'
+,
+		 repeatingScreenClass : 			'accentPanel'
+,
+		 sourcenamespace : 			'extn_ShipmentModel'
+	}
+	}
+			}
+		}
+	 					}">
+		 	</div> 
+			 <!-- OMNI- 3676 BOPIS: Apply All Staging Locations START -->  
+			<div data-dojo-type="idx/layout/ContentPane" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_AssignStagingLocCP' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '2' , 
+		_sc_extensibility_position : 'before' , 
+		style : 'padding-bottom:20px' , 
+		_sc_extensibility_referenceUId : 'addStagingLocationPanel'  
+	 					}">
+		 	</div>  
+			 <!-- OMNI- 3676 BOPIS: Apply All Staging Locations END --> 
+		 	<div data-dojo-type="dijit/form/Button" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								_sc_extensibility_operation : 'change' , 
+		_sc_extensibility_referenceUId : 'addHoldLocationButton' , 
+		renderHidden : true  
+	 					}">
+		 	</div> 
+			 <!-- OMNI- 3676 BOPIS: Apply All Staging Locations START --> 
+					 	<div data-dojo-type="dijit/form/Button" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_assignALLLoc' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '4' , 
+		'class' : 'idxSpecialButton longButtons' , 
+		spanLabel : true , 
+		_sc_extensibility_position : 'after' , 
+		_sc_extensibility_referenceUId : 'extn_StagingLoc'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	label : 			this.getSimpleBundleString('extn_Assign_ALL')
+			}
+		}
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="dijit/form/Button" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_assignALLLoc' , 
+		_sc_extensibility_operation : 'move' , 
+		_sc_extensibility_moveOrder : '5' , 
+		_sc_extensibility_position : 'after' , 
+		_sc_extensibility_referenceUId : 'extn_StagingLoc'  
+	 					}">
+		 	</div>  
+			 <!-- OMNI- 3676 BOPIS: Apply All Staging Locations END -->
+		 	<div data-dojo-type="idx/form/TextBox" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								renderHidden : true , 
+		_sc_extensibility_operation : 'change' , 
+		_sc_extensibility_referenceUId : 'holdLocationTxtField'  
+	 					}">
+		 	</div>
+			 <!-- OMNI- 3676 BOPIS: Apply All Staging Locations START -->
+				 	<div data-dojo-type="idx/form/TextBox" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_StagingLoc' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '3' , 
+		'class' : 'addlocation longTextbox zeroWidthLabelKey' , 
+		spanLabel : true , 
+		_sc_extensibility_position : 'first' , 
+		_sc_extensibility_referenceUId : 'extn_AssignStagingLocCP'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	bindingData : 	{
+		 targetBinding : 	[
+	 		{
+		 namespace : 			'extn_StagingLocationAll'
+,
+		 path : 			'Shipment.ShipmentLines.ShipmentLine.Extn.ExtnStagingLocation'
+,
+		 scExtensibilityArrayItemId : 			'extn_TargetBindings_0'
+	}
+	]
+	}
+,	
+			 	label : 			this.getSimpleBundleString('extn_Staging_Location')
+			}
+		}
+	 					}">
+		 	</div>  
+			<!-- OMNI-21999: Full name of customer on BOPIS staging screen - Start --> 
+		 	<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_custName' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '12' , 
+		_sc_extensibility_position : 'first' , 
+		_sc_extensibility_referenceUId : 'extn_custname'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 path : 			'Shipment.ShipmentLines.ShipmentLine.0.Order.CustomerFirstName'
+,
+		 dynamicBindingFunc : 			'extn_CustomerName'
+,
+		 namespace : 			'ShipmentModel'
+	}
+	}
+,	
+			 	label : 			this.getBundleString('extn_Customer_Name')
+			}
+		}
+	 					}">
+		 	</div>  
+		<!-- OMNI-21999: Full name of customer on BOPIS staging screen - End -->
+		</div>

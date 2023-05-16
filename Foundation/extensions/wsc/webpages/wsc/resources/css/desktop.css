@@ -1,0 +1,324 @@
+.addStagingLocation .scDataLabelValue {
+	display: inline !important;
+}
+
+@media (min-width: 600px) {
+	.testClass {
+		min-width: 19% !important;
+	}
+}
+
+.alternateCustomer {
+	font-size: 14px;
+    	line-height: 1.6;
+	color: #4c4d53;
+}
+
+.marginTop {
+	margin-top: 20px;
+	line-height: 1.5 !important;
+}
+
+.width25 {
+	width: 25%;
+	display: inline-block;
+}
+
+@media (max-width: 600px) {
+	.width25 {
+		width: auto !important;
+	}
+
+	.hideMobile {
+		display: none !important;
+		visibility: hidden !important;
+	}
+}
+
+.comapps .duein.academyMediumPrioritySLA .scDataLabelValue {
+  font-weight: normal;
+  font-size: 14px;
+  font-family: "Helvetica Neue Light", "HelvLightIBM", "Helvetica Neue", Helvetica, Arial, Tahoma, Verdana, sans-serif;
+  color: #ecec0d !important;
+}
+.disableLink {
+	pointer-events: none;
+}
+.extn_Width .idxLabel{
+	width: 18em !important;
+}
+.comapps .homeeditor .PortletContent.longFields .extn_overFlow .dijitTextBox .dijitInputField{
+	overflow: visible !important;
+}
+.extnEmailDiv{
+	margin-bottom: 35px;
+}
+.extn_Block {
+	display: block;
+}
+.extn_FinishPackMobile {
+	margin-right: 5px !important;
+	margin-top: 5px !important;
+}
+
+/* START - (OMNI - 1409)  : BOPIS: Finish Pickup Button for BOPIS orders */
+span.dijit.dijitButton.extnFinishbuttoncss .dijitButtonText
+{
+  color: #ff0000 !important;
+}
+span.dijit.dijitButtonhover.extnFinishbuttoncss .dijitButtonText
+{
+  color: #ffffff !important;
+}
+.extnScanBarCode {
+	margin-top:0px;
+}
+/* END - (OMNI - 1409)  : BOPIS: Finish Pickup Button for BOPIS orders */
+
+/* OMNI- 5402 Mobile Web SOM Home Page: Ready For Curbside PickUp Section  - Start */
+.extn_labelCss .dijitReset {
+  font-weight:bold !important;
+  color: #ff0000 !important;
+ padding-left: 7px !important;
+}
+
+.extn_labelCss .idxLabel {
+ font-weight:bold !important;
+}
+
+.extn_labelCssPadding .dijitReset {
+ padding-left: 5.5px !important;
+}
+/* OMNI- 5402 Mobile Web SOM Home Page: Ready For Curbside PickUp Section  - END */
+
+/* OMNI-6583 Mobile Store - STS - TO Detailed Receiving Report Screen Start */
+.extn_labelCssPC .dijitReset {
+  font-weight:bold !important;
+  padding-left:16px;
+}
+
+.extn_labelCssPC .idxLabel {
+ font-weight:bold !important;
+ width: unset !important;
+ min-width: unset !important;
+}
+
+.extn_labelCssNC .idxLabel {
+ width: unset !important;
+ min-width: unset !important;
+}
+/* OMNI-6583 Mobile Store - STS - TO Detailed Receiving Report Screen END */
+
+/* OMNI-6584 Mobile Store - STS - Inbound Shipment Summary Screen Start */
+.extn_summarylabel .idxLabel{
+text-align: unset ! important;
+}
+
+.extn_NoBorder .repeatingpanel {
+border-top:0px ! important;
+}
+
+.extn_summary_label .noColonLabels {
+text-align: unset;
+}
+
+
+.extn_NoProductBorder .dijitTitlePaneTitle {
+     border: 0px ! important;
+     width: 35% !important;
+}
+
+.extn_receivedLabel .dijitReset {
+ font-weight:bold !important;
+}
+
+
+.extn_ContainerNC .dijitReset {
+  color: #ff0000 !important;
+}
+
+.extn_ReceivedNC .dijitReset {
+  color: #ff0000 !important;
+}
+
+
+.extn_labelReceiving .idxLabel {
+font-weight:bold !important;
+}
+
+.extn_labelReceiving .dijitReset {
+font-weight:normal !important;
+}
+
+/*OMNI-8710, 8717: START */
+.extn_CustomerInfo .idxLabel{
+	font-size: 20px !important;
+	color: #03086d !important;
+	font-weight: bold !important;
+	display: inline;
+	padding-bottom: 5px !important;
+}
+
+.extn_ShpPnl .idxLabel{
+	margin-top: 20px !important;
+}
+
+.extn_ShpPnlDigit{
+	margin-bottom: 10px !important;
+} 
+
+.slider{
+    /*width:100%; */
+}
+
+.split {
+	width: 50%;
+	/*position: fixed;*/
+	z-index: 1;
+	overflow-x: hidden;
+	float: left;
+}
+
+.left {
+	left: 0;
+	/*width: 70%;*/
+	display: inline;	
+}
+
+.right {
+	right: 0;
+	/*width: 40%;*/
+	margin-top: 10px;
+	/*margin-left: 40px;*/
+}
+
+.extn_marginleft {
+	margin-left: 20px !important;
+}
+
+.extn_CarMakeColor .idxLabel{
+	color: #03086d !important;
+	font-weight: bold !important;
+	font-size: 15px;
+}
+
+.extn_CarMakeColorCss .dijitReset {
+	color: black !important;
+	font-weight: normal !important;
+    margin-top: 0px !important;
+}
+
+.extn_CustName .dijitReset {
+	font-weight: bold !important;
+	font-size: 15px;
+}
+
+.extn_ShpPnlfont .dijitReset{
+	font-size: 1em !important;
+	font-family: "HelvNeueMediumforIBM", "Helvetica Neue", Helvetica, Arial, Tahoma, Verdana, sans-serif;
+}
+
+.extn_textalign .dijitReset{
+	margin-left: 6px;
+}
+/*OMNI-8710, 8717: END */
+
+/* OMNI-6584 Mobile Store - STS - Inbound Shipment Summary Screen END */
+.extn_reducePanelHeight{
+
+    min-height: 13px !important;
+    height: 13px !important;
+    padding-bottom: 5px !important;
+    padding-top: 5px !important;
+}
+.extn_reduceSTSURLPanelHeight{
+
+    min-height: 13px !important;
+    height: 13px !important;
+    padding-bottom: 20px !important;
+    padding-top: 20px !important;
+}
+
+/* OMNI-6624 - START */
+.extn_TOdate .idxLabel{
+padding-left: 0px !important;
+text-align: unset ! important;
+}
+
+.extn_TOdate .dijitReset {
+padding-left: 10px !important;
+text-align: unset ! important;
+}
+
+.extn_TOdate .noColonLabels {
+	text-align: unset;
+}
+
+.extn_LabelStatus .dijitReset {
+padding-left: 6px !important
+}
+
+
+.extn_CancelLabel .idxLabel{
+	padding-left: 0px !important;
+	text-align: unset !important;
+        color: #FF0000 !important;
+	font-weight: bold !important;
+}
+
+.extn_CancelLabel .dijitReset {
+padding-left: 5px !important;
+text-align: unset ! important;
+}
+/* OMNI-6624 - END */
+
+/* OMNI-8715 : Start*/
+.extn_Express .idxLabel{
+	color: #FF0000 !important;
+}
+/* OMNI-8715 : End*/
+
+/* OMNI -9408 - STS - Order Search Result - Cancellation Product Information - START  */
+.extn_STS_CancellationLabel .idxLabel{
+	color: #FF0000 !important;
+}
+/* OMNI -9408 - STS - Order Search Result - Cancellation Product Information - END  */
+
+/* OMNI-21999: Full name of customer on BOPIS staging screen - START */
+.extn_CustomerName .idxLabel{
+	margin-top: 10px !important;
+	margin-left: 0px !important;
+	margin-bottom: 10px !important;
+	width: auto !important;
+}
+/* OMNI-21999: Full name of customer on BOPIS staging screen - END */
+
+/* OMNI- 30153 Desktop Web SOM Order Sumamry Page: Save The Sale label display  - Start */
+.extn_SaveTheSalelabelCss .idxLabel {
+        font-weight:bold !important;
+        color: #00649d !important;
+}
+/* OMNI- 30153 Desktop Web SOM Order Sumamry Page: Save The Sale label display  - End */
+
+/* OMNI-83819, OMNI-85035 Curbside Consolidation - Start */
+.extn_APPColorCss{
+	white-space: nowrap !important;
+	color: #03086d !important;
+	font-weight: bold !important;
+	font-size: 14px;
+	padding-top: 25px;
+	padding-bottom: 0px;
+	display: inline-block;
+}
+.extn_APPColor .idxLabel{
+	color: #03086d !important;
+	font-weight: bold !important;
+	font-size: 12px;
+}
+.extn_APPEmail .dijitReset {
+	color: black !important;
+	font-weight: normal !important;
+	font-size: 12px;
+	word-break: break-word;
+}
+/* OMNI-83819, OMNI-85035 Curbside Consolidation - End */

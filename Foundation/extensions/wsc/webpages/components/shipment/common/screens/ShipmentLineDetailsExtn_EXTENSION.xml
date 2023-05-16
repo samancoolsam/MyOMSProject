@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExtensionMetaData>
+    <ScreenExtension extnClassName="ShipmentLineDetailsExtn"
+        extnPackage="extn.components.shipment.common.screens"
+        originalScreen="wsc.components.shipment.common.screens.ShipmentLineDetails"
+        originalScreenPackage="wsc.components.shipment.common.screens" type="diffrential">
+	<!--Start - OMNI-3680 BOPIS:Record Shortage Button-->
+        <Items>
+
+	<!--OMNI-45645-SIM Integration Changes -- Start -->
+            <ContentPane _sc_extensibility_moveOrder="9"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="divQuantity" uId="extn_ItemPrice"/>
+	<!--OMNI-45645-SIM Integration Changes -- End -->
+
+            <Button _sc_extensibility_moveOrder="6"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="shortageResolutionLink"
+                class="shortageResolution lineLinks"
+                label="$(_scSimpleBundle:extn_Record_Shortage)"
+                showLabel="true" uId="extn_button"/>
+            <Label _sc_extensibility_moveOrder="1"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="itemVariationPanelHolder"
+                class="blockComponent location autoLabelZeroWidth alternateCustomer"
+                uId="extn_datalabel" value="$(_scSimpleBundle:blank)"/>
+
+	<!--OMNI-45645-SIM Integration Changes -- Start -->
+            <Label _sc_extensibility_moveOrder="7"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="extn_datalabel3"
+                class="blockComponent location autoLabelZeroWidth alternateCustomer alternateCustomer_mbl" uId="extn_AvlStockOnHand"/>
+            <Label _sc_extensibility_moveOrder="8"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="extn_AvlStockOnHand"
+                class="blockComponent location autoLabelZeroWidth alternateCustomer alternateCustomer_mbl" uId="extn_ItemLRD"/>
+            <Label _sc_extensibility_moveOrder="10"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="first"
+                _sc_extensibility_referenceUId="extn_ItemPrice"
+                class="blockComponent location autoLabelZeroWidth alternateCustomer alternateCustomer_mbl"
+                style="Padding-bottom:5px" uId="extn_ItemPriceLabel"/>
+	<!--OMNI-45645-SIM Integration Changes -- End -->
+
+            <Link _sc_extensibility_operation="change"
+                _sc_extensibility_referenceUId="itemdescriptionLink" class="groupHeader blockComponent productdesclink disableLink"/>
+            <Link _sc_extensibility_operation="change"
+                _sc_extensibility_referenceUId="shortageResolutionLink"
+                renderHidden="true" resourceId="C000000"/>
+            <DataLabel _sc_extensibility_moveOrder="3"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="extn_datalabel"
+                class="blockComponent productdesclink"
+                label="$(_scSimpleBundle:extn_On_Hand)"
+                renderHidden="true" uId="extn_datalabel2" value="$(_scSimpleBundle:blank)"/>
+            <DataLabel _sc_extensibility_moveOrder="4"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="extn_datalabel2"
+                class="blockComponent location autoLabelZeroWidth"
+                label="$(_scBundle:extn_Live_Date1)"
+                uId="extn_datalabel3" value="$(_scSimpleBundle:black)"/>
+            <DataLabel _sc_extensibility_moveOrder="5"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="extn_datalabel3"
+                class="blockComponent location autoLabelZeroWidth"
+                label="$(_scBundle:extn_Pog_Id_)" uId="extn_datalabel4" value="$(_scSimpleBundle:black)"/>
+            <DataLabel _sc_extensibility_operation="change"
+                _sc_extensibility_referenceUId="Locationlbl" renderHidden="true"/>
+               <!--OMNI-104474--STSRT-->
+               <DataLabel _sc_extensibility_operation="change"
+                _sc_extensibility_referenceUId="Locationlbl" renderHidden="true"/>
+            <DataLabel _sc_extensibility_moveOrder="12"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="extn_datalabel"
+                class="extn_DisplayAssembly"
+                label="$(_scSimpleBundle:extn_Assembly_Requested)" uId="extn_Assebmly_Requested"/> 
+                 <!--OMNI-104474--END-->
+        </Items>
+        <Subscribers>
+            <Local>
+                <Subscriber eventId="afterScreenInit" isExtn="true" sequence="51">
+                    <Handler methodName="displayServiceDetails"/>
+                </Subscriber>
+                <Subscriber
+                    description="This method is used to open shortage resolution popup"
+                    eventId="extn_button_onClick" isExtn="true" sequence="51">
+                    <Handler methodName="openShortageResolutionPopup"/>
+                </Subscriber>
+                <!--OMNI:66083 - START -->
+                    <Subscriber eventId="afterBehaviorMashupCall"
+                    isExtn="true" sequence="51">
+                    <Handler methodName="extn_AfterBehaviorMashupCall"/>
+                </Subscriber>
+                <!--OMNI:66083 - END -->
+            </Local>
+        </Subscribers>
+          <!--OMNI:66083 - START -->
+           <MashupRefs>
+            <Behavior>
+                <MashupRef extnType="ADD"
+                    mashupId="extn_getFlagToDisableAddQtyAndReadOnlyScannedQty" mashupRefId="extn_getFlagToDisableAddQtyAndReadOnlyScannedQty"/>
+            </Behavior>
+        </MashupRefs>
+          <!--OMNI:66083 - END -->
+    </ScreenExtension>
+    <!--End - OMNI-3680 BOPIS:Record Shortage Button-->
+</ExtensionMetaData>

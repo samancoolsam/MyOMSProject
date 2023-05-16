@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DBSchema>
+	<Entities>
+		<Entity ApiNeeded="Y" 
+			Description=""
+			HasHistory="False" Prefix="ACAD" TableName="ACAD_TRACKING_UPDATES" XMLName="AcadTrackingUpdates">
+			<Attributes>
+				<Attribute ColumnName="CARRIER_UPDATE_TRACKER_KEY" Size="40" DataType="Key" DefaultValue="' '" Description="Primary key for the table" Name="CarrierUpdateTrackerKey" Nullable="false" XMLGroup="" XMLName="CarrierUpdateTrackerKey" />
+				<Attribute ColumnName="SHIPMENT_NO" Size="40" DataType="Text-40" DefaultValue="' '" Description="Shipment Number" Name="ShipmentNo" Nullable="false" XMLGroup="" XMLName="ShipmentNo" />
+				<Attribute ColumnName="TRACKING_NO" Size="40" DataType="Text-40" DefaultValue="' '" Description="Tracking Number" Name="TrackingNo" Nullable="false" XMLGroup="" XMLName="TrackingNo" />
+				<Attribute ColumnName="STATUS" Size="40" DataType="Text-40" DefaultValue="' '" Description="Status" Name="Status" Nullable="false" XMLGroup="" XMLName="Status" />
+				<Attribute ColumnName="IS_PROCESSED" Size="1" DataType="Flag" DefaultValue="'N'" Description="IsProcessed" Name="IsProcessed" Nullable="false" XMLGroup="" XMLName="IsProcessed" />				
+				<Attribute ColumnName="STATUS_DESCRIPTION" Size="40" DataType="Text-40" DefaultValue="' '" Description="Status Description" Name="StatusDescription" Nullable="false" XMLGroup="" XMLName="StatusDescription" />
+				<Attribute ColumnName="STATUS_DATE" Size="40" DataType="Text-40" DefaultValue="' '" Description="Status Date" Name="StatusDate" Nullable="false" XMLGroup="" XMLName="StatusDate" />
+				<Attribute ColumnName="INVOICE_NO" Size="40" DataType="Text-40" DefaultValue="' '" Description="Invoice Number" Name="InvoiceNo" Nullable="false" XMLGroup="" XMLName="InvoiceNo" />
+				<Attribute ColumnName="PRO_NO" Size="40" DataType="Text-40" DefaultValue="' '" Description="Pro Number" Name="ProNo" Nullable="false" XMLGroup="" XMLName="ProNo" />
+				<Attribute ColumnName="STATUS_LOCATION" Size="40" DataType="Text-40" DefaultValue="' '" Description="Status Location" Nullable="true" XMLName="StatusLocation"/>
+				<Attribute ColumnName="STATUS_ADDRESS" Size="40" DataType="Text-40" DefaultValue="' '" Description="Scan Street" Nullable="true" XMLName="StatusAddress"/>
+				<Attribute ColumnName="STATUS_CITY" Size="40" DataType="Text-40" DefaultValue="' '" Description="Scan City" Nullable="true" XMLName="StatusCity"/>
+				<Attribute ColumnName="STATUS_ZIP_CODE" Size="40" DataType="Text-40" DefaultValue="' '" Description="Scan Location ZipCode" Nullable="true" XMLName="StatusZipCode"/>		
+
+				<Attribute ColumnName="CREATETS" DataType="TimeStamp" DefaultValue="sysdate" Description="Create TimeStamp" />
+				<Attribute ColumnName="MODIFYTS" DataType="TimeStamp" DefaultValue="sysdate" Description="Modify TimeStamp" />
+				<Attribute ColumnName="CREATEUSERID" DataType="UserId" DefaultValue="&apos; &apos;" Description="Creating User ID" />
+				<Attribute ColumnName="MODIFYUSERID" DataType="UserId" DefaultValue="&apos; &apos;" Description="Modifying User ID" />
+				<Attribute ColumnName="CREATEPROGID" DataType="ProgramID" DefaultValue="&apos; &apos;" Description="Creating Program ID" />
+				<Attribute ColumnName="MODIFYPROGID" DataType="ProgramID" DefaultValue="&apos; &apos;" Description="Modifying Program ID" />
+				<Attribute ColumnName="LOCKID" DataType="Lockid" DefaultValue="0" Description="Lock ID" />
+			</Attributes>
+
+			<!-- PrimaryKey is a mandatory attribute in entity definition. This
+				element can have ONLY ONE attribute element -->
+			<PrimaryKey Name="CARRIER_TRACKER_PK">
+				<Attribute ColumnName="CARRIER_UPDATE_TRACKER_KEY"
+					    Name="CarrierUpdateTrackerKey" />
+			</PrimaryKey>
+			
+			
+		</Entity>
+	</Entities>
+</DBSchema>

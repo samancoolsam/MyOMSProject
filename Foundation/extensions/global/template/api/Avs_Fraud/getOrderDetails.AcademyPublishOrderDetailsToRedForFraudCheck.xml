@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Order AllocationRuleID=""
+	AuthorizationExpirationDate="" BillToID=""
+	BuyerOrganizationCode="" CarrierAccountNo="" CarrierServiceCode=""
+	ChainType="" ChargeActualFreightFlag="N" CustCustPONo=""
+	CustomerEMailID="" CustomerPONo="" DeliveryCode="" Division=""
+	DocumentType="" DraftOrderFlag="N" EnteredBy=""
+	EnterpriseCode="" EntryType="" ExchangeType=""
+	FreightTerms="" HasDeliveryLines="N" HasProductLines="Y"
+	HasServiceLines="N" HoldFlag="Y" HoldReasonCode=""
+	MaxOrderStatus="" MaxOrderStatusDesc=""
+	MinOrderStatus="" MinOrderStatusDesc=""
+	NotificationReference="" NotificationType=""
+	NotifyAfterShipmentFlag="N" OrderDate=""
+	OrderHeaderKey="" OrderName="" OrderNo=""
+	OrderPurpose="" OrderType="" OriginalTax=""
+	OriginalTotalAmount="" OtherCharges=""
+	PaymentStatus="" PendingTransferIn="0.00" PersonalizeCode=""
+	PriceProgramKey="" PriorityCode="" PriorityNumber="0" Purpose=""
+	ReceivingNode="" ReturnByGiftRecipient=""
+	ReturnOrderHeaderKeyForExchange="" SCAC="" ScacAndService=""
+	ScacAndServiceKey="" SearchCriteria1="" SearchCriteria2=""
+	SellerOrganizationCode="" ShipToID=""
+	SourcingClassification="" Status="" TaxExemptFlag="N"
+	TaxExemptionCertificate="" TaxJurisdiction="" TaxPayerId=""
+	TermsCode="" TotalAdjustmentAmount="0.00" VendorID="" isHistory="N">
+	<Extn />
+	<PriceInfo Currency="USD" EnterpriseCurrency="USD"
+		ReportingConversionDate=""
+		ReportingConversionRate="0.00" TotalAmount="0.00" />
+	<OrderLines TotalNumberOfRecords="1">
+		<OrderLine AllocationDate=""
+			ApptStatus="" AwaitingDeliveryRequest="N" CanAddServiceLines="N"
+			CarrierAccountNo="" CarrierServiceCode="" CustomerLinePONo=""
+			CustomerPONo="" DeliveryCode="" DeliveryMethod="SHP"
+			DepartmentCode="" FreightTerms="" FulfillmentType=""
+			HasDeliveryLines="N" HasServiceLines="N" HoldFlag="N"
+			HoldReasonCode="" ImportLicenseNo="" InvoicedQty="0.00"
+			IsBundleParent="N" ItemGroupCode="" KitCode="" LineSeqNo="1.1"
+			LineType="" MaxLineStatus="" MaxLineStatusDesc=""
+			MinLineStatus="" MinLineStatusDesc="" OpenQty=""
+			OrderHeaderKey=""
+			OrderLineKey="" OrderedQty=""
+			OrigOrderLineKey="" OriginalOrderedQty="1.00" OtherCharges="0.00"
+			PackListType="" PersonalizeCode="" PersonalizeFlag=""
+			PickableFlag="Y" PrimeLineNo="1" Purpose="" ReceivingNode=""
+			RemainingQty="" ReservationID="" ReservationPool="" SCAC=""
+			ScacAndService="" ScacAndServiceKey="" Segment="" SegmentType=""
+			SerialNo="" ShipNode="" ShipToID="" ShipTogetherNo=""
+			SplitQty="0.00" Status="" StatusQuantity="1.00" SubLineNo=""
+			SubstituteItemID="" SubstituteItemUOM="" isHistory="N">
+			<Item CostCurrency="" CountryOfOrigin="" CustomerItem=""
+				CustomerItemDesc="" ECCNNo="" HarmonizedCode="" ISBN="" ItemDesc=""
+				ItemID="" ItemShortDesc="" ItemWeight="0.00"
+				ItemWeightUOM="" ManufacturerItem="" ManufacturerItemDesc=""
+				ManufacturerName="" NMFCClass="" NMFCCode="" NMFCDescription=""
+				ProductClass="" ProductLine="" ScheduleBCode="" SupplierItem=""
+				SupplierItemDesc="" TaxProductCode="" UPCCode="" UnitCost="0.00"
+				UnitOfMeasure="">
+			</Item>
+			<LinePriceInfo ActualPricingQty=""
+				DiscountPercentage="0.00" InvoicedPricingQty="0.00"
+				IsPriceLocked="N" LineTotal="0.00" ListPrice="0.00"
+				OrderedPricingQty="" PricingQtyConversionFactor="0.00"
+				PricingUOM="EACH" RetailPrice="0.00" SettledAmount="0.00"
+				SettledQuantity="0.00" TaxableFlag="N" UnitPrice="0.00" />
+			<OrderLineOptions />
+			<WorkOrders NumberOfWorkOrders="0" />
+			<Instructions NumberOfInstructions="0" />
+			<References />
+			<KitLines NumberOfKitLines="0" />
+			<ProductItems />
+			<AdditionalAddresses NumberOfAdditionalAddresses="0" />
+			<Notes NumberOfNotes="0" />
+			<ServiceAssociations />
+			<ProductAssociations />
+			<DeliveryAssociations />
+			<Schedules>
+				<Schedule
+					ExpectedDeliveryDate=""
+					ExpectedShipmentDate=""
+					OrderHeaderKey=""
+					OrderLineKey=""
+					OrderLineScheduleKey="" Quantity=""
+					ScheduleNo="1" TagNumber="" />
+			</Schedules>
+			<LineOverallTotals Charges="0.00" Discount="0.00"
+				ExtendedPrice="0.00" LineTotal="0.00" OptionPrice="0.00"
+				PricingQty="1.00" Tax="0.00" UnitPrice="0.00" />
+			<LineInvoicedTotals Charges="0.00" Discount="0.00"
+				ExtendedPrice="0.00" LineTotal="0.00" OptionPrice="0.00"
+				PricingQty="0.00" Tax="0.00" UnitPrice="0.00" />
+			<LineRemainingTotals Charges="0.00" Discount="0.00"
+				ExtendedPrice="0.00" LineTotal="0.00" OptionPrice="0.00"
+				PricingQty="1.00" Tax="0.00" UnitPrice="0.00" />
+			<LineCharges />
+			<LineTaxes />
+			<OrderStatuses>
+				<OrderStatus OrderHeaderKey=""
+					OrderLineKey=""
+					OrderLineScheduleKey="" OrderReleaseKey=""
+					OrderReleaseStatusKey=""
+					PipelineKey="" ReceivingNode="" ShipNode=""
+					Status="" StatusDate=""
+					StatusDescription="" StatusQty="" StatusReason=""
+					TotalQuantity="">
+					<Details
+						ExpectedDeliveryDate=""
+						ExpectedShipmentDate="" TagNumber="">
+						<KitDetails />
+					</Details>
+				</OrderStatus>
+			</OrderStatuses>
+			<CapacityAllocations />
+			<Extn />
+		</OrderLine>
+	</OrderLines>
+	<Instructions NumberOfInstructions="0" />
+	<PersonInfoShipTo AddressLine1="" AddressLine2="" AddressLine3=""
+		AddressLine4="" AddressLine5="" AddressLine6="" AlternateEmailID=""
+		Beeper="" City="" Company="" Country="US" DayFaxNo="" DayPhone=""
+		Department="" EMailID="" EveningFaxNo="" EveningPhone="" FirstName=""
+		JobTitle="" LastName="" MiddleName="" MobilePhone="" OtherPhone=""
+		PersonID="" PersonInfoKey="" State="" Suffix=""
+		Title="" ZipCode="" />
+	<PersonInfoBillTo AddressLine1="" AddressLine2="" AddressLine3=""
+		AddressLine4="" AddressLine5="" AddressLine6="" AlternateEmailID=""
+		Beeper="" City="" Company="" Country="US" DayFaxNo="" DayPhone=""
+		Department="" EMailID="" EveningFaxNo="" EveningPhone="" FirstName=""
+		JobTitle="" LastName="" MiddleName="" MobilePhone="" OtherPhone=""
+		PersonID="" PersonInfoKey="" State="" Suffix=""
+		Title="" ZipCode="" />
+	<AdditionalAddresses NumberOfAdditionalAddresses="0" />
+	<References />
+	<PaymentMethods />
+	<ChargeTransactionDetails AdditionalExpectedAuthorizations="0.00"
+		TotalCredits="0.00" TotalDebits="0.00" TotalOpenAuthorizations="0.00"
+		TotalOpenBookings="" TotalTransferredIn="0.00"
+		TotalTransferredOut="0.00">
+		<ChargeTransactionDetail AuditTransactionID=""
+			AuthorizationExpirationDate=""
+			AuthorizationID="" BookAmount="0.00"
+			ChargeTransactionKey="" ChargeType=""
+			CollectionDate="" CreditAmount="0.00"
+			DebitAmount="0.00" DistributedAmount="0.00" HoldAgainstBook=""
+			OpenAuthorizedAmount="0.00" OrderHeaderKey=""
+			OrderInvoiceKey="" PaymentKey="" RequestAmount="0.00"
+			SettledAmount="0.00" Status="" StatusReason=""
+			TransactionDate="" TransferFromOhKey=""
+			TransferToOhKey="" UserExitStatus="">
+			<InvoiceCollectionDetails />
+			<CreditCardTransactions />
+			<TransferToOrder />
+			<TransferFromOrder />
+		</ChargeTransactionDetail>
+	</ChargeTransactionDetails>
+		<OrderHoldTypes>
+		<OrderHoldType HoldType="" LastHoldTypeDate="" OrderAuditKey=""
+			OrderHeaderKey="" OrderLineKey="" ReasonText="" ResolverUserId=""
+			Status="" StatusDescription="" TransactionId="" TransactionName="">
+			<OrderHoldTypeLogs>
+				<OrderHoldTypeLog OrderAuditKey=""
+					OrderHoldTypeLogKey="" ReasonText="" ResolverUserId="" Status=""
+					StatusDescription="" TransactionId="" TransactionName="" UserId="" />
+			</OrderHoldTypeLogs>
+		</OrderHoldType>
+	</OrderHoldTypes>
+</Order>
+

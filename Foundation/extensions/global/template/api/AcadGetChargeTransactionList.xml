@@ -1,0 +1,9 @@
+<ChargeTransactionDetails>
+ 	<ChargeTransactionDetail OrderHeaderKey="" ChargeTransactionKey="" ChargeType="">
+		<Order OrderNo="" OrderHeaderKey="" PaymentStatus="" Status="">
+			<PaymentMethods>
+				<PaymentMethod OrderHeaderKey="" PaymentKey="" PaymentType="" SuspendAnyMoreCharges=""/>
+			</PaymentMethods>
+		</Order>
+	</ChargeTransactionDetail>
+</ChargeTransactionDetails> 

@@ -1,0 +1,19 @@
+<ItemList>
+    <Item>
+	<Extn ExtnEndDate="" ExtnStreetDate=""/>
+        <ComputedPrice  UnitPrice="" ListPrice=""/>
+          <ChildItemList>
+            <ChildItem>
+
+			 </ChildItem>
+         </ChildItemList>
+		  <ComputedPrice ListPrice=""  UnitPrice="">
+			 <QuantityRangePriceList>
+			<QuantityRangePrice />
+			  </QuantityRangePriceList>
+		 </ComputedPrice>
+     <PromotionList>
+            <Promotion LongDescription="" ShortDescription="" URL=""/>
+        </PromotionList>
+       </Item>
+</ItemList>

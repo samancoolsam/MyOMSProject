@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExtensionMetaData>
+    <ScreenExtension extnClassName="BatchLineDetailsExtn"
+        extnPackage="extn.components.batch.batchpick.scanlist"
+        originalScreen="wsc.components.batch.batchpick.scanlist.BatchLineDetails"
+        originalScreenPackage="wsc.components.batch.batchpick.scanlist" type="diffrential">
+        <Namespaces>
+            <SourceNamespaces>
+                <Source
+                    description="This namespace is to retrieve the store details along with the item details."
+                    isExtn="true"
+                    scExtensibilityArrayItemId="extn_SourceNamespaces_1" value="extn_BatchLine"/>
+            </SourceNamespaces>
+        </Namespaces>
+        <Items>
+            <Label _sc_extensibility_moveOrder="1"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="itemVariationPanelHolder"
+                class="autoLabelZeroWidth department blockComponent"
+                style="padding-left:2px" uId="extn_ItemDetails">
+                <BindingData>
+                    <SourceBinding
+                        dynamicBindingFunc="extnGetItemDetails"
+                        namespace="extn_BatchLine" path="StoreBatchLine"/>
+                </BindingData>
+            </Label>
+            <Label _sc_extensibility_moveOrder="3"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="itemVariationPanelHolder"
+                class="autoLabelZeroWidth department blockComponent"
+                label="$(_scSimpleBundle:blank)" renderHidden="true"
+                style="padding-left:2px" uId="extn_ItemOnHandStock">
+                <BindingData>
+                    <SourceBinding
+                        dynamicBindingFunc="extnGetItemOnhandStock"
+                        namespace="extn_BatchLine" path="StoreBatchLine"/>
+                </BindingData>
+            </Label>
+	    
+	    
+	<!--OMNI-45645-SIM Integration Changes -- Start -->
+            <Label _sc_extensibility_moveOrder="9"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="extn_ItemOnHandStock"
+                class="autoLabelZeroWidth department blockComponent" uId="extn_AvlStockOnHand"/>
+            <Label _sc_extensibility_moveOrder="11"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="extn_AvlStockOnHand"
+                class="autoLabelZeroWidth department blockComponent" uId="extn_ItemLRD"/>
+	<!--OMNI-45645-SIM Integration Changes -- End -->
+	
+	
+            <Label _sc_extensibility_moveOrder="5"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="extn_ItemOnHandStock"
+                class="autoLabelZeroWidth department blockComponent"
+                label="$(_scSimpleBundle:blank)"
+                style="padding-left:2px" uId="extn_ItemLiveDate">
+                <BindingData>
+                    <SourceBinding
+                        dynamicBindingFunc="extnGetItemLiveDate"
+                        namespace="extn_BatchLine" path="StoreBatchLine"/>
+                </BindingData>
+            </Label>
+
+	<!--OMNI-45645-SIM Integration Changes -- Start -->
+            <Label _sc_extensibility_moveOrder="14"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="totalShipQty"
+                class="quantityLabel" uId="extn_ItemPriceLabel"/>
+	<!--OMNI-45645-SIM Integration Changes -- End -->
+
+            <Link _sc_extensibility_operation="change"
+                _sc_extensibility_referenceUId="itemdescriptionLink" class="groupHeader blockComponent disableLink"/>
+            <DataLabel _sc_extensibility_moveOrder="7"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="extn_ItemLiveDate"
+                class="autoLabelZeroWidth blockComponent"
+                label="$(_scBundle:extn_Pog_ID_Dept_Section_Pog_)" uId="extn_ItemPlanogram">
+                <BindingData>
+                    <SourceBinding
+                        dynamicBindingFunc="extnGetPlanogramDetails"
+                        namespace="extn_BatchLine" path="StoreBatchLine"/>
+                </BindingData>
+            </DataLabel>
+        </Items>
+        <Subscribers>
+            <Local>
+                <Subscriber eventId="afterScreenInit" isExtn="true" sequence="51">
+                    <Handler methodName="extn_afterInitializeScreen"/>
+                </Subscriber>
+            </Local>
+        </Subscribers>
+        <!-- OMNI:66083 - START -->
+            <MashupRefs>
+            <Behavior>
+                <MashupRef extnType="ADD"
+                    mashupId="extn_getFlagToDisableAddQtyAndReadOnlyScannedQty" mashupRefId="extn_getFlagToDisableAddQtyAndReadOnlyScannedQty"/>
+            </Behavior>
+        </MashupRefs>
+        <!-- OMNI:66083 - END -->
+    </ScreenExtension>
+</ExtensionMetaData>

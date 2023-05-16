@@ -1,0 +1,29 @@
+<ItemList Currency=""  >
+    <Item ItemID="" >
+        <ComputedPrice  UnitPrice=""/>
+		<PromotionList>
+		<Promotion/>
+		</PromotionList>
+        <AssociationTypeList>
+			<AssociationType CodeShortDescription="" Type="">
+				<AssociationList>
+					<Association AssociatedKey="" AssociatedQuantity="" AssociationType="" >
+						<Item itemGroupCode="" ItemID=""  OrganizationCode="" UnitOfMeasure="">
+						</Item>
+					</Association>
+				</AssociationList>
+			</AssociationType>
+		</AssociationTypeList>
+		<ItemServiceAssocList>
+			<ItemServiceAssoc CategoryKey="" ItemServiceAssocKey="" ProductQuantity="" ServiceItemDesc="" ServiceItemGroupCode="" ServiceItemId="" ServiceQuantity="" ServiceUOM="" >
+				<ServiceItem ItemGroupCode="" ItemID="" ItemKey="" OrganizationCode="Required" UnitOfMeasure="">
+					<PrimaryInformation DefaultProductClass="" Description="" DisplayItemDescription="" IsReturnService="" IsReturnable="" ShortDescription=""/>
+				</ServiceItem>
+			</ItemServiceAssoc>
+		</ItemServiceAssocList>
+		<ClassificationCodes Model=""/>
+		<ItemAliasList>
+			<ItemAlias AliasName="" AliasValue=""/>
+		</ItemAliasList>
+    </Item>
+</ItemList>

@@ -1,0 +1,1148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExtensionMetaData>
+    <ScreenExtension extnClassName="ProductVerificationExtn"
+        extnPackage="extn.components.shipment.customerpickup"
+        originalScreen="wsc.components.shipment.customerpickup.ProductVerification"
+        originalScreenPackage="wsc.components.shipment.customerpickup" type="diffrential">
+        <!--Combining Customer Pickup screen OMNI-8660 -Start -->
+	<Namespaces>
+            <TargetNamespaces>
+                <Target isExtn="true"
+                    scExtensibilityArrayItemId="extn_TargetNamespaces_3" value="extn_Test"/>
+                <Target
+                    description="This namespace contains customer verification method notes."
+                    isExtn="true"
+                    scExtensibilityArrayItemId="extn_TargetNamespaces_4" value="extn_CustomerVerificationNotes_Input"/>
+                <Target
+                    description="This namespace contains customer verification method selected."
+                    isExtn="true"
+                    scExtensibilityArrayItemId="extn_TargetNamespaces_5" value="extn_CustomerVerificationMethodSelected"/>
+            </TargetNamespaces>
+            <SourceNamespaces>
+                <Source isExtn="true"
+                    scExtensibilityArrayItemId="extn_SourceNamespaces_4" value="extn_customerNS"/>
+                <Source description="Default Customer Name"
+                    isExtn="true"
+                    scExtensibilityArrayItemId="extn_SourceNamespaces_5" value="extn_DefaultCustomerName"/>
+                <Source description="extn_CustomerVerficationMethodList"
+                    isExtn="true"
+                    scExtensibilityArrayItemId="extn_SourceNamespaces_5" value="extn_CustomerVerficationMethodList"/>
+                <Source isExtn="true"
+                    scExtensibilityArrayItemId="extn_SourceNamespaces_6" value="extn_resetCurbsideOrders_output"/>
+				<!--OMNI-105674 - Start -->
+				<Source isExtn="true"
+                    scExtensibilityArrayItemId="extn_SourceNamespaces_9" value="extn_resetInstoreOrders_output"/>
+				<!--OMNI-105674 - End -->
+		<!--OMNI-79056 Curbside Estimated Time delay Changes - START-->	
+		<Source description="extn_CurbsideCommomCodeList"
+                    isExtn="true"
+                    scExtensibilityArrayItemId="extn_SourceNamespaces_7" value="extn_CurbsideCommomCodeList"/>	
+		<!--OMNI-79056 Curbside Estimated Time delay Changes - START-->
+		<!--OMNI-85079 - START-->	
+		<Source description="extn_getCurbsideGetShipmentLine"
+                    isExtn="true"
+                    scExtensibilityArrayItemId="extn_SourceNamespaces_8" value="extn_getCurbsideGetShipmentLine"/>	
+		<!--OMNI-85079 - END-->	
+            </SourceNamespaces>
+        </Namespaces>
+        <Items>
+            <FilteringSelect _sc_extensibility_moveOrder="64"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="first"
+                _sc_extensibility_referenceUId="extn_custVerfMethodPanel"
+                class="zeroWidthLabelKey longTextbox nonEditable"
+                label="$(_scSimpleBundle:Label_Customer_Verification_Method)"
+                required="true" style="padding-left:10px" uId="extn_cmbCustVerfMethod">
+                <BindingData>
+                    <TargetBindings>
+                        <TargetBinding
+                            namespace="extn_CustomerVerificationNotes_Input"
+                            path="Notes.Note.NoteText" scExtensibilityArrayItemId="extn_TargetBindings_0"/>
+                        <TargetBinding
+                            namespace="extn_CustomerVerificationMethodSelected"
+                            path="CustomerVerification.Method" scExtensibilityArrayItemId="extn_TargetBindings_1"/>
+                    </TargetBindings>
+                    <OptionsBinding
+                        descriptionField="CodeShortDescription"
+                        namespace="extn_CustomerVerficationMethodList"
+                        path="CommonCodeList.CommonCode" valueField="CodeValue"/>
+                </BindingData>
+            </FilteringSelect>
+            <FilteringSelect _sc_extensibility_moveOrder="65"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="extn_cmbCustVerfMethod"
+                class="longTextBox"
+                label="$(_scSimpleBundle:extn_Picked_Up_By)"
+                required="true" style="padding-left:10px" uId="extn_filteringselect">
+                <BindingData>
+                    <SourceBinding
+                        dynamicBindingFunc="extn_getDefaultCustomerName"
+                        namespace="extn_DefaultCustomerName" path="CustomerName[0].Customer_Name"/>
+                    <TargetBindings>
+                        <TargetBinding namespace="extn_Test"
+                            path="customerName" scExtensibilityArrayItemId="extn_TargetBindings_0"/>
+                    </TargetBindings>
+                    <OptionsBinding descriptionField="Customer"
+                        namespace="extn_customerOptionNS"
+                        path="CustomerName" valueField="Customer_Name"/>
+                </BindingData>
+            </FilteringSelect>
+            <ContentPane _sc_extensibility_operation="change"
+                _sc_extensibility_referenceUId="shipmentDetails" style="width:260px;"/>
+            <ContentPane _sc_extensibility_moveOrder="103"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="scanPanel"
+                class="scanPanel" uId="extn_FinishPickbuttonPanel"/>
+            <ContentPane _sc_extensibility_moveOrder="120"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="scanPanel" uId="extn_CurbsideReset"/>
+             <!--OMNI-79668 Curbside Initiated At - Date Time Display - START-->
+            <ContentPane _sc_extensibility_moveOrder="194"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="extn_Attended_by" uId="extn_CurbsideInitiatedPane"/>
+            <!--OMNI-79668 Curbside Initiated At - Date Time Display - END-->
+            <ContentPane _sc_extensibility_operation="change"
+                _sc_extensibility_referenceUId="productScanForm" renderHidden="false"/>
+            <ContentPane _sc_extensibility_moveOrder="61"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="tpProductLines"
+                class="screen detailScreen" uId="extn_DST_DetailScreenPanel"/>
+            <ContentPane _sc_extensibility_moveOrder="66"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="extn_DST_AdditionalPanel"
+                class="detailsPrimaryInfoPanel" uId="extn_DST_PrimaryInfoPanel"/>
+            <ContentPane _sc_extensibility_moveOrder="67"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="first"
+                _sc_extensibility_referenceUId="extn_DST_PrimaryInfoPanel" uId="extn_pnlPrimaryInfo"/>
+            <ContentPane _sc_extensibility_moveOrder="68"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="first"
+                _sc_extensibility_referenceUId="extn_pnlPrimaryInfo"
+                class="personInfoPanel testClass extnBlock" uId="extn_PersonInfoContainer"/>
+	    <!-- OMNI-8710, 8717: UI Align and Payment Info - Start -->
+            <ContentPane _sc_extensibility_moveOrder="137"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="extn_lblOrderNo" uId="extn_pnlSpilt"/>
+            <ContentPane _sc_extensibility_moveOrder="138"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="first"
+                _sc_extensibility_referenceUId="extn_pnlSpilt"
+                class="split left" uId="extn_pnlLeft"/>
+            <ContentPane _sc_extensibility_moveOrder="140"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="first"
+                _sc_extensibility_referenceUId="extn_pnlLeft"
+                class="extn_ShpPnl" uId="extn_pnlAddress"/>
+            <ContentPane _sc_extensibility_moveOrder="142"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="last"
+                _sc_extensibility_referenceUId="extn_pnlLeft"
+                class="extn_ShpPnl" uId="extn_Address"/>
+            <ContentPane _sc_extensibility_moveOrder="76"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="extn_PersonInfoContainer"
+                class="extn_ShpPnlDigit" uId="extn_contentpane"/>
+            <ContentPane _sc_extensibility_moveOrder="145"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="extn_Address" uId="extn_contentpane"/>
+            <ContentPane _sc_extensibility_moveOrder="146"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="last"
+                _sc_extensibility_referenceUId="extn_pnlLeft"
+                class="personInfoPanel testClass extnBlock" uId="extn_pnlPersonInfoContainer"/>
+	    <!-- OMNI-8710, 8717: UI Align and Payment Info - End -->
+		<!-- OMNI-83819 Alternate Pickup Person for Curbside Consolidation - Start-->
+		<ContentPane _sc_extensibility_moveOrder="196"
+			_sc_extensibility_operation="insert"
+			_sc_extensibility_position="after"
+			_sc_extensibility_referenceUId="extn_pnlEmailHolder" 
+			class="blockComponent" uId="extn_APP_contentpane"/>
+		<!-- OMNI-83819 Alternate Pickup Person for Curbside Consolidation - End-->
+            <ContentPane _sc_extensibility_moveOrder="70"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="extn_lblName"
+                class="displayPhone blockComponent" uId="extn_pnlPhoneHolder"/>
+	    <!-- OMNI-8710, 8717: UI Align and Payment Info - Start -->
+            <ContentPane _sc_extensibility_moveOrder="147"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="first"
+                _sc_extensibility_referenceUId="extn_pnlPersonInfoContainer" uId="extn_pnlPhoneHolder"/>
+	    <!-- OMNI-8710, 8717: UI Align and Payment Info - End -->
+            <ContentPane _sc_extensibility_moveOrder="73"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="extn_pnlPhoneHolder"
+                class="displayEmail" uId="extn_pnlEmailHolder"/>
+	    <!-- OMNI-8710, 8717: UI Align and Payment Info - Start -->
+            <ContentPane _sc_extensibility_moveOrder="148"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="last"
+                _sc_extensibility_referenceUId="extn_pnlPersonInfoContainer" uId="extn_pnlEmailHolder"/>
+            <ContentPane _sc_extensibility_moveOrder="139"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="last"
+                _sc_extensibility_referenceUId="extn_pnlSpilt"
+                class="split right" uId="extn_pnlRight"/>
+            <ContentPane _sc_extensibility_moveOrder="159"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="last"
+                _sc_extensibility_referenceUId="extn_pnlPrimaryInfo" uId="extn_Combine"/>
+            <ContentPane _sc_extensibility_moveOrder="160"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="extn_pnlPaymentInfo" uId="extn_Combine"/>
+            <ContentPane _sc_extensibility_moveOrder="153"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="extn_orderInfoPanel"
+                class="extn_ShpPnlDigit extn_ShpPnl" uId="extn_pnlPaymentInfo"/>
+            <ContentPane _sc_extensibility_moveOrder="161"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="first"
+                _sc_extensibility_referenceUId="extn_Combine" uId="extn_pnlPaymentInfo"/>
+	    <!-- OMNI-8710, 8717: UI Align and Payment Info - End -->
+            <ContentPane _sc_extensibility_moveOrder="76"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="extn_PersonInfoContainer"
+                class="testClass alternateCustomer marginTop marginTopCSS" uId="extn_contentpane"/>
+            <ContentPane _sc_extensibility_moveOrder="80"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="extn_contentpane"
+                class="orderInfoPanel" uId="extn_orderInfoPanel"/>
+	    <!-- OMNI-8710, 8717: UI Align and Payment Info - Start -->
+            <ContentPane _sc_extensibility_moveOrder="155"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="extn_DST_AdditionalPanel" uId="extn_orderInfoPanel"/>
+            <ContentPane _sc_extensibility_moveOrder="156"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="last"
+                _sc_extensibility_referenceUId="extn_pnlPrimaryInfo" uId="extn_orderInfoPanel"/>
+            <ContentPane _sc_extensibility_moveOrder="157"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="last"
+                _sc_extensibility_referenceUId="extn_DST_PrimaryInfoPanel" uId="extn_orderInfoPanel"/>
+			<!--
+            <ContentPane _sc_extensibility_moveOrder="158"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="last"
+                _sc_extensibility_referenceUId="extn_pnlPrimaryInfo" uId="extn_orderInfoPanel"/>
+			-->
+            <ContentPane _sc_extensibility_moveOrder="162"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="last"
+                _sc_extensibility_referenceUId="extn_Combine" uId="extn_orderInfoPanel"/>
+	    <!-- OMNI-8710, 8717: UI Align and Payment Info - End -->
+            <ContentPane _sc_extensibility_moveOrder="62"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="first"
+                _sc_extensibility_referenceUId="extn_DST_DetailScreenPanel"
+                class="detailsAdditionalInfoPanel" uId="extn_DST_AdditionalPanel"/>
+            <ContentPane _sc_extensibility_moveOrder="85"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="extn_DST_PrimaryInfoPanel" uId="extn_DST_AdditionalPanel"/>
+            <ContentPane _sc_extensibility_moveOrder="63"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="first"
+                _sc_extensibility_referenceUId="extn_DST_AdditionalPanel"
+                class="custVerfMethodPanel" uId="extn_custVerfMethodPanel"/>
+            <ContentPane _sc_extensibility_moveOrder="109"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="extn_DST_DetailScreenPanel"
+                title="$(_scSimpleBundle:extn_Reset_Curbside_Order)" uId="extn_resetCurbsideOrder"/>
+            <ContentPane _sc_extensibility_moveOrder="50"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="extn_FinishPick_button2new"
+                class="scanPanel" style="margin-bottom: 30px;" uId="extn_FinishPick_newcontentpane"/>
+            <ContentPane _sc_extensibility_moveOrder="108"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="extn_FinishPickupButtonpanel1" uId="extn_FinishPick_newcontentpane"/>
+            <ContentPane _sc_extensibility_operation="change"
+                _sc_extensibility_referenceUId="barcodeScanPanelForm"
+                class=" extnScanBarCode" renderHidden="false"/>
+            <ContentPane _sc_extensibility_moveOrder="130"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="extn_FinishPickupButtonpanel1" uId="barcodeScanPanelForm"/>
+            <ContentPane _sc_extensibility_moveOrder="126"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="extn_FinishPickupButtonpanel1" uId="extn_CurbsideResetDownButton"/>
+            <ContentPane _sc_extensibility_moveOrder="132"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="barcodeScanPanelForm" uId="extn_CurbsideResetDownButton"/>
+			<!-- OMNI-105502 - Start-->
+			<ContentPane _sc_extensibility_moveOrder="201"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="productScanPanel" uId="extn_completeInstoreOrderBy"/>
+            <ContentPane _sc_extensibility_moveOrder="202"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="extn_finishCurbsideOrderBy" uId="extn_completeInstoreOrderBy"/>
+			<!-- OMNI-105502 - End-->
+            <ContentPane _sc_extensibility_moveOrder="105"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="extn_FinishPick_newcontentpane" uId="extn_FinishPickupButtonpanel1"/>
+            <ContentPane _sc_extensibility_moveOrder="135"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="barcodeScanPanelForm" uId="extn_FinishPick_newcontentpane"/>
+            <Button _sc_extensibility_operation="change"
+                _sc_extensibility_referenceUId="pickAll" renderHidden="true"/>
+            <Button _sc_extensibility_moveOrder="104"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="first"
+                _sc_extensibility_referenceUId="extn_FinishPickbuttonPanel"
+                class="idxSpecialButton extnFinishbuttoncss longButtons"
+                label="$(_scSimpleBundle:extn_Click_here_to_Complete_Order)"
+                style="padding-top:20px" uId="extn_FinishPickuButton"/>
+            <Button _sc_extensibility_moveOrder="123"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="extn_resetCurbsideOrder1"
+                class="floatRight idxSpecialButton extnCompleteOrderbuttoncss"
+                label="$(_scSimpleBundle:extn_CLICK_HERE_TO_br_COMPLETE_ORDER)" uId="extn_FinishPickupButton"/>
+            <Button _sc_extensibility_moveOrder="124"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="extn_resetCurbsideOrder1" uId="extn_FinishPickupButton"/>
+            <Button _sc_extensibility_moveOrder="125"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="extn_resetCurbsideOrder1" uId="extn_FinishPickupButton"/>
+            <Button _sc_extensibility_moveOrder="117"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="extn_PersonInfoContainer"
+                class="idxSpecialButton extnresetcurbsidebuttoncss "
+                label="$(_scSimpleBundle:extn_RESET_CURBSIDE_ORDER)"
+                style="padding-left:9px; margin-top:5px;" uId="extn_resetCurbsideOrder1">
+                <BindingData>
+                    <SourceBinding
+                        namespace="extn_resetCurbsideOrders_output" path="Shipment"/>
+                </BindingData>
+            </Button>
+            <Button _sc_extensibility_moveOrder="118"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="extn_pnlPrimaryInfo" uId="extn_resetCurbsideOrder1"/>
+            <Button _sc_extensibility_moveOrder="121"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="extn_FinishPickbuttonPanel" uId="extn_resetCurbsideOrder1"/>
+            <Button _sc_extensibility_moveOrder="122"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="first"
+                _sc_extensibility_referenceUId="extn_CurbsideReset" uId="extn_resetCurbsideOrder1"/>
+    <!--    //Combining Customer Pickup screen OMNI-8660 -End-->
+	    <Button _sc_extensibility_moveOrder="2"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="productScanPanel"
+                class="floatRight idxSpecialButton extnFinishbuttoncss"
+                label="$(_scSimpleBundle:extn_Click_here_to_Complete_Order)"
+                spanLabel="true" style="padding-top:3px;" uId="extn_FinishPick_button"/>
+            <Button _sc_extensibility_moveOrder="3"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="shipmentDetails" uId="extn_FinishPick_button"/>
+            <Button _sc_extensibility_moveOrder="4"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="lblOrderNo" uId="extn_FinishPick_button"/>
+            <Button _sc_extensibility_moveOrder="5"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="productScanPanel" uId="extn_FinishPick_button"/>
+            <Button _sc_extensibility_moveOrder="6"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="shipmentDetails" uId="extn_FinishPick_button"/>
+            <Button _sc_extensibility_moveOrder="7"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="last"
+                _sc_extensibility_referenceUId="shipmentDetails" uId="extn_FinishPick_button"/>
+            <Button _sc_extensibility_moveOrder="8"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="lblOrderNo" uId="extn_FinishPick_button"/>
+            <Button _sc_extensibility_moveOrder="9"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="productScanForm" uId="extn_FinishPick_button"/>
+            <Button _sc_extensibility_moveOrder="59"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="extn_Previous_button" uId="extn_FinishPick_button"/>
+            <Button _sc_extensibility_moveOrder="60"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="extn_Close_button" uId="extn_FinishPick_button"/>
+            <Button _sc_extensibility_moveOrder="99"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="extn_Previous_button" uId="extn_FinishPick_button"/>
+            <Button _sc_extensibility_moveOrder="100"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="extn_Close_button" uId="extn_FinishPick_button"/>
+            <Button _sc_extensibility_moveOrder="101"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="extn_Previous_button" uId="extn_FinishPick_button"/>
+            <Button _sc_extensibility_moveOrder="102"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="extn_Close_button" uId="extn_FinishPick_button"/>
+            <Button _sc_extensibility_moveOrder="54"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="extn_FinishPick_button"
+                class="floatRight idxSpecialButton"
+                label="$(_scSimpleBundle:Action_Close)"
+                style="padding-right: 9px;margin-top:3px" uId="extn_Close_button"/>
+            <Button _sc_extensibility_moveOrder="55"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="extn_FinishPick_button" uId="extn_Close_button"/>
+            <Button _sc_extensibility_moveOrder="56"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="extn_FinishPick_button" uId="extn_Close_button"/>
+            <Button _sc_extensibility_moveOrder="94"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="extn_FinishPick_button" uId="extn_Close_button"/>
+            <Button _sc_extensibility_moveOrder="96"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="extn_FinishPick_button" uId="extn_Close_button"/>
+            <Button _sc_extensibility_moveOrder="97"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="extn_Previous_button" uId="extn_Close_button"/>
+            <Button _sc_extensibility_moveOrder="98"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="extn_Previous_button" uId="extn_Close_button"/>
+	  <!-- OMNI - 10509 In web SOM "Previous" button on customer pickup page is not responding. - START -->
+            <Button _sc_extensibility_moveOrder="57"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="extn_Close_button"
+                class="floatRight idxSpecialButton"
+                label="$(_scSimpleBundle:b_Previous)"
+                renderHidden="true"
+                style="padding-right:9px;margin-top:3px" uId="extn_Previous_button"/>
+	    <!-- OMNI - 10509 In web SOM "Previous" button on customer pickup page is not responding. - END -->
+            <Button _sc_extensibility_moveOrder="58"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="extn_Close_button" uId="extn_Previous_button"/>
+            <Button _sc_extensibility_moveOrder="95"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="extn_FinishPick_button" uId="extn_Previous_button"/>
+            <Button _sc_extensibility_moveOrder="46"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="extn_Close_button2new"
+                class="floatRight idxSpecialButton extnFinishbuttoncss"
+                label="$(_scSimpleBundle:extn_Click_here_to_Complete_Order)"
+                style="float:right;margin-top:9px;margin-right:9px" uId="extn_FinishPick_button2new"/>
+            <Button _sc_extensibility_moveOrder="47"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="extn_Close_button2new" uId="extn_FinishPick_button2new"/>
+            <Button _sc_extensibility_moveOrder="48"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="extn_Previous_button2new" uId="extn_FinishPick_button2new"/>
+            <Button _sc_extensibility_moveOrder="51"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="first"
+                _sc_extensibility_referenceUId="extn_FinishPick_newcontentpane" uId="extn_FinishPick_button2new"/>
+            <Button _sc_extensibility_moveOrder="90"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="last"
+                _sc_extensibility_referenceUId="extn_FinishPick_newcontentpane" uId="extn_FinishPick_button2new"/>
+            <Button _sc_extensibility_moveOrder="91"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="extn_Previous_button2new" uId="extn_FinishPick_button2new"/>
+            <Button _sc_extensibility_moveOrder="106"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="extn_Close_button2new" uId="extn_FinishPick_button2new"/>
+            <Button _sc_extensibility_moveOrder="45"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="extn_Previous_button2new"
+                class="idxSpecialButton"
+                label="$(_scSimpleBundle:Action_Close)"
+                style="float:right; padding-right:9px;margin-top:9px;" uId="extn_Close_button2new"/>
+            <Button _sc_extensibility_moveOrder="49"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="extn_Previous_button2new" uId="extn_Close_button2new"/>
+            <Button _sc_extensibility_moveOrder="52"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="last"
+                _sc_extensibility_referenceUId="extn_FinishPick_newcontentpane" uId="extn_Close_button2new"/>
+	  <!-- OMNI - 10509 In web SOM "Previous" button on customer pickup page is not responding. - START -->
+            <Button _sc_extensibility_moveOrder="44"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="tpProductLines"
+                class="idxSpecialButton"
+                label="$(_scSimpleBundle:b_Previous)"
+                renderHidden="true"
+                style="float:right; padding-right:9px; margin-top:9px;" uId="extn_Previous_button2new"/>
+          <!-- OMNI - 10509 In web SOM "Previous" button on customer pickup page is not responding. - END -->
+            <Button _sc_extensibility_moveOrder="53"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="last"
+                _sc_extensibility_referenceUId="extn_FinishPick_newcontentpane" uId="extn_Previous_button2new"/>
+    <!--    //Combining Customer Pickup screen OMNI-8660 -Start -->
+	    <Button _sc_extensibility_moveOrder="1"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="scanProductIdTxt"
+                class="idxSpecialButton longButtons"
+                label="$(_scSimpleBundle:extn_Start_Paper_Work)"
+                renderHidden="false" uId="extn_customer_piickup_button"/>
+            <Button _sc_extensibility_moveOrder="129"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="extn_FinishPickupButton1" uId="extn_customer_piickup_button"/>
+            <Button _sc_extensibility_moveOrder="131"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="extn_FinishPickupButtonpanel1" uId="extn_customer_piickup_button"/>
+            <Button _sc_extensibility_moveOrder="133"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="extn_resetCurbsideButton" uId="extn_customer_piickup_button"/>
+            <Button _sc_extensibility_moveOrder="134"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="scanProductIdTxt" uId="extn_customer_piickup_button"/>
+            <Button _sc_extensibility_moveOrder="128"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="extn_resetCurbsideButton"
+                class="floatRight idxSpecialButton extnCompleteOrderbuttoncss"
+                label="$(_scSimpleBundle:extn_CLICK_HERE_TO_br_COMPLETE_ORDER)" uId="extn_FinishPickUpButton1"/>
+			<!--OMNI-105500 - Start -->
+			<Button _sc_extensibility_moveOrder="206"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="first"
+                _sc_extensibility_referenceUId="extn_InstoreReset"
+                class="idxSpecialButton extnresetcurbsidebuttoncss "
+                label="$(_scSimpleBundle:extn_Reset_Instore_Pickup)"
+                style="padding-left:9px; margin-top:5px;" uId="extn_resetInstoreOrder"/>
+			<!--OMNI-105500 - End -->
+            <Button _sc_extensibility_moveOrder="119"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="extn_FinishPick_newcontentpane"
+                class="idxSpecialButton extnresetcurbsidebuttoncss"
+                label="$(_scSimpleBundle:extn_RESET_CURBSIDE_ORDER)"
+                style="padding-left:9px; margin-bottom:5px;" uId="extn_resetCurbsideButton">
+                <BindingData>
+                    <SourceBinding
+                        namespace="extn_resetCurbsideOrders_output" path="Shipment"/>
+                </BindingData>
+            </Button>
+            <Button _sc_extensibility_moveOrder="127"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="first"
+                _sc_extensibility_referenceUId="extn_CurbsideResetDownButton" uId="extn_resetCurbsideButton"/>
+            <Button _sc_extensibility_moveOrder="107"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="first"
+                _sc_extensibility_referenceUId="extn_FinishPickupButtonpanel1"
+                class="idxSpecialButton extnFinishbuttoncss longButtons"
+                label="$(_scSimpleBundle:extn_Click_here_to_Complete_Order)" uId="extn_FinishPickupButton1"/>
+	    <!-- OMNI-8710, 8717: UI Align and Payment Info - Start -->
+	    <Label _sc_extensibility_moveOrder="144"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="last"
+                _sc_extensibility_referenceUId="extn_Address"
+                class="blockComponent noColonLabels comappsWrapWord zeroWidthLabelValueDesktop extn_ShpPnlfont" uId="extn_CityStateZip">
+                <BindingData>
+                    <SourceBinding dynamicBindingFunc="getCityStateZip"
+                        namespace="ShipmentDetails" path="Shipment.BillToAddress"/>
+                </BindingData>
+            </Label>
+	    <!-- OMNI-8710, 8717: UI Align and Payment Info - End -->
+            <Label _sc_extensibility_moveOrder="86"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="first"
+                _sc_extensibility_referenceUId="extn_contentpane"
+                class="blockComponent" uId="extn_label"/>
+            <Label _sc_extensibility_moveOrder="87"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="last"
+                _sc_extensibility_referenceUId="extn_contentpane"
+                class="blockComponent" uId="extn_label1"/>
+            <Label _sc_extensibility_moveOrder="88"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="last"
+                _sc_extensibility_referenceUId="extn_contentpane"
+                class="blockComponent" uId="extn_label2"/>
+            <TextField _sc_extensibility_operation="change"
+                _sc_extensibility_referenceUId="scanProductIdTxt" renderHidden="true"/>
+            <Image ImageAlt="$(_scSimpleBundle:Tooltip_PhoneNo)"
+                _sc_extensibility_moveOrder="71"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="first"
+                _sc_extensibility_referenceUId="extn_pnlPhoneHolder"
+                appendToContextRoot="true"
+                class="defaultImageSize floatLeft"
+                imageSrc="wsc/resources/css/icons/images/phone.png"
+                title="$(_scSimpleBundle:Tooltip_PhoneNo)" uId="extn_imgPhoneNo"/>
+            <Image ImageAlt="$(_scSimpleBundle:Tooltip_Email)"
+                _sc_extensibility_moveOrder="74"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="first"
+                _sc_extensibility_referenceUId="extn_pnlEmailHolder"
+                appendToContextRoot="true"
+                class="defaultImageSize floatLeft"
+                imageSrc="wsc/resources/css/icons/images/email.png"
+                title="$(_scSimpleBundle:Tooltip_Email)" uId="extn_imgEmailLabel"/>
+            <DataLabel _sc_extensibility_operation="change"
+                _sc_extensibility_referenceUId="Hold_LocationLabel" renderHidden="true"/>
+	    <!-- OMNI-8710, 8717: UI Align and Payment Info - Start -->
+            <!--OMNI-79668 Curbside Initiated At - Date Time Display - START-->
+            <DataLabel _sc_extensibility_moveOrder="195"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="first"
+                _sc_extensibility_referenceUId="extn_CurbsideInitiatedPane"
+                class="extn_marginleftestimatedinfo extn_estimatedinfocolor"
+                label="$(_scSimpleBundle:extn_Curbside_Initiated_At)"
+                renderHidden="true"
+                style="padding-right:0px; margin-top:12.5px;" uId="extn_CurbsideInitiatedAt"/>
+            <!--OMNI-79668 Curbside Initiated At - Date Time Display - END-->
+            <DataLabel _sc_extensibility_moveOrder="136"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="extn_lblOrderNo"
+                class="extn_CustomerInfo"
+                label="$(_scSimpleBundle:Title_CustomerFields)" uId="extn_lblCustomerInfo"/>
+	    <!-- OMNI-8710, 8717: UI Align and Payment Info - End -->
+            <DataLabel _sc_extensibility_moveOrder="92"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="extn_PersonInfoContainer"
+                class="groupHeader comappsWrapWord autoLabelZeroWidth hashNumberAlign"
+                label="$(_scSimpleBundle:Label_OrderNo)"
+                renderHidden="true" uId="extn_lblOrderNo">
+                <BindingData>
+                    <SourceBinding namespace="ShipmentDetails" path="Shipment.DisplayOrderNo"/>
+                </BindingData>
+            </DataLabel>
+            <DataLabel _sc_extensibility_moveOrder="93"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="extn_lblName" uId="extn_lblOrderNo"/>
+	    <!-- OMNI-8710, 8717: UI Align and Payment Info - Start -->
+            <DataLabel _sc_extensibility_moveOrder="152"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="extn_pnlSpilt" uId="extn_lblOrderNo"/>
+	    <!-- OMNI-8710, 8717: UI Align and Payment Info - End -->
+            <DataLabel _sc_extensibility_moveOrder="69"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="first"
+                _sc_extensibility_referenceUId="extn_PersonInfoContainer"
+                class="blockComponent a11yHiddenLabel extn_CustName"
+                label="$(_scSimpleBundle:Label_Customername)" uId="extn_lblName">
+                <BindingData>
+                    <SourceBinding
+                        dynamicBindingFunc="getFormattedNameDisplay"
+                        namespace="ShipmentDetails" path="Shipment.BillToAddress.FirstName"/>
+                </BindingData>
+            </DataLabel>
+	    <!-- OMNI-8710, 8717: UI Align and Payment Info - Start -->
+            <DataLabel _sc_extensibility_moveOrder="141"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="first"
+                _sc_extensibility_referenceUId="extn_pnlAddress" uId="extn_lblName"/>
+            <DataLabel _sc_extensibility_moveOrder="143"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="first"
+                _sc_extensibility_referenceUId="extn_Address"
+                class="blockComponent a11yHiddenLabel extn_ShpPnlfont" uId="extn_AddressLine1">
+                <BindingData>
+                    <SourceBinding namespace="ShipmentDetails" path="Shipment.BillToAddress.AddressLine1"/>
+                </BindingData>
+            </DataLabel>
+	    <!-- OMNI-8710, 8717: UI Align and Payment Info - End -->
+            <DataLabel _sc_extensibility_moveOrder="72"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="extn_imgPhoneNo"
+                class="icon-image-label  a11yHiddenLabel zeroWidthLabelKey"
+                label="$(_scSimpleBundle:Label_Phone_number)" uId="extn_lblDayPhone">
+                <BindingData>
+                    <SourceBinding namespace="ShipmentDetails" path="Shipment.BillToAddress.DayPhone"/>
+                </BindingData>
+            </DataLabel>
+	    <!-- OMNI-8710, 8717: UI Align and Payment Info - Start -->
+            <DataLabel _sc_extensibility_moveOrder="149"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="first"
+                _sc_extensibility_referenceUId="extn_pnlRight"
+                class="extn_marginleft extn_CarMakeColor extn_CarMakeColorCss"
+                label="$(_scSimpleBundle:extn_Vehicle_Make)"
+                renderHidden="true" uId="extn_VehicleMake">
+                <BindingData>
+                    <SourceBinding namespace="ShipmentDetails" path="Shipment.Extn.VehicleMake"/>
+                </BindingData>
+            </DataLabel>
+            <DataLabel _sc_extensibility_moveOrder="150"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="last"
+                _sc_extensibility_referenceUId="extn_pnlRight"
+                class="extn_marginleft extn_CarMakeColor extn_CarMakeColorCss"
+                label="$(_scSimpleBundle:extn_Vehicle_Color)"
+                renderHidden="true" uId="extn_VehicleColor">
+                <BindingData>
+                    <SourceBinding namespace="ShipmentDetails" path="Shipment.Extn.VehicleColor"/>
+                </BindingData>
+            </DataLabel>
+            <DataLabel _sc_extensibility_moveOrder="151"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="last"
+                _sc_extensibility_referenceUId="extn_pnlRight"
+                class="extn_marginleft extn_CarMakeColor extn_CarMakeColorCss"
+                label="$(_scSimpleBundle:extn_Parking_Spot)"
+                renderHidden="true" uId="extn_ParkingSpot">
+                <BindingData>
+                    <SourceBinding namespace="ShipmentDetails" path="Shipment.Extn.ParkingSpot"/>
+                </BindingData>
+            </DataLabel>
+            <DataLabel _sc_extensibility_moveOrder="154"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="first"
+                _sc_extensibility_referenceUId="extn_pnlPaymentInfo"
+                class="blockComponent extn_receivedLabel extn_textalign"
+                label="$(_scSimpleBundle:extn_Visa_ending_in)"
+                renderHidden="true" uId="extn_PaymentInfo">
+                <BindingData>
+                    <SourceBinding dynamicBindingFunc="getPaymentType"
+                        namespace="ShipmentDetails" path="Shipment.ShipmentLines.ShipmentLine.0.Order"/>
+                </BindingData>
+            </DataLabel>
+            <DataLabel _sc_extensibility_moveOrder="163"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="last"
+                _sc_extensibility_referenceUId="extn_pnlPaymentInfo"
+                class="blockComponent extn_receivedLabel extn_textalign"
+                label="$(_scSimpleBundle:extn_GiftCard_ending_in)"
+                renderHidden="true" uId="extn_GiftCard">
+                <BindingData>
+                    <SourceBinding dynamicBindingFunc="getPaymentType"
+                        namespace="ShipmentDetails" path="Shipment.ShipmentLines.ShipmentLine.0.Order.PaymentMethods.PaymentMethod"/>
+                </BindingData>
+            </DataLabel>
+            <DataLabel _sc_extensibility_moveOrder="164"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="last"
+                _sc_extensibility_referenceUId="extn_pnlPaymentInfo"
+                class="blockComponent extn_receivedLabel extn_textalign"
+                label="$(_scSimpleBundle:Payment_Method)"
+                renderHidden="true" uId="extn_PaymentMethod">
+                <BindingData>
+                    <SourceBinding dynamicBindingFunc="getPaymentType"
+                        namespace="ShipmentDetails" path="Shipment.ShipmentLines.ShipmentLine.0.Order.PaymentMethods.PaymentMethod"/>
+                </BindingData>
+            </DataLabel>
+	    <DataLabel _sc_extensibility_moveOrder="165"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="last"
+                _sc_extensibility_referenceUId="extn_pnlPaymentInfo"
+                class="blockComponent extn_receivedLabel extn_textalign"
+                label="$(_scSimpleBundle:extn_Academy_CreditCard_ending_in)"
+                renderHidden="true" uId="extn_PLCC">
+                <BindingData>
+                    <SourceBinding dynamicBindingFunc="getPaymentType"
+                        namespace="ShipmentDetails" path="Shipment.ShipmentLines.ShipmentLine.0.Order.PaymentMethods.PaymentMethod"/>
+                </BindingData>
+            </DataLabel>
+	    <!-- OMNI-8710, 8717: UI Align and Payment Info - End -->
+            <DataLabel _sc_extensibility_moveOrder="81"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="first"
+                _sc_extensibility_referenceUId="extn_orderInfoPanel"
+                class="blockComponent noColonLabels comappsWrapWord zeroWidthLabelValueDesktop extn_labelCss"
+                label="$(_scSimpleBundle:extn_Curbbside_Make_Color)"
+                renderHidden="true" uId="extn_Curbsidelbl">
+                <BindingData>
+                    <SourceBinding namespace="ShipmentDetails" path="Shipment.Extn.ExtnCurbsidePickupInfo"/>
+                </BindingData>
+            </DataLabel>
+            <DataLabel _sc_extensibility_moveOrder="82"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="extn_Curbsidelbl"
+                class="blockComponent comappsWrapWord zeroWidthLabelValueDesktop extn_labelCssPadding"
+                label="$(_scSimpleBundle:extn_Shipment_number)" uId="extn_lblShipmentNo">
+                <BindingData>
+                    <SourceBinding namespace="ShipmentDetails" path="Shipment.ShipmentNo"/>
+                </BindingData>
+            </DataLabel>
+            <DataLabel _sc_extensibility_moveOrder="83"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="extn_lblShipmentNo"
+                class="blockComponent comappsWrapWord zeroWidthLabelValueDesktop extn_labelCssPadding"
+                label="$(_scSimpleBundle:extn_Max_Pick_Date)" uId="extn_datalabel3"/>
+            <DataLabel _sc_extensibility_moveOrder="84"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="extn_datalabel3"
+                class="blockComponent comappsWrapWord zeroWidthLabelValueDesktop extn_labelCssPadding"
+                label="$(_scSimpleBundle:Label_Picker_ID)" uId="extn_lblAssignedToUsr">
+                <BindingData>
+                    <SourceBinding namespace="ShipmentDetails" path="Shipment.AssignedToUserId"/>
+                </BindingData>
+            </DataLabel>
+	    <!-- Combining Customer Pickup screen OMNI-8660 -End -->
+         <!-- OMNI-71887 Start -->
+            <DataLabel _sc_extensibility_moveOrder="171"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="extn_VehicleMake"
+                class="extn_marginleft extn_CarMakeColor extn_CarMakeColorCss"
+                label="$(_scSimpleBundle:extn_Vehicle_Type)"
+                renderHidden="false" uId="extn_VehicleType">
+                <BindingData>
+                    <SourceBinding namespace="ShipmentDetails" path="Shipment.Extn.VehicleType"/>
+                </BindingData>
+            </DataLabel>
+            <DataLabel _sc_extensibility_moveOrder="172"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="extn_ParkingSpot"
+                class="extn_marginleft extn_CarMakeColor extn_CarMakeColorCss"
+                label="$(_scSimpleBundle:extn_Customer_Preference)" uId="extn_UploadPlace">
+                <BindingData>
+                    <SourceBinding namespace="ShipmentDetails" path="Shipment.Extn.UploadPlace"/>
+                </BindingData>
+            </DataLabel>
+        <!-- OMNI-71887 End-->
+		<!-- OMNI-83819, OMNI-85035 Curbside Consolidation - Start-->
+		<Label _sc_extensibility_moveOrder="197"
+			_sc_extensibility_operation="insert"
+			_sc_extensibility_position="first"
+			_sc_extensibility_referenceUId="extn_APP_contentpane"
+			class="blockComponent extn_APPColorCss" 
+			value="$(_scSimpleBundle:extn_AlternatePickupDetails)" uId="extn_AlternatePickupDetails"/>
+		<DataLabel _sc_extensibility_moveOrder="198"
+			_sc_extensibility_operation="insert"
+			_sc_extensibility_position="after"
+			_sc_extensibility_referenceUId="extn_AlternatePickupDetails"
+			class="blockComponent extn_APPColor extn_APPEmail"
+			label="$(_scSimpleBundle:extn_APP_Name)" uId="extn_APP_Name">
+			<BindingData>
+				<SourceBinding namespace="ShipmentDetails" path="Shipment.Extn.APPName"/>
+			</BindingData>
+		</DataLabel>
+		<DataLabel _sc_extensibility_moveOrder="199"
+			_sc_extensibility_operation="insert"
+			_sc_extensibility_position="last"
+			_sc_extensibility_referenceUId="extn_APP_contentpane"
+			class="blockComponent extn_APPColor extn_APPEmail"
+			label="$(_scSimpleBundle:extn_APP_Email)" uId="extn_APP_Email">
+			<BindingData>
+				<SourceBinding namespace="ShipmentDetails" path="Shipment.Extn.APPEmail"/>
+			</BindingData>
+		</DataLabel>	
+		<DataLabel _sc_extensibility_moveOrder="200"
+			_sc_extensibility_operation="insert"
+			_sc_extensibility_position="before"
+			_sc_extensibility_referenceUId="extn_datalabel3"
+			class="blockComponent comappsWrapWord zeroWidthLabelValueDesktop extn_labelCssPadding"
+			label="$(_scSimpleBundle:extn_Total_ShipLines)" uId="extn_Total_ShipLines">
+			<BindingData>
+				<SourceBinding namespace="ShipmentDetails" path="Shipment.TotalShipmentLines"/>
+			</BindingData>
+		</DataLabel>
+		<!-- OMNI-83819, OMNI-85035 Curbside Consolidation - End-->
+	    <!-- OMNI-8710, 8717: UI Align and Payment Info - Start -->
+	    <DataLabel _sc_extensibility_moveOrder="166"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="extn_PaymentInfo"
+                class="blockComponent extn_receivedLabel extn_textalign"
+                label="$(_scSimpleBundle:extn_Visa_ending_in)"
+                renderHidden="true" uId="extn_Visa">
+                <BindingData>
+                    <SourceBinding dynamicBindingFunc="getPaymentType"
+                        namespace="ShipmentDetails" path="Shipment.ShipmentLines.ShipmentLine.0.Order"/>
+                </BindingData>
+            </DataLabel>
+            <DataLabel _sc_extensibility_moveOrder="167"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="extn_PaymentInfo"
+                class="blockComponent extn_receivedLabel extn_textalign"
+                label="$(_scSimpleBundle:extn_American_Express_ending_in)"
+                renderHidden="true" uId="extn_AmericanExpress">
+                <BindingData>
+                    <SourceBinding dynamicBindingFunc="getPaymentType"
+                        namespace="ShipmentDetails" path="Shipment.ShipmentLines.ShipmentLine.0.Order"/>
+                </BindingData>
+            </DataLabel>
+            <DataLabel _sc_extensibility_moveOrder="168"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="extn_GiftCard"
+                class="blockComponent extn_receivedLabel extn_textalign"
+                label="$(_scSimpleBundle:extn_Discover_ending_in)"
+                renderHidden="true" uId="extn_Discover">
+                <BindingData>
+                    <SourceBinding dynamicBindingFunc="getPaymentType"
+                        namespace="ShipmentDetails" path="Shipment.ShipmentLines.ShipmentLine.0.Order"/>
+                </BindingData>
+            </DataLabel>
+            <DataLabel _sc_extensibility_moveOrder="169"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="extn_Discover"
+                class="blockComponent extn_receivedLabel extn_textalign"
+                label="$(_scSimpleBundle:extn_MasterCard_ending_in)"
+                renderHidden="true" uId="extn_MasterCard">
+                <BindingData>
+                    <SourceBinding dynamicBindingFunc="getPaymentType"
+                        namespace="ShipmentDetails" path="Shipment.ShipmentLines.ShipmentLine.0.Order"/>
+                </BindingData>
+            </DataLabel>
+	    <!-- OMNI-8710, 8717: UI Align and Payment Info - End -->
+			<!--OMNI-72389 Curbside customer pick up screen UI – Notification of related orders  START-->
+		     <DataLabel _sc_extensibility_moveOrder="175"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="extn_UploadPlace"
+                class="extn_marginleft extn_Cancelled_PopUp_bold"
+                label="$(_scSimpleBundle:extn_Related_Orders)" uId="extn_lblRelatedOrders"/>
+			<!--OMNI-72389 Curbside customer pick up screen UI – Notification of related orders  END-->
+			<!--OMNI-105502 - Start --> 
+			<DataLabel _sc_extensibility_moveOrder="204"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="first"
+                _sc_extensibility_referenceUId="extn_completeInstoreOrderBy"
+                class="extn_marginleftestimatedinfo extn_estimatedinfocolor extn_curbsideinfoColorCss"
+                label="$(_scBundle:extn_Complete_In_Store_Order_By)"
+                style="padding-top:10px;" uId="extn_finishInstoreOrderBy"/>
+			<!--OMNI-105502 - End -->
+            <Link _sc_extensibility_moveOrder="13"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="productScanForm"
+                class="idxSpecialButton" style="margin-left:259px;"
+                uId="extn_FinishPickMobile_link" value="$(_scSimpleBundle:Label_Finish_Pickup)"/>
+            <Link ImageAlt="$(_scSimpleBundle:Tooltip_Email)"
+                _sc_extensibility_moveOrder="75"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="extn_imgEmailLabel"
+                class="icon-image-label ellipsisText disableLink"
+                title="$(_scSimpleBundle:Tooltip_Email)" uId="extn_lnkEmail">
+                <BindingData>
+                    <SourceBinding namespace="ShipmentDetails" path="Shipment.BillToAddress.EMailID"/>
+                </BindingData>
+            </Link>
+            <Link _sc_extensibility_operation="change"
+                _sc_extensibility_referenceUId="scanProduct" renderHidden="true"/>
+        </Items>
+        <Subscribers>
+            <Local>
+                <Subscriber eventId="afterScreenLoad" isExtn="true" sequence="51">
+                    <Handler methodName="updateCustomerDropDown"/>
+                </Subscriber>
+                <Subscriber eventId="afterScreenLoad" isExtn="true" sequence="51">
+                    <Handler methodName="extn_afterScreenLoad"/>
+                </Subscriber>
+                <Subscriber eventId="afterScreenInit" isExtn="true" sequence="51">
+                    <Handler methodName="extn_afterScreenInit"/>
+                </Subscriber>
+                <Subscriber eventId="saveCurrentPage" isExtn="true" sequence="19">
+                    <Handler methodName="extn_beforeSave"/>
+                </Subscriber>
+                <Subscriber
+                    eventId="extn_customer_piickup_button_onClick"
+                    isExtn="true" sequence="51">
+                    <Handler methodName="extn_customer_piickup_button_onClick"/>
+                </Subscriber>
+                <Subscriber eventId="afterBehaviorMashupCall"
+                    isExtn="true" sequence="51">
+                    <Handler methodName="afterBehaviorMashupCall"/>
+                </Subscriber>
+                <Subscriber eventId="extn_FinishPick_button_onClick"
+                    isExtn="true" sequence="51">
+                    <Handler methodName="extn_onFinishPickButtonClick"/>
+                </Subscriber>
+                <Subscriber eventId="extn_FinishPick_button2new_onClick"
+                    isExtn="true" sequence="51">
+                    <Handler methodName="extn_onFinishPickButtonClick"/>
+                </Subscriber>
+                <Subscriber eventId="extn_FinishPickMobile_link_onClick"
+                    isExtn="true" sequence="51">
+                    <Handler methodName="extn_onFinishPickButtonClick"/>
+                </Subscriber>
+                <Subscriber eventId="extn_Previous_button_onClick"
+                    isExtn="true" sequence="51">
+                    <Handler methodName="extn_onPreviousButtonClick"/>
+                </Subscriber>
+                <Subscriber eventId="extn_Previous_button2new_onClick"
+                    isExtn="true" sequence="51">
+                    <Handler methodName="extn_onPreviousButtonClick"/>
+                </Subscriber>
+                <Subscriber eventId="extn_Close_button_onClick"
+                    isExtn="true" sequence="51">
+                    <Handler methodName="extn_onCloseButtonClick"/>
+                </Subscriber>
+                <Subscriber eventId="extn_Close_button2new_onClick"
+                    isExtn="true" sequence="51">
+                    <Handler methodName="extn_onCloseButtonClick"/>
+                </Subscriber>
+                <Subscriber eventId="extn_filteringselect_onChange"
+                    isExtn="true" sequence="51">
+                    <Handler methodName="customerDropDown"/>
+                </Subscriber>
+                <Subscriber eventId="extn_FinishPickuButton_onClick"
+                    isExtn="true" sequence="51">
+                    <Handler methodName="extn_onFinishPickButtonClick"/>
+                </Subscriber>
+                <Subscriber eventId="extn_FinishPickupButton1_onClick"
+                    isExtn="true" sequence="51">
+                    <Handler methodName="extn_onFinishPickButtonClick"/>
+                </Subscriber>
+                <Subscriber eventId="extn_cmbCustVerfMethod_onChange"
+                    isExtn="true" sequence="51">
+                    <Handler methodName="extn_RecordStoreUserAction"/>
+                </Subscriber>
+                <Subscriber eventId="extn_resetCurbsideOrder1_onClick"
+                    isExtn="true" sequence="51">
+                    <Handler methodName="resetCurbsideOrder"/>
+                </Subscriber>
+                <Subscriber eventId="extn_resetCurbsideButton_onClick"
+                    isExtn="true" sequence="51">
+                    <Handler methodName="resetCurbsideOrder"/>
+                </Subscriber>
+                <Subscriber eventId="extn_FinishPickupButton_onClick"
+                    isExtn="true" sequence="51">
+                    <Handler methodName="extn_onFinishPickButtonClick"/>
+                </Subscriber>
+                <Subscriber eventId="extn_FinishPickUpButton1_onClick"
+                    isExtn="true" sequence="51">
+                    <Handler methodName="extn_onFinishPickButtonClick"/>
+                </Subscriber>
+				<!--OMNI-105500 - Start -->
+				<Subscriber eventId="extn_resetInstoreOrder_onClick"
+                    isExtn="true" sequence="51">
+                    <Handler methodName="resetInstoreOrder"/>
+                </Subscriber>
+				<!--OMNI-105500 - Start -->
+            </Local>
+        </Subscribers>
+        <MashupRefs>
+            <Init>
+                <MashupRef
+                    mashupId="customerpickup_getBasicShipmentDetails"
+                    mashupRefId="getShipmentDetails" sourceNamespace="ShipmentDetails"/>
+		<!-- OMNI-8710, 8717: UI Align and Payment Info - Start -->
+                <MashupRef extnType="MODIFY"
+                    mashupId="customerpickup_getBasicShipmentDetails"
+                    mashupRefId="getShipmentDetails" sourceNamespace="ShipmentDetails"/>
+		<!-- OMNI-8710, 8717: UI Align and Payment Info - End -->
+                <MashupRef extnType="ADD"
+                    mashupId="customerpickup_getCustomerVerficationMethodList"
+                    mashupRefId="extn_CustomerVerifcationMethodList" sourceNamespace="extn_CustomerVerficationMethodList"/>
+		<!--OMNI-79056 Curbside Estimated Time delay Changes - START-->
+		<MashupRef extnType="ADD"
+                    mashupId="extn_CurbsideEstimatedTimeDelay" mashupRefId="extn_CurbsideEstimatedTimeDelay_ref" 
+		    sourceNamespace="extn_CurbsideCommomCodeList" />
+		<!--OMNI-79056 Curbside Estimated Time delay Changes - END-->	
+		<!--OMNI-85079 - Start-->
+		<MashupRef extnType="ADD"
+                    mashupId="extn_getCurbsideGetShipmentLine"
+                    mashupRefId="extn_getCurbsideGetShipmentLine" sourceNamespace="extn_curbside"/>	
+		<!--OMNI-85079 - End-->
+            </Init>
+            <Behavior>
+                <MashupRef extnType="ADD" mashupId="Extn_startPaperWork" mashupRefId="extn_startPaperWork_ref"/>
+                <MashupRef extnType="ADD"
+                    mashupId="extn_resetCurbsideOrders" mashupRefId="extn_resetCurbsideOrders_ref"/>
+                <MashupRef extnType="ADD" mashupId="deleteNotification" mashupRefId="deleteNotification_ref"/>
+                <MashupRef extnType="ADD"
+                    mashupId="extn_AgeVerifiedChangeShipment" mashupRefId="extn_AgeVerifiedChangeShipment_ref"/>
+                <MashupRef extnType="ADD"
+                    mashupId="customerpickup_getBasicShipmentDetails" mashupRefId="getShipmentDetails"/>
+                <MashupRef extnType="ADD"
+                    mashupId="extn_customerpickup_updateShipmentQuantity" mashupRefId="extn_customerpickup_updateShipmentQuantity_Ref"/>
+                <MashupRef extnType="ADD"
+                    mashupId="customerpickup_recordCustomerPickup" mashupRefId="extn_customerpickup_recordCustomerPickup_Ref"/>
+                <MashupRef extnType="ADD"
+                    mashupId="UnResrvMsgToSIMOnShrtg" mashupRefId="extn_UnResrvMsgToSIMOnShrtg"/>
+                <MashupRef extnType="ADD" mashupId="extn_changeShipment" mashupRefId="extn_changeShipment_ref"/>
+                <MashupRef extnType="ADD"
+                    mashupId="extn_stampInvoiceNoOnBOPISOrders" mashupRefId="extn_stampInvoiceNoOnBOPISOrders_ref"/>
+                <MashupRef extnType="ADD"
+                    mashupId="extn_RecordStoreUserActionMashup" mashupRefId="extn_RecordStoreUserActionMashup"/>
+				<!--OMNI-72389 Curbside customer pick up screen UI – Notification of related orders  START-->              
+				<MashupRef extnType="ADD"
+                    mashupId="extn_NotifyRelatedOrders" mashupRefId="extn_NotifyRelatedOrders"/>
+				<!--OMNI-72389 Curbside customer pick up screen UI – Notification of related orders  END-->
+                <!--OMNI-79563 Curbside Estimated Delay Timer  Changes - START-->
+		<MashupRef extnType="ADD"
+                    mashupId="extn_CurbsideExtensions" mashupRefId="extn_CurbsideExtensions_ref" 
+		    sourceNamespace="extn_CurbsideExtnsionCommomCodeList" />
+		<!--OMNI-79563 Curbside Estimated Delay Timer Count Changes - END-->
+			<!--OMNI-85081 Start -->
+			<MashupRef extnType="MODIFY"
+                    mashupId="extn_customerpickup_getPickupShipmentLineList" mashupRefId="getShipmentLineListBehv"/>
+			<!--OMNI-85081 End -->
+			<!--OMNI-85081 Start-->
+			<MashupRef extnType="ADD"
+                mashupId="extn_updateShipmentlinesForCurbConsolidation" mashupRefId="extn_customerpickup_updateShipmentLinesForCurbConsolidation_ref"/>
+			<!--OMNI-85081 Start-->
+			<!--OMNI -85179 - complete order changes START-->
+			<MashupRef extnType="ADD"
+                mashupId="extn_recordCustomerPickForCurbsideConsolidation" mashupRefId="extn_recordCustomerPickForCurbsideConsolidation"/>
+			<!--OMNI -85179 - complete order changes START-->
+			<!--OMNI-85085 Start -->
+			<MashupRef extnType="ADD"
+			mashupId="extn_changeShipmentForCurbsideConsoldiation" mashupRefId="extn_changeShipmentForCurbsideConsoldiation" />
+			<!--OMNI-85085 End -->
+			<!--OMNI-105674 Start -->
+			<MashupRef extnType="ADD"
+                    mashupId="extn_resetInstoreOrders" mashupRefId="extn_resetInstoreOrders_ref"/>
+			<!--OMNI-105674 End -->
+			</Behavior>
+        </MashupRefs>
+    </ScreenExtension>
+</ExtensionMetaData>

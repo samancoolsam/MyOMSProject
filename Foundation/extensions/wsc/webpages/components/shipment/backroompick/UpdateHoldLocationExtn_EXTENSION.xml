@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExtensionMetaData>
+    <ScreenExtension extnClassName="UpdateHoldLocationExtn"
+        extnPackage="extn.components.shipment.backroompick"
+        originalScreen="wsc.components.shipment.backroompick.UpdateHoldLocation"
+        originalScreenPackage="wsc.components.shipment.backroompick" type="diffrential">
+	<!-- OMNI- 3676 BOPIS: Apply All Staging Locations START -->
+        <Namespaces>
+            <TargetNamespaces>
+                <Target description="extn_StagingLocationAll"
+                    isExtn="true"
+                    scExtensibilityArrayItemId="extn_TargetNamespaces_2" value="extn_StagingLocationAll"/>
+                <Target
+                    description="This namesapce is the placeholder for storing printer id"
+                    isExtn="true"
+                    scExtensibilityArrayItemId="extn_TargetNamespaces_3" value="extn_getChangedPrinterID"/>
+            </TargetNamespaces>
+            <SourceNamespaces>
+                <Source description="printer id from session object"
+                    isExtn="true"
+                    scExtensibilityArrayItemId="extn_SourceNamespaces_4" value="extn_printerFromSession"/>
+                <Source isExtn="true"
+                    scExtensibilityArrayItemId="extn_SourceNamespaces_5" value="extn_getPrinterDevice_output1"/>
+            </SourceNamespaces>
+        </Namespaces>
+	<!-- OMNI- 3676 BOPIS: Apply All Staging Locations END -->
+        <Items>
+            <FilteringSelect _sc_extensibility_moveOrder="10"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="last"
+                _sc_extensibility_referenceUId="extn_Print_to"
+                class="autoLabelZeroWidth longTextbox nonEditable"
+                label="$(_scSimpleBundle:extn_Print_To)" uId="extn_filteringselect">
+                <BindingData>
+                    <SourceBinding namespace="extn_printerFromSession" path="Devices.Device.DeviceId"/>
+                    <TargetBindings>
+                        <TargetBinding
+                            namespace="extn_getChangedPrinterID"
+                            path="Devices.Device.DeviceId" scExtensibilityArrayItemId="extn_TargetBindings_0"/>
+                    </TargetBindings>
+                    <OptionsBinding descriptionField="DeviceId"
+                        namespace="extn_getPrinterDevice_output1"
+                        path="Devices.Device" valueField="DeviceId"/>
+                </BindingData>
+            </FilteringSelect>
+	    <!-- OMNI-21999: Full name of customer on BOPIS staging screen - START -->
+            <ContentPane _sc_extensibility_moveOrder="11"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="extn_Print_to"
+                class="extn_CustomerName" uId="extn_custname"/>
+	    <!-- OMNI-21999: Full name of customer on BOPIS staging screen - END -->
+            <ContentPane _sc_extensibility_moveOrder="8"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="extn_AssignStagingLocCP" uId="extn_Print_to"/>
+            <ContentPane _sc_extensibility_moveOrder="2"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="addStagingLocationPanel"
+                style="padding-bottom:20px" uId="extn_AssignStagingLocCP"/>
+            <ContentPane _sc_extensibility_moveOrder="1"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="HoldLocationListContainer" uId="extn_repeate_holdLocation">
+                <BindingData repeatingscreenGeneratorFunction="extn_getRepetingScreen">
+                    <RepeatingScreenData
+                        path="Shipment.ShipmentLines.ShipmentLine"
+                        repeatingScreenClass="accentPanel"
+                        repeatingnamespace="getCustomerList_output" sourcenamespace="extn_ShipmentModel"/>
+                </BindingData>
+            </ContentPane>
+	    <!-- OMNI- 3676 BOPIS: Apply All Staging Locations START -->
+            <ContentPane _sc_extensibility_moveOrder="2"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="addStagingLocationPanel"
+                style="padding-bottom:20px" uId="extn_AssignStagingLocCP"/>
+	      <!-- OMNI- 3676 BOPIS: Apply All Staging Locations END -->
+            <Button _sc_extensibility_operation="change"
+                _sc_extensibility_referenceUId="addHoldLocationButton" renderHidden="true"/>
+	      <!-- OMNI- 3676 BOPIS: Apply All Staging Locations START -->
+            <Button _sc_extensibility_moveOrder="4"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="extn_StagingLoc"
+                class="idxSpecialButton longButtons"
+                label="$(_scSimpleBundle:extn_Assign_ALL)"
+                spanLabel="true" uId="extn_assignALLLoc"/>
+         	<!-- OMNI- 3676 BOPIS: Apply All Staging Locations END -->
+            <Button _sc_extensibility_moveOrder="5"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="extn_StagingLoc" uId="extn_assignALLLoc"/>
+            <TextField _sc_extensibility_operation="change"
+                _sc_extensibility_referenceUId="holdLocationTxtField" renderHidden="true"/>
+	    	<!-- OMNI- 3676 BOPIS: Apply All Staging Locations START -->
+            <TextField _sc_extensibility_moveOrder="3"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="first"
+                _sc_extensibility_referenceUId="extn_AssignStagingLocCP"
+                class="addlocation longTextbox zeroWidthLabelKey"
+                label="$(_scSimpleBundle:extn_Staging_Location)"
+                spanLabel="true" uId="extn_StagingLoc">
+		<!-- OMNI- 3676 BOPIS: Apply All Staging Locations END -->
+                <BindingData>
+                    <TargetBindings>
+                        <TargetBinding
+                            namespace="extn_StagingLocationAll"
+                            path="Shipment.ShipmentLines.ShipmentLine.Extn.ExtnStagingLocation" scExtensibilityArrayItemId="extn_TargetBindings_0"/>
+                    </TargetBindings>
+                </BindingData>
+            </TextField>
+	    <!-- OMNI-21999: Full name of customer on BOPIS staging screen - START -->
+            <DataLabel _sc_extensibility_moveOrder="12"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="first"
+                _sc_extensibility_referenceUId="extn_custname"
+                label="$(_scBundle:extn_Customer_Name)" uId="extn_custName">
+                <BindingData>
+                    <SourceBinding
+                        dynamicBindingFunc="extn_CustomerName"
+                        namespace="ShipmentModel" path="Shipment.ShipmentLines.ShipmentLine.0.Order.CustomerFirstName"/>
+                </BindingData>
+            </DataLabel>
+	    <!-- OMNI-21999: Full name of customer on BOPIS staging screen - END -->
+        </Items>
+        <Subscribers>
+            <Local>
+                <Subscriber eventId="afterScreenInit" isExtn="true" sequence="19">
+                    <Handler methodName="extn_afterScreenInit"/>
+                </Subscriber>
+	 	<!-- OMNI- 3676 BOPIS: Apply All Staging Locations START -->	
+                <Subscriber description="extn_setFocusOnStagingLocation"
+                    eventId="afterScreenLoad" isExtn="true" sequence="51">
+                    <Handler methodName="extn_setFocusOnStagingLocation"/>
+                </Subscriber>
+                <Subscriber eventId="afterScreenLoad" isExtn="true" sequence="52">
+                    <Handler methodName="printerIDFromSession"/>
+                </Subscriber>
+                <Subscriber eventId="saveCurrentPage" isExtn="true" sequence="19">
+                    <Handler methodName="extn_beforeSave"/>
+                </Subscriber>
+                <Subscriber eventId="afterBehaviorMashupCall"
+                    isExtn="true" sequence="51">
+                    <Handler methodName="extn_afterBehaviorMashupCall"/>
+                </Subscriber>
+                <Subscriber
+                    description="extn_AssignStagingLocationtoAllOnEnter"
+                    eventId="extn_StagingLoc_onKeyDown" isExtn="true" sequence="51">
+                    <Handler methodName="extn_AssignStagingLocationtoAllOnEnter"/>
+                </Subscriber>
+                <Subscriber
+                    description="extn_AssignStagingLocationtoAll"
+                    eventId="extn_assignALLLoc_onClick" isExtn="true" sequence="51">
+                    <Handler methodName="extn_AssignStagingLocationtoAll"/>
+                </Subscriber>
+                <Subscriber eventId="extn_filteringselect_onChange"
+                    isExtn="true" sequence="51">
+                    <Handler methodName="storePrinterInSession"/>
+                </Subscriber>
+            </Local>
+        </Subscribers>
+	  	<!-- OMNI- 3676 BOPIS: Apply All Staging Locations START -->
+        <MashupRefs>
+            <Init>
+                <MashupRef mashupId="getPrinterDevice"
+                    mashupRefId="getPrinterDeviceInit1" sourceNamespace="extn_getPrinterDevice_output1"/>
+            </Init>
+            <Behavior>
+                <MashupRef extnType="ADD"
+                    mashupId="extn_PrintOrderTicket" mashupRefId="extn_PrintOrderTicket_ref"/>
+                <MashupRef mashupId="getPrinterDevice" mashupRefId="getPrinterDeviceInit1"/>
+                <MashupRef
+                    mashupId="backroomPickUp_changeShipmentStatusToReadyForCustomerPick" mashupRefId="saveShipmentStatusForPickUpOrder"/>
+                <MashupRef extnType="ADD"
+                    mashupId="extn_AssignStagingLocationALLMashup" mashupRefId="extn_AssignStagingLocationMashup"/>
+            </Behavior>
+        </MashupRefs>
+		<!-- OMNI- 3676 BOPIS: Apply All Staging Locations END -->
+    </ScreenExtension>
+</ExtensionMetaData>

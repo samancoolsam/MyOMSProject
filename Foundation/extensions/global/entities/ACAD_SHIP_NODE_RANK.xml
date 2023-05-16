@@ -1,0 +1,28 @@
+<DBSchema>
+	<Entities>
+		<Entity ApiNeeded="Y"  Description="CUSTOM TABLE TO STORE SHIP NODE RANK DETAILS"  Prefix="ACAD"  TableName="ACAD_SHIP_NODE_RANK"  XMLName="AcadShipNodeRank" ListName="ShipNodeRankList" Name="ShipNodeRank" >
+			<Attributes>
+				
+                <Attribute ColumnName="SHIP_NODE" DataType="ShipNode" Description="ShipNode" XMLName="ShipNode" Type="" Nullable="False" />
+				<Attribute ColumnName="RANK" DataType="Number" size="24" DecimalDigits="" DefaultValue="0" Description="Store Rank"  XMLName="Rank" Type="NUMBER"/>
+				<Attribute ColumnName="STORE_FLAG" DataType="Flag" DecimalDigits="" DefaultValue="" Description="Ship Node Status Flag" Nullable="true" Size="1" Type="Char" XMLName="StoreFlag" XMLGroup="" SqlServerDataType="" />
+				<Attribute ColumnName="STORE_ELG_FLAG" DataType="Flag" DecimalDigits="" DefaultValue="" Description="Ship Node Status Flag for Sourcing Optimization" Nullable="true" Size="1" Type="Char" XMLName="StoreElgFlag" XMLGroup="" SqlServerDataType="" />
+				<Attribute ColumnName="AVAIL_NODE_CAPACITY_FLAG" DataType="Flag" DecimalDigits="" DefaultValue="" Description="Ship Node Status Flag for Sourcing Optimization" Nullable="true" Size="1" Type="Char" XMLName="AvailNodeCapacity" XMLGroup="" SqlServerDataType="" />
+				<Attribute ColumnName="LOCKID" DataType="Lockid" DefaultValue="0"  Description="Lock ID" />
+				<Attribute ColumnName="CREATETS" DataType="TimeStamp"   DefaultValue="sysdate" Description="Create TimeStamp" />
+				<Attribute ColumnName="MODIFYTS" DataType="TimeStamp"  DefaultValue="sysdate" Description="Modify TimeStamp" />
+				<Attribute ColumnName="CREATEUSERID" DataType="UserId"  DefaultValue="&apos; &apos;" Description="Creating User ID" />
+				<Attribute ColumnName="MODIFYUSERID" DataType="UserId"  DefaultValue="&apos; &apos;" Description="Modifying User ID" />
+				<Attribute ColumnName="CREATEPROGID" DataType="ProgramID"  DefaultValue="&apos; &apos;" Description="Creating Program ID" />
+				<Attribute ColumnName="MODIFYPROGID" DataType="ProgramID"  DefaultValue="&apos; &apos;" Description="Modifying Program ID" />
+				
+		    </Attributes>
+			<!-- PrimaryKey is a mandatory attribute in entity definition. This  element can have ONLY ONE attribute element -->
+			<PrimaryKey Name="SHIP_NODE">
+				<Attribute ColumnName="SHIP_NODE" />
+			</PrimaryKey>
+			<!-- Relationship --> 
+			
+		</Entity>
+	</Entities>
+</DBSchema>

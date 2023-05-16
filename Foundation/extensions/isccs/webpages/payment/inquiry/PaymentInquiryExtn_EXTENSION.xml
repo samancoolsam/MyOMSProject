@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExtensionMetaData>
+    <ScreenExtension extnClassName="PaymentInquiryExtn"
+        extnPackage="extn.payment.inquiry"
+        originalScreen="isccs.payment.inquiry.PaymentInquiry"
+        originalScreenPackage="isccs.payment.inquiry" type="diffrential">
+        <Items>
+            <Link _sc_extensibility_moveOrder="1"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="lnkOrderTotalDisplay"
+                renderHidden="true" uId="extn_ViewAutorizations" value="$(_scSimpleBundle:extn_View_Authorization_and_Charge_Details)"/>
+            <DataLabel _sc_extensibility_moveOrder="3"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="extn_ViewAutorizations"
+                label="$(_scBundle:extn_Deffered_Interest)"
+                renderHidden="true" uId="extn_deffered Interest">
+                <BindingData>
+                    <SourceBinding
+                        namespace="paymentInquiry-getPaymentInquiryDetails_Output" path="Order.PaymentReference5"/>
+                </BindingData>
+            </DataLabel>
+            <GridX _sc_extensibility_operation="change" _sc_extensibility_referenceUId="grdChargesAndRefunds">
+                <Structure>
+                    <Layout>
+                        <View _sc_extensibility_moveOrder="2"
+                            _sc_extensibility_operation="insert"
+                            _sc_extensibility_position="after"
+                            _sc_extensibility_referenceUId="vwDisplayPaymentType"
+                            field="extn_Payment_Ref"
+                            name="$(_scSimpleBundle:Payment_Reference)"
+                            uId="extn_Payment_Ref" width="35%">
+                            <BindingData>
+                                <SourceBinding
+                                    dynamicBindingClassName="customUtils"
+                                    dynamicBindingFunc="getOrderNoLink"
+                                    dynamicBindingPackage="extn.utils" path="DisplayPaymentType"/>
+                            </BindingData>
+                        </View>
+                        <View _sc_extensibility_operation="change"
+                            _sc_extensibility_referenceUId="vwDisplayPaymentType"
+                            hidden="true" uId="vwDisplayPaymentType"/>
+                    </Layout>
+                </Structure>
+            </GridX>
+	    <!-- OMNI-1923 Customer Care: Sterling WCC: Y order Link - End -->
+        </Items>
+        <Subscribers>
+            <Local>
+                <Subscriber description="extn_viewauthorizationsLink"
+                    eventId="afterScreenInit" isExtn="true" sequence="51">
+                    <Handler methodName="extn_viewauthorizationsLink"/>
+                </Subscriber>
+                <Subscriber eventId="afterScreenInit" isExtn="true" sequence="52">
+                    <Handler methodName="extn_PopulateDeferredInterest"/>
+                </Subscriber>
+		  <!-- OMNI-1923 Customer Care: Sterling WCC: Y order Link - Start -->
+                <Subscriber description="extn_displayGCPaymentDetails"
+                    eventId="grdChargesAndRefunds_Link_ScHandleLinkClicked"
+                    isExtn="true" sequence="19">
+                    <Handler methodName="extn_displayGCPaymentDetails"/>
+                </Subscriber>
+                <Subscriber description="extn_openPaymentDetails"
+                    eventId="extn_ViewAutorizations_onClick"
+                    isExtn="true" sequence="51">
+                    <Handler methodName="extn_openPaymentDetails"/>
+                </Subscriber>
+            </Local>
+        </Subscribers>
+	 <!-- OMNI-1923 Customer Care: Sterling WCC: Y order Link - Start -->
+        <MashupRefs>
+            <Init>
+                <MashupRef callSequence="1"
+                    mashupId="paymentInquiry-getPaymentInquiryDetails"
+                    mashupRefId="getPaymentInquiryDetails" sequence="5" sourceNamespace="paymentInquiry-getPaymentInquiryDetails_Output"/>
+            </Init>
+        </MashupRefs>
+	  <!-- OMNI-1923 Customer Care: Sterling WCC: Y order Link - End -->
+    </ScreenExtension>
+</ExtensionMetaData>

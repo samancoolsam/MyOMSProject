@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Controller
+    className="com.sterlingcommerce.ui.web.platform.controller.SCUIXAPIMashupController"
+    controllerId="extn.components.shipment.search.ShipmentDetailsExtnBehaviorController"
+    requestMethodSupported="POST" screenId="extn.components.shipment.search.ShipmentDetailsExtn">
+    <MashupRefs>
+        <MashupRef extnType="ADD"
+            mashupId="extn_PrintShipmentPickTickets"
+            mashupRefId="extn_PrintShipmentPickTicketsSearch_ref" permissionId=""/>
+        <MashupRef extnType="ADD" mashupId="extn_getShipmentList"
+            mashupRefId="extn_getShipmentList_ref" permissionId=""/>
+        <MashupRef extnType="ADD"
+            mashupId="extn_RecordStoreUserActionMashup"
+            mashupRefId="extn_RecordStoreUserActionMashup" permissionId=""/>
+    </MashupRefs>
+</Controller>

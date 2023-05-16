@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Controller
+    className="com.sterlingcommerce.ui.web.platform.controller.SCUIXAPIMashupController"
+    controllerId="extn.order.cancel.CancelOrderListScreenExtnBehaviorController"
+    requestMethodSupported="POST" screenId="extn.order.cancel.CancelOrderListScreenExtn">
+    <!-- OMNI-8718 -  Prevent STS Line Cancellation WEB COM  START -->
+    <MashupRefs>
+        <MashupRef extnType="MODIFY"
+            mashupId="CancelOrderListScreen_getCompleteOrderLineList"
+            mashupRefId="getCompleteOrderLineList" permissionId=""/>
+    </MashupRefs>
+    <!-- OMNI-8718 -  Prevent STS Line Cancellation WEB COM  END -->
+</Controller>

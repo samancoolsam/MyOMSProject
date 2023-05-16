@@ -1,0 +1,820 @@
+@media (max-width: 600px) {
+.width25 {
+	width: auto !important;
+}
+
+.hideMobile {
+	display: none !important;
+}
+
+.alternateCustomer {
+	font-size: 14px;
+    	line-height: 1.6;
+	color: #4c4d53;
+	margin-top: 20px !important;
+}
+.marginTopCSS {
+	margin-top: 20px;
+	line-height: 1.5 !important;
+}
+.extnEmail {
+	width: auto !important;
+}
+.extnBlock {
+	display: block !important;
+}
+.extnInlineBlock {
+	display: inline-flex !important;
+} 
+/* START - (OMNI - 1409)  : BOPIS: Finish Pickup Button for BOPIS orders */
+.extnScanBarCode {	
+	margin-top:35px;
+}
+/* END - (OMNI - 1409)  : BOPIS: Finish Pickup Button for BOPIS orders */
+
+/* START - (OMNI - 71887)*/
+.comapps .ellipsisText.extn_DisplayEmail.idxLink .scLinkAlignment > div > .dijitInputField .idxLink {
+    white-space: normal !important;
+	word-break: break-word;
+}
+.comapps .ellipsisText.extn_DisplayEmail.idxLink {
+	width:150px;
+}
+/* END - (OMNI - 71887)*/
+/* START - OMNI - 98607*/
+.extn_CompleteAssembly .idxLink {
+	padding: 2px 5px !important;
+	font-size: 14px !important;
+}
+/* START - OMNI - 98607*/
+}
+
+/* START - OMNI - 102104*/
+.extn_DisplayShipSource {
+	margin-left: 3px !important;
+}
+/* END - OMNI - 102104*/
+
+.alternateCustomer {
+	font-size: 14px;
+    	line-height: 1.6;
+	color: #4c4d53;
+	/*margin-top: 20px !important;*/
+}
+
+.delivery {
+    position: absolute;
+    text-align: center;
+    margin-left: 50% !important;
+    margin-top: -40px !important;
+}
+
+.marginTopCSS {
+	margin-top: 20px;
+	line-height: 1.5 !important;
+}
+.disableLink {
+	pointer-events: none;
+}
+.comapps .duein.academyMediumPrioritySLA .scDataLabelValue {
+	font-weight: normal;
+	font-size: 14px;
+	font-family: "Helvetica Neue Light", "HelvLightIBM", "Helvetica Neue", Helvetica, Arial, Tahoma, Verdana, sans-serif;
+	color: #ecec0d !important;
+}
+.backroomPickTimeRemaining {
+	margin-left: 10px !important;
+}
+.extnInlineBlock {
+	display: inline-flex !important;
+}
+.extnBlockforShipmentNo {
+	display: block !important;
+}
+
+
+.extnAnchor a {
+	line-height: 1.6;
+}
+
+#customOrderSummaryScreen #titleLabel span.scDataValue {
+    font-style: normal !important;
+    font-size: 14px !important;
+}
+
+#customOrderSummaryScreen span.scDataValue {
+    font-weight: bold;
+    font-style: italic;
+    font-size: 13px;
+}
+
+#customOrderSummaryScreen #titleLabel label {
+    font-weight: bold !important;
+}
+
+.extnOrderLineDetailsScreenTitle{
+	font-weight: bold !important;
+	font-size: 17px !important;
+
+	display: table;
+	width: 100%;
+	padding-top: 10px;
+}
+.extn_FinishPackMobile {
+	margin-right: 5px !important;
+	margin-top: 5px !important;
+}
+
+.Extn_pickUpLabeltext {
+	font-size: 14px;
+	color: #ffffff;
+}
+
+/* START - (OMNI - 1409)  : BOPIS: Finish Pickup Button for BOPIS orders */
+span.dijit.dijitButton.extnFinishbuttoncss .dijitButtonText{
+	color: #ff0000 !important;
+}
+span.dijit.dijitButtonhover.extnFinishbuttoncss .dijitButtonText{
+	color: #ffffff !important;
+}
+/* END - (OMNI - 1409)  : BOPIS: Finish Pickup Button for BOPIS orders */
+
+/* Combining Customer Pickup screen OMNI-8660 -Start */
+span.dijit.dijitButton.extnresetcurbsidebuttoncss .dijitButtonNode {
+  padding: 3px 15px;
+  background-color: ffffff !important;
+} 
+span.dijit.dijitButton.extnresetcurbsidebuttoncss .dijitButtonText {
+  color: #ff0000 !important;
+  font-weight: 900;
+  padding: 3px 15px;
+  font-size: 10px;
+}
+span.dijit.dijitButton.extnCompleteOrderbuttoncss .dijitButtonNode {
+  padding: 3px 15px;
+  background-color: red !important;
+}
+span.dijit.dijitButton.extnCompleteOrderbuttoncss .dijitButtonText {
+  color: #ffffff !important;
+  font-weight: 900;
+  padding: 3px 15px;
+  font-size: 10px;
+}
+/* Combining Customer Pickup screen OMNI-8660 -END */
+
+/* OMNI- 5402 Mobile Web SOM Home Page: Ready For Curbside PickUp Section  - Start */
+.extn_labelCss .dijitReset {
+	font-weight:bold !important;
+	color: #ff0000 !important;
+	padding-left: 7px !important;
+}
+
+.extn_labelCss .idxLabel {
+	font-weight:bold !important;
+}
+
+.extn_labelCssPadding .dijitReset {
+	padding-left: 5.5px !important;
+}
+/* OMNI- 5402 Mobile Web SOM Home Page: Ready For Curbside PickUp Section  - END */
+
+/* Start:  STS  */
+.extn_labelCssPC .dijitReset {
+	font-weight:bold !important;
+	padding-left:16px;
+}
+
+.extn_labelCssPC .idxLabel {
+	font-weight:bold !important;
+	width: unset !important;
+	min-width: unset !important;
+}
+
+.extn_labelCssNC .idxLabel {
+	width: unset !important;
+	min-width: unset !important;
+}
+
+.extn_NoBorder .repeatingpanel {
+	border-top:0px ! important;
+}
+
+.extn_summarylabel .idxLabel{
+	text-align: unset ! important;
+}
+
+.extn_summary_label .noColonLabels {
+	text-align: unset;
+}
+
+.extn_NoProductBorder .dijitTitlePaneTitle {
+     border: 0px ! important;
+     width: 35% !important;
+}
+
+.extn_receivedLabel .dijitReset {
+	font-weight:bold !important;
+}
+
+.extn_ContainerNC .dijitReset {
+	color: #ff0000 !important;
+}
+
+.extn_ReceivedNC .dijitReset {
+	color: #ff0000 !important;
+}
+
+.extn_labelReceiving .idxLabel {
+	font-weight:bold !important;
+}
+
+.extn_labelReceiving .dijitReset {
+	font-weight:normal !important;
+}
+
+.extnidxLink .idxLink {
+    font-size: 15px !important;
+	text-decoration: underline !important;
+	display: inline;
+	width: 50%;
+}
+
+.extnidxLink1 .idxLink {
+    font-size: 15px !important;
+}
+
+span.extnidxLabel .idxLabel {
+    font-weight: bold;
+}
+
+.extnidxLabelBOH .idxLabel {
+    color: #F44336;
+	font-size: 17px !important;
+}
+.extnidxLabelBOH1 .idxLabel {
+    color: #FF0000;
+	font-size: 17px !important;
+}
+
+.extnidxLabelICD .idxLabel {	
+	padding-left: 15px;
+	width: auto !important;
+	display: inline;
+}
+
+.extnidxLabelICD2 .idxLabel {
+	padding-left: 35px;
+	width: auto !important;
+	display: inline;
+}
+
+.extnidxLabelRC .idxLabel {	
+	width: auto !important;
+	display: inline;
+}
+
+.extnidxLinkRC .idxLink {
+    font-size: 15px !important;
+	text-decoration: underline !important;
+	width: auto !important;
+	display: inline;
+}
+
+.extndijitInputInner .dijitInputInner {	
+	width: auto !important;
+	display: inline;
+}
+
+.extndijitContentPane .dijitContentPane {
+	border-bottom: 1px solid gray;
+}
+
+.comapps .longTextbox > .dijitInline {
+	display: block;
+	display: inline;
+}
+.extnidxLabelSC .idxLabel {	
+	font-size: 15px !important;
+}
+
+.extn_Staged .idxLabel{
+	color: #02824e;
+}
+/* End:  STS  */
+
+
+.extn_reducePanelHeight{
+    min-height: 13px !important;
+    height: 13px !important;
+    padding-bottom: 5px !important;
+    padding-top: 5px !important;
+}
+
+.extn_reduceSTSURLPanelHeight{
+    min-height: 13px !important;
+    height: 13px !important;
+    padding-bottom: 20px !important;
+    padding-top: 20px !important;
+}
+
+/* OMNI-6624 - START */
+.extn_TOdate .idxLabel{
+	padding-left: 0px !important;
+	text-align: unset ! important;
+}
+
+.extn_TOdate .dijitReset {
+	padding-left: 10px !important;
+	text-align: unset ! important;
+}
+
+.extn_TOdate .noColonLabels {
+	text-align: unset;
+}
+
+.extn_LabelStatus .dijitReset {
+	padding-left: 6px !important
+}
+
+.extn_CancelLabel .idxLabel{
+	padding-left: 0px !important;
+	text-align: unset !important;
+	color: black !important;
+	font-weight: normal !important;	        
+}
+
+.extn_CancelLabel .dijitReset {
+	padding-left: 5px !important;
+	text-align: unset ! important;
+	color: #FF0000 !important;
+	font-weight: bold !important;
+       
+}
+/* OMNI-6624 - END */
+
+.extn_ContainerCncld .scDataValue{
+	color: #FF0000;
+	font-weight: bold;
+}
+
+.extn_ContainerCncldLbl .idxLabel {	
+	font-weight: bold;
+}
+
+/*OMNI-8710, 8717: START */
+.extn_CustomerInfo .idxLabel{
+	font-size: 20px !important;
+	color: #03086d !important;
+	font-weight: bold !important;
+	display: inline;
+	padding-bottom: 5px !important;
+}
+.extn_DisplayAssembly .idxLabel{
+	font-size: 12px !important;
+	font-weight: bold !important;
+	display: inline;
+	padding-bottom: 5px !important;
+}
+.extn_ShpPnl .idxLabel{
+	margin-top: 20px !important;
+}
+
+.extn_ShpPnlDigit{
+	margin-bottom: 10px !important;
+} 
+
+.slider{
+    /*width:100%; */
+}
+
+.split {
+	width: 50%;
+	/*position: fixed;*/
+	z-index: 1;
+	overflow-x: hidden;
+	float: left;
+}
+
+.left {
+	left: 0;
+	/*width: 70%;*/
+	display: inline;	
+}
+
+.right {
+	right: 0;
+	/*width: 40%;*/
+	margin-top: 10px;
+	/*margin-left: 40px;*/
+}
+
+.extn_marginleft {
+	margin-left: 20px !important;
+}
+
+.extn_CarMakeColor .idxLabel{
+	color: #03086d !important;
+	font-weight: bold !important;
+	font-size: 15px;
+}
+
+.extn_CarMakeColorCss .dijitReset {
+	color: black !important;
+	font-weight: normal !important;
+    margin-top: 0px !important;
+}
+
+.extn_CustName .dijitReset {
+	font-weight: bold !important;
+	font-size: 15px;
+}
+
+.extn_ShpPnlfont .dijitReset{
+	font-size: 1em !important;
+	font-family: "HelvNeueMediumforIBM", "Helvetica Neue", Helvetica, Arial, Tahoma, Verdana, sans-serif;
+}
+
+.extn_textalign .dijitReset{
+	margin-left: 6px;
+}
+/*OMNI-8710, 8717: END */
+
+/* OMNI-8715 : Start*/
+.extn_Express .idxLabel{
+	color: #FF0000 !important;
+}
+/* OMNI-8715 : End*/
+
+/* OMNI -9408 - STS - Order Search Result - Cancellation Product Information - START */
+.extn_STS_CancellationLabel .idxLabel{
+	color: #FF0000 !important;
+}
+/* OMNI -9408 - STS - Order Search Result - Cancellation Product Information - END */
+
+/* OMNI-21999: Full name of customer on BOPIS staging screen - START */
+.extn_marginleftright {
+	margin-left: 10px !important;
+}
+
+.extn_CustomerName .idxLabel{
+	margin-top: 10px !important;
+	margin-left: 10px !important;
+	margin-bottom: 10px !important;
+	width: auto !important;
+}
+/* OMNI-21999: Full name of customer on BOPIS staging screen - START */
+
+/* OMNI- 30153 Mobile Web SOM Order Summary Page: Save The Sale label display  - Start */
+.extn_SaveTheSalelabelCss .idxLabel {
+	font-weight:bold !important;
+	color: #00649d !important;
+}
+/* OMNI- 30153 Mobile Web SOM Order Summary Page: Save The Sale label display  - End */
+
+/* SIM Integration - START */
+.alternateCustomer_mbl {
+	font-size: 14px;
+    	line-height: 1.6;
+	color: #4c4d53;
+	margin-top: 2px !important;
+}
+/* SIM Integration - END */
+
+/* OMNI-67004 - ActiveShipment - START */
+.extn_ActiveShipmentCss .idxLabel {
+	font-weight:bold !important;
+	font-size: 15px;
+	color: #00A36C !important;
+}
+/* OMNI-67004 - ActiveShipment - END */
+
+/* OMNI-67005- CancelledPopUp - START */
+.extn_Cancelled_PopUp_bold .idxLabel {	
+	font-weight: bold;
+	color: #ff0000 !important;
+	font-size: 18px;
+}
+/* OMNI-67005- CancelledPopUp - END */
+
+/* OMNI-67006 - CancelledShipment - START */
+.extn_CancelledShipmentCss .idxLabel {
+	font-weight:bold !important;
+	font-size: 15px;
+	color: #ff0000 !important;
+}
+/* OMNI-67006 - CancelledShipment - END */
+
+/* OMNI-66999 - CancelledShipment - START */
+.extn_ScanLabelCountCss .idxLabel {
+	font-weight:bold !important;
+	font-size: 15px;
+	color: #090103 !important;
+}
+/* OMNI-66999 - CancelledShipment - END */
+
+/* OMNI-67538 - Feature Toggle Changes - START */
+.extnidxLinktoggle .idxLink {
+  color: #c7c7cc !important;
+}
+/* OMNI-6538 - Feature Toggle Changes - END */
+
+/* OMNI-67009 BatchPopUp Changes - START */
+span.dijit.dijitButton.extnAbortButtoncss .dijitButtonNode {
+  background-color: #C0392B !important; 
+  border: 1px solid #C0392B;	
+  -webkit-border-radius: 10px;
+
+}
+span.dijit.dijitButton.extnAbortButtoncss .dijitButtonText {
+  color: #ffffff !important;
+   font-size: small;
+}
+span.dijit.dijitButton.extnContinueButtoncss .dijitButtonNode {
+  background-color: #00768e !important;
+  border: 1px solid #00768e;
+  -webkit-border-radius: 10px;
+  padding: 11px 17px 11px 17px;
+}
+span.dijit.dijitButton.extnContinueButtoncss .dijitButtonText {
+  color: #ffffff !important;
+}
+.extn_AlertMessageCss .idxLabel {
+	font-weight:bold !important;
+	font-size: 20px;
+	color: #090103 !important;
+}
+/*OMNI-67009 BatchPopUp Changes - END */
+/* OMNI-70914 START */
+.extn_ActiveShipmentCountCss .idxLabel.scDataLabelValue {
+	font-weight:bold !important;
+	font-size: 18px;
+	color: #4c4d53 !important;
+}
+.extn_ScanLabelCountCssBig .idxLabel.scDataLabelValue {
+	font-weight:bold !important;
+	font-size: 18px;
+	color: #090103 !important;
+}
+/* OMNI-70914 END */
+
+/*OMNI-68379 START*/
+span.dijit.dijitButton.extnNOButtoncss .dijitButtonNode {
+  background-color: #00768e !important;
+  border: 1px solid #00768e;
+  -webkit-border-radius: 10px;
+  padding: 19px 31px 19px 31px;
+  
+}
+span.dijit.dijitButton.extnNOButtoncss .dijitButtonText {
+  color: #ffffff !important;
+  font-size: medium;
+  text-align: center;
+}
+span.dijit.dijitButton.extnAbortNewButtoncss .dijitButtonNode {
+  background-color: #C0392B !important; 
+  border: 1px solid #C0392B;	
+  -webkit-border-radius: 10px;
+  width: 90%;
+}
+
+span.dijit.dijitButton.extnAbortNewButtoncss .dijitButtonText {
+  color: #ffffff !important;
+  font-size: small
+}
+.comapps .extn_AlertImage {
+  width: 24px;
+  height: 24px;
+}
+/*OMNI-68379 END */
+
+/* OMNI-69706- ScanSummaryPopUp - START */
+.extn_ScanSummaryPopUpHdr .idxLabel {	
+	font-weight: bold;
+	font-size: 18px;
+}
+
+.extn_FinishScanActivity .idxLabel {	
+	font-weight:bold !important;
+}
+
+
+.extn_MissingScans .idxLabel {	
+	font-weight:bold !important;
+	font-size: 12px;
+}
+
+span.dijit.dijitButton.extnScanSummarybuttoncss .dijitButtonNode {
+  padding: 8px 30px 8px 30px;
+  -webkit-border-radius: 4px;
+  border: 0.1px solid #148096;
+}
+
+/* OMNI-69706- ScanSummaryPopUp - END */
+/* OMNI-72475 - START */
+.extnOnMyWayTimerLabel .dijitReset {
+	font-weight:bold !important;
+	font-size: 13px;
+	padding-top: 16px !important;
+	color: #00768e;
+}
+.extn_OnMyWayTimer{
+	width: 100px;
+}
+/* OMNI-72475 - START */
+
+/* OMNI-79056- Curbside Estimated Delay Changes - START */
+ .extn_marginleftestimatedinfo {
+	margin-left: 10px !important;
+}
+.extn_estimatedinfocolor .idxLabel{
+	color: #44546a !important;
+	font-weight: bold !important;
+	font-size: 15px;
+	display: inline;
+	width: auto !important;	
+}
+.extn_estimatedinfoColorCss .dijitReset {
+	color: #44546a !important;
+	font-weight: normal !important;
+	font-size: 13px;
+    margin-top: 0px !important;
+	text-align: center;
+}
+
+span.dijit.dijitButton.delaybutton .dijitButtonNode {
+  padding: 3px 20px 3px ;
+  background-color: #aaa !important;
+  color: black !important;
+  font-weight:bold !important;  
+}
+.dj_webkit .oneui .dijitFourButton .dijitButtonNode{
+	padding: 3px 16px 3px;
+	  background-color: #aaa !important;
+  color: black !important;
+  font-weight:bold !important;
+}
+.comapps .idxBorderButton .dijitButtonNode {
+    border: 1px solid #aaa !important;
+}
+/* OMNI-79056- Curbside Estimated Delay Changes - END */
+
+/* OMNI-79565 Start Curbside Delay Confirmation PopUp START */
+.extn_minsCss .idxLabel .dijitReset{
+    color: #c90303 !important;
+    font-weight: bold !important;
+	font-size: 17px;
+	
+}
+
+span.dijit.dijitButton.extn_Yes_Buttoncss .dijitButtonNode {
+    background-color: white !important;
+    border-color: black;
+	margin: auto;
+    -webkit-border-radius: 2px;
+    padding: 3px 18px 3px;
+}
+
+span.dijit.dijitButton.extn_Yes_Buttoncss .dijitButtonText {
+    color: black !important;
+    font-size: small;
+	font-weight: bold !important;
+    text-align: center;
+  }
+span.dijit.dijitButton.extn_No_Buttoncss .dijitButtonNode {
+    background-color: white !important;
+    border-color: black;
+	margin: auto;
+    -webkit-border-radius: 2px;
+    padding: 3px 20px 3px;
+}
+span.dijit.dijitButton.extn_No_Buttoncss .dijitButtonText {
+    color: black !important;
+    font-size: small;
+	font-weight: bold !important;
+    text-align: center;
+  }
+.extn_ConfirmCss .idxLabel{
+	color: #44546a !important;
+	font-weight: bold !important;
+	font-size: 15px;
+	display: inline;
+	width: auto !important;	
+}
+.extn_ConfirmTextCss .idxLabel {
+	color: #44546a !important;
+	font-weight: normal !important;
+	font-size: 13px;
+    margin-top: 0px !important;
+	text-align: center;
+}
+/* OMNI-79565 Start Curbside Delay Confirmation PopUp END */
+/* OMNI-79640 - Start */
+.extn_AlreadyAssignedtxt .dijitReset {
+	color: #44546a !important;
+	font-weight: normal !important;
+	font-size: 13px;
+    margin-top: 0px !important;
+	text-align: center;
+
+}
+/* OMNI-79640 - End */
+/* OMNI -80092 - Assign Curbside Order -Start */
+span.dijit.dijitButton.extnAssignOrderToMeButtoncss .dijitButtonNode {
+  margin: auto;
+  text-align: center;
+  padding: 3px 15px;
+  background-color: ffffff !important;
+} 
+span.dijit.dijitButton.extnAssignOrderToMeButtoncss .dijitButtonText {
+  color: #ff0000 !important;
+  font-weight: 900;
+  padding: 3px 15px;
+  font-size: 10px;
+}	
+/* OMNI -80092 - Assign Curbside Order -End */
+/*OMNI-69635 START */
+.extn_AlertMSLMessageCss .dijitReset {
+	font-weight:bold !important;
+	font-size: 20px;
+	color: #090103 !important;
+	padding-top: 10;
+}
+/*OMNI-69635 END */
+
+/* OMNI-80059 START */
+.extn_NoteCss .idxLabel{
+	color: red !important;
+	font-weight: bold !important;
+	font-size: 13px;
+	text-align: center;
+}
+
+.extn_NoteMsgCss .idxLabel {
+	color: red !important;
+	font-weight: normal !important;
+	font-size: 13px;
+	text-align: center;
+}
+/* OMNI-80059 END */
+/*OMNI-81595-MSL: Last Scan date Changes-START */
+.extn_lastscandatecolor .idxLabel{
+	color: #44546a !important;
+	font-weight: normal !important;
+	display: inline;
+	width: auto !important;	
+}
+.extn_lastscandatecolorCss .dijitReset {
+	color: #44546a !important;
+	font-weight: bold !important;
+    margin-top: 0px !important;
+	text-align: center;
+}
+/*OMNI-81595-MSL: Last Scan date Changes-END */
+
+/* OMNI-83819, OMNI-85035 Curbside Consolidation - Start */
+.extn_APPColorCss{
+	white-space: nowrap !important;
+	color: #03086d !important;
+	font-weight: bold !important;
+	font-size: 14px;
+	padding-top: 25px;
+	padding-bottom: 0px;
+	display: inline-block;
+}
+.extn_APPColor .idxLabel{
+	color: #03086d !important;
+	font-weight: bold !important;
+	font-size: 12px;
+}
+.extn_APPEmail .dijitReset {
+	color: black !important;
+	font-weight: normal !important;
+	font-size: 12px;
+	word-break: break-word;
+}
+/* OMNI-83819, OMNI-85035 Curbside Consolidation - End */
+
+/*OMNI-79883 START */
+.extn_curbsideinfoColorCss .dijitReset {
+	color: #ff0000 !important;
+	font-weight: bold !important;
+	font-size: 18px;
+    	margin-top: 0px !important;
+	text-align: center;
+}
+/*OMNI-79883 END */
+
+/* OMNI-85987 - START */
+.extn_curbsidedelayconfirm .dijitReset{
+	color: #ff0000 !important;
+	font-size: 15px;
+   	margin-top: 0px !important;
+	text-align: center;
+}
+.extn_curbsidedelayconfirmNote .dijitReset{
+        color: red !important;
+        font-size: 13px;
+    	margin-top: 0px !important;
+        text-align: center;
+}
+/* OMNI-85987 - END */

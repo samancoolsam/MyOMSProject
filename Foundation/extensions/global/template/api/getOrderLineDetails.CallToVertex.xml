@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OrderLine Action="" AllocationDate="" AllocationLeadTime="" ApptStatus="" ApptWarning="" AvailableQtyForStopDelivery="" AwaitingDeliveryRequest="" BuyerMarkForNodeId="" BuyerReceivingNodeId="" CanAddServiceLines="" CarrierAccountNo="" CarrierServiceCode="" ChainedFromOrderHeaderKey="" ChainedFromOrderLineKey="" CommittedQuantity="" ConditionVariable1="" ConditionVariable2="" ConfigurationKey="" CustomerLinePONo="" CustomerPONo="" DeliveryCode="" DeliveryMethod="" DepartmentCode="" DependencyShippingRule="" DependentOnLineKey="" DerivedFromOrderHeaderKey="" DerivedFromOrderLineKey="" DerivedFromOrderReleaseKey="" DistributionRuleId="" FillQuantity="" FirstIterationSeqNo="" FreightTerms="" FulfillmentType="" FutureAvailabilityDate="" GiftFlag="" HasChainedLines="" HasDeliveryLines="" HasDerivedChild="" HasServiceLines="" HoldFlag="" HoldReasonCode="" ImportLicenseExpDate="" ImportLicenseNo="" IntentionalBackorder="" InvoicedExtendedPrice="" InvoicedQty="" InvoicedQuantity="" IsBundleParent="" IsFirmPredefinedNode="" ItemGroupCode="" KitCode="" KitQty="" LastIterationSeqNo="" LineSeqNo="" LineType="" MaxLineStatus="" MaxLineStatusDesc="" MergeNode="" MinLineStatus="" MinLineStatusDesc="" MinShipByDate="" MultipleStatusesExist="" OpenQty="" OrderHeaderKey="" OrderLineKey="" OrderedQty="" OrigOrderLineKey="" OriginalOrderedQty="" OtherCharges="" PackListType="" ParentOfDependentGroup="" PersonalizeCode="" PersonalizeFlag="" PickableFlag="" PipelineKey="" PrimeLineNo="" ProcureFromNode="" PromisedApptEndDate="" PromisedApptStartDate="" Purpose="" ReceivingNode="" RemainingQty="" ReqCancelDate="" ReqDeliveryDate="" ReqShipDate="" ReservationID="" ReservationMandatory="" ReservationPool="" ReturnReason="" ReturnReasonLongDesc="" ReturnReasonShortDesc="" SCAC="" ScacAndService="" ScacAndServiceKey="" SchedFailureReasonCode="" Segment="" SegmentType="" SerialNo="" ShipNode="" ShipToID="" ShipToKey="" ShipTogetherNo="" ShipmentConsolidationGroupId="" SourceFromOrganization="" SplitQty="" Status="" StatusQuantity="" SubLineNo="" SubstituteItemID="" SubstituteItemUOM="" Timezone="" TranDiscrepancyQty="" isHistory="">
+   <Order Action="" AllocationRuleID="" AuthorizationExpirationDate="" AutoCancelDate="" BillToID="" BillToKey="" BuyerMarkForNodeId="" BuyerOrganizationCode="" BuyerReceivingNodeId="" BuyerUserId="" CancelOrderOnBackorder="Y" CarrierAccountNo="" CarrierServiceCode="" ChainType="" ChargeActualFreightFlag="" CreatedAtNode="" Createts="" Createuserid="" CustCustPONo="" CustomerEMailID="" CustomerPONo="" DefaultTemplate="" DeliveryCode="" DepartmentCode="" Division="" DocumentType="" DraftOrderFlag="" DriverDate="" EnteredBy="" EnterpriseCode="" EntryType="" ExchangeType="" FreightTerms="" HasChainedLines="" HasDeliveryLines="" HasDerivedChild="" HasDerivedParent="" HasProductLines="" HasServiceLines="" HoldFlag="" HoldReasonCode="" HoursBeforeNextIteration="" IsLineShipComplete="Y" IsLineShipSingleNode="Y" IsShipComplete="Y" IsShipSingleNode="Y" MaxOrderStatus="" MaxOrderStatusDesc="" MinOrderStatus="" MinOrderStatusDesc="" Modifyts="" Modifyuserid="" MultipleStatusesExist="" NextIterationDate="" NextIterationSeqNo="" NotificationReference="" NotificationType="" NotifyAfterShipmentFlag="" OptimizationType="" OrderComplete="" OrderDate="" OrderHeaderKey="" OrderName="" OrderNo="" OrderPurpose="" OrderType="" OriginalContainerKey="" OriginalTax="" OriginalTotalAmount="" OtherCharges="" PaymentRuleId="" PaymentStatus="" PendingTransferIn="" PersonalizeCode="" PriceProgramKey="" PricingClassificationCode="" PriorityCode="" PriorityNumber="" PurgeHistoryDate="" Purpose="" ReceivingNode="" ReqCancelDate="" ReqDeliveryDate="" ReqShipDate="" ReturnByGiftRecipient="" ReturnOrderHeaderKeyForExchange="" SCAC="" SaleVoided="" ScacAndService="" ScacAndServiceKey="" SearchCriteria1="" SearchCriteria2="" SellerOrganizationCode="" ShipNode="" ShipToID="" ShipToKey="" SoldToKey="" SourceKey="" SourceType="" SourcingClassification="" Status="" TaxExemptFlag="" TaxExemptionCertificate="" TaxJurisdiction="" TaxPayerId="" TeamCode="" TermsCode="" TotalAdjustmentAmount="" VendorID="" isHistory="">
+      <PriceInfo Currency="" EnterpriseCurrency="" ReportingConversionDate="" ReportingConversionRate="" TotalAmount="" />
+   </Order>
+
+   <Item AlternateItemID="" CostCurrency="" CountryOfOrigin="" CreditWOReceipt="" CustomerItem="" CustomerItemDesc="" ECCNNo="" HarmonizedCode="" ISBN="" IsReturnable="" ItemDesc="" ItemID="" ItemShortDesc="" ItemWeight="" ItemWeightUOM="" ManufacturerItem="" ManufacturerItemDesc="" ManufacturerName="" NMFCClass="" NMFCCode="" NMFCDescription="" ProductClass="" ProductLine="" ReturnWindow="" ScheduleBCode="" SupplierItem="" SupplierItemDesc="" TaxProductCode="" UPCCode="" UnitCost="" UnitOfMeasure="">
+    </Item>
+   <LinePriceInfo ActualPricingQty="" BundleTotal="" DiscountPercentage="" InvoicedLineTotal="" InvoicedPricingQty="" IsLinePriceForInformationOnly="" IsPriceLocked="" LineTotal="" ListPrice="" OrderedPricingQty="" PricingQtyConversionFactor="" PricingUOM="" RepricingQty="" RetailPrice="" SettledAmount="" SettledQuantity="" TaxExemptionCertificate="" TaxableFlag="" UnitPrice="" />
+
+    <PersonInfoShipTo AddressLine1="" AddressLine2="" AddressLine3="" AddressLine4="" AddressLine5="" AddressLine6="" AlternateEmailID="" Beeper="" City="" Company="" Country="" DayFaxNo="" DayPhone="" Department="" EMailID="" EveningFaxNo="" EveningPhone="" FirstName="" IsCommercialAddress="" JobTitle="" LastName="" MiddleName="" MobilePhone="" OtherPhone="" PersonID="" PersonInfoKey="" State="" Suffix="" TaxGeoCode="" Title="" ZipCode="" />
+
+<!--Optional-->
+   <PersonInfoMarkFor AddressLine1="" AddressLine2="" AddressLine3="" AddressLine4="" AddressLine5="" AddressLine6="" AlternateEmailID="" Beeper="" City="" Company="" Country="" DayFaxNo="" DayPhone="" Department="" EMailID="" EveningFaxNo="" EveningPhone="" FirstName="" IsCommercialAddress="" JobTitle="" LastName="" MiddleName="" MobilePhone="" OtherPhone="" PersonID="" PersonInfoKey="" State="" Suffix="" TaxGeoCode="" Title="" ZipCode="" />
+   <LineOverallTotals Charges="" Discount="" ExtendedPrice="" LineTotal="" OptionPrice="" PricingQty="" Tax="" UnitPrice="" />
+
+<!-- LineOverallTotals is a template-driven element but its attributes are not. The element can be removed from the template, and prevented from appearing in the output. But if the attributes are removed from the template, they will still be present in the output xml. -->
+   <LineInvoicedTotals Charges="" Discount="" ExtendedPrice="" LineTotal="" OptionPrice="" PricingQty="" Tax="" UnitPrice="" />
+
+<!-- LineInvoicedTotals is a template-driven element but its attributes are not. The element can be removed from the template, and prevented from appearing in the output. But if the attributes are removed from the template, they will still be present in the output xml. -->
+   <LineRemainingTotals Charges="" Discount="" ExtendedPrice="" LineTotal="" OptionPrice="" PricingQty="" Tax="" UnitPrice="" />
+
+<!-- LineRemainingTotals is a template-driven element but its attributes are not. The element can be removed from the template, and prevented from appearing in the output. But if the attributes are removed from the template, they will still be present in the output xml. -->
+   <LineOverallTotalsInEnterpriseCurrency Charges="" Discount="" ExtendedPrice="" LineTotal="" OptionPrice="" PricingQty="" Tax="" UnitPrice="" />
+
+<!-- LineOverallTotalsInEnterpriseCurrency is a template-driven element but its attributes are not. The element can be removed from the template, and prevented from appearing in the output. But if only the attributes are removed from the template, they will still be present in the output xml. -->
+   <LineRemainingTotalsInEnterpriseCurrency Charges="" Discount="" ExtendedPrice="" LineTotal="" OptionPrice="" PricingQty="" Tax="" UnitPrice="" />
+
+<!-- LineRemainingTotalsInEnterpriseCurrency is a template-driven element but its attributes are not. The element can be removed from the template, and prevented from appearing in the output. But if only the attributes are removed from the template, they will still be present in the output xml. -->
+   <LineCharges>
+      <LineCharge ChargeAmount="" ChargeCategory="" ChargeName="" ChargeNameKey="" ChargePerLine="" ChargePerUnit="" InvoicedChargeAmount="" InvoicedChargePerLine="" InvoicedChargePerUnit="" IsBillable="" IsDiscount="" Reference="" RemainingChargeAmount="" RemainingChargePerLine="" RemainingChargePerUnit="" />
+   </LineCharges>
+
+<!-- LineCharge is not a template driven element. If the template contains either of LineCharge or LineTax elements, both will appear in the output, alongwith all their attributes. -->
+   <LineTaxes>
+      <LineTax ChargeCategory="" ChargeName="" ChargeNameKey="" InvoicedTax="" Reference_1="" Reference_2="" Reference_3="" RemainingTax="" Tax="" TaxName="" TaxPercentage="" />
+
+      <TaxSummary>
+         <TaxSummaryDetail InvoicedTax="" OverallTax="" RemainingTax="" TaxName="" />
+      </TaxSummary>
+   </LineTaxes>
+
+
+   <OrderLineTranQuantity FillQuantity="" InvoicedQuantity="" OpenQty="" OrderedQty="" OriginalOrderedQty="" ReceivedQty="" RemainingQty="" SettledQuantity="" ShippedQuantity="" SplitQty="" StatusQuantity="" TranDiscrepancyQty="" TransactionalUOM="" />
+
+</OrderLine>
+

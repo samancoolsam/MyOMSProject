@@ -1,0 +1,13 @@
+<Order OrderHeaderKey="" EnterpriseCode="" DocumentType="" OrderNo="" BuyerOrganizationCode="" SellerOrganizationCode="" >
+   <OrderLines >
+      <OrderLine DeliveryMethod="" OrderLineKey="" OrderedQty="" OriginalOrderedQty="" PrimeLineNo=""  SubLineNo="" FulfillmentType="">
+	<Item ItemID="" ProductClass="" UnitOfMeasure=""/>
+         <Extn ExtnWCOrderItemIdentifier=""/>
+	<StatusBreakupForBackOrderedQty >
+            <BackOrderedFrom OrderReleaseStatusKey="" OrderReleaseKey="" Status="" StatusDescription="" StatusDate="" OrderLineScheduleKey="" BackOrderedQuantity="" >
+               <Details ExpectedDeliveryDate="" ExpectedShipmentDate="" TagNumber="" ShipByDate="" ShipNode=""/>
+            </BackOrderedFrom>
+         </StatusBreakupForBackOrderedQty>
+     </OrderLine>
+   </OrderLines>
+</Order>

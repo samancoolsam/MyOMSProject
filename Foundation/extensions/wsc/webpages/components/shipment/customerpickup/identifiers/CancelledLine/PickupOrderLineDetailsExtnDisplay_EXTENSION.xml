@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExtensionMetaData>
+    <ScreenDisplayExtension extnClassName="PickupOrderLineDetailsExtn"
+        identifierId="CancelledLine"
+        originalScreen="wsc.components.shipment.customerpickup.PickupOrderLineDetails" originalScreenPackage="wsc.components.shipment.customerpickup">
+        <Items>
+            <ContentPane _sc_extensibility_operation="change"
+                _sc_extensibility_referenceUId="divShortage" class="shortageQty"/>
+        </Items>
+    </ScreenDisplayExtension>
+</ExtensionMetaData>

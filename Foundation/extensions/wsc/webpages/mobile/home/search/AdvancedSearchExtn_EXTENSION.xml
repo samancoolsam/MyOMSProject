@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExtensionMetaData>
+    <ScreenExtension extnClassName="AdvancedSearchExtn"
+        extnPackage="extn.mobile.home.search"
+        originalScreen="wsc.mobile.home.search.AdvancedSearch"
+        originalScreenPackage="wsc.mobile.home.search" type="diffrential"/>
+</ExtensionMetaData>

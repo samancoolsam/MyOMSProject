@@ -1,0 +1,92 @@
+		<div>
+		 	<div data-dojo-type="idx/layout/ContentPane" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								_sc_extensibility_operation : 'change' , 
+		style : 'margin-top:18px' , 
+		_sc_extensibility_referenceUId : 'tabPnl'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="idx/layout/ContentPane" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_custom_contentpane' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '5' , 
+		_sc_extensibility_position : 'before' , 
+		style : 'margin-bottom:45px' , 
+		_sc_extensibility_referenceUId : 'extn_customFinishPack2'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="dijit/form/Button" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_customFinishPack' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '3' , 
+		'class' : 'floatRight idxSpecialButton' , 
+		_sc_extensibility_position : 'before' , 
+		_sc_extensibility_referenceUId : 'headerPnl'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	label : 			this.getSimpleBundleString('Action_done')
+			}
+		}
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="dijit/form/Button" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_customFinishPack2' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '4' , 
+		'class' : 'floatRight idxSpecialButton' , 
+		_sc_extensibility_position : 'after' , 
+		style : 'margin-bottom:25px' , 
+		_sc_extensibility_referenceUId : 'ContainerPackContainerView'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	label : 			this.getSimpleBundleString('Action_done')
+			}
+		}
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="dijit/form/Button" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_customFinishPack2' , 
+		_sc_extensibility_operation : 'move' , 
+		_sc_extensibility_moveOrder : '6' , 
+		_sc_extensibility_position : 'first' , 
+		_sc_extensibility_referenceUId : 'extn_custom_contentpane'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								_sc_extensibility_operation : 'change' , 
+		'class' : 'autoLabelZeroWidth orderNumber groupHeader hashNumberAlign extn_Block' , 
+		_sc_extensibility_referenceUId : 'lblorderNo'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_shipmentNo' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '1' , 
+		'class' : 'autoLabelZeroWidth orderNumber groupHeader hashNumberAlign' , 
+		_sc_extensibility_position : 'after' , 
+		_sc_extensibility_referenceUId : 'lblorderNo'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 namespace : 			'getShipmentDetails_output'
+,
+		 path : 			'Shipment.ShipmentNo'
+	}
+	}
+,	
+			 	label : 			this.getSimpleBundleString('extn_Shipment_No')
+			}
+		}
+	 					}">
+		 	</div>  
+		</div>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LabelFieldMap>
+	<LabelField Binding="Page/@GeneratedOn" DataType="Text" LabelFieldName="GeneratedOn" RepeatingElement="" Sequence="N"/>
+	<LabelField Binding="Page/@PageNumber" DataType="Text" LabelFieldName="PageNumber" RepeatingElement="" Sequence="N"/>
+	<LabelField Binding="Page/@ShipNode" DataType="Text" LabelFieldName="ShipNode" RepeatingElement="" Sequence="N"/>
+	<LabelField Binding="Page/Output/StoreItemPickQuantityList/StoreItemPickQuantity/@PickticketNo" DataType="Text" LabelFieldName="PickticketNo" RepeatingElement="" Sequence="N"/>
+
+	<LabelField Binding="Page/Output/StoreItemPickQuantityList/StoreItemPickQuantity/@ItemID" DataType="Text" LabelFieldName="ItemID" RepeatingElement="StoreItemPickQuantity" Sequence="N"/>
+	<LabelField Binding="Page/Output/StoreItemPickQuantityList/StoreItemPickQuantity/@ItemBarcode" DataType="Text" LabelFieldName="ItemBarcode" RepeatingElement="StoreItemPickQuantity" Sequence="N"/>
+	<LabelField Binding="Page/Output/StoreItemPickQuantityList/StoreItemPickQuantity/@Description" DataType="Text" LabelFieldName="Description" RepeatingElement="StoreItemPickQuantity" Sequence="N"/>
+	<LabelField Binding="Page/Output/StoreItemPickQuantityList/StoreItemPickQuantity/@ItemImageUrl" DataType="Text" LabelFieldName="Image" RepeatingElement="StoreItemPickQuantity" Sequence="N"/>
+	<LabelField Binding="Page/Output/StoreItemPickQuantityList/StoreItemPickQuantity/@Quantity" DataType="Text" LabelFieldName="Quantity" RepeatingElement="StoreItemPickQuantity" Sequence="N"/>
+	<LabelField Binding="Page/Output/StoreItemPickQuantityList/StoreItemPickQuantity/@CarrierServiceCode" DataType="Text" LabelFieldName="CarrierServiceCode" RepeatingElement="StoreItemPickQuantity" Sequence="N"/>
+	<LabelField Binding="Page/Output/StoreItemPickQuantityList/StoreItemPickQuantity/@LongSku" DataType="Text" LabelFieldName="LongSku" RepeatingElement="StoreItemPickQuantity" Sequence="N"/>
+	<LabelField Binding="Page/Output/StoreItemPickQuantityList/StoreItemPickQuantity/@TotalStock" DataType="Text" LabelFieldName="TotalStock" RepeatingElement="StoreItemPickQuantity" Sequence="N"/>
+	<LabelField Binding="Page/Output/StoreItemPickQuantityList/StoreItemPickQuantity/@PogId" DataType="Text" LabelFieldName="PogId" RepeatingElement="StoreItemPickQuantity" Sequence="N"/>
+	<LabelField Binding="Page/Output/StoreItemPickQuantityList/StoreItemPickQuantity/@Department" DataType="Text" LabelFieldName="Department" RepeatingElement="StoreItemPickQuantity" Sequence="N"/>
+	<LabelField Binding="Page/Output/StoreItemPickQuantityList/StoreItemPickQuantity/@Section" DataType="Text" LabelFieldName="Section" RepeatingElement="StoreItemPickQuantity" Sequence="N"/>
+	<LabelField Binding="Page/Output/StoreItemPickQuantityList/StoreItemPickQuantity/@PogNumber" DataType="Text" LabelFieldName="PogNumber" RepeatingElement="StoreItemPickQuantity" Sequence="N"/>
+	<LabelField Binding="Page/Output/StoreItemPickQuantityList/StoreItemPickQuantity/@LiveDate" DataType="Text" LabelFieldName="LiveDate" RepeatingElement="StoreItemPickQuantity" Sequence="N"/>
+
+
+	<RepeatingFields> 
+		<RepeatingField LabelFieldName="ItemID" MaxFirstPage="40" MaxLastPage="0" MaxMidPage="0"/> 
+		<RepeatingField LabelFieldName="ItemBarcode" MaxFirstPage="40" MaxLastPage="0" MaxMidPage="0"/> 
+		<RepeatingField LabelFieldName="Description" MaxFirstPage="40" MaxLastPage="0" MaxMidPage="0"/> 
+		<RepeatingField LabelFieldName="Image" MaxFirstPage="40" MaxLastPage="0" MaxMidPage="0"/> 
+		<RepeatingField LabelFieldName="Quantity" MaxFirstPage="40" MaxLastPage="0" MaxMidPage="0"/> 
+		<RepeatingField LabelFieldName="CarrierServiceCode" MaxFirstPage="40" MaxLastPage="0" MaxMidPage="0"/> 
+		<RepeatingField LabelFieldName="LongSku" MaxFirstPage="40" MaxLastPage="0" MaxMidPage="0"/> 
+		<RepeatingField LabelFieldName="TotalStock" MaxFirstPage="40" MaxLastPage="0" MaxMidPage="0"/> 
+		<RepeatingField LabelFieldName="PogId" MaxFirstPage="40" MaxLastPage="0" MaxMidPage="0"/> 
+		<RepeatingField LabelFieldName="Department" MaxFirstPage="40" MaxLastPage="0" MaxMidPage="0"/> 
+		<RepeatingField LabelFieldName="Section" MaxFirstPage="40" MaxLastPage="0" MaxMidPage="0"/> 
+		<RepeatingField LabelFieldName="PogNumber" MaxFirstPage="40" MaxLastPage="0" MaxMidPage="0"/> 
+		<RepeatingField LabelFieldName="LiveDate" MaxFirstPage="40" MaxLastPage="0" MaxMidPage="0"/> 
+
+	</RepeatingFields>
+</LabelFieldMap>

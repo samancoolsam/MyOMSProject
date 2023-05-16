@@ -1,0 +1,102 @@
+<Shipment ActualDeliveryDate=" " ActualFreightCharge=" "
+    ActualShipmentDate=" " AllowOverage=" " AppointmentNo=" " BolNo=" "
+    BuyerOrganizationCode=" " CarrierAccountNo=" "
+    CarrierServiceCode=" " CarrierType=" " Code=" " DeliveryCode=" "
+    DeliveryMethod="" DeliveryPlanKey=" " DestinationZone=" "
+    DocumentType=" " DownLoadCount=" " EnterpriseCode=" "
+    ExpectedDeliveryDate=" " ExpectedShipmentDate=" "
+    ExportTaxpayerID=" " FreightTerms=" " FromAddressKey=" "
+    FromAppointment=" " HasOtherShipments=" " HazardousMaterialFlag=" "
+    HeldForConfirmation=" " ITDate=" " ITNo=" " IsApptConfirmed=""
+    IsProvidedService="" IsSingleOrder=" " ManifestKey=" "
+    ManifestNo=" " ManuallyEntered=" " NextAlertTs=" " NumOfCartons=" "
+    NumOfPallets=" " OptimizedApptEndDate="" OptimizedApptStartDate=""
+    OrderAvailableOnSystem=" " OrderHeaderKey=" " OrderNo=" "
+    OrderReleaseKey=" " OriginZone=" " PackListType=" "
+    ParentShipmentKey=" " PickListNo=" " PickticketNo=" "
+    PipelineKey=" " PodNo=" " ProNo=" " PromisedApptEndDate=""
+    PromisedApptStartDate="" ReceivingNode=" " ReleaseNo=" "
+    RequestedDeliveryDate="" RequestedShipmentDate="" SCAC=" "
+    ScacAndService=" " ScacAndServiceKey=" " SealNo=" "
+    SellerOrganizationCode=" " ServiceLineKey="" ShipMode=" "
+    ShipNode=" " ShipVia=" " ShipmentClosedFlag=" "
+    ShipmentConfirmUpdatesDone=" " ShipmentContainerizedFlag=" "
+    ShipmentDeliverUpdatesDone=" " ShipmentKey=" " ShipmentNo=" "
+    ShipmentPlannedFlag=" " ShipmentType=" " Status=" " StatusDate=" "
+    ToAddressKey=" " ToAppointment=" " TotalActualCharge=" "
+    TotalEstimatedCharge=" " TotalVolume=" " TotalVolumeUOM=" "
+    TotalWeight=" " TotalWeightUOM=" " TrackingNo=" " TrailerNo=" " isHistory="">
+	<ShipNode NodeType="" ShipNode=""/>
+    <ToAddress AddressLine1=" " AddressLine2=" " AddressLine3=" "
+        AddressLine4=" " AddressLine5=" " AddressLine6=" "
+        AlternateEmailID=" " Beeper=" " City=" " Company=" " Country=" "
+        DayFaxNo=" " DayPhone=" " Department=" " EMailID=" "
+        ErrorTxt=" " EveningFaxNo=" " EveningPhone=" " FirstName=" "
+        HttpUrl=" " JobTitle=" " LastName=" " MiddleName=" "
+        MobilePhone=" " OtherPhone=" " PersonID=" " PersonInfoKey=" "
+        PreferredShipAddress=" " State=" " Suffix=" " Title=" "
+        UseCount=" " VerificationStatus=" " ZipCode=" " isHistory="">
+<Extn />
+</ToAddress>
+    <FromAddress AddressLine1=" " AddressLine2=" " AddressLine3=" "
+        AddressLine4=" " AddressLine5=" " AddressLine6=" "
+        AlternateEmailID=" " Beeper=" " City=" " Company=" " Country=" "
+        DayFaxNo=" " DayPhone=" " Department=" " EMailID=" "
+        ErrorTxt=" " EveningFaxNo=" " EveningPhone=" " FirstName=" "
+        HttpUrl=" " JobTitle=" " LastName=" " MiddleName=" "
+        MobilePhone=" " OtherPhone=" " PersonID=" " PersonInfoKey=" "
+        PreferredShipAddress=" " State=" " Suffix=" " Title=" "
+        UseCount=" " VerificationStatus=" " ZipCode=" " isHistory=""/>
+    <Instructions>
+        <Instruction InstructionText=" " InstructionType=" "
+            InstructionURL=" " InstructionUsage=" " isHistory=""/>
+    </Instructions>
+    <SpecialServices>
+        <SpecialService SpecialServicesCode=""/>
+    </SpecialServices>
+    <ShipmentLines>
+        <ShipmentLine ActualQuantity=" " DocumentType="" IsHazmat=" "
+            ItemDesc=" " ItemID=" " NetWeight=" " NetWeightUom=" "
+            OrderHeaderKey=" " OrderLineKey=" " OrderNo=" "
+            OrderReleaseKey=" " OverShipQuantity=" " PrimeLineNo=" "
+            ProductClass=" " Quantity=" " ReleaseNo=" " Segment=" "
+            SegmentType=" " ShipmentKey=" " ShipmentLineKey=" "
+            ShipmentLineNo=" " SubLineNo=" " UnitOfMeasure=" " isHistory="">
+            <ShipmentLineInvAttRequest BatchNo=" " LotAttribute1=" "
+                LotAttribute2=" " LotAttribute3=" " LotKeyReference=" "
+                LotNumber=" " ManufacturingDate=" " RevisionNo=" "/>
+            <ShipmentTagSerials>
+                <ShipmentTagSerial BatchNo=" " LotAttribute1=" "
+                    LotAttribute2=" " LotAttribute3=" "
+                    LotKeyReference=" " LotNumber=" "
+                    ManufacturingDate=" " Quantity=" " RevisionNo=" "
+                    SerialNo=" " ShipByDate=" " ShipmentLineKey="  " ShipmentTagSerialKey=" "/>
+            </ShipmentTagSerials>
+            <Instructions>
+                <Instruction InstructionDetailKey="" InstructionText=" "
+                    InstructionType=" " InstructionURL=" "
+                    InstructionUsage=" " ReferenceKey=" " SequenceNo=" " TableName=" "/>
+            </Instructions>
+			<!--OMNI-90027 - Start -->
+			<OrderLine OrderLineKey="" OrderedQty="" PrimeLineNo="" ShipNode="">                
+                <ItemDetails ItemID="" ManufacturerItem="" UnitCost="" UnitOfMeasure="">
+                <Extn ExtnDepartmentName=""/>
+                </ItemDetails>
+            </OrderLine>
+			<!--OMNI-90027 - End -->
+        </ShipmentLine>
+    </ShipmentLines>
+    <ShipmentCharges>
+        <ShipmentCharge ActualCharge=" " ChargeCategory=" "
+            ChargeName=" " ChargeNameKey="" EstimatedCharge=" "
+            InvoiceNo=" " KeyReference1=" " KeyReference2=" "
+            LoadKey=" " LoadShipmentChargeKey=" "
+            PayeeOrganizationCode=" " ShipmentKey=" "/>
+    </ShipmentCharges>
+	<!--OMNI-90027 - Start -->
+	<Containers>
+		<Container IsReceived=""
+            ShipmentContainerKey="" Zone=""/>
+	</Containers>
+	<!--OMNI-90027 - End -->
+</Shipment>

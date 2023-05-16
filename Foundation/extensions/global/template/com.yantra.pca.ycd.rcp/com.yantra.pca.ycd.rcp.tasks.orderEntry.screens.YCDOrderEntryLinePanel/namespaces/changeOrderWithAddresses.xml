@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Order>
+    <OrderLines>
+        <OrderLine ReqDeliveryDate="" ReqShipDate="">
+             <Awards>
+               <Award AwardAmount="" AwardApplied="" AwardId="" AwardKey="" AwardType="" DenialReason="" Description="" PosReasonCode="" PromotionId="" PromotionKey=""/>
+             </Awards>
+        </OrderLine>
+    </OrderLines>
+    <Promotions>
+        <Promotion DenialReason="" Description="" PromotionApplied="" PromotionId="" PromotionKey="" PromotionType="">
+		    <Awards>
+              <Award AwardAmount="" AwardApplied="" AwardId="" AwardKey="" AwardType="" DenialReason="" Description="" PosReasonCode="" PromotionId="" PromotionKey=""/>
+		   </Awards>
+		</Promotion>
+     </Promotions>
+	 <PersonInfoShipTo>
+<Extn ExtnIsAPOFPO="" ExtnIsPOBOXADDRESS="" ExtnIsSignatureRequired="" ExtnAddressNickName="" ExtnIsAddressVerified="" ExtnIsMilitary="" />
+</PersonInfoShipTo>
+<PersonInfoBillTo>
+<Extn ExtnIsAPOFPO="" ExtnIsPOBOXADDRESS="" ExtnIsSignatureRequired="" ExtnAddressNickName="" ExtnIsAddressVerified="" ExtnIsMilitary="" />
+</PersonInfoBillTo>
+</Order>

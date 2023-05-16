@@ -1,0 +1,369 @@
+		<div>
+		 	<div data-dojo-type="idx/layout/TitlePane" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								_sc_extensibility_operation : 'change' , 
+		_sc_extensibility_referenceUId : 'tpShipmentLineDetails' , 
+		open : true  
+	 					}">
+		 	</div> 
+		<!--OMNI-72013 Begin-->
+		<div data-dojo-type="idx/layout/ContentPane" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_CompleteOMYPane' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '18' , 
+		'class' : 'topPanel' , 
+		 style : 'padding-top:15px;' ,
+		_sc_extensibility_position : 'before' , 
+		_sc_extensibility_referenceUId : 'extn_contentpane1'  
+	 					}">
+		 	</div> 
+		<!--OMNI-72013 End-->
+		 	<div data-dojo-type="idx/layout/ContentPane" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								_sc_extensibility_operation : 'change' , 
+		'class' : 'customerInfo testClass' , 
+		_sc_extensibility_referenceUId : 'pnlPrimaryInfo'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="idx/layout/ContentPane" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								_sc_extensibility_operation : 'change' , 
+		'class' : 'displayPhone' , 
+		_sc_extensibility_referenceUId : 'pnlPhoneHolder'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="idx/layout/ContentPane" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								_sc_extensibility_operation : 'change' , 
+		'class' : 'displayEmail extnEmailDiv' , 
+		_sc_extensibility_referenceUId : 'pnlEmailHolder'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="idx/layout/ContentPane" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								renderHidden : false , 
+		uId : 'extn_contentpane1' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '2' , 
+		'class' : 'testClass alternateCustomer' , 
+		_sc_extensibility_position : 'after' , 
+		style : 'font-size: 14px; line-height: 1.6; color: #4c4d53;' , 
+		_sc_extensibility_referenceUId : 'pnlPrimaryInfo'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="idx/layout/ContentPane" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_contentpane' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '4' , 
+		_sc_extensibility_position : 'after' , 
+		_sc_extensibility_referenceUId : 'extn_label'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="idx/layout/ContentPane" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_contentpane2' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '8' , 
+		_sc_extensibility_position : 'after' , 
+		_sc_extensibility_referenceUId : 'extn_contentpane'  
+	 					}">
+		 	</div>  
+		<!--OMNI-72013 Begin-->
+		<div data-dojo-type="dijit/form/Button" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_CompleteOnMyWaybutton' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '17' , 
+		'class' : 'longButtons' , 
+		_sc_extensibility_position : 'after' , 
+		_sc_extensibility_referenceUId : 'lblAssignedToUsr' , 
+		showLabel : true  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	label : 			this.getSimpleBundleString('extn_Complete')
+			}
+		}
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="dijit/form/Button" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_CompleteOnMyWaybutton' , 
+		_sc_extensibility_operation : 'move' , 
+		_sc_extensibility_moveOrder : '19' , 
+		_sc_extensibility_position : 'first' , 
+		_sc_extensibility_referenceUId : 'extn_CompleteOMYPane'  
+	 					}">
+		 	</div>  
+		
+		<!--OMNI-72013 End-->
+		 	<div data-dojo-type="dijit/form/Button" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								renderHidden : true , 
+		uId : 'extn_CancelShipmentOtherStoresSummary' , 
+		resourceId : 'WSCACA01' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '14' , 
+		_sc_extensibility_position : 'after' , 
+		style : 'padding-top:10px;padding-bottom:10px;' , 
+		disabled : true , 
+		_sc_extensibility_referenceUId : 'pnlPrimaryInfo'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	label : 			this.getSimpleBundleString('extn_Cancel_Shipment_from_other_stores_')
+			}
+		}
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="dijit/form/Button" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_CancelShipmentOtherStoresSummary' , 
+		_sc_extensibility_operation : 'move' , 
+		_sc_extensibility_moveOrder : '15' , 
+		_sc_extensibility_position : 'after' , 
+		_sc_extensibility_referenceUId : 'extn_contentpane1'  
+	 					}">
+		 	</div>
+
+		 <!--OMNI-96066 Complete Assembly Start-->	 
+        <div data-dojo-type="dijit/form/Button" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								renderHidden : true , 
+		uId : 'extn_button_Assembly' , 
+		resourceId : 'WSC000001' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '20' , 
+		'class' : 'longButtons' , 
+		_sc_extensibility_position : 'before' , 
+		_sc_extensibility_referenceUId : 'lnkPack' , 
+		showLabel : true  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	label : 			this.getSimpleBundleString('extn_Complete_Assembly')
+			}
+		}
+	 					}">
+		 	</div> 
+           <!--OMNI-96066 Complete Assembly END-->	 
+
+		 	<div data-dojo-type="sc/plat/dojo/widgets/Label" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_label3' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '16' , 
+		_sc_extensibility_position : 'after' , 
+		style : 'float: right;' , 
+		_sc_extensibility_referenceUId : 'lblShipmentDesc'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 namespace : 			'getShipmentDetails_output'
+,
+		 path : 			'DeliveryMethod'
+,
+		 dynamicBindingFunc : 			'getDeliveryMethod'
+	}
+	}
+			}
+		}
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/Label" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_label' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '3' , 
+		_sc_extensibility_position : 'first' , 
+		_sc_extensibility_referenceUId : 'extn_contentpane1'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 namespace : 			'getShipmentDetails_output'
+,
+		 path : 			'Shipment.ShipmentLines.ShipmentLine.0.OrderLine.PersonInfoMarkFor.FirstName'
+	}
+	}
+			}
+		}
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/Label" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_label1' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '6' , 
+		_sc_extensibility_position : 'after' , 
+		_sc_extensibility_referenceUId : 'extn_contentpane'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 namespace : 			'getShipmentDetails_output'
+,
+		 path : 			'Shipment.ShipmentLines.ShipmentLine.0.OrderLine.PersonInfoMarkFor.DayPhone'
+	}
+	}
+			}
+		}
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/Label" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_label1' , 
+		_sc_extensibility_operation : 'move' , 
+		_sc_extensibility_moveOrder : '7' , 
+		_sc_extensibility_position : 'first' , 
+		_sc_extensibility_referenceUId : 'extn_contentpane'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/Label" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_label2' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '9' , 
+		_sc_extensibility_position : 'first' , 
+		_sc_extensibility_referenceUId : 'extn_contentpane2'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 namespace : 			'getShipmentDetails_output'
+,
+		 path : 			'Shipment.ShipmentLines.ShipmentLine.0.OrderLine.PersonInfoMarkFor.EMailID'
+	}
+	}
+			}
+		}
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_timeRemaining' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '11' , 
+		'class' : 'a11yHiddenLabel duein blockComponent groupLabelSpacing' , 
+		_sc_extensibility_position : 'after' , 
+		style : 'margin-left: 2px' , 
+		_sc_extensibility_referenceUId : 'lblShipmentDesc'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 namespace : 			'getShipmentDetails_output'
+,
+		 path : 			'Shipment.TimeRemaining'
+,
+		 dynamicBindingPackage : 			'wsc.components.shipment.common.utils'
+,
+		 dynamicBindingFunc : 			'applyOverdueStyling'
+,
+		 dynamicBindingClassName : 			'ShipmentUtils'
+	}
+	}
+			}
+		}
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								renderHidden : true , 
+		_sc_extensibility_operation : 'change' , 
+		_sc_extensibility_referenceUId : 'lblExpectedShipDate'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	label : 			this.getSimpleBundleString('pickupDate')
+			}
+		}
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								renderHidden : true , 
+		uId : 'extn_datalabel1' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '12' , 
+		'class' : 'blockComponent noColonLabels comappsWrapWord zeroWidthLabelValueDesktop' , 
+		_sc_extensibility_position : 'after' , 
+		_sc_extensibility_referenceUId : 'lblExpectedShipDate'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	value : 			this.getSimpleBundleString('blank')
+,	
+			 	label : 			this.getSimpleBundleString('extn_Max_Pick_Date')
+			}
+		}
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								renderHidden : false , 
+		uId : 'extn_datalabel2' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '13' , 
+		'class' : 'blockComponent noColonLabels comappsWrapWord zeroWidthLabelValueDesktop' , 
+		_sc_extensibility_position : 'after' , 
+		_sc_extensibility_referenceUId : 'extn_datalabel1'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	label : 			this.getSimpleBundleString('extn_Picked_Up_Date')
+			}
+		}
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								renderHidden : true , 
+		uId : 'extn_pickedUpBy' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '10' , 
+		'class' : 'blockComponent noColonLabels comappsWrapWord zeroWidthLabelValueDesktop' , 
+		_sc_extensibility_position : 'after' , 
+		_sc_extensibility_referenceUId : 'lblHoldLocation'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 namespace : 			'getShipmentDetails_output'
+,
+		 path : 			'Shipment'
+,
+		 dynamicBindingFunc : 			'extn_getPickedUpCustomer'
+	}
+	}
+,	
+			 	label : 			this.getSimpleBundleString('extn_Picked_Up_By')
+			}
+		}
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/Link" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								_sc_extensibility_operation : 'change' , 
+		'class' : 'icon-image-label extnEmail disableLink' , 
+		style : 'width: 140px; word-break: break-all;' , 
+		_sc_extensibility_referenceUId : 'lnkEmail'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/Link" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								_sc_extensibility_operation : 'change' , 
+		'class' : 'icon-image-label ellipsisText  disableLink' , 
+		_sc_extensibility_referenceUId : 'lnkMarkEmail'  
+	 					}">
+		 	</div>  
+		</div>

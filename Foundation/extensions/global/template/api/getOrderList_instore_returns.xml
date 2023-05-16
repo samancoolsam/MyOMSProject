@@ -1,0 +1,44 @@
+<OrderList>
+	<Order CustomerEMailID="" CustomerPONo=""
+    DocumentType="" EnterpriseCode="" OrderDate="" OrderHeaderKey=""
+    OrderNo="">
+		<OrderLines>
+			<OrderLine OrderHeaderKey="" OrderLineKey="" OrderedQty=""
+            OrigOrderLineKey="" PrimeLineNo="" 
+			ShipNode="" Status="" StatusQuantity="" SubLineNo="">
+
+				<OrderLineTranQuantity InvoicedQuantity=""
+                OpenQty="" OrderedQty=""
+                ReceivedQty="" SettledQuantity="" ShippedQuantity="" StatusQuantity=""/>
+
+				<ItemDetails ItemID="" OrganizationCode="" UnitOfMeasure=""/>
+
+				<Item ItemDesc="" ItemID="" ItemShortDesc=""
+                ProductClass="" UnitOfMeasure=""/>
+				<!--Optional-->            
+				<OrderStatuses>
+					<OrderStatus OrderHeaderKey="" OrderLineKey=""
+                    OrderReleaseKey="" ShipNode="" Status=""
+                    StatusDate="" StatusDescription="" StatusQty=""
+                    StatusReason="" TotalQuantity="">                    
+					</OrderStatus>
+				</OrderStatuses>            
+			</OrderLine>
+		</OrderLines>
+
+		<!--Optional-->
+		<PersonInfoBillTo AddressLine1="" AddressLine2="" AddressLine3=""
+        AddressLine4="" AddressLine5="" AddressLine6="" Beeper=""
+        City="" Company="" Country="" DayFaxNo="" DayPhone=""
+        Department="" EMailID="" EveningPhone="" FirstName=""
+        IsCommercialAddress="" LastName="" MiddleName="" MobilePhone=""
+        OtherPhone="" PersonID="" PersonInfoKey="" State="" Title="" ZipCode=""/>
+		<OrderStatuses>
+			<OrderStatus OrderHeaderKey="" OrderLineKey=""
+            OrderReleaseKey="" PipelineKey="" ShipNode="" Status=""
+            StatusDate="" StatusDescription="" StatusQty=""
+            StatusReason="" TotalQuantity="">
+			</OrderStatus>
+		</OrderStatuses>
+	</Order>
+</OrderList>

@@ -1,0 +1,24 @@
+<OrderInvoiceList>
+	<OrderInvoice OrderInvoiceKey="" InvoiceNo="" InvoiceType="" OrderHeaderKey="" TotalAmount="" OrderNo="">
+		<Order OrderNo="" OrderHeaderKey="" CustomerEMailID="" PaymentStatus="" SellerOrganizationCode="">			
+			<PersonInfoBillTo AddressLine1="" AddressLine2=""
+        AddressLine3="" AddressLine4="" AddressLine5="" AddressLine6=""
+        Beeper="" City="" Company="." Country="" DayFaxNo=""
+        DayPhone="" Department=""
+        EMailID="" EveningPhone=""
+        FirstName="" LastName="" MiddleName="" MobilePhone=""
+        OtherPhone="" PersonID=""
+        PersonInfoKey="" State="" Title="" ZipCode=""/>			
+			<OrderLines>
+				<OrderLine OrderLineKey="">
+					<OrderStatuses>
+						<OrderStatus Status="" OrderReleaseKey=""/>
+					</OrderStatuses>
+				</OrderLine>
+			</OrderLines>
+		</Order>
+		<LineDetails>
+			<LineDetail OrderLineKey="" ItemID="" ShippedQty="" />
+		</LineDetails>
+	</OrderInvoice>
+</OrderInvoiceList>

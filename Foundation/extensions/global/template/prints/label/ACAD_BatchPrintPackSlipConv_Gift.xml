@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LabelFieldMap>
+<!--<LabelField Binding="AcademyMergedDocument/EnvironmentDocument/Container/@CarrierLabel" LabelFieldName="CarrierLabel" RepeatingElement="" Sequence="N"/>-->
+    <!-- <LabelField Binding="Shipments/Shipment/@InvoiceNo" DataType="Text"
+        LabelFieldName="InvoiceNo" RepeatingElement="" Sequence="N"/>
+	<LabelField Binding="Shipments/Shipment/@InvoiceNo" DataType="Text"
+        LabelFieldName="ReturnInvoiceNo" RepeatingElement="" Sequence="N"/>-->
+   	<LabelField Binding="Shipments/Shipment/@MarketingLine1" DataType="Text"
+        LabelFieldName="MarketingLine1" RepeatingElement="" Sequence="N"/>
+    <LabelField Binding="Shipments/Shipment/@MarketingLine2" DataType="Text"
+        LabelFieldName="MarketingLine2" RepeatingElement="" Sequence="N"/>
+    <LabelField Binding="Shipments/Shipment/ShipmentLines/ShipmentLine/@OrderNo" DataType="Text"
+        LabelFieldName="OrderNo" RepeatingElement="" Sequence="N"/>
+	<LabelField Binding="Shipments/Shipment/ShipmentLines/ShipmentLine/@OrderNo" DataType="Text"
+        LabelFieldName="ReturnOrderNo" RepeatingElement="" Sequence="N"/>
+	<!--<LabelField Binding="AcademyMergedDocument/EnvironmentDocument/Container/@ContainerScm" DataType="Text"
+        LabelFieldName="ContainerSCM" RepeatingElement="" Sequence="N"/> -->
+    <LabelField Binding="Shipments/Shipment/ToAddress/@FirstName" DataType="Text"
+        LabelFieldName="ShipToFirstName" RepeatingElement="" Sequence="N"/>
+    <LabelField Binding="Shipments/Shipment/ToAddress/@LastName" DataType="Text"
+        LabelFieldName="ShipToLastName" RepeatingElement="" Sequence="N"/>
+    <LabelField Binding="Shipments/Shipment/ToAddress/@AddressLine1" DataType="Text"
+        LabelFieldName="ShipToAddr1" RepeatingElement="" Sequence="N"/>
+	<LabelField Binding="Shipments/Shipment/ToAddress/@AddressLine2" DataType="Text"
+        LabelFieldName="ShipToAddr2" RepeatingElement="" Sequence="N"/>
+    <LabelField Binding="Shipments/Shipment/ToAddress/@City" DataType="Text"
+        LabelFieldName="ShipToCity" RepeatingElement="" Sequence="N"/>
+    <LabelField Binding="Shipments/Shipment/ToAddress/@EMailID" DataType="Text"
+        LabelFieldName="ShipToMailID" RepeatingElement="" Sequence="N"/>
+	<LabelField Binding="Shipments/Shipment/ToAddress/@State" DataType="Text"
+        LabelFieldName="ShipToState" RepeatingElement="" Sequence="N"/>
+    <LabelField Binding="Shipments/Shipment/ToAddress/@ZipCode" DataType="Text"
+        LabelFieldName="ShipToZip" RepeatingElement="" Sequence="N"/>
+    <LabelField Binding="Shipments/Shipment/@ShipDate" DataType="Text"
+        LabelFieldName="ShipDate" RepeatingElement="" Sequence="N"/>
+    <LabelField Binding="Shipments/Shipment/@SCACAndCarrier" DataType="Text"
+        LabelFieldName="ShipVia" RepeatingElement="" Sequence="N"/>
+        <LabelField Binding="Shipments/Shipment/@ShipmentNo" DataType="Text"
+        LabelFieldName="ShipmentNo" RepeatingElement="" Sequence="N"/>
+    <LabelField Binding="Shipments/Shipment/ToAddress/@FirstName" DataType="Text"
+        LabelFieldName="ShipFromFirstName" RepeatingElement="" Sequence="N"/>
+        
+        
+        
+        
+    <LabelField Binding="Shipments/Shipment/ToAddress/@LastName" DataType="Text"
+        LabelFieldName="ShipFromLastName" RepeatingElement="" Sequence="N"/>
+        
+        
+        
+        
+	<LabelField Binding="Shipments/Shipment/ToAddress/@AddressLine1" DataType="Text"
+        LabelFieldName="ShipFromAddr1" RepeatingElement="" Sequence="N"/>
+	<LabelField Binding="Shipments/Shipment/ToAddress/@AddressLine2" DataType="Text"
+        LabelFieldName="ShipFromAddr2" RepeatingElement="" Sequence="N"/>
+    <LabelField Binding="Shipments/Shipment/ToAddress/@City" DataType="Text"
+        LabelFieldName="ShipFromCity" RepeatingElement="" Sequence="N"/>
+	<LabelField Binding="Shipments/Shipment/ToAddress/@State" DataType="Text"
+        LabelFieldName="ShipFromState" RepeatingElement="" Sequence="N"/>
+    <LabelField Binding="Shipments/Shipment/ToAddress/@ZipCode" DataType="Text"
+        LabelFieldName="ShipFromZip" RepeatingElement="" Sequence="N"/>
+    <LabelField Binding="Shipments/Shipment/ShipmentLines/ShipmentLine/@OrderNo" DataType="Text"
+        LabelFieldName="ReturnOrderNo" RepeatingElement="" Sequence="N"/>
+
+    
+    <LabelField Binding="Shipments/Shipment/@OrderDate" DataType="Text"
+        LabelFieldName="OrderDate" RepeatingElement="" Sequence="N"/>
+    
+    <LabelField Binding="Shipments/Shipment/BillToAddress/@FirstName" DataType="Text"
+        LabelFieldName="BillToFirstName" RepeatingElement="" Sequence="N"/>
+    <LabelField Binding="Shipments/Shipment/BillToAddress/@LastName" DataType="Text"
+        LabelFieldName="BillToLastName" RepeatingElement="" Sequence="N"/>
+    <LabelField Binding="Shipments/Shipment/BillToAddress/@AddressLine1" DataType="Text"
+        LabelFieldName="BillToAddrss1" RepeatingElement="" Sequence="N"/>
+	<LabelField Binding="Shipments/Shipment/BillToAddress/@AddressLine2" DataType="Text"
+        LabelFieldName="BillToAddrss2" RepeatingElement="" Sequence="N"/>
+    <LabelField Binding="Shipments/Shipment/BillToAddress/@ZipCode" DataType="Text"
+        LabelFieldName="BillToZip" RepeatingElement="" Sequence="N"/>
+    <LabelField Binding="Shipments/Shipment/BillToAddress/@City" DataType="Text"
+        LabelFieldName="BillToCity" RepeatingElement="" Sequence="N"/>
+    <LabelField Binding="Shipments/Shipment/BillToAddress/@State" DataType="Text"
+        LabelFieldName="BillToState" RepeatingElement="" Sequence="N"/>
+    <LabelField Binding="Shipments/Shipment/BillToAddress/@EMailID" DataType="Text"
+        LabelFieldName="BillToMailID" RepeatingElement="" Sequence="N"/>
+    <LabelField Binding="Shipments/Shipment/ShipmentLines/ShipmentLine/OrderLine/Item/@ItemID" DataType="Text"
+        LabelFieldName="ItemID" RepeatingElement="ShipmentLine" Sequence="N"/>
+    <LabelField Binding="Shipments/Shipment/ShipmentLines/ShipmentLine/OrderLine/Item/@ItemDesc" DataType="Text"
+        LabelFieldName="ItemDesc" RepeatingElement="ShipmentLine" Sequence="N"/>
+    <LabelField Binding="Shipments/Shipment/ShipmentLines/ShipmentLine/@Quantity" DataType="Text"
+        LabelFieldName="OrdQty" RepeatingElement="ShipmentLine" Sequence="N"/>
+    <LabelField Binding="Shipments/Shipment/ShipmentLines/ShipmentLine/@Quantity" DataType="Text"
+        LabelFieldName="ShipQty" RepeatingElement="ShipmentLine" Sequence="N"/>
+    <LabelField Binding="Shipments/Shipment/ShipmentLines/ShipmentLine/OrderLine/@UnitPrice" DataType="Text"
+        LabelFieldName="UnitPrice" RepeatingElement="ShipmentLine" Sequence="N"/>
+    <LabelField Binding="Shipments/Shipment/ShipmentLines/ShipmentLine/OrderLine/@ExtendedPrice" DataType="Text"
+        LabelFieldName="ExtendPrice" RepeatingElement="ShipmentLine" Sequence="N"/>
+    <LabelField Binding="Shipments/Shipment/ShipmentLines/ShipmentLine/OrderLine/@DiscountForLine" DataType="Text"
+        LabelFieldName="Discount" RepeatingElement="ShipmentLine" Sequence="N"/>
+   
+	<LabelField Binding="Shipments/Shipment/@TotalTax" DataType="Text"
+        LabelFieldName="Tax" RepeatingElement="" Sequence="N"/>
+    <LabelField Binding="Shipments/Shipment/@ShippingCharges" DataType="Text"
+        LabelFieldName="ShippingCharges" RepeatingElement="" Sequence="N"/>   
+    <LabelField Binding="Shipments/Shipment/@PaidBy" DataType="Text"
+        LabelFieldName="PaidBy" RepeatingElement="" Sequence="N"/>
+	<LabelField Binding="Shipments/Shipment/PaymentMethods/PaymentMethod/@CreditCardType" DataType="Text"
+        LabelFieldName="PaymentType" RepeatingElement="PaymentMethod" Sequence="N"/>
+	<LabelField Binding="Shipments/Shipment/PaymentMethods/PaymentMethod/@DisplayCreditCardNo" DataType="Text"
+        LabelFieldName="PaymentDetails" RepeatingElement="PaymentMethod" Sequence="N"/>
+
+    <LabelField Binding="Shipments/Shipment/PaymentMethods/PaymentMethod/@AmountCharged" DataType="Text"
+        LabelFieldName="PaymentAmount" RepeatingElement="PaymentMethod" Sequence="N"/>
+
+    <LabelField Binding="Shipments/Shipment/ShipmentLines/ShipmentLine/OrderLine/@ItemTaxLineLevel" DataType="Text"
+        LabelFieldName="LineItemTax" RepeatingElement="ShipmentLine" Sequence="N"/>
+    <LabelField Binding="Shipments/Shipment/ShipmentLines/ShipmentLine/OrderLine/@ShippingChargeAtLineLevel" DataType="Text"
+        LabelFieldName="LineShippingCharge" RepeatingElement="ShipmentLine" Sequence="N"/>
+    <LabelField Binding="Shipments/Shipment/ShipmentLines/ShipmentLine/OrderLine/@ShippingTaxLineLevel" DataType="Text"
+        LabelFieldName="LineShippingTax" RepeatingElement="ShipmentLine" Sequence="N"/>
+
+    <LabelField Binding="Shipments/Shipment/PaymentMethods/PaymentMethod/@PaymentMethodCurrency" DataType="Text"
+        LabelFieldName="PaymentMethodDollar" RepeatingElement="PaymentMethod" Sequence="N"/>
+
+    <LabelField Binding="Shipments/Shipment/ShipmentLines/ShipmentLine/@ItemDiscText" DataType="Text"
+        LabelFieldName="ItemDiscText" RepeatingElement="ShipmentLine" Sequence="N"/>
+    <LabelField Binding="Shipments/Shipment/ShipmentLines/ShipmentLine/@ItemTaxText" DataType="Text"
+        LabelFieldName="ItemTaxText" RepeatingElement="ShipmentLine" Sequence="N"/>
+    <LabelField Binding="Shipments/Shipment/ShipmentLines/ShipmentLine/@ShippingAdjText" DataType="Text"
+        LabelFieldName="ShippingAdjText" RepeatingElement="ShipmentLine" Sequence="N"/>
+    <LabelField Binding="Shipments/Shipment/ShipmentLines/ShipmentLine/@ShippingTaxText" DataType="Text"
+        LabelFieldName="ShippingTaxText" RepeatingElement="ShipmentLine" Sequence="N"/>
+    <LabelField Binding="Shipments/Shipment/ShipmentLines/ShipmentLine/OrderLine/@ItemDiscDesc" DataType="Text"
+        LabelFieldName="ItemDiscDesc" RepeatingElement="ShipmentLine" Sequence="N"/>
+    <LabelField Binding="Shipments/Shipment/ShipmentLines/ShipmentLine/@ItemTaxDesc" DataType="Text"
+        LabelFieldName="ItemTaxDesc" RepeatingElement="ShipmentLine" Sequence="N"/>
+    <LabelField Binding="Shipments/Shipment/ShipmentLines/ShipmentLine/@ShippingAdjDesc" DataType="Text"
+        LabelFieldName="ShippingAdjDesc" RepeatingElement="ShipmentLine" Sequence="N"/>
+    <LabelField Binding="Shipments/Shipment/ShipmentLines/ShipmentLine/@ShippingTaxDesc" DataType="Text"
+        LabelFieldName="ShippingTaxDesc" RepeatingElement="ShipmentLine" Sequence="N"/>
+
+ 
+    <LabelField Binding="Shipments/Shipment/@InvoiceNo" DataType="Text"
+        LabelFieldName="ReferenceInvoiceNo" RepeatingElement="" Sequence="N"/>
+    <LabelField Binding="Shipments/Shipment/ShipmentLines/ShipmentLine/@OrderNo" DataType="Text"
+        LabelFieldName="ReferenceOrderNo" RepeatingElement="" Sequence="N"/>
+    <LabelField Binding="Shipments/Shipment/@InvoiceNo" DataType="Text"
+        LabelFieldName="InvoiceNo2" RepeatingElement="" Sequence="N"/>
+
+    <LabelField Binding="Shipments/Shipment/OrderInvoiceList/OrderInvoice/@LineSubTotal" DataType="Text"
+        LabelFieldName="LineSubTotal" RepeatingElement="" Sequence="N"/>
+    <LabelField Binding="Shipments/Shipment/@TotalDiscount" DataType="Text"
+        LabelFieldName="TotalDiscount" RepeatingElement="" Sequence="N"/>   
+    <LabelField Binding="Shipments/Shipment/@TotalExtendedPrice" DataType="Text"
+        LabelFieldName="TotalExtendedPrice" RepeatingElement="" Sequence="N"/>   
+    <LabelField Binding="Shipments/Shipment/@CartonTotal" DataType="Text"
+        LabelFieldName="CartonTotal" RepeatingElement="" Sequence="N"/>   
+        
+    <!--BR2 - R08 - Gift Message CR Begin  -->
+    
+    <LabelField Binding="Shipments/Shipment/Instructions/Instruction/@InstructionText" DataType="Text"
+        LabelFieldName="InstructionText" RepeatingElement="" Sequence="N"/>
+        
+     <!--BR2 - R08 - Gift Message CR End  -->
+
+
+    <RepeatingFields>
+        <RepeatingField LabelFieldName="ItemID" MaxFirstPage="7"
+            MaxLastPage="7" MaxMidPage="7"/>
+        <RepeatingField LabelFieldName="ItemDesc" MaxFirstPage="7"
+            MaxLastPage="7" MaxMidPage="7"/>
+        <RepeatingField LabelFieldName="OrdQty" MaxFirstPage="7"
+            MaxLastPage="7" MaxMidPage="7"/>
+        <RepeatingField LabelFieldName="ShipQty" MaxFirstPage="7"
+            MaxLastPage="7" MaxMidPage="7"/>
+        <RepeatingField LabelFieldName="UnitPrice" MaxFirstPage="7"
+            MaxLastPage="7" MaxMidPage="7"/>
+        <RepeatingField LabelFieldName="ExtendPrice" MaxFirstPage="7"
+            MaxLastPage="7" MaxMidPage="7"/>
+		<RepeatingField LabelFieldName="Discount" MaxFirstPage="7"
+            MaxLastPage="7" MaxMidPage="7"/>
+
+		<RepeatingField LabelFieldName="UnitLabelDollar" MaxFirstPage="7"
+            MaxLastPage="7" MaxMidPage="7"/>
+		<RepeatingField LabelFieldName="PaymentType" MaxFirstPage="7"
+            MaxLastPage="7" MaxMidPage="7"/>
+		<RepeatingField LabelFieldName="PaymentDetails" MaxFirstPage="7"
+            MaxLastPage="7" MaxMidPage="7"/>
+
+		<RepeatingField LabelFieldName="LineShippingCharge" MaxFirstPage="7"
+            MaxLastPage="7" MaxMidPage="7"/>
+		<RepeatingField LabelFieldName="LineShippingTax" MaxFirstPage="7"
+            MaxLastPage="7" MaxMidPage="7"/>
+		<RepeatingField LabelFieldName="LineItemTax" MaxFirstPage="7"
+            MaxLastPage="7" MaxMidPage="7"/>
+		<RepeatingField LabelFieldName="PaymentAmount" MaxFirstPage="7"
+            MaxLastPage="7" MaxMidPage="7"/>
+
+        <RepeatingField LabelFieldName="ItemDiscText" MaxFirstPage="7"
+            MaxLastPage="7" MaxMidPage="7"/>
+		<RepeatingField LabelFieldName="ItemTaxText" MaxFirstPage="7"
+            MaxLastPage="7" MaxMidPage="7"/>
+		<RepeatingField LabelFieldName="ShippingAdjText" MaxFirstPage="7"
+            MaxLastPage="7" MaxMidPage="7"/>
+		<RepeatingField LabelFieldName="ShippingTaxText" MaxFirstPage="7"
+            MaxLastPage="7" MaxMidPage="7"/>
+ 	 	<RepeatingField LabelFieldName="ItemDiscDesc" MaxFirstPage="7"
+            MaxLastPage="7" MaxMidPage="7"/>
+		<RepeatingField LabelFieldName="ItemTaxDesc" MaxFirstPage="7"
+            MaxLastPage="7" MaxMidPage="7"/>
+		<RepeatingField LabelFieldName="ShippingAdjDesc" MaxFirstPage="7"
+            MaxLastPage="7" MaxMidPage="7"/>
+    	<RepeatingField LabelFieldName="ShippingTaxDesc" MaxFirstPage="7"
+            MaxLastPage="7" MaxMidPage="7"/>
+   		<RepeatingField LabelFieldName="PaymentMethodDollar" MaxFirstPage="7"
+            MaxLastPage="7" MaxMidPage="7"/>
+
+
+    </RepeatingFields>
+</LabelFieldMap>

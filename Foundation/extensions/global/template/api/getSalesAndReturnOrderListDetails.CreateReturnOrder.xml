@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OrderList>
+<Order   
+	CarrierServiceCode=""  CustomerEMailID=""
+	CustomerPONo="" DocumentType="" DraftOrderFlag="" EnterpriseCode=""
+ MaxOrderStatus=""
+	MaxOrderStatusDesc="" MinOrderStatus="" MinOrderStatusDesc=""
+	OrderDate="" OrderHeaderKey="" OrderName="" OrderNo="" OrderPurpose=""
+	 OverallStatus="" 
+	PaymentStatus="" Purpose="" SCAC="" ScacAndService=""
+	 SellerOrganizationCode="" ShipNode="" Status="">
+	<OrderLines LastOrderLineKey="" 
+		TotalNumberOfRecords="">
+		<OrderLine  CarrierServiceCode=""
+			DerivedFromOrderHeaderKey="" DerivedFromOrderLineKey=""
+			DerivedFromOrderReleaseKey=""  HoldFlag=""
+			 OrderHeaderKey=""
+			OrderLineKey="" OrderedQty="" OrigOrderLineKey=""
+			 PrimeLineNo="" Purpose=""
+			  MaxLineStatus="" MaxLineStatusDesc="" MergeNode="" MinLineStatus="" MinLineStatusDesc=""
+			ReservationID=""  ReturnReason=""
+			ReturnReasonLongDesc="" ReturnReasonShortDesc="" SCAC=""
+			ScacAndService="" ShipNode=""  ShipToKey="" Status=""
+			StatusQuantity="" SubLineNo="">
+			<Extn />
+
+			<OrderLineTranQuantity FillQuantity="" InvoicedQuantity=""
+				ModificationQty="" OpenQty="" OrderedQty="" OriginalOrderedQty=""
+				ReceivedQty="" RemainingQty="" SettledQuantity="" ShippedQuantity=""
+				StatusQuantity="" TransactionalUOM="" />
+
+			<Shipnode ShipNode=""></Shipnode>
+
+			<ReturnOrderLines>
+				<OrderLine OrderHeaderKey="" OrderLineKey="" />
+			</ReturnOrderLines>
+
+			<ShipmentLines>
+				<ShipmentLine  ShipmentKey=""
+					ShipmentLineKey="" />
+			</ShipmentLines>
+
+			<ItemDetails 
+				ItemID="" ItemKey="" OrganizationCode="" UnitOfMeasure="">
+			</ItemDetails>
+
+			<LinePriceInfo LineTotal="" ListPrice="" UnitPrice="" />
+
+			<Item  IsReturnable="" ItemDesc=""
+				ItemID="" ItemShortDesc=""  ProductClass=""
+				UnitOfMeasure="" />
+
+			<!--Optional-->
+			<DerivedFromOrder DocumentType="" EnterpriseCode=""
+				OrderNo="" />
+
+			<PersonInfoShipTo AddressLine1="" AddressLine2=""
+				AddressLine3="" AddressLine4="" AddressLine5="" AddressLine6=""
+				AlternateEmailID="" City="" Company="" Country="" DayPhone=""
+				Department="" EMailID="" EveningPhone="" FirstName="" LastName=""
+				MiddleName="" MobilePhone="" OtherPhone="" State="" ZipCode="" />
+
+			<!--Optional-->
+			<!-- LineTax is not a template driven element. If the template contains either of LineCharge or LineTax elements, both will appear in the output, alongwith all their attributes. -->
+			<!--Optional-->
+			<OrderStatuses>
+				<OrderStatus OrderHeaderKey="" OrderLineKey=""
+					 OrderReleaseKey="" 
+					ShipNode="" Status="" StatusDate=""
+					StatusDescription="" StatusQty="" StatusReason=""
+					TotalQuantity="">
+					<OrderStatusTranQuantity StatusQty=""
+						TotalQuantity="" TransactionalUOM="" />
+				</OrderStatus>
+			</OrderStatuses>
+
+			<DerivedFromOrderLine PrimeLineNo="" SubLineNo="">
+				<Item ItemID="" UnitOfMeasure="" />
+			</DerivedFromOrderLine>
+
+		</OrderLine>
+	</OrderLines>
+	<ReturnOrders>
+		<ReturnOrder  CarrierServiceCode="" 
+			CustomerEMailID="" CustomerPONo="" DocumentType="" DraftOrderFlag=""
+			MaxOrderStatus="" MaxOrderStatusDesc=""
+			MinOrderStatus="" MinOrderStatusDesc="" OrderDate=""
+			OrderHeaderKey="" OrderName="" OrderNo="" OrderPurpose=""
+			 OverallStatus=""
+			PaymentRuleId="" PaymentStatus="" SCAC="" >
+			<OrderLines>
+				<OrderLine Action="" CarrierServiceCode=""
+					 DerivedFromOrderHeaderKey=""
+					DerivedFromOrderLineKey="" 
+					HoldFlag=""  MaxLineStatus=""
+					MaxLineStatusDesc="" MinLineStatus="" MinLineStatusDesc=""
+					OrderHeaderKey="" OrderLineKey="" OrderedQty="" 
+				 OverallStatus=""
+					PrimeLineNo="" ReservationID="" ReturnReason=""
+					ReturnReasonLongDesc="" ReturnReasonShortDesc="" SCAC=""
+					ScacAndService="" ShipNode="" Status="" StatusQuantity="">
+					<ItemDetails 
+ ItemID="" ItemKey="" OrganizationCode=""
+						UnitOfMeasure="">
+					</ItemDetails>
+
+					<Item  IsReturnable="" ItemDesc=""
+						ItemID=""  ProductClass=""
+						UnitOfMeasure="" />
+
+					<LinePriceInfo LineTotal="" ListPrice=""
+						PricingUOM="" UnitPrice="" />
+
+					<PersonInfoShipTo AddressLine1="" AddressLine2=""
+						AddressLine3="" AddressLine4="" AddressLine5="" AddressLine6=""
+						AlternateEmailID="" City="" Company="" Country="" DayFaxNo=""
+						DayPhone="" Department="" EMailID=""  FirstName=""
+						LastName="" MiddleName="" MobilePhone="" OtherPhone=""
+						PersonInfoKey="" State="" ZipCode="" />
+
+					<OrderStatuses>
+						<OrderStatus OrderHeaderKey="" OrderLineKey=""
+							 OrderReleaseKey=""
+							OrderReleaseStatusKey="" PipelineKey="" ShipNode="" Status=""
+							StatusDate="" StatusDescription="" StatusQty=""
+							TotalQuantity="">
+							<OrderStatusTranQuantity StatusQty=""
+								TotalQuantity="" TransactionalUOM="" />
+						</OrderStatus>
+					</OrderStatuses>
+
+					<LineCharges>
+						<LineCharge ChargeAmount="" ChargeCategory=""
+							ChargeName="" ChargeNameKey="" ChargePerLine="" ChargePerUnit=""
+							InvoicedChargeAmount="" InvoicedChargePerLine=""
+							InvoicedChargePerUnit="" IsBillable="" IsDiscount="" Reference=""
+							RemainingChargeAmount="" RemainingChargePerLine=""
+							RemainingChargePerUnit="" />
+					</LineCharges>
+
+					<LineTaxes>
+						<LineTax ChargeCategory="" ChargeName=""
+							ChargeNameKey="" InvoicedTax="" Reference_1="" Reference_2=""
+							Reference_3="" RemainingTax="" Tax="" TaxName=""
+							TaxPercentage="" />
+					</LineTaxes>
+
+					<Extn />
+				</OrderLine>
+			</OrderLines>
+
+			<PersonInfoShipTo AddressLine1="" AddressLine2=""
+				AddressLine3="" AddressLine4="" AddressLine5="" AddressLine6=""
+				AlternateEmailID="" City="" Company="" Country="" DayFaxNo=""
+				DayPhone="" Department="" EMailID="" EveningPhone="" FirstName=""
+				LastName="" MiddleName="" MobilePhone="" OtherPhone=""
+				PersonInfoKey="" State="" ZipCode="" />
+
+			<PersonInfoBillTo AddressLine1="" AddressLine2=""
+				AddressLine3="" AddressLine4="" AddressLine5="" AddressLine6=""
+				AlternateEmailID="" City="" Company="" Country="" DayFaxNo=""
+				DayPhone="" Department="" EMailID="" EveningPhone="" FirstName=""
+				LastName="" MiddleName="" MobilePhone="" OtherPhone=""
+				PersonInfoKey="" State="" ZipCode="" />
+			<Extn />
+		</ReturnOrder>
+	</ReturnOrders>
+
+	<PriceInfo Currency="" EnterpriseCurrency=""
+		ReportingConversionDate="" ReportingConversionRate="" TotalAmount="" />
+
+	<!--Optional-->
+	<PersonInfoShipTo AddressLine1="" AddressLine2="" AddressLine3=""
+		AddressLine4="" AddressLine5="" AddressLine6="" 
+		Beeper="" City="" Company="" Country=""  DayPhone=""
+		Department="" EMailID=""  FirstName=""
+		IsCommercialAddress="" LastName="" MiddleName="" MobilePhone=""
+		OtherPhone=""  PersonInfoKey="" State="" Title=""
+		ZipCode="" />
+
+	<!--Either at  line level or at header
+		level-->
+	<PersonInfoBillTo AddressLine1="" AddressLine2="" AddressLine3=""
+		AddressLine4="" AddressLine5="" AddressLine6="" 
+		Beeper="" City="" Company="" Country="" DayFaxNo="" DayPhone=""
+		Department="" EMailID="" EveningPhone="" FirstName=""
+		IsCommercialAddress="" LastName="" MiddleName="" MobilePhone=""
+		OtherPhone="" PersonID="" PersonInfoKey="" State="" Title=""
+		ZipCode="" />
+	<OrderStatuses>
+		<OrderStatus OrderHeaderKey="" OrderLineKey=""
+			 OrderReleaseKey="" 
+			PipelineKey="" ShipNode="" Status="" StatusDate=""
+			StatusDescription="" StatusQty="" StatusReason="" TotalQuantity="">
+			<OrderStatusTranQuantity StatusQty="" TotalQuantity=""
+				TransactionalUOM="" />
+		</OrderStatus>
+	</OrderStatuses>
+</Order>
+</OrderList>

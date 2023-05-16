@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExtensionMetaData>
+    <ScreenExtension extnClassName="ContainerPackItemScanExtn"
+        extnPackage="extn.components.shipment.container.pack"
+        originalScreen="wsc.components.shipment.container.pack.ContainerPackItemScan"
+        originalScreenPackage="wsc.components.shipment.container.pack" type="diffrential">
+        <Items>
+            <Button _sc_extensibility_operation="change"
+                _sc_extensibility_referenceUId="packAll" renderHidden="true"/>
+            <Label _sc_extensibility_operation="change"
+                _sc_extensibility_referenceUId="lblnoProdscan" value="$(_scSimpleBundle:extn__Scan_products_to_be_packed_into_current_Container_)"/>
+            <Label _sc_extensibility_operation="change"
+                _sc_extensibility_referenceUId="lblQtyInContainer" value="$(_scBundle:extn_Container_quantity)"/>
+            <DataLabel _sc_extensibility_operation="change"
+                _sc_extensibility_referenceUId="lblCurrentPackage" label="$(_scSimpleBundle:extn_Current_)"/>
+        </Items>
+        <Subscribers>
+            <Local>
+                <Subscriber description="extnFocusOnTextBox"
+                    eventId="afterScreenInit" isExtn="true" sequence="51">
+                    <Handler methodName="extnFocusOnTextBox"/>
+                </Subscriber>
+            </Local>
+        </Subscribers>
+		<!-- OMNI-69797 START -->
+         <MashupRefs>
+            <Behavior>
+                <MashupRef extnType="ADD"
+                    mashupId="extn_getFlagToDisableAddQtyAndReadOnlyScannedQty" mashupRefId="extn_getFlagToDisableAddQtyAndReadOnlyScannedQty"/>
+            </Behavior>
+        </MashupRefs>
+		<!-- OMNI-69797 END -->
+    </ScreenExtension>
+</ExtensionMetaData>

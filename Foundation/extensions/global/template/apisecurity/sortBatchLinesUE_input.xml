@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Licensed Materials - Property of IBM IBM Sterling Selling And Fulfillment 
+	Suite (C) Copyright IBM Corp. 2005, 2014 All Rights Reserved. US Government 
+	Users Restricted Rights - Use, duplication or disclosure restricted by GSA 
+	ADP Schedule Contract with IBM Corp. -->
+<StoreBatch>
+    <StoreBatchLines>
+        <StoreBatchLine>
+            <ItemDetails>
+			<Extn ExtnDepartment=""/>
+                <!-- 	<PrimaryInformation ExtendedDisplayDescription="" ImageID="" ImageLabel="" ImageLocation="" />
+				<ClassificationCodes Model="" /> -->
+                <PrimaryInformation/>
+            </ItemDetails>
+            <StoreBatchLocationList>
+                <StoreBatchLocation>
+                    <ShipmentLines>
+                        <ShipmentLine>
+                            <ContainerDetails>
+                                <ContainerDetail>
+                                    <Container/>
+                                </ContainerDetail>
+                            </ContainerDetails>
+                            <ReceiptLines>
+                                <ReceiptLine/>
+                            </ReceiptLines>
+                            <ShipmentTagSerials>
+                                <ShipmentTagSerial/>
+                            </ShipmentTagSerials>
+                            <Shipment/>
+                            <OrderLine>
+                                <ItemDetails>
+								<Extn ExtnDepartment=""/>
+                                    <PrimaryInformation/>
+                                </ItemDetails>
+                                <ComputedPrice/>
+                                <BundleParentLine/>
+                            </OrderLine>
+                            <Instructions>
+                                <Instruction/>
+                            </Instructions>
+                            <Department/>
+                            <ShipmentLineInvAttRequest/>
+                        </ShipmentLine>
+                    </ShipmentLines>
+                </StoreBatchLocation>
+            </StoreBatchLocationList>
+            <ShipmentLines>
+                <ShipmentLine>
+                    <ContainerDetails>
+                        <ContainerDetail>
+                            <Container/>
+                        </ContainerDetail>
+                    </ContainerDetails>
+                    <ReceiptLines>
+                        <ReceiptLine/>
+                    </ReceiptLines>
+                    <ShipmentTagSerials>
+                        <ShipmentTagSerial/>
+                    </ShipmentTagSerials>
+                    <Shipment/>
+                    <OrderLine>
+                        <ItemDetails>
+						<Extn ExtnDepartment=""/>
+                            <PrimaryInformation/>
+                        </ItemDetails>
+                        <ComputedPrice/>
+                        <BundleParentLine/>
+                    </OrderLine>
+                    <Instructions>
+                        <Instruction/>
+                    </Instructions>
+                    <Department/>
+                    <ShipmentLineInvAttRequest/>
+                </ShipmentLine>
+            </ShipmentLines>
+        </StoreBatchLine>
+    </StoreBatchLines>
+</StoreBatch>

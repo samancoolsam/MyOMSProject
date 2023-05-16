@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Controller
+    className="com.sterlingcommerce.ui.web.platform.controller.SCUIXAPIMashupController"
+    controllerId="extn.order.cancel.CancelOrderBaseScreenExtnBehaviorController"
+    requestMethodSupported="POST" screenId="extn.order.cancel.CancelOrderBaseScreenExtn">
+    <MashupRefs>
+        <MashupRef extnType="MODIFY"
+            mashupId="cancelOrder_cancelOrderAPI"
+            mashupRefId="cancelOrderMashupRef" permissionId=""/>
+    <!-- Start:OMNI-63312: WCC Cancellations -->
+        <MashupRef extnType="ADD" mashupId="extn_CancelOrder"
+            mashupRefId="extn_CancelOrderRef" permissionId=""/>
+    <!-- End:OMNI-63312: WCC Cancellations -->
+    </MashupRefs>
+</Controller>

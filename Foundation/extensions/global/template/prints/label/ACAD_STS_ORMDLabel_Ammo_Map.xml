@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<LabelFieldMap>
+
+
+	<LabelField Binding="Container/Shipment/@ShipmentNo" DataType="Text"
+        LabelFieldName="ShipmentNo" RepeatingElement="" Sequence="N"/>
+		<LabelField Binding="Container/Shipment/@ShipmentType" DataType="Text"
+        LabelFieldName="ShipmentType" RepeatingElement="" Sequence="N"/>
+
+		
+</LabelFieldMap>

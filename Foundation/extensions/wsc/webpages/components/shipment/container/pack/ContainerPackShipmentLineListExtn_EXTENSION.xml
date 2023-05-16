@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExtensionMetaData>
+    <ScreenExtension extnClassName="ContainerPackShipmentLineListExtn"
+        extnPackage="extn.components.shipment.container.pack"
+        originalScreen="wsc.components.shipment.container.pack.ContainerPackShipmentLineList"
+        originalScreenPackage="wsc.components.shipment.container.pack" type="diffrential">
+	<!--Start - OMNI-3680 BOPIS:Record Shortage Button-->
+        <Items>
+            <Button _sc_extensibility_moveOrder="1"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="shortageResolutionLink"
+                class="shortageResolution"
+                label="$(_scSimpleBundle:extn_Record_Shortage)"
+                showLabel="true" uId="extn_button"/>
+            <Link _sc_extensibility_operation="change"
+                _sc_extensibility_referenceUId="shortageResolutionLink"
+                renderHidden="true" resourceId="C000000"/>
+        </Items>
+	<!--End - OMNI-3680 BOPIS:Record Shortage Button-->
+        <Subscribers>
+            <Local>
+                <Subscriber eventId="afterScreenInit" isExtn="true" sequence="51">
+                    <Handler methodName="extn_afterInitializeScreen"/>
+                </Subscriber>
+		<!--Start - OMNI-3680 BOPIS:Record Shortage Button-->
+                <Subscriber
+                    description="This method is used to open shortage resolution popup"
+                    eventId="extn_button_onClick" isExtn="true" sequence="51">
+                    <Handler methodName="openShortageResolutionPopup"/>
+                </Subscriber>
+		<!--End - OMNI-3680 BOPIS:Record Shortage Button-->
+                <!--OMNI:66083 - START -->
+                <Subscriber eventId="afterBehaviorMashupCall"
+                    isExtn="true" sequence="51">
+                    <Handler methodName="extn_AfterBehaviorMashupCall"/>
+                </Subscriber>
+                <!--OMNI:66083 - END -->
+            </Local>
+        </Subscribers>
+         <!--OMNI:66083 - START -->
+         <MashupRefs>
+            <Behavior>
+                <MashupRef extnType="ADD"
+                    mashupId="extn_getFlagToDisableAddQtyAndReadOnlyScannedQty" mashupRefId="extn_getFlagToDisableAddQtyAndReadOnlyScannedQty"/>
+            </Behavior>
+        </MashupRefs>
+         <!--OMNI:66083 - END -->
+    </ScreenExtension>
+</ExtensionMetaData>

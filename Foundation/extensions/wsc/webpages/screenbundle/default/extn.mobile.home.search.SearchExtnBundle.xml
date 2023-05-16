@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ScreenBundle screenBundleId="extn.mobile.home.search.SearchExtnBundle" screenId="extn.mobile.home.search.SearchExtn">
+    <BundleEntries>       
+   	 <!-- OMNI-71126 Pick Up Order Grouping - Pick Up Order Grouping Order Search TC70  START -->
+        <BundleEntry
+            bundleEntryId="advancedSearchTitlePanel_TitlePane_title"
+            bundleKey="Title_AdvancedSearch"
+            bundleValueFn="_scSimpleBundle" property="title"
+            type="WIDGET" uId="advancedSearchTitlePanel"/>
+        <BundleEntry
+            bundleEntryId="extn_relatedOrders_checkbox_CheckBox_label"
+            bundleKey="extn_Show_Related_Orders"
+            bundleValueFn="_scSimpleBundle" property="label"
+            type="WIDGET" uId="extn_relatedOrders_checkbox"/>
+		<!-- OMNI-71126 Pick Up Order Grouping - Pick Up Order Grouping Order Search TC70  END -->
+         <BundleEntry bundleEntryId="txt_SearchOrderNo_TextField_hint"
+             bundleKey="extn_Scan_or_enter_Order_"
+             bundleValueFn="_scSimpleBundle" property="hint"
+             type="WIDGET" uId="txt_SearchOrderNo"/>
+         <!-- OMNI-71126 Pick Up Order Grouping - Pick Up Order Grouping Order Search TC70  START -->
+        <BundleEntry bundleEntryId="txt_SearchOrderNo_TextField_hint"
+            bundleKey="extn_Scan_or_enter_Order_"
+            bundleValueFn="_scSimpleBundle" property="hint"
+            type="WIDGET" uId="txt_SearchOrderNo"/>
+        <BundleEntry bundleEntryId="txt_SearchShipNo_TextField_hint"
+            bundleKey="extn_Enter_or_Scan_Shipment_"
+            bundleValueFn="_scSimpleBundle" property="hint"
+            type="WIDGET" uId="txt_SearchShipNo"/>
+        <BundleEntry
+            bundleEntryId="extn_ship_or_order_no_TextField_hint"
+            bundleKey="extn_Enter_or_Scan_Ship_or_Order_no"
+            bundleValueFn="_scSimpleBundle" property="hint"
+            type="WIDGET" uId="extn_ship_or_order_no"/>
+        <BundleEntry
+            bundleEntryId="extn_ship_or_order_no_TextField_label"
+            bundleKey="extn_lbl_ship_or_order_no"
+            bundleValueFn="_scSimpleBundle" property="label"
+            type="WIDGET" uId="extn_ship_or_order_no"/>
+		<!-- OMNI-71126 Pick Up Order Grouping - Pick Up Order Grouping Order Search TC70  END -->
+    </BundleEntries>
+</ScreenBundle>

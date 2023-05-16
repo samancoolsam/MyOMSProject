@@ -1,0 +1,220 @@
+		<div>
+		<!--OMNI-90829 START-->
+		 	<div data-dojo-type="idx/layout/ContentPane" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_SerialNoScan' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '4' , 
+		'class' : 'scanPanelData' , 
+		_sc_extensibility_position : 'after' , 
+		_sc_extensibility_referenceUId : 'lastProductScannedDetailsScreenRef'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="idx/layout/ContentPane" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_SerialNoScanPane' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '5' , 
+		'class' : 'barcodeScanPanel' , 
+		_sc_extensibility_position : 'first' , 
+		_sc_extensibility_referenceUId : 'extn_SerialNoScan'  
+	 					}">
+		 	</div>  
+		<!--OMNI-90829 END-->
+		 	<div data-dojo-type="dijit/form/Button" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								renderHidden : true , 
+		_sc_extensibility_operation : 'change' , 
+		_sc_extensibility_referenceUId : 'pickAll'  
+	 					}">
+		 	</div>  
+		<!--OMNI-90829 START-->
+		 	<div data-dojo-type="idx/form/TextBox" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								scExcludeForDirtyCheck : true , 
+		uId : 'extn_serialNoBox' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '7' , 
+		spanLabel : true , 
+		_sc_extensibility_position : 'last' , 
+		_sc_extensibility_referenceUId : 'extn_SerialNoScanPane'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	title : 			this.getSimpleBundleString('extn_Scan_or_Enter_Serial_No')
+,	
+			 	hint : 			this.getSimpleBundleString('extn_Scan_or_Enter_Serial_No')
+,
+				 	bindingData : 	{
+		 sourceBinding : 	{
+		 path : 			'SerialNo'
+,
+		 namespace : 			'extn_SerialNo_output'
+	}
+,
+		 targetBinding : 	[
+	 		{
+		 path : 			'Shipment.SerialNo'
+,
+		 namespace : 			'extn_SerialNo_input'
+	}
+	]
+	}
+			}
+					}
+	 					}">
+		 	</div>  
+			
+		 	<div data-dojo-type="idx/form/TextBox" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_serialNoBox' , 
+		_sc_extensibility_operation : 'move' , 
+		_sc_extensibility_moveOrder : '8' , 
+		_sc_extensibility_position : 'after' , 
+		_sc_extensibility_referenceUId : 'extn_SerialNoScanPane'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="idx/form/TextBox" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_serialNoBox' , 
+		_sc_extensibility_operation : 'move' , 
+		_sc_extensibility_moveOrder : '9' , 
+		_sc_extensibility_position : 'last' , 
+		_sc_extensibility_referenceUId : 'extn_SerialNoScanPane'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="idx/form/TextBox" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_serialNoBox' , 
+		_sc_extensibility_operation : 'move' , 
+		_sc_extensibility_moveOrder : '16' , 
+		_sc_extensibility_position : 'after' , 
+		_sc_extensibility_referenceUId : 'extn_serialNoButton'  
+	 					}">
+		 	</div>  
+		<!--OMNI-90829 END-->
+		 	<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								renderHidden : true , 
+		uId : 'extn_timeRemaining' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '1' , 
+		'class' : 'a11yHiddenLabel duein backroomPickTimeRemaining' , 
+		_sc_extensibility_position : 'after' , 
+		_sc_extensibility_referenceUId : 'productScanPanel'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 path : 			'Shipment.TimeRemaining'
+,
+		 dynamicBindingPackage : 			'wsc.components.shipment.backroompick.utils'
+,
+		 dynamicBindingFunc : 			'applyOverdueStyling'
+,
+		 namespace : 			'backroomPickShipmentDetails_output'
+,
+		 dynamicBindingClassName : 			'BackroomPickUpUtils'
+	}
+	}
+			}
+		}
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_timeRemaining' , 
+		_sc_extensibility_operation : 'move' , 
+		_sc_extensibility_moveOrder : '2' , 
+		_sc_extensibility_position : 'last' , 
+		_sc_extensibility_referenceUId : 'productScanPanel'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_timeRemaining' , 
+		_sc_extensibility_operation : 'move' , 
+		_sc_extensibility_moveOrder : '3' , 
+		_sc_extensibility_position : 'before' , 
+		_sc_extensibility_referenceUId : 'shipmentDetails'  
+	 					}">
+		 	</div>  
+	<!--OMNI-90829 START-->
+		 	<div data-dojo-type="sc/plat/dojo/widgets/Link" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_serialNoButton' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '6' , 
+		'class' : 'buttonConnect' , 
+		_sc_extensibility_position : 'first' , 
+		hasImage : true , 
+		appendToContextRoot : true , 
+		imageSrc : 'wsc/resources/css/icons/images/barcode_blue.png' , 
+		_sc_extensibility_referenceUId : 'extn_SerialNoScanPane'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	title : 			this.getSimpleBundleString('extn_Click_to_Scan_the_SerialNo')
+,	
+			 	imageAlt : 			this.getSimpleBundleString('extn_Click_to_Scan_the_SerialNo')
+			}
+		}
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/Link" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_serialNoButton' , 
+		_sc_extensibility_operation : 'move' , 
+		_sc_extensibility_moveOrder : '10' , 
+		_sc_extensibility_position : 'last' , 
+		_sc_extensibility_referenceUId : 'extn_SerialNoScanPane'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/Link" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_serialNoButton' , 
+		_sc_extensibility_operation : 'move' , 
+		_sc_extensibility_moveOrder : '11' , 
+		_sc_extensibility_position : 'after' , 
+		_sc_extensibility_referenceUId : 'extn_SerialNoScanPane'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/Link" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_serialNoButton' , 
+		_sc_extensibility_operation : 'move' , 
+		_sc_extensibility_moveOrder : '12' , 
+		_sc_extensibility_position : 'last' , 
+		_sc_extensibility_referenceUId : 'extn_SerialNoScanPane'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/Link" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_serialNoButton' , 
+		_sc_extensibility_operation : 'move' , 
+		_sc_extensibility_moveOrder : '13' , 
+		_sc_extensibility_position : 'last' , 
+		_sc_extensibility_referenceUId : 'extn_SerialNoScan'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/Link" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_serialNoButton' , 
+		_sc_extensibility_operation : 'move' , 
+		_sc_extensibility_moveOrder : '14' , 
+		_sc_extensibility_position : 'last' , 
+		_sc_extensibility_referenceUId : 'extn_SerialNoScanPane'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/Link" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_serialNoButton' , 
+		_sc_extensibility_operation : 'move' , 
+		_sc_extensibility_moveOrder : '15' , 
+		_sc_extensibility_position : 'after' , 
+		_sc_extensibility_referenceUId : 'extn_serialNoBox'  
+	 					}">
+		 	</div>  
+			<!--OMNI-90829 END-->
+		</div>

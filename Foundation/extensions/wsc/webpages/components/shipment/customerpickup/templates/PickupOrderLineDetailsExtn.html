@@ -1,0 +1,146 @@
+		<div>
+		<!--Start - OMNI-3680 BOPIS:Record Shortage Button-->
+		<div data-dojo-type="dijit/form/Button" 
+		data-ibmsc-uid="extn_screenbase_button"
+	 	data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_screenbase_button' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '5' , 
+		'class' : 'shortageResolution lineLinks' , 
+		_sc_extensibility_position : 'after' , 
+		_sc_extensibility_referenceUId : 'bpshortageQuanitityDetails' , 
+		showLabel : true  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	label : 			this.getSimpleBundleString('extn_Record_Shortage')
+			}
+		}
+	 					}">
+		 	</div>
+			<!--End - OMNI-3680 BOPIS:Record Shortage Button-->
+		 	<div data-dojo-type="sc/plat/dojo/widgets/Link" 
+		 				data-ibmsc-uid="itemdescriptionLink"
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								_sc_extensibility_operation : 'change' , 
+		'class' : 'groupHeader blockComponent productdesclink disableLink' , 
+		_sc_extensibility_referenceUId : 'itemdescriptionLink'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" 
+		 				data-ibmsc-uid="extn_screenbase_datalabel_staging"
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								_sc_extensibility_operation : 'insert' , 
+		'class' : 'blockComponent' , 
+		_sc_extensibility_moveOrder : '1' , 
+		_sc_extensibility_referenceUId : 'updateQtyButton' , 
+		uId : 'extn_screenbase_datalabel_staging' , 
+		_sc_extensibility_position : 'after'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	label : 			this.getSimpleBundleString('extn_Staging_Location')
+			}
+		}
+	 					}">
+		 	</div>
+		 	<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" 
+		 				data-ibmsc-uid="extn_ageRestriction"
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '3' , 
+		_sc_extensibility_referenceUId : 'itemImage' , 
+		uId : 'extn_ageRestriction' , 
+		_sc_extensibility_position : 'before'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	label : 			this.getSimpleBundleString('extn_Age_Restriction')
+,	
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 path : 			''
+,
+		 namespace : 			'ShipmentLine'
+	}
+	}
+			}
+		}
+	 					}">
+		 	</div>  
+<!-- 		 	<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" 
+		 				data-ibmsc-uid="extn_screenbase_datalabel"
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								_sc_extensibility_operation : 'insert' , 
+		'class' : 'blockComponent' , 
+		_sc_extensibility_moveOrder : '2' , 
+		_sc_extensibility_referenceUId : 'shortageResolutionLink' , 
+		uId : 'extn_screenbase_datalabel' , 
+		_sc_extensibility_position : 'after'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	label : 			this.getBundleString('extn_Staging_Location')
+,	
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 path : 			'ShipmentLine.Extn.ExtnStagingLocation'
+,
+		 namespace : 			'ShipmentLine'
+	}
+	}
+			}
+		}
+	 					}">
+		 	</div>  -->
+		 	<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" 
+		 				data-ibmsc-uid="shortageReasonLbl"
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								renderHidden : true , 
+		_sc_extensibility_operation : 'change' , 
+		_sc_extensibility_referenceUId : 'shortageReasonLbl'  
+		,scExtensionDataFn :
+   function() { 
+   return { 
+     bindingData :  {
+   sourceBinding :  {
+   path :    'ShipmentLine.ShortageResolutionReasonDesc'
+,
+   dynamicBindingFunc :    'extn_displayFieldIfHasValue'
+  				}
+   		}
+    }
+   }  
+	 					}">
+		 	</div>  
+			<!--Start - OMNI-3680 BOPIS:Record Shortage Button-->  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/Link" 
+		 				data-ibmsc-uid="shortageResolutionLink"
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								renderHidden : true , 
+		resourceId : 'C000000' , 
+		_sc_extensibility_operation : 'change' , 
+		_sc_extensibility_referenceUId : 'shortageResolutionLink'  
+	 					}">
+		 	</div> 
+			<!--End - OMNI-3680 BOPIS:Record Shortage Button--> 
+			<!--Start - OMNI-84925 -->
+			<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" 
+		 				data-ibmsc-uid="extn_Line_Shipment_No"
+		 					data-dojo-props="data_dojo_props_diff: {
+		 								uId : 'extn_Line_Shipment_No' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '7' , 
+		'class' : 'blockComponent' , 
+		_sc_extensibility_position : 'after' , 
+		_sc_extensibility_referenceUId : 'itemImage'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	label : 			this.getSimpleBundleString('extn_eCom_SI_ShipmentNo')
+			}
+		}
+		 					}">
+		 	</div> 
+			<!--End - OMNI-84925 -->
+		</div>

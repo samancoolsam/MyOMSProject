@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExtensionMetaData>
+    <ScreenExtension extnClassName="ConfigureBatchPickPopupExtn"
+        extnPackage="extn.components.batch.batchlist"
+        originalScreen="wsc.components.batch.batchlist.ConfigureBatchPickPopup"
+        originalScreenPackage="wsc.components.batch.batchlist" type="diffrential">
+        <Items>
+            <RadioButtonSet _sc_extensibility_operation="change"
+                _sc_extensibility_referenceUId="sortMethod" renderHidden="true"/>
+            <RadioButtonSet _sc_extensibility_moveOrder="1"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="txtBatchSize"
+                groupAlignment="vertical"
+                label="$(_scSimpleBundle:RadioButtonSet_sortMethod)"
+                name="sortMethod" uId="extn_SortMethod">
+                <BindingData>
+                    <RadioBinding>
+                        <Option label="$(_scSimpleBundle:AfterPicking)"
+                            scExtensibilityArrayItemId="extn_RadioBinding_0"
+                            selected="true" value="SORT_AFTER_PICK"/>
+                    </RadioBinding>
+                    <SourceBinding namespace="getUserUiStateList_output" path="UserPref.BatchSortMethod"/>
+                    <TargetBindings>
+                        <TargetBinding
+                            namespace="batchSortMethodUiState_input"
+                            path="UserUiState.Definition" scExtensibilityArrayItemId="extn_TargetBindings_0"/>
+                    </TargetBindings>
+                </BindingData>
+            </RadioButtonSet>
+            <RadioButtonSet _sc_extensibility_moveOrder="2"
+                _sc_extensibility_operation="remove"
+                _sc_extensibility_position="first"
+                _sc_extensibility_referenceUId="_extensibilityHiddenWidgetsHolder" uId="sortMethod"/>
+        </Items>
+        <MashupRefs>
+            <Init>
+                <MashupRef
+                    mashupId="configureBacthPick_getUserUiStateList"
+                    mashupRefId="configureBacthPick_getUserUiStateList" sourceNamespace="getUserUiStateList_output"/>
+            </Init>
+        </MashupRefs>
+    </ScreenExtension>
+</ExtensionMetaData>

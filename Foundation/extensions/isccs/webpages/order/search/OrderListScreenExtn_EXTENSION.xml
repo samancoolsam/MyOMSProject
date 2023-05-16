@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Start - OMNI-3717 Payment Tender Type Search-->
+<ExtensionMetaData>
+    <ScreenExtension extnClassName="OrderListScreenExtn"
+        extnPackage="extn.order.search"
+        originalScreen="isccs.order.search.OrderListScreen"
+        originalScreenPackage="isccs.order.search" type="diffrential">
+        <Subscribers>
+            <Local>
+                <Subscriber description="extn_BeforeBehaviorMashupCall"
+                    eventId="beforeBehaviorMashupCall" isExtn="true" sequence="51">
+                    <Handler methodName="extn_BeforeBehaviorMashupCall"/>
+                </Subscriber>
+            </Local>
+        </Subscribers>
+        <MashupRefs>
+            <Behavior>
+                <MashupRef mashupId="orderList_getOrderList" mashupRefId="getOrderList"/>
+            </Behavior>
+        </MashupRefs>
+    </ScreenExtension>
+</ExtensionMetaData>
+<!--End - OMNI-3717 Payment Tender Type Search-->

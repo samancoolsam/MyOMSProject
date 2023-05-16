@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExtensionMetaData>
+    <ScreenExtension extnClassName="ConfirmShipmentContainerDetailExtn"
+        extnPackage="extn.components.shipment.confirm"
+        originalScreen="wsc.components.shipment.confirm.ConfirmShipmentContainerDetail"
+        originalScreenPackage="wsc.components.shipment.confirm" type="diffrential">
+        <Items>
+            <DataLabel _sc_extensibility_operation="change"
+                _sc_extensibility_referenceUId="containerNoLbl" label="$(_scBundle:extn_Container_)"/>
+        </Items>
+    </ScreenExtension>
+</ExtensionMetaData>

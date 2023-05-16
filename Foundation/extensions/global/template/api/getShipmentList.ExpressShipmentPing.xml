@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Shipments TotalNumberOfRecords="">
+	<Shipment ShipmentNo="" ShipmentKey="" SCAC="" CarrierServiceCode="" ShipNode="">
+		<ShipNode NodeType="">
+			<ShipNodePersonInfo AddressLine1="" City="Houston" Country="" FirstName="" State="" ZipCode="" /> 
+		</ShipNode> 
+	</Shipment>
+</Shipments> 

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DBSchema>
+        <Entities>
+                <Entity TableName="YFS_SHIPMENT_CONTAINER">
+                        <Attributes>
+                                <Attribute ColumnName="EXTN_TRACKING_STATUS" XMLName="ExtnTrackingStatus" DataType="VARCHAR2-100" DefaultValue="' '"
+                                        Description="Tracking Status Updates" Nullable="false"  XMLGroup="Extn" />
+                        </Attributes>
+                </Entity>
+        </Entities>
+</DBSchema>

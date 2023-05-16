@@ -1,0 +1,2471 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.0" xmlns="http://java.sun.com/xml/ns/javaee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+    <context-param>
+        <param-name>scui-param-value-validation-adapter</param-name>
+        <param-value>com.sterlingcommerce.appcommon.security.AppcommonParamValueValidationAdapter</param-value>
+    </context-param>
+    <context-param>
+        <param-name>scui-global-validation-exception-handler-path</param-name>
+        <param-value>/appcommon/core/jsps/datavalidationerror.jsp</param-value>
+    </context-param>
+    <context-param>
+        <param-name>yrc_extn_class</param-name>
+        <param-value>com.yantra.pca.ycd.ue.security.YCDApiSecurityAuthenticator</param-value>
+    </context-param>
+    <context-param>
+        <param-name>scui-validation-rules-file-com-1</param-name>
+        <param-value>/validationrules/com_validationrules.xml::400</param-value>
+    </context-param>
+    <context-param>
+        <param-name>scui-param-value-validation-adapter::/configurator/configure.action</param-name>
+        <param-value>com.comergent.security.xss.adapters.SICSubModelPunchOutRequestValidationAdapter</param-value>
+    </context-param>
+    <context-param>
+        <param-name>scui-param-value-validation-adapter::/configurator/configureTabbedContent.action</param-name>
+        <param-value>com.comergent.security.xss.adapters.SICSubModelPunchOutRequestValidationAdapter</param-value>
+    </context-param>
+    <context-param>
+        <param-name>scui-param-value-validation-adapter::/configurator/summary.action</param-name>
+        <param-value>com.comergent.security.xss.adapters.SICSubModelPunchOutRequestValidationAdapter</param-value>
+    </context-param>
+    <context-param>
+        <param-name>scui-param-value-validation-adapter::/configurator/addToCart.action</param-name>
+        <param-value>com.comergent.security.xss.adapters.SICSubModelPunchOutRequestValidationAdapter</param-value>
+    </context-param>
+    <context-param>
+        <param-name>scui-param-value-validation-adapter::/configurator/subModelReturn.action</param-name>
+        <param-value>com.comergent.security.xss.adapters.SICSubModelPunchOutRequestValidationAdapter</param-value>
+    </context-param>
+    <context-param>
+        <param-name>scui-param-value-validation-adapter::/configurator/subModelConfig.action</param-name>
+        <param-value>com.comergent.security.xss.adapters.SICSubModelPunchOutRequestValidationAdapter</param-value>
+    </context-param>
+    <context-param>
+        <param-name>scui-param-value-validation-adapter::/configurator/resolveConflict.action</param-name>
+        <param-value>com.comergent.security.xss.adapters.SICSubModelPunchOutRequestValidationAdapter</param-value>
+    </context-param>
+    <context-param>
+        <param-name>scui-param-value-validation-adapter::/configurator/showRuleTrace.action</param-name>
+        <param-value>com.comergent.security.xss.adapters.SICSubModelPunchOutRequestValidationAdapter</param-value>
+    </context-param>
+    <context-param>
+        <param-name>scui-param-value-validation-adapter::/configurator/conflictResolution.action</param-name>
+        <param-value>com.comergent.security.xss.adapters.SICSubModelPunchOutRequestValidationAdapter</param-value>
+    </context-param>
+    <context-param>
+        <param-name>scui-param-value-validation-adapter::/configurator/testCart.action</param-name>
+        <param-value>com.comergent.security.xss.adapters.SICSubModelPunchOutRequestValidationAdapter</param-value>
+    </context-param>
+    <context-param>
+        <param-name>scui-param-value-validation-adapter::/configurator/configstatus.action</param-name>
+        <param-value>com.comergent.security.xss.adapters.SICSubModelPunchOutRequestValidationAdapter</param-value>
+    </context-param>
+    <context-param>
+        <param-name>scui-param-value-validation-adapter::/configurator/launchModel.action</param-name>
+        <param-value>com.comergent.security.xss.adapters.SICSubModelPunchOutRequestValidationAdapter</param-value>
+    </context-param>
+    <context-param>
+        <param-name>scui-param-value-validation-adapter::/configurator/home.action</param-name>
+        <param-value>com.comergent.security.xss.adapters.SICSubModelPunchOutRequestValidationAdapter</param-value>
+    </context-param>
+    <context-param>
+        <param-name>scui-param-value-validation-adapter::/configurator/upgrade.action</param-name>
+        <param-value>com.comergent.security.xss.adapters.SICSubModelPunchOutRequestValidationAdapter</param-value>
+    </context-param>
+    <context-param>
+        <param-name>scui-param-value-validation-adapter::/configurator/configure.do</param-name>
+        <param-value>com.comergent.security.xss.adapters.SICSubModelPunchOutRequestValidationAdapter</param-value>
+    </context-param>
+    <context-param>
+        <param-name>scui-param-value-validation-adapter::/configurator/configureTabbedContent.do</param-name>
+        <param-value>com.comergent.security.xss.adapters.SICSubModelPunchOutRequestValidationAdapter</param-value>
+    </context-param>
+    <context-param>
+        <param-name>scui-param-value-validation-adapter::/configurator/summary.do</param-name>
+        <param-value>com.comergent.security.xss.adapters.SICSubModelPunchOutRequestValidationAdapter</param-value>
+    </context-param>
+    <context-param>
+        <param-name>scui-param-value-validation-adapter::/configurator/addToCart.do</param-name>
+        <param-value>com.comergent.security.xss.adapters.SICSubModelPunchOutRequestValidationAdapter</param-value>
+    </context-param>
+    <context-param>
+        <param-name>scui-param-value-validation-adapter::/configurator/subModelReturn.do</param-name>
+        <param-value>com.comergent.security.xss.adapters.SICSubModelPunchOutRequestValidationAdapter</param-value>
+    </context-param>
+    <context-param>
+        <param-name>scui-param-value-validation-adapter::/configurator/subModelConfig.do</param-name>
+        <param-value>com.comergent.security.xss.adapters.SICSubModelPunchOutRequestValidationAdapter</param-value>
+    </context-param>
+    <context-param>
+        <param-name>scui-param-value-validation-adapter::/configurator/resolveConflict.do</param-name>
+        <param-value>com.comergent.security.xss.adapters.SICSubModelPunchOutRequestValidationAdapter</param-value>
+    </context-param>
+    <context-param>
+        <param-name>scui-param-value-validation-adapter::/configurator/showRuleTrace.do</param-name>
+        <param-value>com.comergent.security.xss.adapters.SICSubModelPunchOutRequestValidationAdapter</param-value>
+    </context-param>
+    <context-param>
+        <param-name>scui-param-value-validation-adapter::/configurator/conflictResolution.do</param-name>
+        <param-value>com.comergent.security.xss.adapters.SICSubModelPunchOutRequestValidationAdapter</param-value>
+    </context-param>
+    <context-param>
+        <param-name>scui-param-value-validation-adapter::/configurator/testCart.do</param-name>
+        <param-value>com.comergent.security.xss.adapters.SICSubModelPunchOutRequestValidationAdapter</param-value>
+    </context-param>
+    <context-param>
+        <param-name>scui-param-value-validation-adapter::/configurator/configstatus.do</param-name>
+        <param-value>com.comergent.security.xss.adapters.SICSubModelPunchOutRequestValidationAdapter</param-value>
+    </context-param>
+    <context-param>
+        <param-name>scui-param-value-validation-adapter::/configurator/launchModel.do</param-name>
+        <param-value>com.comergent.security.xss.adapters.SICSubModelPunchOutRequestValidationAdapter</param-value>
+    </context-param>
+    <context-param>
+        <param-name>scui-param-value-validation-adapter::/configurator/home.do</param-name>
+        <param-value>com.comergent.security.xss.adapters.SICSubModelPunchOutRequestValidationAdapter</param-value>
+    </context-param>
+    <context-param>
+        <param-name>scui-param-value-validation-adapter::/configurator/upgrade.do</param-name>
+        <param-value>com.comergent.security.xss.adapters.SICSubModelPunchOutRequestValidationAdapter</param-value>
+    </context-param>
+    <context-param>
+        <param-name>bypass.uri.endswith.sic.1</param-name>
+        <param-value>.css</param-value>
+    </context-param>
+    <context-param>
+        <param-name>bypass.uri.endswith.sic.2</param-name>
+        <param-value>.gif</param-value>
+    </context-param>
+    <context-param>
+        <param-name>bypass.uri.endswith.sic.3</param-name>
+        <param-value>.png</param-value>
+    </context-param>
+    <context-param>
+        <param-name>bypass.uri.endswith.sic.4</param-name>
+        <param-value>.svg_png</param-value>
+    </context-param>
+    <context-param>
+        <param-name>bypass.uri.endswith.sic.5</param-name>
+        <param-value>.svg</param-value>
+    </context-param>
+    <context-param>
+        <param-name>bypass.uri.endswith.sic.6</param-name>
+        <param-value>.js</param-value>
+    </context-param>
+    <context-param>
+        <param-name>bypass.uri.endswith.sic.7</param-name>
+        <param-value>.jpg</param-value>
+    </context-param>
+    <context-param>
+        <param-name>bypass.uri.endswith.sic.8</param-name>
+        <param-value>.html</param-value>
+    </context-param>
+    <context-param>
+        <param-name>bypass.uri.endswith.sic.9</param-name>
+        <param-value>.htm</param-value>
+    </context-param>
+    <context-param>
+        <param-name>csrf.bypass.uri.endswith.uifwkimpl.1</param-name>
+        <param-value>.js</param-value>
+    </context-param>
+    <context-param>
+        <param-name>csrf.bypass.uri.endswith.uifwkimpl.2</param-name>
+        <param-value>.css</param-value>
+    </context-param>
+    <context-param>
+        <param-name>csrf.bypass.uri.endswith.uifwkimpl.3</param-name>
+        <param-value>.gif</param-value>
+    </context-param>
+    <context-param>
+        <param-name>csrf.bypass.uri.endswith.uifwkimpl.4</param-name>
+        <param-value>.png</param-value>
+    </context-param>
+    <context-param>
+        <param-name>csrf.bypass.uri.endswith.uifwkimpl.5</param-name>
+        <param-value>.jpg</param-value>
+    </context-param>
+    <context-param>
+        <param-name>csrf.bypass.uri.endswith.uifwkimpl.6</param-name>
+        <param-value>.map</param-value>
+    </context-param>
+    <context-param>
+        <param-name>csrf.bypass.uri.endswith.uifwkimpl.7</param-name>
+        <param-value>.woff</param-value>
+    </context-param>
+    <context-param>
+        <param-name>csrf.bypass.uri.endswith.uifwkimpl.8</param-name>
+        <param-value>.woff2</param-value>
+    </context-param>
+    <context-param>
+        <param-name>csrf.bypass.uri.endswith.uifwkimpl.9</param-name>
+        <param-value>.eot</param-value>
+    </context-param>
+    <context-param>
+        <param-name>csrf.bypass.uri.endswith.uifwkimpl.10</param-name>
+        <param-value>.svg</param-value>
+    </context-param>
+    <context-param>
+        <param-name>csrf.bypass.uri.endswith.uifwkimpl.11</param-name>
+        <param-value>.ttf</param-value>
+    </context-param>
+    <context-param>
+        <param-name>csrf.bypass.uri-1</param-name>
+        <param-value>/heartbeat/heartbeat.jsp</param-value>
+    </context-param>
+    <context-param>
+        <param-name>csrf.bypass.uri.uifwkimpl.dojo.1</param-name>
+        <param-value>/dojo</param-value>
+    </context-param>
+    <context-param>
+        <param-name>csrf.bypass.uri.uifwkimpl.dojo.2</param-name>
+        <param-value>/ibmjs</param-value>
+    </context-param>
+    <context-param>
+        <param-name>csrf.bypass.uri.regex.uifwkimpl.dojo.3</param-name>
+        <param-value>/platform/scripts/sc/plat/dojo/.*.html</param-value>
+    </context-param>
+    <context-param>
+        <param-name>csrf.bypass.uri.regex.uifwkimpl.dojo.extn.4</param-name>
+        <param-value>/extn/.*.html</param-value>
+    </context-param>
+    <context-param>
+        <param-name>csrf.bypass.uri-1-log</param-name>
+        <param-value>/platform/jsps/collectlogdata.jsp</param-value>
+    </context-param>
+    <context-param>
+        <param-name>csrf.bypass.uri-2-log</param-name>
+        <param-value>/platform/jsps/setupdelta.jsp</param-value>
+    </context-param>
+    <context-param>
+        <param-name>scui-validation-rules-file-sc-1</param-name>
+        <param-value>/validationrules/sc_validationrules.xml::10</param-value>
+    </context-param>
+    <context-param>
+        <param-name>scui-regex-file-sc-1</param-name>
+        <param-value>/regularexpressions/sc_regularexpressions.xml::10</param-value>
+    </context-param>
+    <context-param>
+        <param-name>scui-validation-rules-file-yfc-datatypes-1</param-name>
+        <param-value>/validationrules/yfc_datatypes_validationrules.xml::15</param-value>
+    </context-param>
+    <context-param>
+        <param-name>scui-regex-file-yfc-datatypes-1</param-name>
+        <param-value>/regularexpressions/yfc_datatypes_regularexpressions.xml::15</param-value>
+    </context-param>
+    <context-param>
+        <param-name>scui-consider-application-cookies-only</param-name>
+        <param-value>true</param-value>
+    </context-param>
+    <context-param>
+        <param-name>scui-additional-cookie-name-list</param-name>
+        <param-value>LocaleCode,SFSLoginEnterpriseCode,SBCLoginEnterpriseCode,SCUI_COOKIE,JSESSIONID</param-value>
+    </context-param>
+    <context-param>
+        <param-name>scui-validation-rules-file-sma-datatypes-1</param-name>
+        <param-value>/validationrules/sma_datatypes_validationrules.xml::120</param-value>
+    </context-param>
+    <context-param>
+        <param-name>scui-regex-file-sma-datatypes-1</param-name>
+        <param-value>/regularexpressions/sma_datatypes_regularexpressions.xml::120</param-value>
+    </context-param>
+    <context-param>
+        <param-name>request.validation.bypass.uri.yfc.5</param-name>
+        <param-value>/yfc/popupframe.jsp</param-value>
+    </context-param>
+    <context-param>
+        <param-name>request.validation.bypass.uri.yfc.6</param-name>
+        <param-value>/yfshttpapi/genericinvoke.jsp</param-value>
+    </context-param>
+    <context-param>
+        <param-name>scui-validation-rules-file-uifwk-1</param-name>
+        <param-value>/WEB-INF/validationrules/uifwk_validationrules.xml::30</param-value>
+    </context-param>
+    <context-param>
+        <param-name>scui-regex-file-uifwk-1</param-name>
+        <param-value>/WEB-INF/regularexpressions/uifwk_regularexpressions.xml::30</param-value>
+    </context-param>
+    <context-param>
+        <param-name>bypass.uri.regex.scuifwk.32</param-name>
+        <param-value>/yfscommon/[0-9a-zA-Z-_]+.jar</param-value>
+    </context-param>
+    <context-param>
+        <param-name>bypass.uri.regex.scuifwk.32b</param-name>
+        <param-value>/console/jnlp/[0-9a-zA-Z-_]+jnlp.jsp</param-value>
+    </context-param>
+    <context-param>
+        <param-name>csrf.bypass.uri.regex.scuifwk.1a</param-name>
+        <param-value>/console/jnlp/[0-9a-zA-Z-_]+jnlp.jsp</param-value>
+    </context-param>
+    <context-param>
+        <param-name>cookie.name.1</param-name>
+        <param-value>JSESSIONID</param-value>
+    </context-param>
+    <context-param>
+        <param-name>cookie.name.2</param-name>
+        <param-value>SCUI_COOKIE_NAME</param-value>
+    </context-param>
+    <context-param>
+        <param-name>cookie.name.3</param-name>
+        <param-value>isCookieDisabled</param-value>
+    </context-param>
+    <context-param>
+        <param-name>cookie.disabled</param-name>
+        <param-value>false</param-value>
+    </context-param>
+    <context-param>
+        <param-name>scui-request-log-enabled</param-name>
+        <param-value>true</param-value>
+    </context-param>
+    <context-param>
+        <param-name>bypass.uri.1</param-name>
+        <param-value>/heartbeat/heartbeat.jsp</param-value>
+    </context-param>
+    <context-param>
+        <param-name>bypass.uri.uifwk.dojo.1</param-name>
+        <param-value>/dojo</param-value>
+    </context-param>
+    <context-param>
+        <param-name>bypass.uri.uifwk.dojo.2</param-name>
+        <param-value>/ibmjs</param-value>
+    </context-param>
+    <context-param>
+        <param-name>bypass.uri.regex.uifwk.dojo.3</param-name>
+        <param-value>/platform/scripts/sc/plat/dojo/.*.html</param-value>
+    </context-param>
+    <context-param>
+        <param-name>bypass.uri.regex.uifwk.dojo.extn.1</param-name>
+        <param-value>/extn/.*.html</param-value>
+    </context-param>
+    <context-param>
+        <param-name>yfc-filter-1</param-name>
+        <param-value>com.yantra.yfs.ui.backend.YFSCheckUserFilter</param-value>
+    </context-param>
+    <context-param>
+        <param-name>console-actionservlet-screentype-regex</param-name>
+        <param-value>^[a-zA-Z]+$</param-value>
+    </context-param>
+    <context-param>
+        <param-name>scui-access-token-validation-method</param-name>
+        <param-value>POST</param-value>
+    </context-param>
+    <context-param>
+        <param-name>scui-access-token-validation-secure</param-name>
+        <param-value>TRUE</param-value>
+    </context-param>
+    <context-param>
+        <param-name>console-servlet-request-method-supported-default</param-name>
+        <param-value>ALL</param-value>
+    </context-param>
+    <context-param>
+        <param-name>sc-ui-pagination-sorting-type</param-name>
+        <param-value>server</param-value>
+    </context-param>
+    <context-param>
+        <param-name>sc-file-download-authorization-required</param-name>
+        <param-value>TRUE</param-value>
+    </context-param>
+    <context-param>
+        <param-name>scui-request-validator-20</param-name>
+        <param-value>com.sterlingcommerce.ui.web.platform.security.SCUIDirectAccessValidator</param-value>
+    </context-param>
+    <context-param>
+        <param-name>directaccess.restricted.uri.uifwkimpl.1</param-name>
+        <param-value>/wizardxmls/</param-value>
+    </context-param>
+    <context-param>
+        <param-name>directaccess.restricted.uri.uifwkimpl.2</param-name>
+        <param-value>/mashupxmls/</param-value>
+    </context-param>
+    <context-param>
+        <param-name>directaccess.restricted.uri.uifwkimpl.3</param-name>
+        <param-value>/builder/</param-value>
+    </context-param>
+    <context-param>
+        <param-name>request.validation.bypass.uri.uifwkimpl.1</param-name>
+        <param-value>/interop/InteropHttpServlet</param-value>
+    </context-param>
+    <context-param>
+        <param-name>scui-validation-rules-file-uifwkimpl-1</param-name>
+        <param-value>/WEB-INF/validationrules/uifwkimpl_validationrules.xml::50</param-value>
+    </context-param>
+    <context-param>
+        <param-name>scui-regex-file-uifwkimpl-1</param-name>
+        <param-value>/WEB-INF/regularexpressions/uifwkimpl_regularexpressions.xml::50</param-value>
+    </context-param>
+    <context-param>
+        <param-name>bypass.uri.nouilogin.uifwkimpl.1</param-name>
+        <param-value>/NoUILoginServlet</param-value>
+    </context-param>
+    <context-param>
+        <param-name>scui-transaction-context-factory</param-name>
+        <param-value>com.sterlingcommerce.ui.web.platform.transaction.SCUITransactionContextFactory</param-value>
+    </context-param>
+    <context-param>
+        <param-name>scui-authentication-provider</param-name>
+        <param-value>com.sterlingcommerce.ui.web.platform.security.SCUIAuthenticationProvider</param-value>
+    </context-param>
+    <context-param>
+        <param-name>scui-secure-cookie-provider</param-name>
+        <param-value>com.sterlingcommerce.ui.web.framework.security.SCUISecureCookieProvider</param-value>
+    </context-param>
+    <context-param>
+        <param-name>scui-secure-token-generator</param-name>
+        <param-value>com.sterlingcommerce.ui.web.platform.security.SCUICSRFTokenGenerator</param-value>
+    </context-param>
+    <context-param>
+        <param-name>scui_login_post_url</param-name>
+        <param-value>processLogin.do</param-value>
+    </context-param>
+    <context-param>
+        <param-name>scui-localization-provider</param-name>
+        <param-value>com.sterlingcommerce.ui.web.platform.localization.SCUILocalizationProvider</param-value>
+    </context-param>
+    <context-param>
+        <param-name>scui-datatype-provider</param-name>
+        <param-value>com.sterlingcommerce.ui.web.platform.datatype.SCUIDataTypeProvider</param-value>
+    </context-param>
+    <context-param>
+        <param-name>scui-uistate-provider</param-name>
+        <param-value>com.sterlingcommerce.ui.web.platform.state.SCUIStateProvider</param-value>
+    </context-param>
+    <context-param>
+        <param-name>scui-post-authentication-provider.uiFwkImpl.1</param-name>
+        <param-value>com.sterlingcommerce.ui.web.platform.custom.SCUIAdditionalThemeSupport</param-value>
+    </context-param>
+    <context-param>
+        <param-name>scui-extensions-path-provider</param-name>
+        <param-value>com.sterlingcommerce.ui.web.platform.extensibility.SCUIOrgBasedExtnPathProvider</param-value>
+    </context-param>
+    <context-param>
+        <param-name>cookie.name.10</param-name>
+        <param-value>Theme</param-value>
+    </context-param>
+    <context-param>
+        <param-name>cookie.name.11</param-name>
+        <param-value>LocalCode</param-value>
+    </context-param>
+    <context-param>
+        <param-name>directaccess.restricted.uri.sbc.1</param-name>
+        <param-value>/sbc/metadata/</param-value>
+    </context-param>
+    <context-param>
+        <param-name>directaccess.restricted.uri.regex.sbc.2</param-name>
+        <param-value>/sbc/.*.jsp</param-value>
+    </context-param>
+    <context-param>
+        <param-name>sbc-mashup-def</param-name>
+        <param-value>/mashupxmls/sbc/mashupdefs.xml</param-value>
+    </context-param>
+    <context-param>
+        <param-name>sterling-webchannel-itempreview-url</param-name>
+        <param-value/>
+    </context-param>
+    <context-param>
+        <param-name>sterling-webchannel-visualmodeler-url</param-name>
+        <param-value/>
+    </context-param>
+    <context-param>
+        <param-name>sbc-businessintelligence-url</param-name>
+        <param-value/>
+    </context-param>
+    <context-param>
+        <param-name>sbc-jsb-def</param-name>
+        <param-value>/builder/sbc/jsbdefs.xml</param-value>
+    </context-param>
+    <context-param>
+        <param-name>sbc-dblocalize-attrib-list</param-name>
+        <param-value>/sbc/metadata/dblocalize/dblocalizeattr.xml</param-value>
+    </context-param>
+    <context-param>
+        <param-name>scui-loginhomepage-default
+				</param-name>
+        <param-value>/sbc/home/ApplicationHome.do</param-value>
+    </context-param>
+    <context-param>
+        <param-name>console-application-id</param-name>
+        <param-value>SBCSYS00001</param-value>
+    </context-param>
+    <context-param>
+        <param-name>scui-login-page</param-name>
+        <param-value>/sbc/login/redirectlogin.jsp</param-value>
+    </context-param>
+    <context-param>
+        <param-name>scui-suppress-request-validation</param-name>
+        <param-value>FALSE</param-value>
+    </context-param>
+    <context-param>
+        <param-name>bypass.uri.rcp.50</param-name>
+        <param-value>/RcpServlet</param-value>
+    </context-param>
+    <context-param>
+        <param-name>bypass.uri.rcp.4</param-name>
+        <param-value>/RcpCSHelpServlet</param-value>
+    </context-param>
+    <context-param>
+        <param-name>bypass.uri.ssdcs.1</param-name>
+        <param-value>/accessTokenServlet</param-value>
+    </context-param>
+    <context-param>
+        <param-name>bypass.uri.endswith.ssdcs.2</param-name>
+        <param-value>.css</param-value>
+    </context-param>
+    <context-param>
+        <param-name>bypass.uri.sbc.1</param-name>
+        <param-value>/sbc/login.do</param-value>
+    </context-param>
+    <context-param>
+        <param-name>bypass.uri.sbc.2</param-name>
+        <param-value>/sbc/login/login.jsp</param-value>
+    </context-param>
+    <context-param>
+        <param-name>bypass.uri.endswith.sbc.77</param-name>
+        <param-value>.gif</param-value>
+    </context-param>
+    <context-param>
+        <param-name>bypass.uri.sbc.3</param-name>
+        <param-value>/sbc/login/login_config.js</param-value>
+    </context-param>
+    <context-param>
+        <param-name>bypass.uri.sbc.4</param-name>
+        <param-value>/sbc/login/login.js</param-value>
+    </context-param>
+    <context-param>
+        <param-name>bypass.uri.sbc.5</param-name>
+        <param-value>/sbc/resources/core/icons/sterling_logo1.gif</param-value>
+    </context-param>
+    <context-param>
+        <param-name>bypass.uri.sbc.6</param-name>
+        <param-value>/ext</param-value>
+    </context-param>
+    <context-param>
+        <param-name>bypass.uri.sbc.7</param-name>
+        <param-value>/sbc/resources/core/css/sbc-base.css</param-value>
+    </context-param>
+    <context-param>
+        <param-name>bypass.uri.sbc.8</param-name>
+        <param-value>/sbc/resources/core/css/sbc-core.css</param-value>
+    </context-param>
+    <context-param>
+        <param-name>bypass.uri.sbc.9</param-name>
+        <param-value>/sbc/resources/core/css/sbc-images.css</param-value>
+    </context-param>
+    <context-param>
+        <param-name>bypass.uri.sbc.10</param-name>
+        <param-value>/sbc/resources/core/css/sbc.css</param-value>
+    </context-param>
+    <context-param>
+        <param-name>bypass.uri.sbc.11</param-name>
+        <param-value>/sbc/resources/core/icons</param-value>
+    </context-param>
+    <context-param>
+        <param-name>bypass.uri.sbc.12</param-name>
+        <param-value>/sbc/launch.jsp</param-value>
+    </context-param>
+    <context-param>
+        <param-name>bypass.uri.sbc.13</param-name>
+        <param-value>/sbc/login/redirectlogin.jsp</param-value>
+    </context-param>
+    <context-param>
+        <param-name>bypass.uri.sbc.14</param-name>
+        <param-value>/sbc/logout/logout.jsp</param-value>
+    </context-param>
+    <context-param>
+        <param-name>bypass.uri.sbc.15</param-name>
+        <param-value>/appcommon</param-value>
+    </context-param>
+    <context-param>
+        <param-name>scui-authorization-provider</param-name>
+        <param-value>com.sterlingcommerce.sbc.core.auth.SBCAuthorizationProvider</param-value>
+    </context-param>
+    <context-param>
+        <param-name>sci-aboutbox-url</param-name>
+        <param-value>http://www.ibm.com</param-value>
+    </context-param>
+    <context-param>
+        <param-name>scui-post-authentication-provider.sbcpostauth</param-name>
+        <param-value>com.sterlingcommerce.sbc.core.auth.SBCPostAuthProvider</param-value>
+    </context-param>
+    <context-param>
+        <param-name>scui-csrf-validator-request-method</param-name>
+        <param-value>POST</param-value>
+    </context-param>
+    <context-param>
+        <param-name>csrf.bypass.uri.sbc.2</param-name>
+        <param-value>/sbc/item/VM-Test-Configure.action</param-value>
+    </context-param>
+    <context-param>
+        <param-name>csrf.bypass.uri.sbc.logout.2</param-name>
+        <param-value>/sbc/logout.do</param-value>
+    </context-param>
+    <context-param>
+        <param-name>bypass.uri.endswith.sbc.120</param-name>
+        <param-value>.ttf</param-value>
+    </context-param>
+    <context-param>
+        <param-name>bypass.uri.endswith.sbc.121</param-name>
+        <param-value>.woff</param-value>
+    </context-param>
+    <context-param>
+        <param-name>csrf.bypass.uri.regex.sbc.122</param-name>
+        <param-value>/sbc/common/configurator/translation_data/configurator-[a-z][a-z]_[A-Z][A-Z].json</param-value>
+    </context-param>
+    <context-param>
+        <param-name>bypass.uri.endswith.sbc.123</param-name>
+        <param-value>.eot</param-value>
+    </context-param>
+    <context-param>
+        <param-name>scui-end-transaction-before-response</param-name>
+        <param-value>N</param-value>
+    </context-param>
+    <context-param>
+        <param-name>sbc-request-param-char-list</param-name>
+        <param-value>/sbc/metadata/resources/sbcrequestparamcharlist.properties</param-value>
+    </context-param>
+    <context-param>
+        <param-name>sbc-display-convertor-list</param-name>
+        <param-value>/sbc/metadata/displayconvertor/sbcdisplayconvertor.xml</param-value>
+    </context-param>
+    <context-param>
+        <param-name>sc-file-upload-provider</param-name>
+        <param-value>com.sterlingcommerce.ui.web.platform.file.SCUIFileUploadProviderImpl</param-value>
+    </context-param>
+    <context-param>
+        <param-name>sc-file-download-provider</param-name>
+        <param-value>com.sterlingcommerce.ui.web.platform.file.SCUIFileDownloadProviderImpl</param-value>
+    </context-param>
+    <context-param>
+        <param-name>scui-regex-file-sbc-1</param-name>
+        <param-value>/WEB-INF/regularexpressions/sbc_regularexpressions.xml::360</param-value>
+    </context-param>
+    <context-param>
+        <param-name>scui-validation-rules-file-sbc-1</param-name>
+        <param-value>/WEB-INF/validationrules/sbc_validationrules.xml::360</param-value>
+    </context-param>
+    <context-param>
+        <param-name>appcommon-openform-datatype-list-sbc-1</param-name>
+        <param-value>/WEB-INF/datatypevalidationrules/sbc_datatypeValidationRules.xml::360</param-value>
+    </context-param>
+    <context-param>
+        <param-name>scui-stacktrace-resourceid</param-name>
+        <param-value>SBCSYS00012</param-value>
+    </context-param>
+    <context-param>
+        <param-name>request.validation.bypass.uri.regex.sbc.1</param-name>
+        <param-value>/.*includeMenu/includeMenu.*js</param-value>
+    </context-param>
+    <context-param>
+        <param-name>scui-detailed-validation-exception-message</param-name>
+        <param-value>true</param-value>
+    </context-param>
+    <context-param>
+        <param-name>scui-xapi-mashup-security-mode</param-name>
+        <param-value>NONE</param-value>
+    </context-param>
+    <context-param>
+        <param-name>KC_DOC_SUPPORTED_PID</param-name>
+        <param-value>ccc,oms,cpq</param-value>
+    </context-param>
+    <context-param>
+        <param-name>bypass.uri.sbc.appmanager.64</param-name>
+        <param-value>/servlets/com.yantra.app.config.YantraConfigServlet
+				</param-value>
+    </context-param>
+    <context-param>
+        <param-name>csrf.bypass.uri.regex.sbc.154</param-name>
+        <param-value>/servlets/com.yantra.*</param-value>
+    </context-param>
+    <context-param>
+        <param-name>csrf.bypass.uri.regex.sbc.1</param-name>
+        <param-value>/yfscommon/[0-9a-zA-Z-_/]+.res</param-value>
+    </context-param>
+    <context-param>
+        <param-name>csrf.bypass.uri.regex.sbc.2</param-name>
+        <param-value>/yfscommon/[0-9a-zA-Z-_/$]+.class</param-value>
+    </context-param>
+    <context-param>
+        <param-name>csrf.bypass.uri.regex.sbc.3</param-name>
+        <param-value>/yfscommon/[0-9a-zA-Z-_/]+.properties</param-value>
+    </context-param>
+    <context-param>
+        <param-name>csrf.bypass.uri.regex.sbc.4</param-name>
+        <param-value>/yfscommon/[0-9a-zA-Z-_/]+.props</param-value>
+    </context-param>
+    <context-param>
+        <param-name>csrf.bypass.uri.regex.sbc.5</param-name>
+        <param-value>/yfscommon/[0-9a-zA-Z-_/]+.ivl</param-value>
+    </context-param>
+    <context-param>
+        <param-name>scui-request-validator-10</param-name>
+        <param-value>com.sterlingcommerce.sbc.core.validator.SBCCSRFTokenValidator</param-value>
+    </context-param>
+    <filter>
+        <filter-name>UIFwk Impl Filter</filter-name>
+        <filter-class>com.sterlingcommerce.ui.web.platform.filters.SCUIPlatformImplFilter</filter-class>
+    </filter>
+    <filter>
+        <filter-name>Safe Request Filter</filter-name>
+        <filter-class>com.sterlingcommerce.security.dv.web.SCUISafeRequestFilter</filter-class>
+    </filter>
+    <filter>
+        <filter-name>Request Validator Filter</filter-name>
+        <filter-class>com.sterlingcommerce.security.dv.web.SCUIRequestValidatorFilter</filter-class>
+    </filter>
+    <filter>
+        <filter-name>Request Log Filter</filter-name>
+        <filter-class>com.sterlingcommerce.ui.web.framework.filters.SCUIRequestLogFilter</filter-class>
+    </filter>
+    <filter>
+        <filter-name>Character Encoding Filter</filter-name>
+        <filter-class>com.sterlingcommerce.ui.web.framework.filters.SCUICharacterEncodingFilter</filter-class>
+    </filter>
+    <filter>
+        <filter-name>UI Transaction Filter</filter-name>
+        <filter-class>com.sterlingcommerce.ui.web.framework.filters.SCUITransactionFilter</filter-class>
+    </filter>
+    <filter>
+        <filter-name>UI Authentication Filter</filter-name>
+        <filter-class>com.sterlingcommerce.ui.web.framework.filters.SCUIAuthenticationFilter</filter-class>
+    </filter>
+    <filter>
+        <filter-name>Token Validation Filter</filter-name>
+        <filter-class>com.sterlingcommerce.woodstock.security.TokenValidationFilter</filter-class>
+    </filter>
+    <filter>
+        <filter-name>ETag support filter</filter-name>
+        <filter-class>com.sterlingcommerce.ui.web.framework.filters.SCUIETagSupportFilter</filter-class>
+    </filter>
+    <filter>
+        <filter-name>platformActionResultFilter</filter-name>
+        <filter-class>com.sterlingcommerce.ui.web.platform.filters.SCUIPlatformActionResultFilter</filter-class>
+    </filter>
+    <filter>
+        <filter-name>Http Response Cache Filter</filter-name>
+        <filter-class>com.sterlingcommerce.ui.web.platform.filters.SCUIHttpResponseCacheFilter</filter-class>
+        <init-param>
+            <param-name>fileExtensionsToBeIgnoredForDisableCaching</param-name>
+            <param-value>.css,.js,.html,.gif,.jpg,.json</param-value>
+        </init-param>
+    </filter>
+    <filter>
+        <filter-name>svg-transcoder-filter</filter-name>
+        <filter-class>com.sterlingcommerce.imagebuilder.filters.ServerSideSVGFilter</filter-class>
+    </filter>
+    <filter>
+        <filter-name>CacheFilter</filter-name>
+        <filter-class>com.sterlingcommerce.imagebuilder.filters.CacheFilter</filter-class>
+        <init-param>
+            <param-name>cacheTimeout</param-name>
+            <param-value>60</param-value>
+        </init-param>
+    </filter>
+    <filter>
+        <filter-name>StrutsLocaleSettingFilter</filter-name>
+        <filter-class>com.sterlingcommerce.sic.servlet.SICLocaleSettingFilter</filter-class>
+    </filter>
+    <filter>
+        <filter-name>Cross Frame Protection Filter</filter-name>
+        <filter-class>com.sterlingcommerce.woodstock.security.CrossFrameProtectionFilter</filter-class>
+        <init-param>
+            <param-name>option</param-name>
+            <param-value>SAMEORIGIN</param-value>
+        </init-param>
+        <init-param>
+            <param-name>compatibilityMode</param-name>
+            <param-value>IE=IE8</param-value>
+        </init-param>
+    </filter>
+    <filter>
+        <filter-name>SBC Core Filter</filter-name>
+        <filter-class>com.sterlingcommerce.sbc.core.filters.SBCCoreFilter</filter-class>
+    </filter>
+    <filter>
+        <filter-name>ContextTrackingFilter</filter-name>
+        <filter-class>com.sterlingcommerce.sic.servlet.ContextTrackingFilter</filter-class>
+        <init-param>
+            <param-name>Parameters</param-name>
+            <param-value>IgnoreCustomerEntitlements,ConfigurationDate</param-value>
+        </init-param>
+    </filter>
+    <filter>
+        <filter-name>struts2</filter-name>
+        <filter-class>org.apache.struts2.dispatcher.ng.filter.StrutsPrepareAndExecuteFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>StrutsLocaleSettingFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+    <filter-mapping>
+        <filter-name>CacheFilter</filter-name>
+        <url-pattern>*.svg_png</url-pattern>
+    </filter-mapping>
+    <filter-mapping>
+        <filter-name>svg-transcoder-filter</filter-name>
+        <url-pattern>*.svg_png</url-pattern>
+    </filter-mapping>
+    <filter-mapping>
+        <filter-name>UIFwk Impl Filter</filter-name>
+        <url-pattern>/*</url-pattern>
+        <dispatcher>REQUEST</dispatcher>
+    </filter-mapping>
+    <filter-mapping>
+        <filter-name>Safe Request Filter</filter-name>
+        <url-pattern>/*</url-pattern>
+        <dispatcher>REQUEST</dispatcher>
+    </filter-mapping>
+    <filter-mapping>
+        <filter-name>Request Validator Filter</filter-name>
+        <url-pattern>/*</url-pattern>
+        <dispatcher>REQUEST</dispatcher>
+    </filter-mapping>
+    <filter-mapping>
+        <filter-name>Request Log Filter</filter-name>
+        <url-pattern>/*</url-pattern>
+        <dispatcher>REQUEST</dispatcher>
+    </filter-mapping>
+    <filter-mapping>
+        <filter-name>Character Encoding Filter</filter-name>
+        <url-pattern>/*</url-pattern>
+        <dispatcher>REQUEST</dispatcher>
+        <dispatcher>INCLUDE</dispatcher>
+        <dispatcher>FORWARD</dispatcher>
+    </filter-mapping>
+    <filter-mapping>
+        <filter-name>UI Transaction Filter</filter-name>
+        <url-pattern>/*</url-pattern>
+        <dispatcher>REQUEST</dispatcher>
+    </filter-mapping>
+    <filter-mapping>
+        <filter-name>UI Authentication Filter</filter-name>
+        <url-pattern>/*</url-pattern>
+        <dispatcher>REQUEST</dispatcher>
+    </filter-mapping>
+    <filter-mapping>
+        <filter-name>Token Validation Filter</filter-name>
+        <url-pattern>/yfscommon/*</url-pattern>
+    </filter-mapping>
+    <filter-mapping>
+        <filter-name>Token Validation Filter</filter-name>
+        <url-pattern>/console/jnlp/*jnlp.jsp</url-pattern>
+    </filter-mapping>
+    <filter-mapping>
+        <filter-name>ETag support filter</filter-name>
+        <url-pattern>*.css</url-pattern>
+    </filter-mapping>
+    <filter-mapping>
+        <filter-name>ETag support filter</filter-name>
+        <url-pattern>*.js</url-pattern>
+    </filter-mapping>
+    <filter-mapping>
+        <filter-name>platformActionResultFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+        <dispatcher>REQUEST</dispatcher>
+        <dispatcher>INCLUDE</dispatcher>
+        <dispatcher>FORWARD</dispatcher>
+    </filter-mapping>
+    <filter-mapping>
+        <filter-name>Http Response Cache Filter</filter-name>
+        <url-pattern>/*</url-pattern>
+        <dispatcher>REQUEST</dispatcher>
+        <dispatcher>INCLUDE</dispatcher>
+        <dispatcher>FORWARD</dispatcher>
+    </filter-mapping>
+    <filter-mapping>
+        <filter-name>Cross Frame Protection Filter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+    <filter-mapping>
+        <filter-name>SBC Core Filter</filter-name>
+        <url-pattern>/sbc/*</url-pattern>
+        <dispatcher>REQUEST</dispatcher>
+        <dispatcher>INCLUDE</dispatcher>
+        <dispatcher>FORWARD</dispatcher>
+    </filter-mapping>
+    <filter-mapping>
+        <filter-name>struts2</filter-name>
+        <url-pattern>*.do</url-pattern>
+        <dispatcher>REQUEST</dispatcher>
+        <dispatcher>INCLUDE</dispatcher>
+        <dispatcher>FORWARD</dispatcher>
+    </filter-mapping>
+    <filter-mapping>
+        <filter-name>struts2</filter-name>
+        <url-pattern>*.action</url-pattern>
+        <dispatcher>REQUEST</dispatcher>
+        <dispatcher>INCLUDE</dispatcher>
+        <dispatcher>FORWARD</dispatcher>
+    </filter-mapping>
+    <filter-mapping>
+        <filter-name>struts2</filter-name>
+        <url-pattern>*.dsvg</url-pattern>
+        <dispatcher>REQUEST</dispatcher>
+        <dispatcher>INCLUDE</dispatcher>
+        <dispatcher>FORWARD</dispatcher>
+    </filter-mapping>
+    <filter-mapping>
+        <filter-name>struts2</filter-name>
+        <url-pattern>*.svg_png</url-pattern>
+        <dispatcher>REQUEST</dispatcher>
+        <dispatcher>INCLUDE</dispatcher>
+        <dispatcher>FORWARD</dispatcher>
+    </filter-mapping>
+    <filter-mapping>
+        <filter-name>struts2</filter-name>
+        <url-pattern>/images/*</url-pattern>
+        <dispatcher>REQUEST</dispatcher>
+        <dispatcher>INCLUDE</dispatcher>
+        <dispatcher>FORWARD</dispatcher>
+    </filter-mapping>
+    <listener id="listener_1">
+        <listener-class>com.sterlingcommerce.ui.web.framework.listeners.SCUISessionListener</listener-class>
+    </listener>
+    <listener id="listener_2">
+        <listener-class>com.yantra.ycp.ui.backend.YCPSessionListener</listener-class>
+    </listener>
+    <servlet id="Servlet_1">
+        <display-name>AppcommonInitServlet</display-name>
+        <servlet-name>AppcommonInitServlet</servlet-name>
+        <servlet-class>
+					com.sterlingcommerce.appcommon.core.servlets.AppcommonInitServlet
+				</servlet-class>
+        <load-on-startup>300</load-on-startup>
+    </servlet>
+    <servlet id="Servlet_2">
+        <description>Sterling Generate PDF Servlet</description>
+        <display-name>Generate PDF Servlet</display-name>
+        <servlet-name>FOPPDFReport</servlet-name>
+        <servlet-class>com.sterlingcommerce.appcommon.core.servlets.AppcommonGeneratePrintServlet</servlet-class>
+    </servlet>
+    <servlet id="Servlet_3">
+        <servlet-name>SAAFOPReport</servlet-name>
+        <servlet-class>com.yantra.pca.saa.servlets.SAAInteropFOPServlet</servlet-class>
+    </servlet>
+    <servlet id="Servlet_4">
+        <servlet-name>InitializationServlet</servlet-name>
+        <servlet-class>com.comergent.reference.apps.configurator.InitializationServlet</servlet-class>
+        <init-param>
+            <param-name>sic-param-value-validation-rule-properties</param-name>
+            <param-value>sic_ParamValue_ValidationRules.properties</param-value>
+        </init-param>
+        <init-param>
+            <param-name>sic-param-value-validation-rule-properties-extn</param-name>
+            <param-value>sic_ParamValue_ValidationRules_extn.properties</param-value>
+        </init-param>
+        <init-param>
+            <param-name>sic-input-type-validation-rule-properties</param-name>
+            <param-value>sic_InputType_ValidationRules.properties</param-value>
+        </init-param>
+        <init-param>
+            <param-name>sic-input-type-validation-rule-properties-extn</param-name>
+            <param-value>sic_InputType_ValidationRules_extn.properties</param-value>
+        </init-param>
+        <load-on-startup>500</load-on-startup>
+    </servlet>
+    <servlet id="Servlet_5">
+        <description>SCUIAdapterInitializerServlet</description>
+        <display-name>SCUIAdapterInitializerServlet</display-name>
+        <servlet-name>SCUIAdapterInitializerServlet</servlet-name>
+        <servlet-class>com.sterlingcommerce.security.dv.ui.SCUIAdapterInitializerServlet</servlet-class>
+        <load-on-startup>0</load-on-startup>
+    </servlet>
+    <servlet id="Servlet_6">
+        <description>requestValidationInitServlet</description>
+        <display-name>requestValidationInitServlet</display-name>
+        <servlet-name>requestValidationInitServlet</servlet-name>
+        <servlet-class>com.sterlingcommerce.security.dv.web.SCUIValidationInitServlet</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    <servlet id="Servlet_7">
+        <description>SCUIDataValidationInitServlet</description>
+        <display-name>SCUIDataValidationInitServlet</display-name>
+        <servlet-name>SCUIDataValidationInitServlet</servlet-name>
+        <servlet-class>com.sterlingcommerce.ui.web.framework.security.SCUIDataValidationInitServlet</servlet-class>
+        <load-on-startup>3</load-on-startup>
+    </servlet>
+    <servlet id="Servlet_8">
+        <display-name>BaseUIFrameworkInitializerServlet</display-name>
+        <servlet-name>baseUIInitializerServlet</servlet-name>
+        <servlet-class>com.sterlingcommerce.ui.web.framework.servlets.SCUIInitializerServlet</servlet-class>
+        <load-on-startup>5</load-on-startup>
+    </servlet>
+    <servlet id="Servlet_9">
+        <description>Load Library Servlet</description>
+        <display-name>Load Library Servlet</display-name>
+        <servlet-name>jsLibServlet</servlet-name>
+        <servlet-class>com.sterlingcommerce.ui.web.framework.servlets.SCUIJSLibServlet</servlet-class>
+    </servlet>
+    <servlet id="Servlet_10">
+        <description>DataType Servlet</description>
+        <display-name>DataType Servlet</display-name>
+        <servlet-name>dataTypeServlet</servlet-name>
+        <servlet-class>com.sterlingcommerce.ui.web.framework.servlets.SCUIDataTypeServlet</servlet-class>
+    </servlet>
+    <servlet id="Servlet_11">
+        <description>DOH Test Servlet</description>
+        <display-name>DOH Test Servlet</display-name>
+        <servlet-name>dohTestServlet</servlet-name>
+        <servlet-class>com.sterlingcommerce.ui.web.framework.servlets.SCUIDohTestServlet
+				</servlet-class>
+    </servlet>
+    <servlet id="Servlet_12">
+        <description>Dojo DataType Servlet</description>
+        <display-name>Dojo DataType Servlet</display-name>
+        <servlet-name>dojoDataTypeServlet</servlet-name>
+        <servlet-class>com.sterlingcommerce.ui.web.framework.servlets.SCUIDojoDataTypeServlet</servlet-class>
+    </servlet>
+    <servlet id="Servlet_13">
+        <description>Dojo Screen Extension Servlet</description>
+        <display-name>Dojo Screen Extension Servlet</display-name>
+        <servlet-name>dojoScreenExtnServlet</servlet-name>
+        <servlet-class>com.sterlingcommerce.ui.web.framework.servlets.SCUIDojoScreenExtnServlet</servlet-class>
+    </servlet>
+    <servlet id="Servlet_14">
+        <description>Server Date Servlet</description>
+        <display-name>Server Date Servlet</display-name>
+        <servlet-name>serverDateServlet</servlet-name>
+        <servlet-class>com.sterlingcommerce.ui.web.framework.servlets.SCUIServerDateFetchServlet</servlet-class>
+    </servlet>
+    <servlet id="Servlet_15">
+        <description>Sterling web ui state manager servlet</description>
+        <display-name>SC UI State Servlet</display-name>
+        <servlet-name>SCUIStateServlet</servlet-name>
+        <servlet-class>com.sterlingcommerce.ui.web.framework.servlets.state.SCUIStateServlet</servlet-class>
+    </servlet>
+    <servlet id="Servlet_16">
+        <display-name>cacheHandlerServlet</display-name>
+        <servlet-name>cacheHandlerServlet</servlet-name>
+        <servlet-class>com.sterlingcommerce.ui.web.framework.servlets.SCUICacheHandlerServlet</servlet-class>
+    </servlet>
+    <servlet id="Servlet_17">
+        <description>Activity Tracking Request Servlet</description>
+        <display-name>Activity Tracking request Servlet</display-name>
+        <servlet-name>SCUIActivityTrackingRequestServlet</servlet-name>
+        <servlet-class>com.sterlingcommerce.ui.web.framework.servlets.SCUIActivityTrackingRequestServlet</servlet-class>
+    </servlet>
+    <servlet id="Servlet_18">
+        <description>Post Initialization Servlet</description>
+        <display-name>Post Initialization Servlet</display-name>
+        <servlet-name>postinitservlet</servlet-name>
+        <servlet-class>com.yantra.appserver.PostServletInitializer</servlet-class>
+        <load-on-startup>3</load-on-startup>
+    </servlet>
+    <servlet id="Servlet_19">
+        <description>Initializer Servlet</description>
+        <display-name>Initializer Servlet</display-name>
+        <servlet-name>initservlet</servlet-name>
+        <servlet-class>com.yantra.appserver.ConsoleUIInitializer</servlet-class>
+        <load-on-startup>2</load-on-startup>
+    </servlet>
+    <servlet id="Servlet_20">
+        <servlet-name>Initializer</servlet-name>
+        <servlet-class>com.yantra.appserver.ServletInitializer</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    <servlet id="Servlet_21">
+        <description>Access Token Validator Servlet</description>
+        <display-name>Access Token Validator Servlet</display-name>
+        <servlet-name>accessTokenValidatorServlet</servlet-name>
+        <servlet-class>com.yantra.yfc.ui.backend.servlets.AccessTokenValidatorServlet</servlet-class>
+        <init-param>
+            <param-name>requestMethodSupported</param-name>
+            <param-value>POST</param-value>
+        </init-param>
+    </servlet>
+    <servlet id="Servlet_22">
+        <description>Authentication Servlet</description>
+        <display-name>Auth Servlet</display-name>
+        <servlet-name>authservlet</servlet-name>
+        <servlet-class>com.yantra.ycp.cognos.YantraAuthenticationServlet</servlet-class>
+        <init-param>
+            <param-name>requestMethodSupported</param-name>
+            <param-value>POST</param-value>
+        </init-param>
+    </servlet>
+    <servlet id="Servlet_23">
+        <description>Saved Search Servlet</description>
+        <display-name>Saved Search Servlet</display-name>
+        <servlet-name>savedsearchservlet</servlet-name>
+        <servlet-class>com.yantra.yfc.ui.backend.servlets.SavedSearchServlet</servlet-class>
+        <init-param>
+            <param-name>requestMethodSupported</param-name>
+            <param-value>POST</param-value>
+        </init-param>
+    </servlet>
+    <servlet id="Servlet_24">
+        <description>Image Servlet</description>
+        <display-name>Image Servlet</display-name>
+        <servlet-name>imageservlet</servlet-name>
+        <servlet-class>com.yantra.yfc.ui.backend.servlets.ImageServlet</servlet-class>
+        <init-param>
+            <param-name>requestMethodSupported</param-name>
+            <param-value>ALL</param-value>
+        </init-param>
+    </servlet>
+    <servlet id="Servlet_25">
+        <description>List Servlet</description>
+        <display-name>List Servlet</display-name>
+        <servlet-name>listservlet</servlet-name>
+        <servlet-class>com.yantra.yfc.ui.backend.servlets.ListServlet</servlet-class>
+        <init-param>
+            <param-name>requestMethodSupported</param-name>
+            <param-value>POST</param-value>
+        </init-param>
+    </servlet>
+    <servlet id="Servlet_26">
+        <description>Detail Servlet</description>
+        <display-name>Detail Servlet</display-name>
+        <servlet-name>detailservlet</servlet-name>
+        <servlet-class>com.yantra.yfc.ui.backend.servlets.DetailServlet</servlet-class>
+        <init-param>
+            <param-name>requestMethodSupported</param-name>
+            <param-value>POST</param-value>
+        </init-param>
+    </servlet>
+    <servlet id="Servlet_27">
+        <description>Search Servlet</description>
+        <display-name>Search Servlet</display-name>
+        <servlet-name>searchservlet</servlet-name>
+        <servlet-class>com.yantra.yfc.ui.backend.servlets.SearchServlet</servlet-class>
+        <init-param>
+            <param-name>requestMethodSupported</param-name>
+            <param-value>POST</param-value>
+        </init-param>
+    </servlet>
+    <servlet id="Servlet_28">
+        <description>Console Servlet</description>
+        <display-name>Console Servlet</display-name>
+        <servlet-name>consoleservlet</servlet-name>
+        <servlet-class>com.yantra.yfc.ui.backend.servlets.ConsoleServlet</servlet-class>
+        <init-param>
+            <param-name>requestMethodSupported</param-name>
+            <param-value>POST</param-value>
+        </init-param>
+    </servlet>
+    <servlet id="Servlet_29">
+        <description>Action Servlet</description>
+        <display-name>Action Servlet</display-name>
+        <servlet-name>actionservlet</servlet-name>
+        <servlet-class>com.yantra.yfc.ui.backend.servlets.ActionServlet</servlet-class>
+        <init-param>
+            <param-name>requestMethodSupported</param-name>
+            <param-value>POST</param-value>
+        </init-param>
+    </servlet>
+    <servlet id="Servlet_30">
+        <servlet-name>WmConfigServlet</servlet-name>
+        <servlet-class>com.yantra.interop.ui.backend.WmConfigServlet</servlet-class>
+        <init-param>
+            <param-name>requestMethodSupported</param-name>
+            <param-value>POST</param-value>
+        </init-param>
+    </servlet>
+    <servlet id="Servlet_31">
+        <servlet-name>entityservlet</servlet-name>
+        <servlet-class>com.yantra.util.YEntityServlet</servlet-class>
+        <init-param>
+            <param-name>requestMethodSupported</param-name>
+            <param-value>POST</param-value>
+        </init-param>
+    </servlet>
+    <servlet id="Servlet_32">
+        <servlet-name>APIServlet</servlet-name>
+        <servlet-class>com.yantra.ycp.util.YCPAPIServlet</servlet-class>
+        <init-param>
+            <param-name>requestMethodSupported</param-name>
+            <param-value>ALL</param-value>
+        </init-param>
+    </servlet>
+    <servlet id="Servlet_33">
+        <servlet-name>YHMMonitorServlet</servlet-name>
+        <servlet-class>com.yantra.ycp.hm.ui.backend.YHMMonitorServlet</servlet-class>
+        <init-param>
+            <param-name>requestMethodSupported</param-name>
+            <param-value>ALL</param-value>
+        </init-param>
+    </servlet>
+    <servlet id="Servlet_34">
+        <description>Sterling File Upload Servlet</description>
+        <display-name>File Upload Servlet</display-name>
+        <servlet-name>FileUploadServlet</servlet-name>
+        <servlet-class>com.sterlingcommerce.woodstock.util.frame.file.base.servlets.PLTFileUploadServlet</servlet-class>
+        <init-param>
+            <param-name>requestMethodSupported</param-name>
+            <param-value>ALL</param-value>
+        </init-param>
+    </servlet>
+    <servlet id="Servlet_35">
+        <description>Sterling File Download Servlet</description>
+        <display-name>File Download Servlet</display-name>
+        <servlet-name>FileDownloadServlet</servlet-name>
+        <servlet-class>com.sterlingcommerce.woodstock.util.frame.file.base.servlets.PLTFileDownloadServlet</servlet-class>
+        <init-param>
+            <param-name>requestMethodSupported</param-name>
+            <param-value>ALL</param-value>
+        </init-param>
+    </servlet>
+    <servlet id="Servlet_36">
+        <description>Activity Tracking Request Servlet</description>
+        <display-name>Activity Tracking Request Servlet</display-name>
+        <servlet-name>PLTActivityTrackingRequestServlet</servlet-name>
+        <servlet-class>com.yantra.yfc.ui.backend.servlets.PLTActivityTrackingRequestServlet</servlet-class>
+        <init-param>
+            <param-name>requestMethodSupported</param-name>
+            <param-value>ALL</param-value>
+        </init-param>
+    </servlet>
+    <servlet id="Servlet_37">
+        <description>Activity Tracking Init Servlet</description>
+        <display-name>Activity Tracking Init Servlet</display-name>
+        <servlet-name>PLTActivityTrackingInitServlet</servlet-name>
+        <servlet-class>com.yantra.yfc.ui.backend.servlets.PLTActivityTrackingInitServlet</servlet-class>
+        <init-param>
+            <param-name>requestMethodSupported</param-name>
+            <param-value>ALL</param-value>
+        </init-param>
+        <load-on-startup>5</load-on-startup>
+    </servlet>
+    <servlet id="Servlet_38">
+        <description>SCUIImplDVLoggerInitServlet</description>
+        <display-name>SCUIImplDVLoggerInitServlet</display-name>
+        <servlet-name>SCUIImplDVLoggerInitServlet</servlet-name>
+        <servlet-class>com.sterlingcommerce.ui.web.platform.security.SCUIImplDVLoggerInitServlet</servlet-class>
+        <load-on-startup>0</load-on-startup>
+    </servlet>
+    <servlet id="Servlet_39">
+        <description>platformInitializeServlet</description>
+        <display-name>platformInitializeServlet</display-name>
+        <servlet-name>platformInitializeServlet</servlet-name>
+        <servlet-class>com.sterlingcommerce.ui.web.platform.servlets.SCUIPlatformInitializerServlet</servlet-class>
+        <load-on-startup>201</load-on-startup>
+    </servlet>
+    <servlet id="Servlet_40">
+        <description>platformExtensionsInitializeServlet</description>
+        <display-name>platformExtensionsInitializeServlet</display-name>
+        <servlet-name>platformExtensionsInitializeServlet</servlet-name>
+        <servlet-class>com.sterlingcommerce.ui.web.platform.servlets.SCUIPlatformExtensionsInitializerServlet</servlet-class>
+        <load-on-startup>999</load-on-startup>
+    </servlet>
+    <servlet id="Servlet_41">
+        <display-name>logLevelEnableServlet</display-name>
+        <servlet-name>logLevelEnableServlet</servlet-name>
+        <servlet-class>com.sterlingcommerce.ui.web.platform.servlets.SCUILogLevelEnableServlet</servlet-class>
+    </servlet>
+    <servlet id="Servlet_42">
+        <description>includeResourcePermissionServlet</description>
+        <display-name>includeResourcePermissionServlet</display-name>
+        <servlet-name>includeResourcePermissionServlet</servlet-name>
+        <servlet-class>com.sterlingcommerce.ui.web.platform.servlets.SCUIIncludeResourcePermissionServlet</servlet-class>
+    </servlet>
+    <servlet id="Servlet_43">
+        <description>includeUserInfoServlet</description>
+        <display-name>includeUserInfoServlet</display-name>
+        <servlet-name>includeUserInfoServlet</servlet-name>
+        <servlet-class>com.sterlingcommerce.ui.web.platform.servlets.SCUIIncludeUserInfoServlet</servlet-class>
+    </servlet>
+    <servlet id="Servlet_44">
+        <description>includeDojoResourcePermissionServlet</description>
+        <display-name>includeDojoResourcePermissionServlet</display-name>
+        <servlet-name>includeDojoResourcePermissionServlet</servlet-name>
+        <servlet-class>com.sterlingcommerce.ui.web.platform.servlets.SCUIIncludeDojoResourcePermissionServlet</servlet-class>
+    </servlet>
+    <servlet id="Servlet_45">
+        <display-name>SBCCoreInitServlet</display-name>
+        <servlet-name>SBCCoreInitServlet</servlet-name>
+        <servlet-class>
+					com.sterlingcommerce.sbc.core.servlets.SBCCoreInitServlet
+				</servlet-class>
+        <load-on-startup>500</load-on-startup>
+    </servlet>
+    <servlet id="Servlet_46">
+        <description>includeMenuServlet</description>
+        <display-name>includeMenuServlet</display-name>
+        <servlet-name>includeMenuServlet</servlet-name>
+        <servlet-class>com.sterlingcommerce.sbc.core.servlets.SBCIncludeMenuServlet</servlet-class>
+    </servlet>
+    <servlet id="Servlet_47">
+        <description>Sterling File Download Servlet</description>
+        <display-name>File Download Servlet</display-name>
+        <servlet-name>SBCUploadTemplateDownloadServlet</servlet-name>
+        <servlet-class>com.sterlingcommerce.sbc.core.servlets.SBCUploadTemplateDownloadServlet</servlet-class>
+    </servlet>
+    <servlet id="Servlet_48">
+        <description>Sterling Upload Failed Reason Download Servlet</description>
+        <display-name>File Download Servlet</display-name>
+        <servlet-name>SBCFailedReasonDownloadServlet</servlet-name>
+        <servlet-class>com.sterlingcommerce.sbc.core.servlets.SBCFailedReasonDownloadServlet</servlet-class>
+    </servlet>
+    <servlet id="Servlet_49">
+        <description>Sterling No UI Login Servlet</description>
+        <display-name>No UI Login Servlet</display-name>
+        <servlet-name>NoUILoginServlet</servlet-name>
+        <servlet-class>com.sterlingcommerce.ui.web.platform.servlets.SCUIRCPNoUILoginServlet</servlet-class>
+    </servlet>
+    <servlet id="Servlet_50">
+        <servlet-name>YantraConfigServlet</servlet-name>
+        <servlet-class>com.yantra.app.config.YantraConfigServlet
+				</servlet-class>
+    </servlet>
+    <servlet id="Servlet_51">
+        <servlet-name>YCPGenericMasterData</servlet-name>
+        <servlet-class>com.yantra.ycp.ui.backend.YCPGenericMasterData
+			</servlet-class>
+    </servlet>
+    <servlet id="Servlet_52">
+        <servlet-name>YSCChangeRequestAPI</servlet-name>
+        <servlet-class>com.yantra.ysc.ui.backend.YSCChangeRequestAPI
+				</servlet-class>
+    </servlet>
+    <servlet id="Servlet_53">
+        <servlet-name>YCPBusinessRulesAPI</servlet-name>
+        <servlet-class>com.yantra.ycp.pm.ui.backend.YCPBusinessRulesAPI
+				</servlet-class>
+    </servlet>
+    <servlet id="Servlet_54">
+        <servlet-name>YCPCustomModificationTypeAPI</servlet-name>
+        <servlet-class>com.yantra.ycp.pm.ui.backend.YCPCustomModificationTypeAPI
+				</servlet-class>
+    </servlet>
+    <servlet id="Servlet_55">
+        <servlet-name>YCPCurrencyConversionListAPI</servlet-name>
+        <servlet-class>com.yantra.ycp.pm.ui.backend.YCPCurrencyConversionListAPI
+				</servlet-class>
+    </servlet>
+    <servlet id="Servlet_56">
+        <servlet-name>YCPRuleSetAPI</servlet-name>
+        <servlet-class>com.yantra.ycp.pm.ui.backend.YCPRuleSetAPI
+				</servlet-class>
+    </servlet>
+    <servlet id="Servlet_57">
+        <servlet-name>YCPGroupAPI</servlet-name>
+        <servlet-class>com.yantra.ycp.sm.ui.backend.YCPGroupAPI
+				</servlet-class>
+    </servlet>
+    <servlet id="Servlet_58">
+        <servlet-name>YCPUserAPI</servlet-name>
+        <servlet-class>com.yantra.ycp.sm.ui.backend.YCPUserAPI
+				</servlet-class>
+    </servlet>
+    <servlet id="Servlet_59">
+        <servlet-name>YCPWFRepositoryAPI</servlet-name>
+        <servlet-class>com.yantra.ycp.wf.ui.backend.YCPWFRepositoryAPI
+				</servlet-class>
+    </servlet>
+    <servlet id="Servlet_60">
+        <servlet-name>MenuHierarchy</servlet-name>
+        <servlet-class>com.yantra.ycp.sm.ui.backend.YCPMenuAPI
+				</servlet-class>
+    </servlet>
+    <servlet id="Servlet_61">
+        <servlet-name>DocumentTypesHierarchy</servlet-name>
+        <servlet-class>com.yantra.ycp.wf.ui.backend.YCPDocumentTypesAPI
+				</servlet-class>
+    </servlet>
+    <servlet id="Servlet_62">
+        <servlet-name>YCPResourceAPI</servlet-name>
+        <servlet-class>com.yantra.ycp.sm.ui.backend.YCPResourceAPI
+				</servlet-class>
+    </servlet>
+    <servlet id="Servlet_63">
+        <servlet-name>YIFUIManager</servlet-name>
+        <servlet-class>com.yantra.interop.ui.backend.YIFUIManager
+				</servlet-class>
+    </servlet>
+    <servlet id="Servlet_64">
+        <servlet-name>YCPGenericWizardAPI</servlet-name>
+        <servlet-class>com.yantra.ycp.ui.backend.YCPGenericWizardAPI
+				</servlet-class>
+    </servlet>
+    <servlet id="Servlet_65">
+        <servlet-name>YCPCalendarAPI</servlet-name>
+        <servlet-class>com.yantra.ycp.ui.backend.YCPCalendarAPI
+				</servlet-class>
+    </servlet>
+    <servlet id="Servlet_66">
+        <servlet-name>YCPUOMConversion</servlet-name>
+        <servlet-class>com.yantra.ycp.ui.backend.YCPUOMConversion
+				</servlet-class>
+    </servlet>
+    <servlet id="Servlet_67">
+        <servlet-name>YCPWFTransactionDependencyApi</servlet-name>
+        <servlet-class>com.yantra.ycp.wf.ui.backend.YCPWFTransactionDependencyApi
+				</servlet-class>
+    </servlet>
+    <servlet id="Servlet_68">
+        <servlet-name>YCPPasswordPolicyAPI</servlet-name>
+        <servlet-class>com.yantra.ycp.passwordpolicy.ui.backend.YCPPasswordPolicyAPI
+				</servlet-class>
+    </servlet>
+    <servlet id="Servlet_69">
+        <servlet-name>JasperPDFReport</servlet-name>
+        <servlet-class>com.yantra.interop.client.InteropJasperServlet
+				</servlet-class>
+    </servlet>
+    <servlet id="Servlet_70">
+        <servlet-name>YFCJasperServlet</servlet-name>
+        <servlet-class>com.yantra.yfc.ui.backend.servlets.YFCJasperServlet
+				</servlet-class>
+    </servlet>
+    <servlet id="Servlet_71">
+        <servlet-name>XAPI Rest Servlet</servlet-name>
+        <servlet-class>com.ibm.sterling.afc.restx.RestServlet
+				</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    <servlet id="Servlet_72">
+        <servlet-name>PaymentRule</servlet-name>
+        <servlet-class>com.yantra.ycp.pm.ui.backend.YCPPaymentRuleAPI
+				</servlet-class>
+    </servlet>
+    <servlet id="Servlet_73">
+        <servlet-name>PriceProgram</servlet-name>
+        <servlet-class>com.yantra.ycp.pm.ui.backend.YCPPriceProgramAPI
+				</servlet-class>
+    </servlet>
+    <servlet id="Servlet_74">
+        <servlet-name>YOMPSourcingDetailsAPI</servlet-name>
+        <servlet-class>com.yantra.omp.uibackend.YOMPSourcingDetailsAPI
+				</servlet-class>
+    </servlet>
+    <servlet id="Servlet_75">
+        <servlet-name>YOMOutboundConstraintsAPI</servlet-name>
+        <servlet-class>com.yantra.omp.uibackend.YOMOutboundConstraintsAPI
+				</servlet-class>
+    </servlet>
+    <servlet id="Servlet_76">
+        <servlet-name>YOMPCustomerDetailsAPI</servlet-name>
+        <servlet-class>com.yantra.omp.uibackend.YOMPCustomerDetailsAPI
+				</servlet-class>
+    </servlet>
+    <servlet id="Servlet_77">
+        <servlet-name>OMPMasterData</servlet-name>
+        <servlet-class>com.yantra.omp.uibackend.OMPMasterData
+				</servlet-class>
+    </servlet>
+    <servlet id="Servlet_78">
+        <servlet-name>YOMPHoldAPI</servlet-name>
+        <servlet-class>com.yantra.omp.uibackend.YOMPHoldAPI</servlet-class>
+    </servlet>
+    <servlet id="Servlet_79">
+        <servlet-name>YOMPNodeTransferScheduleAPI</servlet-name>
+        <servlet-class>com.yantra.omp.uibackend.YOMPNodeTransferScheduleAPI
+				</servlet-class>
+    </servlet>
+    <servlet id="Servlet_80">
+        <servlet-name>YCPBusinessRulesForPricingAPI</servlet-name>
+        <servlet-class>com.yantra.ycp.pm.ui.backend.YCPBusinessRulesForPricingAPI
+				</servlet-class>
+    </servlet>
+    <servlet id="Servlet_81">
+        <servlet-name>YCPFoundationRuleSetAPI</servlet-name>
+        <servlet-class>com.yantra.ycp.pm.ui.backend.YCPFoundationRuleSetAPI
+				</servlet-class>
+    </servlet>
+    <servlet id="Servlet_82">
+        <servlet-name>DistributionRule</servlet-name>
+        <servlet-class>com.yantra.ycp.pm.ui.backend.YCPDistributionRuleAPI
+				</servlet-class>
+    </servlet>
+    <servlet id="Servlet_83">
+        <servlet-name>YCPInventoryConsiderationsAPI</servlet-name>
+        <servlet-class>com.yantra.ycp.pm.ui.backend.YCPInventoryConsiderationsAPI
+				</servlet-class>
+    </servlet>
+    <servlet id="Servlet_84">
+        <servlet-name>INVResPoolAPI</servlet-name>
+        <servlet-class>com.yantra.inv.uibackend.INVResPoolAPI
+				</servlet-class>
+    </servlet>
+    <servlet id="Servlet_85">
+        <servlet-name>INVMasterData</servlet-name>
+        <servlet-class>com.yantra.inv.uibackend.INVMasterData
+				</servlet-class>
+    </servlet>
+    <servlet id="Servlet_86">
+        <servlet-name>YDMRoutingGuideAPI</servlet-name>
+        <servlet-class>com.yantra.ydm.uibackend.YDMRoutingGuideAPI
+				</servlet-class>
+    </servlet>
+    <servlet id="Servlet_87">
+        <servlet-name>YDMConfigurationRulesAPI</servlet-name>
+        <servlet-class>com.yantra.ydm.ui.backend.YDMConfigurationRulesAPI
+				</servlet-class>
+    </servlet>
+    <servlet id="Servlet_88">
+        <servlet-name>YCMCategoriesAPI</servlet-name>
+        <servlet-class>com.yantra.ycm.ui.backend.YCMCategoriesAPI
+				</servlet-class>
+    </servlet>
+    <servlet id="Servlet_89">
+        <servlet-name>YCMCategoryDtlAPI</servlet-name>
+        <servlet-class>com.yantra.ycm.ui.backend.YCMCategoryDtlAPI
+				</servlet-class>
+    </servlet>
+    <servlet id="Servlet_90">
+        <servlet-name>YCMCreateItemAPI</servlet-name>
+        <servlet-class>com.yantra.ycm.ui.backend.YCMCreateItemAPI
+				</servlet-class>
+    </servlet>
+    <servlet id="Servlet_91">
+        <servlet-name>YCMItemListAPI</servlet-name>
+        <servlet-class>com.yantra.ycm.ui.backend.YCMItemListAPI
+				</servlet-class>
+    </servlet>
+    <servlet id="Servlet_92">
+        <servlet-name>YCMItemQueryBuilderAPI</servlet-name>
+        <servlet-class>com.yantra.ycm.ui.backend.YCMItemQueryBuilderAPI
+				</servlet-class>
+    </servlet>
+    <servlet id="Servlet_93">
+        <servlet-name>YCMModifyItemAPI</servlet-name>
+        <servlet-class>com.yantra.ycm.ui.backend.YCMModifyItemAPI
+				</servlet-class>
+    </servlet>
+    <servlet id="Servlet_94">
+        <servlet-name>YCMSearchItemAPI</servlet-name>
+        <servlet-class>com.yantra.ycm.ui.backend.YCMSearchItemAPI
+				</servlet-class>
+    </servlet>
+    <servlet id="Servlet_95">
+        <servlet-name>YCMClassificationDtlAPI</servlet-name>
+        <servlet-class>com.yantra.ycm.ui.backend.YCMClassificationDtlAPI
+				</servlet-class>
+    </servlet>
+    <servlet id="Servlet_96">
+        <servlet-name>YCMMasterData</servlet-name>
+        <servlet-class>com.yantra.ycm.ui.backend.YCMMasterData
+				</servlet-class>
+    </servlet>
+    <servlet id="Servlet_97">
+        <servlet-name>YCMAdditionalCapacityAPI</servlet-name>
+        <servlet-class>com.yantra.ycm.ui.backend.YCMAdditionalCapacityAPI
+				</servlet-class>
+    </servlet>
+    <servlet id="Servlet_98">
+        <servlet-name>SCWConfigurationRulesAPI</servlet-name>
+        <servlet-class>com.yantra.scw.ui.backend.SCWConfigurationRulesAPI
+				</servlet-class>
+    </servlet>
+    <servlet id="Servlet_99">
+        <servlet-name>SCWCopyOrgAPI</servlet-name>
+        <servlet-class>com.yantra.scw.ui.backend.SCWCopyOrgAPI
+				</servlet-class>
+    </servlet>
+    <servlet id="Servlet_100">
+        <servlet-name>TaskTypeServlet</servlet-name>
+        <servlet-class>com.yantra.scw.ui.backend.TaskTypeServlet
+				</servlet-class>
+    </servlet>
+    <servlet id="Servlet_101">
+        <servlet-name>SCWModelingEquipmentAPI</servlet-name>
+        <servlet-class>com.yantra.scw.wl.ui.backend.SCWModelingEquipmentAPI
+				</servlet-class>
+    </servlet>
+    <servlet id="Servlet_102">
+        <servlet-name>SCWCSoapServlet</servlet-name>
+        <servlet-class>com.yantra.scwc.business.servlets.SCWCSoapServlet
+				</servlet-class>
+    </servlet>
+    <servlet id="Servlet_103">
+        <servlet-name>YCDOrderEntryRulesControllerAPI</servlet-name>
+        <servlet-class>com.yantra.pca.ycd.ui.backend.YCDOrderEntryRulesControllerAPI
+				</servlet-class>
+    </servlet>
+    <servlet id="Servlet_104">
+        <servlet-name>SAAQuoteAuditControllerAPI</servlet-name>
+        <servlet-class>com.yantra.pca.saa.ui.backend.SAAQuoteAuditControllerAPI
+				</servlet-class>
+    </servlet>
+    <servlet id="Servlet_105">
+        <servlet-name>YCDOrderHistoryNotesControllerAPI</servlet-name>
+        <servlet-class>com.yantra.pca.ycd.ui.backend.YCDOrderHistoryNotesControllerAPI
+				</servlet-class>
+    </servlet>
+    <servlet id="Servlet_106">
+        <servlet-name>YCDCustomerMasterRulesControllerAPI</servlet-name>
+        <servlet-class>com.yantra.pca.ycd.ui.backend.YCDCustomerMasterRulesControllerAPI
+				</servlet-class>
+    </servlet>
+    <servlet id="Servlet_107">
+        <servlet-name>YCDVersionSpecificRulesControllerAPI</servlet-name>
+        <servlet-class>com.yantra.pca.ycd.ui.backend.YCDVersionSpecificRulesControllerAPI
+				</servlet-class>
+    </servlet>
+    <servlet id="Servlet_108">
+        <servlet-name>YCDWebChannelCartRulesControllerAPI</servlet-name>
+        <servlet-class>com.yantra.pca.ycd.ui.backend.YCDWebChannelCartRulesControllerAPI
+				</servlet-class>
+    </servlet>
+    <servlet id="Servlet_109">
+        <servlet-name>SAAJasperServletWrapper</servlet-name>
+        <servlet-class>com.yantra.pca.saa.servlets.SAAJasperWrapperServlet
+				</servlet-class>
+    </servlet>
+    <servlet id="Servlet_110">
+        <servlet-name>WMSPutawayAPI</servlet-name>
+        <servlet-class>com.yantra.wms.put.ui.backend.WMSPutawayAPI
+				</servlet-class>
+    </servlet>
+    <servlet id="Servlet_111">
+        <servlet-name>WMSSKUDedicationAPI</servlet-name>
+        <servlet-class>com.yantra.wms.wl.ui.backend.WMSSKUDedicationAPI
+				</servlet-class>
+    </servlet>
+    <servlet id="Servlet_112">
+        <servlet-name>WMSNodeDispositionAPI</servlet-name>
+        <servlet-class>com.yantra.wms.rcv.ui.backend.WMSNodeDispositionAPI
+				</servlet-class>
+    </servlet>
+    <servlet id="Servlet_113">
+        <servlet-name>TaskReferenceServlet</servlet-name>
+        <servlet-class>com.yantra.wms.ui.backend.TaskReferenceServlet
+				</servlet-class>
+    </servlet>
+    <servlet id="Servlet_114">
+        <servlet-name>WMSEquipmentDtlListAPI</servlet-name>
+        <servlet-class>com.yantra.wms.wl.ui.backend.WMSEquipmentDtlListAPI
+				</servlet-class>
+    </servlet>
+    <servlet id="Servlet_115">
+        <servlet-name>WMSWaveReleaseScheduleAPI</servlet-name>
+        <servlet-class>com.yantra.wms.ui.backend.WMSWaveReleaseScheduleAPI
+				</servlet-class>
+    </servlet>
+    <servlet id="Servlet_116">
+        <servlet-name>WMSPackStrategyAPI</servlet-name>
+        <servlet-class>com.yantra.wms.ui.backend.WMSPackStrategyAPI
+				</servlet-class>
+    </servlet>
+    <servlet id="Servlet_117">
+        <servlet-name>WMSShipmentGroupAPI</servlet-name>
+        <servlet-class>com.yantra.wms.ui.backend.WMSShipmentGroupAPI
+				</servlet-class>
+    </servlet>
+    <servlet id="Servlet_118">
+        <servlet-name>WMSPickLocationAssignmentAPI</servlet-name>
+        <servlet-class>com.yantra.wms.ui.backend.WMSPickLocationAssignmentAPI
+				</servlet-class>
+    </servlet>
+    <servlet id="Servlet_119">
+        <servlet-name>WMSTaskTypeServlet</servlet-name>
+        <servlet-class>com.yantra.wms.ui.backend.WMSTaskTypeServlet
+				</servlet-class>
+    </servlet>
+    <servlet id="Servlet_120">
+        <servlet-name>WMSModelingEquipmentAPI</servlet-name>
+        <servlet-class>com.yantra.wms.wl.ui.backend.WMSModelingEquipmentAPI
+				</servlet-class>
+    </servlet>
+    <servlet id="Servlet_121">
+        <servlet-name>YCPRegionAPI</servlet-name>
+        <servlet-class>com.yantra.ycp.ui.backend.YCPRegionAPI
+				</servlet-class>
+    </servlet>
+    <servlet id="Servlet_122">
+        <servlet-name>YCPBarCodeTranslationAPI</servlet-name>
+        <servlet-class>com.yantra.ycp.bct.ui.backend.YCPBarCodeTranslationAPI
+				</servlet-class>
+    </servlet>
+    <servlet id="Servlet_123">
+        <servlet-name>YCPModelingDeviceAPI</servlet-name>
+        <servlet-class>com.yantra.ycp.device.ui.backend.YCPModelingDeviceAPI
+				</servlet-class>
+    </servlet>
+    <servlet id="Servlet_124">
+        <servlet-name>YCPOrgDetailsAPI</servlet-name>
+        <servlet-class>com.yantra.ycp.pm.ui.backend.YCPOrgDetailsAPI
+				</servlet-class>
+    </servlet>
+    <servlet id="Servlet_125">
+        <servlet-name>YCPOrgListAPI</servlet-name>
+        <servlet-class>com.yantra.ycp.pm.ui.backend.YCPOrgListAPI
+				</servlet-class>
+    </servlet>
+    <servlet id="Servlet_126">
+        <servlet-name>YCPDataAccessPolicyRulesAPI</servlet-name>
+        <servlet-class>com.yantra.ycp.sm.ui.backend.YCPDataAccessPolicyRulesAPI
+				</servlet-class>
+    </servlet>
+    <servlet id="Servlet_127">
+        <servlet-name>YCPCarrierServiceScheduleAPI</servlet-name>
+        <servlet-class>com.yantra.ycp.pm.ui.backend.YCPCarrierServiceScheduleAPI
+				</servlet-class>
+    </servlet>
+    <servlet id="Servlet_128">
+        <servlet-name>YCPQuoteCustomModificationTypeAPI</servlet-name>
+        <servlet-class>com.yantra.ycp.pm.ui.backend.YCPQuoteCustomModificationTypeAPI
+				</servlet-class>
+    </servlet>
+    <servlet id="Servlet_129">
+        <servlet-name>YCPUserSearchAPI</servlet-name>
+        <servlet-class>com.yantra.ycp.sm.ui.backend.YCPUserSearchAPI
+				</servlet-class>
+    </servlet>
+    <servlet id="Servlet_130">
+        <servlet-name>YCPWFProcessModelAPI</servlet-name>
+        <servlet-class>com.yantra.ycp.wf.ui.backend.YCPWFProcessModelAPI
+				</servlet-class>
+    </servlet>
+    <servlet id="Servlet_131">
+        <description>Sterling rich client backend gateway Servlet
+				</description>
+        <display-name>Rcp Servlet</display-name>
+        <servlet-name>RcpServlet</servlet-name>
+        <servlet-class>com.yantra.ycp.rcp.backend.YRCServlet</servlet-class>
+        <load-on-startup>5</load-on-startup>
+    </servlet>
+    <servlet id="Servlet_132">
+        <description>Sterling application rich client single sign-on Servlet
+				</description>
+        <display-name>Rcp Single Sign-On Servlet</display-name>
+        <servlet-name>RcpSSOServlet</servlet-name>
+        <servlet-class>com.yantra.ycp.rcp.backend.YRCSSOServlet
+				</servlet-class>
+    </servlet>
+    <servlet id="Servlet_133">
+        <description>Sterling rich client backend Servlet for Auto Update
+				</description>
+        <display-name>Rcp Auto Update Servlet</display-name>
+        <servlet-name>RcpAutoUpdateServlet</servlet-name>
+        <servlet-class>com.yantra.ycp.rcp.backend.YRCAutoUpdateServlet
+				</servlet-class>
+    </servlet>
+    <servlet id="Servlet_134">
+        <description>Sterling rich client backend Servlet for Context
+					Sensitive Help
+				</description>
+        <display-name>Rcp Context Sensitive Help Servlet</display-name>
+        <servlet-name>RcpCSHelpServlet</servlet-name>
+        <servlet-class>com.yantra.ycp.rcp.backend.YRCCSHelpServlet
+				</servlet-class>
+    </servlet>
+    <servlet id="Servlet_135">
+        <servlet-name>InteropHttpServlet</servlet-name>
+        <servlet-class>com.yantra.interop.client.InteropHttpServlet
+				</servlet-class>
+    </servlet>
+    <servlet id="Servlet_136">
+        <description>YFCDVLoggerInitServlet</description>
+        <display-name>YFCDVLoggerInitServlet</display-name>
+        <servlet-name>YFCDVLoggerInitServlet</servlet-name>
+        <servlet-class>com.yantra.yfc.ui.backend.security.YFCDVLoggerInitServlet
+				</servlet-class>
+        <load-on-startup>0</load-on-startup>
+    </servlet>
+    <servlet id="Servlet_137">
+        <description>YFCDataValidationInitServlet</description>
+        <display-name>YFCDataValidationInitServlet</display-name>
+        <servlet-name>YFCDataValidationInitServlet</servlet-name>
+        <servlet-class>com.yantra.yfc.ui.backend.security.YFCDataValidationInitServlet
+				</servlet-class>
+        <load-on-startup>4</load-on-startup>
+    </servlet>
+    <servlet id="Servlet_138">
+        <servlet-name>YSCPMasterData</servlet-name>
+        <servlet-class>com.yantra.ycp.ui.backend.YSCPMasterData
+				</servlet-class>
+    </servlet>
+    <servlet id="Servlet_139">
+        <servlet-name>YCMServiceSkillAPI</servlet-name>
+        <servlet-class>com.yantra.ycm.ui.backend.YCMServiceSkillAPI
+				</servlet-class>
+    </servlet>
+    <servlet id="Servlet_140">
+        <servlet-name>YCPDataSecurityGroupNodesAPI</servlet-name>
+        <servlet-class>com.yantra.ycp.pm.ui.backend.YCPDataSecurityGroupNodesAPI
+				</servlet-class>
+    </servlet>
+    <servlet-mapping id="ServletMapping_1">
+        <servlet-name>FOPPDFReport</servlet-name>
+        <url-pattern>/AppcommonGeneratePrintServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="ServletMapping_2">
+        <servlet-name>SAAFOPReport</servlet-name>
+        <url-pattern>/servlets/com.yantra.pca.saa.servlets.SAAInteropFOPServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="ServletMapping_3">
+        <servlet-name>dojoDataTypeServlet</servlet-name>
+        <url-pattern>/dojoDataType/*</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="ServletMapping_4">
+        <servlet-name>dojoScreenExtnServlet</servlet-name>
+        <url-pattern>/dojoScreenExtns/*</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="ServletMapping_5">
+        <servlet-name>dohTestServlet</servlet-name>
+        <url-pattern>/dohTestServlet/*</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="ServletMapping_6">
+        <servlet-name>dataTypeServlet</servlet-name>
+        <url-pattern>/dataType/*</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="ServletMapping_7">
+        <servlet-name>serverDateServlet</servlet-name>
+        <url-pattern>/dateutil/*</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="ServletMapping_8">
+        <servlet-name>SCUIStateServlet</servlet-name>
+        <url-pattern>/platform/UIState/*</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="ServletMapping_9">
+        <servlet-name>cacheHandlerServlet</servlet-name>
+        <url-pattern>/cache/*</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="ServletMapping_10">
+        <servlet-name>jsLibServlet</servlet-name>
+        <url-pattern>/loadJSLib/*</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="ServletMapping_11">
+        <servlet-name>SCUIActivityTrackingRequestServlet</servlet-name>
+        <url-pattern>/activitydata/json</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="ServletMapping_12">
+        <servlet-name>accessTokenValidatorServlet</servlet-name>
+        <url-pattern>/accessTokenServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="ServletMapping_13">
+        <servlet-name>NoUILoginServlet</servlet-name>
+        <url-pattern>/NoUILoginServlet/*</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="ServletMapping_14">
+        <servlet-name>imageservlet</servlet-name>
+        <url-pattern>/console/icons/*</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="ServletMapping_15">
+        <servlet-name>imageservlet</servlet-name>
+        <url-pattern>/yfcicons/*</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="ServletMapping_16">
+        <servlet-name>savedsearchservlet</servlet-name>
+        <url-pattern>/savedsearch/*</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="ServletMapping_17">
+        <servlet-name>WmConfigServlet</servlet-name>
+        <url-pattern>/interop/wm/WmConfigServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="ServletMapping_18">
+        <servlet-name>listservlet</servlet-name>
+        <url-pattern>/list/*</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="ServletMapping_19">
+        <servlet-name>detailservlet</servlet-name>
+        <url-pattern>/detail/*</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="ServletMapping_20">
+        <servlet-name>searchservlet</servlet-name>
+        <url-pattern>/search/*</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="ServletMapping_21">
+        <servlet-name>actionservlet</servlet-name>
+        <url-pattern>/action/*</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="ServletMapping_22">
+        <servlet-name>entityservlet</servlet-name>
+        <url-pattern>/entities/*</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="ServletMapping_23">
+        <servlet-name>consoleservlet</servlet-name>
+        <url-pattern>*.detail</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="ServletMapping_24">
+        <servlet-name>consoleservlet</servlet-name>
+        <url-pattern>*.list</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="ServletMapping_25">
+        <servlet-name>consoleservlet</servlet-name>
+        <url-pattern>*.ppc</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="ServletMapping_26">
+        <servlet-name>consoleservlet</servlet-name>
+        <url-pattern>*.search</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="ServletMapping_27">
+        <servlet-name>consoleservlet</servlet-name>
+        <url-pattern>*.ajax</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="ServletMapping_28">
+        <servlet-name>consoleservlet</servlet-name>
+        <url-pattern>*.rf</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="ServletMapping_29">
+        <servlet-name>consoleservlet</servlet-name>
+        <url-pattern>*.action</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="ServletMapping_30">
+        <servlet-name>consoleservlet</servlet-name>
+        <url-pattern>*.wizard</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="ServletMapping_31">
+        <servlet-name>authservlet</servlet-name>
+        <url-pattern>*.auth</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="ServletMapping_32">
+        <servlet-name>APIServlet</servlet-name>
+        <url-pattern>/api/*</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="ServletMapping_33">
+        <servlet-name>YHMMonitorServlet</servlet-name>
+        <url-pattern>/servlets/com.yantra.ycp.hm.ui.backend.YHMMonitorServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="ServletMapping_34">
+        <servlet-name>FileUploadServlet</servlet-name>
+        <url-pattern>/FileUploadServlet/*</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="ServletMapping_35">
+        <servlet-name>FileDownloadServlet</servlet-name>
+        <url-pattern>/FileDownloadServlet/*</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="ServletMapping_36">
+        <servlet-name>PLTActivityTrackingRequestServlet</servlet-name>
+        <url-pattern>/activitydata/xml</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="ServletMapping_37">
+        <servlet-name>logLevelEnableServlet</servlet-name>
+        <url-pattern>/loglevel/loggername.js</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="ServletMapping_38">
+        <servlet-name>includeResourcePermissionServlet</servlet-name>
+        <url-pattern>/permission/resource.js</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="ServletMapping_39">
+        <servlet-name>includeUserInfoServlet</servlet-name>
+        <url-pattern>/permission/userInfo.js</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="ServletMapping_40">
+        <servlet-name>includeDojoResourcePermissionServlet</servlet-name>
+        <url-pattern>/dojo/permission/resource.js</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="ServletMapping_41">
+        <servlet-name>FileDownloadServlet</servlet-name>
+        <url-pattern>/WUFFileDownloadServlet/*</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="ServletMapping_42">
+        <servlet-name>includeMenuServlet</servlet-name>
+        <url-pattern>/includeMenu/*</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="ServletMapping_43">
+        <servlet-name>SBCUploadTemplateDownloadServlet</servlet-name>
+        <url-pattern>/SBCFileDownloadServlet/Template</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="ServletMapping_44">
+        <servlet-name>SBCFailedReasonDownloadServlet</servlet-name>
+        <url-pattern>/SBCFileDownloadServlet/FailReason</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="ServletMapping_45">
+        <servlet-name>YCPBusinessRulesAPI</servlet-name>
+        <url-pattern>/servlets/com.yantra.ycp.pm.ui.backend.YCPBusinessRulesAPI
+			</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="ServletMapping_46">
+        <servlet-name>YCPCustomModificationTypeAPI</servlet-name>
+        <url-pattern>/servlets/com.yantra.ycp.pm.ui.backend.YCPCustomModificationTypeAPI
+				</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="ServletMapping_47">
+        <servlet-name>YCPCurrencyConversionListAPI</servlet-name>
+        <url-pattern>/servlets/com.yantra.ycp.pm.ui.backend.YCPCurrencyConversionListAPI
+				</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="ServletMapping_48">
+        <servlet-name>YCPRuleSetAPI</servlet-name>
+        <url-pattern>/servlets/com.yantra.ycp.pm.ui.backend.YCPRuleSetAPI
+				</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="ServletMapping_49">
+        <servlet-name>YCPGroupAPI</servlet-name>
+        <url-pattern>/servlets/com.yantra.ycp.sm.ui.backend.YCPGroupAPI
+				</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="ServletMapping_50">
+        <servlet-name>YCPUserAPI</servlet-name>
+        <url-pattern>/servlets/com.yantra.ycp.sm.ui.backend.YCPUserAPI
+				</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="ServletMapping_51">
+        <servlet-name>YCPWFRepositoryAPI</servlet-name>
+        <url-pattern>/servlets/com.yantra.ycp.wf.ui.backend.YCPWFRepositoryAPI
+				</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="ServletMapping_52">
+        <servlet-name>YCPGenericMasterData</servlet-name>
+        <url-pattern>/servlets/com.yantra.ycp.ui.backend.YCPGenericMasterData
+				</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="ServletMapping_53">
+        <servlet-name>YCPGenericMasterData</servlet-name>
+        <url-pattern>/console/com.yantra.ycp.ui.backend.YCPGenericMasterData
+				</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="ServletMapping_54">
+        <servlet-name>YantraConfigServlet</servlet-name>
+        <url-pattern>/servlets/com.yantra.app.config.YantraConfigServlet
+				</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="ServletMapping_55">
+        <servlet-name>YSCChangeRequestAPI</servlet-name>
+        <url-pattern>/servlets/com.yantra.ysc.ui.backend.YSCChangeRequestAPI
+				</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="ServletMapping_56">
+        <servlet-name>YCPCalendarAPI</servlet-name>
+        <url-pattern>/servlets/com.yantra.ycp.ui.backend.YCPCalendarAPI
+				</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="ServletMapping_57">
+        <servlet-name>MenuHierarchy</servlet-name>
+        <url-pattern>/servlets/com.yantra.ycp.sm.ui.backend.YCPMenuAPI
+				</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="ServletMapping_58">
+        <servlet-name>DocumentTypesHierarchy</servlet-name>
+        <url-pattern>/servlets/com.yantra.ycp.wf.ui.backend.YCPDocumentTypesAPI
+				</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="ServletMapping_59">
+        <servlet-name>YCPResourceAPI</servlet-name>
+        <url-pattern>/servlets/com.yantra.ycp.sm.ui.backend.YCPResourceAPI
+				</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="ServletMapping_60">
+        <servlet-name>YCPGenericWizardAPI</servlet-name>
+        <url-pattern>/servlets/com.yantra.ycp.ui.backend.YCPGenericWizardAPI
+				</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="ServletMapping_61">
+        <servlet-name>YCPUOMConversion</servlet-name>
+        <url-pattern>/servlets/com.yantra.ycp.ui.backend.YCPUOMConversion
+				</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="ServletMapping_62">
+        <servlet-name>YCPWFTransactionDependencyApi</servlet-name>
+        <url-pattern>/servlets/com.yantra.ycp.wf.ui.backend.YCPWFTransactionDependencyApi
+				</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="ServletMapping_63">
+        <servlet-name>YCPPasswordPolicyAPI</servlet-name>
+        <url-pattern>/servlets/com.yantra.ycp.passwordpolicy.ui.backend.YCPPasswordPolicyAPI
+				</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="ServletMapping_64">
+        <servlet-name>FileUploadServlet</servlet-name>
+        <url-pattern>/FileUploadServlet/*</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="ServletMapping_65">
+        <servlet-name>FileDownloadServlet</servlet-name>
+        <url-pattern>/FileDownloadServlet/*</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="ServletMapping_66">
+        <servlet-name>PLTActivityTrackingRequestServlet</servlet-name>
+        <url-pattern>/activitydata/xml</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="ServletMapping_67">
+        <servlet-name>JasperPDFReport</servlet-name>
+        <url-pattern>/servlets/reports/com.yantra.interop.client.InteropJasperServlet
+				</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="ServletMapping_68">
+        <servlet-name>YFCJasperServlet</servlet-name>
+        <url-pattern>/servlets/reports/com.yantra.yfc.ui.backend.servlets.YFCJasperServlet
+				</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="ServletMapping_69">
+        <servlet-name>XAPI Rest Servlet</servlet-name>
+        <url-pattern>/restapi/*</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="ServletMapping_70">
+        <servlet-name>YOMPHoldAPI</servlet-name>
+        <url-pattern>/servlets/com.yantra.omp.uibackend.YOMPHoldAPI
+				</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="ServletMapping_71">
+        <servlet-name>PaymentRule</servlet-name>
+        <url-pattern>/servlets/com.yantra.ycp.pm.ui.backend.YCPPaymentRuleAPI
+				</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="ServletMapping_72">
+        <servlet-name>PriceProgram</servlet-name>
+        <url-pattern>/servlets/com.yantra.ycp.pm.ui.backend.YCPPriceProgramAPI
+				</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="ServletMapping_73">
+        <servlet-name>YOMPSourcingDetailsAPI</servlet-name>
+        <url-pattern>/servlets/com.yantra.omp.uibackend.YOMPSourcingDetailsAPI
+				</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="ServletMapping_74">
+        <servlet-name>YOMOutboundConstraintsAPI</servlet-name>
+        <url-pattern>/servlets/com.yantra.omp.uibackend.YOMOutboundConstraintsAPI
+				</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="ServletMapping_75">
+        <servlet-name>YOMPCustomerDetailsAPI</servlet-name>
+        <url-pattern>/servlets/com.yantra.omp.uibackend.YOMPCustomerDetailsAPI
+				</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="ServletMapping_76">
+        <servlet-name>OMPMasterData</servlet-name>
+        <url-pattern>/servlets/com.yantra.omp.uibackend.OMPMasterData
+				</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="ServletMapping_77">
+        <servlet-name>YOMPNodeTransferScheduleAPI</servlet-name>
+        <url-pattern>/servlets/com.yantra.omp.uibackend.YOMPNodeTransferScheduleAPI
+				</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="ServletMapping_78">
+        <servlet-name>YCPBusinessRulesForPricingAPI</servlet-name>
+        <url-pattern>/servlets/com.yantra.ycp.pm.ui.backend.YCPBusinessRulesForPricingAPI
+				</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="ServletMapping_79">
+        <servlet-name>YCPFoundationRuleSetAPI</servlet-name>
+        <url-pattern>/servlets/com.yantra.ycp.pm.ui.backend.YCPFoundationRuleSetAPI
+				</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="ServletMapping_80">
+        <servlet-name>INVResPoolAPI</servlet-name>
+        <url-pattern>/servlets/com.yantra.inv.uibackend.INVResPoolAPI
+				</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="ServletMapping_81">
+        <servlet-name>DistributionRule</servlet-name>
+        <url-pattern>/servlets/com.yantra.ycp.pm.ui.backend.YCPDistributionRuleAPI
+				</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="ServletMapping_82">
+        <servlet-name>YCPInventoryConsiderationsAPI</servlet-name>
+        <url-pattern>/servlets/com.yantra.ycp.pm.ui.backend.YCPInventoryConsiderationsAPI
+				</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="ServletMapping_83">
+        <servlet-name>INVMasterData</servlet-name>
+        <url-pattern>/servlets/com.yantra.inv.uibackend.INVMasterData
+				</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="ServletMapping_84">
+        <servlet-name>YDMRoutingGuideAPI</servlet-name>
+        <url-pattern>/servlets/com.yantra.ydm.uibackend.YDMRoutingGuideAPI
+				</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="ServletMapping_85">
+        <servlet-name>YDMConfigurationRulesAPI</servlet-name>
+        <url-pattern>/servlets/com.yantra.ydm.ui.backend.YDMConfigurationRulesAPI
+				</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="ServletMapping_86">
+        <servlet-name>YCMClassificationDtlAPI</servlet-name>
+        <url-pattern>/servlets/com.yantra.ycm.ui.backend.YCMClassificationDtlAPI
+				</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="ServletMapping_87">
+        <servlet-name>YCMMasterData</servlet-name>
+        <url-pattern>/servlets/com.yantra.ycm.ui.backend.YCMMasterData
+				</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="ServletMapping_88">
+        <servlet-name>YCMAdditionalCapacityAPI</servlet-name>
+        <url-pattern>/servlets/com.yantra.ycm.ui.backend.YCMAdditionalCapacityAPI
+				</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="ServletMapping_89">
+        <servlet-name>YCMCategoriesAPI</servlet-name>
+        <url-pattern>/servlets/com.yantra.ycm.ui.backend.YCMCategoriesAPI
+				</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="ServletMapping_90">
+        <servlet-name>YCMCategoryDtlAPI</servlet-name>
+        <url-pattern>/servlets/com.yantra.ycm.ui.backend.YCMCategoryDtlAPI
+				</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="ServletMapping_91">
+        <servlet-name>YCMCreateItemAPI</servlet-name>
+        <url-pattern>/servlets/com.yantra.ycm.ui.backend.YCMCreateItemAPI
+				</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="ServletMapping_92">
+        <servlet-name>YCMItemListAPI</servlet-name>
+        <url-pattern>/servlets/com.yantra.ycm.ui.backend.YCMItemListAPI
+				</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="ServletMapping_93">
+        <servlet-name>YCMItemQueryBuilderAPI</servlet-name>
+        <url-pattern>/servlets/com.yantra.ycm.ui.backend.YCMItemQueryBuilderAPI
+				</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="ServletMapping_94">
+        <servlet-name>YCMModifyItemAPI</servlet-name>
+        <url-pattern>/servlets/com.yantra.ycm.ui.backend.YCMModifyItemAPI
+				</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="ServletMapping_95">
+        <servlet-name>YCMSearchItemAPI</servlet-name>
+        <url-pattern>/servlets/com.yantra.ycm.ui.backend.YCMSearchItemAPI
+				</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="ServletMapping_96">
+        <servlet-name>SCWConfigurationRulesAPI</servlet-name>
+        <url-pattern>/servlets/com.yantra.scw.ui.backend.SCWConfigurationRulesAPI
+				</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="ServletMapping_97">
+        <servlet-name>SCWCopyOrgAPI</servlet-name>
+        <url-pattern>/servlets/com.yantra.scw.ui.backend.SCWCopyOrgAPI
+				</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="ServletMapping_98">
+        <servlet-name>TaskTypeServlet</servlet-name>
+        <url-pattern>/servlets/com.yantra.scw.ui.backend.TaskTypeServlet
+				</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="ServletMapping_99">
+        <servlet-name>SCWModelingEquipmentAPI</servlet-name>
+        <url-pattern>/servlets/com.yantra.scw.wl.ui.backend.SCWModelingEquipmentAPI
+				</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="ServletMapping_100">
+        <servlet-name>SCWCSoapServlet</servlet-name>
+        <url-pattern>/servlets/scwcsoapservlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="ServletMapping_101">
+        <servlet-name>YCDOrderEntryRulesControllerAPI</servlet-name>
+        <url-pattern>/servlets/com.yantra.pca.ycd.ui.backend.YCDOrderEntryRulesControllerAPI
+				</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="ServletMapping_102">
+        <servlet-name>YCDOrderHistoryNotesControllerAPI</servlet-name>
+        <url-pattern>/servlets/com.yantra.pca.ycd.ui.backend.YCDOrderHistoryNotesControllerAPI
+				</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="ServletMapping_103">
+        <servlet-name>YCDCustomerMasterRulesControllerAPI</servlet-name>
+        <url-pattern>/servlets/com.yantra.pca.ycd.ui.backend.YCDCustomerMasterRulesControllerAPI
+				</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="ServletMapping_104">
+        <servlet-name>YCDVersionSpecificRulesControllerAPI</servlet-name>
+        <url-pattern>/servlets/com.yantra.pca.ycd.ui.backend.YCDVersionSpecificRulesControllerAPI
+				</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="ServletMapping_105">
+        <servlet-name>YCDWebChannelCartRulesControllerAPI</servlet-name>
+        <url-pattern>/servlets/com.yantra.pca.ycd.ui.backend.YCDWebChannelCartRulesControllerAPI
+				</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="ServletMapping_106">
+        <servlet-name>SAAQuoteAuditControllerAPI</servlet-name>
+        <url-pattern>/servlets/com.yantra.pca.saa.ui.backend.SAAQuoteAuditControllerAPI
+				</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="ServletMapping_107">
+        <servlet-name>SAAJasperServletWrapper</servlet-name>
+        <url-pattern>/servlets/SAAJasperWrapperServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="ServletMapping_108">
+        <servlet-name>WMSTaskTypeServlet</servlet-name>
+        <url-pattern>/servlets/com.yantra.wms.ui.backend.WMSTaskTypeServlet
+				</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="ServletMapping_109">
+        <servlet-name>WMSPutawayAPI</servlet-name>
+        <url-pattern>/servlets/com.yantra.wms.put.ui.backend.WMSPutawayAPI
+				</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="ServletMapping_110">
+        <servlet-name>WMSSKUDedicationAPI</servlet-name>
+        <url-pattern>/servlets/com.yantra.wms.wl.ui.backend.WMSSKUDedicationAPI
+				</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="ServletMapping_111">
+        <servlet-name>WMSNodeDispositionAPI</servlet-name>
+        <url-pattern>/servlets/com.yantra.wms.rcv.ui.backend.WMSNodeDispositionAPI
+				</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="ServletMapping_112">
+        <servlet-name>TaskReferenceServlet</servlet-name>
+        <url-pattern>/servlets/com.yantra.wms.ui.backend.TaskReferenceServlet
+				</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="ServletMapping_113">
+        <servlet-name>WMSEquipmentDtlListAPI</servlet-name>
+        <url-pattern>/servlets/com.yantra.wms.wl.ui.backend.WMSEquipmentDtlListAPI
+				</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="ServletMapping_114">
+        <servlet-name>WMSWaveReleaseScheduleAPI</servlet-name>
+        <url-pattern>/servlets/com.yantra.wms.ui.backend.WMSWaveReleaseScheduleAPI
+				</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="ServletMapping_115">
+        <servlet-name>WMSPackStrategyAPI</servlet-name>
+        <url-pattern>/servlets/com.yantra.wms.ui.backend.WMSPackStrategyAPI
+				</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="ServletMapping_116">
+        <servlet-name>WMSShipmentGroupAPI</servlet-name>
+        <url-pattern>/servlets/com.yantra.wms.ui.backend.WMSShipmentGroupAPI
+				</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="ServletMapping_117">
+        <servlet-name>WMSPickLocationAssignmentAPI</servlet-name>
+        <url-pattern>/servlets/com.yantra.wms.ui.backend.WMSPickLocationAssignmentAPI
+				</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="ServletMapping_118">
+        <servlet-name>WMSModelingEquipmentAPI</servlet-name>
+        <url-pattern>/servlets/com.yantra.wms.wl.ui.backend.WMSModelingEquipmentAPI
+				</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="ServletMapping_119">
+        <servlet-name>consoleservlet</servlet-name>
+        <url-pattern>*.exui</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="ServletMapping_120">
+        <servlet-name>YCPRegionAPI</servlet-name>
+        <url-pattern>/servlets/com.yantra.ycp.ui.backend.YCPRegionAPI
+				</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="ServletMapping_121">
+        <servlet-name>YCPBarCodeTranslationAPI</servlet-name>
+        <url-pattern>/servlets/com.yantra.ycp.bct.ui.backend.YCPBarCodeTranslationAPI
+				</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="ServletMapping_122">
+        <servlet-name>YCPDataAccessPolicyRulesAPI</servlet-name>
+        <url-pattern>/servlets/com.yantra.ycp.sm.ui.backend.YCPDataAccessPolicyRulesAPI
+				</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="ServletMapping_123">
+        <servlet-name>YCPOrgDetailsAPI</servlet-name>
+        <url-pattern>/servlets/com.yantra.ycp.pm.ui.backend.YCPOrgDetailsAPI
+				</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="ServletMapping_124">
+        <servlet-name>YCPOrgListAPI</servlet-name>
+        <url-pattern>/servlets/com.yantra.ycp.pm.ui.backend.YCPOrgListAPI
+				</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="ServletMapping_125">
+        <servlet-name>YCPModelingDeviceAPI</servlet-name>
+        <url-pattern>/servlets/com.yantra.ycp.device.ui.backend.YCPModelingDeviceAPI
+				</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="ServletMapping_126">
+        <servlet-name>YCPCarrierServiceScheduleAPI</servlet-name>
+        <url-pattern>/servlets/com.yantra.ycp.pm.ui.backend.YCPCarrierServiceScheduleAPI
+				</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="ServletMapping_127">
+        <servlet-name>YCPQuoteCustomModificationTypeAPI</servlet-name>
+        <url-pattern>/servlets/com.yantra.ycp.pm.ui.backend.YCPQuoteCustomModificationTypeAPI
+			</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="ServletMapping_128">
+        <servlet-name>YCPUserSearchAPI</servlet-name>
+        <url-pattern>/servlets/com.yantra.ycp.sm.ui.backend.YCPUserSearchAPI
+				</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="ServletMapping_129">
+        <servlet-name>YCPWFProcessModelAPI</servlet-name>
+        <url-pattern>/servlets/com.yantra.ycp.wf.ui.backend.YCPWFProcessModelAPI
+				</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="ServletMapping_130">
+        <servlet-name>RcpServlet</servlet-name>
+        <url-pattern>/RcpServlet/*</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="ServletMapping_131">
+        <servlet-name>RcpAutoUpdateServlet</servlet-name>
+        <url-pattern>/RcpAutoUpdateServlet/*</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="ServletMapping_132">
+        <servlet-name>RcpSSOServlet</servlet-name>
+        <url-pattern>/RcpSSOServlet/*</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="ServletMapping_133">
+        <servlet-name>RcpCSHelpServlet</servlet-name>
+        <url-pattern>/RcpCSHelpServlet/*</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="ServletMapping_134">
+        <servlet-name>InteropHttpServlet</servlet-name>
+        <url-pattern>/interop/InteropHttpServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="ServletMapping_135">
+        <servlet-name>NoUILoginServlet</servlet-name>
+        <url-pattern>/NoUILoginServlet/*</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="ServletMapping_136">
+        <servlet-name>imageservlet</servlet-name>
+        <url-pattern>/console/icons/*</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="ServletMapping_137">
+        <servlet-name>imageservlet</servlet-name>
+        <url-pattern>/yfcicons/*</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="ServletMapping_138">
+        <servlet-name>WmConfigServlet</servlet-name>
+        <url-pattern>/interop/wm/WmConfigServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="ServletMapping_139">
+        <servlet-name>YIFUIManager</servlet-name>
+        <url-pattern>/servlets/com.yantra.interop.ui.backend.YIFUIManager
+				</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="ServletMapping_140">
+        <servlet-name>YSCPMasterData</servlet-name>
+        <url-pattern>/servlets/com.yantra.ycp.ui.backend.YSCPMasterData
+				</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="ServletMapping_141">
+        <servlet-name>YCMServiceSkillAPI</servlet-name>
+        <url-pattern>/servlets/com.yantra.ycm.ui.backend.YCMServiceSkillAPI
+				</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="ServletMapping_142">
+        <servlet-name>YCPDataSecurityGroupNodesAPI</servlet-name>
+        <url-pattern>/servlets/com.yantra.ycp.pm.ui.backend.YCPDataSecurityGroupNodesAPI
+				</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>30</session-timeout>
+    </session-config>
+    <mime-mapping>
+        <extension>htc</extension>
+        <mime-type>text/x-component</mime-type>
+    </mime-mapping>
+    <mime-mapping>
+        <extension>svg</extension>
+        <mime-type>image/svg+xml</mime-type>
+    </mime-mapping>
+    <mime-mapping>
+        <extension>dsvg</extension>
+        <mime-type>image/svg+xml</mime-type>
+    </mime-mapping>
+    <mime-mapping>
+        <extension>svg_png</extension>
+        <mime-type>image/png</mime-type>
+    </mime-mapping>
+    <mime-mapping>
+        <extension>js</extension>
+        <mime-type>text/javascript</mime-type>
+    </mime-mapping>
+    <welcome-file-list>
+        <welcome-file>/console/start.jsp</welcome-file>
+    </welcome-file-list>
+    <error-page>
+        <exception-type>java.lang.Throwable</exception-type>
+        <location>/sbc/login/systemError.jsp</location>
+    </error-page>
+    <error-page>
+        <error-code>500</error-code>
+        <location>/sbc/login/systemError.jsp</location>
+    </error-page>
+    <jsp-config>
+        <taglib>
+            <taglib-uri>scuiTag</taglib-uri>
+            <taglib-location>/WEB-INF/scui.tld</taglib-location>
+        </taglib>
+        <taglib>
+            <taglib-uri>scuiimpltag</taglib-uri>
+            <taglib-location>/WEB-INF/scuiimpl.tld</taglib-location>
+        </taglib>
+    </jsp-config>
+</web-app>

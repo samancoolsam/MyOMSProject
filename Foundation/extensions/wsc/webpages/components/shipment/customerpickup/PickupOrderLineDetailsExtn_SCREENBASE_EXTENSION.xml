@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExtensionMetaData>
+    <ScreenExtension extnClassName="PickupOrderLineDetailsExtn"
+        extnPackage="extn.components.shipment.customerpickup"
+        originalScreen="wsc.components.shipment.customerpickup.PickupOrderLineDetails"
+        originalScreenPackage="wsc.components.shipment.customerpickup" type="diffrential">
+	<!--Start - OMNI-3680 BOPIS:Record Shortage Button-->
+        <Items>
+            <Button _sc_extensibility_moveOrder="5"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="bpshortageQuanitityDetails"
+                class="shortageResolution lineLinks"
+                label="$(_scSimpleBundle:extn_Record_Shortage)"
+                showLabel="true" uId="extn_screenbase_button"/>
+            <Link _sc_extensibility_operation="change"
+                _sc_extensibility_referenceUId="shortageResolutionLink"
+                renderHidden="true" resourceId="C000000"/>
+			<!-- OMNI- 84925 - Start -->
+			<DataLabel _sc_extensibility_moveOrder="7"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="itemImage"
+                class="blockComponent"
+                label="$(_scSimpleBundle:extn_eCom_SI_ShipmentNo)" uId="extn_Line_Shipment_No"/>
+			<!-- OMNI- 84925 - End -->
+        </Items>
+        <Subscribers>
+            <Local>
+                <Subscriber
+                    description="This method is used to open shortage resolution popup"
+                    eventId="extn_screenbase_button_onClick"
+                    isExtn="true" sequence="51">
+                    <Handler methodName="openShortageResolutionPopup"/>
+                </Subscriber>
+            </Local>
+        </Subscribers>
+    </ScreenExtension>
+    <!--End - OMNI-3680 BOPIS:Record Shortage Button-->
+</ExtensionMetaData>

@@ -1,0 +1,5 @@
+<OrderInvoiceList TotalOrderInvoiceList="">
+	<OrderInvoice InvoiceNo="" InvoiceType="" OrderInvoiceKey=""  ShipmentKey="">
+		<Extn ExtnInvoiceNo=""/>
+	</OrderInvoice>
+</OrderInvoiceList>

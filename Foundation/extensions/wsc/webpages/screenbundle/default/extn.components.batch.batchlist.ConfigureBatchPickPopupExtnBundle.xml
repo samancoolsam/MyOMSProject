@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ScreenBundle
+    screenBundleId="extn.components.batch.batchlist.ConfigureBatchPickPopupExtnBundle" screenId="extn.components.batch.batchlist.ConfigureBatchPickPopupExtn">
+    <BundleEntries>
+        <BundleEntry
+            bundleEntryId="extn_SortMethod_RadioButtonSet_label"
+            bundleKey="RadioButtonSet_sortMethod"
+            bundleValueFn="_scSimpleBundle" property="label"
+            type="WIDGET" uId="extn_SortMethod"/>
+        <BundleEntry
+            bundleEntryId="extn_SortMethod_RadioButtonSet_BindingData_RadioBinding_SORT_AFTER_PICK_Option_label"
+            bundleKey="AfterPicking" bundleValueFn="_scSimpleBundle"
+            childPath="RadioButtonSet_BindingData_RadioBinding_SORT_AFTER_PICK_Option"
+            property="label" type="WIDGET" uId="extn_SortMethod"/>
+    </BundleEntries>
+</ScreenBundle>

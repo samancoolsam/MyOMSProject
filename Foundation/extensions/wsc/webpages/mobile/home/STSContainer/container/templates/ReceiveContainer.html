@@ -1,0 +1,653 @@
+<div class="sc-platform-screen-default ReceiveContainer" role="region" aria-label="region_screenHeader">
+
+
+
+
+<!-- 	Receive Container Screen : Start -->	
+
+	
+
+<div data-dojo-type="idx/layout/ContentPane" data-dojo-props="		spanLabel : true , 
+		title : 'Top Content' , 
+		'class' : 'mobileCommonScreen screenHeader' , 
+		colspan : 1 , 
+		uId : 'TopContent' , 
+		layoutAlign : 'top'  
+ ">
+        <div data-dojo-type="idx/layout/ContentPane" data-dojo-props="		spanLabel : true , 
+		'class' : 'screenTitle' , 
+		uId : 'pnlScreenDescription'  
+ ">
+      <div data-dojo-type="sc/plat/dojo/widgets/Label" data-dojo-props="		spanLabel : true , 
+		uId : 'lbl_ScreenTitle '  
+ 		,scParamDataFn :
+		 function() { 
+			return { 
+			 	value : 			this.getSimpleBundleString('Label_ReceiveTOContainer')
+			}
+		}
+	"></div>
+        </div>
+		<!--
+	    <div data-dojo-type="idx/layout/ContentPane" data-dojo-props="		spanLabel : true , 
+		'class' : 'rightPanel'  
+ ">
+      <div data-dojo-type="idx/layout/ContentPane" data-dojo-props="		spanLabel : true , 
+		uId : 'pnlScreenTasks'  
+ "></div>
+        </div>
+		-->
+    </div>	
+	
+<div data-dojo-type="idx/layout/ContentPane" data-dojo-props="		
+		'class' : 'scanPanelData' , 
+		 uId : 'productScanForm' ,  layoutAlign : 'top'  
+ ">		
+<div data-dojo-type="idx/layout/ContentPane" data-dojo-props="		spanLabel : true , 
+		'class' : 'barcodeScanPanel' , 
+		uId : 'extn_containerPanel'  
+ ">		
+ <div data-dojo-type="sc/plat/dojo/widgets/Link" 
+	 					data-dojo-props="spanLabel : true,
+	 								uId : 'extn_scanTOContainer' , 		
+		'class' : 'buttonConnect' , 		
+		style : 'padding-top:30px; padding-right:12px;',
+		hasImage : true ,
+		appendToContextRoot : true , 		
+		imageSrc : 'wsc/resources/css/icons/images/barcode_blue.png' , 
+		scParamDataFn :
+		 function() { 
+			return { 
+			 	title : 			this.getSimpleBundleString('Tooltip_arialabel_scanProduct')
+,	
+			 	imageAlt : 			this.getSimpleBundleString('Tooltip_arialabel_scanProduct')
+			}
+		}
+					">
+	</div>
+ 	<div data-dojo-type="idx/form/TextBox"
+								data-dojo-props="	spanLabel : true,
+								'class' : 'autoLabelZeroWidth longTextbox' ,
+				selectOnClick : true ,
+		style : 'margin-left:1px; padding-top:10px;' , 
+		uId : 'extn_txt_ContainerNo',		
+ 		scParamDataFn :
+		 function() { 
+			return { 			 	
+			hint : 	this.getSimpleBundleString('extn_Scan_or_enter_Container_ID')
+,	
+			 	label : this.getSimpleBundleString('extn_ContainerNo')
+,
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 path : 			'Container.ContainerNo'
+,
+		 namespace : 			'ContainerNo_Input'
+	}
+,
+		 targetBinding : 	[
+	 		{
+		 path : 			'Container.ContainerNo'
+,
+		 namespace : 			'ContainerNo_Output'
+	}
+	]
+	}
+,	
+			 	invalidMessage : 			this.getSimpleBundleString('Message_InvalidContainerNo')
+			}
+		}				
+		
+">
+</div>
+</div>
+</div>
+
+<div data-dojo-type="idx/layout/ContentPane" data-dojo-props="		spanLabel : true , 
+		'class' : '' , 
+		uId : 'extn_lastScannedContainers'  
+ ">
+<div data-dojo-type="sc/plat/dojo/widgets/Link" 
+	 					data-dojo-props="		spanLabel : true , 
+		'class' : 'extnidxLinkRC blockComponent longTextbox zeroWidthLabelKey' ,		
+	 	uId : 'extn_lastScannedContainer' , 
+		style : 'padding-top:0px; padding-left:10px;' , 		
+ 		scParamDataFn :
+		 function() { 
+			return { 
+			 	label : 			this.getBundleString('extn_LastScannedContainer'),
+				bindingData :  {
+  
+   sourceBinding :  {
+   path :    'EXTNStsContainerno.ContainerNo'
+,
+   namespace :    'createEXTNStsContainerno_output'
+ }
+ }
+			}
+			}
+">
+		 	</div>
+						 	
+			
+	<!--div data-dojo-type="sc/plat/dojo/widgets/Link" 
+	 					data-dojo-props="spanLabel : true ,
+	 								uId : 'extn_Last_Scanned_ContainerID' , 
+		'class' : 'extnidxLinkRC', 
+		style : 'padding-top:0px; padding-left:0px;' , 		
+ 		scParamDataFn :
+		 function() { 
+			return { 
+			 	value : 			this.getSimpleBundleString('extn_LastScannedContainerID')
+			}
+		}
+	 					">
+		 	</div-->
+</div>	
+		
+<div data-dojo-type="idx/layout/ContentPane" data-dojo-props="		spanLabel : true , 
+		'class' : 'contentSeparator' , 
+		uId : 'extn_noOfContainers'  
+ ">	
+<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" 
+	 					data-dojo-props="		spanLabel : true , 
+		'class' : 'blockComponent longTextbox zeroWidthLabelKey' ,	
+	 	uId : 'extn_countOfContainers' , 		
+		style : 'padding-top:20px; padding-left:10px;' , 		 
+ 		scParamDataFn :
+		 function() { 
+			return { 
+			 	label : 			this.getBundleString('extn_No_Of_Containers')
+				
+			}
+		}
+">
+</div> 	
+</div>
+
+<!--
+	<div data-dojo-type="idx/layout/ContentPane" data-dojo-props="		spanLabel : true , 
+		'class' : 'contentSeparator' , 
+		uId : 'extn_receivedcontainers'  
+ ">		
+		<div data-dojo-type="sc/plat/dojo/widgets/Link" 
+	 					data-dojo-props="spanLabel : true ,
+	 								uId : 'extn_ViewReceivedContainers' , 
+		'class' : 'headerLink',  
+		style : 'padding-top:20px; padding-left:10px;' , 
+ 		scParamDataFn :
+		 function() { 
+			return { 
+			 	value : 			this.getSimpleBundleString('extn_ViewReceivedContainers')
+			}
+		}
+	 					">
+		 	</div> 
+		</div>
+	<div data-dojo-type="idx/layout/ContentPane" data-dojo-props="		spanLabel : true , 
+		'class' : 'contentSeparator' , 
+		uId : 'extn_pendingcontainers'  
+ ">		
+		<div data-dojo-type="sc/plat/dojo/widgets/Link" 
+	 					data-dojo-props="spanLabel : true ,
+	 								uId : 'extn_ViewPendingContainers' , 
+		'class' : 'headerLink',  
+		style : 'padding-top:20px; padding-left:10px;' , 
+ 		scParamDataFn :
+		 function() { 
+			return { 
+			 	value : 			this.getSimpleBundleString('extn_ViewPendingContainers')
+			}
+		}
+	 					">
+		 	</div> 
+			</div>
+	<div data-dojo-type="idx/layout/ContentPane" data-dojo-props="		spanLabel : true , 
+		'class' : 'contentSeparator' , 
+		uId : 'extn_pendingcontainers'  
+ ">
+			<div data-dojo-type="sc/plat/dojo/widgets/Link" 
+	 					data-dojo-props="spanLabel : true ,
+	 								uId : 'extn_SearchTOShipments' , 
+		'class' : 'headerLink', 
+		style : 'padding-top:20px; padding-left:10px;' , 		
+ 		scParamDataFn :
+		 function() { 
+			return { 
+			 	value : 			this.getSimpleBundleString('extn_SearchTOShipments')
+			}
+		}
+	 					">
+		 	</div>
+</div>		
+
+	<div data-dojo-type="idx/layout/ContentPane" data-dojo-props="		spanLabel : true , 
+		'class' : 'contentSeparator' , 
+		uId : 'extn_pendingcontainers'  
+ ">		
+		<div data-dojo-type="sc/plat/dojo/widgets/Link" 
+	 					data-dojo-props="spanLabel : true ,
+	 								uId : 'extn_TOSummaryScreen' , 
+		'class' : 'headerLink',  
+		style : 'padding-top:20px; padding-left:10px;' , 
+ 		scParamDataFn :
+		 function() { 
+			return { 
+			 	value : 			this.getSimpleBundleString('extn_TOSummaryScreen')
+			}
+		}
+	 					">
+	</div> 
+	</div>
+-->
+
+	<div data-dojo-type="sc/plat/dojo/widgets/Link" 
+	 					data-dojo-props="spanLabel : true ,
+	 								uId : 'extn_SearchTOShipments' , 
+		'class' : 'headerLink extnidxLink' , 
+		style : 'padding-top:30px; padding-left:10px; font-size: 200px;' , 		
+ 		scParamDataFn :
+		 function() { 
+			return { 
+			 	value : 			this.getSimpleBundleString('extn_Ship_To_Store_Order_Search')
+			}
+		}
+	 					">
+		 	</div>
+			
+			
+		
+			
+			
+	<div data-dojo-type="dijit/form/Button" data-dojo-props="		spanLabel : true ,	 				
+	 								uId : 'extn_btnFinish' , 		
+		'class' : 'buttonConnect idxSpecialButton' , 
+		style : 'float:right; padding-right:10px; padding-top:80px',
+		showLabel : true , 			
+ 		scParamDataFn :
+		 function() { 
+			return { 
+			
+			 	label : 			this.getSimpleBundleString('extn_FinishReceiving')
+			}
+		}
+	 		">
+	</div>	
+
+	
+	
+	<!-- 		Receive Container Screen : End -->		
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 	Search Screen : Start -->
+<!--
+
+<div data-dojo-type="idx/layout/ContentPane" data-dojo-props="		spanLabel : true , 
+		title : 'Top Content' , 
+		'class' : 'mobileCommonScreen screenHeader' , 
+		colspan : 1 , 
+		uId : 'TopContent' , 
+		layoutAlign : 'top'  
+ ">
+        <div data-dojo-type="idx/layout/ContentPane" data-dojo-props="		spanLabel : true , 
+		'class' : 'screenTitle' , 
+		uId : 'pnlScreenDescription'  
+ ">
+      <div data-dojo-type="sc/plat/dojo/widgets/Label" data-dojo-props="		spanLabel : true , 
+		uId : 'lbl_ScreenTitle'  
+ 		,scParamDataFn :
+		 function() { 
+			return { 
+			 	value : 			this.getSimpleBundleString('Label_SearchShipToStoreOrders')
+			}
+		}
+	"></div>
+        </div>
+	    <div data-dojo-type="idx/layout/ContentPane" data-dojo-props="		spanLabel : true , 
+		'class' : 'rightPanel'  
+ ">
+      <div data-dojo-type="idx/layout/ContentPane" data-dojo-props="		spanLabel : true , 
+		uId : 'pnlScreenTasks'  
+ "></div>
+        </div>
+    </div>	
+
+<div id="widget_idx_form_TextBox_1" class="dijitInline dijitReset dijitLeft idxComposite autoLabelZeroWidth longTextbox idxTextBoxWrap dijitValidationTextBox" uid="txt_SearchOrderNo" widgetid="idx_form_TextBox_1">
+	<div class="idxLabel dijitInline" dojoattachpoint="labelWrap">
+		<span class="idxRequiredIcon">*&nbsp;</span>
+		<label dojoattachpoint="compLabelNode" for="idx_form_TextBox_1">Container number</label>
+	</div>
+	<div class="dijitInline" dojoattachpoint="fieldWrap">
+		<div dojoattachpoint="stateNode,oneuiBaseNode" class="dijit dijitReset dijitInline dijitLeft dijitTextBox dijitValidationTextBox" role="presentation">
+			<div class="dijitReset dijitInputField dijitInputContainer">
+				<input class="dijitReset dijitInputInner" dojoattachpoint="textbox,focusNode" autocomplete="off" type="text" 
+				placeholder="Scan or enter Container#" tabindex="0" id="idx_form_TextBox_1" value="">
+			</div>
+		</div>
+		<div class="idxUnit dijitInline dijitHidden" dojoattachpoint="compUnitNode"></div>
+		<div class="dijitReset dijitValidationContainer dijitInline" dojoattachpoint="iconNode">
+			<div class="dijitValidationIcon">
+				<input class="dijitReset dijitInputField dijitValidationInner" value="Χ " type="text" tabindex="-1" readonly="readonly" role="presentation">
+			</div>
+		</div>
+		<div class="dijitHidden idxHintOutside" dojoattachpoint="compHintNode"></div>
+	</div>
+</div>
+
+
+
+<div id="widget_idx_form_TextBox_1" class="dijitInline dijitReset dijitLeft idxComposite autoLabelZeroWidth longTextbox idxTextBoxWrap dijitValidationTextBox" uid="txt_SearchOrderNo" widgetid="idx_form_TextBox_1">
+	<div class="idxLabel dijitInline" dojoattachpoint="labelWrap">
+		<span class="idxRequiredIcon">*&nbsp;</span>
+		<label dojoattachpoint="compLabelNode" for="idx_form_TextBox_1">Order number Or Shipment number</label>
+	</div>
+	<div class="dijitInline" dojoattachpoint="fieldWrap">
+		<div dojoattachpoint="stateNode,oneuiBaseNode" class="dijit dijitReset dijitInline dijitLeft dijitTextBox dijitValidationTextBox" role="presentation">
+			<div class="dijitReset dijitInputField dijitInputContainer">
+				<input class="dijitReset dijitInputInner" dojoattachpoint="textbox,focusNode" autocomplete="off" type="text" 
+				placeholder="Scan or enter Order# or Shipment#" tabindex="0" id="idx_form_TextBox_1" value="">
+			</div>
+		</div>
+		<div class="idxUnit dijitInline dijitHidden" dojoattachpoint="compUnitNode"></div>
+		<div class="dijitReset dijitValidationContainer dijitInline" dojoattachpoint="iconNode">
+			<div class="dijitValidationIcon">
+				<input class="dijitReset dijitInputField dijitValidationInner" value="Χ " type="text" tabindex="-1" readonly="readonly" role="presentation">
+			</div>
+		</div>
+		<div class="dijitHidden idxHintOutside" dojoattachpoint="compHintNode"></div>
+	</div>
+</div>
+
+<div id="widget_idx_form_TextBox_1" class="dijitInline dijitReset dijitLeft idxComposite autoLabelZeroWidth longTextbox idxTextBoxWrap dijitValidationTextBox" uid="txt_SearchOrderNo" widgetid="idx_form_TextBox_1">
+<div class="idxLabel dijitInline" dojoattachpoint="labelWrap">
+		<span class="idxRequiredIcon">*&nbsp;</span>
+		<label dojoattachpoint="compLabelNode" for="idx_form_TextBox_1">Customer Details</label>
+	</div>
+	
+	
+	<div data-dojo-type="idx/layout/ContentPane" data-dojo-props="		spanLabel : true , 
+		&#39;class&#39; : &#39;customerDetails&#39; , 
+		uId : &#39;pnl_customerDtls1&#39;  
+ " uid="pnl_customerDtls1" class="dijitContentPane idxContentPane customerDetails" id="idx_layout_ContentPane_71" widgetid="idx_layout_ContentPane_71">
+            <div id="widget_idx_form_TextBox_3" class="dijitInline dijitReset dijitLeft idxComposite idxTextBoxWrap dijitValidationTextBox" uid="txt_SearchCustLastName" widgetid="idx_form_TextBox_3"><div class="idxLabel dijitInline dijitHidden" dojoattachpoint="labelWrap"><span class="idxRequiredIcon">*&nbsp;</span><label dojoattachpoint="compLabelNode"></label></div><div class="dijitInline" dojoattachpoint="fieldWrap"><div dojoattachpoint="stateNode,oneuiBaseNode" class="dijit dijitReset dijitInline dijitLeft dijitTextBox dijitValidationTextBox" role="presentation"><div class="dijitReset dijitInputField dijitInputContainer"><input class="dijitReset dijitInputInner" dojoattachpoint="textbox,focusNode" autocomplete="off" type="text" placeholder="Last name" tabindex="0" id="idx_form_TextBox_3" value=""></div></div><div class="idxUnit dijitInline dijitHidden" dojoattachpoint="compUnitNode"></div><div class="dijitReset dijitValidationContainer dijitInline" dojoattachpoint="iconNode"><div class="dijitValidationIcon"><input class="dijitReset dijitInputField dijitValidationInner" value="Χ " type="text" tabindex="-1" readonly="readonly" role="presentation"></div></div><div class="dijitHidden idxHintOutside" dojoattachpoint="compHintNode"></div></div></div>
+            <div id="widget_idx_form_TextBox_4" class="dijitInline dijitReset dijitLeft idxComposite idxTextBoxWrap dijitValidationTextBox" uid="txt_SearchCustFirstName" widgetid="idx_form_TextBox_4"><div class="idxLabel dijitInline dijitHidden" dojoattachpoint="labelWrap"><span class="idxRequiredIcon">*&nbsp;</span><label dojoattachpoint="compLabelNode"></label></div><div class="dijitInline" dojoattachpoint="fieldWrap"><div dojoattachpoint="stateNode,oneuiBaseNode" class="dijit dijitReset dijitInline dijitLeft dijitTextBox dijitValidationTextBox" role="presentation"><div class="dijitReset dijitInputField dijitInputContainer"><input class="dijitReset dijitInputInner" dojoattachpoint="textbox,focusNode" autocomplete="off" type="text" placeholder="First name" tabindex="0" id="idx_form_TextBox_4" value=""></div></div><div class="idxUnit dijitInline dijitHidden" dojoattachpoint="compUnitNode"></div><div class="dijitReset dijitValidationContainer dijitInline" dojoattachpoint="iconNode"><div class="dijitValidationIcon"><input class="dijitReset dijitInputField dijitValidationInner" value="Χ " type="text" tabindex="-1" readonly="readonly" role="presentation"></div></div><div class="dijitHidden idxHintOutside" dojoattachpoint="compHintNode"></div></div></div>
+  </div>
+<div data-dojo-type="idx/layout/ContentPane" data-dojo-props="		spanLabel : true , 
+		&#39;class&#39; : &#39;customerDetails&#39; , 
+		uId : &#39;pnl_customerDtls2&#39;  
+ " uid="pnl_customerDtls2" class="dijitContentPane idxContentPane customerDetails" id="idx_layout_ContentPane_72" widgetid="idx_layout_ContentPane_72">
+            <div id="widget_idx_form_TextBox_5" class="dijitInline dijitReset dijitLeft idxComposite idxTextBoxWrap dijitValidationTextBox" uid="txt_SearchCustEmail" widgetid="idx_form_TextBox_5"><div class="idxLabel dijitInline dijitHidden" dojoattachpoint="labelWrap"><span class="idxRequiredIcon">*&nbsp;</span><label dojoattachpoint="compLabelNode"></label></div><div class="dijitInline" dojoattachpoint="fieldWrap"><div dojoattachpoint="stateNode,oneuiBaseNode" class="dijit dijitReset dijitInline dijitLeft dijitTextBox dijitValidationTextBox" role="presentation"><div class="dijitReset dijitInputField dijitInputContainer"><input class="dijitReset dijitInputInner" dojoattachpoint="textbox,focusNode" autocomplete="off" type="text" placeholder="Email" tabindex="0" id="idx_form_TextBox_5" value=""></div></div><div class="idxUnit dijitInline dijitHidden" dojoattachpoint="compUnitNode"></div><div class="dijitReset dijitValidationContainer dijitInline" dojoattachpoint="iconNode"><div class="dijitValidationIcon"><input class="dijitReset dijitInputField dijitValidationInner" value="Χ " type="text" tabindex="-1" readonly="readonly" role="presentation"></div></div><div class="dijitHidden idxHintOutside" dojoattachpoint="compHintNode"></div></div></div>
+            <div id="widget_idx_form_TextBox_6" class="dijitInline dijitReset dijitLeft idxComposite idxTextBoxWrap dijitValidationTextBox" uid="txt_SearchCustPhoneNo" widgetid="idx_form_TextBox_6"><div class="idxLabel dijitInline dijitHidden" dojoattachpoint="labelWrap"><span class="idxRequiredIcon">*&nbsp;</span><label dojoattachpoint="compLabelNode"></label></div><div class="dijitInline" dojoattachpoint="fieldWrap"><div dojoattachpoint="stateNode,oneuiBaseNode" class="dijit dijitReset dijitInline dijitLeft dijitTextBox dijitValidationTextBox" role="presentation"><div class="dijitReset dijitInputField dijitInputContainer"><input class="dijitReset dijitInputInner" dojoattachpoint="textbox,focusNode" autocomplete="off" type="text" placeholder="Phone number" tabindex="0" id="idx_form_TextBox_6" value=""></div></div><div class="idxUnit dijitInline dijitHidden" dojoattachpoint="compUnitNode"></div><div class="dijitReset dijitValidationContainer dijitInline" dojoattachpoint="iconNode"><div class="dijitValidationIcon"><input class="dijitReset dijitInputField dijitValidationInner" value="Χ " type="text" tabindex="-1" readonly="readonly" role="presentation"></div></div><div class="dijitHidden idxHintOutside" dojoattachpoint="compHintNode"></div></div></div>
+        </div>
+	
+</div>
+
+<div id="widget_idx_form_TextBox_1" class="dijitInline dijitReset dijitLeft idxComposite autoLabelZeroWidth longTextbox idxTextBoxWrap dijitValidationTextBox" uid="txt_SearchOrderNo" widgetid="idx_form_TextBox_1">
+			<div class="idxLabel dijitInline" dojoattachpoint="labelWrap">
+				<span class="idxRequiredIcon">*&nbsp;</span>
+				<label dojoattachpoint="compLabelNode" for="idx_form_TextBox_1">Order Status</label>
+			</div>
+			<div class="dijitInline" dojoattachpoint="fieldWrap">
+				<div dojoattachpoint="stateNode,oneuiBaseNode" class="dijit dijitReset dijitInline dijitLeft dijitTextBox dijitValidationTextBox" role="presentation">
+					<div class="dijitReset dijitInputField dijitInputContainer">
+						<input class="dijitReset dijitInputInner" dojoattachpoint="textbox,focusNode" autocomplete="off" type="text" 
+						placeholder="All" tabindex="0" id="idx_form_TextBox_1" value="">
+					</div>
+				</div>
+				<div class="idxUnit dijitInline dijitHidden" dojoattachpoint="compUnitNode"></div>
+				<div class="dijitReset dijitValidationContainer dijitInline" dojoattachpoint="iconNode">
+					<div class="dijitValidationIcon">
+						<input class="dijitReset dijitInputField dijitValidationInner" value="Χ " type="text" tabindex="-1" readonly="readonly" role="presentation">
+					</div>
+				</div>
+				<div class="dijitHidden idxHintOutside" dojoattachpoint="compHintNode"></div>
+			</div>
+		</div>
+		
+		
+<div data-dojo-type="dijit/form/Button" data-dojo-props="		'class' : 'idxSpecialButton longButtons' , 
+		uId : 'extn_btnSearch'  
+ 		,scParamDataFn :
+		 function() { 
+			return { 
+			 	label : 			this.getSimpleBundleString('Action_Search')
+			}
+		}
+"></div>
+
+-->
+<!-- 	Search Screen : End -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 		Detailed Receive Container Screen : Start -->
+
+<!-- 
+
+ <div data-dojo-type="idx/layout/ContentPane" data-dojo-props="		spanLabel : true , 
+		title : 'Top Content' , 
+		'class' : 'mobileCommonScreen screenHeader' , 
+		colspan : 1 , 
+		uId : 'TopContent' , 
+		layoutAlign : 'top'  
+ ">
+        <div data-dojo-type="idx/layout/ContentPane" data-dojo-props="		spanLabel : true , 
+		'class' : 'screenTitle' , 
+		uId : 'pnlScreenDescription'  
+ ">
+      <div data-dojo-type="sc/plat/dojo/widgets/Label" data-dojo-props="		spanLabel : true , 
+		uId : 'lbl_ScreenTitle'  
+ 		,scParamDataFn :
+		 function() { 
+			return { 
+			 	value : 			this.getSimpleBundleString('Label_DetailedReceivingReport')
+			}
+		}
+	"></div>
+        </div>
+	    <div data-dojo-type="idx/layout/ContentPane" data-dojo-props="		spanLabel : true , 
+		'class' : 'rightPanel'  
+ ">
+      <div data-dojo-type="idx/layout/ContentPane" data-dojo-props="		spanLabel : true , 
+		uId : 'pnlScreenTasks'  
+ "></div>
+        </div>
+    </div>	
+
+<div data-dojo-type="idx/layout/ContentPane" data-dojo-props="		spanLabel : true , 
+		'class' : 'contentSeparator' , 
+		uId : 'extn_noOfContainers'  
+ ">	
+<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" 
+	 					data-dojo-props="		spanLabel : true , 
+		'class' : 'blockComponent longTextbox zeroWidthLabelKey' ,	
+	 	uId : 'extn_countOfContainers' , 		
+		style : 'padding-top:10px; padding-left:10px;' , 		 
+ 		scParamDataFn :
+		 function() { 
+			return { 
+			 	label : 			this.getBundleString('extn_Total_Containers')
+				
+			}
+		}
+">
+</div> 	
+</div>
+
+<div data-dojo-type="idx/layout/ContentPane" data-dojo-props="		spanLabel : true , 
+		'class' : 'contentSeparator' , 
+		uId : 'extn_noOfContainers'  
+ ">	
+<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" 
+	 					data-dojo-props="		spanLabel : true , 
+		'class' : 'blockComponent longTextbox zeroWidthLabelKey extnidxLabel' ,	
+	 	uId : 'extn_countOfContainers' , 		
+		style : 'padding-top:10px; padding-left:10px;' , 		 
+ 		scParamDataFn :
+		 function() { 
+			return { 
+			 	label : 			this.getBundleString('extn_TotalPartiallyReceived')
+				
+			}
+		}
+">
+</div> 	
+</div>
+
+
+<div data-dojo-type="idx/layout/ContentPane" data-dojo-props="		spanLabel : true , 
+		'class' : 'contentSeparator' , 
+		uId : 'extn_noOfContainers'  
+ ">	
+<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" 
+	 					data-dojo-props="		spanLabel : true , 
+		'class' : 'blockComponent longTextbox zeroWidthLabelKey extnidxLabelBOH' ,	
+	 	uId : 'extn_countOfContainers' , 		
+		style : 'padding-top:20px; padding-left:10px;' , 		 
+ 		scParamDataFn :
+		 function() { 
+			return { 
+			 	label : 			this.getBundleString('Label_Exception_BOH')
+				
+			}
+		}
+">
+</div> 	
+</div>
+
+<!--
+<div data-dojo-type="idx/layout/ContentPane" data-dojo-props="		spanLabel : true , 
+		'class' : 'contentSeparator' , 
+		uId : 'extn_searchsoshipments'  
+ ">
+<div data-dojo-type="sc/plat/dojo/widgets/Link" 
+	 					data-dojo-props="spanLabel : true ,
+	 								uId : 'extn_ShipToStoreOrderSearch' , 
+		'class' : 'headerLink', 
+		style : 'padding-top:30px; padding-left:10px; font-size:150%;' , 		
+ 		scParamDataFn :
+		 function() { 
+			return { 
+			 	value : 			this.getSimpleBundleString('extn_Exception_BOH')
+			}
+		}
+	 					">
+</div>
+	</div>	
+--><!-- 
+<div data-dojo-type="idx/layout/ContentPane" data-dojo-props="		spanLabel : true , 
+		'class' : 'contentSeparator' , 
+		uId : 'extn_searchsoshipments'  
+ ">
+<div data-dojo-type="sc/plat/dojo/widgets/Link" 
+	 					data-dojo-props="spanLabel : true ,
+	 								uId : 'extn_ScannedCOntainers' , 
+		'class' : 'headerLink extnidxLink', 
+		style : 'padding-top:20px; padding-left:10px;' , 		
+ 		scParamDataFn :
+		 function() { 
+			return { 
+			 	value : 			this.getSimpleBundleString('extn_Scanned_Container')
+			}
+		}
+	 					">
+</div>
+</div>
+
+<div data-dojo-type="idx/layout/ContentPane" data-dojo-props="		spanLabel : true , 
+		'class' : 'contentSeparator' , 
+		uId : 'extn_searchsoshipments'  
+ ">
+<div data-dojo-type="sc/plat/dojo/widgets/Link" 
+	 					data-dojo-props="spanLabel : true ,
+	 								uId : 'extn_ShipToStoreOrderSearch' , 
+		'class' : 'headerLink extnidxLink', 
+		style : 'padding-top:30px; padding-left:10px;' , 		
+ 		scParamDataFn :
+		 function() { 
+			return { 
+			 	value : 			this.getSimpleBundleString('extn_Ship_To_Store_Order_Search')
+			}
+		}
+	 					">
+</div>
+	</div>	
+<div data-dojo-type="dijit/form/Button" data-dojo-props="		spanLabel : true ,	 				
+	 								uId : 'extn_btnClose' , 		
+		'class' : 'idxSpecialButton' , 
+		style : 'float:right; padding-right:10px; padding-top:30px',
+		showLabel : true , 			
+ 		scParamDataFn :
+		 function() { 
+			return { 
+			
+			 	label : 			this.getSimpleBundleString('extn_Close')
+			}
+		}
+	 		">
+		 	</div>	
+
+			
+	<!-- 		Detailed Receive Container Screen : End -->		
+			
+	
+
+
+
+
+
+
+
+	
+			
+				
+			
+			
+			
+ </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

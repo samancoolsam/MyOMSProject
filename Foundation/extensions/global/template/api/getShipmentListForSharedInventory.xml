@@ -1,0 +1,7 @@
+<Shipments>
+<Shipment ShipmentNo="" ShipNode="" ShipmentKey="" Status="" DocumentType="">
+<ShipmentLines>
+<ShipmentLine ShipmentLineKey="" ShipmentLineNo="" Quantity="" ItemID=""/>
+</ShipmentLines>
+</Shipment>
+</Shipments>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Controller className="com.sterlingcommerce.ui.web.platform.controller.SCUIXAPIMashupController" controllerId="extn.mobile.home.STSContainer.transferOrderShipmentSummary.containerSummaryScreen.ContainerSummaryBehaviorController" requestMethodSupported="POST" screenId="extn.mobile.home.STSContainer.transferOrderShipmentSummary.containerSummaryScreen.ContainerSummary">
+	<MashupRefs>
+		<MashupRef mashupId="extn_readyToStage_assignStagingLocationAtContainerLevel"
+			mashupRefId="extn_updateZoneAsLOSTAtContainerLevel" permissionId=""/>
+		<!-- Lost Scenarios - START -->
+		<MashupRef mashupId="extn_containerSummary_markContainerAsLost"
+			mashupRefId="extn_markContainerAsLost" permissionId=""/>
+		<!-- Lost Scenarios - END -->
+		<!-- OMNI-9453: STart -->
+		<MashupRef mashupId="extn_readyToStage_getSOShipmentList"
+			mashupRefId="extn_getSOShipmentList" permissionId=""/>			
+		<MashupRef mashupId="extn_readyToStage_UpdatePickUpQty"
+			mashupRefId="extn_changeShipment_UpdatePickUpQty" permissionId=""/>			
+		<MashupRef mashupId="extn_readyToStage_changeSOShipmentStatus"
+			mashupRefId="extn_changeSOShipmentStatus" permissionId=""/>
+		<!-- OMNI-9453: End -->
+		<!-- OMNI-68038 Start -->
+		<MashupRef mashupId="getLostContainerReasonCode"
+			mashupRefId="getLostContainerReasonCode" permissionId=""/>
+		<!-- OMNI-68038 End -->
+		<!-- OMNI-72148 Start -->
+		<MashupRef mashupId="extn_getFlagToDisableAddQtyAndReadOnlyScannedQty"
+			mashupRefId="extn_getFlagEditStagingLocation" permissionId=""/>
+		<!-- OMNI-72148 End -->
+		<!-- OMNI-71679 - Editable Staging Location - Start -->
+		<MashupRef mashupId="extn_readyToStage_assignStagingLocationAtContainerLevel"
+			mashupRefId="extn_assignStagingLocationAtContainerLevel" permissionId=""/>
+		<MashupRef mashupId="extn_readyToStage_getSOShipmentList"
+			mashupRefId="extn_getSOShipmentListToUpdateStagingLoc" permissionId=""/>
+		<MashupRef mashupId="extn_readyToStage_assignStagingLocationAtShpLineLevel"
+			mashupRefId="extn_assignStagingLocationAtShpLineLevel" permissionId=""/>		
+		<!-- OMNI-71679 - Editable Staging Location - End -->
+	</MashupRefs>
+</Controller>

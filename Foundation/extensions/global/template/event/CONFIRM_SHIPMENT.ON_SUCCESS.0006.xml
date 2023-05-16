@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Shipment ActualDeliveryDate=" " ActualFreightCharge=" "
+    ActualShipmentDate=" " AppointmentNo=" " BolNo=" "
+    BuyerOrganizationCode=" " CarrierAccountNo=" "
+    CarrierServiceCode=" " CarrierType=" " Code=" " CommercialValue=" "
+    Currency=" " DeliveryCode=" " DeliveryPlanKey=" " DeliveryTS=" "
+    DestinationZone=" " DocumentType=" " DownLoadCount=" "
+    EnterpriseCode=" " ExpectedDeliveryDate=" " ExpectedShipmentDate=" "
+    ExportTaxpayerID=" " FreightTerms=" " FromAddressKey=" "
+    FromAppointment=" " HasOtherShipments=" " HazardousMaterialFlag=" "
+    HeldForConfirmation=" " ITDate=" " ITNo=" " ManifestKey=" "
+    ManifestNo=" " NextAlertTs=" " NumOfCartons=" " NumOfPallets=" "
+    OriginZone=" " PackListType=" " ParentShipmentKey=" " PickListNo=" "
+    PickticketNo=" " PipelineKey=" " PodNo=" " ProNo=" "
+    ReceivingNode=" " SCAC=" " SealNo=" " SellerOrganizationCode=" "
+    ShipDate=" " ShipMode=" " ShipNode=" " ShipVia=" "
+    ShipmentClosedFlag=" " ShipmentConfirmUpdatesDone=" "
+    ShipmentContainerizedFlag=" " ShipmentDeliverUpdatesDone=" "
+    ShipmentKey=" " ShipmentNo=" " ShipmentPlannedFlag=" "
+    ShipmentType=" " Status=" " StatusDate=" " ToAddressKey=" "
+    ToAppointment=" " TotalActualCharge=" " TotalEstimatedCharge=" "
+    TotalVolume=" " TotalVolumeUOM=" " TotalWeight=" "
+    TotalWeightUOM=" " TrackingNo=" " TrailerNo=" " DeliveryMethod=" ">
+	<ShipNode NodeType=" "/> <!-- OMNI-105142 Changes -->
+    <ToAddress AddressLine1=" " AddressLine2=" " AddressLine3=" "
+        AddressLine4=" " AddressLine5=" " AddressLine6=" "
+        AlternateEmailID=" " Beeper=" " City=" " Company=" " Country=" "
+        DayFaxNo=" " DayPhone=" " Department=" " EMailID=" "
+        ErrorTxt=" " EveningFaxNo=" " EveningPhone=" " FirstName=" "
+        HttpUrl=" " JobTitle=" " LastName=" " MiddleName=" "
+        MobilePhone=" " OtherPhone=" " PersonID=" " PersonInfoKey=" "
+        PreferredShipAddress=" " State=" " Suffix=" " Title=" "
+        UseCount=" " VerificationStatus=" " ZipCode=" "/>
+    <FromAddress AddressLine1=" " AddressLine2=" " AddressLine3=" "
+        AddressLine4=" " AddressLine5=" " AddressLine6=" "
+        AlternateEmailID=" " Beeper=" " City=" " Company=" " Country=" "
+        DayFaxNo=" " DayPhone=" " Department=" " EMailID=" "
+        ErrorTxt=" " EveningFaxNo=" " EveningPhone=" " FirstName=" "
+        HttpUrl=" " JobTitle=" " LastName=" " MiddleName=" "
+        MobilePhone=" " OtherPhone=" " PersonID=" " PersonInfoKey=" "
+        PreferredShipAddress=" " State=" " Suffix=" " Title=" "
+        UseCount=" " VerificationStatus=" " ZipCode=" "/>
+	<Containers>
+        <Container ActualFreightCharge=" " AppliedWeight=" "
+            AppliedWeightUOM=" " AstraCode=" " BarcodeDiscount=" "
+            BasicFreightCharge=" " CarriageValue=" "
+            CarrierBillAccount=" " CarrierLocationID=" "
+            CarrierPaymentType=" " CarrierServiceCode=" "
+            CommitmentCode=" " ContainerGrossWeight=" "
+            ContainerGrossWeightUOM=" " ContainerHeight=" "
+            ContainerHeightUOM=" " ContainerLength=" "
+            ContainerLengthUOM=" " ContainerNetWeight=" "
+            ContainerNetWeightUOM=" " ContainerNo=" " ContainerScm=" "
+            ContainerSeqNo=" " ContainerType=" " ContainerWidth=" "
+            ContainerWidthUOM=" " CustCarrierAccountNo=" "
+            CustomsValue=" " DeclaredValue=" " DeliverBy=" "
+            DeliveryCode=" " DeliveryDay=" " DimmedFlag=" "
+            DiscountAmount=" " ExportLicenseExpDate=" "
+            ExportLicenseNo=" " FormID=" " FreightTerms=" "
+            HasOtherContainers=" " ManifestKey=" " ManifestNo=" "
+            MasterContainerNo=" " OversizedFlag=" "
+            ParentContainerNo=" " RoutingCode=" " SCAC=" "
+            ServiceType=" " ShipDate=" " ShipMode=" " ShipToKey=" "
+            ShipmentContainerKey=" " ShipmentKey=" "
+            SpecialServicesSurcharge=" " TrackingNo=" " Ucc128code=" " Zone=" ">
+            <ContainerDetails>
+                <ContainerDetail ContainerDetailsKey=" " EnterpriseKey=" " ItemID=" "
+                    LotNumber=" " ProductClass=" " Quantity=" "
+                    ShipmentContainerKey=" " ShipmentKey=" "
+                    ShipmentLineKey=" " UnitOfMeasure=" ">
+                    <ShipmentLine Action=" " CountryOfOrigin=" " Createprogid=" " Createts=" " Createuserid=" " CustomerPoLineNo=" " CustomerPoNo=" " 
+	                DepartmentCode=" " ExternalReleaseIdentifier=" " FifoNo=" " IsPickable=" " ItemDesc=" " ItemID=" " KitCode=" " KitQty=" " Lockid=" " 
+	                MarkForKey=" " Modifyprogid=" " Modifyts=" " Modifyuserid=" " NetWeight=" " NetWeightUom=" " OrderHeaderKey=" " OrderLineKey=" " OrderNo=" " 
+	                OrderReleaseKey=" " OriginalQuantity=" " OverShipQuantity=" " PrimeLineNo=" " ProductClass=" " Quantity=" " ReleaseNo=" " RequestedSerialNo=" " 
+	                RequestedTagNo=" " Segment=" " SegmentType=" " ShipmentKey=" " ShipmentLineKey=" " ShipmentLineNo=" " ShipmentSubLineNo=" " ShortageQty=" " 
+	                SubLineNo=" " UnitOfMeasure=" " WaveNo=" " isHistory=" "/>
+                </ContainerDetail>
+            </ContainerDetails>
+         </Container>
+    </Containers>
+    <ShipmentLines>
+        <ShipmentLine ChainedFromOrderHeaderKey=" " ChainedFromOrderLineKey=" " ActualQuantity=" " CustomerPoLineNo=" " ItemDesc=" " ItemID=" " NetWeight=" " NetWeightUom=" " OrderHeaderKey=" " 
+		OrderLineKey=" " OrderNo=" " OrderReleaseKey=" " OverShipQuantity=" " PrimeLineNo=" " ProductClass=" " Quantity=" " ReleaseNo=" "
+         	Segment=" " SegmentType=" " ShipmentKey=" " ShipmentLineKey=" " ShipmentLineNo=" " SubLineNo=" " UnitOfMeasure=" " isHistory=" ">
+		 <!-- OMNI-6377: Start -->
+		 <OrderLine OrderLineKey=" " OrderedQty=" " OriginalOrderedQty=" " Quantity=" ">
+			<Extn />
+			<ItemDetails DisplayItemId=" " ItemGroupCode=" " ItemID=" ">
+				<PrimaryInformation ExtendedDisplayDescription=" "/>
+			</ItemDetails>
+			<ChainedFromOrderLine OrderHeaderKey="" OrderLineKey="" OrderNo="">
+				<Extn />
+				<Order DocumentType="" OrderNo="" MaxOrderStatus="" MinOrderStatus="" OrderDate="" Status=""></Order>
+			</ChainedFromOrderLine>
+		 </OrderLine>
+		 <!-- OMNI-6377: End -->
+        </ShipmentLine>
+    </ShipmentLines>
+	<!-- OMNI-6377: Start -->
+	<ShipmentStatusAudits>
+      <ShipmentStatusAudit ShipmentStatusAuditKey="" OldStatus="" NewStatus="" OldStatusDate="" NewStatusDate="" ReasonCode="" ReasonText=""/>
+   </ShipmentStatusAudits>
+   <!-- OMNI-6377: End -->
+ </Shipment>

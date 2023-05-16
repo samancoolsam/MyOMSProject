@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ScreenBundle
+    screenBundleId="extn.shipment.shipmentTracking.lineStatePanels.ShipTrackShippingExtnBundle" screenId="extn.shipment.shipmentTracking.lineStatePanels.ShipTrackShippingExtn">
+    <BundleEntries>
+        <BundleEntry bundleEntryId="extn_PromisedDate_DataLabel_label"
+            bundleKey="extn_Promised_Date" bundleValueFn="_scBundle"
+            property="label" type="WIDGET" uId="extn_PromisedDate"/>
+        <BundleEntry
+            bundleEntryId="extn_EstimatedArrival_DataLabel_label"
+            bundleKey="Estimated_Arrival" bundleValueFn="_scBundle"
+            property="label" type="WIDGET" uId="extn_EstimatedArrival"/>
+        <BundleEntry bundleEntryId="extn_ShipNode_DataLabel_label"
+            bundleKey="ShipNode" bundleValueFn="_scSimpleBundle"
+            property="label" type="WIDGET" uId="extn_ShipNode"/>
+        <BundleEntry
+            bundleEntryId="extn_shipementnumber_DataLabel_label"
+            bundleKey="Shipment_No" bundleValueFn="_scSimpleBundle"
+            property="label" type="WIDGET" uId="extn_shipementnumber"/>
+        <BundleEntry bundleEntryId="extn_signature_DataLabel_label"
+            bundleKey="extn_CarrierService" bundleValueFn="_scBundle"
+            property="label" type="WIDGET" uId="extn_signature"/>
+        <BundleEntry bundleEntryId="extn_ShipNodeLink_Link_label"
+            bundleKey="ShipNode" bundleValueFn="_scBundle"
+            property="label" type="WIDGET" uId="extn_ShipNodeLink"/>
+    </BundleEntries>
+</ScreenBundle>

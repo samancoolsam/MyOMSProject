@@ -1,0 +1,14 @@
+<OrderList>
+<Order>
+<OrderLines>
+<OrderLine CarrierServiceCode="" OrderLineKey="" PrimeLineNo="" ReturnReason="" SCAC="" ScacAndService="" SubLineNo="">
+	<Item ItemDesc="" ItemID="" ItemShortDesc=""
+		ProductClass="" UnitOfMeasure="">
+		<LanguageDescriptionList/>
+	</Item>
+	<LinePriceInfo DiscountPercentage="" DiscountReference="" DiscountType="" ListPrice="" RetailPrice="" UnitPrice=""/>
+	<References/>
+</OrderLine>
+</OrderLines>
+</Order>
+</OrderList>

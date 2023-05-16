@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ScreenBundle
+    screenBundleId="extn.return.create.lines.ExistingOrderLineExtnBundle" screenId="extn.return.create.lines.ExistingOrderLineExtn">
+    <BundleEntries>
+        <BundleEntry bundleEntryId="extn_EGCLineError_Label_value"
+            bundleKey="extn_EGCLineError"
+            bundleValueFn="_scSimpleBundle" property="value"
+            type="WIDGET" uId="extn_EGCLineError"/>
+    </BundleEntries>
+</ScreenBundle>

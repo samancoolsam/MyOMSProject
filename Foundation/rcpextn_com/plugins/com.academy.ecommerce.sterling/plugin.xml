@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin>
+    <extension id="com.academy.ecommerce.sterling.AutoLoader" point="com.yantra.yfc.rcp.YRCPluginAutoLoader">
+        <AutoLoad ClassToLoad="com.ExtnAutoLoader" LoadOrder="500"/>
+    </extension>
+    <extension id="com.yantra.pca.ycd.actionSets" name="Action Sets" point="org.eclipse.ui.actionSets">
+        <actionSet description="Appointment Page Action Set"
+            id="com.academy.ecommerce.sterling.orderSummary.actions.TaxIdPopupSubmitAction"
+            label="com.yantra.pca.ycd.YCDAppointmentPageCompositeActionSet" visible="true">
+            <action
+                class="com.academy.ecommerce.sterling.orderSummary.actions.TaxIdPopupSubmitAction"
+                definitionId="com.academy.ecommerce.sterling.orderSummary.actions.TaxIdPopupSubmitAction"
+                id="com.academy.ecommerce.sterling.orderSummary.actions.TaxIdPopupSubmitAction"
+                label="YCDAppointmentPageRefreshCalendarAction"
+                state="true" style="push" tooltip="YCDAppointmentPageRefreshCalendarAction"/>
+        </actionSet>
+        <actionSet description="Appointment Page Action Set"
+            id="com.academy.ecommerce.sterling.fulfillmentSummary.actions.AcademyGiftShipApplyAction"
+            label="com.yantra.pca.ycd.YCDAppointmentPageCompositeActionSet" visible="true">
+            <action
+                class="com.academy.ecommerce.sterling.fulfillmentSummary.actions.AcademyGiftShipApplyAction"
+                definitionId="com.academy.ecommerce.sterling.fulfillmentSummary.actions.AcademyGiftShipApplyAction"
+                id="com.academy.ecommerce.sterling.fulfillmentSummary.actions.AcademyGiftShipApplyAction"
+                label="" state="true" style="push" tooltip="YCDAppointmentPageRefreshCalendarAction"/>
+        </actionSet>
+        <actionSet description="Appointment Page Action Set"
+            id="com.academy.ecommerce.sterling.fulfillmentSummary.actions.AcademyGiftShipCloseAction"
+            label="com.yantra.pca.ycd.YCDAppointmentPageCompositeActionSet" visible="true">
+            <action
+                class="com.academy.ecommerce.sterling.fulfillmentSummary.actions.AcademyGiftShipCloseAction"
+                definitionId="com.academy.ecommerce.sterling.fulfillmentSummary.actions.AcademyGiftShipCloseAction"
+                id="com.academy.ecommerce.sterling.fulfillmentSummary.actions.AcademyGiftShipCloseAction"
+                label="" state="true" style="push" tooltip="YCDAppointmentPageRefreshCalendarAction"/>
+        </actionSet>
+    </extension>
+    <extension point="com.yantra.yfc.rcp.YRCRelatedTasks">
+        <tasks id="ACADEMY_TASKS">
+            <task
+                  actionId="com.academy.ecommerce.sterling.orderSummary.actions.AcademyGiftCardLoadAction"
+                  filterRequired="false"
+                  groupId="Ship GC"
+                  id="Gift Card Load"
+                  isExtension="false"
+                  name="Gift Card Load"
+                  permissionId="ycdRCP0998">
+                <categories id="ACADEMY_ORDER_RELATED">
+                    <category id="YCD_ORDER_RELATED"/>
+                </categories>
+                <permissions id="permissions">
+                    <permission applicationId="YFSSYS00011" permissionId="ycdRCP0998"/>
+                </permissions>
+            </task>
+            <task
+                  actionId="com.academy.ecommerce.sterling.quickAccess.extn.actions.AcademyGiftCrdBalChkAction"
+                  filterRequired="false"
+                  groupId="Gift Card Balance Check"
+                  id="Gift Card Balance Check"
+                  isExtension="false"
+                  name="Gift Card Balance Check">
+               <categories id="ACADEMY_QUICK_ACCESS">
+                  <category id="YCD_GLOBAL_RELATED"/>
+               </categories>
+            </task>
+            <task
+                  filterRequired="false"
+                  groupId="Frequent Queries"
+                  id="com.yantra.ycd.tasks.QueryCharge"
+                  isExtension="true"
+                  name="com.yantra.ycd.tasks.QueryCharge"
+                  permissionId="ycdRCP0999">
+               <permissions id="permissions">
+                  <permission
+                        applicationId="YFSSYS00011"
+                        permissionId="ycdRCP0999"/>
+               </permissions>
+            </task>
+            <task
+                  groupId="com.academy.ecommerce.sterling.task1"
+                  id="com.academy.ecommerce.sterling.task1"
+                  name="com.academy.ecommerce.sterling.task1">
+               <categories
+                     id="com.academy.ecommerce.sterling.categories1">
+                  <category
+                        id="com.academy.ecommerce.sterling.category1">
+                  </category>
+               </categories>
+            </task>
+            <task
+                  actionId="com.academy.ecommerce.sterling.quickAccess.extn.actions.AcademyCongnosReportAction"
+                  filterRequired="false"
+                  groupId="Cognos"
+                  id="Launch Cognos Reports"
+                  isExtension="false"
+                  name="Launch Cognos Reports">
+               <categories
+                     id="ACADEMY_QUICK_ACCESS">
+                  <category
+                        id="YCD_GLOBAL_RELATED">
+                  </category>
+               </categories>
+            </task>
+            
+            <!-- Remove this - testing 
+            <task
+                  actionId="com.academy.ecommerce.sterling.quickAccess.extn.actions.AcademyCongnosReportAction"
+                  filterRequired="false"
+                  groupId="Cognos"
+                  id="Launch Cognos Reports"
+                  isExtension="false"
+                  name="Launch Cognos Reports">
+               <categories
+                     id="ACADEMY_QUICK_ACCESS">
+                  <category
+                        id="YCD_GLOBAL_RELATED">
+                  </category>
+               </categories>
+            </task>
+            -->
+            
+             <!-- Comment added on 3/14/2011 12:50 CST for testing auto update - Remove this comment later 
+            <task
+                  actionId="com.academy.ecommerce.sterling.quickAccess.extn.actions.AcademyCongnosReportAction"
+                  filterRequired="false"
+                  groupId="Cognos"
+                  id="Launch Cognos Reports"
+                  isExtension="false"
+                  name="Launch Cognos Reports">
+               <categories
+                     id="ACADEMY_QUICK_ACCESS">
+                  <category
+                        id="YCD_GLOBAL_RELATED">
+                  </category>
+               </categories>
+            </task>
+            -->
+        </tasks>
+    </extension>
+    <extension point="com.yantra.yfc.rcp.YRCRelatedTaskCategories">
+        <categories id="com.academy.ecommerce.sterling.category.categories.extn">
+            <category id="YCD_ORDER_RELATED">
+                <tasks id="com.academy.ecommerce.sterling.category.tasks.extn">
+                    <task id="Gift Card Load"/>
+                </tasks>
+            </category>
+        </categories>
+        <categories id="com.academy.ecommerce.sterling.categories1">
+           <category id="YCD_GLOBAL_RELATED">
+              <tasks id="com.academy.ecommerce.sterling.tasks2">
+                 <task id="Gift Card Balance Check"/>
+              </tasks>
+           </category>
+        </categories>
+    </extension>
+    <extension point="com.yantra.yfc.rcp.YRCRelatedTaskGroups">
+        <groups id="com.academy.ecommerce.sterling.group.groups.extn">
+            <group id="Ship GC" name="Ship GC" sequence="50"/>
+        </groups>
+        <groups id="com.academy.ecommerce.sterling.groups1">
+           <group
+                 id="Gift Card Balance Check"
+                 name="Gift Card Balance Check"
+                 sequence="10"/>
+        </groups>
+    </extension>
+    <extension point="org.eclipse.ui.actionSets">
+        <!--<actionSet
+             description="com.academy.ecommerce.sterling.actionSet2"
+             id="com.academy.ecommerce.sterling.actionSet2"
+             label="com.academy.ecommerce.sterling.actionSet2"
+             visible="true">
+          <action
+                class="com.academy.ecommerce.sterling.orderSummary.actions.AcademyGiftCardLoadAction"
+                definitionId="com.academy.ecommerce.sterling.action2"
+                icon="icons/taskitem.gif"
+                id="com.academy.ecommerce.sterling.action2"
+                label="com.academy.ecommerce.sterling.action2"
+                state="true"
+                style="push">
+          </action>
+       </actionSet>-->
+        <actionSet id="com.academy.ecommerce.sterling.actionSet2"
+            label="com.academy.ecommerce.sterling.actionSet2" visible="true">
+            <action
+                class="com.academy.ecommerce.sterling.orderSummary.actions.AcademyGiftCardLoadAction"
+                id="com.academy.ecommerce.sterling.orderSummary.actions.AcademyGiftCardLoadAction"
+                label="Gift Card Load" style="push"/>
+        </actionSet>
+        <actionSet
+            id="com.academy.ecommerce.sterling.orderSummary.actions.AcademyGiftCardLoadValidateShipAction"
+            label="com.academy.ecommerce.sterling.orderSummary.actions.AcademyGiftCardLoadValidateShipAction" visible="true">
+            <action
+                class="com.academy.ecommerce.sterling.orderSummary.actions.AcademyGiftCardLoadValidateShipAction"
+                id="com.academy.ecommerce.sterling.orderSummary.actions.AcademyGiftCardLoadValidateShipAction"
+                label="" state="true" style="push"/>
+        </actionSet>
+        <actionSet
+            id="com.academy.ecommerce.sterling.orderSummary.actions.AcademyGiftCardLoadCancelAction"
+            label="com.academy.ecommerce.sterling.orderSummary.actions.AcademyGiftCardLoadCancelAction" visible="true">
+            <action
+                class="com.academy.ecommerce.sterling.orderSummary.actions.AcademyGiftCardLoadCancelAction"
+                id="com.academy.ecommerce.sterling.orderSummary.actions.AcademyGiftCardLoadCancelAction"
+                label="" state="true" style="push"/>
+        </actionSet>
+    </extension>
+    <extension
+        id="com.academy.ecommerce.sterling.orderSearch.editor.AcademyGiftCardLoadEditor"
+        name="com.academy.ecommerce.sterling.orderSearch.editor.AcademyGiftCardLoadEditor" point="org.eclipse.ui.editors">
+        <editor
+            class="com.academy.ecommerce.sterling.orderSearch.editor.AcademyGiftCardLoadEditor"
+            default="false" icon="icons/gift.gif"
+            id="com.academy.ecommerce.sterling.orderSearch.editor.AcademyGiftCardLoadEditor" name="com.academy.ecommerce.sterling.orderSearch.editor.AcademyGiftCardLoadEditor"/>
+    </extension>
+    <extension id="com.yantra.pca.ycd.actionSets" name="Action Sets" point="org.eclipse.ui.actionSets">
+        <actionSet
+            description="com.academy.ecommerce.sterling.orderSummary.actions.AcademyGiftCardLoadValidateShipAction"
+            id="com.academy.ecommerce.sterling.orderSummary.actions.AcademyGiftCardLoadValidateShipAction"
+            label="com.academy.ecommerce.sterling.orderSummary.actions.AcademyGiftCardLoadValidateShipAction" visible="true"/>
+    </extension>
+    <extension point="org.eclipse.ui.actionSets">
+        <actionSet
+            id="com.yantra.pca.ycd.rcp.tasks.quickAccess.wizards.YCDQuickAccessWizard.extn.actionSet"
+            label="com.yantra.pca.ycd.rcp.tasks.quickAccess.wizards.YCDQuickAccessWizard.extn.actionSet" visible="true">
+            <action
+                class="com.academy.ecommerce.sterling.quickAccess.extn.actions.AcademyCustomerSearchAction"
+                definitionId="com.academy.ecommerce.sterling.quickAccess.extn.actions.AcademyCustomerSearchAction.extn.command"
+                id="com.academy.ecommerce.sterling.quickAccess.extn.actions.AcademyCustomerSearchAction"
+                label="%com.academy.ecommerce.sterling.quickAccess.extn.actions.AcademyCustomerSearchAction" style="push"/>
+            <action
+                class="com.academy.ecommerce.sterling.quickAccess.extn.actions.AcademyTestAction"
+                definitionId="com.academy.ecommerce.sterling.quickAccess.extn.actions.AcademyTestAction.extn.command"
+                id="com.academy.ecommerce.sterling.quickAccess.extn.actions.AcademyTestAction"
+                label="%com.academy.ecommerce.sterling.quickAccess.extn.actions.AcademyTestAction" style="push"/>
+        </actionSet>
+        <actionSet
+              description="com.academy.ecommerce.sterling.quickAccess.extn.actions.AcademyCheckBalanceAction"
+              id="com.academy.ecommerce.sterling.quickAccess.extn.actions.AcademyCheckBalanceAction"
+              label="com.academy.ecommerce.sterling.quickAccess.extn.actions.AcademyCheckBalanceAction"
+              visible="true">
+           <action
+                 class="com.academy.ecommerce.sterling.quickAccess.extn.actions.AcademyCheckBalanceAction"
+                 id="com.academy.ecommerce.sterling.quickAccess.extn.actions.AcademyCheckBalanceAction"
+                 label="com.academy.ecommerce.sterling.quickAccess.extn.actions.AcademyCheckBalanceAction"
+                 style="push"/>
+        </actionSet>
+        <actionSet
+              description="com.academy.ecommerce.sterling.quickAccess.extn.actions.AcademyCongnosReportAction"
+              id="com.academy.ecommerce.sterling.quickAccess.extn.actions.AcademyCongnosReportAction"
+              label="com.academy.ecommerce.sterling.quickAccess.extn.actions.AcademyCongnosReportAction"
+              visible="true">
+           <action
+                 class="com.academy.ecommerce.sterling.quickAccess.extn.actions.AcademyCongnosReportAction"
+                 id="com.academy.ecommerce.sterling.quickAccess.extn.actions.AcademyCongnosReportAction"
+                 label="com.academy.ecommerce.sterling.quickAccess.extn.actions.AcademyCongnosReportAction"
+                 style="push">
+           </action>
+        </actionSet>
+    </extension>
+    <extension
+        id="com.yantra.pca.ycd.rcp.tasks.quickAccess.wizards.YCDQuickAccessWizard.extn.commands"
+        name="%com.yantra.pca.ycd.rcp.tasks.quickAccess.wizards.YCDQuickAccessWizard.extn.commands" point="org.eclipse.ui.commands">
+        <command
+            id="com.academy.ecommerce.sterling.quickAccess.extn.actions.AcademyCustomerSearchAction.extn.command" name="%com.academy.ecommerce.sterling.quickAccess.extn.actions.AcademyCustomerSearchAction.extn.command"/>
+        <command
+            id="com.academy.ecommerce.sterling.quickAccess.extn.actions.AcademyTestAction.extn.command" name="%com.academy.ecommerce.sterling.quickAccess.extn.actions.AcademyTestAction.extn.command"/>
+    </extension>
+    <extension
+        id="com.yantra.pca.ycd.rcp.tasks.quickAccess.wizards.YCDQuickAccessWizard.extn.bindings"
+        name="%com.yantra.pca.ycd.rcp.tasks.quickAccess.wizards.YCDQuickAccessWizard.extn.bindings" point="org.eclipse.ui.bindings">
+        <key
+            commandId="com.academy.ecommerce.sterling.quickAccess.extn.actions.AcademyCustomerSearchAction.extn.command"
+            contextId="com.yantra.pca.ycd.rcp.tasks.quickAccess.wizards.YCDQuickAccessWizard"
+            schemeId="defaultYantraKeyConfigurations" sequence="F12"/>
+        <key
+            commandId="com.academy.ecommerce.sterling.quickAccess.extn.actions.AcademyTestAction.extn.command"
+            contextId="com.yantra.pca.ycd.rcp.tasks.quickAccess.wizards.YCDQuickAccessWizard"
+            schemeId="defaultYantraKeyConfigurations" sequence="F10"/>
+    </extension>
+    <extension point="org.eclipse.ui.contexts">
+        <context
+            id="com.yantra.pca.ycd.rcp.tasks.quickAccess.wizards.YCDQuickAccessWizard" name="%com.yantra.pca.ycd.rcp.tasks.quickAccess.wizards.YCDQuickAccessWizard"/>
+    </extension>
+    <extension
+          point="org.eclipse.ui.actionSets">
+       <actionSet
+             description="com.academy.ecommerce.sterling.quickAccess.extn.actions.AcademyGiftCrdBalChkAction"
+             id="com.academy.ecommerce.sterling.quickAccess.extn.actions.AcademyGiftCrdBalChkAction"
+             label="com.academy.ecommerce.sterling.quickAccess.extn.actions.AcademyGiftCrdBalChkAction"
+             visible="true">
+          <action
+                class="com.academy.ecommerce.sterling.quickAccess.extn.actions.AcademyGiftCrdBalChkAction"
+                definitionId="com.academy.ecommerce.sterling.quickAccess.extn.actions.AcademyGiftCrdBalChkAction"
+                id="com.academy.ecommerce.sterling.quickAccess.extn.actions.AcademyGiftCrdBalChkAction"
+                label="com.academy.ecommerce.sterling.quickAccess.extn.actions.AcademyGiftCrdBalChkAction"
+                style="push"/>
+       </actionSet>
+    </extension>
+    <extension
+          point="org.eclipse.ui.editors">
+       <editor
+             class="com.academy.ecommerce.sterling.quickAccess.extn.editor.AcademyGiftBalChkEditor"
+             default="false"
+             icon="icons/gift.gif"
+             id="com.academy.ecommerce.sterling.quickAccess.extn.editor.AcademyGiftBalChkEditor"
+             name="com.academy.ecommerce.sterling.quickAccess.extn.editor.AcademyGiftBalChkEditor"/>
+       <editor
+             class="com.academy.ecommerce.sterling.quickAccess.extn.editor.AcademyCognosReportEditor"
+             default="false"
+             icon="icons/asterisk.gif"
+             id="com.academy.ecommerce.sterling.quickAccess.extn.editor.AcademyCognosReportEditor"
+             name="com.academy.ecommerce.sterling.quickAccess.extn.editor.AcademyCognosReportEditor">
+       </editor>
+    </extension>
+    <extension
+          point="com.yantra.yfc.rcp.YRCRelatedTaskCategories">
+       <categories
+             id="com.academy.ecommerce.sterling.categories2">
+          <category
+                id="YCD_GLOBAL_RELATED">
+             <tasks
+                   id="com.academy.ecommerce.sterling.tasks2">
+                <task
+                      id="Launch Cognos Reports">
+                </task>
+             </tasks>
+          </category>
+       </categories>
+    </extension>
+    <!-- Added as part of Cognos customization through COM-->
+    <extension
+          point="com.yantra.yfc.rcp.YRCRelatedTaskGroups">
+       <groups
+             id="com.academy.ecommerce.sterling.groups1">
+          <group
+                id="Cognos"
+                name="Cognos"
+                sequence="95">
+          </group>
+       </groups>
+    </extension>
+	 <!-- Added as part of STL-841 for View Authorization and Charge Details-->
+    <extension
+          id="AcadWebAppHandler"
+          name="AcadWebAppHandler"
+          point="com.yantra.yfc.rcp.YRCWebAppIntegrator">
+       <webapp
+             classToLoad="com.academy.ecommerce.sterling.paymentInquiry.extn.AcademyWebAppHandler"
+             id="AcadWebAppHandler">
+       </webapp>
+    </extension>
+     <!-- End changes for STL-841 for View Authorization and Charge Details-->
+</plugin>

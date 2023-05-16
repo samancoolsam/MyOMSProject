@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OrderLine FulfillmentType="" ItemGroupCode="" KitCode=""
+        LineType="" OrderHeaderKey="" OrderLineKey="" OrderedQty=""
+        PrimeLineNo="" ShipNode="" SubLineNo="">
+        <Extn />
+        <LinePriceInfo IsPriceLocked="" LineTotal="" UnitPrice="" />
+        <Item BundleFulfillmentMode="" ItemDesc="" ItemID=""
+                ItemShortDesc="" ProductClass="" UnitOfMeasure="" />
+        <Order BuyerOrganizationCode="" DocumentType="" EnterpriseCode=""
+                OrderHeaderKey="" OrderPurpose="" OrderType="" PaymentStatus=""
+                SellerOrganizationCode="">
+                <PriceInfo Currency="" EnterpriseCurrency=""
+                        ReportingConversionDate="" ReportingConversionRate="" TotalAmount="" />
+        </Order>
+</OrderLine>
+

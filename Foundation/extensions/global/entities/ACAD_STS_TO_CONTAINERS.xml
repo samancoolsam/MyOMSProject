@@ -1,0 +1,39 @@
+<DBSchema>
+   <Entities>
+     <Entity ApiNeeded="Y" Description="Table to Store STS Container number" Prefix="ACAD_" TableName="ACAD_STS_TO_CONTAINERS" AuditRequired="N" XMLName="AcadSTSTOContainers">
+		<Attributes>
+		
+			<Attribute ColumnName="CONTAINER_NO" DataType="Key" DefaultValue="' '" Description="Container number" Nullable="false" XMLName="ContainerNo" />
+			<Attribute ColumnName="TO_ORDER_NO" DataType="VARCHAR2-50" DefaultValue="' '" Description="Transfer Order number" Nullable="false" XMLName="TOOrderNo" />	
+			<Attribute ColumnName="STORE_NO" DataType="VARCHAR2-50" DefaultValue="' '" Description="Store Number" Nullable="false" XMLName="StoreNo" />
+			<Attribute ColumnName="SHIPMENT_KEY" DataType="VARCHAR2-50" DefaultValue="' '" Description="Shipment Key" Nullable="false" XMLName="ShipmentKey" />
+			<Attribute ColumnName="SHIPMENT_CONTAINER_KEY" DataType="VARCHAR2-50" DefaultValue="' '" Description="Container key" Nullable="false" XMLName="ShipmentContainerKey" />
+			<Attribute ColumnName="BATCH_NO" DataType="VARCHAR2-50" DefaultValue="' '" Description="Batch Number sequence" Nullable="false" XMLName="BatchNo" />				
+			<Attribute ColumnName="STATUS" DataType="VARCHAR2-100" DefaultValue="' '" Description="Status" Nullable="false" XMLName="Status" />
+			<Attribute ColumnName="CLOSED_FLAG" DataType="Text-2" DefaultValue="' '"  Description="Container Flag" Nullable="true" XMLName="ClosedFlag" />
+			
+			<Attribute ColumnName="CREATETS" DataType="TimeStamp" DefaultValue="SYSDATE" Description="Create TimeStamp" />
+
+			<Attribute ColumnName="MODIFYTS" DataType="TimeStamp" DefaultValue="SYSDATE" Description="Modify TimeStamp" />
+
+			<Attribute ColumnName="CREATEUSERID" DataType="UserId" DefaultValue="' '" Description="Creating User ID" />
+
+			<Attribute ColumnName="MODIFYUSERID" DataType="UserId" DefaultValue="' '" Description="Modifying User ID" />
+
+			<Attribute ColumnName="CREATEPROGID" DataType="ProgramID" DefaultValue="' '" Description="Creating Program ID" />
+
+			<Attribute ColumnName="MODIFYPROGID" DataType="ProgramID" DefaultValue="' '" Description="Modifying Program ID" />
+
+			<Attribute ColumnName="LOCKID" DataType="Lockid" DefaultValue="0" Description="Lock ID" />
+		
+		</Attributes>
+		 
+		 <PrimaryKey Name="CONTAINER_TABLE_PK">
+           <Attribute ColumnName="CONTAINER_NO" />
+        </PrimaryKey>
+					
+     </Entity>
+	 <Sequence Cachesize="10" Increment="1" Maxvalue="9999999999"
+            Minvalue="1" Name="ACAD_BATCH_NO_SEQ" Startwith="1000000000" TableType="TRANSACTION"/> 
+  </Entities> 
+</DBSchema>

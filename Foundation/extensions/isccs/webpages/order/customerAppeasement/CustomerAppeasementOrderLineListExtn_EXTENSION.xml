@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExtensionMetaData>
+    <ScreenExtension
+        extnClassName="CustomerAppeasementOrderLineListExtn"
+        extnPackage="extn.order.customerAppeasement"
+        originalScreen="isccs.order.customerAppeasement.CustomerAppeasementOrderLineList"
+        originalScreenPackage="isccs.order.customerAppeasement" type="diffrential">
+        <MashupRefs>
+            <Init>
+                <MashupRef extnType="MODIFY"
+                    mashupId="customerAppeasement_getCompleteOrderLineList"
+                    mashupRefId="getCompleteOrderLineList_Init"
+                    pageSize="1" pageSizeType="OrderLine" paginationStrategy="NEXTPAGE"/>
+            </Init>
+        </MashupRefs>
+    </ScreenExtension>
+</ExtensionMetaData>

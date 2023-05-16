@@ -1,0 +1,67 @@
+		<div>
+		 	<div data-dojo-type="idx/form/RadioButtonSet" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								renderHidden : true , 
+		_sc_extensibility_operation : 'change' , 
+		_sc_extensibility_referenceUId : 'sortMethod'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="idx/form/RadioButtonSet" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								groupAlignment : 'vertical' , 
+		uId : 'extn_SortMethod' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '1' , 
+		_sc_extensibility_position : 'before' , 
+		name : 'sortMethod' , 
+		_sc_extensibility_referenceUId : 'txtBatchSize'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	bindingData : 	{
+		 targetBinding : 	[
+	 		{
+		 namespace : 			'batchSortMethodUiState_input'
+,
+		 path : 			'UserUiState.Definition'
+,
+		 scExtensibilityArrayItemId : 			'extn_TargetBindings_0'
+	}
+	]
+,
+		 sourceBinding : 	{
+		 namespace : 			'getUserUiStateList_output'
+,
+		 path : 			'UserPref.BatchSortMethod'
+	}
+,
+		 radioBinding : 	{
+		 options : 	[
+	 		{
+		 label : 			this.getSimpleBundleString('AfterPicking')
+,
+		 scExtensibilityArrayItemId : 			'extn_RadioBinding_0'
+,
+		 value : 			'SORT_AFTER_PICK'
+,
+		 selected : 			true
+	}
+	]
+	}
+	}
+,	
+			 	label : 			this.getSimpleBundleString('RadioButtonSet_sortMethod')
+			}
+		}
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="idx/form/RadioButtonSet" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'sortMethod' , 
+		_sc_extensibility_operation : 'remove' , 
+		_sc_extensibility_moveOrder : '2' , 
+		_sc_extensibility_position : 'first' , 
+		_sc_extensibility_referenceUId : '_extensibilityHiddenWidgetsHolder'  
+	 					}">
+		 	</div>  
+		</div>

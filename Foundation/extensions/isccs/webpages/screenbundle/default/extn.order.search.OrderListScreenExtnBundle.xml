@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Start - OMNI-3717 Payment Tender Type Search-->
+<ScreenBundle
+    screenBundleId="extn.order.search.OrderListScreenExtnBundle" screenId="extn.order.search.OrderListScreenExtn">
+    <BundleEntries/>
+</ScreenBundle>
+<!--End - OMNI-3717 Payment Tender Type Search-->

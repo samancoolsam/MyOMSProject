@@ -1,0 +1,41 @@
+		<div>
+		<!-- OMNI-69635 Changes START-->
+		<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" 
+	 					data-dojo-props="data_dojo_props_diff: {
+		uId : 'extn_lblNoMissedShipment',
+		renderHidden : true ,
+        _sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '1' , 
+		'class' : 'extn_AlertMSLMessageCss hashNumberAlign autoLabelZeroWidth blockComponent comappsWrapWord' , 
+		spanLabel : true , 
+		_sc_extensibility_position : 'after' , 
+		_sc_extensibility_referenceUId : 'repeatingIdentifierScreen' 
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	value : 			this.getSimpleBundleString('extn_no_missed_shipment'),
+				style:'text-align: center;',
+			}
+		}
+	 					}">
+		 	</div> 
+			<!-- OMNI-69635 Changes END-->
+			<!-- OMNI-82408-Audit Staging date on MSL Screen- START-->
+		<div data-dojo-type="sc/plat/dojo/widgets/Label" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								renderHidden : true , 
+		uId : 'extn_label_missedshipment_batchdate' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '5' , 
+		_sc_extensibility_position : 'after' , 
+		_sc_extensibility_referenceUId : 'lbl_ScreenTitle'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	value : 			this.getBundleString('extn_Audit_Staging_Performed_On')
+			}
+		}
+	 					}">
+		 	</div>  
+			<!-- OMNI-82408-Audit Staging date on MSL Screen- END-->
+		</div>

@@ -1,0 +1,70 @@
+<div class="sc-platform-screen-default CurbsideDelayConfirmPopUp" >
+    	 
+	
+             
+             <div data-dojo-type="sc/plat/dojo/widgets/DataLabel" data-dojo-props="		highlightMatch : 'false' , 
+                 'class' : 'extn_curbsidedelayconfirm  hashNumberAlign autoLabelZeroWidth blockComponent comappsWrapWord' ,
+		         showLabel : true , 
+                 uId : 'extn_confirm',
+	         scParamDataFn :
+                 function() { 
+                     return { 
+                         label : this.getSimpleBundleString('extn_Confirm')
+                         }
+                 }">
+             </div>
+             <div data-dojo-type="sc/plat/dojo/widgets/DataLabel" data-dojo-props=" highlightMatch : 'false' , 
+			      'class' : 'extn_minsCss hashNumberAlign autoLabelZeroWidth blockComponent comappsWrapWord',
+				  style : 'text-align:center',
+                 uId : 'extn_CurbsideTimeDelay' ,
+				 _sc_extensibility_operation : 'insert' ,
+                _sc_extensibility_moveOrder : '20' ,
+                _sc_extensibility_position : 'after' ,
+                _sc_extensibility_referenceUId : 'extn_Confirmation_text',
+				
+                
+                                                ">
+                        </div>
+		 
+     <table style="margin-left:auto;margin-right:auto;">
+         <tr >
+             <th>
+                 <div data-dojo-type="dijit/form/Button" data-dojo-props="		spanLabel : true , 
+                 'class' : 'extn_Yes_Buttoncss ' , 
+                 style : 'float:left; padding-right:30px;padding-bottom:10px',
+                 showLabel : true , 
+                 uId : 'extn_Yes_btn'  ,
+                 scParamDataFn :
+                 function() { 
+                     return { 
+                         label : 	this.getSimpleBundleString('extn_CONFIRM_Text')
+                     }
+                 }">
+                 </div>
+             </th>
+             <th>
+                 <div data-dojo-type="dijit/form/Button" data-dojo-props="		spanLabel : true , 
+                 'class' : 'extn_No_Buttoncss ' , 
+                 style : 'float:right; padding-left:30px;padding-bottom:10px',
+                 showLabel : true ,  
+                 uId : 'extn_No_btn'  ,
+                 scParamDataFn :
+                 function() { 
+                     return { 
+                         label : 			this.getSimpleBundleString('extn_CANCEL_Text')
+                     }
+                 }">
+                 </div>
+             </th>
+         </tr>
+         
+ </table>	
+
+		  <div data-dojo-type="sc/plat/dojo/widgets/DataLabel" data-dojo-props=" highlightMatch : 'false' , 
+						  'class' : 'extn_curbsidedelayconfirmNote hashNumberAlign autoLabelZeroWidth blockComponent comappsWrapWord',
+						  style : 'padding-top: 12.5px;padding-bottom:10px;text-align:center',
+						  uId : 'extn_Note',
+						  renderHidden : true	
+               ">
+		</div>
+ </div>

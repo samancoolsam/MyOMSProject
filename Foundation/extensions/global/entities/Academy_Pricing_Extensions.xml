@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright 2006-2008, Sterling Commerce, Inc. All rights reserved. -->
+<DBSchema>
+   <Entities>
+      <Entity TableName="YFS_ORDER_LINE">
+         <Attributes>
+            <Attribute ColumnName="EXTN_WC_ORDER_ITEM_IDENTIFIER" DataType="ExtnWCOrderItemIdentifier" DecimalDigits="" DefaultValue="' '" Description=" " Nullable="true" Type="VARCHAR2" Size="40" XMLName="ExtnWCOrderItemIdentifier" XMLGroup="Extn" SqlServerDataType="" />
+			<!--OMNI-90271- FreeLineItem -Start-->
+		 
+			 <Attribute ColumnName="EXTN_PROMO_TYPE" XMLName="ExtnPromoType" Size="40" Type="VARCHAR2" DefaultValue="' '" Nullable="true" Description="Indicator whether the free item is due to Order Promotion OR Line Promotion" XMLGroup="Extn" />
+			
+			<Attribute ColumnName="EXTN_PROMO_PARENT_ID" XMLName="ExtnPromoParentId" Size="40" Type="CHAR" DefaultValue="' '" Nullable="true" Description="Associated Parent Line No for Free line item" XMLGroup="Extn" />
+			
+			<Attribute ColumnName="EXTN_PROMO_CHILD_ID" XMLName="ExtnPromoChildId" Size="40" Type="CHAR" DefaultValue="' '" Nullable="true" Description="Associated Free Child Line No for Parent line item" XMLGroup="Extn" />
+			
+			<Attribute ColumnName="EXTN_IS_PROMO_ITEM" XMLName="ExtnIsPromoItem" Size="1" Type="CHAR" DefaultValue="N" Nullable="false" Description="Flag indicating the line is associated with either Order Or Line promotion" XMLGroup="Extn" />
+			
+			<Attribute ColumnName="EXTN_IS_GIFT_CARD" XMLName="ExtnIsGiftCard" Size="1" Type="CHAR" DefaultValue="N" Nullable="false" Description="Flag indicating the line is a GC item" XMLGroup="Extn" />
+
+		 <!--OMNI-90271-FreeLineItem - End -->
+
+         </Attributes>
+      </Entity>
+         <!--OMNI-95627-SaveThresholdValue - Start-->
+   	     <Entity TableName="YFS_ORDER_HEADER">
+         <Attributes>
+          <Attribute ColumnName="EXTN_ORDER_PROMO_THRESHOLD" XMLName="ExtnOrderPromoThreshold" DataType="ExtnOrderTotal" Nullable="true" Description="To Identity Order Threshold Information for Free Items" XMLGroup="Extn" />
+         </Attributes>
+		 </Entity>
+		 <!--OMNI-95627-SaveThresholdValue - End-->
+   </Entities>
+</DBSchema>
+

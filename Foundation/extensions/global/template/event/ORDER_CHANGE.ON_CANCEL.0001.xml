@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ORDER_CHANGE.ON_CANCEL event xml -->
+<Order AllAddressesVerified="" AllocationRuleID="" Modifyprogid=""
+    AuthorizationExpirationDate="" AutoCancelDate="" BillToID=""
+    BuyerOrganizationCode="" CarrierAccountNo="" CarrierServiceCode=""
+    ChargeActualFreightFlag="" CustomerEMailID="" CustomerPONo=""
+    DeliveryCode="" Division="" DocumentType="" DraftOrderFlag=""
+    EnteredBy="" EnterpriseCode="" EntryType="" FreightTerms=""
+    HoldFlag="" HoldReasonCode="" MaxOrderStatus=""
+    MaxOrderStatusDesc="" MinOrderStatus="" MinOrderStatusDesc=""
+    NotificationReference="" NotificationType=""
+    NotifyAfterShipmentFlag="" OrderDate="" OrderHeaderKey=""
+    OrderName="" OrderNo="" OrderType="" OriginalTax=""
+    OriginalTotalAmount="" OtherCharges="" PaymentStatus=""
+    PersonalizeCode="" PriceProgramKey="" PriorityCode=""
+    PriorityNumber="" Purpose="" ReceivingNode="" ReqCancelDate=""
+    ReqDeliveryDate="" ReqShipDate="" SCAC="" ScacAndService=""
+    ScacAndServiceKey="" SearchCriteria1="" SearchCriteria2=""
+    SellerOrganizationCode="" ShipCompleteFlag="" ShipToID="" Status=""
+    TaxExemptFlag="" TaxExemptionCertificate="" TaxJurisdiction=""
+    TaxPayerId="" TermsCode="" TotalAdjustmentAmount="" isHistory="">
+	<!-- Start: FPT-1,2,6 -->
+	<Extn ExtnTransactionID="" ></Extn> 
+	<!-- End: FPT-1,2,6 -->
+    <OrderAudit AuditTransactionId="" NewBuffer="" OldBuffer=""
+        OrderAuditKey="" OrderHeaderKey="" OrderLineKey=""
+        OrderReleaseKey="" ReasonCode="" ReasonText="" Reference1=""
+        Reference2="" Reference3="" Reference4="" XMLFlag="" Modifyprogid=""  Modifyts="">
+        <Order EnterpriseCode="" OrderNo=""/>
+        <OrderAuditLevels>
+            <OrderAuditLevel ModificationLevel="" OrderLineKey="" OrderReleaseKey="">
+                <ModificationTypes>
+                    <ModificationType Name=""/>
+                </ModificationTypes>
+                <OrderLine PrimeLineNo="" SubLineNo=""/>
+                <OrderRelease ReleaseNo=""/>
+                <OrderAuditDetails>
+                    <OrderAuditDetail Action="" AuditType="">
+                        <IDs>
+                            <ID Name="" Value=""/>
+                        </IDs>
+                        <Attributes>
+                            <Attribute Name="" NewValue="" OldValue=""/>
+                        </Attributes>
+                    </OrderAuditDetail>
+                </OrderAuditDetails>
+            </OrderAuditLevel>
+        </OrderAuditLevels>
+    </OrderAudit>
+    <OrderLines>
+        <OrderLine Action="" AllocationDate=""
+            BackorderNotificationQty="" CarrierAccountNo=""
+            CarrierServiceCode="" ChangeInOrderedQty=""
+            CustomerLinePONo="" CustomerPONo="" DeliveryCode=""
+            DepartmentCode="" FreightTerms="" HoldFlag="" FulfillmentType=""
+            HoldReasonCode="" ImportLicenseExpDate="" ImportLicenseNo=""
+            InvoicedQty="" IsFirmPredefinedNode="" ItemGroupCode="" KitCode=""
+            LineSeqNo="" LineType="" MaxLineStatus=""
+            MaxLineStatusDesc="" MinLineStatus="" MinLineStatusDesc=""
+            OpenQty="" OrderHeaderKey="" OrderLineKey="" OrderedQty=""
+            OrigOrderLineKey="" OriginalOrderedQty="" OtherCharges=""
+            PackListType="" PersonalizeCode="" PersonalizeFlag=""
+            PickableFlag="" PrimeLineNo="" Purpose="" ReceivingNode=""
+            RemainingQty="" ReqCancelDate="" ReqDeliveryDate=""
+            ReqShipDate="" ReservationID="" ReservationMandatory=""
+            ReservationPool="" SCAC="" ScacAndService=""
+            ScacAndServiceKey="" ShipNode="" ShipToID=""
+            ShipTogetherNo="" SplitQty="" Status="" StatusQuantity=""
+            SubLineNo="" isHistory="" Modifyprogid="" DeliveryMethod="">
+            <Item CostCurrency="" CountryOfOrigin="" CustomerItem=""
+                CustomerItemDesc="" ECCNNo="" HarmonizedCode="" ISBN=""
+                ItemDesc="" ItemID="" ItemShortDesc="" ItemWeight=""
+                ItemWeightUOM="" ManufacturerItem="" 
+                ManufacturerItemDesc="" ManufacturerName="" NMFCClass=""
+                NMFCCode="" NMFCDescription="" ProductClass=""
+                ProductLine="" ScheduleBCode="" SupplierItem=""
+                SupplierItemDesc="" TaxProductCode="" UPCCode=""
+                UnitCost="" UnitOfMeasure=""/>
+				<ItemDetails>
+				<PrimaryInformation />
+			</ItemDetails>
+					<!--Fix for Status update message to WCS -->
+				<!-- Begin: OMNI-30147 - Added ExtnOriginalFulfillmentType -->
+				<Extn ExtnWCOrderItemIdentifier="" ExtnOriginalFulfillmentType="" > 				
+				</Extn>
+				<!-- End: OMNI-30147 - Added ExtnOriginalFulfillmentType -->
+				<!--End of Fix for Status update message to WCS -->
+			<!--ChangeInLineTotal is returned with sign. -->
+            <LinePriceInfo ChangeInLineTotal="" LineTotal=""/>
+            <LineOverallTotals Charges="" Discount="" ExtendedPrice=""
+                LineTotal="" Tax="" UnitPrice=""/>
+            <StatusBreakupForCanceledQty DTDOccurence="ZeroOrOne">
+                <CanceledFrom DTDOccurence="ZeroOrMany"
+                    OrderLineScheduleKey="" OrderReleaseKey=""
+                    OrderReleaseStatusKey="" Quantity="" Status=""
+                    StatusDate="" StatusDescription="">
+                    <Details DTDOccurence="ZeroOrOne"
+                        ExpectedDeliveryDate="" ExpectedShipmentDate=""
+                        ReceivingNode="" ShipByDate="" ShipNode="" TagNumber=""/>
+                </CanceledFrom>
+            </StatusBreakupForCanceledQty>
+            <OrderDates>
+                <OrderDate ActualDate="" DateTypeId="" ExpectedDate=""
+                    OrderHeaderKey="" OrderLineKey="" OrderReleaseKey="" RequestedDate=""/>
+            </OrderDates>
+        <ShipmentLines>
+			<ShipmentLine DocumentType="" ItemID="" OrderHeaderKey="" OrderLineKey="" OrderNo="" OrderReleaseKey="" OverShipQuantity="" PlacedQuantity="" PrimeLineNo="" ProductClass="" Quantity="" ShipmentKey="" ShipmentLineKey="" ShipmentLineNo="" UnitOfMeasure="" WaveNo="">
+			<Shipment ShipmentGroupId="">
+					<Status Status=""/>
+			</Shipment>
+			</ShipmentLine>
+		</ShipmentLines>	
+        </OrderLine>
+    </OrderLines>
+    <PriceInfo ChangeInTotalAmount="" Currency="" EnterpriseCurrency=""
+        ReportingConversionDate="" ReportingConversionRate="" TotalAmount=""/>
+    <PersonInfoShipTo AddressLine1="" AddressLine2="" AddressLine3=""
+        AddressLine4="" AddressLine5="" AddressLine6=""
+        AlternateEmailID="" Beeper="" City="" Company="" Country=""
+        DayFaxNo="" DayPhone="" Department="" EMailID="" EveningFaxNo=""
+        EveningPhone="" FirstName="" JobTitle="" LastName=""
+        MiddleName="" MobilePhone="" OtherPhone="" PersonID=""
+        PersonInfoKey="" State="" Suffix="" Title="" ZipCode=""/>
+    <PersonInfoBillTo AddressLine1="" AddressLine2="" AddressLine3=""
+        AddressLine4="" AddressLine5="" AddressLine6=""
+        AlternateEmailID="" Beeper="" City="" Company="" Country=""
+        DayFaxNo="" DayPhone="" Department="" EMailID="" EveningFaxNo=""
+        EveningPhone="" FirstName="" JobTitle="" LastName=""
+        MiddleName="" MobilePhone="" OtherPhone="" PersonID=""
+        PersonInfoKey="" State="" Suffix="" Title="" ZipCode=""/>
+<PersonInfoMarkFor AddressLine1="" AddressLine2="" AddressLine3="" AlternateEmailID="" 
+	City="" Company="" Country="" DayFaxNo="" DayPhone="" 
+	Department="" EveningFaxNo="" EveningPhone="" FirstName="" LastName="" MiddleName="" 
+	State="" ZipCode="" IsPOBox="" IsMilitary="" ExtnAddressNickName=""
+	ExtnIsAPOFPO="" IsSignatureRequired="" IsAddressVerified="" ExtnIsAddressVerified="" EMailID="" />
+    <!-- START STL-1378 Void Auth for cancel Order -->
+	<PaymentMethods>
+	      <PaymentMethod PaymentType="" PaymentReference1="" CreditCardType="" DisplayCreditCardNo="" 
+		  DisplaySvcNo="" />
+    </PaymentMethods>
+	<!-- END STL-1378 Void Auth for cancel Order -->
+</Order>

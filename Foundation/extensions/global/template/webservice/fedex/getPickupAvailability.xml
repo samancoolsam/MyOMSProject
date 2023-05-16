@@ -1,0 +1,35 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v5="http://fedex.com/ws/pickup/v5">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <v5:PickupAvailabilityRequest>
+         <v5:WebAuthenticationDetail>
+            <v5:UserCredential>
+               <v5:Key></v5:Key>
+               <v5:Password></v5:Password>
+            </v5:UserCredential>
+         </v5:WebAuthenticationDetail>
+         <v5:ClientDetail>
+            <v5:AccountNumber></v5:AccountNumber>
+            <v5:MeterNumber></v5:MeterNumber>
+         </v5:ClientDetail>
+         <v5:Version>
+            <v5:ServiceId>disp</v5:ServiceId>
+            <v5:Major>5</v5:Major>
+            <v5:Intermediate>0</v5:Intermediate>
+            <v5:Minor>0</v5:Minor>
+         </v5:Version>
+         <v5:PickupAddress>
+            <v5:StreetLines></v5:StreetLines>
+            <v5:City></v5:City>
+            <v5:StateOrProvinceCode></v5:StateOrProvinceCode>
+            <v5:PostalCode></v5:PostalCode>
+            <v5:CountryCode></v5:CountryCode>
+            <v5:Residential>false</v5:Residential>
+         </v5:PickupAddress>
+         <v5:PickupRequestType></v5:PickupRequestType>
+         <v5:DispatchDate></v5:DispatchDate>
+         <v5:NumberOfBusinessDays></v5:NumberOfBusinessDays>
+         <v5:Carriers></v5:Carriers>
+      </v5:PickupAvailabilityRequest>
+   </soapenv:Body>
+</soapenv:Envelope>

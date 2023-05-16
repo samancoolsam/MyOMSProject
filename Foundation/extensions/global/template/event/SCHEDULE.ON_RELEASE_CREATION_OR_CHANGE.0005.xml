@@ -1,0 +1,78 @@
+<OrderRelease CarrierAccountNo="" CarrierServiceCode="" Currency=""
+    CustomerPoNo="" DeliveryCode="" Division="" EnterpriseCode=""
+    FOB="" HoldFlag="" HoldReasonCode="" MarkForKey=""
+    MaxOrderReleaseStatus="" MaxOrderReleaseStatusDesc="" MergeNode=""
+    MinOrderReleaseStatus="" MinOrderReleaseStatusDesc=""
+    NotificationReference="" NotificationType=""
+    NotifyAfterShipmentFlag="" OrderDate="" OrderHeaderKey=""
+    OrderName="" OrderReleaseKey="" OrderType="" OtherCharges=""
+    PacklistType="" PersonalizeCode="" PickListNo="" PriorityCode=""
+    Purpose="" ReceivingNode="" ReleaseNo="" ReleaseSeqNo=""
+    ReqCancelDate="" ReqDeliveryDate="" ReqShipDate=""
+    SCAC="" SalesOrderNo="" ScacAndService="" ScacAndServiceKey=""
+    ShipAdviceNo="" ShipCompleteFlag="" ShipLineComplete="" ShipNode=""
+    ShipNodeClass="" ShipOrderComplete="" ShipToId="" ShipToKey=""
+    Status="" SupplierCode="" SupplierName="" TaxpayerId="" isHistory="">
+    <Order EnterpriseCode="" OrderHeaderKey="" DocumentType="" OrderNo="">
+    <OverallTotals />
+    <PersonInfoShipTo />
+    <PersonInfoBillTo />
+    </Order>
+    <Shipnode ShipNode="" Description="" OwnerKey="" >
+    <Organization OrganizationCode="" XrefOrganizationCode="" />
+    </Shipnode>
+    <PersonInfoShipTo AddressLine1="" AddressLine2="" AddressLine3=""
+        AddressLine4="" AddressLine5="" AddressLine6=""
+        AlternateEmailID="" Beeper="" City="" Company="" Country=""
+        DayFaxNo="" DayPhone="" Department="" EMailID="" EveningFaxNo=""
+        EveningPhone="" FirstName="" JobTitle="" LastName=""
+        MiddleName="" MobilePhone="" OtherPhone="" PersonID=""
+        PersonInfoKey="" State="" Suffix="" Title="" ZipCode=""/>
+    <PersonInfoMarkFor AddressLine1="" AddressLine2="" AddressLine3=""
+        AddressLine4="" AddressLine5="" AddressLine6=""
+        AlternateEmailID="" Beeper="" City="" Company="" Country=""
+        DayFaxNo="" DayPhone="" Department="" EMailID="" EveningFaxNo=""
+        EveningPhone="" FirstName="" JobTitle="" LastName=""
+        MiddleName="" MobilePhone="" OtherPhone="" PersonID=""
+        PersonInfoKey="" State="" Suffix="" Title="" ZipCode=""/>
+    <OrderLine PrimeLineNo="" SubLineNo="" ChainedFromOrderHeaderKey="" OrderedQty="">
+        <!-- OMNI-99152 : Added for PO Released updates to WCS -->
+        <ChainedFromOrderLine OrderLineKey="" >
+            <Extn ExtnWCOrderItemIdentifier="" />
+        </ChainedFromOrderLine>
+        <!-- OMNI-99152 : Added for PO Released updates to WCS -->
+        <Item CostCurrency="" CountryOfOrigin="" CustomerItem=""
+            CustomerItemDesc="" ECCNNo="" HarmonizedCode="" ISBN=""
+            ItemDesc="" ItemID="" ItemShortDesc="" ItemWeight=""
+            ItemWeightUOM="" ManufacturerItem="" ManufacturerItemDesc=""
+            ManufacturerName="" NMFCClass="" NMFCCode=""
+            NMFCDescription="" ProductClass="" ProductLine=""
+            ScheduleBCode="" SupplierItem="" SupplierItemDesc=""
+            TaxProductCode="" UPCCode="" UnitCost="" UnitOfMeasure=""/>
+        <OrderStatuses>
+            <OrderStatus
+                OrderHeaderKey="" OrderLineKey=""
+                OrderLineScheduleKey="" OrderReleaseKey=""
+                OrderReleaseStatusKey="" PipelineKey="" Status=""
+                StatusDate="" StatusDescription="" StatusQty=""
+                StatusReason="" TotalQuantity=""/>
+        </OrderStatuses>
+        <Instructions NumberOfInstructions="">
+            <Instruction InstructionText="" InstructionType="" InstructionURL="" SequenceNo=""/>
+        </Instructions>
+        <LinePriceInfo/>
+        <LineCharges>
+            <LineCharge/>
+        </LineCharges>
+        <LineTaxes>
+            <LineTax/>
+        </LineTaxes>
+        <LinePackListPriceInfo Charges="" DiscountPercentage="" ExtendedPrice="" LineTotal="" Tax="" UnitPrice="" ListPrice="" RetailPrice=""/>
+        <!-- OMNI-101708 : Added for getting Vendor Item Price -->
+        <References>
+            <Reference Name="" Value="" />
+        </References>
+        <!-- OMNI-101708 : Added for getting Vendor Item Price -->
+    </OrderLine>
+    <PackListPriceInfo Currency="" HeaderCharges="" HeaderDiscount="" HeaderTax="" LineSubTotal="" TotalAmount="" TotalCharges="" TotalDiscountAmount="" TotalTax="" />
+</OrderRelease>

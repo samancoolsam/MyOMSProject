@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Order BuyerOrganizationCode="" SellerOrganizationCode="" DocumentType="" AllAddressesVerified="" PaymentStatus="" EnterpriseCode="" OrderType="" OrderPurpose="">
+	<PriceInfo Currency="" EnterpriseCurrency="" ReportingConversionDate="" ReportingConversionRate="" TotalAmount=""/>
+	<OrderLines>
+		<OrderLine>
+			<PersonInfoShipTo IsAddressVerified="" />
+		</OrderLine>
+	</OrderLines>
+	<PersonInfoBillTo IsAddressVerified=""  />
+	<!-- Added PaymentMethods as part of PLCC-583 -->
+	<PaymentMethods>
+		<PaymentMethod CreditCardType="" PaymentReference3="" PaymentType=""  />
+   </PaymentMethods>
+</Order>
+

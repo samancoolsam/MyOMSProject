@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Inbox ActiveFlag="" ApiName=" " AssignedToUserId=""
+    AssignedToUserKey="" AutoResolvedFlag=""
+    ClosedOn="" ConsolidationCount="" Description=""
+    DetailDescription="" EnterpriseKey=" " ErrorReason=""
+    ErrorType=" " ExceptionEscalatedFlag=" "
+    ExceptionType="" ExpirationDays=""
+    FlowName=" " FollowupDate=""
+    GeneratedOn=""
+    InboxKey="" InboxType=" " ItemId=" "
+    LastExceedAlert=""
+    LastOccurredOn="" LastUnassignAlert=""
+    LastUnresolveAlert="" ListDescription=" " LocationId=" "
+    LockedByUserKey=" " LockedFlag="" LockedOn=""
+    OrderHeaderKey="" OrderLineKey=" "
+    OrderNo="" OwnerKey="" OwnerType=" " ParentInboxKey=" "
+    Priority="" QueueId=""
+    QueueKey="" ResolutionDate=""
+    ResolveBy="" ShipmentKey=" " ShipmentNo=" "
+    ShipnodeKey=" " Status="" SubFlowName=" " SupplierKey=" " ViewId=" ">
+    <User Activateflag="" BillingaddressKey="" BusinessKey=""
+        ContactaddressKey="" CreatorOrganizationKey=""
+        Imagefile="" Localecode="" Loginid="" Longdesc=""
+        MenuId="" NoteKey="" OrganizationKey=""
+        ParentUserKey="" Password="" PreferenceKey=""
+        Pwdlastchangedon="" Theme=""
+        UserKey="" UsergroupKey=""
+        Username="" Usertype=""/>
+    <Queue AuditThisQueue="" HoursAssignExceedAction=""
+        HoursForAssignRealert="" HoursForAssignment=""
+        HoursForExceedRealert="" HoursForResolution=""
+        HoursForResolveRealert="" HoursResolveExceedAction=""
+        LastQueueExceedAlert="" MaximumActiveSize=""
+        MaximumSizeExceedAction="" OwnerKey="" OwnerType=""
+        Priority="" QKeyForAssignAlert="" QKeyForExceedAlert=""
+        QKeyForResolveAlert="" QueueDescription=""
+        QueueGroup="" QueueId=""
+        QueueKey="" QueueName="">
+        <ActionList/>
+        <QueueSubscriptionList>
+            <QueueSubscription QueueKey=""
+                QueueSubscriptionKey="" UserKey=""/>
+            <QueueSubscription QueueKey=""
+                QueueSubscriptionKey="" UserKey=""/>
+        </QueueSubscriptionList>
+    </Queue>
+    <InboxReferencesList/>
+    <InboxAuditList/>
+    <Extn ExtnAlertKey="" ExtnAssociatedCustID=""/>
+</Inbox>

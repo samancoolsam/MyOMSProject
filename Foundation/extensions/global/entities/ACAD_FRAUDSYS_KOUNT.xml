@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--/*#############################################################################
+* Kount Integration
+* This xsl converts Create Order input xml for Kount related changes which will  
+* be stored in YFS_ORDER_HEADER table.
+*
+##############################################################################*/-->
+<DBSchema>
+   <Entities>        
+      <Entity TableName="YFS_ORDER_HEADER" >
+        <Attributes>
+		  <Attribute ColumnName="EXTN_TRANSACTION_ID" Type="VARCHAR2" DefaultValue="" Description="Transaction ID value"  
+			   Nullable="true"	Size="40" XMLName="ExtnTransactionID" XMLGroup="Extn" />
+         <Attribute ColumnName="EXTN_KOUNT_EVENT_TIME" DataType="TimeStamp" DefaultValue=" " Description="Kount system Event time" Nullable="true" 
+               Size="" XMLName="ExtnEventTime" XMLGroup="Extn" />
+         <Attribute ColumnName="EXTN_IS_ORDER_FROM_MOD" DefaultValue=" " Description="Is Order from Mobile System" Nullable="true" 
+              Type="CHAR" Size="1" XMLName="ExtnIsOrderFromMoD" XMLGroup="Extn" />
+        </Attributes>
+        <Indices>
+		</Indices>        			
+      </Entity>
+    </Entities>
+</DBSchema>

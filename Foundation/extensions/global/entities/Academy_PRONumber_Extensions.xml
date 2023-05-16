@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright 2006-2008, Sterling Commerce, Inc. All rights reserved. --><DBSchema>
+      <Entities>
+      	<Entity ApiNeeded="Y" AuditRequired="N" HasHistory="False" Prefix="EXTN" 
+      	TableName="EXTN_PRO_SEQ_NO" XMLName="ExtnPROSeqNo">
+			  <Attributes>
+			         <Attribute ColumnName="START_NUMBER"
+						  DataType="Key"
+						  Description="The primary key for the EXTN_PRO_SEQ_NO table."
+						  Name="StartNo" Nullable="false"
+						  DefaultValue="' '" XMLName="StartNo"/>
+					 <Attribute ColumnName="END_NUMBER" DataType="Key"
+							DefaultValue="' '"
+							Description="End Number for PRO Range"
+							Name="EndNo" Nullable="false" XMLName="EndNo"/>
+					 <Attribute ColumnName="CURR_PRO_NO" DataType="Key"
+							DefaultValue="' '"
+							Description="Current Running PRO Seq.No."
+							Name="CurrentPRONo" Nullable="false" XMLName="CurrentPRONo"/>
+			          <Attribute ColumnName="CREATETS" DataType="TimeStamp"
+							DefaultValue="sysdate"
+							Description="Timestamp when the record was created."
+							Name="Createts" Nullable="false" XMLName="Createts"/>
+					  <Attribute ColumnName="MODIFYTS" DataType="TimeStamp"
+							DefaultValue="sysdate"
+							Description="Timestamp when the record was last modified."
+							Name="Modifyts" Nullable="false" XMLName="Modifyts"/>
+					  <Attribute ColumnName="LOCKID" DataType="Lockid" DefaultValue="0" Description="Lock ID" XMLName="LockId"/>			  
+					  <Attribute ColumnName="CREATEUSERID" DataType="UserId" DefaultValue="' '" Description="Creating User ID" XMLName="CreateUserId"/>
+					  <Attribute ColumnName="MODIFYUSERID" DataType="UserId" DefaultValue="' '" Description="Modifying User ID" XMLName="ModifyUserId"/>
+					  <Attribute ColumnName="CREATEPROGID" DataType="ProgramID" DefaultValue="' '" Description="Creating Program ID" XMLName="CreateProgId"/>
+					  <Attribute ColumnName="MODIFYPROGID" DataType="ProgramID" DefaultValue="' '" Description="Modifying Program ID" XMLName="ModifyProgId"/>
+			  </Attributes>
+				<!-- PrimaryKey is a mandatory attribute in entity definition. This
+				element can have ONLY ONE attribute element -->
+				<PrimaryKey Name="PRO_SEQ_PK">
+					<Attribute ColumnName="START_NUMBER"  Name="StartNo" />
+				</PrimaryKey>
+		</Entity>
+	  </Entities>
+</DBSchema>
+

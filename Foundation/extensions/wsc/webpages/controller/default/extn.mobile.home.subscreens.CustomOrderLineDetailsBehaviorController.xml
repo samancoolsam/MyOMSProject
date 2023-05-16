@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Controller
+    className="com.sterlingcommerce.ui.web.platform.controller.SCUIXAPIMashupController"
+    controllerId="extn.mobile.home.subscreens.CustomOrderLineDetailsBehaviorController"
+    requestMethodSupported="POST" screenId="extn.mobile.home.subscreens.CustomOrderLineDetails">
+    <MashupRefs>
+        <MashupRef mashupId="eComOrder_getCompleteOrderLineDetails"
+            mashupRefId="eComOrder_getCompleteOrderLineDetails_Ref" permissionId=""/>
+        <MashupRef mashupId="eComOrder_getShipmentListForOrder"
+            mashupRefId="eComOrder_getShipmentListForOrder_Ref" permissionId=""/>
+    </MashupRefs>
+</Controller>

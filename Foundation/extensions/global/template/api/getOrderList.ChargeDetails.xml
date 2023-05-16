@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OrderList>
+<Order OrderNo="" OrderHeaderKey="" MinOrderStatus="" MaxOrderStatus="" >
+<ChargeTransactionDetails>
+<ChargeTransactionDetail AuthorizationID="" ChargeTransactionKey="" ChargeType="" RequestAmount="" SettledAmount="" Status="" PaymentKey="" >
+<CreditCardTransactions>
+<CreditCardTransaction AuthCode="" AuthReturnCode="" AuthAmount="" RequestId="" AuthReturnMessage="" />
+</CreditCardTransactions>
+<PaymentTransactionErrorList>
+<PaymentTransactionError />
+</PaymentTransactionErrorList>
+</ChargeTransactionDetail>
+</ChargeTransactionDetails>
+<References>
+<Reference Name="" Value="" />
+</References>
+</Order>
+</OrderList>

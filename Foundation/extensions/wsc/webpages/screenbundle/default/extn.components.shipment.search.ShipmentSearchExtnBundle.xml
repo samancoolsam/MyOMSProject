@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ScreenBundle
+    screenBundleId="extn.components.shipment.search.ShipmentSearchExtnBundle" screenId="extn.components.shipment.search.ShipmentSearchExtn">
+    <BundleEntries>
+        <BundleEntry bundleEntryId="txt_orderNo_TextField_hint"
+            bundleKey="extn_Enter_or_Scan_Order_"
+            bundleValueFn="_scSimpleBundle" property="hint"
+            type="WIDGET" uId="txt_orderNo"/>
+        <BundleEntry bundleEntryId="txt_shipmentNo_TextField_hint"
+            bundleKey="extn_Enter_or_Scan_Shipment_"
+            bundleValueFn="_scSimpleBundle" property="hint"
+            type="WIDGET" uId="txt_shipmentNo"/>
+    </BundleEntries>
+</ScreenBundle>

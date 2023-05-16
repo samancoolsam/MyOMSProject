@@ -1,0 +1,145 @@
+<AcademyChargesAndTaxs>
+	<Order DocumentType="0001">
+		<OrderHeader />
+		<OrderLine>
+			<Merchandise>
+				<LineChareges>
+					<LineCharge ChargeCategory="Promotions" ChargeName="BOGO" 
+						FinTranChargeType="OFFER" />
+					<!--OMNI-581: Begin -->
+					<LineCharge ChargeCategory="Promotions" ChargeName="PROMO1" 
+						FinTranChargeType="OFFER" />
+					<LineCharge ChargeCategory="Promotions" ChargeName="PROMO2" 
+						FinTranChargeType="OFFER" />
+					<LineCharge ChargeCategory="Promotions" ChargeName="PROMO3" 
+						FinTranChargeType="OFFER" />
+					<LineCharge ChargeCategory="Promotions" ChargeName="PROMO4"
+						FinTranChargeType="OFFER" />
+					<LineCharge ChargeCategory="Promotions" ChargeName="PROMO5"
+						FinTranChargeType="OFFER" />
+					<!--OMNI-581: End -->
+					<!--OMNI-102327: BEGIN -->
+					<LineCharge ChargeCategory="Promotions" ChargeName="FREEITEM"
+						FinTranChargeType="OFFER" />
+					<!--OMNI-102327: END -->
+					<!--OMNI-14474: Begin -->
+					<LineCharge ChargeCategory="DiscountCoupon" ChargeName="DiscountCoupon" 
+						FinTranChargeType="STORE_COUPON" />
+					<LineCharge ChargeCategory="Promotions"	ChargeName="COUPON1" 
+						FinTranChargeType="OFFER" />
+					<LineCharge ChargeCategory="Promotions"	ChargeName="COUPON2"
+						FinTranChargeType="OFFER" />
+					<LineCharge ChargeCategory="Promotions" ChargeName="COUPON3" 
+						FinTranChargeType="OFFER" />
+					<LineCharge ChargeCategory="Promotions" ChargeName="COUPON4" 
+						FinTranChargeType="OFFER" />
+					<LineCharge ChargeCategory="Promotions" ChargeName="COUPON5"
+						FinTranChargeType="OFFER" />
+					<!--OMNI-14474: End -->
+					<LineCharge ChargeCategory="CUSTOMER_APPEASEMENT"
+						ChargeName="Merchandise" FinTranChargeType="APPEASEMENT" />
+					<LineCharge ChargeCategory="Promotions"
+						ChargeName="PLCC_Acquisition_Offer" FinTranChargeType="OFFER" />
+					<LineCharge ChargeCategory="Promotions"
+						ChargeName="PLCC_Welcome_Offer" FinTranChargeType="OFFER" />
+					<LineCharge ChargeCategory="Promotions"
+						ChargeName="PLCC_Anniversary" FinTranChargeType="OFFER" />
+					<LineCharge ChargeCategory="Promotions"
+						ChargeName="PLCC_EveryDay5" FinTranChargeType="OFFER" />
+				</LineChareges>
+				<LineTaxs>
+					<LineTax ChargeCategory="TAXES" />
+					<LineTax ChargeCategory="TAX_WRITEOFF" />
+				</LineTaxs>
+			</Merchandise>
+			<Shipping>
+				<LineChareges>
+					<LineCharge ChargeCategory="Promotions"
+						ChargeName="ShippingPromotion" FinTranChargeType="OFFER"/>
+					<LineCharge ChargeCategory="Shipping"
+						ChargeName="ShippingCharge" FinTranChargeType="CHARGE" />
+					<LineCharge ChargeCategory="CUSTOMER_APPEASEMENT"
+						ChargeName="Shipping" FinTranChargeType="APPEASEMENT" />
+					<LineCharge ChargeCategory="Promotions"
+						ChargeName="PLCC_Free_Shipping" FinTranChargeType="OFFER" />
+				</LineChareges>
+				<LineTaxs>
+					<LineTax ChargeCategory="Shipping" />
+				</LineTaxs>
+			</Shipping>
+		</OrderLine>
+	</Order>
+	<Order DocumentType="0003">
+			<OrderHeader />
+		<OrderLine>
+			<Merchandise>
+				<LineChareges>
+					<LineCharge ChargeCategory="Promotions"
+						ChargeName="BOGO" FinTranChargeType="OFFER" />
+					<!--OMNI-581: Begin -->
+					<LineCharge ChargeCategory="Promotions" ChargeName="PROMO1" 
+						FinTranChargeType="OFFER" />
+					<LineCharge ChargeCategory="Promotions" ChargeName="PROMO2" 
+						FinTranChargeType="OFFER" />
+					<LineCharge ChargeCategory="Promotions" ChargeName="PROMO3" 
+						FinTranChargeType="OFFER" />
+					<LineCharge ChargeCategory="Promotions" ChargeName="PROMO4"
+						FinTranChargeType="OFFER" />
+					<LineCharge ChargeCategory="Promotions" ChargeName="PROMO5"
+						FinTranChargeType="OFFER" />
+					<!--OMNI-581: End -->
+					<!--OMNI-102327: BEGIN -->
+					<LineCharge ChargeCategory="Promotions" ChargeName="FREEITEM"
+						FinTranChargeType="OFFER" />
+					<!--OMNI-102327: END -->			
+					<!--OMNI-14474: Begin -->
+					<LineCharge ChargeCategory="DiscountCoupon" ChargeName="DiscountCoupon" 
+						FinTranChargeType="STORE_COUPON" />
+					<LineCharge ChargeCategory="Promotions"	ChargeName="COUPON1" 
+						FinTranChargeType="OFFER" />
+					<LineCharge ChargeCategory="Promotions"	ChargeName="COUPON2"
+						FinTranChargeType="OFFER" />
+					<LineCharge ChargeCategory="Promotions" ChargeName="COUPON3" 
+						FinTranChargeType="OFFER" />
+					<LineCharge ChargeCategory="Promotions" ChargeName="COUPON4" 
+						FinTranChargeType="OFFER" />
+					<LineCharge ChargeCategory="Promotions" ChargeName="COUPON5"
+						FinTranChargeType="OFFER" />
+					<!--OMNI-14474: End -->
+					<LineCharge ChargeCategory="CUSTOMER_APPEASEMENT"
+						ChargeName="Merchandise" FinTranChargeType="APPEASEMENT" />
+					<LineCharge ChargeCategory="Promotions"
+						ChargeName="PLCC_Acquisition_Offer" FinTranChargeType="OFFER" />
+					<LineCharge ChargeCategory="Promotions"
+						ChargeName="PLCC_Welcome_Offer" FinTranChargeType="OFFER" />
+					<LineCharge ChargeCategory="Promotions"
+						ChargeName="PLCC_Anniversary" FinTranChargeType="OFFER" />
+					<LineCharge ChargeCategory="Promotions"
+						ChargeName="PLCC_EveryDay5" FinTranChargeType="OFFER" />
+				</LineChareges>
+				<LineTaxs>
+					<LineTax ChargeCategory="TAXES" />
+					<LineTax ChargeCategory="TAX_WRITEOFF" />
+				</LineTaxs>
+			</Merchandise>
+			<Shipping>
+				<LineChareges>
+					<LineCharge ChargeCategory="Promotions"
+						ChargeName="ShippingPromotion" FinTranChargeType="OFFER" />
+					<LineCharge ChargeCategory="Shipping"
+						ChargeName="ShippingCharge" FinTranChargeType="CHARGE" />
+					<LineCharge ChargeCategory="CUSTOMER_APPEASEMENT"
+						ChargeName="Shipping" FinTranChargeType="APPEASEMENT" />
+					<LineCharge ChargeCategory="ReturnShippingCharge"
+						ChargeName="ReturnShippingCharge" FinTranChargeType="RETURN_CHARGE" />
+					<LineCharge ChargeCategory="Promotions"
+						ChargeName="PLCC_Free_Shipping" FinTranChargeType="OFFER" />
+				</LineChareges>
+				<LineTaxs>
+					<LineTax ChargeCategory="Shipping" />
+					<LineTax ChargeCategory="ReturnShippingCharge" />
+				</LineTaxs>
+			</Shipping>
+		</OrderLine>
+	</Order>
+</AcademyChargesAndTaxs>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Customer>
+    <CustomerContactList>
+        <CustomerContact>
+		<Extn ExtnIsCorporateCustomer="" ExtnRequiresWebprofileID="" ExtnIsRedLined="" ExtnOptIn=""/>
+			<CustomerAdditionalAddressList>
+                <CustomerAdditionalAddress>
+                    <PersonInfo>
+<Extn ExtnIsAPOFPO="" ExtnIsPOBOXADDRESS="" ExtnIsSignatureRequired="" ExtnAddressNickName="" ExtnIsAddressVerified="" ExtnIsMilitary="" />  						</PersonInfo>
+                </CustomerAdditionalAddress>
+            </CustomerAdditionalAddressList>
+        </CustomerContact>
+    </CustomerContactList>
+</Customer>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ScreenBundle
+    screenBundleId="extn.desktop.home.portlets.PickOrdersPortletExtnBundle" screenId="extn.desktop.home.portlets.PickOrdersPortletExtn">
+    <BundleEntries>
+        <BundleEntry bundleEntryId="btnViewPickupOrders_Button_label"
+            bundleKey="PickOrdersPortlet"
+            bundleValueFn="_scSimpleBundle" property="label"
+            type="WIDGET" uId="btnViewPickupOrders"/>
+        <BundleEntry
+            bundleEntryId="extn_btnViewPickupOrders_Button_label"
+            bundleKey="PickOrdersPortlet"
+            bundleValueFn="_scSimpleBundle" property="label"
+            type="WIDGET" uId="extn_btnViewPickupOrders"/>
+        <BundleEntry bundleEntryId="portletName_Label_value"
+            bundleKey="PickOrdersPortlet_Desktop"
+            bundleValueFn="_scSimpleBundle" property="value"
+            type="WIDGET" uId="portletName"/>
+        <BundleEntry bundleEntryId="extn_lnkRefresh_Link_imageText"
+            bundleKey="Action_Refresh" bundleValueFn="_scSimpleBundle"
+            property="imageText" type="WIDGET" uId="extn_lnkRefresh"/>
+    </BundleEntries>
+</ScreenBundle>

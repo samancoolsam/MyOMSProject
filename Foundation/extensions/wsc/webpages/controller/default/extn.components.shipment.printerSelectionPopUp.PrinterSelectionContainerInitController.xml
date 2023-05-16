@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Controller className="com.sterlingcommerce.ui.web.platform.controller.SCUIXAPIMashupController"
+ controllerId="extn.components.shipment.printerSelectionPopUp.PrinterSelectionContainerInitController" 
+ requestMethodSupported="POST" screenId="extn.components.shipment.printerSelectionPopUp.PrinterSelectionContainer">
+<MashupRefs>
+	<MashupRef mashupId="getPrinterDevice"
+            mashupRefId="getPrinterDeviceInit" permissionId=""/>
+</MashupRefs>
+</Controller>

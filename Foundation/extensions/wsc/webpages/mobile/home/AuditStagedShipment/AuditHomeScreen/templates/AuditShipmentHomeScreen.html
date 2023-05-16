@@ -1,0 +1,60 @@
+
+<div class="sc-platform-screen-default ShipmentSearchScreen" role="region" aria-label="region_screenHeader" >
+
+	<!-- header start -->
+	<div data-dojo-type="idx/layout/ContentPane" data-dojo-props=" spanLabel:true ,title:'Top Content','class':'mobileCommonScreen screenHeader',
+		colspan:1,uId:'TopContent',layoutAlign:'top'">
+
+		<div data-dojo-type="idx/layout/ContentPane" data-dojo-props="spanLabel:true ,'class':'screenTitle',uId:'pnlScreenDescription' ">
+			<div data-dojo-type="sc/plat/dojo/widgets/Label" data-dojo-props="spanLabel:true,uId:'lbl_ScreenTitle',scParamDataFn :
+				function() { 
+						return { 
+						value:'Audit Staging Locations'
+							}
+				}"/>
+		</div>
+
+		<div data-dojo-type="idx/layout/ContentPane" data-dojo-props="spanLabel:true,'class':'rightPanel' ">
+			<div data-dojo-type="idx/layout/ContentPane" data-dojo-props="spanLabel:true,uId:'pnlScreenTasks' "/>
+		</div>
+	</div>	
+
+	<!-- header end -->
+</div>
+</div>
+
+
+<br> <br>
+<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" data-dojo-props="		spanLabel : true , 
+		'class' : 'extn_labelReceiving hashNumberAlign autoLabelZeroWidth blockComponent comappsWrapWord' , 
+		uId : 'extn_StartScanbtn' ,
+		style : ' margin-top: 10%; text-align: center; ' ,  
+ 		scParamDataFn :
+		function() { 
+			return { 
+			 	label : 	'Click Start To Scan Shipment Labels'
+			}
+		}
+"></div>
+<br> <br> 
+
+<br> <br> 
+<table style="margin-left:auto;margin-right:auto; margin-top: 15%;">
+    <tr>
+        <th style="text-align:center">
+            <div data-dojo-type="dijit/form/Button"
+                data-dojo-props="       spanLabel : true , 
+                        'class' : 'idxSpecialButton zeroWidthLabelKey' , 
+                        style : ' margin-top: 0%; text-align: center; ' ,
+                        showLabel : true , uId : 'extn_btnStart'  ,
+                        scParamDataFn :
+                                    function() { 
+                                                return {
+							 label : 'Start'  
+						}
+            }">
+            </div>
+        </th>
+    </tr>
+</table>	
+

@@ -1,0 +1,21 @@
+<%!Map getClassificationAttributes(YFCElement elemClassificationPurpose) {
+		Map mp = new HashMap();
+		if(!isVoid(elemClassificationPurpose) && (elemClassificationPurpose.hasChildNodes())){
+		int iCounter = 1;
+		String root[] = new String[1];
+		root[0] = "ClassificationPurposeCode";
+		elemClassificationPurpose.sortChildren(root, true);
+		for(Iterator j = elemClassificationPurpose.getChildren();j.hasNext();){
+			YFCElement childElem = (YFCElement)j.next();
+			if(!isVoid(childElem.getAttribute("ClassificationPurposeCode"))){
+				String sAttrName = childElem.getAttribute("AttributeName");
+				if(!isVoid(sAttrName)){
+					mp.put(String.valueOf(iCounter),sAttrName);
+					iCounter++;
+				}
+			}
+		}
+		}
+		return mp;
+	}
+%>

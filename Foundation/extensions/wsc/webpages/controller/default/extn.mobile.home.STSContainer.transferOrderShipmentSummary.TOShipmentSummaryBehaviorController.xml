@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Controller className="com.sterlingcommerce.ui.web.platform.controller.SCUIXAPIMashupController" controllerId="extn.mobile.home.STSContainer.transferOrderShipmentSummary.TOShipmentSummaryBehaviorController" requestMethodSupported="POST" screenId="extn.mobile.home.STSContainer.transferOrderShipmentSummary.TOShipmentSummary">
+<MashupRefs>
+<MashupRef mashupId="extn_transferOrderSummary_getTOShipmentDetails"
+            mashupRefId="extn_getTOShipmentDetails" permissionId=""/>
+<!-- OMNI-9303 Unable to reprint the pickup acknowledgment slip for STS orders - Start -->
+<MashupRef mashupId="extn_AcademyBOPISPrintAckSlip"
+            mashupRefId="extn_AcademySTSPrintAckSlip_ref" permissionId=""/>
+<!-- OMNI-9303 Unable to reprint the pickup acknowledgment slip for STS orders - End -->
+<!-- OMNI-72012 Start -->
+<MashupRef extnType="ADD" mashupId="extn_CompleteOnMyWayOrder"
+            mashupRefId="extn_CompleteOnMyWayOrder" permissionId=""/>
+<!-- OMNI-72012 End -->
+<!-- OMNI-98331 Start -->
+<MashupRef extnType="ADD" mashupId="extn_readyToStage_changeSOShipmentStatus"
+            mashupRefId="extn_readyToStage_changeSOShipmentStatus_ref" permissionId=""/>
+<!-- OMNI-98331 End -->
+ </MashupRefs>
+</Controller>

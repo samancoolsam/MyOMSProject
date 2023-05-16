@@ -1,0 +1,27 @@
+		<div>
+		 	<div data-dojo-type="sc/plat/dojo/widgets/Link" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_lnkTrackingNo' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '1' , 
+		_sc_extensibility_position : 'after' , 
+		_sc_extensibility_referenceUId : 'lblChannelDisplay'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	label : 			this.getBundleString('extn_Tracking_Number')
+,	
+			 	value : 			this.getSimpleBundleString('extn_Tracking_Number')
+,	
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 path : 			'Order.Extn.ExtnTrackingNo'
+,
+		 namespace : 			'getCompleteOrderDetails_output'
+	}
+	}
+			}
+		}
+	 					}">
+		 	</div>  
+		</div>

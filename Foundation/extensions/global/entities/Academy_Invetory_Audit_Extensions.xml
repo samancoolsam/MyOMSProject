@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DBSchema>
+   <Entities>        
+      <Entity TableName="YFS_INVENTORY_AUDIT" >
+		<Indices>
+			<Index Name="IX_ACAD_MODTSORG">
+				<Column Name="MODIFYTS" />
+				<Column Name="ORGANIZATION_CODE" />
+			</Index>
+		</Indices>        			
+      </Entity>
+    </Entities>
+</DBSchema>

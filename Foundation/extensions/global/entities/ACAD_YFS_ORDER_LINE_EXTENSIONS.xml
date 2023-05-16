@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DBSchema>
+	<Entities>
+			<!-- Start OMNI-71870 -  : Alternate Store Functionality -->
+		<Entity TableName="YFS_ORDER_LINE">
+		<Attributes>
+			<Attribute ColumnName="EXTN_IS_ASP" DataType="Flag" DefaultValue="' '" Description="Indicates whether the OrderLine is converted to ASP" Nullable="true"  Size="1" Type="CHAR" XMLName="ExtnIsASP" XMLGroup="Extn" />
+		</Attributes>
+		</Entity>
+		<!-- End  OMNI-71870 -  : Alternate Store Functionality -->
+	</Entities>
+</DBSchema>

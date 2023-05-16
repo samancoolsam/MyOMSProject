@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OrderList LastRecordSet=" ">
+    <Order BillToID=" " CustomerFirstName=" " CustomerLastName=" " CustomerZipCode=" " DisplayStatusDescription="" DocumentType="" DraftOrderFlag="" EnterpriseCode="" MaxOrderStatusDesc=""
+        MultipleStatusesExist="" OrderDate="" OrderHeaderKey="" OrderNo="" SellerOrganizationCode="" Status="" isHistory="">
+        <OrderLines>
+		<OrderLine OrderLineKey=""/>
+		</OrderLines>
+        <PriceInfo Currency="" TotalAmount=""/>
+        <PersonInfoBillTo AddressLine1=""/>
+    </Order>
+</OrderList>

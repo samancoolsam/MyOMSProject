@@ -1,0 +1,23 @@
+<LabelFieldMap>
+	
+	<LabelField Binding="Shipment/@Header" DataType="Text" LabelFieldName="Header" RepeatingElement="" Sequence="N" /> 
+	<LabelField Binding="Shipment/@FirstName" DataType="Text" LabelFieldName="FirstName" RepeatingElement="" Sequence="N" /> 
+	<LabelField Binding="Shipment/@LastName" DataType="Text" LabelFieldName="LastName" RepeatingElement="" Sequence="N" />
+	<LabelField Binding="Shipment/@AltPickUpPerson" DataType="Text" LabelFieldName="AltPickUpPerson" RepeatingElement="" Sequence="N" />
+	<LabelField Binding="Shipment/@OrderNo" DataType="Text" LabelFieldName="OrderNumber" RepeatingElement="" Sequence="N" />
+	<LabelField Binding="Shipment/@Store" DataType="Text" LabelFieldName="Store" RepeatingElement="" Sequence="N" />
+	<LabelField Binding="Shipment/@PickUpDate" DataType="Text" LabelFieldName="PickUpDate" RepeatingElement="" Sequence="N" />
+	<LabelField Binding="Shipment/@TotalPageCount" DataType="Text" LabelFieldName="TotalPageCount" RepeatingElement="" Sequence="N" />
+	<LabelField Binding="Shipment/@Comment" DataType="Text" LabelFieldName="Comment" RepeatingElement="" Sequence="N" />
+	<LabelField Binding="Shipment/@OrderNo" DataType="Text" LabelFieldName="OrderBarcode" RepeatingElement="" Sequence="N" />
+	<LabelField Binding="Shipment/Item/@UPC" DataType="Text" LabelFieldName="SKU" RepeatingElement="" Sequence="N" /> 
+	<LabelField Binding="Shipment/Item/@ItemID" DataType="Text" LabelFieldName="ItemID" RepeatingElement="" Sequence="N" /> 
+	<LabelField Binding="Shipment/Item/@ItemShortDesc" DataType="Text" LabelFieldName="Description" RepeatingElement="" Sequence="N" />
+	<LabelField Binding="Shipment/Item/@PageCount" DataType="Text" LabelFieldName="PageCount" RepeatingElement="" Sequence="N" />
+	 
+
+	<RepeatingFields> 
+	</RepeatingFields>
+	
+</LabelFieldMap>
+

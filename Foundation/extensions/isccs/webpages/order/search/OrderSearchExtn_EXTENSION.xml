@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExtensionMetaData>
+    <ScreenExtension extnClassName="OrderSearchExtn"
+        extnPackage="extn.order.search"
+        originalScreen="isccs.order.search.OrderSearch"
+        originalScreenPackage="isccs.order.search" type="diffrential">
+        <Items>
+	<!--Start - OMNI-3717 Payment Tender Type Search-->
+            <ContentPane _sc_extensibility_moveOrder="3"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="extn_PaymentType" uId="extn_Payment_ContentPane"/>
+            <RadioButtonSet _sc_extensibility_moveOrder="1"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="radReadFromHistory"
+                colspan="3" groupAlignment="horizontal"
+                label="$(_scBundle:extn_Payment_Type)"
+                scuiDataType="Text-100" uId="extn_PaymentType">
+                <BindingData>
+                    <RadioBinding>
+                        <Option label="$(_scSimpleBundle:Credit_Card)"
+                            scExtensibilityArrayItemId="extn_RadioBinding_0"
+                            selected="true" value="DisplayCreditCardNo"/>
+                        <Option
+                            label="$(_scSimpleBundle:extn_PayPal_ID)"
+                            scExtensibilityArrayItemId="extn_RadioBinding_1" value="PaymentReference2"/>
+                        <Option
+                            label="$(_scSimpleBundle:extn_Gift_Card)"
+                            scExtensibilityArrayItemId="extn_RadioBinding_2" value="SvcNo"/>
+                    </RadioBinding>
+                    <TargetBindings>
+                        <TargetBinding
+                            namespace="getAdvancedOrderList_input"
+                            path="Order.PaymentMethod.PaymentType" scExtensibilityArrayItemId="extn_TargetBindings_0"/>
+                    </TargetBindings>
+                </BindingData>
+            </RadioButtonSet>
+            <RadioButtonSet _sc_extensibility_moveOrder="4"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="first"
+                _sc_extensibility_referenceUId="extn_Payment_ContentPane" uId="extn_PaymentType"/>
+            <TextField _sc_extensibility_moveOrder="2"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="extn_PaymentType"
+                scuiDataType="Text-100" uId="extn_PaymentCardValue">
+                <BindingData>
+                    <TargetBindings>
+                        <TargetBinding
+                            namespace="getAdvancedOrderList_input"
+                            path="Order.PaymentMethod.DisplayCreditCardNo" scExtensibilityArrayItemId="extn_TargetBindings_0"/>
+                    </TargetBindings>
+                </BindingData>
+            </TextField>
+            <TextField _sc_extensibility_moveOrder="5"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="extn_PaymentType" uId="extn_PaymentCardValue"/>
+	    <!--End - OMNI-3717 Payment Tender Type Search-->
+            <TextField _sc_extensibility_operation="change"
+                _sc_extensibility_referenceUId="txt_postalCode" renderHidden="false"/>
+        </Items>
+	<!--Start - OMNI-3717 Payment Tender Type Search-->
+        <Subscribers>
+            <Local>
+                <Subscriber description="On Enter"
+                    eventId="extn_PaymentCardValue_onKeyDown"
+                    isExtn="true" sequence="51">
+                    <Handler methodName="SST_invokeApiOnEnter"/>
+                </Subscriber>
+            </Local>
+        </Subscribers>
+	<!--End - OMNI-3717 Payment Tender Type Search-->
+    </ScreenExtension>
+</ExtensionMetaData>

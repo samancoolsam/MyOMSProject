@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExtensionMetaData>
+    <ScreenExtension extnClassName="ShortageReasonPopupExtn"
+        extnPackage="extn.components.shipment.common.screens"
+        originalScreen="wsc.components.shipment.common.screens.ShortageReasonPopup"
+        originalScreenPackage="wsc.components.shipment.common.screens" type="diffrential">
+        <Items>
+            <RadioButtonSet _sc_extensibility_operation="change"
+                _sc_extensibility_referenceUId="radSelectShortRea" groupAlignment="vertical"/>
+        </Items>
+    </ScreenExtension>
+</ExtensionMetaData>

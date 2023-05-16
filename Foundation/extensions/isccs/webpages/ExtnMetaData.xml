@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Extensions>
+    <Identifier id="">
+        <UIExtns>
+            <UIExtn appScreen="isccs.order.search.OrderSearch"
+                extnScreen="extn.order.search.OrderSearchExtn" type="diffrential"/>
+            <UIExtn appScreen="isccs.payment.inquiry.PaymentInquiry"
+                extnScreen="extn.payment.inquiry.PaymentInquiryExtn" type="diffrential"/>
+            <UIExtn
+                appScreen="isccs.order.customerAppeasement.CustomerAppeasementSelection"
+                extnScreen="extn.order.customerAppeasement.CustomerAppeasementSelectionExtn" type="diffrential"/>
+            <UIExtn
+                appScreen="isccs.order.customerAppeasement.CustomerAppeasementOptions"
+                extnScreen="extn.order.customerAppeasement.CustomerAppeasementOptionsExtn" type="diffrential"/>
+            <UIExtn appScreen="isccs.order.details.OrderSummary"
+                extnScreen="extn.order.details.OrderSummaryExtn" type="diffrential"/>
+            <UIExtn
+                appScreen="isccs.order.customerAppeasement.CustomerAppeasementOrderLineList"
+                extnScreen="extn.order.customerAppeasement.CustomerAppeasementOrderLineListExtn" type="diffrential"/>
+            <UIExtn appScreen="isccs.order.cancel.CancelOrderBaseScreen"
+                extnScreen="extn.order.cancel.CancelOrderBaseScreenExtn" type="diffrential"/>
+            <UIExtn appScreen="isccs.order.details.OrderSummaryLines"
+                extnScreen="extn.order.details.OrderSummaryLinesExtn" type="diffrential"/>
+            <UIExtn
+                appScreen="isccs.shipment.shipmentTracking.lineStatePanels.ShipTrackShipping"
+                extnScreen="extn.shipment.shipmentTracking.lineStatePanels.ShipTrackShippingExtn" type="diffrential"/>
+            <UIExtn
+                appScreen="isccs.shipment.shipmentTracking.LineTracking"
+                extnScreen="extn.shipment.shipmentTracking.LineTrackingExtn" type="diffrential"/>
+            <UIExtn appScreen="isccs.return.create.lines.AddReturnLines"
+                extnScreen="extn.return.create.lines.AddReturnLinesExtn" type="diffrential"/>
+            <UIExtn appScreen="isccs.editors.OrderEditorRT"
+                extnScreen="extn.editors.OrderEditorRTExtn" type="diffrential"/>
+            <UIExtn appScreen="isccs.order.cancel.CancelOrderListScreen"
+                extnScreen="extn.order.cancel.CancelOrderListScreenExtn" type="diffrential"/>
+            <UIExtn
+                appScreen="isccs.payment.confirmation.PaymentConfirmation"
+                extnScreen="extn.payment.confirmation.PaymentConfirmationExtn" type="diffrential"/>
+            <UIExtn appScreen="isccs.editors.HomeEditorRT"
+                extnScreen="extn.editors.HomeEditorRTExtn" type="diffrential"/>
+            <UIExtn appScreen="isccs.home.portlets.ReturnsPortlet"
+                extnScreen="extn.home.portlets.ReturnsPortletExtn" type="diffrential"/>
+            <UIExtn appScreen="isccs.home.portlets.OrderPortlet"
+                extnScreen="extn.home.portlets.OrderPortletExtn" type="diffrential"/>
+            <UIExtn
+                appScreen="isccs.return.create.lines.ExistingOrderLine"
+                extnScreen="extn.return.create.lines.ExistingOrderLineExtn" type="diffrential"/>
+	    <!--Start - OMNI-3717 Payment Tender Type Search-->
+            <UIExtn appScreen="isccs.order.search.OrderListScreen"
+                extnScreen="extn.order.search.OrderListScreenExtn" type="diffrential"/>
+            <!--End - OMNI-3717 Payment Tender Type Search-->
+            <UIExtn appScreen="isccs.order.details.OrderLineSummary"
+                extnScreen="extn.order.details.OrderLineSummaryExtn" type="diffrential"/>
+	    <!-- OMNI-14551:  Ship to Address in Sterling WCC - Start -->
+	    <UIExtn
+                appScreen="isccs.common.address.display.AddressDisplay"
+                extnScreen="extn.common.address.display.AddressDisplayExtn" type="diffrential">
+                <IdentifierList>
+                    <Identifier identifierId="US" type="change"/>
+                </IdentifierList>
+            </UIExtn>
+            <!-- OMNI-14551:  Ship to Address in Sterling WCC - End -->
+	    <!-- OMNI-12936: Return Tracking Number - Begin -->
+            <UIExtn appScreen="isccs.return.details.ReturnSummary"
+                extnScreen="extn.return.details.ReturnSummaryExtn" type="diffrential"/>
+	    <!-- OMNI-12936: Return Tracking Number - End -->	
+		<!-- OMNI-20155: LineType for EGC OrderLine - Begin -->
+            <UIExtn
+                appScreen="isccs.return.create.lines.ReturnOrderLines"
+                extnScreen="extn.return.create.lines.ReturnOrderLinesExtn" type="diffrential"/>
+			<!-- OMNI-20155: LineType for EGC OrderLine - End -->
+            <!-- OMNI-65600: Klarna VCN - Sterling to display "Klarna" memo (WCC Only) - START -->
+            <UIExtn appScreen="isccs.payment.confirmation.PaymentMethod"
+                extnScreen="extn.payment.confirmation.PaymentMethodExtn" type="diffrential"/>
+            <!-- OMNI-65600: Klarna VCN - Sterling to display "Klarna" memo (WCC Only) - END -->
+        </UIExtns>
+    </Identifier>
+</Extensions>

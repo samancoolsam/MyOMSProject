@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<HoldType HoldType="" Status="" >
+<OrderLines>
+	<OrderLine OrderLineKey="" PrimeLineNo="" SubLineNo="" OrderHeaderKey="" MinLineStatus="" >
+		<OrderHoldType Status="" HoldType="" />
+	</OrderLine>
+</OrderLines>
+</HoldType>

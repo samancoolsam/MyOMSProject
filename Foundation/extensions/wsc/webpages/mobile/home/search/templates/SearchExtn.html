@@ -1,0 +1,233 @@
+		<div>
+			<div data-dojo-type="sc/plat/dojo/widgets/ControllerWidget"
+				data-dojo-props="data_dojo_props_diff: {
+				uId: 'advancedSearchPanel',
+				packageName: 'wsc.mobile.home.search',
+				className: 'AdvancedSearch',
+				handleInit: true,
+			_sc_extensibility_operation: 'move',
+			_sc_extensibility_referenceUId: 'filteringSelectCarrier',
+			_sc_extensibility_position: 'after',
+			_sc_extensibility_moveOrder: '1',
+			scExtensionDataFn: function() {
+				return {
+				}
+			}}">
+	</div>
+			<div data-dojo-type="sc/plat/dojo/widgets/ControllerWidget"
+				data-dojo-props="data_dojo_props_diff: {
+				uId: 'advancedSearchPanel',
+				packageName: 'wsc.mobile.home.search',
+				className: 'AdvancedSearch',
+				handleInit: true,
+			_sc_extensibility_operation: 'move',
+			_sc_extensibility_referenceUId: 'advancedSearchTitlePanel',
+			_sc_extensibility_position: 'first',
+			_sc_extensibility_moveOrder: '2',
+			scExtensionDataFn: function() {
+				return {
+				}
+			}}">
+	</div>
+			<div data-dojo-type="sc/plat/dojo/widgets/ControllerWidget"
+					data-dojo-props="data_dojo_props_diff: {
+					uId: 'advancedSearchPanel',
+					packageName: 'wsc.mobile.home.search',
+					className: 'AdvancedSearch',
+					handleInit: true,
+			_sc_extensibility_operation: 'move',
+			_sc_extensibility_referenceUId: 'extn_ship_or_order_no',
+			_sc_extensibility_position: 'after',
+			_sc_extensibility_moveOrder: '6',
+				scExtensionDataFn: function() {
+					return {
+					}
+				}}">
+	</div>
+		 	<div data-dojo-type="idx/form/FilteringSelect" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'filteringSelectCarrier' , 
+		_sc_extensibility_moveOrder : '4' , 
+		_sc_extensibility_operation : 'move' , 
+		_sc_extensibility_position : 'after' , 
+		_sc_extensibility_referenceUId : 'txt_SearchShipNo'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="idx/layout/TitlePane" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								renderHidden : true , 
+		_sc_extensibility_operation : 'change' , 
+		toggleable : true , 
+		_sc_extensibility_referenceUId : 'advancedSearchTitlePanel' , 
+		open : false  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	title : 			this.getSimpleBundleString('Title_AdvancedSearch')
+			}
+		}
+	 					}">
+		 	</div>  
+			<!--OMNI-71126 Pick Up Order Grouping - Pick Up Order Grouping Order Search TC70  START -->
+		 			 	<div data-dojo-type="idx/form/CheckBox" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								renderHidden : false , 
+		uId : 'extn_relatedOrders_checkbox' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '7' , 
+		_sc_extensibility_position : 'after' , 
+		_sc_extensibility_referenceUId : 'txt_SearchShipNo'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	bindingData : 	{
+		 targetBinding : 	[
+	 		{
+		 path : 			'Shipment.ShowRelatedOrders'
+,
+		 namespace : 			'getShipmentSearch_input'
+,
+		 scExtensibilityArrayItemId : 			'extn_TargetBindings_0'
+	}
+	]
+,
+		 uncheckedValue : 	{
+		 value : 			'N'
+	}
+,
+		 sourceBinding : 	{
+		 path : 			'Shipment.ShowRelatedOrders'
+,
+		 namespace : 			'SavedSearchCriteria'
+	}
+,
+		 checkedValue : 	{
+		 value : 			'Y'
+	}
+	}
+,	
+			 	label : 			this.getSimpleBundleString('extn_Show_Related_Orders')
+			}
+		}
+	 					}">
+		 	</div>  
+			<!--OMNI-71126 Pick Up Order Grouping - Pick Up Order Grouping Order Search TC70  END -->
+		 	<div data-dojo-type="idx/form/TextBox" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								renderHidden : true , 
+		_sc_extensibility_operation : 'change' , 
+		_sc_extensibility_referenceUId : 'txt_SearchOrderNo'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	hint : 			this.getSimpleBundleString('extn_Scan_or_enter_Order_')
+			}
+		}
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="idx/form/TextBox" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								_sc_extensibility_operation : 'change' , 
+		_sc_extensibility_referenceUId : 'txt_SearchOrderNo'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	hint : 			this.getSimpleBundleString('extn_Scan_or_enter_Order_')
+			}
+		}
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="idx/form/TextBox" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								renderHidden : true , 
+		_sc_extensibility_operation : 'change' , 
+		_sc_extensibility_referenceUId : 'txt_SearchShipNo'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="idx/form/TextBox" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								_sc_extensibility_operation : 'change' , 
+		_sc_extensibility_referenceUId : 'txt_SearchShipNo'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	hint : 			this.getSimpleBundleString('extn_Enter_or_Scan_Shipment_')
+			}
+		}
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="idx/form/TextBox" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_ship_or_order_no' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '5' , 
+		'class' : 'autoLabelZeroWidth longTextbox' , 
+		_sc_extensibility_position : 'before' , 
+		_sc_extensibility_referenceUId : 'filteringSelectCarrier'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	label : 			this.getSimpleBundleString('extn_lbl_ship_or_order_no')
+,	
+			 	hint : 			this.getSimpleBundleString('extn_Enter_or_Scan_Ship_or_Order_no')
+,	
+			 	bindingData : 	{
+		 targetBinding : 	[
+	 		{
+		 namespace : 			'getShipmentSearch_input'
+,
+		 path : 			'Shipment.refNo'
+,
+		 scExtensibilityArrayItemId : 			'extn_TargetBindings_0'
+	}
+	]
+,
+		 sourceBinding : 	{
+		 namespace : 			'SavedSearchCriteria'
+,
+		 path : 			'Shipment.refNo'
+	}
+	}
+			}
+		}
+	 					}">
+		 	</div>  
+			
+			<div data-dojo-type="idx/form/TextBox" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_ScanProductIDTextBox' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '8' , 
+		'class' : 'autoLabelZeroWidth longTextbox' , 
+		_sc_extensibility_position : 'after' , 
+		_sc_extensibility_referenceUId : 'extn_ship_or_order_no'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	label : 			this.getSimpleBundleString('extn_Sku_number')
+,	
+			 	hint : 			this.getSimpleBundleString('extn_Scan_or_enter_SKU')
+,	
+			 	bindingData : 	{
+		 targetBinding : 	[
+	 		{
+		 path : 			'Shipment.itemID'
+,
+		 namespace : 			'getShipmentSearch_input'
+,
+		 scExtensibilityArrayItemId : 			'extn_TargetBindings_0'
+	}
+	]
+,
+		 sourceBinding : 	{
+		 path : 			'Shipment.itemID'
+,
+		 namespace : 			'SavedSearchCriteria'
+	}
+	}
+			}
+		}
+	 					}">
+		 	</div> 
+			
+		</div>

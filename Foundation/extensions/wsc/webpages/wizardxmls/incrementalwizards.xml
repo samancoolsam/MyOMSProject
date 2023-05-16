@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Licensed Materials - Property of IBM
+  IBM Sterling Order Management Store (5725-D10)
+  (C) Copyright IBM Corp. 2014 , 2015 All Rights Reserved. , 2015 All Rights Reserved.
+  US Government Users Restricted Rights - Use, duplication or disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+-->
+<wizards>
+	<wizard id="wsc.components.shipment.customerpickup.CustomerPickUpWizard"
+			flowController="com.sterlingcommerce.ui.web.platform.wizard.SCUIDefaultWizardController"
+			independentPages="false" >
+		<wizardEntities>
+			<wizardEntity id="FirstPageRule"
+				impl="java:com.ibm.wsc.shipment.customerpickup.rules.CustomerPickupLandingPageWizardRule"
+				start="true" last="false" type="RULE">
+				<output value="ValidShipment" />
+				<output value="InvalidShipment" />
+			</wizardEntity>
+			<wizardEntity id="InvalidShipment"
+				screenId="wsc.components.shipment.customerpickup.InvalidCustomerPickup"
+				impl="/platform/jsps/dojo/xapiajaxsuccesshandler.jsp" start="false"
+				last="true" type="PAGE" />			
+			<wizardEntity id="CustomerIdentification" 
+					screenId="wsc.components.shipment.customerpickup.CustomerIdentification" impl="/platform/jsps/dojo/xapiajaxsuccesshandler.jsp" 
+					start="false" last="false" type="PAGE" category="Identification"/>
+			<wizardEntity id="ProductVerification" 
+					screenId="wsc.components.shipment.customerpickup.ProductVerification" impl="/platform/jsps/dojo/xapiajaxsuccesshandler.jsp" 
+					start="false" last="false" type="PAGE" category="Verification"/>			
+			<wizardEntity id="Summary" 
+					screenId="wsc.components.shipment.customerpickup.Summary" impl="/platform/jsps/dojo/xapiajaxsuccesshandler.jsp" 
+					start="false" last="true" type="PAGE" category="Summary"/>			
+		</wizardEntities>
+		<wizardTransitions>
+			<wizardTransition id="Transition1" source="FirstPageRule">
+				<output target="ProductVerification" value="ValidShipment" />
+				<output target="InvalidShipment" value="InvalidShipment" />
+			</wizardTransition>			
+			<!--<wizardTransition id="Transition2" source="CustomerIdentification" target="ProductVerification"/> -->
+			<wizardTransition id="Transition2" source="ProductVerification" target="Summary"/>			
+		</wizardTransitions>
+		<categories>
+			<category id="Identification" description="" style="simple" />
+			<category id="Verification" description="" style="simple" />			
+			<category id="Summary" description="" style="simple" />
+		</categories>
+	</wizard>
+</wizards>

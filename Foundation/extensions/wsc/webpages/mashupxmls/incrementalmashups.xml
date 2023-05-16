@@ -1,0 +1,510 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mashups>
+    <mashup id="customerpickup_updateShipmentQuantity">
+        <API Name="changeShipment">
+            <Input>
+                <Shipment>
+                    <ShipmentLines>
+                        <ShipmentLine ShortageQty="">
+                            <Extn ExtnMsgToSIM="" ExtnReasonCode=""/>
+                        </ShipmentLine>
+                    </ShipmentLines>
+                </Shipment>
+            </Input>
+            <Template>
+                <ShipmentLine>
+                    <Extn ExtnStagingLocation=""/>
+                </ShipmentLine>
+            </Template>
+        </API>
+    </mashup>
+    <!-- incremented to get status for displaying paper work button -->
+    <mashup id="customerpickup_getShortageShipmentLineList">
+        <API Name="getShipmentLineList">
+             <Input>
+				<!--OMNI-85085 - Start --> 
+                <ShipmentLine DisplayLocalizedFieldInLocale="xml:CurrentUser:/User/@Localecode"
+                    IsPickable="Y"  OrderNo="" MaximumRecords="" ShipmentKey="" 
+                    IsCustomerPickComplete="Y" IsCustomerPickCompleteQryType="NE">
+                    <ComplexQuery>
+                        <And>                                      
+                            <Exp Name="ShortageResolutionReason" QryType="ISNULL" />                        
+                        </And>
+                    </ComplexQuery>
+					<Shipment DeliveryMethod="PICK" Status="" PackListType="" PackListTypeQryType=""
+						ShipmentType="" ShipmentTypeQryType="" ShipNode="xml:CurrentStore:/Store/@ShipNode">
+					<!--OMNI-88832 - Add PWI status - Start-->
+						<ComplexQuery Operator=""> 
+							<Or> 
+								<Exp Name="" QryType="" Value=""/> 
+							</Or> 
+						</ComplexQuery>
+					<!--OMNI-88832 - Add PWI status - End-->
+						<Extn ExtnIsCurbsidePickupOpted="" ExtnIsCurbsidePickupOptedQryType=""/>
+					</Shipment>
+                </ShipmentLine>
+				<!--OMNI-85085 - End --> 
+            </Input>
+            <Template>
+                <ShipmentLines>
+                    <ShipmentLine>
+					<!-- OMNI-84925 Added ShipmentNo-->
+                        <Shipment Status="" ShipmentNo="">
+                            <Extn/>
+                        </Shipment>
+                        <Extn/>
+                    </ShipmentLine>
+                </ShipmentLines>
+            </Template>
+        </API>
+    </mashup>
+    <mashup id="customerpickup_getShipmentDetailsSummary">
+        <API Name="getShipmentDetails">
+            <Input/>
+            <Template>
+                <Shipment>
+		<Extn ExtnCurbsidePickupInfo="" ExtnIsCurbsidePickupOpted=""/>
+                    <ShipmentLines>
+                        <ShipmentLine CancelReason=""
+                            CustomerPickedQuantity="" ItemID=""
+                            OrderNo="" Quantity="" OriginalQuantity="" ShortageQty="" BackroomPickedQty="" BackroomPickedQuantity="">
+                            <OrderLine>
+                                <Extn/>
+                            </OrderLine>
+                        </ShipmentLine>
+                    </ShipmentLines>
+                    <AdditionalDates>
+                        <AdditionalDate/>
+                    </AdditionalDates>
+                </Shipment>
+            </Template>
+        </API>
+    </mashup>
+  <!--  Start OMNI-8715 Commented as Overiride mashups has this
+  	<mashup id="batchPickup_getToBePickedStoreBatchLines">
+        <API Name="getPage">
+            <Input>
+                <Page>
+                    <ReferenceData/>
+                    <PreviousPage>
+                        <Any/>
+                    </PreviousPage>
+                    <API>
+                        <Input>
+                            <StoreBatch>
+                                <PreviousPage>
+                                    <Any/>
+                                </PreviousPage>
+                            </StoreBatch>
+                        </Input>
+                        <Template>
+                            <StoreBatch>
+                                <StoreBatchLines>
+                                    <StoreBatchLine>
+                                    <ShipmentLines>
+                                    <ShipmentLine ItemID="1"
+                                    ShipmentKey="1"
+                                    ShipmentLineKey="1" ShipmentLineNo="1"/>
+                                    </ShipmentLines>
+                                    <ItemDetails>
+                                    <Extn ExtnDepartment="1"/>
+                                    </ItemDetails>
+                                    </StoreBatchLine>
+                                </StoreBatchLines>
+                            </StoreBatch>
+                        </Template>
+                    </API>
+                </Page>
+            </Input>
+            <Template/>
+        </API>
+    </mashup> 
+    End OMNI-8715 -->
+    <mashup id="backroomPickUp_getHoldLocationForShipment">
+        <API Name="getShipmentDetails">
+            <Input/>
+            <Template>
+                <Shipment>
+                    <ShipmentLines>
+                        <ShipmentLine>
+                            <Extn/>
+			    <!-- OMNI-21999: Full name of customer on BOPIS staging screen - START -->
+			    <Order CustomerFirstName="" CustomerLastName=""/>
+			    <!-- OMNI-21999: Full name of customer on BOPIS staging screen - END -->
+				<!-- OMNI-95876 - Start -->
+					<OrderLine OrderLineKey="">
+						<Extn ExtnIsAssemblyRequired="" />
+					</OrderLine>
+				<!-- OMNI-95876 - End -->
+                        </ShipmentLine>
+                    </ShipmentLines>
+                </Shipment>
+            </Template>
+        </API>
+    </mashup>
+    <mashup id="backroomPickUp_saveHoldLocationToShipment">
+        <API Name="changeShipment">
+            <Input>
+                <Shipment>
+                    <ShipmentLines>
+                        <ShipmentLine ShipmentLineKey="">
+                            <Extn/>
+                        </ShipmentLine>
+                    </ShipmentLines>
+                </Shipment>
+            </Input>
+            <Template>
+                <Shipment>
+                    <ShipmentLines>
+                        <ShipmentLine>
+                            <Extn/>
+                        </ShipmentLine>
+                    </ShipmentLines>
+                </Shipment>
+            </Template>
+        </API>
+    </mashup>
+    <mashup description="Record Customer pick" endpoint="EP_CONFIG"
+        id="customerpickup_recordCustomerPickup" mashuptype="XAPI"
+        skipDataProvider="false" transactional="true">
+        <classInformation name="com.ibm.wsc.shipment.customerpickup.mashups.RecordCustomerPickMashup"/>
+        <API Name="recordCustomerPick">
+            <Input>
+                <Shipment AddVerificationMethod="Y"
+                    DisplayLocalizedFieldInLocale="xml:CurrentUser:/User/@Localecode"
+                    SellerOrganizationCode="" ShipNode="" ShipmentKey=""
+                    ShipmentNo="" TransactionId="CONFIRM_SHIPMENT">
+                    <ShipmentLines>
+                        <ShipmentLine PickedQty="" Quantity=""
+                            ReasonCode="" ShipmentLineKey=""
+                            ShipmentLineNo="" ShipmentSubLineNo=""
+                            ShortageQuantity="" ShortageReason=""/>
+                    </ShipmentLines>
+                    <Notes>
+                        <Note ContactReference="" ContactType=""
+                            ContactUser="" NoteText="" Priority="0"
+                            ReasonCode="YCD_CUSTOMER_VERIFICATION" VisibleToAll="Y"/>
+                    </Notes>
+                </Shipment>
+            </Input>
+            <Template>
+                <Shipment AssignedToUserId="" Currency=""
+                    DeliveryCode="" DeliveryMethod="" DisplayOrderNo=""
+                    EnterpriseCode="" ExpectedShipmentDate=""
+                    HoldLocation="" IsOverdue="" OrderNo=""
+                    ScacAndService="" ScacIntegrationRequired=""
+                    ShipmentKey="" ShipmentNo="" TimeRemaining="" Status="" ShipNode="">
+                    <ShipmentLines>
+                        <ShipmentLine CancelReason=""
+                            CustomerPickedQuantity="" ShipmentLineKey="" ShortageQty="">
+                            <OrderLine PrimeLineNo="">
+                                <Notes>
+                                    <Note NoteText="" ReasonCode=""/>
+                                </Notes>
+                                <PersonInfoMarkFor />
+                            </OrderLine>
+                        </ShipmentLine>
+                    </ShipmentLines>
+                    <BillToAddress AddressLine1="" AddressLine2=""
+                        City="" Country="" CountryDesc="" DayFaxNo=""
+                        DayPhone="" EMailID="" EveningFaxNo=""
+                        EveningPhone="" FirstName=""
+                        IsCommercialAddress="" LastName="" MiddleName=""
+                        MobilePhone="" PersonInfoKey=""
+                        PreferredShipAddress="" State="" TitleDesc="" ZipCode=""/>
+                    <AllowedTransactions>
+                        <Transaction ProcessTypeKey="" TranType="" Tranid=""/>
+                    </AllowedTransactions>
+                    <ShipNode ShipNode="" ShipNodeAddressKey=""
+                        ShipnodeKey="" ShipnodeType="" ShippingNode="">
+                        <ShipNodePersonInfo AddressLine1=""
+                            AddressLine2="" City="" Country=""
+                            CountryDesc="" DayFaxNo="" DayPhone=""
+                            EMailID="" EveningFaxNo="" EveningPhone=""
+                            FirstName="" IsCommercialAddress=""
+                            LastName="" MiddleName="" MobilePhone=""
+                            PersonInfoKey="" PreferredShipAddress=""
+                            State="" TitleDesc="" ZipCode=""/>
+                    </ShipNode>
+                    <ToAddress AddressLine1="" AddressLine2="" City=""
+                        Country="" CountryDesc="" DayFaxNo=""
+                        DayPhone="" EMailID="" EveningFaxNo=""
+                        EveningPhone="" FirstName=""
+                        IsCommercialAddress="" LastName="" MiddleName=""
+                        MobilePhone="" PersonInfoKey=""
+                        PreferredShipAddress="" State="" TitleDesc="" ZipCode=""/>
+                    <AdditionalDates>
+                        <AdditionalDate  ExpectedDate="" DateTypeId="BOPIS_SLA_DATE" />
+                    </AdditionalDates>
+                    <Extn ExtnShipmentPickedBy="" />
+                </Shipment>
+            </Template>
+        </API>
+        <APINamespace inputNS="completeCustomerPick_Input" outputNS="completeCustomerPick_Output"/>
+        <AlternateResourceIds>
+            <AlternateResourceId altResourceId="WSCSYS00001"/>
+            <AlternateResourceId altResourceId="WSC000001"/>
+        </AlternateResourceIds>
+    </mashup>
+    <mashup id="customerpickup_getPickupShipmentLineList">
+        <API Name="getShipmentLineList">
+            <Input/>
+            <Template>
+                <ShipmentLines>
+                    <ShipmentLine>
+                        <Extn ExtnStagingLocation=""/>
+                    </ShipmentLine>
+                </ShipmentLines>
+            </Template>
+        </API>
+    </mashup>
+    <mashup id="customerpickup_getShipmentLineList">
+        <API Name="getShipmentLineList">
+            <Input/>
+            <Template>
+                <ShipmentLines>
+                    <ShipmentLine>
+                        <Extn ExtnStagingLocation=""/>
+                    </ShipmentLine>
+                </ShipmentLines>
+            </Template>
+        </API>
+    </mashup>
+    <mashup id="customerpickup_getPickedShipmentLineList">
+        <API Name="getShipmentLineList">
+            <Input/>
+            <Template>
+                <ShipmentLines>
+                    <ShipmentLine>
+                        <Extn ExtnStagingLocation=""/>
+                    </ShipmentLine>
+                </ShipmentLines>
+            </Template>
+        </API>
+    </mashup>
+    <mashup id="backroomPickPortlet_getShipmentListPickCount">
+        <API Name="getShipmentList">
+            <Input>
+                <Shipment MaximumRecords="1">
+                    <OrderBy>
+                        <Attribute Name="OrderHeaderKey"/>
+                    </OrderBy>
+                </Shipment>
+            </Input>
+            <Template>
+                <Shipments TotalNumberOfRecords="">
+                    <Shipment ShipmentKey="" PickTicketPrinted=""/>
+                </Shipments>
+            </Template>
+        </API>
+    </mashup>
+    <mashup id="shipmentRT_getShipmentDetails">
+        <API Name="getShipmentDetails">
+            <Input/>
+            <Template>
+                <Shipment DeliveryMethod="" DocumentType="" PickTicketPrinted="" Status="" ShipmentType="">
+                    <Containers>
+                        <Container ContainerNo="" ShipmentContainerKey=""/>
+                    </Containers>
+					<!-- OMNI-79480 - added ExtnIsCurbsidePickupOpted --> 
+					<Extn ExtnIsCurbsidePickupOpted=""/>
+                </Shipment>
+            </Template>
+        </API>
+    </mashup>
+    <mashup id="pack_getShipmentContainerDetails">
+        <API Name="getShipmentContainerDetails">
+            <Input/>
+            <Template>
+                <Container ContainerType="" ContainerTypeKey="">
+                    <Shipment OrderNo="" ShipmentKey="">
+                        <ShipmentLines>
+                            <ShipmentLine BackroomPickedQuantity=""
+                                IsPackComplete="" OrderHeaderKey=""
+                                OrderLineKey="" OrderNo="" OriginalQuantity=""
+                                PlacedQuantity="" Quantity="" ShipmentKey=""
+                                ShipmentLineKey="" ShortageQty="" UnitOfMeasure="">
+                                <OrderLine GiftFlag="" IsBundleParent="" ItemGroupCode="">
+                                    <ItemDetails ItemGroupCode="" ItemID="" UnitOfMeasure="">
+                                        <PrimaryInformation
+                                            ExtendedDisplayDescription=""
+                                            ImageID="" ImageLabel="" ImageLocation=""/>
+                                        <ClassificationCodes Model=""/>
+                                        <ItemInstructionList>
+                                            <ItemInstruction InstructionText="" InstructionType=""/>
+                                        </ItemInstructionList>
+                                    </ItemDetails>
+                                </OrderLine>
+                                <Instructions>
+                                    <Instruction InstructionText=""
+                                        InstructionType="" SeqNo=""/>
+                                </Instructions>
+                            </ShipmentLine>
+                        </ShipmentLines>
+                    </Shipment>
+                </Container>
+            </Template>
+        </API>
+    </mashup>
+    <mashup id="containerPack_StoreContainerLabel_94">
+        <API FlowName="StoreContainerLabel_94">
+            <Input>
+                <Container ContainerGrossWeight="" ContainerType=""
+                    ContainerTypeKey="" />
+            </Input>
+            <Template>
+                <Output/>
+            </Template>
+        </API>
+    </mashup>
+    <mashup id="containerPack_getShipmentDetails">
+        <API Name="getShipmentDetails">
+            <Input/>
+            <Template>
+                <Shipment SCAC="" Status="" ShipmentType="">
+                    <ShipmentLines>
+                        <ShipmentLine BackroomPickedQuantity=""
+                            IsPackComplete="" OriginalQuantity=""
+                            PlacedQuantity="" Quantity="" ShortageQty="" ShipmentLineKey=""/>
+                    </ShipmentLines>
+                </Shipment>
+            </Template>
+        </API>
+    </mashup>
+    <mashup id="containerPack_getShipmentContainerList_pg">
+        <API Name="getShipmentContainerList">
+            <Input/>
+            <Template>
+                <Containers>
+                    <Container ContainerType="" ContainerNo="">
+                        <Shipment ShipmentKey="">
+                            <ShipmentLines>
+                                <ShipmentLine BackroomPickedQuantity=""
+                                    IsPackComplete="" OriginalQuantity=""
+                                    PlacedQuantity="" Quantity="" ShortageQty="" ShipmentLineKey="">
+									<OrderLine OrderLineKey="">
+										<ItemDetails ItemID="" >
+											<Extn ExtnClass="" ExtnShipAlone="" ExtnMultibox="" ExtnSizeCodeDescription="" />
+										</ItemDetails> 
+									</OrderLine>
+								</ShipmentLine>
+                            </ShipmentLines>
+                        </Shipment>
+						<ContainerDetails>
+						<ContainerDetail ContainerDetailsKey="" ItemID="" Quantity="" ShipmentLineKey="" />
+						</ContainerDetails>
+                    </Container>
+                </Containers>
+            </Template>
+        </API>
+    </mashup>
+	
+	
+   <mashup id="customerpickup_getBasicShipmentDetails">
+        <API Name="getShipmentDetails">
+            <Input/>
+            <Template>
+                <!--OMNI-79688: Curbside Initiated Timestamp - Start/End -->
+
+                <Shipment AppointmentNo="" ShipNode="" ShipmentType="" PackListType="">
+					<Extn/>
+                    <BillToAddress/>
+                    <ShipmentLines>
+                        <ShipmentLine>
+                            <Order PaymentStatus="">
+			    	<!-- OMNI-8710, 8717: UI Align and Payment Info - Start -->
+                                <PaymentMethods>
+                                    <PaymentMethod CreditCardName=""
+                                    CreditCardNo=""
+                                    CreditCardType=""
+                                    DisplayCreditCardNo=""
+                                    PaymentKey=""
+                                    PaymentReference2="" PaymentReference5=""
+                                    PaymentType="" PaymentTypeGroup="" DisplaySvcNo="" SvcNo=""/>
+                                </PaymentMethods>
+				<!-- OMNI-8710, 8717: UI Align and Payment Info - End -->
+                            </Order>
+                            <OrderLine>
+                                <ItemDetails>
+                                    <AdditionalAttributeList>
+                                    <AdditionalAttribute Name="" Value=""/>
+                                    </AdditionalAttributeList>
+                                </ItemDetails>
+				<PersonInfoMarkFor DayPhone=""
+                                    EMailID="" FirstName="" LastName="" PersonInfoKey=""/>
+                                <Extn/>
+                            </OrderLine>
+                            <Extn/>
+                        </ShipmentLine>
+                    </ShipmentLines>
+		     <AdditionalDates>
+                        <AdditionalDate ActualDate=""
+                            AdditionalDateKey="" DateTypeId=""
+                            ExpectedDate="" FromActualDate=""
+                            FromExpectedDate="" FromRequestedDate=""
+                            ReferenceKey="" ReferenceType=""
+                            RequestedDate="" ToActualDate=""
+                            ToExpectedDate="" ToRequestedDate=""/>
+                    </AdditionalDates>
+                   <!--OMNI-90544: Start -->
+                <FromAddress State=""/>
+           <!--OMNI-90544: END -->
+          	</Shipment>
+            </Template>
+        </API>
+    </mashup>
+	
+	
+	
+	
+	<!--OMNI-85085 - Start -->
+    <mashup id="customerpickup_updateShipmentQuantity">
+        <API Name="changeShipment">
+            <Input>
+                <Shipment>
+                    <ShipmentLines>
+                        <ShipmentLine ShipmentKey="" ShortageQty="" CancelReason=""
+                            CustomerPickedQuantity="" Quantity=""
+                            ShipmentLineKey="" ShortageResolutionReason="">
+                            <Extn ExtnMsgToSIM="" ExtnReasonCode=""/>
+                        </ShipmentLine>
+					</ShipmentLines>
+                </Shipment>
+            </Input>
+            <Template>
+                <ShipmentLine>
+                    <Extn ExtnStagingLocation=""/>
+                </ShipmentLine>
+            </Template>
+        </API>
+    </mashup>
+	<!--OMNI-85085 - End -->
+	<!--OMNI-85101 START-->
+	<mashup id="common_getShipmentDetails">
+        <API Name="getShipmentDetails">
+            <Input/>
+            <Template>
+                <Shipment OrderNo="" ShipmentType="" PackListType="" >
+                     <Extn ExtnIsCurbsidePickupOpted="" ExtnIsInstorePickupOpted=""/>
+                </Shipment>
+            </Template>
+        </API>
+    </mashup>
+	<!--OMNI-85101 END-->
+	<mashup id="backroomPick_getShipmentLineDetails">
+        <API Name="getShipmentLineList">
+             <Input/>
+            <Template>
+                <ShipmentLines>
+                    <ShipmentLine>
+                        <!-- OMNI-93071 Serial No - START --> 
+                        <ShipmentTagSerials>
+								<ShipmentTagSerial ShipmentTagSerialKey="" ShipmentLineKey="" SerialNo="" Quantity="" />
+						</ShipmentTagSerials>
+                        <!-- OMNI-93071 Serial No - END --> 
+                    </ShipmentLine>
+                </ShipmentLines>
+            </Template>
+        </API>
+    </mashup>
+</mashups>

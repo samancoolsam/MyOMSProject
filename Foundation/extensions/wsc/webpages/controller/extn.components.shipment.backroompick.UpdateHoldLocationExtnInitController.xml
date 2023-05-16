@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Controller
+    className="com.sterlingcommerce.ui.web.platform.controller.SCUIXAPIMashupController"
+    controllerId="extn.components.shipment.backroompick.UpdateHoldLocationExtnInitController"
+    requestMethodSupported="POST" screenId="extn.components.shipment.backroompick.UpdateHoldLocationExtn">
+    <Group isAggregator="Y"/>
+    <MashupRefs>
+        <MashupRef extnType="" mashupId="getPrinterDevice"
+            mashupRefId="getPrinterDeviceInit1" permissionId=""/>
+    </MashupRefs>
+</Controller>

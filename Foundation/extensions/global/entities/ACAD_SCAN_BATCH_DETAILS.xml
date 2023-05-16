@@ -1,0 +1,58 @@
+<DBSchema>
+	<Entities>
+		<Entity ApiNeeded="Y" Prefix="ACAD_" Name="ACAD_SCAN_BATCH_DETAILS"
+			TableName="ACAD_SCAN_BATCH_DETAILS" XMLName="ACADScanBatchDetails"
+			HasHistory="N">
+			<Attributes>
+				<Attribute ColumnName="ACAD_SCAN_BATCH_DETAILS_KEY"
+					Description="The primary key of the ACAD_SCAN_BATCH_DETAILS table."
+					DecimalDigits="" DefaultValue="' '" Nullable="false" DataType="Key"
+					XMLName="AcadScanBatchDetailsKey" Name="AcadScanBatchDetailsKey" />
+				<Attribute ColumnName="ACAD_SCAN_BATCH_HEADER_KEY"
+					Description="The primary key of the ACAD_SCAN_BATCH_HEADER table."
+					DecimalDigits="" DefaultValue="' '" Nullable="false" DataType="Key"
+					XMLName="AcadScanBatchHeaderKey" Name="AcadScanBatchHeaderKey" />
+				<Attribute ColumnName="SHIPMENT_NO" DecimalDigits=""
+					Description="Identifier for ShipmentNo" DefaultValue="' '"
+					Name="ShipmentNo" Nullable="false" Size="40" Type="VARCHAR2"
+					XMLName="ShipmentNo" />
+				<Attribute ColumnName="ORDER_NO" DecimalDigits=""
+					Description="Customer Order Number." DefaultValue="' '" Name="Order_No"
+					Nullable="false" Size="40" Type="VARCHAR2" XMLName="OrderNo" />
+				<Attribute ColumnName="IS_CANCELLED" DecimalDigits=""
+					Description="Shipment cancelled flag" DefaultValue="N" Name="Is_Cancelled"
+					Nullable="false" Type="CHAR" Size="1"  XMLName="IsCancelled" />
+				<Attribute ColumnName="SHIPMENT_TYPE" DecimalDigits=""
+					Description="Identifier for ShipmentType" DefaultValue="' '"
+					Name="ShipmentType" Nullable="false" Size="40" Type="VARCHAR2"
+					XMLName="ShipmentType" />	
+				<Attribute ColumnName="CREATETS" DataType="TimeStamp"
+					DefaultValue="sysdate" Description="Create TimeStamp" />
+				<Attribute ColumnName="MODIFYTS" DataType="TimeStamp"
+					DefaultValue="sysdate" Description="Modify TimeStamp" />
+				<Attribute ColumnName="CREATEUSERID" DataType="UserId"
+					DefaultValue="' '" Description="Creating User ID" />
+				<Attribute ColumnName="MODIFYUSERID" DataType="UserId"
+					DefaultValue="' '" Description="Modifying User ID" />
+				<Attribute ColumnName="CREATEPROGID" DataType="ProgramID"
+					DefaultValue="' '" Description="Creating Program ID" />
+				<Attribute ColumnName="MODIFYPROGID" DataType="ProgramID"
+					DefaultValue="' '" Description="Modifying Program ID" />
+				<Attribute ColumnName="LOCKID" DataType="Lockid"
+					DefaultValue="0" Description="Lock ID" />	
+			</Attributes>
+			<PrimaryKey Name="SCAN_BATCH_DTLS_PK">
+				<Attribute ColumnName="ACAD_SCAN_BATCH_DETAILS_KEY" Name="AcadScanBatchDetailsKey" />
+			</PrimaryKey>
+			<Parent ParentTableName="ACAD_SCAN_BATCH_HEADER" XMLName="ACADScanBatchHeader">
+				<Attribute ColumnName="ACAD_SCAN_BATCH_HEADER_KEY" ParentColumnName="ACAD_SCAN_BATCH_HEADER_KEY"/>
+			</Parent>
+			<Indices>
+				<Index Name="BCH_ISCAN_I1">
+					<Column Name="ACAD_SCAN_BATCH_HEADER_KEY" />
+					<Column Name="IS_CANCELLED" />
+				</Index>
+			</Indices>
+		</Entity>
+	</Entities>
+</DBSchema>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExtensionMetaData>
+    <ScreenExtension extnClassName="ItemPackExtn"
+        extnPackage="extn.components.shipment.container.pack"
+        originalScreen="wsc.components.shipment.container.pack.ItemPack"
+        originalScreenPackage="wsc.components.shipment.container.pack" type="diffrential">
+        <Namespaces>
+            <SourceNamespaces>
+                <Source description="JK" isExtn="true"
+                    scExtensibilityArrayItemId="extn_SourceNamespaces_2" value="extn_JK"/>
+            </SourceNamespaces>
+        </Namespaces>
+    </ScreenExtension>
+</ExtensionMetaData>

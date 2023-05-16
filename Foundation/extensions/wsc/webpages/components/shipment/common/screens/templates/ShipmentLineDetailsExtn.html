@@ -1,0 +1,243 @@
+		<div>
+		<!--Start - OMNI-3680 BOPIS:Record Shortage Button-->
+
+		<!--OMNI-45645-SIM Integration Changes -- Start -->
+		 	<div data-dojo-type="idx/layout/ContentPane" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_ItemPrice' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '9' , 
+		_sc_extensibility_position : 'after' , 
+		_sc_extensibility_referenceUId : 'divQuantity'  
+	 					}">
+		 	</div>  
+		<!--OMNI-45645-SIM Integration Changes -- End -->
+
+		 	<div data-dojo-type="dijit/form/Button" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_button' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '6' , 
+		'class' : 'shortageResolution lineLinks' , 
+		_sc_extensibility_position : 'before' , 
+		_sc_extensibility_referenceUId : 'shortageResolutionLink' , 
+		showLabel : true  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	label : 			this.getSimpleBundleString('extn_Record_Shortage')
+			}
+		}
+	 					}">
+		 	</div>  
+			<!--End - OMNI-3680 BOPIS:Record Shortage Button-->
+		 	<div data-dojo-type="sc/plat/dojo/widgets/Label" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_datalabel' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '1' , 
+		'class' : 'blockComponent location autoLabelZeroWidth alternateCustomer' ,
+		_sc_extensibility_position : 'after' , 
+		_sc_extensibility_moveOrder : '1' , 
+		_sc_extensibility_referenceUId : 'itemVariationPanelHolder' , 
+		uId : 'extn_datalabel' , 
+		_sc_extensibility_position : 'after'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+		 	value : 			this.getSimpleBundleString('blank')
+			}
+		}
+	 					}">
+		 	</div> 
+			<!--Start - OMNI-3680 BOPIS:Record Shortage Button--> 
+
+
+		<!--OMNI-45645-SIM Integration Changes -- Start -->
+		 	<div data-dojo-type="sc/plat/dojo/widgets/Label" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_AvlStockOnHand' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '7' , 
+		'class' : 'blockComponent location autoLabelZeroWidth alternateCustomer alternateCustomer_mbl' , 
+		_sc_extensibility_position : 'before' , 
+		_sc_extensibility_referenceUId : 'extn_datalabel3'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/Label" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_ItemLRD' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '8' , 
+		'class' : 'blockComponent location autoLabelZeroWidth alternateCustomer alternateCustomer_mbl' , 
+		_sc_extensibility_position : 'after' , 
+		_sc_extensibility_referenceUId : 'extn_AvlStockOnHand'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/Label" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_ItemPriceLabel' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '10' , 
+		'class' : 'blockComponent location autoLabelZeroWidth alternateCustomer alternateCustomer_mbl' , 
+		_sc_extensibility_position : 'first' , 
+		style : 'Padding-bottom:5px' , 
+		_sc_extensibility_referenceUId : 'extn_ItemPrice'  
+	 					}">
+		 	</div> 
+		<!--OMNI-45645-SIM Integration Changes -- End -->
+
+
+			<div data-dojo-type="sc/plat/dojo/widgets/Link" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								_sc_extensibility_operation : 'change' , 
+		'class' : 'groupHeader blockComponent productdesclink disableLink' , 
+		_sc_extensibility_referenceUId : 'itemdescriptionLink'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/Link" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								renderHidden : true , 
+		resourceId : 'C000000' , 
+		_sc_extensibility_operation : 'change' , 
+		_sc_extensibility_referenceUId : 'shortageResolutionLink'  
+	 					}">
+		 	</div>
+			<!--End - OMNI-3680 BOPIS:Record Shortage Button-->  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								renderHidden : true , 
+		uId : 'extn_datalabel2' , 
+		_sc_extensibility_operation : 'insert' ,  
+		'class' : 'blockComponent productdesclink' , 
+		_sc_extensibility_moveOrder : '3' , 
+		_sc_extensibility_referenceUId : 'extn_datalabel' , 
+		uId : 'extn_datalabel2' , 
+		_sc_extensibility_position : 'after'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	value : 			this.getSimpleBundleString('blank')
+,	
+			 	label : 			this.getSimpleBundleString('extn_On_Hand')
+			}
+		}
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_datalabel3' , 
+	 								_sc_extensibility_operation : 'insert' , 
+		'class' : 'blockComponent location autoLabelZeroWidth' , 
+		_sc_extensibility_moveOrder : '4' , 
+		_sc_extensibility_referenceUId : 'extn_datalabel2' , 
+		uId : 'extn_datalabel3' , 
+		_sc_extensibility_position : 'after'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	value : 			this.getSimpleBundleString('black')
+,	
+			 	label : 			this.getBundleString('extn_Live_Date1')
+			}
+		}
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_datalabel4' , 
+	 								_sc_extensibility_operation : 'insert' , 
+		'class' : 'blockComponent location autoLabelZeroWidth' , 
+		_sc_extensibility_moveOrder : '5' , 
+		_sc_extensibility_referenceUId : 'extn_datalabel3' , 
+		uId : 'extn_datalabel4' , 
+		_sc_extensibility_position : 'after'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	value : 			this.getSimpleBundleString('black')
+,	
+			 	label : 			this.getBundleString('extn_Pog_Id_')
+			}
+		}
+	 					}">
+		 	</div> 
+		 	<div data-dojo-type="sc/plat/dojo/widgets/Link" 
+		 				data-ibmsc-uid="itemdescriptionLink"
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								_sc_extensibility_operation : 'change' , 
+		'class' : 'groupHeader blockComponent productdesclink disableLink' , 
+		_sc_extensibility_referenceUId : 'itemdescriptionLink'  
+	 					}">
+		 	</div>  
+			<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								renderHidden : true , 
+		_sc_extensibility_operation : 'change' , 
+		_sc_extensibility_referenceUId : 'Locationlbl'  
+	 					}">
+		 	</div>  
+
+       <!--Start - OMNI-90928 SerialNo Label-->
+        <div data-dojo-type="sc/plat/dojo/widgets/DataLabel" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_datalabelSNO' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '11' , 
+		'class' : 'blockComponent location autoLabelZeroWidth' , 
+		spanLabel : false , 
+		_sc_extensibility_position : 'before' , 
+		style : 'margin-right: 99px;' , 
+		_sc_extensibility_referenceUId : 'productScanImagePanel'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 path : 			'BarCode.Shipment.ShipmentLine.ShipmentTagSerials.ShipmentTagSerial.SerialNo'
+,
+		 dynamicBindingFunc : 			'extn_getSerialNo'
+,
+		 namespace : 			'extn_SerialNoValue'
+	}
+	}
+,	
+			 	label : 			this.getBundleString('extn_Serial_Number')
+			}
+		}
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								renderHidden : true , 
+		_sc_extensibility_operation : 'change' , 
+		_sc_extensibility_referenceUId : 'Locationlbl'  
+	 					}">
+		 	</div>
+		 	<!--END - OMNI-90928 SerialNo Label-->  
+			<!--STSRT - OMNI-104474 -->  
+				<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								renderHidden : true , 
+		_sc_extensibility_operation : 'change' , 
+		_sc_extensibility_referenceUId : 'Locationlbl'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_Assebmly_Requested' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '12' , 
+		'class' : 'extn_DisplayAssembly' ,
+		_sc_extensibility_position : 'before' , 
+		_sc_extensibility_referenceUId : 'extn_datalabel'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	label : 			this.getSimpleBundleString('extn_Assembly_Requested')
+			}
+		}
+	 					}">
+		 	</div>  
+			<!--END - OMNI-104474 -->  
+		</div>

@@ -1,0 +1,151 @@
+<div class="sc-platform-screen-default StoreAddress">
+
+ <div data-dojo-type="sc/plat/dojo/widgets/Label" data-ibmsc-uid="lblStoreID"
+    data-dojo-props="		spanLabel : true , 
+		uId : 'lblStoreID'  
+ 		,scParamDataFn :
+		 function() { 
+			return {
+			label : 			'Store:',			
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 path : 			'Description'
+,
+		 namespace : 			'getShipNopdeAddress_output'
+	}
+	}
+			}
+		}
+"></div>
+	 <div data-dojo-type="idx/layout/ContentPane" data-ibmsc-uid="pnlAddressHeader"
+    data_dojo_props_identifier="{
+		 							'class' : 'addressHeader' , 
+		uId : 'pnlAddressHeader'  
+		 				}">
+						 <div data-dojo-type="sc/plat/dojo/widgets/Label" data-ibmsc-uid="lblStoreAddress"
+    data-dojo-props="		'class' : 'fieldLabel' , 
+		shouldEncodeValue : false , 
+		uId : 'lblStoreAddress', style : 'text-decoration-line:underline;'  
+ 		,scParamDataFn :
+		 function() { 
+			return { 
+			 	value : 			'Store Address:'
+			}
+		}
+"></div>
+	</div>
+	
+        <div data-dojo-type="idx/layout/ContentPane" data-ibmsc-uid="pnlAddressHolder"
+        data_dojo_props_identifier="{
+		 							spanLabel : true ,
+		'class' : 'addressHolder' , 
+		uId : 'pnlAddressHolder' , 
+		layoutAlign : 'top'  
+		 				}">
+            <div data-dojo-type="sc/plat/dojo/widgets/Label" data-ibmsc-uid="lblName"
+            data_dojo_props_identifier="{
+		 							uId : 'lblName',
+		 				}"></div>
+						</div>
+		<div data-dojo-type="idx/layout/ContentPane" data-ibmsc-uid="pnlAddressHolder1"
+        data_dojo_props_identifier="{
+		 							spanLabel : true ,
+		'class' : 'addressHolder' , 
+		uId : 'pnlAddressHolder' ,   
+		 				}">
+            <div data-dojo-type="sc/plat/dojo/widgets/Label" data-ibmsc-uid="lblAddressLine1"
+            data_dojo_props_identifier="{
+		 							uId : 'lblAddressLine1'  
+		 				}"></div>
+						</div>
+						<div data-dojo-type="idx/layout/ContentPane" data-ibmsc-uid="pnlAddressHolder2"
+        data_dojo_props_identifier="{
+		 							spanLabel : true ,
+		'class' : 'addressHolder' , 
+		uId : 'pnlAddressHolder' ,   
+		 				}">
+            <div data-dojo-type="sc/plat/dojo/widgets/Label" data-ibmsc-uid="lblAddressLine2"
+            data_dojo_props_identifier="{
+		 							uId : 'lblAddressLine2'  
+		 				}"></div>
+						</div>
+						<div data-dojo-type="idx/layout/ContentPane" data-ibmsc-uid="pnlAddressHolder3"
+        data_dojo_props_identifier="{
+		 							spanLabel : true ,
+		'class' : 'addressHolder' , 
+		uId : 'pnlAddressHolder' ,   
+		 				}">
+            <div data-dojo-type="sc/plat/dojo/widgets/Label" data-ibmsc-uid="lblCityStateZip"
+            data_dojo_props_identifier="{
+		 							uId : 'lblCityStateZip'  
+		 				}"></div>
+						</div>
+						<div data-dojo-type="idx/layout/ContentPane" data-ibmsc-uid="pnlAddressHolder4"
+        data_dojo_props_identifier="{
+		 							spanLabel : true ,
+		'class' : 'addressHolder' , 
+		uId : 'pnlAddressHolder' ,   
+		 				}">
+            <div data-dojo-type="sc/plat/dojo/widgets/Label" data-ibmsc-uid="lblCountry"
+            data_dojo_props_identifier="{
+		 							uId : 'lblCountry'  
+		 				}"></div>
+        </div>			
+						 <div data-dojo-type="idx/layout/ContentPane" data-ibmsc-uid="pnlAdditionalInfo"
+    data_dojo_props_identifier="{
+		 							'class' : 'addressAdditionalInfo' , 
+		uId : 'pnlAdditionalInfo'  
+		 				}">
+        <div data-dojo-type="idx/layout/ContentPane" data-ibmsc-uid="pnlPhoneHolder"
+        data_dojo_props_identifier="{
+		 							uId : 'pnlPhoneHolder' 
+		 				}">
+            <div data-dojo-type="sc/plat/dojo/widgets/Image" data-ibmsc-uid="imgPhoneNo"
+            data_dojo_props_identifier="{
+		 							uId : 'imgPhoneNo' , src:'..//resources/css/icons/images/contactByPhone.png',
+		 				}"></div>
+            <div data-dojo-type="sc/plat/dojo/widgets/Label" data-ibmsc-uid="lblDayPhone"
+            data_dojo_props_identifier="{
+		 							'class' : 'icon-image-label' , 
+		uId : 'lblDayPhone'  
+		 				}"></div>
+        </div>
+        <div data-dojo-type="idx/layout/ContentPane" data-ibmsc-uid="pnlEmailHolder"
+        data_dojo_props_identifier="{
+		 							'class' : 'addDisplayemail' , 
+		uId : 'pnlEmailHolder'
+		 				}">
+            <div data-dojo-type="sc/plat/dojo/widgets/Image" data-ibmsc-uid="imgEmailLabel"
+            data_dojo_props_identifier="{
+		 							uId : 'imgEmailLabel', src:'..//resources/css/icons/images/contactByEmail.png',  
+		 				}"></div>
+            <div data-dojo-type="sc/plat/dojo/widgets/Link" data-ibmsc-uid="lnkEmail"
+            data_dojo_props_identifier="{
+		 							'class' : 'icon-image-label ellipsisText' , 
+		uId : 'lnkEmail'  
+ 		,scIdentifierParamDataFn :
+		 function() { 
+			return { 
+			 	'aria-label' : 			this.getSimpleBundleString('Email')
+			}
+		}
+		 				}"></div>
+        </div>
+    <div data-dojo-type="idx/layout/ContentPane" data-dojo-props="		'class' : 'popupNavigation messageDialogFooter' , 
+		uId : 'Popup_navigationPanel'  
+ ">
+        
+        <div data-dojo-type="dijit/form/Button" data-dojo-props="		spanLabel : true , 
+		'class' : 'idxSecondaryButton' , 
+		showLabel : true , 
+		uId : 'Popup_btnCancel'  
+ 		,scParamDataFn :
+		 function() { 
+			return { 
+			 	label : 			this.getSimpleBundleString('Close')
+			}
+		}
+"></div>
+    </div>
+
+</div>

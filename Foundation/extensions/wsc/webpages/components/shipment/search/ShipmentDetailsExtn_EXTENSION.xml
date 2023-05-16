@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExtensionMetaData>
+    <ScreenExtension extnClassName="ShipmentDetailsExtn"
+        extnPackage="extn.components.shipment.search"
+        originalScreen="wsc.components.shipment.search.ShipmentDetails"
+        originalScreenPackage="wsc.components.shipment.search" type="diffrential">
+        <Items>
+            <ContentPane _sc_extensibility_moveOrder="1"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="pnlright"
+                class="shipmentInformationPanel"
+                style="margin-left: 20px; position: relative; top: -15px" uId="extn_contentpane"/>
+
+             <!--OMNI-95718 Complete Assembly Start-->
+            <Button _sc_extensibility_moveOrder="3"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="lnkStartCustomerPickup"
+                label="$(_scSimpleBundle:extn_Complete_Assembly2)"
+                renderHidden="true" resourceId="WSC000001"
+                showLabel="true" spanLabel="true" uId="extn_buttonWS_Assembly"/>
+                 <!--OMNI-95718 Complete Assembly End-->
+
+            <Label _sc_extensibility_moveOrder="2"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="first"
+                _sc_extensibility_referenceUId="extn_contentpane" uId="extn_label">
+                <BindingData>
+                    <SourceBinding
+                        dynamicBindingFunc="getDeliveryMethod"
+                        namespace="getShipmentList_output" path="DeliveryMethod"/>
+                </BindingData>
+            </Label>
+            <Link _sc_extensibility_operation="change"
+                _sc_extensibility_referenceUId="lnkEmail" class="icon-image-label ellipsisText disableLink"/>
+            <DataLabel _sc_extensibility_operation="change"
+                _sc_extensibility_referenceUId="lblExpectedShipDate" renderHidden="true"/>
+        </Items>
+        <Subscribers>
+            <Local>
+                <Subscriber eventId="afterScreenInit" isExtn="true" sequence="51">
+                    <Handler methodName="extn_afterInitializeScreen"/>
+                </Subscriber>
+                <Subscriber eventId="afterBehaviorMashupCall"
+                    isExtn="true" sequence="51">
+                    <Handler methodName="extn_afterBehaviorMashupCall"/>
+                </Subscriber>
+                <Subscriber eventId="lnkStartCustomerPickup_onClick"
+                    isExtn="true" sequence="19">
+                    <Handler methodName="extn_RecordStoreUserAction"/>
+                </Subscriber>
+                 <!--OMNI-95718 Complete Assembly Start-->
+                <Subscriber eventId="extn_buttonWS_Assembly_onClick"
+                    isExtn="true" sequence="51">
+                    <Handler methodName="ws_CompleteAssembly_click"/>
+                     <!--OMNI-95718 Complete Assembly End-->
+                </Subscriber>
+            </Local>
+        </Subscribers>
+        <MashupRefs>
+            <Behavior>
+                <MashupRef extnType="ADD"
+                    mashupId="extn_PrintShipmentPickTickets" mashupRefId="extn_PrintShipmentPickTicketsSearch_ref"/>
+                <MashupRef extnType="ADD"
+                    mashupId="extn_getShipmentList" mashupRefId="extn_getShipmentList_ref"/>
+                <MashupRef extnType="ADD"
+                    mashupId="extn_RecordStoreUserActionMashup" mashupRefId="extn_RecordStoreUserActionMashup"/>
+            </Behavior>
+        </MashupRefs>
+    </ScreenExtension>
+</ExtensionMetaData>

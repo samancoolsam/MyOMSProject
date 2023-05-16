@@ -1,0 +1,14 @@
+<!--
+Licensed Materials - Property of IBM
+IBM Sterling Selling and Fulfillment Suite
+(C) Copyright IBM Corp. 2001, 2013 All Rights Reserved.
+US Government Users Restricted Rights - Use, duplication or disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+-->
+<Group Name="Custom Tables">
+           <Table Name="YFS_CLASSIFICATION_PURPOSE"/>
+           <Table Name="YFS_CATEGORY_DOMAIN"/>
+           <Table Name="YFS_CATEGORY"/>
+           <Table Name="YFS_ASSOCIATION"/>
+           <Table Name="YFS_CATEGORY_ITEM"/>
+           <Table Name="YFS_ITEM_UOM_MASTER"/>
+</Group>

@@ -1,0 +1,43 @@
+<DBSchema>
+<Entities> 
+<!-- Case insensitive search-->
+<Entity TableName="YFS_USER">
+<Attributes>
+<Attribute ColumnName="USERNAME" DataType="Varchar2" CaseInsensitiveSearch="Y" DefaultValue="' '" Description="The name of the user." Name="username" Nullable="false" XMLName="UserName" ShadowColumnName="USERNAME_CS" />
+</Attributes>
+</Entity>
+<Entity TableName="YFS_PERSON_INFO">
+<Attributes>
+<Attribute ColumnName="FIRST_NAME" DataType="Varchar2" CaseInsensitiveSearch="Y" DefaultValue="' '" Description="The first name of the customer." Name="firstname" Nullable="false" XMLName="FirstName" ShadowColumnName="FIRST_NAME_CS" />
+</Attributes>
+</Entity>
+<Entity TableName="YFS_PERSON_INFO">
+<Attributes>
+<Attribute ColumnName="LAST_NAME" DataType="Varchar2" CaseInsensitiveSearch="Y" DefaultValue="' '" Description="The last name of the customer." Name="lastname" Nullable="false" XMLName="LastName" ShadowColumnName="LAST_NAME_CS" />
+</Attributes>
+</Entity>
+<Entity TableName="YFS_PERSON_INFO">
+<Attributes>
+<Attribute ColumnName="EMAILID" DataType="Varchar2" CaseInsensitiveSearch="Y" DefaultValue="' '" Description="The emailid of the customer." Name="emailid" Nullable="false" XMLName="EmailID" ShadowColumnName="EMAILID_CS" />
+</Attributes>
+</Entity>
+<Entity TableName="YFS_PERSON_INFO">
+<Indices>
+<Index Name="ACAD_PERSON_INFO_I1" >
+<Column Name="FIRST_NAME_CS" />
+<Column Name="PERSON_INFO_KEY" />
+</Index>
+<Index Name="ACAD_PERSON_INFO_I2" >
+<Column Name="LAST_NAME_CS" />
+<Column Name="PERSON_INFO_KEY" />
+</Index>
+<Index Name="ACAD_PERSON_INFO_I3" >
+<Column Name="DAY_PHONE" />
+</Index>
+<Index Name="ACAD_PERSON_INFO_I4">
+<Column Name="EMAILID_CS" />
+</Index>
+</Indices>
+</Entity>
+</Entities>
+</DBSchema>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Controller className="com.sterlingcommerce.ui.web.platform.controller.SCUIXAPIMashupController" controllerId="extn.mobile.home.subscreens.CustomCancelOrderPopUpInitController" requestMethodSupported="POST" screenId="extn.mobile.home.subscreens.CustomCancelOrderPopUp">
+<MashupRefs>
+	<MashupRef mashupId="common_getReasonCodeList_new"
+            mashupRefId="getReasonCodeListInit" permissionId=""/>
+</MashupRefs>
+</Controller>

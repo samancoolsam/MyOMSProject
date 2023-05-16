@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Schedule.On_Success Event XML-->
+<Order BuyerOrganizationCode="" DocumentType="" DraftOrderFlag="" EnterpriseCode="" HoldFlag="" HoldReasonCode="" OrderHeaderKey="" OrderName="" OrderNo="" OrderType="" SellerOrganizationCode="" ShipCompleteFlag="" ShipToID="" Status="">
+   <Order EnterpriseCode="" DocumentType="" OrderNo="" />
+
+   <OrderLines NumberOfOrderLines="">
+   <!--OMNI-45614 START STS2.0 Added ProcureFomNode attribute at line,Schedule and Status level -->
+      <OrderLine OriginalOrderedQty="" HoldFlag="" HoldReasonCode="" MaxLineStatusDesc="" MinLineStatus="" MinLineStatusDesc="" OrderHeaderKey="" OrderLineKey="" OrderedQty="" OrigOrderLineKey="" PrimeLineNo="" ReceivingNode="" ScacAndService="" ShipNode="" ShipToID="" Status="" StatusQuantity="" SubLineNo="" DeliveryMethod="" FulfillmentType="" ProcureFromNode="">
+         <Item ItemDesc="" ItemID="" ItemShortDesc="" ProductClass="" UnitOfMeasure="" />
+         <!--OMNI-70667 Begin -->
+            <Extn ExtnWCOrderItemIdentifier="" ExtnInitialPromiseDate=""/>
+         <!--OMNI-70667 End-->  
+         <Schedules>
+            <Schedule ExpectedDeliveryDate="" ExpectedShipmentDate="" TagNumber="" OrderHeaderKey="" OrderLineKey="" OrderLineScheduleKey="" ScheduleNo="" ShipByDate="" ProcureFromNode="" />
+         </Schedules>
+
+         <OrderStatuses>
+            <OrderStatus OrderHeaderKey="" OrderLineKey="" ShipNode="" OrderLineScheduleKey="" OrderReleaseKey="" OrderReleaseStatusKey="" PipelineKey="" Status="" StatusDate="" StatusDescription="" StatusQty="" StatusReason="" TotalQuantity="" ProcureFromNode="" />
+         </OrderStatuses>
+      </OrderLine>
+	   <!--OMNI-45614 END STS2.0 Added ProcureFomNode attribute at line,Schedule and Status level -->
+   </OrderLines>
+
+   <OrderStatuses>
+      <OrderStatus OrderHeaderKey="" OrderLineKey="" OrderLineScheduleKey="" OrderReleaseKey="" OrderReleaseStatusKey="" PipelineKey="" Status="" StatusDate="" StatusDescription="" StatusQty="" StatusReason="" TotalQuantity="" />
+   </OrderStatuses>
+<OrderHoldTypes>
+<OrderHoldType />
+</OrderHoldTypes> 
+</Order>
+

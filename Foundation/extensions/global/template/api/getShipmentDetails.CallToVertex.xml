@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Shipments>
+<Shipment ActualDeliveryDate=" " ActualFreightCharge=" " ActualShipmentDate=" " AppointmentNo=" " BolNo=" " BuyerOrganizationCode=" " CarrierAccountNo=" " CarrierServiceCode=" " CarrierType=" " DeliveryCode=" " DeliveryMethod="" DeliveryPlanKey=" " DestinationZone=" " DownLoadCount=" " EnterpriseCode=" " ExpectedDeliveryDate=" " ExpectedShipmentDate=" " ExportTaxpayerID=" " FreightTerms=" " FromAddressKey=" " FromAppointment=" " HasOtherShipments=" " HazardousMaterialFlag=" " HeldForConfirmation=" " IsApptConfirmed="" IsProvidedService="" ITDate=" " ITNo=" " ITNNo=" " ManifestKey=" " ManifestNo=" " NextAlertTs=" " NumOfCartons=" " NumOfPallets=" " DocumentType=" " OrderAvailableOnSystem=" " OriginZone=" " PackListType=" " ParentShipmentKey=" " PickListNo=" " PickticketNo=" " PipelineKey=" " PodNo=" " ProNo=" " PromisedApptStartDate="" PromisedApptEndDate="" ReceivingNode=" " RequestedShipmentDate="" RequestedDeliveryDate="" SCAC=" " ScacAndService=" " ScacAndServiceKey=" " SealNo=" " SellerOrganizationCode=" " ServiceLineKey=""  ShipMode=" " ShipNode=" " ShipVia=" " ShipmentClosedFlag=" " ShipmentConfirmUpdatesDone=" " ShipmentContainerizedFlag=" " ShipmentDeliverUpdatesDone=" " ShipmentKey=" " ShipmentNo=" " ShipmentPlannedFlag=" " ShipmentType=" " Status=" " StatusDate=" " ToAddressKey=" " ToAppointment=" " TotalActualCharge=" " IsSingleOrder=" " ManuallyEntered=" "  OptimizedApptStartDate="" OptimizedApptEndDate="" OrderNo=" " OrderHeaderKey=" " ReleaseNo=" " OrderReleaseKey=" " AllowOverage=" " AllowNewItemReceipt=" " TotalEstimatedCharge=" " TotalVolume=" " TotalVolumeUOM=" " TotalWeight=" " TotalWeightUOM=" " TrackingNo=" " TrailerNo=" " isHistory="" ShipmentGroupId="" WaveNo="" >
+   <ToAddress AddressLine1=" " AddressLine2=" " AddressLine3=" " AddressLine4=" " AddressLine5=" " AddressLine6=" " AlternateEmailID=" " Beeper=" " City=" " Company=" " Country=" " DayFaxNo=" " DayPhone=" " Department=" " EMailID=" " ErrorTxt=" " EveningFaxNo=" " EveningPhone=" " FirstName=" " HttpUrl=" " JobTitle=" " LastName=" "  MiddleName=" " MobilePhone=" " OtherPhone=" " PersonID=" " PersonInfoKey=" " PreferredShipAddress=" " State=" " Suffix=" " Title=" " UseCount=" " VerificationStatus=" " ZipCode=" " isHistory=""/>
+   <BillToAddress AddressLine1=" " AddressLine2=" " AddressLine3=" " AddressLine4=" " AddressLine5=" " AddressLine6=" " AlternateEmailID=" " Beeper=" " City=" " Company=" " Country=" " DayFaxNo=" " DayPhone=" " Department=" " EMailID=" " ErrorTxt=" " EveningFaxNo=" " EveningPhone=" " FirstName=" " HttpUrl=" " JobTitle=" " LastName=" "  MiddleName=" " MobilePhone=" " OtherPhone=" " PersonID=" " PersonInfoKey=" " PreferredShipAddress=" " State=" " Suffix=" " Title=" " UseCount=" " VerificationStatus=" " ZipCode=" " isHistory=""/>
+   <FromAddress AddressLine1=" " AddressLine2=" " AddressLine3=" " AddressLine4=" " AddressLine5=" " AddressLine6=" " AlternateEmailID=" " Beeper=" " City=" " Company=" " Country=" " DayFaxNo=" " DayPhone=" " Department=" " EMailID=" " ErrorTxt=" " EveningFaxNo=" " EveningPhone=" " FirstName=" " HttpUrl=" " JobTitle=" " LastName=" "  MiddleName=" " MobilePhone=" " OtherPhone=" " PersonID=" " PersonInfoKey=" " PreferredShipAddress=" " State=" " Suffix=" " Title=" " UseCount=" " VerificationStatus=" " ZipCode=" " isHistory=""/>
+
+   <ShipmentLines >
+       <ShipmentLine  ShipmentLineKey=" " ItemID=" " OrderHeaderKey=" " OrderLineKey=" " DocumentType="" OrderNo=" " OrderReleaseKey=" " PrimeLineNo=" " ProductClass=" " Quantity=" " OverShipQuantity=" " ActualQuantity=" " ReleaseNo=" " ShipmentKey=" " UnitOfMeasure=" " ShipmentLineNo=" " SubLineNo=" " isHistory=""  NetWeight=" " NetWeightUom=" " ItemDesc=" " Segment=" " SegmentType=" " CustomerPoNo=" " CustomerPoLineNo=" " >
+			<ShipmentLineInvAttRequest LotNumber=" " LotKeyReference=" " ManufacturingDate=" "  LotAttribute1=" " LotAttribute2=" " LotAttribute3=" " RevisionNo=" " BatchNo=" "/>
+			 <ShipmentTagSerials >
+				<ShipmentTagSerial  SerialNo=" " ShipByDate=" " ShipmentLineKey="  " ShipmentTagSerialKey=" " RevisionNo=" " BatchNo=" " LotNumber=" " LotKeyReference=" " ManufacturingDate=" " LotAttribute1=" " LotAttribute2=" " LotAttribute3=" " Quantity=" " />	
+			</ShipmentTagSerials>
+			<OrderLine Action="" AllocationDate="" AllocationLeadTime="" ApptStatus="" ApptWarning="" AvailableQtyForStopDelivery="" AwaitingDeliveryRequest="" BuyerMarkForNodeId="" BuyerReceivingNodeId="" CanAddServiceLines="" CarrierAccountNo="" CarrierServiceCode="" ChainedFromOrderHeaderKey="" ChainedFromOrderLineKey="" CommittedQuantity="" ConditionVariable1="" ConditionVariable2="" ConfigurationKey="" CustomerLinePONo="" CustomerPONo="" DeliveryCode="" DeliveryMethod="" DepartmentCode="" DependencyShippingRule="" DependentOnLineKey="" DerivedFromOrderHeaderKey="" DerivedFromOrderLineKey="" DerivedFromOrderReleaseKey="" DistributionRuleId="" FillQuantity="" FirstIterationSeqNo="" FreightTerms="" FulfillmentType="" FutureAvailabilityDate="" GiftFlag="" HasChainedLines="" HasDeliveryLines="" HasDerivedChild="" HasServiceLines="" HoldFlag="" HoldReasonCode="" ImportLicenseExpDate="" ImportLicenseNo="" IntentionalBackorder="" InvoicedExtendedPrice="" InvoicedQty="" InvoicedQuantity="" IsBundleParent="" IsFirmPredefinedNode="" ItemGroupCode="" KitCode="" KitQty="" LastIterationSeqNo="" LineSeqNo="" LineType="" MaxLineStatus="" MaxLineStatusDesc="" MergeNode="" MinLineStatus="" MinLineStatusDesc="" MinShipByDate="" MultipleStatusesExist="" OpenQty="" OrderHeaderKey="" OrderLineKey="" OrderedQty="" OrigOrderLineKey="" OriginalOrderedQty="" OtherCharges="" PackListType="" ParentOfDependentGroup="" PersonalizeCode="" PersonalizeFlag="" PickableFlag="" PipelineKey="" PrimeLineNo="" ProcureFromNode="" PromisedApptEndDate="" PromisedApptStartDate="" Purpose="" ReceivingNode="" RemainingQty="" ReqCancelDate="" ReqDeliveryDate="" ReqShipDate="" ReservationID="" ReservationMandatory="" ReservationPool="" ReturnReason="" ReturnReasonLongDesc="" ReturnReasonShortDesc="" SCAC="" ScacAndService="" ScacAndServiceKey="" SchedFailureReasonCode="" Segment="" SegmentType="" SerialNo="" ShipNode="" ShipToID="" ShipToKey="" ShipTogetherNo="" ShipmentConsolidationGroupId="" SourceFromOrganization="" SplitQty="" Status="" StatusQuantity="" SubLineNo="" SubstituteItemID="" SubstituteItemUOM="" Timezone="" TranDiscrepancyQty="" isHistory="">
+			<Extn ExtnIsDeliveryFeeApplicable="" />		
+			 <Item CostCurrency="" CountryOfOrigin="" CustomerItem="" CustomerItemDesc="" ECCNNo="" HarmonizedCode="" ISBN="" ItemDesc="" ItemID="" ItemShortDesc="" ItemWeight="" ItemWeightUOM="" ManufacturerItem="" ManufacturerItemDesc="" ManufacturerName="" NMFCClass="" NMFCCode="" NMFCDescription="" ProductClass="" ProductLine="" ScheduleBCode="" SupplierItem="" SupplierItemDesc="" TaxProductCode="" UPCCode="" UnitCost="" UnitOfMeasure="" >
+            <LanguageDescriptionList />
+         </Item>
+        <OrderLineTranQuantity FillQuantity="" OpenQty="" StatusQuantity="" TransactionalUOM="" />
+
+         <LineTaxes>
+            <LineTax />
+         </LineTaxes>
+
+         <LinePriceInfo />
+
+         <LineCharges>
+            <LineCharge />
+         </LineCharges>
+			</OrderLine>
+			   <Order AllocationRuleID="" BillToID="" BuyerOrganizationCode="" CarrierAccountNo="" CarrierServiceCode="" ChargeActualFreightFlag="" CustomerEMailID="" CustomerPONo="" DefaultTemplate="" DeliveryCode="" Division="" DocumentType="" DriverDate="" EnteredBy="" EnterpriseCode="" EntryType="" FreightTerms="" HasChainedLines="" HasDerivedChild="" HoldFlag="N" HoldReasonCode="" NotificationReference="" NotificationType="" NotifyAfterShipmentFlag="" OrderComplete="" OrderDate="" OrderHeaderKey="" OrderName="" OrderNo="" OrderType="" OriginalTax="" OriginalTotalAmount="" OtherCharges="" PaymentStatus="" PersonalizeCode="" PriceProgramKey="" PriorityCode="" PriorityNumber="" Purpose="" ReceivingNode="" SCAC="" ScacAndService="" ScacAndServiceKey="" SearchCriteria1="" SearchCriteria2="" SellerOrganizationCode="" ShipToID="" TaxExemptFlag="" TaxExemptionCertificate="" TaxJurisdiction="" TaxPayerId="" TermsCode="" TotalAdjustmentAmount="" isHistory="">
+      <PaymentMethods>
+         <PaymentMethod />
+      </PaymentMethods>
+   </Order>
+		</ShipmentLine>
+   </ShipmentLines>
+   <ShipmentCharges >
+      <ShipmentCharge ActualCharge=" " ChargeCategory=" " ChargeName=" " ChargeNameKey=""  EstimatedCharge=" " InvoiceNo=" " KeyReference1=" " KeyReference2=" " LoadKey=" " LoadShipmentChargeKey=" "   PayeeOrganizationCode=" " ShipmentKey=" "/>
+   </ShipmentCharges>
+   <Status Status=""/>
+</Shipment>
+</Shipments>

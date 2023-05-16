@@ -1,0 +1,17 @@
+<OrderList>
+	<Order>
+		<OrderHoldTypes />
+		<OrderLines>
+			<OrderLine>
+				<OrderHoldTypes>
+					<OrderHoldType />
+				</OrderHoldTypes>
+				<Schedules>
+					<Schedule OrderHeaderKey='' OrderLineKey=''
+						OrderLineScheduleKey='' Quantity='' ScheduleNo='' ShipNode=''
+						TagNumber='' />
+				</Schedules>
+			</OrderLine>
+		</OrderLines>
+	</Order>
+</OrderList>

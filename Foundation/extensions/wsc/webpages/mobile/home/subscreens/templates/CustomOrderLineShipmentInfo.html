@@ -1,0 +1,149 @@
+<div class="sc-platform-screen-default search" role="region" aria-label="region_screenHeader">
+    
+    
+        <div data-dojo-type="sc/plat/dojo/widgets/DataLabel" data-dojo-props="      spanLabel : true , 
+        'class' : 'blockComponent shortageQty' , 
+        style:'width:1050em;', 
+        uId : 'extn_eComlbl_ShipmentNo'  
+        ,scParamDataFn :
+         function() { 
+            return { 
+                label :             this.getBundleString('extn_eCom_SI_ShipmentNo')
+,   
+                bindingData :   {
+         sourceBinding :    {
+         path :             'ShipmentNo'
+,
+         namespace :            'shipmentInfo_Src'
+    }
+    }
+            }
+        }
+"></div>
+
+
+    <div data-dojo-type="sc/plat/dojo/widgets/DataLabel" data-dojo-props="      spanLabel : true , 
+        'class' : 'blockComponent shortageQty' , 
+        style:'width:1050em;', 
+        uId : 'extn_eComlbl_Carrier'  
+        ,scParamDataFn :
+         function() { 
+            return { 
+                label :             this.getBundleString('extn_eCom_SI_Carrier')
+,   
+                bindingData :   {
+         sourceBinding :    {
+         path :             'CarrierServiceCode'
+,
+         namespace :            'shipmentInfo_Src'
+    }
+    }
+            }
+        }
+"></div>
+
+
+    <div data-dojo-type="sc/plat/dojo/widgets/DataLabel" data-dojo-props="      spanLabel : true , 
+        'class' : 'blockComponent shortageQty' , 
+        style:'word-wrap: break-word;', 
+        uId : 'extn_eComlbl_TrackingNo'  
+        ,scParamDataFn :
+         function() { 
+            return { 
+                label :             this.getBundleString('extn_eCom_SI_TrackingNo')
+,   
+                bindingData :   {
+         sourceBinding :    {
+         path :             'TrackingNo',
+         dynamicBindingFunc :           'getShipmentTrackingNo', 
+         namespace :            'shipmentInfo_Src'
+    }
+    }
+            }
+        }
+"></div>
+
+    
+    <div data-dojo-type="sc/plat/dojo/widgets/DataLabel" data-dojo-props="      spanLabel : true , 
+        'class' : 'blockComponent shortageQty' , 
+        style:'width:1050em;', 
+        uId : 'extn_eComlbl_ShipNode'  
+        ,scParamDataFn :
+         function() { 
+            return { 
+                label :             this.getBundleString('extn_eCom_SI_ShipNode')
+,   
+                bindingData :   {
+         sourceBinding :    {
+         path :             'ShipNode'
+,
+         namespace :            'shipmentInfo_Src'
+    }
+    }
+            }
+        }
+"></div>
+
+    <div data-dojo-type="sc/plat/dojo/widgets/DataLabel" data-dojo-props="      spanLabel : true , 
+        'class' : 'blockComponent shortageQty' , 
+        style:'width:1050em;', 
+        uId : 'extn_eComlbl_ShipmentLineQuantity'  
+        ,scParamDataFn :
+         function() { 
+            return { 
+                label :             this.getBundleString('Label_Quantity')
+,   
+                bindingData :   {
+         sourceBinding :    {
+         path :             'ShipmentLines.ShipmentLine[0].OriginalQuantity',
+         dynamicBindingFunc :           'getShipmentLineQuantity', 
+         namespace :            'shipmentInfo_Src'
+    }
+    }
+            }
+        }
+"></div>
+
+
+    <div data-dojo-type="sc/plat/dojo/widgets/Label" data-dojo-props="      spanLabel : true , 
+        'class' : 'blockComponent shortageQty' , 
+        style:'width:1050em; font-size:13;', 
+        uId : 'extn_eComlbl_ShipmentStatus'  
+        ,scParamDataFn :
+         function() { 
+            return { 
+                
+                bindingData :   {
+         sourceBinding :    {
+         path :             'Status.Description'
+,
+         namespace :            'shipmentInfo_Src'
+    }
+    }
+            }
+        }
+"></div>
+
+
+    <div data-dojo-type="sc/plat/dojo/widgets/Label" data-dojo-props="      spanLabel : true , 
+        'class' : 'blockComponent shortageQty' , 
+        style:'width:1050em;', 
+        uId : 'extn_eComlbl_DelMethod'  
+        ,scParamDataFn :
+         function() { 
+            return { 
+                
+                bindingData :   {
+         sourceBinding :    {
+         path :             'DeliveryMethod',
+         dynamicBindingFunc :           'getDeliveryMethod', 
+         namespace :            'shipmentInfo_Src'
+    }
+    }
+            }
+        }
+"></div>
+        
+        
+ 
+</div>

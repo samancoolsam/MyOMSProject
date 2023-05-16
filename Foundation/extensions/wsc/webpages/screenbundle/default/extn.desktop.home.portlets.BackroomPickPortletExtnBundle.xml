@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ScreenBundle
+    screenBundleId="extn.desktop.home.portlets.BackroomPickPortletExtnBundle" screenId="extn.desktop.home.portlets.BackroomPickPortletExtn">
+    <BundleEntries>
+        <BundleEntry bundleEntryId="btnPrintPickup_Button_label"
+            bundleKey="Action_PrintPickupOrders"
+            bundleValueFn="_scSimpleBundle" property="label"
+            type="WIDGET" uId="btnPrintPickup"/>
+        <BundleEntry bundleEntryId="portletName_Label_value"
+            bundleKey="extn_Print_Pickup_Orders"
+            bundleValueFn="_scSimpleBundle" property="value"
+            type="WIDGET" uId="portletName"/>
+    </BundleEntries>
+</ScreenBundle>

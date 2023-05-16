@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Locations>
+    <Location id="DEFAULT" proxyPort="80" proxyServer="" updateType="">
+        <Config ApiUrl="/yantra/RcpServlet" BaseUrl="localhost"
+            CompressionEnabled="N" Name="DEFAULT" PortNumber="80" Protocol="http" LoginThroughBrowser="TRUE"/>
+    </Location>
+</Locations>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DBSchema>
+	<Entities>
+
+		<Entity ApiNeeded="Y" AuditRequired="N" Description="Express Fedx Ping For Stores" HasHistory="False" Prefix="ACAD" TableName="ACAD_FEDX_EXPRESS_PING" XMLName="AcadFedxExpressPing">
+			<Attributes>
+				<Attribute ColumnName="EXPRESS_KEY" DataType="Key" DefaultValue="' '" Description="primary key for this table" Name="ExpressKey" Nullable="false" XMLGroup="" XMLName="ExpressKey"/> 
+
+				<Attribute ColumnName="PROCESS_DATE" DataType="Key" DefaultValue="' '" Description="System Date" Name="ProcessDate" Nullable="false" XMLGroup="" XMLName="ProcessDate"/> 
+
+				<Attribute ColumnName="STORE_NO" DataType="Key" DefaultValue="' '" Description="Store No" Name="StoreNo" Nullable="false" XMLGroup="" XMLName="StoreNo"/> 			
+
+				<Attribute ColumnName="VALID_TILL" Size="40" DataType="Text-40" DefaultValue="' '" Description="Expiry Time" Name="ValidTill" Nullable="false" XMLGroup="" XMLName="ValidTill" />
+
+				<Attribute ColumnName="SHIPMENT_NO" Size="40" DataType="Text-40" DefaultValue="' '" Description="Shipment No" Name="ShipmentNo" Nullable="true" XMLGroup="" XMLName="ShipmentNo" />
+
+				<Attribute ColumnName="IS_PROCESSED" Size="1" DataType="Flag" DefaultValue="'Y'" Description="IsProcessed" Name="IsProcessed" Nullable="true" XMLGroup="" XMLName="IsProcessed" />
+
+				<Attribute ColumnName="CREATETS" DataType="TimeStamp" DefaultValue="SYSDATE" Description="Create TimeStamp"/>
+				<Attribute ColumnName="MODIFYTS" DataType="TimeStamp" DefaultValue=" SYSDATE" Description="Modify TimeStamp"/>
+				<Attribute ColumnName="CREATEUSERID" DataType="UserId" DefaultValue="&apos; &apos;" Description="Creating User ID"/>
+				<Attribute ColumnName="MODIFYUSERID" DataType="UserId" DefaultValue="&apos; &apos;" Description="Modifying User ID"/>
+				<Attribute ColumnName="CREATEPROGID" DataType="ProgramID" DefaultValue="&apos; &apos;" Description="Creating Program ID"/>
+				<Attribute ColumnName="MODIFYPROGID" DataType="ProgramID" DefaultValue="&apos; &apos;" Description="Modifying Program ID"/>
+				<Attribute ColumnName="LOCKID" DataType="Lockid" DefaultValue="0" Description="Lock ID"/>
+			</Attributes>
+
+			<PrimaryKey Name="EXPRESS_KEY_PK">
+				<Attribute ColumnName="EXPRESS_KEY" Name="ExpressKey"/>
+			</PrimaryKey>
+
+			<Indices>
+				<Index Name="IND_EXP_PING" Unique="True">
+					<Column Name="PROCESS_DATE" />
+					<Column Name="STORE_NO" />
+				</Index>
+			</Indices>
+		</Entity>
+
+	</Entities>
+</DBSchema>

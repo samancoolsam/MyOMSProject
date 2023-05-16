@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Added as part of OMNI-68038 -->
+<ExtensionMetaData>
+    <ScreenExtension extnClassName="ContainerSummary"
+        extnPackage="wsc.mobile.home"
+        originalScreen="wsc.mobile.home.STSContainer.transferOrderShipmentSummary.containerSummaryScreen.ContainerSummary"
+        originalScreenPackage="wsc.mobile.home" type="diffrential">
+        <Namespaces>
+            <SourceNamespaces>
+                <Source isExtn="true"
+                    scExtensibilityArrayItemId="extn_SourceNamespaces_1" value="extn_lostContainerReasonCodes_output"/>
+		      </SourceNamespaces>
+        </Namespaces>
+        <MashupRefs>
+            <Init>
+                <MashupRef extnType="ADD" mashupId="extn_lostContainerReasonCodes" mashupRefId="extn_getLostContainerReasonCodes" sourceNamespace="extn_lostContainerReasonCodes_output"/>
+                <!-- OMNI-72148 Start -->
+				<MashupRef mashupId="extn_getFlagToDisableAddQtyAndReadOnlyScannedQty"
+					mashupRefId="extn_getFlagEditStagingLocation" permissionId=""/>
+				<!-- OMNI-72148 End -->
+				<!-- OMNI-71679 - Editable Staging Location - Start -->
+				<MashupRef mashupId="extn_readyToStage_assignStagingLocationAtContainerLevel"
+					mashupRefId="extn_assignStagingLocationAtContainerLevel" permissionId=""/>
+				<MashupRef mashupId="extn_readyToStage_getSOShipmentList"
+					mashupRefId="extn_getSOShipmentListToUpdateStagingLoc" permissionId=""/>
+				<MashupRef mashupId="extn_readyToStage_assignStagingLocationAtShpLineLevel"
+					mashupRefId="extn_assignStagingLocationAtShpLineLevel" permissionId=""/>		
+				<!-- OMNI-71679 - Editable Staging Location - End -->
+			</Init>
+        </MashupRefs>
+    </ScreenExtension>
+</ExtensionMetaData>

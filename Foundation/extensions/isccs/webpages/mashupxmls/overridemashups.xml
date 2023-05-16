@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mashups>
+    <mashup
+        description="Create the appeasement notes for customer appeasement."
+        endpoint="EP_ORDER" id="customerAppeasement_changeOrder"
+        mashuptype="XAPI" resourceId="" transactional="true">
+        <API FlowName="AcademyChangeOrderService">
+            <Input>
+                <Order
+                    DisplayLocalizedFieldInLocale="xml:CurrentUser:/User/@Localecode"
+                    IsGiftCard="" ModificationReasonCode=""
+                    OrderHeaderKey="xml:scControllerInput:/Order/@OrderHeaderKey" OrderNo="">
+                    <Notes>
+                        <Note ContactReference="" ContactType=""
+                            ContactUser="" CustomerSatIndicator=""
+                            NoteText="" Priority="" ReasonCode="" VisibleToAll=""/>
+                    </Notes>
+                    <OrderLines>
+                        <OrderLine Action="" MaxLineStatus=""
+                            MinLineStatus="" OrderLineKey="">
+                            <LineCharges>
+                                <LineCharge ChargeCategory=""
+                                    ChargeName="" ChargePerLine="" Reference=""/>
+                            </LineCharges>
+                        </OrderLine>
+                    </OrderLines>
+                    <Extn>
+                        <ACADOrderAppeasementList>
+                            <ACADOrderAppeasement
+                                AcademyOrderHeaderKey=""
+                                AcademyOrderLineKey=""
+                                AppeasementAmount=""
+                                AppeasementDescription=""
+                                AppeasementPercent=""
+                                AppeasementReason="" OfferType=""
+                                OrderNumber="" UserId="" UserName=""/>
+                        </ACADOrderAppeasementList>
+                    </Extn>
+                </Order>
+            </Input>
+            <Template>
+                <Order OrderHeaderKey="">
+                    <Notes>
+                        <Note ContactReference="" ContactType=""
+                            ContactUser="" CustomerSatIndicator=""
+                            NoteText="" Priority="" ReasonCode="" VisibleToAll=""/>
+                    </Notes>
+                </Order>
+            </Template>
+        </API>
+        <classInformation name="com.ibm.isccs.common.mashups.SCCSBaseMashup"/>
+        <APINamespace inputNS="customerAppeasement_changeOrder_input" outputNS="customerAppeasement_changeOrder_output"/>
+        <AlternateResourceIds>
+            <AlternateResourceId altResourceId="ISCCSCA001"/>
+        </AlternateResourceIds>
+    </mashup>
+    <mashup
+        description="This mashup is used to massage the input for recordInvoiceCreation api. When the offer is for some percentage value then it calculates the value discount based on the percentage value and stamps it in the input. It also makes all the discount amount as negative before sending the input."
+        endpoint="EP_ORDER"
+        id="customerAppeasement_recordInvoiceCreation" mashuptype="XAPI"
+        resourceId="" transactional="true">
+        <API FlowName="AcademyDummyDocumentService">
+            <Input>
+                <OrderInvoice
+                    DisplayLocalizedFieldInLocale="xml:CurrentUser:/User/@Localecode"
+                    InvoiceCreationReason="" InvoiceType="CREDIT_MEMO"
+                    OrderHeaderKey="" UseOrderLineCharges="N">
+                    <LineDetails>
+                        <LineDetail OrderLineKey="" Quantity="">
+                            <LineChargeList>
+                                <LineCharge ChargeCategory=""
+                                    ChargeName="" ChargePerLine=""/>
+                            </LineChargeList>
+                        </LineDetail>
+                    </LineDetails>
+                    <HeaderChargeList>
+                        <HeaderCharge ChargeAmount="" ChargeCategory="" ChargeName=""/>
+                    </HeaderChargeList>
+                </OrderInvoice>
+            </Input>
+            <Template>
+                <OrderInvoice AmountCollected="" InvoiceNo=""
+                    InvoiceType="" MasterInvoiceNo="" OrderHeaderKey=""
+                    OrderInvoiceKey="" OrderNo="" Status=""
+                    TotalAmount="" TotalTax=""/>
+            </Template>
+        </API>
+        <classInformation name="com.ibm.isccs.order.mashups.SCCSCustomerAppeasementRecordInvoiceMashup"/>
+        <APINamespace
+            inputNS="customerAppeasement_recordInvoiceCreation_input" outputNS="customerAppeasement_recordInvoiceCreation_output"/>
+        <AlternateResourceIds>
+            <AlternateResourceId altResourceId="ISCCSCA001"/>
+        </AlternateResourceIds>
+    </mashup>
+    <mashup
+        description="This mashup is used to massage the input for sendFutureOrder UE. It sets some basic attribute for UE call. When the offer is for some percentage value then it calculates the value discount based on the percentage value and stamps it in the input. It also sets the description for offer being given."
+        endpoint="EP_ORDER"
+        id="customerAppeasement_sendFutureOrderCustomerAppeasementUE"
+        mashuptype="XAPI" resourceId="" transactional="true">
+        <API Name="invokeUE">
+            <Input>
+                <InvokeUE
+                    DisplayLocalizedFieldInLocale="xml:CurrentUser:/User/@Localecode"
+                    EnterpriseCode="xml:scControllerInput:/Order/@EnterpriseCode"
+                    TransactionId="COM_PCA_USER_EXIT" UserExit="com.yantra.pca.ycd.japi.ue.YCDSendFutureOrderCustomerAppeasementUE">
+                    <XMLData>
+                        <Order AppeasementCategory=""
+                            AppeasementDescription="" DocumentType=""
+                            EnterpriseCode="" OrderDate=""
+                            OrderHeaderKey="" OrderNo="">
+                            <PersonInfoBillTo AddressLine1=""
+                                AddressLine2="" AddressLine3=""
+                                AddressLine4="" AddressLine5=""
+                                AddressLine6="" AlternateEmailID=""
+                                Beeper="" City="" Company="" Country=""
+                                DayFaxNo="" DayPhone="" Department=""
+                                EMailID="" EveningFaxNo=""
+                                EveningPhone="" FirstName="" JobTitle=""
+                                LastName="" MiddleName="" MobilePhone=""
+                                OtherPhone="" PersonID=""
+                                PersonInfoKey="" State="" Suffix=""
+                                Title="" ZipCode=""/>
+                            <OrderLines>
+                                <OrderLine OrderHeaderKey="" OrderLineKey="">
+                                    <LineCharges>
+                                    <LineCharge ChargeAmount=""
+                                    ChargeCategory=""
+                                    ChargeName=""
+                                    ChargePerLine="" ChargePerUnit=""/>
+                                    </LineCharges>
+                                    <LineOverallTotals Charges=""
+                                    DisplayExtendedPrice=""
+                                    ExtendedPrice="" UnitPrice=""/>
+                                    <PersonInfoShipTo AddressLine1=""
+                                    AddressLine2="" AddressLine3=""
+                                    AddressLine4="" AddressLine5=""
+                                    AddressLine6=""
+                                    AlternateEmailID="" Beeper=""
+                                    City="" Company="" Country=""
+                                    DayFaxNo="" DayPhone=""
+                                    Department="" EMailID=""
+                                    EveningFaxNo="" EveningPhone=""
+                                    FirstName="" JobTitle=""
+                                    LastName="" MiddleName=""
+                                    MobilePhone="" OtherPhone=""
+                                    PersonID="" PersonInfoKey=""
+                                    State="" Suffix="" Title="" ZipCode=""/>
+                                </OrderLine>
+                            </OrderLines>
+                            <AppeasementOffer Description=""
+                                DiscountPercent="" OfferAmount=""
+                                OfferType="" Preferred=""/>
+                            <Notes>
+                                <Note ContactReference="" ContactType=""
+                                    ContactUser="" NoteText=""
+                                    Priority="" ReasonCode="" VisibleToAll=""/>
+                            </Notes>
+                        </Order>
+                    </XMLData>
+                </InvokeUE>
+            </Input>
+            <Template>
+                <InvokeUE TransactionId="" UserExit="">
+                    <XMLData/>
+                </InvokeUE>
+            </Template>
+        </API>
+        <classInformation name="com.academy.sterling.isccs.common.mashups.AcademyCustomerAppeasementSendFutureOrderMashup"/>
+        <APINamespace
+            inputNS="customerAppeasement_sendFutureOrderCustomerAppeasementUE_input" outputNS="customerAppeasement_sendFutureOrderCustomerAppeasementUE_output"/>
+        <AlternateResourceIds>
+            <AlternateResourceId altResourceId="ISCCSCA001"/>
+        </AlternateResourceIds>
+    </mashup>
+    <mashup description="This mashup is used process a return order"
+        endpoint="EP_ORDER" id="createReturn_processReturnOrder"
+        mashuptype="XAPI" resourceId="" transactional="true">
+        <API Name="processReturnOrder">
+            <Input>
+                <Order BuyerUserId="" DetermineOrdersForReturn="Y"
+                    DisplayLocalizedFieldInLocale="xml:CurrentUser:/User/@Localecode"
+                    ExecuteReturnPolicy="N" OrderHeaderKey="">
+                    <AppContextInfo Channel="Call Center"/>
+                </Order>
+            </Input>
+            <Template>
+                <Order BillToID="" BillToKey="" BuyerOrganizationCode=""
+                    BuyerUserId="" CustomerContactID=""
+                    CustomerEMailID="" CustomerFirstName=""
+                    CustomerLastName="" CustomerPONo=""
+                    CustomerPhoneNo="" CustomerZipCode=""
+                    DocumentType="" DraftOrderFlag="" EnterpriseCode=""
+                    EntryType="" MaxOrderStatusDesc="" OrderHeaderKey=""
+                    OrderName="" OrderNo="" SellerOrganizationCode=""
+                    TaxExemptFlag="" TaxExemptionCertificate="" isHistory="">
+                    <OrderLines>
+                        <OrderLine GiftFlag=""/>
+                    </OrderLines>
+                    <OverallTotals GrandTotal=""/>
+                    <PriceInfo Currency=""/>
+                    <PersonInfoBillTo AddressID="" AddressLine1=""
+                        AddressLine2="" City="" Company="" Country=""
+                        CountryDesc="" DayPhone="" Department=""
+                        EMailID="" EveningPhone="" FirstName=""
+                        IsAddressVerified="" IsCommercialAddress=""
+                        LastName="" MiddleName="" MobilePhone=""
+                        PersonID="" PersonInfoKey="" State="" Suffix=""
+                        Title="" TitleDesc="" ZipCode="" isHistory=""/>
+                    <PersonInfoShipTo AddressID="" AddressLine1=""
+                        AddressLine2="" City="" Company="" Country=""
+                        CountryDesc="" DayPhone="" Department=""
+                        EMailID="" EveningPhone="" FirstName=""
+                        IsAddressVerified="" IsCommercialAddress=""
+                        LastName="" MiddleName="" MobilePhone=""
+                        PersonID="" PersonInfoKey="" State="" Suffix=""
+                        Title="" TitleDesc="" ZipCode="" isHistory=""/>
+                </Order>
+            </Template>
+        </API>
+        <classInformation name="com.ibm.isccs.returns.mashups.SCCSProcessReturnOrderMashup"/>
+        <APINamespace inputNS="createReturn_processReturnOrder_input" outputNS="createReturn_processReturnOrder_output"/>
+        <AlternateResourceIds>
+            <AlternateResourceId altResourceId="ISCRET0002"/>
+            <AlternateResourceId altResourceId="ISCRET0005"/>
+            <AlternateResourceId altResourceId="ISCRET0006"/>
+            <AlternateResourceId altResourceId="ISCCSCR001"/>
+        </AlternateResourceIds>
+    </mashup>
+    <mashup
+        description="This mahsup is called to massage the input to createOrder API while creating a return order for a sales order in shipped status. The mashup takes all the parameters of the sales order while massaging the input."
+        endpoint="EP_ORDER" id="createReturn_createReturnOrder"
+        mashuptype="XAPI" resourceId="" transactional="true">
+        <API Name="createOrder">
+            <Input>
+                <Order BillToID="" BuyerUserId="" CustomerContactID=""
+                    CustomerEMailID="" CustomerFirstName=""
+                    CustomerLastName="" CustomerPhoneNo=""
+                    DefaultCustomerInformation=""
+                    DisplayLocalizedFieldInLocale="xml:CurrentUser:/User/@Localecode"
+                    DocumentType="" DraftOrderFlag="Y" EnterpriseCode=""
+                    EntryType="" ProcessPaymentOnReturnOrder="N"
+                    ReturnByGiftRecipient="" SellerOrganizationCode="">
+                    <OrderLines>
+                        <OrderLine GiftFlag="" OrderedQty="" ReturnReason="">
+                            <Item ItemID="" ProductClass="" UnitOfMeasure=""/>
+                            <DerivedFrom OrderLineKey=""/>
+                            <Notes>
+                                <Note AuditTransactionId=""
+                                    ContactReference="" ContactTime=""
+                                    ContactType="" ContactUser=""
+                                    CustomerSatIndicator="" NoteText=""
+                                    Priority="" ReasonCode=""
+                                    SequenceNo="" VisibleToAll=""/>
+                            </Notes>
+                        </OrderLine>
+                    </OrderLines>
+                    <PriceInfo Currency="" OrderTotal=""/>
+                    <PersonInfoBillTo AddressID="" AddressLine1=""
+                        AddressLine2="" AddressLine3="" AddressLine4=""
+                        AddressLine5="" AddressLine6=""
+                        AlternateEmailID="" Beeper="" City="" Company=""
+                        Country="" CountryDesc="" Createprogid=""
+                        Createts="" Createuserid="" DayFaxNo=""
+                        DayPhone="" Department="" EMailID=""
+                        EnterpriseCode="" EveningFaxNo=""
+                        EveningPhone="" FirstName="" HttpUrl=""
+                        IsAddressVerified="" IsCommercialAddress=""
+                        JobTitle="" LastName="" Lockid="" MiddleName=""
+                        MobilePhone="" Modifyprogid="" Modifyts=""
+                        Modifyuserid="" OtherPhone="" PersonID=""
+                        PersonInfoKey="" PreferredShipAddress=""
+                        ShortZipCode="" State="" Suffix="" TaxGeoCode=""
+                        Title="" TitleDesc="" UseCount=""
+                        VerificationStatus="" ZipCode="" isHistory=""/>
+                    <PersonInfoShipTo AddressID="" AddressLine1=""
+                        AddressLine2="" AddressLine3="" AddressLine4=""
+                        AddressLine5="" AddressLine6=""
+                        AlternateEmailID="" Beeper="" City="" Company=""
+                        Country="" CountryDesc="" Createprogid=""
+                        Createts="" Createuserid="" DayFaxNo=""
+                        DayPhone="" Department="" EMailID=""
+                        EnterpriseCode="" EveningFaxNo=""
+                        EveningPhone="" FirstName="" HttpUrl=""
+                        IsAddressVerified="" IsCommercialAddress=""
+                        JobTitle="" LastName="" Lockid="" MiddleName=""
+                        MobilePhone="" Modifyprogid="" Modifyts=""
+                        Modifyuserid="" OtherPhone="" PersonID=""
+                        PersonInfoKey="" PreferredShipAddress=""
+                        ShortZipCode="" State="" Suffix="" TaxGeoCode=""
+                        Title="" TitleDesc="" UseCount=""
+                        VerificationStatus="" ZipCode="" isHistory=""/>
+                </Order>
+            </Input>
+            <Template>
+                <Order BillToID="" BillToKey="" BuyerOrganizationCode=""
+                    BuyerUserId="" CustomerContactID=""
+                    CustomerEMailID="" CustomerFirstName=""
+                    CustomerLastName="" CustomerPONo=""
+                    CustomerPhoneNo="" CustomerZipCode=""
+                    DocumentType="" DraftOrderFlag="" EnterpriseCode=""
+                    EntryType="" MaxOrderStatusDesc="" OrderHeaderKey=""
+                    OrderName="" OrderNo="" SellerOrganizationCode=""
+                    TaxExemptFlag="" TaxExemptionCertificate="" isHistory="">
+                    <PersonInfoBillTo AddressID="" AddressLine1=""
+                        AddressLine2="" City="" Company="" Country=""
+                        CountryDesc="" DayPhone="" Department=""
+                        EMailID="" EveningPhone="" FirstName=""
+                        IsAddressVerified="" IsCommercialAddress=""
+                        LastName="" MiddleName="" MobilePhone=""
+                        PersonID="" PersonInfoKey="" State="" Suffix=""
+                        Title="" TitleDesc="" ZipCode="" isHistory=""/>
+                    <PersonInfoShipTo AddressID="" AddressLine1=""
+                        AddressLine2="" City="" Company="" Country=""
+                        CountryDesc="" DayPhone="" Department=""
+                        EMailID="" EveningPhone="" FirstName=""
+                        IsAddressVerified="" IsCommercialAddress=""
+                        LastName="" MiddleName="" MobilePhone=""
+                        PersonID="" PersonInfoKey="" State="" Suffix=""
+                        Title="" TitleDesc="" ZipCode="" isHistory=""/>
+                    <PriceInfo Currency="" TotalAmount=""/>
+                </Order>
+            </Template>
+        </API>
+        <classInformation name="com.ibm.isccs.returns.mashups.SCCSCreateReturnMashup"/>
+        <APINamespace inputNS="createReturn_createReturnOrder_input" outputNS="createReturn_createReturnOrder_output"/>
+        <AlternateResourceIds>
+            <AlternateResourceId altResourceId="ISCRET0002"/>
+        </AlternateResourceIds>
+    </mashup>
+    <mashup
+        description="This mahsup is called to massage the input to createOrder API while creating a return order for a sales order in shipped status. The mashup takes all the parameters of the sales order while massaging the input."
+        endpoint="EP_ORDER" id="createReturn_changeReturnOrder"
+        mashuptype="XAPI" resourceId="" transactional="true">
+        <API Name="changeOrder">
+            <Input>
+                <Order BillToID="" BuyerUserId="" CustomerContactID=""
+                    DefaultCustomerInformation=""
+                    DisplayLocalizedFieldInLocale="xml:CurrentUser:/User/@Localecode"
+                    DocumentType="" EnterpriseCode="" OrderHeaderKey=""
+                    ProcessPaymentOnReturnOrder="N" SellerOrganizationCode="">
+                    <OrderLines>
+                        <OrderLine Action="" GiftFlag="" OrderLineKey=""
+                            OrderedQty="" ReturnReason="">
+                            <Item ItemID="" ProductClass="" UnitOfMeasure=""/>
+                            <DerivedFrom OrderLineKey=""/>
+                            <Notes>
+                                <Note AuditTransactionId=""
+                                    ContactReference="" ContactTime=""
+                                    ContactType="" ContactUser=""
+                                    CustomerSatIndicator="" NoteText=""
+                                    Priority="" ReasonCode=""
+                                    SequenceNo="" VisibleToAll=""/>
+                            </Notes>
+                        </OrderLine>
+                    </OrderLines>
+                </Order>
+            </Input>
+            <Template>
+                <Order BillToID="" BillToKey="" BuyerOrganizationCode=""
+                    BuyerUserId="" CustomerContactID=""
+                    CustomerEMailID="" CustomerFirstName=""
+                    CustomerLastName="" CustomerPONo=""
+                    CustomerPhoneNo="" CustomerZipCode=""
+                    DocumentType="" DraftOrderFlag="" EnterpriseCode=""
+                    EntryType="" MaxOrderStatusDesc="" OrderHeaderKey=""
+                    OrderName="" OrderNo="" SellerOrganizationCode=""
+                    TaxExemptFlag="" TaxExemptionCertificate="" isHistory="">
+                    <PriceInfo Currency=""/>
+                    <PersonInfoBillTo AddressID="" AddressLine1=""
+                        AddressLine2="" City="" Company="" Country=""
+                        CountryDesc="" DayPhone="" Department=""
+                        EMailID="" EveningPhone="" FirstName=""
+                        IsAddressVerified="" IsCommercialAddress=""
+                        LastName="" MiddleName="" MobilePhone=""
+                        PersonID="" PersonInfoKey="" State="" Suffix=""
+                        Title="" TitleDesc="" ZipCode="" isHistory=""/>
+                    <OrderLines>
+                        <OrderLine GiftFlag=""/>
+                    </OrderLines>
+                    <PersonInfoShipTo AddressID="" AddressLine1=""
+                        AddressLine2="" City="" Company="" Country=""
+                        CountryDesc="" DayPhone="" Department=""
+                        EMailID="" EveningPhone="" FirstName=""
+                        IsAddressVerified="" IsCommercialAddress=""
+                        LastName="" MiddleName="" MobilePhone=""
+                        PersonID="" PersonInfoKey="" State="" Suffix=""
+                        Title="" TitleDesc="" ZipCode="" isHistory=""/>
+                </Order>
+            </Template>
+        </API>
+        <classInformation name="com.ibm.isccs.returns.mashups.SCCSCreateReturnMashup"/>
+        <APINamespace inputNS="createReturn_changeReturnOrder_input" outputNS="createReturn_changeReturnOrder_output"/>
+        <AlternateResourceIds>
+            <AlternateResourceId altResourceId="ISCRET0002"/>
+        </AlternateResourceIds>
+    </mashup>
+</mashups>

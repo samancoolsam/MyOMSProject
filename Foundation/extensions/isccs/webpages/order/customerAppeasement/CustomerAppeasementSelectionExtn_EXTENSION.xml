@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExtensionMetaData>
+    <ScreenExtension extnClassName="CustomerAppeasementSelectionExtn"
+        extnPackage="extn.order.customerAppeasement"
+        originalScreen="isccs.order.customerAppeasement.CustomerAppeasementSelection"
+        originalScreenPackage="isccs.order.customerAppeasement" type="diffrential">
+        <Namespaces>
+            <SourceNamespaces>
+                <Source
+                    description="extn_getExistingAppeasementList_output"
+                    isExtn="true"
+                    scExtensibilityArrayItemId="extn_SourceNamespaces_6" value="extn_getExistingAppeasementList_output"/>
+            </SourceNamespaces>
+        </Namespaces>
+        <Subscribers>
+            <Local>
+                <Subscriber description="extn_SetAppeasementReasonCodes"
+                    eventId="afterScreenInit" isExtn="true" sequence="51">
+                    <Handler methodName="extn_SetAppeasementReasonCodes"/>
+                </Subscriber>
+                <Subscriber
+                    description="extn_validateAppeasementOnOrder"
+                    eventId="saveCurrentPage" isExtn="true" sequence="19">
+                    <Handler methodName="extn_validateAppeasementOnOrder"/>
+                </Subscriber>
+            </Local>
+        </Subscribers>
+        <MashupRefs>
+            <Init>
+                <MashupRef extnType="MODIFY"
+                    mashupId="customerAppeasement_getReasonCodes" mashupRefId="getCustomerAppeasementReasonCodes"/>
+                <MashupRef extnType="ADD"
+                    mashupId="extn_getAppeasementsOnOrderMashup"
+                    mashupRefId="extn_getAppeasementsOnOrderInitMashup" sourceNamespace="extn_getExistingAppeasementList_output"/>
+            </Init>
+        </MashupRefs>
+    </ScreenExtension>
+</ExtensionMetaData>

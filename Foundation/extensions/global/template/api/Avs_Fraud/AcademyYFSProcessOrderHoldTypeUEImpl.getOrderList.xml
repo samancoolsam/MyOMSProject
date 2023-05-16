@@ -1,0 +1,399 @@
+<OrderList>
+<Order AllocationRuleID="" AuthorizationExpirationDate="" BillToID=""
+    BuyerOrganizationCode="" CarrierAccountNo="" CarrierServiceCode=""
+    ChargeActualFreightFlag="" ChainType="" CustomerEMailID="" CustomerPONo="" CustCustPONo=""
+    DeliveryCode="" Division="" DocumentType="" DraftOrderFlag=""
+    EnteredBy="" EnterpriseCode="" EntryType="" 
+    FreightTerms="" HoldFlag="" HoldReasonCode="" MaxOrderStatus=""
+    MaxOrderStatusDesc="" MinOrderStatus="" MinOrderStatusDesc=""
+    NotificationReference="" NotificationType=""
+    NotifyAfterShipmentFlag="" OrderDate="" OrderHeaderKey=""
+    OrderName="" OrderNo="" OrderType="" OriginalTax=""
+    OriginalTotalAmount="" OtherCharges="" PaymentStatus=""
+    PersonalizeCode="" PriceProgramKey="" PriorityCode=""
+    PriorityNumber="" Purpose="" ReceivingNode="" ReqCancelDate="" ReqDeliveryDate=""
+    ReqShipDate="" SCAC="" ScacAndService="" ScacAndServiceKey=""
+    SearchCriteria1="" SearchCriteria2="" SellerOrganizationCode=""
+    ShipCompleteFlag="" ShipToID="" Status="" TaxExemptFlag=""
+    TaxExemptionCertificate="" TaxJurisdiction="" TaxPayerId=""
+    TermsCode="" TotalAdjustmentAmount="" isHistory="" HasServiceLines="" 
+	HasDeliveryLines="" HasProductLines="" VendorID="" AutoCancelDate=""
+	OrderPurpose="" ReturnOrderHeaderKeyForExchange="" ExchangeType="" PendingTransferIn="" ReturnByGiftRecipient="" SourcingClassification="" >
+    <AllowedModifications/>
+    <OrderLines TotalNumberOfRecords="">
+        <!--1 or more order
+        line-->
+        <OrderLine AllocationDate="" ApptType="" ApptStatus="" CanAddServiceLines="" CarrierAccountNo=""
+            CarrierServiceCode="" CustomerLinePONo="" CustomerPONo="" GiftFlag="" 
+            DeliveryCode="" DeliveryMethod="" DepartmentCode="" FulfillmentType="" 
+            FreightTerms="" HoldFlag="" HoldReasonCode=""
+            ImportLicenseExpDate="" ImportLicenseNo="" InvoicedQty=""
+            ItemGroupCode="" KitCode="" KitQty="" LineSeqNo="" LineType="" MaxLineStatus="" IsBundleParent=""
+            MaxLineStatusDesc="" MinLineStatus="" MinLineStatusDesc="" NumberOfWorkOrders="" 
+            OpenQty=""  OrderHeaderKey="" OrderLineKey=""
+            OrderedQty="" OrigOrderLineKey="" OriginalOrderedQty=""
+            OtherCharges="" PackListType="" PersonalizeCode=""
+            PersonalizeFlag="" PickableFlag="" PrimeLineNo="" Purpose=""
+            ReceivingNode="" RemainingQty="" ReqCancelDate=""
+            ReqDeliveryDate="" ReqShipDate="" ReservationID=""
+            ReservationPool="" SCAC="" ScacAndService=""
+            ScacAndServiceKey="" SerialNo="" ShipNode="" ShipToID=""
+            ShipTogetherNo="" SplitQty="" Status="" StatusQuantity=""
+            SubLineNo="" SubstituteItemID="" SubstituteItemUOM="" isHistory="" HasServiceLines="" HasDeliveryLines="" AwaitingDeliveryRequest="" Segment="" SegmentType=""  PromisedApptStartDate="" PromisedApptEndDate="" >
+            <Extn ExtnWCOrderItemIdentifier="" />
+            <CapacityAllocations>
+                <CapacityAllocation ResourcePoolKey="" CapacityReference="" PromisedApptStartDate="" PromisedApptEndDate="" AllocatedCapacity="" /> 
+            </CapacityAllocations >
+			 <OrderLineOptions>
+				<OrderLineOption OrderLineOptionKey="" OptionItemID="" OptionUOM="" OptionDescription="" PricingUOM="" Quantity="" OptionPrice="" InvoicedOptionPrice=""/>
+			 </OrderLineOptions>
+            <Item CostCurrency="" CountryOfOrigin="" CustomerItem=""
+                CustomerItemDesc="" ECCNNo="" HarmonizedCode="" ISBN=""
+                ItemDesc="" ItemID="" ItemShortDesc="" ItemWeight=""
+                ItemWeightUOM="" ManufacturerItem=""
+                ManufacturerItemDesc="" ManufacturerName="" NMFCClass=""
+                NMFCCode="" NMFCDescription="" ProductClass=""
+                ProductLine="" ScheduleBCode="" SupplierItem=""
+                SupplierItemDesc="" TaxProductCode="" UPCCode=""
+                UnitCost="" UnitOfMeasure="">
+				<Extn ExtnIsGiftCard=""/>
+				</Item>
+            <BundleParentLine OrderLineKey=""/>
+			 <WorkOrders NumberOfWorkOrders="" >
+				 <WorkOrder WorkOrderKey="" WorkOrderNo="" Status="" QuantityRequested="" QuantityCompleted="" QuantityRemoved=""/>
+			 </WorkOrders>
+            <PersonInfoShipTo AddressLine1="" AddressLine2=""
+                AddressLine3="" AddressLine4="" AddressLine5=""
+                AddressLine6="" AlternateEmailID="" Beeper="" City=""
+                Company="" Country="" DayFaxNo="" DayPhone=""
+                Department="" EMailID="" EveningFaxNo="" EveningPhone=""
+                FirstName="" JobTitle="" LastName="" MiddleName=""
+                MobilePhone="" OtherPhone="" PersonID=""
+                PersonInfoKey="" State="" Suffix="" Title="" ZipCode=""/>
+            <!--Optional-->
+            <PersonInfoMarkFor AddressLine1="" AddressLine2=""
+                AddressLine3="" AddressLine4="" AddressLine5=""
+                AddressLine6="" AlternateEmailID="" Beeper="" City=""
+                Company="" Country="" DayFaxNo="" DayPhone=""
+                Department="" EMailID="" EveningFaxNo="" EveningPhone=""
+                FirstName="" JobTitle="" LastName="" MiddleName=""
+                MobilePhone="" OtherPhone="" PersonID=""
+                PersonInfoKey="" State="" Suffix="" Title="" ZipCode=""/>
+            <!--Optional-->
+            <LinePriceInfo DiscountPercentage="" LineTotal=""
+                ListPrice="" RetailPrice="" TaxableFlag="" UnitPrice="" SettledQuantity="" SettledAmount="" PricingUOM="" OrderedPricingQty="" PricingQtyConversionFactor="" InvoicedPricingQty="" ActualPricingQty="" IsPriceLocked=""/>
+            <Instructions NumberOfInstructions="">
+                <Instruction InstructionText="" InstructionType="" InstructionURL=""/>
+            </Instructions>
+            <References>
+                <Reference Name="" Value=""/>
+            </References>
+            <!--Optional-->
+            <KitLines NumberOfKitLines="">
+                <KitLine ComponentQty="" CustomerItem=""
+                    CustomerItemDesc="" DepartmentCode="" ItemDesc=""
+                    ItemID="" ItemShortDesc="" ItemWeight=""
+                    ItemWeightUOM="" KitQty="" ProductClass=""
+                    SupplierItem="" SupplierItemDesc="" UPCCode="" UnitOfMeasure="" UnitCost=""/>
+            </KitLines>
+            <ProductItems>
+                <ProductItem  ItemDesc="" ItemID="" ItemShortDesc="" UnitOfMeasure="" Quantity="" />
+            </ProductItems>
+            <Schedules>
+                <Schedule ExpectedDeliveryDate=""
+                    ExpectedShipmentDate="" TagNumber=""
+                    OrderHeaderKey="" OrderLineKey=""
+                    OrderLineScheduleKey="" ScheduleNo="" ShipByDate="" Quantity=""  PromisedApptStartDate="" PromisedApptEndDate=""/>
+            </Schedules>
+            <AdditionalAddresses NumberOfAdditionalAddresses="">
+                <AdditionalAddress AddressType="" EntityAddressKey=""
+                    EntityKey="" EntityParentKey="" EntityType="" PersonInfoKey="">
+                    <PersonInfo AddressLine1="" AddressLine2=""
+                        AddressLine3="" AddressLine4="" AddressLine5=""
+                        AddressLine6="" AlternateEmailID="" Beeper=""
+                        City="" Company="" Country="" DayFaxNo=""
+                        DayPhone="" Department="" EMailID=""
+                        EveningFaxNo="" EveningPhone="" FirstName=""
+                        JobTitle="" LastName="" MiddleName=""
+                        MobilePhone="" OtherPhone="" PersonID=""
+                        PersonInfoKey="" State="" Suffix="" Title="" ZipCode=""/>
+                </AdditionalAddress>
+            </AdditionalAddresses>
+            <LineOverallTotals Charges="" Discount="" ExtendedPrice=""
+                LineTotal="" Tax="" UnitPrice="" OptionPrice=""/>
+            <LineInvoicedTotals Charges="" Discount="" ExtendedPrice=""
+                LineTotal="" Tax="" UnitPrice="" OptionPrice=""/>
+            <LineRemainingTotals Charges="" Discount="" ExtendedPrice=""
+                LineTotal="" Tax="" UnitPrice="" OptionPrice=""/>
+            <LineCharges>
+                <LineCharge ChargeCategory="" ChargeName=""
+                    ChargeNameKey="" InvoicedChargeAmount=""
+                    InvoicedChargePerLine="" InvoicedChargePerUnit=""
+                    ChargeAmount="" ChargePerLine=""
+                    ChargePerUnit="" Reference=""
+                    RemainingChargeAmount="" RemainingChargePerLine="" RemainingChargePerUnit=""/>
+            </LineCharges>
+            <LineTaxes>
+                <LineTax ChargeNameKey="" ChargeCategory="" ChargeName="" InvoicedTax=""
+                    Tax="" Reference_1="" Reference_2=""
+                    Reference_3="" RemainingTax="" TaxName="" TaxPercentage=""/>
+                <TaxSummary>
+                    <TaxSummaryDetail InvoicedTax="" OverallTax=""
+                        RemainingTax="" TaxName=""/>
+                </TaxSummary>
+            </LineTaxes>
+            <!--Optional-->
+            <OrderStatuses>
+                <OrderStatus 
+                    OrderHeaderKey=""
+                    OrderLineKey="" OrderLineScheduleKey=""
+                    OrderReleaseKey="" OrderReleaseStatusKey=""
+                    PipelineKey="" Status="" StatusDate=""
+                    StatusDescription="" StatusQty="" StatusReason="" TotalQuantity="" ShipNode="" ReceivingNode="">
+	     <Details ExpectedDeliveryDate="" ExpectedShipmentDate="" TagNumber=""  ShipByDate="" >
+	     <KitDetails>
+		<KitDetail OrderKitLineKey="" TagNumber="" Quantity="" ShipByDate=""/>
+	     </KitDetails>
+	     </Details>
+	     </OrderStatus>
+		</OrderStatuses>
+		<OrderLineInvAttRequest TagNumber="" LotNumber="" RevisionNo="" BatchNo="" />
+		<ProductAssociations>
+			<ProductAssociation ServiceQuantity="" ProductQuantity="" ServiceTimeOffset="" HoldSchedTillCompletion=""> 
+				<ProductLine OrderLineKey="" PrimeLineNo="" SubLineNo=""/>
+				<ServiceLine OrderLineKey="" PrimeLineNo="" SubLineNo=""/>
+			</ProductAssociation>
+		</ProductAssociations>
+		<ServiceAssociations>
+			<ServiceAssociation ServiceQuantity="" ProductQuantity="" ServiceTimeOffset="" HoldSchedTillCompletion=""> 
+				<ProductLine OrderLineKey="" PrimeLineNo="" SubLineNo=""/>
+				<ServiceLine OrderLineKey="" PrimeLineNo="" SubLineNo=""/>
+			</ServiceAssociation>
+		</ServiceAssociations>
+		<DeliveryAssociations>
+			<DeliveryAssociation ServiceQuantity="" ProductQuantity="" ServiceTimeOffset="" HoldSchedTillCompletion=""> 
+				<ProductLine OrderLineKey="" PrimeLineNo="" SubLineNo=""/>
+				<ServiceLine OrderLineKey="" PrimeLineNo="" SubLineNo=""/>
+			</DeliveryAssociation>
+		</DeliveryAssociations>
+		<Notes NumberOfNotes=""> 
+			<Note Tranid="" Tranname="" NoteText="" ReasonCode="" ContactType="" ContactReference="" ContactTime="" ContactUser="" AuditTransactionId="" CustomerSatIndicator="" Priority=""/>
+		</Notes>
+        </OrderLine>
+    </OrderLines>
+    <Instructions NumberOfInstructions="">
+        <Instruction InstructionText="" InstructionType="" InstructionURL=""/>
+    </Instructions>
+    <PersonInfoShipTo AddressLine1="" AddressLine2="" AddressLine3=""
+        AddressLine4="" AddressLine5="" AddressLine6=""
+        AlternateEmailID="" Beeper="" City="" Company="" Country=""
+        DayFaxNo="" DayPhone="" Department="" EMailID="" EveningFaxNo=""
+        EveningPhone="" FirstName="" JobTitle="" LastName=""
+        MiddleName="" MobilePhone="" OtherPhone="" PersonID=""
+        PersonInfoKey="" State="" Suffix="" Title="" ZipCode=""/>
+    <PersonInfoBillTo AddressLine1="" AddressLine2="" AddressLine3=""
+        AddressLine4="" AddressLine5="" AddressLine6=""
+        AlternateEmailID="" Beeper="" City="" Company="" Country=""
+        DayFaxNo="" DayPhone="" Department="" EMailID="" EveningFaxNo=""
+        EveningPhone="" FirstName="" JobTitle="" LastName=""
+        MiddleName="" MobilePhone="" OtherPhone="" PersonID=""
+        PersonInfoKey="" State="" Suffix="" Title="" ZipCode=""/>
+    <PersonInfoMarkFor AddressLine1="" AddressLine2="" AddressLine3=""
+        AddressLine4="" AddressLine5="" AddressLine6=""
+        AlternateEmailID="" Beeper="" City="" Company="" Country=""
+        DayFaxNo="" DayPhone="" Department="" EMailID="" EveningFaxNo=""
+        EveningPhone="" FirstName="" JobTitle="" LastName=""
+        MiddleName="" MobilePhone="" OtherPhone="" PersonID=""
+        PersonInfoKey="" State="" Suffix="" Title="" ZipCode=""/>
+    <PersonInfoContact AddressLine1="" AddressLine2="" AddressLine3=""
+        AddressLine4="" AddressLine5="" AddressLine6=""
+        AlternateEmailID="" Beeper="" City="" Company="" Country=""
+        DayFaxNo="" DayPhone="" Department="" EMailID="" EveningFaxNo=""
+        EveningPhone="" FirstName="" JobTitle="" LastName=""
+        MiddleName="" MobilePhone="" OtherPhone="" PersonID=""
+        PersonInfoKey="" State="" Suffix="" Title="" ZipCode=""/>
+    <AdditionalAddresses NumberOfAdditionalAddresses="">
+        <AdditionalAddress AddressType="" EntityAddressKey=""
+            EntityKey="" EntityParentKey="" EntityType="" PersonInfoKey="">
+            <PersonInfo AddressLine1="" AddressLine2="" AddressLine3=""
+                AddressLine4="" AddressLine5="" AddressLine6=""
+                AlternateEmailID="" Beeper="" City="" Company=""
+                Country="" DayFaxNo="" DayPhone="" Department=""
+                EMailID="" EveningFaxNo="" EveningPhone="" FirstName=""
+                JobTitle="" LastName="" MiddleName="" MobilePhone=""
+                OtherPhone="" PersonID="" PersonInfoKey="" State=""
+                Suffix="" Title="" ZipCode=""/>
+        </AdditionalAddress>
+    </AdditionalAddresses>
+    <PriceInfo Currency="" EnterpriseCurrency=""
+        ReportingConversionDate="" ReportingConversionRate="" TotalAmount=""/>
+    <OverallTotals GrandCharges="" GrandDiscount="" GrandTax=""
+        GrandTotal="" HdrCharges="" HdrDiscount="" HdrTax="" HdrTotal="" LineSubTotal=""/>
+    <InvoicedTotals GrandCharges="" GrandDiscount="" GrandTax=""
+        GrandTotal="" HdrCharges="" HdrDiscount="" HdrTax="" HdrTotal="" LineSubTotal=""/>
+    <RemainingTotals GrandCharges="" GrandDiscount="" GrandTax=""
+        GrandTotal="" HdrCharges="" HdrDiscount="" HdrTax="" HdrTotal="" LineSubTotal=""/>
+    <HeaderCharges>
+        <HeaderCharge ChargeCategory="" ChargeName="" ChargeNameKey=""
+            InvoicedChargeAmount="" ChargeAmount="" Reference="" RemainingChargeAmount=""/>
+    </HeaderCharges>
+    <HeaderTaxes>
+        <HeaderTax ChargeNameKey="" ChargeCategory="" ChargeName="" InvoicedTax=""
+            Tax="" Reference_1="" Reference_2="" Reference_3=""
+            RemainingTax="" TaxName="" TaxPercentage="" TaxableFlag=""/>
+        <TaxSummary>
+            <TaxSummaryDetail InvoicedTax="" OverallTax=""
+                RemainingTax="" TaxName=""/>
+        </TaxSummary>
+    </HeaderTaxes>
+    <References>
+        <Reference Name="" Value=""/>
+    </References>
+    <PaymentMethods>
+        <!--Only one payment info can be specified. In future releases multiple payment methods may be enabled.-->
+         <PaymentMethod 
+            CreditCardExpDate="" CreditCardName=""
+            CreditCardNo="" CreditCardType=""
+            CustomerAccountNo="" 
+            DisplayCreditCardNo="" DisplayCustomerAccountNo=""
+            DisplayPaymentReference1="" DisplaySvcNo=""  PaymentReference1=""
+            PaymentReference2="" PaymentReference3=""
+            PaymentType="" RequestedAuthAmount=""
+            RequestedChargeAmount="" SuspendAnyMoreCharges=""
+            SvcNo="" 
+            TotalAuthorized="" TotalCharged=""
+            TotalRefundedAmount="" UnlimitedCharges="" isHistory="">
+        </PaymentMethod>
+    </PaymentMethods>
+    <ChargeTransactionDetails TotalCredits="" TotalDebits=""
+        TotalOpenAuthorizations="" TotalOpenBookings="">
+        <ChargeTransactionDetail AuditTransactionID="" AuthorizationExpirationDate="" AuthorizationID="" BookAmount="" ChargeTransactionKey="" ChargeType="" CollectionDate="" CreditAmount="" DebitAmount="" DistributedAmount="" HoldAgainstBook="" OpenAuthorizedAmount="" OrderHeaderKey="" OrderInvoiceKey="" PaymentKey="" RequestAmount="" SettledAmount="" Status="" StatusReason="" TransactionDate="" UserExitStatus="" TransferFromOhKey="" TransferToOhKey="">
+			<TransferToOrder
+				AllocationRuleID="" AuthorizationExpirationDate="" BillToID=""
+				BuyerOrganizationCode="" CarrierAccountNo="" CarrierServiceCode=""
+				ChargeActualFreightFlag="" ChainType="" CustomerEMailID="" CustomerPONo=""
+				DeliveryCode="" Division="" DocumentType="" DraftOrderFlag=""
+				EnteredBy="" EnterpriseCode="" EntryType="" 
+				FreightTerms="" HoldFlag="" HoldReasonCode="" MaxOrderStatus=""
+				MaxOrderStatusDesc="" MinOrderStatus="" MinOrderStatusDesc=""
+				NotificationReference="" NotificationType=""
+				NotifyAfterShipmentFlag="" OrderDate="" OrderHeaderKey=""
+				OrderName="" OrderNo="" OrderType="" OriginalTax=""
+				OriginalTotalAmount="" OtherCharges="" PaymentStatus=""
+				PersonalizeCode="" PriceProgramKey="" PriorityCode=""
+				PriorityNumber="" Purpose="" ReceivingNode="" ReqCancelDate="" ReqDeliveryDate=""
+				ReqShipDate="" SCAC="" ScacAndService="" ScacAndServiceKey=""
+				SearchCriteria1="" SearchCriteria2="" SellerOrganizationCode=""
+				ShipCompleteFlag="" ShipToID="" Status="" TaxExemptFlag=""
+				TaxExemptionCertificate="" TaxJurisdiction="" TaxPayerId=""
+				TermsCode="" TotalAdjustmentAmount="" isHistory="" HasServiceLines="" 
+				HasDeliveryLines="" HasProductLines="" VendorID="" AutoCancelDate=""
+				OrderPurpose="" ReturnOrderHeaderKeyForExchange="" ExchangeType="" PendingTransferIn="" ReturnByGiftRecipient=""/>
+			<TransferFromOrder
+				AllocationRuleID="" AuthorizationExpirationDate="" BillToID=""
+				BuyerOrganizationCode="" CarrierAccountNo="" CarrierServiceCode=""
+				ChargeActualFreightFlag="" ChainType="" CustomerEMailID="" CustomerPONo=""
+				DeliveryCode="" Division="" DocumentType="" DraftOrderFlag=""
+				EnteredBy="" EnterpriseCode="" EntryType="" 
+				FreightTerms="" HoldFlag="" HoldReasonCode="" MaxOrderStatus=""
+				MaxOrderStatusDesc="" MinOrderStatus="" MinOrderStatusDesc=""
+				NotificationReference="" NotificationType=""
+				NotifyAfterShipmentFlag="" OrderDate="" OrderHeaderKey=""
+				OrderName="" OrderNo="" OrderType="" OriginalTax=""
+				OriginalTotalAmount="" OtherCharges="" PaymentStatus=""
+				PersonalizeCode="" PriceProgramKey="" PriorityCode=""
+				PriorityNumber="" Purpose="" ReceivingNode="" ReqCancelDate="" ReqDeliveryDate=""
+				ReqShipDate="" SCAC="" ScacAndService="" ScacAndServiceKey=""
+				SearchCriteria1="" SearchCriteria2="" SellerOrganizationCode=""
+				ShipCompleteFlag="" ShipToID="" Status="" TaxExemptFlag=""
+				TaxExemptionCertificate="" TaxJurisdiction="" TaxPayerId=""
+				TermsCode="" TotalAdjustmentAmount="" isHistory="" HasServiceLines="" 
+				HasDeliveryLines="" HasProductLines="" VendorID="" AutoCancelDate=""
+				OrderPurpose="" ReturnOrderHeaderKeyForExchange="" ExchangeType="" PendingTransferIn="" ReturnByGiftRecipient=""/>
+            <InvoiceCollectionDetails>
+                <InvoiceCollectionDetail AmountCollected="" InvoiceNo="" InvoiceType="" TotalAmount="" OrderInvoiceKey="" ShipmentKey="" ReturnReleaseKey="" MasterInvoiceNo="" DateInvoiced=""/>
+            </InvoiceCollectionDetails>
+            <CreditCardTransactions>
+                <CreditCardTransaction AuthAmount="" AuthAvs=""
+                    AuthCode="" AuthReturnCode="" AuthReturnFlag=""
+                    AuthReturnMessage="" AuthTime="" CVVAuthCode=""
+                    ChargeTransactionKey="" CreditCardTransactionKey=""
+                    InternalReturnCode="" InternalReturnFlag=""
+                    InternalReturnMessage="" ParentKey="" Reference1=""
+                    Reference2="" RequestId="" TranAmount=""
+                    TranRequestTime="" TranReturnCode=""
+                    TranReturnFlag="" TranReturnMessage="" TranType=""/>
+            </CreditCardTransactions>
+        </ChargeTransactionDetail>
+    </ChargeTransactionDetails>
+    <OrderStatuses>
+        <OrderStatus  
+            OrderHeaderKey="" OrderLineKey="" OrderLineScheduleKey=""
+            OrderReleaseKey="" OrderReleaseStatusKey="" PipelineKey=""
+            Status="" StatusDate="" StatusDescription="" StatusQty=""
+            StatusReason="" TotalQuantity="" ShipNode="" ReceivingNode="">
+	     <Details ExpectedDeliveryDate="" ExpectedShipmentDate="" TagNumber=""  ShipByDate="" />
+	     </OrderStatus>
+    </OrderStatuses>
+	<ProductServiceAssocs>
+	<ProductServiceAssoc ServiceQuantity="" ProductQuantity="" ServiceTimeOffset="" HoldSchedTillCompletion=""> 
+				<ProductLine OrderLineKey="" PrimeLineNo="" SubLineNo=""/>
+				<ServiceLine OrderLineKey="" PrimeLineNo="" SubLineNo=""/>
+		</ProductServiceAssoc>
+	</ProductServiceAssocs>
+	<ExchangeOrders>
+		<ExchangeOrder
+			AllocationRuleID="" AuthorizationExpirationDate="" BillToID=""
+			BuyerOrganizationCode="" CarrierAccountNo="" CarrierServiceCode=""
+			ChargeActualFreightFlag="" ChainType="" CustomerEMailID="" CustomerPONo=""
+			DeliveryCode="" Division="" DocumentType="" DraftOrderFlag=""
+			EnteredBy="" EnterpriseCode="" EntryType="" 
+			FreightTerms="" HoldFlag="" HoldReasonCode="" MaxOrderStatus=""
+			MaxOrderStatusDesc="" MinOrderStatus="" MinOrderStatusDesc=""
+			NotificationReference="" NotificationType=""
+			NotifyAfterShipmentFlag="" OrderDate="" OrderHeaderKey=""
+			OrderName="" OrderNo="" OrderType="" OriginalTax=""
+			OriginalTotalAmount="" OtherCharges="" PaymentStatus=""
+			PersonalizeCode="" PriceProgramKey="" PriorityCode=""
+			PriorityNumber="" Purpose="" ReceivingNode="" ReqCancelDate="" ReqDeliveryDate=""
+			ReqShipDate="" SCAC="" ScacAndService="" ScacAndServiceKey=""
+			SearchCriteria1="" SearchCriteria2="" SellerOrganizationCode=""
+			ShipCompleteFlag="" ShipToID="" Status="" TaxExemptFlag=""
+			TaxExemptionCertificate="" TaxJurisdiction="" TaxPayerId=""
+			TermsCode="" TotalAdjustmentAmount="" isHistory="" HasServiceLines="" 
+			HasDeliveryLines="" HasProductLines="" VendorID="" AutoCancelDate=""
+			OrderPurpose="" ReturnOrderHeaderKeyForExchange="" ExchangeType="" PendingTransferIn="" ReturnByGiftRecipient=""/>
+	</ExchangeOrders>
+	<ReturnOrdersForReturn>
+		<ReturnOrderForReturn
+			AllocationRuleID="" AuthorizationExpirationDate="" BillToID=""
+			BuyerOrganizationCode="" CarrierAccountNo="" CarrierServiceCode=""
+			ChargeActualFreightFlag="" ChainType="" CustomerEMailID="" CustomerPONo=""
+			DeliveryCode="" Division="" DocumentType="" DraftOrderFlag=""
+			EnteredBy="" EnterpriseCode="" EntryType="" 
+			FreightTerms="" HoldFlag="" HoldReasonCode="" MaxOrderStatus=""
+			MaxOrderStatusDesc="" MinOrderStatus="" MinOrderStatusDesc=""
+			NotificationReference="" NotificationType=""
+			NotifyAfterShipmentFlag="" OrderDate="" OrderHeaderKey=""
+			OrderName="" OrderNo="" OrderType="" OriginalTax=""
+			OriginalTotalAmount="" OtherCharges="" PaymentStatus=""
+			PersonalizeCode="" PriceProgramKey="" PriorityCode=""
+			PriorityNumber="" Purpose="" ReceivingNode="" ReqCancelDate="" ReqDeliveryDate=""
+			ReqShipDate="" SCAC="" ScacAndService="" ScacAndServiceKey=""
+			SearchCriteria1="" SearchCriteria2="" SellerOrganizationCode=""
+			ShipCompleteFlag="" ShipToID="" Status="" TaxExemptFlag=""
+			TaxExemptionCertificate="" TaxJurisdiction="" TaxPayerId=""
+			TermsCode="" TotalAdjustmentAmount="" isHistory="" HasServiceLines="" 
+			HasDeliveryLines="" HasProductLines="" VendorID="" AutoCancelDate=""
+			OrderPurpose="" ReturnOrderHeaderKeyForExchange="" ExchangeType="" PendingTransferIn="" ReturnByGiftRecipient=""/>
+	</ReturnOrdersForReturn>
+	<OrderHoldTypes>
+<OrderHoldType HoldType=""
+                LastHoldTypeDate="" 
+                OrderHeaderKey=""
+                OrderHoldTypeKey="" ReasonText=""
+                Status="" TransactionId="">
+</OrderHoldType>
+</OrderHoldTypes>
+</Order>
+</OrderList>

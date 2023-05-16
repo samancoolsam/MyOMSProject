@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ScreenBundle
+    screenBundleId="extn.components.shipment.backroompick.UpdateHoldLocationExtnBundle" screenId="extn.components.shipment.backroompick.UpdateHoldLocationExtn">
+    <BundleEntries>
+        <BundleEntry
+            bundleEntryId="extn_filteringselect_FilteringSelect_label"
+            bundleKey="PrintTo" bundleValueFn="_scSimpleBundle"
+            property="label" type="WIDGET" uId="extn_filteringselect"/>
+        <BundleEntry bundleEntryId="extn_assignALLLoc_Button_label"
+            bundleKey="extn_Assign_ALL" bundleValueFn="_scSimpleBundle"
+            property="label" type="WIDGET" uId="extn_assignALLLoc"/>
+        <BundleEntry bundleEntryId="extn_StagingLoc_TextField_label"
+            bundleKey="extn_Staging_Location"
+            bundleValueFn="_scSimpleBundle" property="label"
+            type="WIDGET" uId="extn_StagingLoc"/>
+        <!-- OMNI-21999 - Start -->
+        <BundleEntry bundleEntryId="extn_custName_DataLabel_label"
+            bundleKey="extn_Customer_Name" bundleValueFn="_scBundle"
+            property="label" type="WIDGET" uId="extn_custName"/>
+        <!-- OMNI-21999 - End -->
+    </BundleEntries>
+</ScreenBundle>

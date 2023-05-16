@@ -1,0 +1,1658 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Licensed Materials - Property of IBM
+IBM Sterling Selling and Fulfillment Suite
+(C) Copyright IBM Corp. 2001, 2013 All Rights Reserved.
+US Government Users Restricted Rights - Use, duplication or disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+-->
+<preferences>
+    <configsynch>
+        <Settings CustomEntityClass="" MaxChangesToDisplay="" ReportsDir="">
+            <AuditDeployment ValidateLockid="n" ValidateOldValues="y" ValidateRecordExistsBeforeDelete="y"/>
+        </Settings>
+        <SourceDatabases>
+            <Database Name="SITOMS" className="com.ibm.db2.jcc.DB2Driver"
+                dbType="DB2" folder=""
+                jdbcURL="jdbc:db2://sadboms01sit.academy.com:50000/stesit"
+                schema="STRLADM" user="STRLADM"/>
+            <Database Name="UATOMS" className="com.ibm.db2.jcc.DB2Driver"
+                dbType="DB2" folder=""
+                jdbcURL="jdbc:db2://uadboms01.academy.com:60004/USTRLOMS"
+                schema="STRLADM" user="STRLADM"/>
+            <Database Name="PRDOMS" className="com.ibm.db2.jcc.DB2Driver"
+                dbType="DB2" folder=""
+                jdbcURL="jdbc:db2://pldboms01e.academy.com:60004/STRLPRD"
+                schema="STRLADM" user="STRLADM"/>
+            <Database Name="MCOMS" className="com.ibm.db2.jcc.DB2Driver"
+                dbType="DB2" folder=""
+                jdbcURL="jdbc:db2://paapbmc01.academy.com:50004/stebmc"
+                schema="stedbadm" user="stedbadm"/>
+            <Database Name="XML" className=""
+                dbType="xml" folder="/apps/SterlingOMS/CDT/xml"
+                jdbcURL=""
+                schema="" user=""/>
+			<!-- Added for RHEL WN-1119 -->
+			<Database Name="PRDOMS400" className="com.ibm.db2.jcc.DB2Driver"
+                dbType="DB2" folder=""
+                jdbcURL="jdbc:db2://pldboms01e.academy.com:60004/STRLPRD"
+                schema="STRLADM" user="STRLADM"/>
+			<Database Name="UATOMS400" className="com.ibm.db2.jcc.DB2Driver"
+                dbType="DB2" folder=""
+                jdbcURL="jdbc:db2://uldboms401e.academy.com:60004/USTRLOMS"
+                schema="STRLADM" user="USTRLADM"/>
+			<Database Name="UATOMS500" className="com.ibm.db2.jcc.DB2Driver"
+                dbType="DB2" folder=""
+                jdbcURL="jdbc:db2://uldboms501e.academy.com:60004/USTRLOMS"
+                schema="STRLADM" user="USTRLADM"/>
+			<Database Name="UATOMS600" className="com.ibm.db2.jcc.DB2Driver"
+                dbType="DB2" folder=""
+                jdbcURL="jdbc:db2://uldboms601e.academy.com:60004/USTRLOMS"
+                schema="STRLADM" user="USTRLADM"/>
+			<Database Name="UATOMS700" className="com.ibm.db2.jcc.DB2Driver"
+                dbType="DB2" folder=""
+                jdbcURL="jdbc:db2://uldboms701e.academy.com:60004/USTRLOMS"
+                schema="STRLADM" user="USTRLADM"/>
+				
+			<Database Name="UATOMS100" className="com.ibm.db2.jcc.DB2Driver"
+                dbType="DB2" folder=""
+                jdbcURL="jdbc:db2://sldboms101e.academy.com:60004/USTRLOMS"
+                schema="STRLADM" user="USTRLADM"/>
+            <Database Name="UATOMS101" className="com.ibm.db2.jcc.DB2Driver"
+                dbType="DB2" folder=""
+                jdbcURL="jdbc:db2://uldboms101e.academy.com:60004/USTRLOMS"
+                schema="STRLADM" user="USTRLADM"/>
+            <Database Name="UATOMS901" className="com.ibm.db2.jcc.DB2Driver"
+                dbType="DB2" folder=""
+                jdbcURL="jdbc:db2://uldboms901e.academy.com:60004/USTRLOMS"
+                schema="STRLADM" user="USTRLADM"/>
+			<!--UAT 200 Changes for Upgrade Start -->
+			<Database Name="UATOMS200" className="com.ibm.db2.jcc.DB2Driver"
+                dbType="DB2" folder=""
+                jdbcURL="jdbc:db2://uldboms201e.academy.com:60004/USTRLOMS"
+                schema="STRLADM" user="USTRLADM"/>
+			<!--UAT 200 Changes for Upgrade End -->
+			<!-- Added for RHEL BOPIS-274 -->
+			<Database Name="UATOMS800" className="com.ibm.db2.jcc.DB2Driver"
+                dbType="DB2" folder=""
+                jdbcURL="jdbc:db2://uldboms01e.academy.com:60004/USTRLOMS"
+                schema="STRLADM" user="USTRLADM"/>
+			<!-- Added for RHEL BOPIS-274 -->
+			<Database Name="MCPOMS400" className="com.ibm.db2.jcc.DB2Driver"
+                dbType="DB2" folder=""
+                jdbcURL="jdbc:db2://plapbmc401e.academy.com:60004/stebmc"
+                schema="stedbadm" user="strladm"/>
+			<Database Name="MCUOMS400" className="com.ibm.db2.jcc.DB2Driver"
+                dbType="DB2" folder=""
+                jdbcURL="jdbc:db2://ulapbmc401e.academy.com:60004/stebmc"
+                schema="stedbadm" user="USTRLADM"/>
+			<Database Name="MCUOMS500" className="com.ibm.db2.jcc.DB2Driver"
+                dbType="DB2" folder=""
+                jdbcURL="jdbc:db2://ulapbmc501e.academy.com:60004/stebmc"
+                schema="stedbadm" user="USTRLADM"/>
+            <Database Name="MCUOMS200" className="com.ibm.db2.jcc.DB2Driver"
+                dbType="DB2" folder=""
+                jdbcURL="jdbc:db2://ulapbmc201e.academy.com:60004/stebmc"
+                schema="stedbadm" user="USTRLADM"/>
+			<!-- Added for RHEL WN-1119 -->
+        </SourceDatabases>
+        <TargetDatabases>
+            <Database Name="XML" className=""
+                dbType="xml" folder="/apps/SterlingOMS/CDT/xml" httpurl="" httpuser=""
+                jdbcURL=""
+                schema="" user=""/>
+            <Database Name="SITOMS" className="com.ibm.db2.jcc.DB2Driver"
+                dbType="DB2" folder="" httpurl="" httpuser=""
+                jdbcURL="jdbc:db2://sadboms01sit.academy.com:50000/stesit"
+                schema="STRLADM" user="STRLADM"/>
+            <Database Name="UATOMS" className="com.ibm.db2.jcc.DB2Driver"
+                dbType="DB2" folder="" httpurl="" httpuser=""
+                jdbcURL="jdbc:db2://uadboms01.academy.com:60004/USTRLOMS"
+                schema="STRLADM" user="STRLADM"/>
+            <Database Name="PRDOMS" className="com.ibm.db2.jcc.DB2Driver"
+                dbType="DB2" folder="" httpurl="" httpuser=""
+                jdbcURL="jdbc:db2://pldboms01e.academy.com:60004/STRLPRD"
+                schema="STRLADM" user="STRLADM"/>
+            <Database Name="MCOMS" className="com.ibm.db2.jcc.DB2Driver"
+                dbType="DB2" folder="" httpurl="" httpuser=""
+                jdbcURL="jdbc:db2://paapbmc01.academy.com:50004/stebmc"
+                schema="stedbadm" user="stedbadm"/>
+			<!-- Added for RHEL WN-1119 -->
+			<Database Name="PRDOMS400" className="com.ibm.db2.jcc.DB2Driver"
+                dbType="DB2" folder=""
+                jdbcURL="jdbc:db2://pldboms01e.academy.com:60004/STRLPRD"
+                schema="STRLADM" user="STRLADM"/>
+			<Database Name="UATOMS400" className="com.ibm.db2.jcc.DB2Driver"
+                dbType="DB2" folder=""
+                jdbcURL="jdbc:db2://uldboms401e.academy.com:60004/USTRLOMS"
+                schema="STRLADM" user="USTRLADM"/>
+			<Database Name="UATOMS500" className="com.ibm.db2.jcc.DB2Driver"
+                dbType="DB2" folder=""
+                jdbcURL="jdbc:db2://uldboms501e.academy.com:60004/USTRLOMS"
+                schema="STRLADM" user="USTRLADM"/>
+			<Database Name="UATOMS600" className="com.ibm.db2.jcc.DB2Driver"
+                dbType="DB2" folder=""
+                jdbcURL="jdbc:db2://uldboms601e.academy.com:60004/USTRLOMS"
+                schema="STRLADM" user="USTRLADM"/>
+			<Database Name="UATOMS700" className="com.ibm.db2.jcc.DB2Driver"
+                dbType="DB2" folder=""
+                jdbcURL="jdbc:db2://uldboms701e.academy.com:60004/USTRLOMS"
+                schema="STRLADM" user="USTRLADM"/>
+			<!--UAT 200 Changes for Upgrade Start -->
+			<Database Name="UATOMS200" className="com.ibm.db2.jcc.DB2Driver"
+                dbType="DB2" folder=""
+                jdbcURL="jdbc:db2://uldboms201e.academy.com:60004/USTRLOMS"
+                schema="STRLADM" user="USTRLADM"/>
+			<!--UAT 200 Changes for Upgrade End -->
+			<!--UAT 100 Changes for Upgrade Start -->
+			<Database Name="UATOMS100" className="com.ibm.db2.jcc.DB2Driver"
+                dbType="DB2" folder=""
+                jdbcURL="jdbc:db2://sldboms101e.academy.com:60004/USTRLOMS"
+                schema="STRLADM" user="USTRLADM"/>
+			<!--UAT 100 Changes for Upgrade End -->
+            <Database Name="UATOMS101" className="com.ibm.db2.jcc.DB2Driver"
+                dbType="DB2" folder=""
+                jdbcURL="jdbc:db2://uldboms101e.academy.com:60004/USTRLOMS"
+                schema="STRLADM" user="USTRLADM"/>
+            <Database Name="UATOMS901" className="com.ibm.db2.jcc.DB2Driver"
+                dbType="DB2" folder=""
+                jdbcURL="jdbc:db2://uldboms901e.academy.com:60004/USTRLOMS"
+                schema="STRLADM" user="USTRLADM"/>
+			<!-- Added for RHEL BOPIS-274 -->
+			<Database Name="UATOMS800" className="com.ibm.db2.jcc.DB2Driver"
+                dbType="DB2" folder=""
+                jdbcURL="jdbc:db2://uldboms01e.academy.com:60004/USTRLOMS"
+                schema="STRLADM" user="USTRLADM"/>
+			<!-- Added for RHEL BOPIS-274 -->
+			<Database Name="MCPOMS400" className="com.ibm.db2.jcc.DB2Driver"
+                dbType="DB2" folder=""
+                jdbcURL="jdbc:db2://plapbmc401e.academy.com:60004/stebmc"
+                schema="stedbadm" user="strladm"/>
+			<Database Name="MCUOMS400" className="com.ibm.db2.jcc.DB2Driver"
+                dbType="DB2" folder=""
+                jdbcURL="jdbc:db2://ulapbmc401e.academy.com:60004/stebmc"
+                schema="stedbadm" user="USTRLADM"/>
+			<Database Name="MCUOMS500" className="com.ibm.db2.jcc.DB2Driver"
+                dbType="DB2" folder=""
+                jdbcURL="jdbc:db2://ulapbmc501e.academy.com:60004/stebmc"
+                schema="stedbadm" user="USTRLADM"/>
+            <Database Name="MCUOMS200" className="com.ibm.db2.jcc.DB2Driver"
+                dbType="DB2" folder=""
+                jdbcURL="jdbc:db2://ulapbmc201e.academy.com:60004/stebmc"
+                schema="stedbadm" user="USTRLADM"/>
+                
+			<!-- Added for RHEL WN-1119 -->
+			
+			<!-- Added for DR project Start -->
+			<Database Name="PRDAUS" className="com.ibm.db2.jcc.DB2Driver"
+                dbType="DB2" folder=""
+                jdbcURL="jdbc:db2://pldboms01e.academy.com:60004/STRLPRD"
+                schema="STRLADM" user="STRLADM"/>
+			<!-- Added for DR project Start -->
+			
+        </TargetDatabases>
+        <SourceTargetPrefs>
+            <SourceTargetPrefs>
+                <SourceTargetPair SourceDatabase="MCOMS" TargetDatabase="XML">
+                    <Transformations>
+                    </Transformations>
+                    <Ignore>
+                        <Table Name="YFS_ZIP_CODE_LOCATION"/>
+                        <Table Name="YFS_USER"/>
+                        <Table Name="YFS_USER_GROUP_LIST"/>
+                        <Table Name="YFS_CUSTOMER"/>
+                        <Table Name="YFS_CUSTOMER_CONTACT"/>
+                        <Table Name="YFS_CUSTOMER_ADDNL_ADDRESS"/>
+                        <Table Name="YFS_PARTICIPANT_NOTE"/>
+                        <Table Name="YFS_QUEUE_SUBSCRIPTION"/>
+                        <Table Name="YFS_ITEM"/>
+                        <Table Name="YFS_ITEM_ALIAS"/>
+                        <Table Name="YFS_ITEM_TAG"/>
+                        <Table Name="YFS_ITEM_UOM"/>
+                        <Table Name="YFS_ITEM_INSTRUCTION"/>
+                        <Table Name="YFS_LOCATION"/>
+                        <Table Name="YFS_PERSON_INFO"/>
+						<Table Name="YFS_RES_POOL"/>
+                        <Table Name="YFS_RES_POOL_CAPCTY_CONSMPTN"/>
+                        <Table Name="YFS_RES_POOL_CAPCTY_OVERRIDE"/>
+                        <Table Name="YFS_RES_POOL_CONSMPTN_DTLS"/>
+                        <Table Name="YFS_RES_POOL_DOW_CAPCTY"/>
+                        <Table Name="YFS_RES_POOL_ITEM"/>
+                        <Table Name="YFS_RES_POOL_REGION"/>
+                        <Table Name="YFS_RES_POOL_SECONDARY_UOM"/>
+                        <Table Name="YFS_RES_POOL_SERVICE_SKILL"/>
+                        <Table Name="YFS_RES_POOL_STD_CAPCTY_PERD"/>
+						<Table Name="PLT_DB_POOL"/>
+                    </Ignore>
+                    <AppendOnly>
+                    </AppendOnly>
+                </SourceTargetPair>
+			<!-- Added for RHEL WN-1119 -->
+				<SourceTargetPair SourceDatabase="MCPOMS400" TargetDatabase="XML">
+                    <Transformations>
+                    </Transformations>
+                    <Ignore>
+                        <Table Name="YFS_ZIP_CODE_LOCATION"/>
+                        <Table Name="YFS_USER"/>
+                        <Table Name="YFS_USER_GROUP_LIST"/>
+                        <Table Name="YFS_CUSTOMER"/>
+                        <Table Name="YFS_CUSTOMER_CONTACT"/>
+                        <Table Name="YFS_CUSTOMER_ADDNL_ADDRESS"/>
+                        <Table Name="YFS_PARTICIPANT_NOTE"/>
+                        <Table Name="YFS_QUEUE_SUBSCRIPTION"/>
+                        <Table Name="YFS_ITEM"/>
+                        <Table Name="YFS_ITEM_ALIAS"/>
+                        <Table Name="YFS_ITEM_TAG"/>
+                        <Table Name="YFS_ITEM_UOM"/>
+                        <Table Name="YFS_ITEM_INSTRUCTION"/>
+                        <Table Name="YFS_LOCATION"/>
+                        <Table Name="YFS_PERSON_INFO"/>
+						<Table Name="YFS_RES_POOL"/>
+                        <Table Name="YFS_RES_POOL_CAPCTY_CONSMPTN"/>
+                        <Table Name="YFS_RES_POOL_CAPCTY_OVERRIDE"/>
+                        <Table Name="YFS_RES_POOL_CONSMPTN_DTLS"/>
+                        <Table Name="YFS_RES_POOL_DOW_CAPCTY"/>
+                        <Table Name="YFS_RES_POOL_ITEM"/>
+                        <Table Name="YFS_RES_POOL_REGION"/>
+                        <Table Name="YFS_RES_POOL_SECONDARY_UOM"/>
+                        <Table Name="YFS_RES_POOL_SERVICE_SKILL"/>
+                        <Table Name="YFS_RES_POOL_STD_CAPCTY_PERD"/>
+						<Table Name="PLT_DB_POOL"/>
+                    </Ignore>
+                    <AppendOnly>
+                    </AppendOnly>
+                </SourceTargetPair>
+				<SourceTargetPair SourceDatabase="MCUOMS400" TargetDatabase="XML">
+                    <Transformations>
+                    </Transformations>
+                    <Ignore>
+                        <Table Name="YFS_ZIP_CODE_LOCATION"/>
+                        <Table Name="YFS_USER"/>
+                        <Table Name="YFS_USER_GROUP_LIST"/>
+                        <Table Name="YFS_CUSTOMER"/>
+                        <Table Name="YFS_CUSTOMER_CONTACT"/>
+                        <Table Name="YFS_CUSTOMER_ADDNL_ADDRESS"/>
+                        <Table Name="YFS_PARTICIPANT_NOTE"/>
+                        <Table Name="YFS_QUEUE_SUBSCRIPTION"/>
+                        <Table Name="YFS_ITEM"/>
+                        <Table Name="YFS_ITEM_ALIAS"/>
+                        <Table Name="YFS_ITEM_TAG"/>
+                        <Table Name="YFS_ITEM_UOM"/>
+                        <Table Name="YFS_ITEM_INSTRUCTION"/>
+                        <Table Name="YFS_LOCATION"/>
+                        <Table Name="YFS_PERSON_INFO"/>
+						<Table Name="YFS_RES_POOL"/>
+                        <Table Name="YFS_RES_POOL_CAPCTY_CONSMPTN"/>
+                        <Table Name="YFS_RES_POOL_CAPCTY_OVERRIDE"/>
+                        <Table Name="YFS_RES_POOL_CONSMPTN_DTLS"/>
+                        <Table Name="YFS_RES_POOL_DOW_CAPCTY"/>
+                        <Table Name="YFS_RES_POOL_ITEM"/>
+                        <Table Name="YFS_RES_POOL_REGION"/>
+                        <Table Name="YFS_RES_POOL_SECONDARY_UOM"/>
+                        <Table Name="YFS_RES_POOL_SERVICE_SKILL"/>
+                        <Table Name="YFS_RES_POOL_STD_CAPCTY_PERD"/>
+						<Table Name="PLT_DB_POOL"/>
+                    </Ignore>
+                    <AppendOnly>
+                    </AppendOnly>
+                </SourceTargetPair>
+				<SourceTargetPair SourceDatabase="MCUOMS500" TargetDatabase="XML">
+                    <Transformations>
+                    </Transformations>
+                    <Ignore>
+                        <Table Name="YFS_ZIP_CODE_LOCATION"/>
+                        <Table Name="YFS_USER"/>
+                        <Table Name="YFS_USER_GROUP_LIST"/>
+                        <Table Name="YFS_CUSTOMER"/>
+                        <Table Name="YFS_CUSTOMER_CONTACT"/>
+                        <Table Name="YFS_CUSTOMER_ADDNL_ADDRESS"/>
+                        <Table Name="YFS_PARTICIPANT_NOTE"/>
+                        <Table Name="YFS_QUEUE_SUBSCRIPTION"/>
+                        <Table Name="YFS_ITEM"/>
+                        <Table Name="YFS_ITEM_ALIAS"/>
+                        <Table Name="YFS_ITEM_TAG"/>
+                        <Table Name="YFS_ITEM_UOM"/>
+                        <Table Name="YFS_ITEM_INSTRUCTION"/>
+                        <Table Name="YFS_LOCATION"/>
+                        <Table Name="YFS_PERSON_INFO"/>
+						<Table Name="YFS_RES_POOL"/>
+                        <Table Name="YFS_RES_POOL_CAPCTY_CONSMPTN"/>
+                        <Table Name="YFS_RES_POOL_CAPCTY_OVERRIDE"/>
+                        <Table Name="YFS_RES_POOL_CONSMPTN_DTLS"/>
+                        <Table Name="YFS_RES_POOL_DOW_CAPCTY"/>
+                        <Table Name="YFS_RES_POOL_ITEM"/>
+                        <Table Name="YFS_RES_POOL_REGION"/>
+                        <Table Name="YFS_RES_POOL_SECONDARY_UOM"/>
+                        <Table Name="YFS_RES_POOL_SERVICE_SKILL"/>
+                        <Table Name="YFS_RES_POOL_STD_CAPCTY_PERD"/>
+						<Table Name="PLT_DB_POOL"/>
+                    </Ignore>
+                    <AppendOnly>
+                    </AppendOnly>
+                </SourceTargetPair>
+                
+                <SourceTargetPair SourceDatabase="MCUOMS200" TargetDatabase="XML">
+                    <Transformations>
+                    </Transformations>
+                    <Ignore>
+                        <Table Name="YFS_ZIP_CODE_LOCATION"/>
+                        <Table Name="YFS_USER"/>
+                        <Table Name="YFS_USER_GROUP_LIST"/>
+                        <Table Name="YFS_CUSTOMER"/>
+                        <Table Name="YFS_CUSTOMER_CONTACT"/>
+                        <Table Name="YFS_CUSTOMER_ADDNL_ADDRESS"/>
+                        <Table Name="YFS_PARTICIPANT_NOTE"/>
+                        <Table Name="YFS_QUEUE_SUBSCRIPTION"/>
+                        <Table Name="YFS_ITEM"/>
+                        <Table Name="YFS_ITEM_ALIAS"/>
+                        <Table Name="YFS_ITEM_TAG"/>
+                        <Table Name="YFS_ITEM_UOM"/>
+                        <Table Name="YFS_ITEM_INSTRUCTION"/>
+                        <Table Name="YFS_LOCATION"/>
+                        <Table Name="YFS_PERSON_INFO"/>
+						<Table Name="YFS_RES_POOL"/>
+                        <Table Name="YFS_RES_POOL_CAPCTY_CONSMPTN"/>
+                        <Table Name="YFS_RES_POOL_CAPCTY_OVERRIDE"/>
+                        <Table Name="YFS_RES_POOL_CONSMPTN_DTLS"/>
+                        <Table Name="YFS_RES_POOL_DOW_CAPCTY"/>
+                        <Table Name="YFS_RES_POOL_ITEM"/>
+                        <Table Name="YFS_RES_POOL_REGION"/>
+                        <Table Name="YFS_RES_POOL_SECONDARY_UOM"/>
+                        <Table Name="YFS_RES_POOL_SERVICE_SKILL"/>
+                        <Table Name="YFS_RES_POOL_STD_CAPCTY_PERD"/>
+						<Table Name="PLT_DB_POOL"/>
+                    </Ignore>
+                    <AppendOnly>
+                    </AppendOnly>
+                </SourceTargetPair>
+			<!-- Added for RHEL WN-1119 -->
+                <SourceTargetPair SourceDatabase="XML" TargetDatabase="SITOMS">
+                    <Transformations>
+                        <Table Name="YFS_RULES">
+                            <Column Name="RULE_SET_VALUE">
+							    <Transform Match="COM_EXTERNAL_UI_HOST" Replace="10.1.113.15"/>
+						    </Column>
+						</Table>
+                        <Table Name="YFS_SUB_FLOW">
+                            <Column Name="CONFIG_XML">
+							    <Transform Match="DSV_SEND_SHIP_CONFIRM_MAIL_BUSINESS_GRP_TO" Replace="netai.dey@academy.com" XPath="xml:/SubFlowConfig/Node/Properties/@To" />
+							    <Transform Match="DSV_SEND_SHIP_CONFIRM_MAIL_BUSINESS_GRP_CC" Replace="netai.dey@academy.com" XPath="xml:/SubFlowConfig/Node/Properties/@CC" />
+							    <Transform Match="SEND_MAIL_ORPHAN_INV_SUBJ" Replace="List of orphaned inventory in MSC and PACKLOC for the day(SIT)" XPath="xml:/SubFlowConfig/Node/Properties/@Subject" />
+							    <Transform Match="SEND_MAIL_ORPHAN_INV_TO" Replace="netai.dey@academy.com" XPath="xml:/SubFlowConfig/Node/Properties/@To" />
+							    <Transform Match="SEND_MAIL_ORPHAN_INV_CC" Replace="" XPath="xml:/SubFlowConfig/Node/Properties/@CC" />
+							    <Transform Match="SEND_MAIL_ORPHAN_INV_BCC" Replace="" XPath="xml:/SubFlowConfig/Node/Properties/@BCC" />
+							    <Transform Match="SEND_MAIL_CLOSE_MANIFEST_FAILURE_TO" Replace="netai.dey@academy.com" XPath="xml:/SubFlowConfig/Node/Properties/@To" />
+							    <Transform Match="SEND_MAIL_EOD_NOT_PUBLISH_SUBJ" Replace="EOD Message Not Published(SIT)" XPath="xml:/SubFlowConfig/Node/Properties/@Subject" />
+							    <Transform Match="SEND_MAIL_EOD_NOT_PUBLISH_TO" Replace="netai.dey@academy.com" XPath="xml:/SubFlowConfig/Node/Properties/@To" />
+							    <Transform Match="SEND_MAIL_EOD_NOT_PUBLISH_CC" Replace="" XPath="xml:/SubFlowConfig/Node/Properties/@CC" />
+							    <Transform Match="SEND_MAIL_EOD_NOT_PUBLISH_BCC" Replace="" XPath="xml:/SubFlowConfig/Node/Properties/@BCC" />
+							    <Transform Match="SEND_MAIL_RETURN_DRAFT_NOT_CONFIRMED_TO" Replace="netai.dey@academy.com" XPath="xml:/SubFlowConfig/Node/Properties/@To" />
+							    <Transform Match="SEND_MAIL_RETURN_DRAFT_NOT_CONFIRMED_CC" Replace="" XPath="xml:/SubFlowConfig/Node/Properties/@CC" />
+							    <Transform Match="SEND_MAIL_RETURN_DRAFT_NOT_CONFIRMED_BCC" Replace="" XPath="xml:/SubFlowConfig/Node/Properties/@BCC" />
+								<Transform Match="SEND_MAIL_SHIPMENT_EXCEED_TO" Replace="netai.dey@academy.com" XPath="xml:/SubFlowConfig/Node/Properties/@To" />
+								<Transform Match="SEND_MAIL_SHIPMENT_EXCEED_CC" Replace="" XPath="xml:/SubFlowConfig/Node/Properties/@CC" />
+								<Transform Match="SEND_MAIL_SHIPMENT_EXCEED_BCC" Replace="" XPath="xml:/SubFlowConfig/Node/Properties/@BCC" />
+						    </Column>
+						</Table>
+                    </Transformations>
+                    <Ignore>
+                        <Table Name="YFS_ZIP_CODE_LOCATION"/>
+                        <Table Name="YFS_USER"/>
+                        <Table Name="YFS_USER_GROUP_LIST"/>
+                        <Table Name="YFS_CUSTOMER"/>
+                        <Table Name="YFS_CUSTOMER_CONTACT"/>
+                        <Table Name="YFS_CUSTOMER_ADDNL_ADDRESS"/>
+                        <Table Name="YFS_PARTICIPANT_NOTE"/>
+                        <Table Name="YFS_QUEUE_SUBSCRIPTION"/>
+                        <Table Name="YFS_ITEM"/>
+                        <Table Name="YFS_ITEM_ALIAS"/>
+                        <Table Name="YFS_ITEM_TAG"/>
+                        <Table Name="YFS_ITEM_UOM"/>
+                        <Table Name="YFS_ITEM_INSTRUCTION"/>
+                        <Table Name="YFS_LOCATION"/>
+                        <Table Name="YFS_PERSON_INFO"/>
+                        <Table Name="YFS_DEVICE"/>
+						<Table Name="YFS_RES_POOL"/>
+                        <Table Name="YFS_RES_POOL_CAPCTY_CONSMPTN"/>
+                        <Table Name="YFS_RES_POOL_CAPCTY_OVERRIDE"/>
+                        <Table Name="YFS_RES_POOL_CONSMPTN_DTLS"/>
+                        <Table Name="YFS_RES_POOL_DOW_CAPCTY"/>
+                        <Table Name="YFS_RES_POOL_ITEM"/>
+                        <Table Name="YFS_RES_POOL_REGION"/>
+                        <Table Name="YFS_RES_POOL_SECONDARY_UOM"/>
+                        <Table Name="YFS_RES_POOL_SERVICE_SKILL"/>
+                        <Table Name="YFS_RES_POOL_STD_CAPCTY_PERD"/>
+						<Table Name="PLT_DB_POOL"/>
+						<!-- OMNI-2866 : Start-->
+						<Table Name="YFS_ITEM_SHIP_NODE"/>
+						<!-- OMNI-2866 : End-->
+                    </Ignore>
+                    <AppendOnly>
+                    </AppendOnly>
+                </SourceTargetPair>
+                <SourceTargetPair SourceDatabase="XML" TargetDatabase="UATOMS">
+                    <Transformations>
+                        <Table Name="YFS_RULES">
+                            <Column Name="RULE_SET_VALUE">
+							    <Transform Match="COM_EXTERNAL_UI_HOST" Replace="usterlingoms.academy.com"/>
+						    </Column>
+						</Table>
+                        <Table Name="YFS_SUB_FLOW">
+                            <Column Name="CONFIG_XML">
+							    <Transform Match="DSV_SEND_SHIP_CONFIRM_MAIL_BUSINESS_GRP_TO" Replace="EcomSterlingShipConfirmationUAT@academy.com" />
+							    <Transform Match="DSV_SEND_SHIP_CONFIRM_MAIL_BUSINESS_GRP_CC" Replace="" XPath="xml:/SubFlowConfig/Node/Properties/@CC" />
+							    <Transform Match="SEND_MAIL_ORPHAN_INV_SUBJ" Replace="List of orphaned inventory in MSC and PACKLOC for the day(UAT)" XPath="xml:/SubFlowConfig/Node/Properties/@Subject" />
+							    <Transform Match="SEND_MAIL_ORPHAN_INV_TO" Replace="girijadevi.p@academy.com" XPath="xml:/SubFlowConfig/Node/Properties/@To" />
+							    <Transform Match="SEND_MAIL_ORPHAN_INV_CC" Replace="upendra.dubey@academy.com" XPath="xml:/SubFlowConfig/Node/Properties/@CC" />
+							    <Transform Match="SEND_MAIL_ORPHAN_INV_BCC" Replace="" XPath="xml:/SubFlowConfig/Node/Properties/@BCC" />
+							    <Transform Match="SEND_MAIL_CLOSE_MANIFEST_FAILURE_TO" Replace="upendra.dubey@academy.com,girijadevi.p@academy.com" XPath="xml:/SubFlowConfig/Node/Properties/@To" />
+							    <Transform Match="SEND_MAIL_EOD_NOT_PUBLISH_SUBJ" Replace="EOD Message Not Published(UAT)" XPath="xml:/SubFlowConfig/Node/Properties/@Subject" />
+							    <Transform Match="SEND_MAIL_EOD_NOT_PUBLISH_TO" Replace="girijadevi.p@academy.com" XPath="xml:/SubFlowConfig/Node/Properties/@To" />
+							    <Transform Match="SEND_MAIL_EOD_NOT_PUBLISH_CC" Replace="upendra.dubey@academy.com" XPath="xml:/SubFlowConfig/Node/Properties/@CC" />
+							    <Transform Match="SEND_MAIL_EOD_NOT_PUBLISH_BCC" Replace="" XPath="xml:/SubFlowConfig/Node/Properties/@BCC" />
+							    <Transform Match="SEND_MAIL_RETURN_DRAFT_NOT_CONFIRMED_TO" Replace="girijadevi.p@academy.com" XPath="xml:/SubFlowConfig/Node/Properties/@To" />
+							    <Transform Match="SEND_MAIL_RETURN_DRAFT_NOT_CONFIRMED_CC" Replace="upendra.dubey@academy.com" XPath="xml:/SubFlowConfig/Node/Properties/@CC" />
+							    <Transform Match="SEND_MAIL_RETURN_DRAFT_NOT_CONFIRMED_BCC" Replace="" XPath="xml:/SubFlowConfig/Node/Properties/@BCC" />
+								<Transform Match="SEND_MAIL_SHIPMENT_EXCEED_TO" Replace="girijadevi.p@academy.com" XPath="xml:/SubFlowConfig/Node/Properties/@To" />
+								<Transform Match="SEND_MAIL_SHIPMENT_EXCEED_CC" Replace="" XPath="xml:/SubFlowConfig/Node/Properties/@CC" />
+								<Transform Match="SEND_MAIL_SHIPMENT_EXCEED_BCC" Replace="" XPath="xml:/SubFlowConfig/Node/Properties/@BCC" />
+								<Transform Match="SEND_MAIL_DSV_SHIPCONF_RMS_TO" Replace="girijadevi.p@academy.com" XPath="xml:/SubFlowConfig/Node/Properties/@To" />
+								<Transform Match="SEND_MAIL_DSV_SHIPCONF_RMS_CC" Replace="" XPath="xml:/SubFlowConfig/Node/Properties/@CC" />
+								<Transform Match="SEND_MAIL_DSV_SHIPCONF_RMS_BCC" Replace="" XPath="xml:/SubFlowConfig/Node/Properties/@BCC" />
+						    </Column>
+						</Table>
+                    </Transformations>
+                    <Ignore>
+                        <Table Name="YFS_ZIP_CODE_LOCATION"/>
+                        <Table Name="YFS_USER"/>
+                        <Table Name="YFS_USER_GROUP_LIST"/>
+                        <Table Name="YFS_CUSTOMER"/>
+                        <Table Name="YFS_CUSTOMER_CONTACT"/>
+                        <Table Name="YFS_CUSTOMER_ADDNL_ADDRESS"/>
+                        <Table Name="YFS_PARTICIPANT_NOTE"/>
+                        <Table Name="YFS_QUEUE_SUBSCRIPTION"/>
+                        <Table Name="YFS_ITEM"/>
+                        <Table Name="YFS_ITEM_ALIAS"/>
+                        <Table Name="YFS_ITEM_TAG"/>
+                        <Table Name="YFS_ITEM_UOM"/>
+                        <Table Name="YFS_ITEM_INSTRUCTION"/>
+                        <Table Name="YFS_LOCATION"/>
+                        <Table Name="YFS_PERSON_INFO"/>
+                        <Table Name="YFS_DEVICE"/>
+						<Table Name="YFS_RES_POOL"/>
+                        <Table Name="YFS_RES_POOL_CAPCTY_CONSMPTN"/>
+                        <Table Name="YFS_RES_POOL_CAPCTY_OVERRIDE"/>
+                        <Table Name="YFS_RES_POOL_CONSMPTN_DTLS"/>
+                        <Table Name="YFS_RES_POOL_DOW_CAPCTY"/>
+                        <Table Name="YFS_RES_POOL_ITEM"/>
+                        <Table Name="YFS_RES_POOL_REGION"/>
+                        <Table Name="YFS_RES_POOL_SECONDARY_UOM"/>
+                        <Table Name="YFS_RES_POOL_SERVICE_SKILL"/>
+                        <Table Name="YFS_RES_POOL_STD_CAPCTY_PERD"/>
+						<Table Name="PLT_DB_POOL"/>	
+						<!-- OMNI-2866 : Start-->
+						<Table Name="YFS_ITEM_SHIP_NODE"/>
+						<!-- OMNI-2866 : End-->						
+                    </Ignore>
+                    <AppendOnly>
+                    </AppendOnly>
+                </SourceTargetPair>
+				
+				<!-- Added for RHEL WN-1119 -->
+				
+				<SourceTargetPair SourceDatabase="XML" TargetDatabase="UATOMS400">
+                    <Transformations>
+                        <Table Name="YFS_RULES">
+                            <Column Name="RULE_SET_VALUE">
+							    <Transform Match="COM_EXTERNAL_UI_HOST" Replace="usterlingoms400.academy.com"/>
+						    </Column>
+						</Table>
+                        <Table Name="YFS_SUB_FLOW">
+                            <Column Name="CONFIG_XML">
+							    <Transform Match="DSV_SEND_SHIP_CONFIRM_MAIL_BUSINESS_GRP_TO" Replace="EcomSterlingShipConfirmationUAT@academy.com" />
+							    <Transform Match="DSV_SEND_SHIP_CONFIRM_MAIL_BUSINESS_GRP_CC" Replace="" XPath="xml:/SubFlowConfig/Node/Properties/@CC" />
+							    <Transform Match="SEND_MAIL_ORPHAN_INV_SUBJ" Replace="List of orphaned inventory in MSC and PACKLOC for the day(UAT)" XPath="xml:/SubFlowConfig/Node/Properties/@Subject" />
+							    <Transform Match="SEND_MAIL_ORPHAN_INV_TO" Replace="girijadevi.p@academy.com" XPath="xml:/SubFlowConfig/Node/Properties/@To" />
+							    <Transform Match="SEND_MAIL_ORPHAN_INV_CC" Replace="upendra.dubey@academy.com" XPath="xml:/SubFlowConfig/Node/Properties/@CC" />
+							    <Transform Match="SEND_MAIL_ORPHAN_INV_BCC" Replace="" XPath="xml:/SubFlowConfig/Node/Properties/@BCC" />
+							    <Transform Match="SEND_MAIL_CLOSE_MANIFEST_FAILURE_TO" Replace="upendra.dubey@academy.com,girijadevi.p@academy.com" XPath="xml:/SubFlowConfig/Node/Properties/@To" />
+							    <Transform Match="SEND_MAIL_EOD_NOT_PUBLISH_SUBJ" Replace="EOD Message Not Published(UAT)" XPath="xml:/SubFlowConfig/Node/Properties/@Subject" />
+							    <Transform Match="SEND_MAIL_EOD_NOT_PUBLISH_TO" Replace="girijadevi.p@academy.com" XPath="xml:/SubFlowConfig/Node/Properties/@To" />
+							    <Transform Match="SEND_MAIL_EOD_NOT_PUBLISH_CC" Replace="upendra.dubey@academy.com" XPath="xml:/SubFlowConfig/Node/Properties/@CC" />
+							    <Transform Match="SEND_MAIL_EOD_NOT_PUBLISH_BCC" Replace="" XPath="xml:/SubFlowConfig/Node/Properties/@BCC" />
+							    <Transform Match="SEND_MAIL_RETURN_DRAFT_NOT_CONFIRMED_TO" Replace="girijadevi.p@academy.com" XPath="xml:/SubFlowConfig/Node/Properties/@To" />
+							    <Transform Match="SEND_MAIL_RETURN_DRAFT_NOT_CONFIRMED_CC" Replace="upendra.dubey@academy.com" XPath="xml:/SubFlowConfig/Node/Properties/@CC" />
+							    <Transform Match="SEND_MAIL_RETURN_DRAFT_NOT_CONFIRMED_BCC" Replace="" XPath="xml:/SubFlowConfig/Node/Properties/@BCC" />
+								<Transform Match="SEND_MAIL_SHIPMENT_EXCEED_TO" Replace="girijadevi.p@academy.com" XPath="xml:/SubFlowConfig/Node/Properties/@To" />
+								<Transform Match="SEND_MAIL_SHIPMENT_EXCEED_CC" Replace="" XPath="xml:/SubFlowConfig/Node/Properties/@CC" />
+								<Transform Match="SEND_MAIL_SHIPMENT_EXCEED_BCC" Replace="" XPath="xml:/SubFlowConfig/Node/Properties/@BCC" />
+								<Transform Match="SEND_MAIL_DSV_SHIPCONF_RMS_TO" Replace="girijadevi.p@academy.com" XPath="xml:/SubFlowConfig/Node/Properties/@To" />
+								<Transform Match="SEND_MAIL_DSV_SHIPCONF_RMS_CC" Replace="" XPath="xml:/SubFlowConfig/Node/Properties/@CC" />
+								<Transform Match="SEND_MAIL_DSV_SHIPCONF_RMS_BCC" Replace="" XPath="xml:/SubFlowConfig/Node/Properties/@BCC" />
+								<Transform Match="SEND_EMAIL_ON_KOUNT_HOLD_DELAYS" Replace="arun.bendram@academy.com" XPath="xml:/SubFlowConfig/Node/Properties/@To" />
+						    </Column>
+						</Table>
+                    </Transformations>
+                    <Ignore>
+                        <Table Name="YFS_ZIP_CODE_LOCATION"/>
+                        <Table Name="YFS_USER"/>
+                        <Table Name="YFS_USER_GROUP_LIST"/>
+                        <Table Name="YFS_CUSTOMER"/>
+                        <Table Name="YFS_CUSTOMER_CONTACT"/>
+                        <Table Name="YFS_CUSTOMER_ADDNL_ADDRESS"/>
+                        <Table Name="YFS_PARTICIPANT_NOTE"/>
+                        <Table Name="YFS_QUEUE_SUBSCRIPTION"/>
+                        <Table Name="YFS_ITEM"/>
+                        <Table Name="YFS_ITEM_ALIAS"/>
+                        <Table Name="YFS_ITEM_TAG"/>
+                        <Table Name="YFS_ITEM_UOM"/>
+                        <Table Name="YFS_ITEM_INSTRUCTION"/>
+                        <Table Name="YFS_LOCATION"/>
+                        <Table Name="YFS_PERSON_INFO"/>
+                        <Table Name="YFS_DEVICE"/>
+						<Table Name="YFS_RES_POOL"/>
+                        <Table Name="YFS_RES_POOL_CAPCTY_CONSMPTN"/>
+                        <Table Name="YFS_RES_POOL_CAPCTY_OVERRIDE"/>
+                        <Table Name="YFS_RES_POOL_CONSMPTN_DTLS"/>
+                        <Table Name="YFS_RES_POOL_DOW_CAPCTY"/>
+                        <Table Name="YFS_RES_POOL_ITEM"/>
+                        <Table Name="YFS_RES_POOL_REGION"/>
+                        <Table Name="YFS_RES_POOL_SECONDARY_UOM"/>
+                        <Table Name="YFS_RES_POOL_SERVICE_SKILL"/>
+                        <Table Name="YFS_RES_POOL_STD_CAPCTY_PERD"/>
+						<Table Name="PLT_DB_POOL"/>
+                        <Table Name="YFS_DEVICE"/>
+                        <Table Name="YFS_DEVICE_TYPE"/>
+                        <Table Name="YFS_DEVICE_SUB_TYPE"/>
+                        <Table Name="YFS_USER_PRINTER_PREFERENCE"/>
+						<Table Name="PLT_PROPERTY_METADATA"/>
+						<Table Name="YFS_ADDITIONAL_ATTRIBUTE"/>
+						<Table Name="YFS_TRAN_LOCN_ATTRS"/>
+						<!-- OMNI-2866 : Start-->
+						<Table Name="YFS_ITEM_SHIP_NODE"/>
+						<!-- OMNI-2866 : End-->
+                    </Ignore>
+                    <AppendOnly>
+                    </AppendOnly>
+                </SourceTargetPair>
+				
+				<SourceTargetPair SourceDatabase="XML" TargetDatabase="MCUOMS400">
+                    <Transformations>
+                        <Table Name="YFS_RULES">
+                            <Column Name="RULE_SET_VALUE">
+							    <Transform Match="COM_EXTERNAL_UI_HOST" Replace="usterlingoms500.academy.com"/>
+						    </Column>
+						</Table>
+                        <Table Name="YFS_SUB_FLOW">
+                            <Column Name="CONFIG_XML">
+							    <Transform Match="DSV_SEND_SHIP_CONFIRM_MAIL_BUSINESS_GRP_TO" Replace="EcomSterlingShipConfirmationUAT@academy.com" />
+							    <Transform Match="DSV_SEND_SHIP_CONFIRM_MAIL_BUSINESS_GRP_CC" Replace="" XPath="xml:/SubFlowConfig/Node/Properties/@CC" />
+							    <Transform Match="SEND_MAIL_ORPHAN_INV_SUBJ" Replace="List of orphaned inventory in MSC and PACKLOC for the day(UAT)" XPath="xml:/SubFlowConfig/Node/Properties/@Subject" />
+							    <Transform Match="SEND_MAIL_ORPHAN_INV_TO" Replace="girijadevi.p@academy.com" XPath="xml:/SubFlowConfig/Node/Properties/@To" />
+							    <Transform Match="SEND_MAIL_ORPHAN_INV_CC" Replace="upendra.dubey@academy.com" XPath="xml:/SubFlowConfig/Node/Properties/@CC" />
+							    <Transform Match="SEND_MAIL_ORPHAN_INV_BCC" Replace="" XPath="xml:/SubFlowConfig/Node/Properties/@BCC" />
+							    <Transform Match="SEND_MAIL_CLOSE_MANIFEST_FAILURE_TO" Replace="upendra.dubey@academy.com,girijadevi.p@academy.com" XPath="xml:/SubFlowConfig/Node/Properties/@To" />
+							    <Transform Match="SEND_MAIL_EOD_NOT_PUBLISH_SUBJ" Replace="EOD Message Not Published(UAT)" XPath="xml:/SubFlowConfig/Node/Properties/@Subject" />
+							    <Transform Match="SEND_MAIL_EOD_NOT_PUBLISH_TO" Replace="girijadevi.p@academy.com" XPath="xml:/SubFlowConfig/Node/Properties/@To" />
+							    <Transform Match="SEND_MAIL_EOD_NOT_PUBLISH_CC" Replace="upendra.dubey@academy.com" XPath="xml:/SubFlowConfig/Node/Properties/@CC" />
+							    <Transform Match="SEND_MAIL_EOD_NOT_PUBLISH_BCC" Replace="" XPath="xml:/SubFlowConfig/Node/Properties/@BCC" />
+							    <Transform Match="SEND_MAIL_RETURN_DRAFT_NOT_CONFIRMED_TO" Replace="girijadevi.p@academy.com" XPath="xml:/SubFlowConfig/Node/Properties/@To" />
+							    <Transform Match="SEND_MAIL_RETURN_DRAFT_NOT_CONFIRMED_CC" Replace="upendra.dubey@academy.com" XPath="xml:/SubFlowConfig/Node/Properties/@CC" />
+							    <Transform Match="SEND_MAIL_RETURN_DRAFT_NOT_CONFIRMED_BCC" Replace="" XPath="xml:/SubFlowConfig/Node/Properties/@BCC" />
+								<Transform Match="SEND_MAIL_SHIPMENT_EXCEED_TO" Replace="girijadevi.p@academy.com" XPath="xml:/SubFlowConfig/Node/Properties/@To" />
+								<Transform Match="SEND_MAIL_SHIPMENT_EXCEED_CC" Replace="" XPath="xml:/SubFlowConfig/Node/Properties/@CC" />
+								<Transform Match="SEND_MAIL_SHIPMENT_EXCEED_BCC" Replace="" XPath="xml:/SubFlowConfig/Node/Properties/@BCC" />
+								<Transform Match="SEND_MAIL_DSV_SHIPCONF_RMS_TO" Replace="girijadevi.p@academy.com" XPath="xml:/SubFlowConfig/Node/Properties/@To" />
+								<Transform Match="SEND_MAIL_DSV_SHIPCONF_RMS_CC" Replace="" XPath="xml:/SubFlowConfig/Node/Properties/@CC" />
+								<Transform Match="SEND_MAIL_DSV_SHIPCONF_RMS_BCC" Replace="" XPath="xml:/SubFlowConfig/Node/Properties/@BCC" />
+						    </Column>
+						</Table>
+                    </Transformations>
+                    <Ignore>
+                        <Table Name="YFS_ZIP_CODE_LOCATION"/>
+                        <Table Name="YFS_USER"/>
+                        <Table Name="YFS_USER_GROUP_LIST"/>
+                        <Table Name="YFS_CUSTOMER"/>
+                        <Table Name="YFS_CUSTOMER_CONTACT"/>
+                        <Table Name="YFS_CUSTOMER_ADDNL_ADDRESS"/>
+                        <Table Name="YFS_PARTICIPANT_NOTE"/>
+                        <Table Name="YFS_QUEUE_SUBSCRIPTION"/>
+                        <Table Name="YFS_ITEM"/>
+                        <Table Name="YFS_ITEM_ALIAS"/>
+                        <Table Name="YFS_ITEM_TAG"/>
+                        <Table Name="YFS_ITEM_UOM"/>
+                        <Table Name="YFS_ITEM_INSTRUCTION"/>
+                        <Table Name="YFS_LOCATION"/>
+                        <Table Name="YFS_PERSON_INFO"/>
+                        <Table Name="YFS_DEVICE"/>
+						<Table Name="YFS_RES_POOL"/>
+                        <Table Name="YFS_RES_POOL_CAPCTY_CONSMPTN"/>
+                        <Table Name="YFS_RES_POOL_CAPCTY_OVERRIDE"/>
+                        <Table Name="YFS_RES_POOL_CONSMPTN_DTLS"/>
+                        <Table Name="YFS_RES_POOL_DOW_CAPCTY"/>
+                        <Table Name="YFS_RES_POOL_ITEM"/>
+                        <Table Name="YFS_RES_POOL_REGION"/>
+                        <Table Name="YFS_RES_POOL_SECONDARY_UOM"/>
+                        <Table Name="YFS_RES_POOL_SERVICE_SKILL"/>
+                        <Table Name="YFS_RES_POOL_STD_CAPCTY_PERD"/>
+						<Table Name="PLT_DB_POOL"/>
+						<Table Name="PLT_PROPERTY_METADATA"/>
+						<!-- OMNI-2866 : Start-->
+						<Table Name="YFS_ITEM_SHIP_NODE"/>
+						<!-- OMNI-2866 : End-->
+                    </Ignore>
+                    <AppendOnly>
+                    </AppendOnly>
+                </SourceTargetPair>
+				
+				<SourceTargetPair SourceDatabase="XML" TargetDatabase="UATOMS500">
+                    <Transformations>
+                        <Table Name="YFS_RULES">
+                            <Column Name="RULE_SET_VALUE">
+							    <Transform Match="COM_EXTERNAL_UI_HOST" Replace="usterlingoms500.academy.com"/>
+						    </Column>
+						</Table>
+                        <Table Name="YFS_SUB_FLOW">
+                            <Column Name="CONFIG_XML">
+							    <Transform Match="DSV_SEND_SHIP_CONFIRM_MAIL_BUSINESS_GRP_TO" Replace="EcomSterlingShipConfirmationUAT@academy.com" />
+							    <Transform Match="DSV_SEND_SHIP_CONFIRM_MAIL_BUSINESS_GRP_CC" Replace="" XPath="xml:/SubFlowConfig/Node/Properties/@CC" />
+							    <Transform Match="SEND_MAIL_ORPHAN_INV_SUBJ" Replace="List of orphaned inventory in MSC and PACKLOC for the day(UAT)" XPath="xml:/SubFlowConfig/Node/Properties/@Subject" />
+							    <Transform Match="SEND_MAIL_ORPHAN_INV_TO" Replace="girijadevi.p@academy.com" XPath="xml:/SubFlowConfig/Node/Properties/@To" />
+							    <Transform Match="SEND_MAIL_ORPHAN_INV_CC" Replace="upendra.dubey@academy.com" XPath="xml:/SubFlowConfig/Node/Properties/@CC" />
+							    <Transform Match="SEND_MAIL_ORPHAN_INV_BCC" Replace="" XPath="xml:/SubFlowConfig/Node/Properties/@BCC" />
+							    <Transform Match="SEND_MAIL_CLOSE_MANIFEST_FAILURE_TO" Replace="upendra.dubey@academy.com,girijadevi.p@academy.com" XPath="xml:/SubFlowConfig/Node/Properties/@To" />
+							    <Transform Match="SEND_MAIL_EOD_NOT_PUBLISH_SUBJ" Replace="EOD Message Not Published(UAT)" XPath="xml:/SubFlowConfig/Node/Properties/@Subject" />
+							    <Transform Match="SEND_MAIL_EOD_NOT_PUBLISH_TO" Replace="girijadevi.p@academy.com" XPath="xml:/SubFlowConfig/Node/Properties/@To" />
+							    <Transform Match="SEND_MAIL_EOD_NOT_PUBLISH_CC" Replace="upendra.dubey@academy.com" XPath="xml:/SubFlowConfig/Node/Properties/@CC" />
+							    <Transform Match="SEND_MAIL_EOD_NOT_PUBLISH_BCC" Replace="" XPath="xml:/SubFlowConfig/Node/Properties/@BCC" />
+							    <Transform Match="SEND_MAIL_RETURN_DRAFT_NOT_CONFIRMED_TO" Replace="girijadevi.p@academy.com" XPath="xml:/SubFlowConfig/Node/Properties/@To" />
+							    <Transform Match="SEND_MAIL_RETURN_DRAFT_NOT_CONFIRMED_CC" Replace="upendra.dubey@academy.com" XPath="xml:/SubFlowConfig/Node/Properties/@CC" />
+							    <Transform Match="SEND_MAIL_RETURN_DRAFT_NOT_CONFIRMED_BCC" Replace="" XPath="xml:/SubFlowConfig/Node/Properties/@BCC" />
+								<Transform Match="SEND_MAIL_SHIPMENT_EXCEED_TO" Replace="girijadevi.p@academy.com" XPath="xml:/SubFlowConfig/Node/Properties/@To" />
+								<Transform Match="SEND_MAIL_SHIPMENT_EXCEED_CC" Replace="" XPath="xml:/SubFlowConfig/Node/Properties/@CC" />
+								<Transform Match="SEND_MAIL_SHIPMENT_EXCEED_BCC" Replace="" XPath="xml:/SubFlowConfig/Node/Properties/@BCC" />
+								<Transform Match="SEND_MAIL_DSV_SHIPCONF_RMS_TO" Replace="girijadevi.p@academy.com" XPath="xml:/SubFlowConfig/Node/Properties/@To" />
+								<Transform Match="SEND_MAIL_DSV_SHIPCONF_RMS_CC" Replace="" XPath="xml:/SubFlowConfig/Node/Properties/@CC" />
+								<Transform Match="SEND_MAIL_DSV_SHIPCONF_RMS_BCC" Replace="" XPath="xml:/SubFlowConfig/Node/Properties/@BCC" />
+								<Transform Match="SEND_EMAIL_ON_KOUNT_HOLD_DELAYS" Replace="arun.bendram@academy.com" XPath="xml:/SubFlowConfig/Node/Properties/@To" />
+						    </Column>
+						</Table>
+                    </Transformations>
+                    <Ignore>
+                        <Table Name="YFS_ZIP_CODE_LOCATION"/>
+                        <Table Name="YFS_USER"/>
+                        <Table Name="YFS_USER_GROUP_LIST"/>
+                        <Table Name="YFS_CUSTOMER"/>
+                        <Table Name="YFS_CUSTOMER_CONTACT"/>
+                        <Table Name="YFS_CUSTOMER_ADDNL_ADDRESS"/>
+                        <Table Name="YFS_PARTICIPANT_NOTE"/>
+                        <Table Name="YFS_QUEUE_SUBSCRIPTION"/>
+                        <Table Name="YFS_ITEM"/>
+                        <Table Name="YFS_ITEM_ALIAS"/>
+                        <Table Name="YFS_ITEM_TAG"/>
+                        <Table Name="YFS_ITEM_UOM"/>
+                        <Table Name="YFS_ITEM_INSTRUCTION"/>
+                        <Table Name="YFS_LOCATION"/>
+                        <Table Name="YFS_PERSON_INFO"/>
+                        <Table Name="YFS_DEVICE"/>
+						<Table Name="YFS_RES_POOL"/>
+                        <Table Name="YFS_RES_POOL_CAPCTY_CONSMPTN"/>
+                        <Table Name="YFS_RES_POOL_CAPCTY_OVERRIDE"/>
+                        <Table Name="YFS_RES_POOL_CONSMPTN_DTLS"/>
+                        <Table Name="YFS_RES_POOL_DOW_CAPCTY"/>
+                        <Table Name="YFS_RES_POOL_ITEM"/>
+                        <Table Name="YFS_RES_POOL_REGION"/>
+                        <Table Name="YFS_RES_POOL_SECONDARY_UOM"/>
+                        <Table Name="YFS_RES_POOL_SERVICE_SKILL"/>
+                        <Table Name="YFS_RES_POOL_STD_CAPCTY_PERD"/>
+						<Table Name="PLT_DB_POOL"/>
+						<Table Name="PLT_PROPERTY_METADATA"/>
+						<Table Name="YFS_ADDITIONAL_ATTRIBUTE"/>
+						<Table Name="YFS_TRAN_LOCN_ATTRS"/>
+						<!-- OMNI-2866 : Start-->
+						<Table Name="YFS_ITEM_SHIP_NODE"/>
+						<!-- OMNI-2866 : End-->
+                    </Ignore>
+                    <AppendOnly>
+                    </AppendOnly>
+                </SourceTargetPair>
+				
+				<SourceTargetPair SourceDatabase="XML" TargetDatabase="MCUOMS500">
+                    <Transformations>
+                        <Table Name="YFS_RULES">
+                            <Column Name="RULE_SET_VALUE">
+							    <Transform Match="COM_EXTERNAL_UI_HOST" Replace="usterlingoms500.academy.com"/>
+						    </Column>
+						</Table>
+                        <Table Name="YFS_SUB_FLOW">
+                            <Column Name="CONFIG_XML">
+							    <Transform Match="DSV_SEND_SHIP_CONFIRM_MAIL_BUSINESS_GRP_TO" Replace="EcomSterlingShipConfirmationUAT@academy.com" />
+							    <Transform Match="DSV_SEND_SHIP_CONFIRM_MAIL_BUSINESS_GRP_CC" Replace="" XPath="xml:/SubFlowConfig/Node/Properties/@CC" />
+							    <Transform Match="SEND_MAIL_ORPHAN_INV_SUBJ" Replace="List of orphaned inventory in MSC and PACKLOC for the day(UAT)" XPath="xml:/SubFlowConfig/Node/Properties/@Subject" />
+							    <Transform Match="SEND_MAIL_ORPHAN_INV_TO" Replace="girijadevi.p@academy.com" XPath="xml:/SubFlowConfig/Node/Properties/@To" />
+							    <Transform Match="SEND_MAIL_ORPHAN_INV_CC" Replace="upendra.dubey@academy.com" XPath="xml:/SubFlowConfig/Node/Properties/@CC" />
+							    <Transform Match="SEND_MAIL_ORPHAN_INV_BCC" Replace="" XPath="xml:/SubFlowConfig/Node/Properties/@BCC" />
+							    <Transform Match="SEND_MAIL_CLOSE_MANIFEST_FAILURE_TO" Replace="upendra.dubey@academy.com,girijadevi.p@academy.com" XPath="xml:/SubFlowConfig/Node/Properties/@To" />
+							    <Transform Match="SEND_MAIL_EOD_NOT_PUBLISH_SUBJ" Replace="EOD Message Not Published(UAT)" XPath="xml:/SubFlowConfig/Node/Properties/@Subject" />
+							    <Transform Match="SEND_MAIL_EOD_NOT_PUBLISH_TO" Replace="girijadevi.p@academy.com" XPath="xml:/SubFlowConfig/Node/Properties/@To" />
+							    <Transform Match="SEND_MAIL_EOD_NOT_PUBLISH_CC" Replace="upendra.dubey@academy.com" XPath="xml:/SubFlowConfig/Node/Properties/@CC" />
+							    <Transform Match="SEND_MAIL_EOD_NOT_PUBLISH_BCC" Replace="" XPath="xml:/SubFlowConfig/Node/Properties/@BCC" />
+							    <Transform Match="SEND_MAIL_RETURN_DRAFT_NOT_CONFIRMED_TO" Replace="girijadevi.p@academy.com" XPath="xml:/SubFlowConfig/Node/Properties/@To" />
+							    <Transform Match="SEND_MAIL_RETURN_DRAFT_NOT_CONFIRMED_CC" Replace="upendra.dubey@academy.com" XPath="xml:/SubFlowConfig/Node/Properties/@CC" />
+							    <Transform Match="SEND_MAIL_RETURN_DRAFT_NOT_CONFIRMED_BCC" Replace="" XPath="xml:/SubFlowConfig/Node/Properties/@BCC" />
+								<Transform Match="SEND_MAIL_SHIPMENT_EXCEED_TO" Replace="girijadevi.p@academy.com" XPath="xml:/SubFlowConfig/Node/Properties/@To" />
+								<Transform Match="SEND_MAIL_SHIPMENT_EXCEED_CC" Replace="" XPath="xml:/SubFlowConfig/Node/Properties/@CC" />
+								<Transform Match="SEND_MAIL_SHIPMENT_EXCEED_BCC" Replace="" XPath="xml:/SubFlowConfig/Node/Properties/@BCC" />
+								<Transform Match="SEND_MAIL_DSV_SHIPCONF_RMS_TO" Replace="girijadevi.p@academy.com" XPath="xml:/SubFlowConfig/Node/Properties/@To" />
+								<Transform Match="SEND_MAIL_DSV_SHIPCONF_RMS_CC" Replace="" XPath="xml:/SubFlowConfig/Node/Properties/@CC" />
+								<Transform Match="SEND_MAIL_DSV_SHIPCONF_RMS_BCC" Replace="" XPath="xml:/SubFlowConfig/Node/Properties/@BCC" />
+						    </Column>
+						</Table>
+                    </Transformations>
+                    <Ignore>
+                        <Table Name="YFS_ZIP_CODE_LOCATION"/>
+                        <Table Name="YFS_USER"/>
+                        <Table Name="YFS_USER_GROUP_LIST"/>
+                        <Table Name="YFS_CUSTOMER"/>
+                        <Table Name="YFS_CUSTOMER_CONTACT"/>
+                        <Table Name="YFS_CUSTOMER_ADDNL_ADDRESS"/>
+                        <Table Name="YFS_PARTICIPANT_NOTE"/>
+                        <Table Name="YFS_QUEUE_SUBSCRIPTION"/>
+                        <Table Name="YFS_ITEM"/>
+                        <Table Name="YFS_ITEM_ALIAS"/>
+                        <Table Name="YFS_ITEM_TAG"/>
+                        <Table Name="YFS_ITEM_UOM"/>
+                        <Table Name="YFS_ITEM_INSTRUCTION"/>
+                        <Table Name="YFS_LOCATION"/>
+                        <Table Name="YFS_PERSON_INFO"/>
+                        <Table Name="YFS_DEVICE"/>
+						<Table Name="YFS_RES_POOL"/>
+                        <Table Name="YFS_RES_POOL_CAPCTY_CONSMPTN"/>
+                        <Table Name="YFS_RES_POOL_CAPCTY_OVERRIDE"/>
+                        <Table Name="YFS_RES_POOL_CONSMPTN_DTLS"/>
+                        <Table Name="YFS_RES_POOL_DOW_CAPCTY"/>
+                        <Table Name="YFS_RES_POOL_ITEM"/>
+                        <Table Name="YFS_RES_POOL_REGION"/>
+                        <Table Name="YFS_RES_POOL_SECONDARY_UOM"/>
+                        <Table Name="YFS_RES_POOL_SERVICE_SKILL"/>
+                        <Table Name="YFS_RES_POOL_STD_CAPCTY_PERD"/>
+						<Table Name="PLT_DB_POOL"/>
+						<Table Name="PLT_PROPERTY_METADATA"/>
+						<!-- OMNI-2866 : Start-->
+						<Table Name="YFS_ITEM_SHIP_NODE"/>
+						<!-- OMNI-2866 : End-->
+                    </Ignore>
+                    <AppendOnly>
+                    </AppendOnly>
+                </SourceTargetPair>		
+                
+                <SourceTargetPair SourceDatabase="XML" TargetDatabase="MCUOMS200">
+                    <Transformations>
+                        <Table Name="YFS_RULES">
+                            <Column Name="RULE_SET_VALUE">
+							    <Transform Match="COM_EXTERNAL_UI_HOST" Replace="usterlingoms100.academy.com"/>
+						    </Column>
+						</Table>
+                        <Table Name="YFS_SUB_FLOW">
+                            <Column Name="CONFIG_XML">
+							    <Transform Match="DSV_SEND_SHIP_CONFIRM_MAIL_BUSINESS_GRP_TO" Replace="EcomSterlingShipConfirmationUAT@academy.com" />
+							    <Transform Match="DSV_SEND_SHIP_CONFIRM_MAIL_BUSINESS_GRP_CC" Replace="" XPath="xml:/SubFlowConfig/Node/Properties/@CC" />
+							    <Transform Match="SEND_MAIL_ORPHAN_INV_SUBJ" Replace="List of orphaned inventory in MSC and PACKLOC for the day(UAT)" XPath="xml:/SubFlowConfig/Node/Properties/@Subject" />
+							    <Transform Match="SEND_MAIL_ORPHAN_INV_TO" Replace="girijadevi.p@academy.com" XPath="xml:/SubFlowConfig/Node/Properties/@To" />
+							    <Transform Match="SEND_MAIL_ORPHAN_INV_CC" Replace="upendra.dubey@academy.com" XPath="xml:/SubFlowConfig/Node/Properties/@CC" />
+							    <Transform Match="SEND_MAIL_ORPHAN_INV_BCC" Replace="" XPath="xml:/SubFlowConfig/Node/Properties/@BCC" />
+							    <Transform Match="SEND_MAIL_CLOSE_MANIFEST_FAILURE_TO" Replace="upendra.dubey@academy.com,girijadevi.p@academy.com" XPath="xml:/SubFlowConfig/Node/Properties/@To" />
+							    <Transform Match="SEND_MAIL_EOD_NOT_PUBLISH_SUBJ" Replace="EOD Message Not Published(UAT)" XPath="xml:/SubFlowConfig/Node/Properties/@Subject" />
+							    <Transform Match="SEND_MAIL_EOD_NOT_PUBLISH_TO" Replace="girijadevi.p@academy.com" XPath="xml:/SubFlowConfig/Node/Properties/@To" />
+							    <Transform Match="SEND_MAIL_EOD_NOT_PUBLISH_CC" Replace="upendra.dubey@academy.com" XPath="xml:/SubFlowConfig/Node/Properties/@CC" />
+							    <Transform Match="SEND_MAIL_EOD_NOT_PUBLISH_BCC" Replace="" XPath="xml:/SubFlowConfig/Node/Properties/@BCC" />
+							    <Transform Match="SEND_MAIL_RETURN_DRAFT_NOT_CONFIRMED_TO" Replace="girijadevi.p@academy.com" XPath="xml:/SubFlowConfig/Node/Properties/@To" />
+							    <Transform Match="SEND_MAIL_RETURN_DRAFT_NOT_CONFIRMED_CC" Replace="upendra.dubey@academy.com" XPath="xml:/SubFlowConfig/Node/Properties/@CC" />
+							    <Transform Match="SEND_MAIL_RETURN_DRAFT_NOT_CONFIRMED_BCC" Replace="" XPath="xml:/SubFlowConfig/Node/Properties/@BCC" />
+								<Transform Match="SEND_MAIL_SHIPMENT_EXCEED_TO" Replace="girijadevi.p@academy.com" XPath="xml:/SubFlowConfig/Node/Properties/@To" />
+								<Transform Match="SEND_MAIL_SHIPMENT_EXCEED_CC" Replace="" XPath="xml:/SubFlowConfig/Node/Properties/@CC" />
+								<Transform Match="SEND_MAIL_SHIPMENT_EXCEED_BCC" Replace="" XPath="xml:/SubFlowConfig/Node/Properties/@BCC" />
+								<Transform Match="SEND_MAIL_DSV_SHIPCONF_RMS_TO" Replace="girijadevi.p@academy.com" XPath="xml:/SubFlowConfig/Node/Properties/@To" />
+								<Transform Match="SEND_MAIL_DSV_SHIPCONF_RMS_CC" Replace="" XPath="xml:/SubFlowConfig/Node/Properties/@CC" />
+								<Transform Match="SEND_MAIL_DSV_SHIPCONF_RMS_BCC" Replace="" XPath="xml:/SubFlowConfig/Node/Properties/@BCC" />
+						    </Column>
+						</Table>
+                    </Transformations>
+                    <Ignore>
+                        <Table Name="YFS_ZIP_CODE_LOCATION"/>
+                        <Table Name="YFS_USER"/>
+                        <Table Name="YFS_USER_GROUP_LIST"/>
+                        <Table Name="YFS_CUSTOMER"/>
+                        <Table Name="YFS_CUSTOMER_CONTACT"/>
+                        <Table Name="YFS_CUSTOMER_ADDNL_ADDRESS"/>
+                        <Table Name="YFS_PARTICIPANT_NOTE"/>
+                        <Table Name="YFS_QUEUE_SUBSCRIPTION"/>
+                        <Table Name="YFS_ITEM"/>
+                        <Table Name="YFS_ITEM_ALIAS"/>
+                        <Table Name="YFS_ITEM_TAG"/>
+                        <Table Name="YFS_ITEM_UOM"/>
+                        <Table Name="YFS_ITEM_INSTRUCTION"/>
+                        <Table Name="YFS_LOCATION"/>
+                        <Table Name="YFS_PERSON_INFO"/>
+                        <Table Name="YFS_DEVICE"/>
+						<Table Name="YFS_RES_POOL"/>
+                        <Table Name="YFS_RES_POOL_CAPCTY_CONSMPTN"/>
+                        <Table Name="YFS_RES_POOL_CAPCTY_OVERRIDE"/>
+                        <Table Name="YFS_RES_POOL_CONSMPTN_DTLS"/>
+                        <Table Name="YFS_RES_POOL_DOW_CAPCTY"/>
+                        <Table Name="YFS_RES_POOL_ITEM"/>
+                        <Table Name="YFS_RES_POOL_REGION"/>
+                        <Table Name="YFS_RES_POOL_SECONDARY_UOM"/>
+                        <Table Name="YFS_RES_POOL_SERVICE_SKILL"/>
+                        <Table Name="YFS_RES_POOL_STD_CAPCTY_PERD"/>
+						<Table Name="PLT_DB_POOL"/>
+						<Table Name="PLT_PROPERTY_METADATA"/>
+						<!-- OMNI-2866 : Start-->
+						<Table Name="YFS_ITEM_SHIP_NODE"/>
+						<!-- OMNI-2866 : End-->
+                    </Ignore>
+                    <AppendOnly>
+                    </AppendOnly>
+                </SourceTargetPair>				
+				
+				
+				<SourceTargetPair SourceDatabase="XML" TargetDatabase="UATOMS600">
+                    <Transformations>
+                        <Table Name="YFS_RULES">
+                            <Column Name="RULE_SET_VALUE">
+							    <Transform Match="COM_EXTERNAL_UI_HOST" Replace="usterlingoms600.academy.com"/>
+						    </Column>
+						</Table>
+                        <Table Name="YFS_SUB_FLOW">
+                            <Column Name="CONFIG_XML">
+							    <Transform Match="DSV_SEND_SHIP_CONFIRM_MAIL_BUSINESS_GRP_TO" Replace="EcomSterlingShipConfirmationUAT@academy.com" />
+							    <Transform Match="DSV_SEND_SHIP_CONFIRM_MAIL_BUSINESS_GRP_CC" Replace="" XPath="xml:/SubFlowConfig/Node/Properties/@CC" />
+							    <Transform Match="SEND_MAIL_ORPHAN_INV_SUBJ" Replace="List of orphaned inventory in MSC and PACKLOC for the day(UAT)" XPath="xml:/SubFlowConfig/Node/Properties/@Subject" />
+							    <Transform Match="SEND_MAIL_ORPHAN_INV_TO" Replace="girijadevi.p@academy.com" XPath="xml:/SubFlowConfig/Node/Properties/@To" />
+							    <Transform Match="SEND_MAIL_ORPHAN_INV_CC" Replace="upendra.dubey@academy.com" XPath="xml:/SubFlowConfig/Node/Properties/@CC" />
+							    <Transform Match="SEND_MAIL_ORPHAN_INV_BCC" Replace="" XPath="xml:/SubFlowConfig/Node/Properties/@BCC" />
+							    <Transform Match="SEND_MAIL_CLOSE_MANIFEST_FAILURE_TO" Replace="upendra.dubey@academy.com,girijadevi.p@academy.com" XPath="xml:/SubFlowConfig/Node/Properties/@To" />
+							    <Transform Match="SEND_MAIL_EOD_NOT_PUBLISH_SUBJ" Replace="EOD Message Not Published(UAT)" XPath="xml:/SubFlowConfig/Node/Properties/@Subject" />
+							    <Transform Match="SEND_MAIL_EOD_NOT_PUBLISH_TO" Replace="girijadevi.p@academy.com" XPath="xml:/SubFlowConfig/Node/Properties/@To" />
+							    <Transform Match="SEND_MAIL_EOD_NOT_PUBLISH_CC" Replace="upendra.dubey@academy.com" XPath="xml:/SubFlowConfig/Node/Properties/@CC" />
+							    <Transform Match="SEND_MAIL_EOD_NOT_PUBLISH_BCC" Replace="" XPath="xml:/SubFlowConfig/Node/Properties/@BCC" />
+							    <Transform Match="SEND_MAIL_RETURN_DRAFT_NOT_CONFIRMED_TO" Replace="girijadevi.p@academy.com" XPath="xml:/SubFlowConfig/Node/Properties/@To" />
+							    <Transform Match="SEND_MAIL_RETURN_DRAFT_NOT_CONFIRMED_CC" Replace="upendra.dubey@academy.com" XPath="xml:/SubFlowConfig/Node/Properties/@CC" />
+							    <Transform Match="SEND_MAIL_RETURN_DRAFT_NOT_CONFIRMED_BCC" Replace="" XPath="xml:/SubFlowConfig/Node/Properties/@BCC" />
+								<Transform Match="SEND_MAIL_SHIPMENT_EXCEED_TO" Replace="girijadevi.p@academy.com" XPath="xml:/SubFlowConfig/Node/Properties/@To" />
+								<Transform Match="SEND_MAIL_SHIPMENT_EXCEED_CC" Replace="" XPath="xml:/SubFlowConfig/Node/Properties/@CC" />
+								<Transform Match="SEND_MAIL_SHIPMENT_EXCEED_BCC" Replace="" XPath="xml:/SubFlowConfig/Node/Properties/@BCC" />
+								<Transform Match="SEND_MAIL_DSV_SHIPCONF_RMS_TO" Replace="girijadevi.p@academy.com" XPath="xml:/SubFlowConfig/Node/Properties/@To" />
+								<Transform Match="SEND_MAIL_DSV_SHIPCONF_RMS_CC" Replace="" XPath="xml:/SubFlowConfig/Node/Properties/@CC" />
+								<Transform Match="SEND_MAIL_DSV_SHIPCONF_RMS_BCC" Replace="" XPath="xml:/SubFlowConfig/Node/Properties/@BCC" />
+								<Transform Match="SEND_EMAIL_ON_KOUNT_HOLD_DELAYS" Replace="arun.bendram@academy.com" XPath="xml:/SubFlowConfig/Node/Properties/@To" />
+						    </Column>
+						</Table>
+                    </Transformations>
+                    <Ignore>
+                        <Table Name="YFS_ZIP_CODE_LOCATION"/>
+                        <Table Name="YFS_USER"/>
+                        <Table Name="YFS_USER_GROUP_LIST"/>
+                        <Table Name="YFS_CUSTOMER"/>
+                        <Table Name="YFS_CUSTOMER_CONTACT"/>
+                        <Table Name="YFS_CUSTOMER_ADDNL_ADDRESS"/>
+                        <Table Name="YFS_PARTICIPANT_NOTE"/>
+                        <Table Name="YFS_QUEUE_SUBSCRIPTION"/>
+                        <Table Name="YFS_ITEM"/>
+                        <Table Name="YFS_ITEM_ALIAS"/>
+                        <Table Name="YFS_ITEM_TAG"/>
+                        <Table Name="YFS_ITEM_UOM"/>
+                        <Table Name="YFS_ITEM_INSTRUCTION"/>
+                        <Table Name="YFS_LOCATION"/>
+                        <Table Name="YFS_PERSON_INFO"/>
+                        <Table Name="YFS_DEVICE"/>
+						<Table Name="YFS_RES_POOL"/>
+                        <Table Name="YFS_RES_POOL_CAPCTY_CONSMPTN"/>
+                        <Table Name="YFS_RES_POOL_CAPCTY_OVERRIDE"/>
+                        <Table Name="YFS_RES_POOL_CONSMPTN_DTLS"/>
+                        <Table Name="YFS_RES_POOL_DOW_CAPCTY"/>
+                        <Table Name="YFS_RES_POOL_ITEM"/>
+                        <Table Name="YFS_RES_POOL_REGION"/>
+                        <Table Name="YFS_RES_POOL_SECONDARY_UOM"/>
+                        <Table Name="YFS_RES_POOL_SERVICE_SKILL"/>
+                        <Table Name="YFS_RES_POOL_STD_CAPCTY_PERD"/>
+						<Table Name="PLT_DB_POOL"/>
+						<Table Name="YFS_DEVICE"/>
+                        <Table Name="YFS_DEVICE_TYPE"/>
+                        <Table Name="YFS_DEVICE_SUB_TYPE"/>
+                        <Table Name="YFS_USER_PRINTER_PREFERENCE"/>
+						<Table Name="YFS_ADDITIONAL_ATTRIBUTE"/>
+						<Table Name="YFS_TRAN_LOCN_ATTRS"/>
+						<!-- OMNI-2866 : Start-->
+						<Table Name="YFS_ITEM_SHIP_NODE"/>
+						<!-- OMNI-2866 : End-->						
+                    </Ignore>
+                    <AppendOnly>
+                    </AppendOnly>
+                </SourceTargetPair>
+				
+				<SourceTargetPair SourceDatabase="XML" TargetDatabase="UATOMS700">
+                    <Transformations>
+                        <Table Name="YFS_RULES">
+                            <Column Name="RULE_SET_VALUE">
+							    <Transform Match="COM_EXTERNAL_UI_HOST" Replace="usterlingoms700.academy.com"/>
+						    </Column>
+						</Table>
+                        <Table Name="YFS_SUB_FLOW">
+                            <Column Name="CONFIG_XML">
+							    <Transform Match="DSV_SEND_SHIP_CONFIRM_MAIL_BUSINESS_GRP_TO" Replace="EcomSterlingShipConfirmationUAT@academy.com" />
+							    <Transform Match="DSV_SEND_SHIP_CONFIRM_MAIL_BUSINESS_GRP_CC" Replace="" XPath="xml:/SubFlowConfig/Node/Properties/@CC" />
+							    <Transform Match="SEND_MAIL_ORPHAN_INV_SUBJ" Replace="List of orphaned inventory in MSC and PACKLOC for the day(UAT)" XPath="xml:/SubFlowConfig/Node/Properties/@Subject" />
+							    <Transform Match="SEND_MAIL_ORPHAN_INV_TO" Replace="girijadevi.p@academy.com" XPath="xml:/SubFlowConfig/Node/Properties/@To" />
+							    <Transform Match="SEND_MAIL_ORPHAN_INV_CC" Replace="upendra.dubey@academy.com" XPath="xml:/SubFlowConfig/Node/Properties/@CC" />
+							    <Transform Match="SEND_MAIL_ORPHAN_INV_BCC" Replace="" XPath="xml:/SubFlowConfig/Node/Properties/@BCC" />
+							    <Transform Match="SEND_MAIL_CLOSE_MANIFEST_FAILURE_TO" Replace="upendra.dubey@academy.com,girijadevi.p@academy.com" XPath="xml:/SubFlowConfig/Node/Properties/@To" />
+							    <Transform Match="SEND_MAIL_EOD_NOT_PUBLISH_SUBJ" Replace="EOD Message Not Published(UAT)" XPath="xml:/SubFlowConfig/Node/Properties/@Subject" />
+							    <Transform Match="SEND_MAIL_EOD_NOT_PUBLISH_TO" Replace="girijadevi.p@academy.com" XPath="xml:/SubFlowConfig/Node/Properties/@To" />
+							    <Transform Match="SEND_MAIL_EOD_NOT_PUBLISH_CC" Replace="upendra.dubey@academy.com" XPath="xml:/SubFlowConfig/Node/Properties/@CC" />
+							    <Transform Match="SEND_MAIL_EOD_NOT_PUBLISH_BCC" Replace="" XPath="xml:/SubFlowConfig/Node/Properties/@BCC" />
+							    <Transform Match="SEND_MAIL_RETURN_DRAFT_NOT_CONFIRMED_TO" Replace="girijadevi.p@academy.com" XPath="xml:/SubFlowConfig/Node/Properties/@To" />
+							    <Transform Match="SEND_MAIL_RETURN_DRAFT_NOT_CONFIRMED_CC" Replace="upendra.dubey@academy.com" XPath="xml:/SubFlowConfig/Node/Properties/@CC" />
+							    <Transform Match="SEND_MAIL_RETURN_DRAFT_NOT_CONFIRMED_BCC" Replace="" XPath="xml:/SubFlowConfig/Node/Properties/@BCC" />
+								<Transform Match="SEND_MAIL_SHIPMENT_EXCEED_TO" Replace="girijadevi.p@academy.com" XPath="xml:/SubFlowConfig/Node/Properties/@To" />
+								<Transform Match="SEND_MAIL_SHIPMENT_EXCEED_CC" Replace="" XPath="xml:/SubFlowConfig/Node/Properties/@CC" />
+								<Transform Match="SEND_MAIL_SHIPMENT_EXCEED_BCC" Replace="" XPath="xml:/SubFlowConfig/Node/Properties/@BCC" />
+								<Transform Match="SEND_MAIL_DSV_SHIPCONF_RMS_TO" Replace="girijadevi.p@academy.com" XPath="xml:/SubFlowConfig/Node/Properties/@To" />
+								<Transform Match="SEND_MAIL_DSV_SHIPCONF_RMS_CC" Replace="" XPath="xml:/SubFlowConfig/Node/Properties/@CC" />
+								<Transform Match="SEND_MAIL_DSV_SHIPCONF_RMS_BCC" Replace="" XPath="xml:/SubFlowConfig/Node/Properties/@BCC" />
+								<Transform Match="SEND_EMAIL_ON_KOUNT_HOLD_DELAYS" Replace="arun.bendram@academy.com" XPath="xml:/SubFlowConfig/Node/Properties/@To" />
+						    </Column>
+						</Table>
+                    </Transformations>
+                    <Ignore>
+                        <Table Name="YFS_ZIP_CODE_LOCATION"/>
+                        <Table Name="YFS_USER"/>
+						<Table Name="PLT_PROPERTY_METADATA"/>
+                        <Table Name="YFS_USER_GROUP_LIST"/>
+                        <Table Name="YFS_CUSTOMER"/>
+                        <Table Name="YFS_CUSTOMER_CONTACT"/>
+                        <Table Name="YFS_CUSTOMER_ADDNL_ADDRESS"/>
+                        <Table Name="YFS_PARTICIPANT_NOTE"/>
+                        <Table Name="YFS_QUEUE_SUBSCRIPTION"/>
+                        <Table Name="YFS_ITEM"/>
+                        <Table Name="YFS_ITEM_ALIAS"/>
+                        <Table Name="YFS_ITEM_TAG"/>
+                        <Table Name="YFS_ITEM_UOM"/>
+                        <Table Name="YFS_ITEM_INSTRUCTION"/>
+                        <Table Name="YFS_LOCATION"/>
+                        <Table Name="YFS_PERSON_INFO"/>
+                        <Table Name="YFS_DEVICE"/>
+						<Table Name="YFS_RES_POOL"/>
+                        <Table Name="YFS_RES_POOL_CAPCTY_CONSMPTN"/>
+                        <Table Name="YFS_RES_POOL_CAPCTY_OVERRIDE"/>
+                        <Table Name="YFS_RES_POOL_CONSMPTN_DTLS"/>
+                        <Table Name="YFS_RES_POOL_DOW_CAPCTY"/>
+                        <Table Name="YFS_RES_POOL_ITEM"/>
+                        <Table Name="YFS_RES_POOL_REGION"/>
+                        <Table Name="YFS_RES_POOL_SECONDARY_UOM"/>
+                        <Table Name="YFS_RES_POOL_SERVICE_SKILL"/>
+                        <Table Name="YFS_RES_POOL_STD_CAPCTY_PERD"/>
+						<Table Name="PLT_DB_POOL"/>
+						<Table Name="YFS_ADDITIONAL_ATTRIBUTE"/>
+						<Table Name="YFS_TRAN_LOCN_ATTRS"/>
+						<!-- OMNI-2866 : Start-->
+						<Table Name="YFS_ITEM_SHIP_NODE"/>
+						<!-- OMNI-2866 : End-->
+                    </Ignore>
+                    <AppendOnly>
+                    </AppendOnly>
+                </SourceTargetPair>
+				
+				<SourceTargetPair SourceDatabase="XML" TargetDatabase="UATOMS100">
+                    <Transformations>
+                        <Table Name="YFS_RULES">
+                            <Column Name="RULE_SET_VALUE">
+							    <Transform Match="COM_EXTERNAL_UI_HOST" Replace="ssterlingoms100.academy.com"/>
+						    </Column>
+						</Table>
+                        <Table Name="YFS_SUB_FLOW">
+                            <Column Name="CONFIG_XML">
+							    <Transform Match="DSV_SEND_SHIP_CONFIRM_MAIL_BUSINESS_GRP_TO" Replace="EcomSterlingShipConfirmationUAT@academy.com" />
+							    <Transform Match="DSV_SEND_SHIP_CONFIRM_MAIL_BUSINESS_GRP_CC" Replace="" XPath="xml:/SubFlowConfig/Node/Properties/@CC" />
+							    <Transform Match="SEND_MAIL_ORPHAN_INV_SUBJ" Replace="List of orphaned inventory in MSC and PACKLOC for the day(UAT)" XPath="xml:/SubFlowConfig/Node/Properties/@Subject" />
+							    <Transform Match="SEND_MAIL_ORPHAN_INV_TO" Replace="girijadevi.p@academy.com" XPath="xml:/SubFlowConfig/Node/Properties/@To" />
+							    <Transform Match="SEND_MAIL_ORPHAN_INV_CC" Replace="upendra.dubey@academy.com" XPath="xml:/SubFlowConfig/Node/Properties/@CC" />
+							    <Transform Match="SEND_MAIL_ORPHAN_INV_BCC" Replace="" XPath="xml:/SubFlowConfig/Node/Properties/@BCC" />
+							    <Transform Match="SEND_MAIL_CLOSE_MANIFEST_FAILURE_TO" Replace="upendra.dubey@academy.com,girijadevi.p@academy.com" XPath="xml:/SubFlowConfig/Node/Properties/@To" />
+							    <Transform Match="SEND_MAIL_EOD_NOT_PUBLISH_SUBJ" Replace="EOD Message Not Published(UAT)" XPath="xml:/SubFlowConfig/Node/Properties/@Subject" />
+							    <Transform Match="SEND_MAIL_EOD_NOT_PUBLISH_TO" Replace="girijadevi.p@academy.com" XPath="xml:/SubFlowConfig/Node/Properties/@To" />
+							    <Transform Match="SEND_MAIL_EOD_NOT_PUBLISH_CC" Replace="upendra.dubey@academy.com" XPath="xml:/SubFlowConfig/Node/Properties/@CC" />
+							    <Transform Match="SEND_MAIL_EOD_NOT_PUBLISH_BCC" Replace="" XPath="xml:/SubFlowConfig/Node/Properties/@BCC" />
+							    <Transform Match="SEND_MAIL_RETURN_DRAFT_NOT_CONFIRMED_TO" Replace="girijadevi.p@academy.com" XPath="xml:/SubFlowConfig/Node/Properties/@To" />
+							    <Transform Match="SEND_MAIL_RETURN_DRAFT_NOT_CONFIRMED_CC" Replace="upendra.dubey@academy.com" XPath="xml:/SubFlowConfig/Node/Properties/@CC" />
+							    <Transform Match="SEND_MAIL_RETURN_DRAFT_NOT_CONFIRMED_BCC" Replace="" XPath="xml:/SubFlowConfig/Node/Properties/@BCC" />
+								<Transform Match="SEND_MAIL_SHIPMENT_EXCEED_TO" Replace="girijadevi.p@academy.com" XPath="xml:/SubFlowConfig/Node/Properties/@To" />
+								<Transform Match="SEND_MAIL_SHIPMENT_EXCEED_CC" Replace="" XPath="xml:/SubFlowConfig/Node/Properties/@CC" />
+								<Transform Match="SEND_MAIL_SHIPMENT_EXCEED_BCC" Replace="" XPath="xml:/SubFlowConfig/Node/Properties/@BCC" />
+								<Transform Match="SEND_MAIL_DSV_SHIPCONF_RMS_TO" Replace="girijadevi.p@academy.com" XPath="xml:/SubFlowConfig/Node/Properties/@To" />
+								<Transform Match="SEND_MAIL_DSV_SHIPCONF_RMS_CC" Replace="" XPath="xml:/SubFlowConfig/Node/Properties/@CC" />
+								<Transform Match="SEND_MAIL_DSV_SHIPCONF_RMS_BCC" Replace="" XPath="xml:/SubFlowConfig/Node/Properties/@BCC" />
+								<Transform Match="SEND_EMAIL_ON_KOUNT_HOLD_DELAYS" Replace="arun.bendram@academy.com" XPath="xml:/SubFlowConfig/Node/Properties/@To" />
+						    </Column>
+						</Table>
+                    </Transformations>
+                    <Ignore>
+                        <Table Name="YFS_ZIP_CODE_LOCATION"/>
+                        <Table Name="YFS_USER"/>
+						<Table Name="PLT_PROPERTY_METADATA"/>
+                        <Table Name="YFS_USER_GROUP_LIST"/>
+                        <Table Name="YFS_CUSTOMER"/>
+                        <Table Name="YFS_CUSTOMER_CONTACT"/>
+                        <Table Name="YFS_CUSTOMER_ADDNL_ADDRESS"/>
+                        <Table Name="YFS_PARTICIPANT_NOTE"/>
+                        <Table Name="YFS_QUEUE_SUBSCRIPTION"/>
+                        <Table Name="YFS_ITEM"/>
+                        <Table Name="YFS_ITEM_ALIAS"/>
+                        <Table Name="YFS_ITEM_TAG"/>
+                        <Table Name="YFS_ITEM_UOM"/>
+                        <Table Name="YFS_ITEM_INSTRUCTION"/>
+                        <Table Name="YFS_LOCATION"/>
+                        <Table Name="YFS_PERSON_INFO"/>
+                        <Table Name="YFS_DEVICE"/>
+						<Table Name="YFS_RES_POOL"/>
+                        <Table Name="YFS_RES_POOL_CAPCTY_CONSMPTN"/>
+                        <Table Name="YFS_RES_POOL_CAPCTY_OVERRIDE"/>
+                        <Table Name="YFS_RES_POOL_CONSMPTN_DTLS"/>
+                        <Table Name="YFS_RES_POOL_DOW_CAPCTY"/>
+                        <Table Name="YFS_RES_POOL_ITEM"/>
+                        <Table Name="YFS_RES_POOL_REGION"/>
+                        <Table Name="YFS_RES_POOL_SECONDARY_UOM"/>
+                        <Table Name="YFS_RES_POOL_SERVICE_SKILL"/>
+                        <Table Name="YFS_RES_POOL_STD_CAPCTY_PERD"/>
+						<Table Name="PLT_DB_POOL"/>
+						<Table Name="YFS_ADDITIONAL_ATTRIBUTE"/>
+						<Table Name="YFS_TRAN_LOCN_ATTRS"/>
+						<!-- OMNI-2866 : Start-->
+						<Table Name="YFS_ITEM_SHIP_NODE"/>
+						<!-- OMNI-2866 : End-->
+                    </Ignore>
+                    <AppendOnly>
+                    </AppendOnly>
+                </SourceTargetPair>
+                <SourceTargetPair SourceDatabase="XML" TargetDatabase="UATOMS101">
+                    <Transformations>
+                        <Table Name="YFS_RULES">
+                            <Column Name="RULE_SET_VALUE">
+							    <Transform Match="COM_EXTERNAL_UI_HOST" Replace="usterlingoms100.academy.com"/>
+						    </Column>
+						</Table>
+                        <Table Name="YFS_SUB_FLOW">
+                            <Column Name="CONFIG_XML">
+							    <Transform Match="DSV_SEND_SHIP_CONFIRM_MAIL_BUSINESS_GRP_TO" Replace="EcomSterlingShipConfirmationUAT@academy.com" />
+							    <Transform Match="DSV_SEND_SHIP_CONFIRM_MAIL_BUSINESS_GRP_CC" Replace="" XPath="xml:/SubFlowConfig/Node/Properties/@CC" />
+							    <Transform Match="SEND_MAIL_ORPHAN_INV_SUBJ" Replace="List of orphaned inventory in MSC and PACKLOC for the day(UAT)" XPath="xml:/SubFlowConfig/Node/Properties/@Subject" />
+							    <Transform Match="SEND_MAIL_ORPHAN_INV_TO" Replace="girijadevi.p@academy.com" XPath="xml:/SubFlowConfig/Node/Properties/@To" />
+							    <Transform Match="SEND_MAIL_ORPHAN_INV_CC" Replace="upendra.dubey@academy.com" XPath="xml:/SubFlowConfig/Node/Properties/@CC" />
+							    <Transform Match="SEND_MAIL_ORPHAN_INV_BCC" Replace="" XPath="xml:/SubFlowConfig/Node/Properties/@BCC" />
+							    <Transform Match="SEND_MAIL_CLOSE_MANIFEST_FAILURE_TO" Replace="upendra.dubey@academy.com,girijadevi.p@academy.com" XPath="xml:/SubFlowConfig/Node/Properties/@To" />
+							    <Transform Match="SEND_MAIL_EOD_NOT_PUBLISH_SUBJ" Replace="EOD Message Not Published(UAT)" XPath="xml:/SubFlowConfig/Node/Properties/@Subject" />
+							    <Transform Match="SEND_MAIL_EOD_NOT_PUBLISH_TO" Replace="girijadevi.p@academy.com" XPath="xml:/SubFlowConfig/Node/Properties/@To" />
+							    <Transform Match="SEND_MAIL_EOD_NOT_PUBLISH_CC" Replace="upendra.dubey@academy.com" XPath="xml:/SubFlowConfig/Node/Properties/@CC" />
+							    <Transform Match="SEND_MAIL_EOD_NOT_PUBLISH_BCC" Replace="" XPath="xml:/SubFlowConfig/Node/Properties/@BCC" />
+							    <Transform Match="SEND_MAIL_RETURN_DRAFT_NOT_CONFIRMED_TO" Replace="girijadevi.p@academy.com" XPath="xml:/SubFlowConfig/Node/Properties/@To" />
+							    <Transform Match="SEND_MAIL_RETURN_DRAFT_NOT_CONFIRMED_CC" Replace="upendra.dubey@academy.com" XPath="xml:/SubFlowConfig/Node/Properties/@CC" />
+							    <Transform Match="SEND_MAIL_RETURN_DRAFT_NOT_CONFIRMED_BCC" Replace="" XPath="xml:/SubFlowConfig/Node/Properties/@BCC" />
+								<Transform Match="SEND_MAIL_SHIPMENT_EXCEED_TO" Replace="girijadevi.p@academy.com" XPath="xml:/SubFlowConfig/Node/Properties/@To" />
+								<Transform Match="SEND_MAIL_SHIPMENT_EXCEED_CC" Replace="" XPath="xml:/SubFlowConfig/Node/Properties/@CC" />
+								<Transform Match="SEND_MAIL_SHIPMENT_EXCEED_BCC" Replace="" XPath="xml:/SubFlowConfig/Node/Properties/@BCC" />
+								<Transform Match="SEND_MAIL_DSV_SHIPCONF_RMS_TO" Replace="girijadevi.p@academy.com" XPath="xml:/SubFlowConfig/Node/Properties/@To" />
+								<Transform Match="SEND_MAIL_DSV_SHIPCONF_RMS_CC" Replace="" XPath="xml:/SubFlowConfig/Node/Properties/@CC" />
+								<Transform Match="SEND_MAIL_DSV_SHIPCONF_RMS_BCC" Replace="" XPath="xml:/SubFlowConfig/Node/Properties/@BCC" />
+								<Transform Match="SEND_EMAIL_ON_KOUNT_HOLD_DELAYS" Replace="arun.bendram@academy.com" XPath="xml:/SubFlowConfig/Node/Properties/@To" />
+						    </Column>
+						</Table>
+                    </Transformations>
+                    <Ignore>
+                        <Table Name="YFS_ZIP_CODE_LOCATION"/>
+                        <Table Name="YFS_USER"/>
+						<Table Name="PLT_PROPERTY_METADATA"/>
+                        <Table Name="YFS_USER_GROUP_LIST"/>
+                        <Table Name="YFS_CUSTOMER"/>
+                        <Table Name="YFS_CUSTOMER_CONTACT"/>
+                        <Table Name="YFS_CUSTOMER_ADDNL_ADDRESS"/>
+                        <Table Name="YFS_PARTICIPANT_NOTE"/>
+                        <Table Name="YFS_QUEUE_SUBSCRIPTION"/>
+                        <Table Name="YFS_ITEM"/>
+                        <Table Name="YFS_ITEM_ALIAS"/>
+                        <Table Name="YFS_ITEM_TAG"/>
+                        <Table Name="YFS_ITEM_UOM"/>
+                        <Table Name="YFS_ITEM_INSTRUCTION"/>
+                        <Table Name="YFS_LOCATION"/>
+                        <Table Name="YFS_PERSON_INFO"/>
+                        <Table Name="YFS_DEVICE"/>
+						<Table Name="YFS_RES_POOL"/>
+                        <Table Name="YFS_RES_POOL_CAPCTY_CONSMPTN"/>
+                        <Table Name="YFS_RES_POOL_CAPCTY_OVERRIDE"/>
+                        <Table Name="YFS_RES_POOL_CONSMPTN_DTLS"/>
+                        <Table Name="YFS_RES_POOL_DOW_CAPCTY"/>
+                        <Table Name="YFS_RES_POOL_ITEM"/>
+                        <Table Name="YFS_RES_POOL_REGION"/>
+                        <Table Name="YFS_RES_POOL_SECONDARY_UOM"/>
+                        <Table Name="YFS_RES_POOL_SERVICE_SKILL"/>
+                        <Table Name="YFS_RES_POOL_STD_CAPCTY_PERD"/>
+						<Table Name="PLT_DB_POOL"/>
+						<Table Name="YFS_ADDITIONAL_ATTRIBUTE"/>
+						<Table Name="YFS_TRAN_LOCN_ATTRS"/>
+						<!-- OMNI-2866 : Start-->
+						<Table Name="YFS_ITEM_SHIP_NODE"/>
+						<!-- OMNI-2866 : End-->
+                    </Ignore>
+                    <AppendOnly>
+                    </AppendOnly>
+                </SourceTargetPair>
+                <SourceTargetPair SourceDatabase="XML" TargetDatabase="UATOMS901">
+                    <Transformations>
+                        <Table Name="YFS_RULES">
+                            <Column Name="RULE_SET_VALUE">
+							    <Transform Match="COM_EXTERNAL_UI_HOST" Replace="usterlingoms900.academy.com"/>
+						    </Column>
+						</Table>
+                        <Table Name="YFS_SUB_FLOW">
+                            <Column Name="CONFIG_XML">
+							    <Transform Match="DSV_SEND_SHIP_CONFIRM_MAIL_BUSINESS_GRP_TO" Replace="EcomSterlingShipConfirmationUAT@academy.com" />
+							    <Transform Match="DSV_SEND_SHIP_CONFIRM_MAIL_BUSINESS_GRP_CC" Replace="" XPath="xml:/SubFlowConfig/Node/Properties/@CC" />
+							    <Transform Match="SEND_MAIL_ORPHAN_INV_SUBJ" Replace="List of orphaned inventory in MSC and PACKLOC for the day(UAT)" XPath="xml:/SubFlowConfig/Node/Properties/@Subject" />
+							    <Transform Match="SEND_MAIL_ORPHAN_INV_TO" Replace="girijadevi.p@academy.com" XPath="xml:/SubFlowConfig/Node/Properties/@To" />
+							    <Transform Match="SEND_MAIL_ORPHAN_INV_CC" Replace="upendra.dubey@academy.com" XPath="xml:/SubFlowConfig/Node/Properties/@CC" />
+							    <Transform Match="SEND_MAIL_ORPHAN_INV_BCC" Replace="" XPath="xml:/SubFlowConfig/Node/Properties/@BCC" />
+							    <Transform Match="SEND_MAIL_CLOSE_MANIFEST_FAILURE_TO" Replace="upendra.dubey@academy.com,girijadevi.p@academy.com" XPath="xml:/SubFlowConfig/Node/Properties/@To" />
+							    <Transform Match="SEND_MAIL_EOD_NOT_PUBLISH_SUBJ" Replace="EOD Message Not Published(UAT)" XPath="xml:/SubFlowConfig/Node/Properties/@Subject" />
+							    <Transform Match="SEND_MAIL_EOD_NOT_PUBLISH_TO" Replace="girijadevi.p@academy.com" XPath="xml:/SubFlowConfig/Node/Properties/@To" />
+							    <Transform Match="SEND_MAIL_EOD_NOT_PUBLISH_CC" Replace="upendra.dubey@academy.com" XPath="xml:/SubFlowConfig/Node/Properties/@CC" />
+							    <Transform Match="SEND_MAIL_EOD_NOT_PUBLISH_BCC" Replace="" XPath="xml:/SubFlowConfig/Node/Properties/@BCC" />
+							    <Transform Match="SEND_MAIL_RETURN_DRAFT_NOT_CONFIRMED_TO" Replace="girijadevi.p@academy.com" XPath="xml:/SubFlowConfig/Node/Properties/@To" />
+							    <Transform Match="SEND_MAIL_RETURN_DRAFT_NOT_CONFIRMED_CC" Replace="upendra.dubey@academy.com" XPath="xml:/SubFlowConfig/Node/Properties/@CC" />
+							    <Transform Match="SEND_MAIL_RETURN_DRAFT_NOT_CONFIRMED_BCC" Replace="" XPath="xml:/SubFlowConfig/Node/Properties/@BCC" />
+								<Transform Match="SEND_MAIL_SHIPMENT_EXCEED_TO" Replace="girijadevi.p@academy.com" XPath="xml:/SubFlowConfig/Node/Properties/@To" />
+								<Transform Match="SEND_MAIL_SHIPMENT_EXCEED_CC" Replace="" XPath="xml:/SubFlowConfig/Node/Properties/@CC" />
+								<Transform Match="SEND_MAIL_SHIPMENT_EXCEED_BCC" Replace="" XPath="xml:/SubFlowConfig/Node/Properties/@BCC" />
+								<Transform Match="SEND_MAIL_DSV_SHIPCONF_RMS_TO" Replace="girijadevi.p@academy.com" XPath="xml:/SubFlowConfig/Node/Properties/@To" />
+								<Transform Match="SEND_MAIL_DSV_SHIPCONF_RMS_CC" Replace="" XPath="xml:/SubFlowConfig/Node/Properties/@CC" />
+								<Transform Match="SEND_MAIL_DSV_SHIPCONF_RMS_BCC" Replace="" XPath="xml:/SubFlowConfig/Node/Properties/@BCC" />
+								<Transform Match="SEND_EMAIL_ON_KOUNT_HOLD_DELAYS" Replace="arun.bendram@academy.com" XPath="xml:/SubFlowConfig/Node/Properties/@To" />
+						    </Column>
+						</Table>
+                    </Transformations>
+                    <Ignore>
+                        <Table Name="YFS_ZIP_CODE_LOCATION"/>
+                        <Table Name="YFS_USER"/>
+						<Table Name="PLT_PROPERTY_METADATA"/>
+                        <Table Name="YFS_USER_GROUP_LIST"/>
+                        <Table Name="YFS_CUSTOMER"/>
+                        <Table Name="YFS_CUSTOMER_CONTACT"/>
+                        <Table Name="YFS_CUSTOMER_ADDNL_ADDRESS"/>
+                        <Table Name="YFS_PARTICIPANT_NOTE"/>
+                        <Table Name="YFS_QUEUE_SUBSCRIPTION"/>
+                        <Table Name="YFS_ITEM"/>
+                        <Table Name="YFS_ITEM_ALIAS"/>
+                        <Table Name="YFS_ITEM_TAG"/>
+                        <Table Name="YFS_ITEM_UOM"/>
+                        <Table Name="YFS_ITEM_INSTRUCTION"/>
+                        <Table Name="YFS_LOCATION"/>
+                        <Table Name="YFS_PERSON_INFO"/>
+                        <Table Name="YFS_DEVICE"/>
+						<Table Name="YFS_RES_POOL"/>
+                        <Table Name="YFS_RES_POOL_CAPCTY_CONSMPTN"/>
+                        <Table Name="YFS_RES_POOL_CAPCTY_OVERRIDE"/>
+                        <Table Name="YFS_RES_POOL_CONSMPTN_DTLS"/>
+                        <Table Name="YFS_RES_POOL_DOW_CAPCTY"/>
+                        <Table Name="YFS_RES_POOL_ITEM"/>
+                        <Table Name="YFS_RES_POOL_REGION"/>
+                        <Table Name="YFS_RES_POOL_SECONDARY_UOM"/>
+                        <Table Name="YFS_RES_POOL_SERVICE_SKILL"/>
+                        <Table Name="YFS_RES_POOL_STD_CAPCTY_PERD"/>
+						<Table Name="PLT_DB_POOL"/>
+						<Table Name="YFS_ADDITIONAL_ATTRIBUTE"/>
+						<Table Name="YFS_TRAN_LOCN_ATTRS"/>
+						<!-- OMNI-2866 : Start-->
+						<Table Name="YFS_ITEM_SHIP_NODE"/>
+						<!-- OMNI-2866 : End-->
+                    </Ignore>
+                    <AppendOnly>
+                    </AppendOnly>
+                </SourceTargetPair>
+				<!-- Added for RHEL WN-1119 -->
+				<!--UAT 200 Changes for Upgrade Start -->
+				<SourceTargetPair SourceDatabase="XML" TargetDatabase="UATOMS200">
+                    <Transformations>
+                        <Table Name="YFS_RULES">
+                            <Column Name="RULE_SET_VALUE">
+							    <Transform Match="COM_EXTERNAL_UI_HOST" Replace="usterlingoms200.academy.com"/>
+						    </Column>
+						</Table>
+                        <Table Name="YFS_SUB_FLOW">
+                            <Column Name="CONFIG_XML">
+							    <Transform Match="DSV_SEND_SHIP_CONFIRM_MAIL_BUSINESS_GRP_TO" Replace="EcomSterlingShipConfirmationUAT@academy.com" />
+							    <Transform Match="DSV_SEND_SHIP_CONFIRM_MAIL_BUSINESS_GRP_CC" Replace="" XPath="xml:/SubFlowConfig/Node/Properties/@CC" />
+							    <Transform Match="SEND_MAIL_ORPHAN_INV_SUBJ" Replace="List of orphaned inventory in MSC and PACKLOC for the day(UAT)" XPath="xml:/SubFlowConfig/Node/Properties/@Subject" />
+							    <Transform Match="SEND_MAIL_ORPHAN_INV_TO" Replace="girijadevi.p@academy.com" XPath="xml:/SubFlowConfig/Node/Properties/@To" />
+							    <Transform Match="SEND_MAIL_ORPHAN_INV_CC" Replace="upendra.dubey@academy.com" XPath="xml:/SubFlowConfig/Node/Properties/@CC" />
+							    <Transform Match="SEND_MAIL_ORPHAN_INV_BCC" Replace="" XPath="xml:/SubFlowConfig/Node/Properties/@BCC" />
+							    <Transform Match="SEND_MAIL_CLOSE_MANIFEST_FAILURE_TO" Replace="upendra.dubey@academy.com,girijadevi.p@academy.com" XPath="xml:/SubFlowConfig/Node/Properties/@To" />
+							    <Transform Match="SEND_MAIL_EOD_NOT_PUBLISH_SUBJ" Replace="EOD Message Not Published(UAT)" XPath="xml:/SubFlowConfig/Node/Properties/@Subject" />
+							    <Transform Match="SEND_MAIL_EOD_NOT_PUBLISH_TO" Replace="girijadevi.p@academy.com" XPath="xml:/SubFlowConfig/Node/Properties/@To" />
+							    <Transform Match="SEND_MAIL_EOD_NOT_PUBLISH_CC" Replace="upendra.dubey@academy.com" XPath="xml:/SubFlowConfig/Node/Properties/@CC" />
+							    <Transform Match="SEND_MAIL_EOD_NOT_PUBLISH_BCC" Replace="" XPath="xml:/SubFlowConfig/Node/Properties/@BCC" />
+							    <Transform Match="SEND_MAIL_RETURN_DRAFT_NOT_CONFIRMED_TO" Replace="girijadevi.p@academy.com" XPath="xml:/SubFlowConfig/Node/Properties/@To" />
+							    <Transform Match="SEND_MAIL_RETURN_DRAFT_NOT_CONFIRMED_CC" Replace="upendra.dubey@academy.com" XPath="xml:/SubFlowConfig/Node/Properties/@CC" />
+							    <Transform Match="SEND_MAIL_RETURN_DRAFT_NOT_CONFIRMED_BCC" Replace="" XPath="xml:/SubFlowConfig/Node/Properties/@BCC" />
+								<Transform Match="SEND_MAIL_SHIPMENT_EXCEED_TO" Replace="girijadevi.p@academy.com" XPath="xml:/SubFlowConfig/Node/Properties/@To" />
+								<Transform Match="SEND_MAIL_SHIPMENT_EXCEED_CC" Replace="" XPath="xml:/SubFlowConfig/Node/Properties/@CC" />
+								<Transform Match="SEND_MAIL_SHIPMENT_EXCEED_BCC" Replace="" XPath="xml:/SubFlowConfig/Node/Properties/@BCC" />
+								<Transform Match="SEND_MAIL_DSV_SHIPCONF_RMS_TO" Replace="girijadevi.p@academy.com" XPath="xml:/SubFlowConfig/Node/Properties/@To" />
+								<Transform Match="SEND_MAIL_DSV_SHIPCONF_RMS_CC" Replace="" XPath="xml:/SubFlowConfig/Node/Properties/@CC" />
+								<Transform Match="SEND_MAIL_DSV_SHIPCONF_RMS_BCC" Replace="" XPath="xml:/SubFlowConfig/Node/Properties/@BCC" />
+								<Transform Match="SEND_EMAIL_ON_KOUNT_HOLD_DELAYS" Replace="arun.bendram@academy.com" XPath="xml:/SubFlowConfig/Node/Properties/@To" />
+						    </Column>
+						</Table>
+                    </Transformations>
+                    <Ignore>
+                        <Table Name="YFS_ZIP_CODE_LOCATION"/>
+                        <Table Name="YFS_USER"/>
+						<Table Name="PLT_PROPERTY_METADATA"/>
+                        <Table Name="YFS_USER_GROUP_LIST"/>
+                        <Table Name="YFS_CUSTOMER"/>
+                        <Table Name="YFS_CUSTOMER_CONTACT"/>
+                        <Table Name="YFS_CUSTOMER_ADDNL_ADDRESS"/>
+                        <Table Name="YFS_PARTICIPANT_NOTE"/>
+                        <Table Name="YFS_QUEUE_SUBSCRIPTION"/>
+                        <Table Name="YFS_ITEM"/>
+                        <Table Name="YFS_ITEM_ALIAS"/>
+                        <Table Name="YFS_ITEM_TAG"/>
+                        <Table Name="YFS_ITEM_UOM"/>
+                        <Table Name="YFS_ITEM_INSTRUCTION"/>
+                        <Table Name="YFS_LOCATION"/>
+                        <Table Name="YFS_PERSON_INFO"/>
+                        <Table Name="YFS_DEVICE"/>
+						<Table Name="YFS_RES_POOL"/>
+                        <Table Name="YFS_RES_POOL_CAPCTY_CONSMPTN"/>
+                        <Table Name="YFS_RES_POOL_CAPCTY_OVERRIDE"/>
+                        <Table Name="YFS_RES_POOL_CONSMPTN_DTLS"/>
+                        <Table Name="YFS_RES_POOL_DOW_CAPCTY"/>
+                        <Table Name="YFS_RES_POOL_ITEM"/>
+                        <Table Name="YFS_RES_POOL_REGION"/>
+                        <Table Name="YFS_RES_POOL_SECONDARY_UOM"/>
+                        <Table Name="YFS_RES_POOL_SERVICE_SKILL"/>
+                        <Table Name="YFS_RES_POOL_STD_CAPCTY_PERD"/>
+						<Table Name="PLT_DB_POOL"/>
+						<Table Name="YFS_ADDITIONAL_ATTRIBUTE"/>
+						<Table Name="YFS_TRAN_LOCN_ATTRS"/>
+						<!-- OMNI-2866 : Start-->
+						<Table Name="YFS_ITEM_SHIP_NODE"/>
+						<!-- OMNI-2866 : End-->
+                    </Ignore>
+                    <AppendOnly>
+                    </AppendOnly>
+                </SourceTargetPair>
+				<!--UAT 200 Changes for Upgrade Start -->
+				<!-- Added for RHEL BOPIS-274 -->
+				<SourceTargetPair SourceDatabase="XML" TargetDatabase="UATOMS800">
+                    <Transformations>
+                        <Table Name="YFS_RULES">
+                            <Column Name="RULE_SET_VALUE">
+							    <Transform Match="COM_EXTERNAL_UI_HOST" Replace="usterlingoms800.academy.com"/>
+						    </Column>
+						</Table>
+                        <Table Name="YFS_SUB_FLOW">
+                            <Column Name="CONFIG_XML">
+							    <Transform Match="DSV_SEND_SHIP_CONFIRM_MAIL_BUSINESS_GRP_TO" Replace="EcomSterlingShipConfirmationUAT@academy.com" />
+							    <Transform Match="DSV_SEND_SHIP_CONFIRM_MAIL_BUSINESS_GRP_CC" Replace="" XPath="xml:/SubFlowConfig/Node/Properties/@CC" />
+							    <Transform Match="SEND_MAIL_ORPHAN_INV_SUBJ" Replace="List of orphaned inventory in MSC and PACKLOC for the day(UAT)" XPath="xml:/SubFlowConfig/Node/Properties/@Subject" />
+							    <Transform Match="SEND_MAIL_ORPHAN_INV_TO" Replace="girijadevi.p@academy.com" XPath="xml:/SubFlowConfig/Node/Properties/@To" />
+							    <Transform Match="SEND_MAIL_ORPHAN_INV_CC" Replace="upendra.dubey@academy.com" XPath="xml:/SubFlowConfig/Node/Properties/@CC" />
+							    <Transform Match="SEND_MAIL_ORPHAN_INV_BCC" Replace="" XPath="xml:/SubFlowConfig/Node/Properties/@BCC" />
+							    <Transform Match="SEND_MAIL_CLOSE_MANIFEST_FAILURE_TO" Replace="upendra.dubey@academy.com,girijadevi.p@academy.com" XPath="xml:/SubFlowConfig/Node/Properties/@To" />
+							    <Transform Match="SEND_MAIL_EOD_NOT_PUBLISH_SUBJ" Replace="EOD Message Not Published(UAT)" XPath="xml:/SubFlowConfig/Node/Properties/@Subject" />
+							    <Transform Match="SEND_MAIL_EOD_NOT_PUBLISH_TO" Replace="girijadevi.p@academy.com" XPath="xml:/SubFlowConfig/Node/Properties/@To" />
+							    <Transform Match="SEND_MAIL_EOD_NOT_PUBLISH_CC" Replace="upendra.dubey@academy.com" XPath="xml:/SubFlowConfig/Node/Properties/@CC" />
+							    <Transform Match="SEND_MAIL_EOD_NOT_PUBLISH_BCC" Replace="" XPath="xml:/SubFlowConfig/Node/Properties/@BCC" />
+							    <Transform Match="SEND_MAIL_RETURN_DRAFT_NOT_CONFIRMED_TO" Replace="girijadevi.p@academy.com" XPath="xml:/SubFlowConfig/Node/Properties/@To" />
+							    <Transform Match="SEND_MAIL_RETURN_DRAFT_NOT_CONFIRMED_CC" Replace="upendra.dubey@academy.com" XPath="xml:/SubFlowConfig/Node/Properties/@CC" />
+							    <Transform Match="SEND_MAIL_RETURN_DRAFT_NOT_CONFIRMED_BCC" Replace="" XPath="xml:/SubFlowConfig/Node/Properties/@BCC" />
+								<Transform Match="SEND_MAIL_SHIPMENT_EXCEED_TO" Replace="girijadevi.p@academy.com" XPath="xml:/SubFlowConfig/Node/Properties/@To" />
+								<Transform Match="SEND_MAIL_SHIPMENT_EXCEED_CC" Replace="" XPath="xml:/SubFlowConfig/Node/Properties/@CC" />
+								<Transform Match="SEND_MAIL_SHIPMENT_EXCEED_BCC" Replace="" XPath="xml:/SubFlowConfig/Node/Properties/@BCC" />
+								<Transform Match="SEND_MAIL_DSV_SHIPCONF_RMS_TO" Replace="girijadevi.p@academy.com" XPath="xml:/SubFlowConfig/Node/Properties/@To" />
+								<Transform Match="SEND_MAIL_DSV_SHIPCONF_RMS_CC" Replace="" XPath="xml:/SubFlowConfig/Node/Properties/@CC" />
+								<Transform Match="SEND_MAIL_DSV_SHIPCONF_RMS_BCC" Replace="" XPath="xml:/SubFlowConfig/Node/Properties/@BCC" />
+								<Transform Match="SEND_EMAIL_ON_KOUNT_HOLD_DELAYS" Replace="arun.bendram@academy.com" XPath="xml:/SubFlowConfig/Node/Properties/@To" />
+						    </Column>
+						</Table>
+                    </Transformations>
+                    <Ignore>
+                        <Table Name="YFS_ZIP_CODE_LOCATION"/>
+                        <Table Name="YFS_USER"/>
+                        <Table Name="YFS_USER_GROUP_LIST"/>
+                        <Table Name="YFS_CUSTOMER"/>
+                        <Table Name="YFS_CUSTOMER_CONTACT"/>
+                        <Table Name="YFS_CUSTOMER_ADDNL_ADDRESS"/>
+                        <Table Name="YFS_PARTICIPANT_NOTE"/>
+                        <Table Name="YFS_QUEUE_SUBSCRIPTION"/>
+                        <Table Name="YFS_ITEM"/>
+                        <Table Name="YFS_ITEM_ALIAS"/>
+                        <Table Name="YFS_ITEM_TAG"/>
+                        <Table Name="YFS_ITEM_UOM"/>
+                        <Table Name="YFS_ITEM_INSTRUCTION"/>
+                        <Table Name="YFS_LOCATION"/>
+                        <Table Name="YFS_PERSON_INFO"/>
+                        <Table Name="YFS_DEVICE"/>
+						<Table Name="YFS_RES_POOL"/>
+                        <Table Name="YFS_RES_POOL_CAPCTY_CONSMPTN"/>
+                        <Table Name="YFS_RES_POOL_CAPCTY_OVERRIDE"/>
+                        <Table Name="YFS_RES_POOL_CONSMPTN_DTLS"/>
+                        <Table Name="YFS_RES_POOL_DOW_CAPCTY"/>
+                        <Table Name="YFS_RES_POOL_ITEM"/>
+                        <Table Name="YFS_RES_POOL_REGION"/>
+                        <Table Name="YFS_RES_POOL_SECONDARY_UOM"/>
+                        <Table Name="YFS_RES_POOL_SERVICE_SKILL"/>
+                        <Table Name="YFS_RES_POOL_STD_CAPCTY_PERD"/>
+						<Table Name="YFS_DEVICE"/>
+                        <Table Name="YFS_DEVICE_TYPE"/>
+                        <Table Name="YFS_DEVICE_SUB_TYPE"/>
+                        <Table Name="YFS_USER_PRINTER_PREFERENCE"/>
+						<Table Name="PLT_DB_POOL"/>
+						<Table Name="PLT_PROPERTY_METADATA"/>
+						<Table Name="YFS_ADDITIONAL_ATTRIBUTE"/>
+						<Table Name="YFS_TRAN_LOCN_ATTRS"/>
+						<!-- OMNI-2866 : Start-->
+						<Table Name="YFS_ITEM_SHIP_NODE"/>
+						<!-- OMNI-2866 : End-->
+                    </Ignore>
+                    <AppendOnly>
+                    </AppendOnly>
+                </SourceTargetPair>
+				<!-- Added for RHEL BOPIS-274 -->
+				
+                <SourceTargetPair SourceDatabase="XML" TargetDatabase="PRDOMS">
+                    <Transformations>
+                        <Table Name="YFS_RULES">
+                            <Column Name="RULE_SET_VALUE">
+							    <Transform Match="COM_EXTERNAL_UI_HOST" Replace="sterlingoms.academy.com"/>
+						    </Column>
+						</Table>
+                        <Table Name="YFS_SUB_FLOW">
+                            <Column Name="CONFIG_XML">
+							    <Transform Match="DSV_SEND_SHIP_CONFIRM_MAIL_BUSINESS_GRP_TO" Replace="dropship@academy.com" XPath="xml:/SubFlowConfig/Node/Properties/@To" />
+							    <Transform Match="DSV_SEND_SHIP_CONFIRM_MAIL_BUSINESS_GRP_CC" Replace="Denene.Stewart@Academy.com" XPath="xml:/SubFlowConfig/Node/Properties/@CC" />
+							    <Transform Match="SEND_MAIL_ORPHAN_INV_SUBJ" Replace="List of orphaned inventory in MSC and PACKLOC for the day(PRODUCTION)" XPath="xml:/SubFlowConfig/Node/Properties/@Subject" />
+							    <Transform Match="SEND_MAIL_ORPHAN_INV_TO" Replace="ecomAdminTeamInternal@academy.com" XPath="xml:/SubFlowConfig/Node/Properties/@To" />
+							    <Transform Match="SEND_MAIL_ORPHAN_INV_CC" Replace="ecomCognizantSterling@academy.com" XPath="xml:/SubFlowConfig/Node/Properties/@CC" />
+							    <Transform Match="SEND_MAIL_ORPHAN_INV_BCC" Replace="ecomsiteoperations@academy.com" XPath="xml:/SubFlowConfig/Node/Properties/@BCC" />
+							    <Transform Match="SEND_MAIL_CLOSE_MANIFEST_FAILURE_TO" Replace="sfsadmin@academy.com,ecomsterlingsupport@academy.com" XPath="xml:/SubFlowConfig/Node/Properties/@To" />
+							    <Transform Match="SEND_MAIL_EOD_NOT_PUBLISH_SUBJ" Replace="EOD Message Not Published(PRODUCTION)" XPath="xml:/SubFlowConfig/Node/Properties/@Subject" />
+							    <Transform Match="SEND_MAIL_EOD_NOT_PUBLISH_TO" Replace="ecomAdminTeamInternal@academy.com" XPath="xml:/SubFlowConfig/Node/Properties/@To" />
+							    <Transform Match="SEND_MAIL_EOD_NOT_PUBLISH_CC" Replace="ecomCognizantSterling@academy.com" XPath="xml:/SubFlowConfig/Node/Properties/@CC" />
+							    <Transform Match="SEND_MAIL_EOD_NOT_PUBLISH_BCC" Replace="ecomsiteoperations@academy.com" XPath="xml:/SubFlowConfig/Node/Properties/@BCC" />
+							    <Transform Match="SEND_MAIL_RETURN_DRAFT_NOT_CONFIRMED_TO" Replace="ecomAdminTeamInternal@academy.com" XPath="xml:/SubFlowConfig/Node/Properties/@To" />
+							    <Transform Match="SEND_MAIL_RETURN_DRAFT_NOT_CONFIRMED_CC" Replace="ecomCognizantSterling@academy.com" XPath="xml:/SubFlowConfig/Node/Properties/@CC" />
+							    <Transform Match="SEND_MAIL_RETURN_DRAFT_NOT_CONFIRMED_BCC" Replace="ecomsiteoperations@academy.com" XPath="xml:/SubFlowConfig/Node/Properties/@BCC" />
+								<Transform Match="SEND_MAIL_SHIPMENT_EXCEED_TO" Replace="john.jones@academy.com, summer.schulten@academy.com, eureka.hart@academy.com, sfsadmin@academy.com" XPath="xml:/SubFlowConfig/Node/Properties/@To" />
+								<Transform Match="SEND_MAIL_SHIPMENT_EXCEED_CC" Replace="ecomsterlingsupport@academy.com" XPath="xml:/SubFlowConfig/Node/Properties/@CC" />
+								<Transform Match="SEND_MAIL_SHIPMENT_EXCEED_BCC" Replace="" XPath="xml:/SubFlowConfig/Node/Properties/@BCC" />
+								<Transform Match="SEND_EMAIL_ON_KOUNT_HOLD_DELAYS" Replace="ecomsiteoperations@academy.com,ecomsterlingsupport@academy.com" XPath="xml:/SubFlowConfig/Node/Properties/@To" />
+							</Column>
+						</Table>
+                    </Transformations>
+                    <Ignore>
+                        <Table Name="YFS_ZIP_CODE_LOCATION"/>
+                        <Table Name="YFS_USER"/>
+                        <Table Name="YFS_USER_GROUP_LIST"/>
+                        <Table Name="YFS_CUSTOMER"/>
+                        <Table Name="YFS_CUSTOMER_CONTACT"/>
+                        <Table Name="YFS_CUSTOMER_ADDNL_ADDRESS"/>
+                        <Table Name="YFS_PARTICIPANT_NOTE"/>
+                        <Table Name="YFS_QUEUE_SUBSCRIPTION"/>
+                        <Table Name="YFS_ITEM"/>
+                        <Table Name="YFS_ITEM_ALIAS"/>
+                        <Table Name="YFS_ITEM_TAG"/>
+                        <Table Name="YFS_ITEM_UOM"/>
+                        <Table Name="YFS_ITEM_INSTRUCTION"/>
+                        <Table Name="YFS_LOCATION"/>
+                        <Table Name="YFS_PERSON_INFO"/>
+						<Table Name="YFS_RES_POOL"/>
+                        <Table Name="YFS_RES_POOL_CAPCTY_CONSMPTN"/>
+                        <Table Name="YFS_RES_POOL_CAPCTY_OVERRIDE"/>
+                        <Table Name="YFS_RES_POOL_CONSMPTN_DTLS"/>
+                        <Table Name="YFS_RES_POOL_DOW_CAPCTY"/>
+                        <Table Name="YFS_RES_POOL_ITEM"/>
+                        <Table Name="YFS_RES_POOL_REGION"/>
+                        <Table Name="YFS_RES_POOL_SECONDARY_UOM"/>
+                        <Table Name="YFS_RES_POOL_SERVICE_SKILL"/>
+                        <Table Name="YFS_RES_POOL_STD_CAPCTY_PERD"/>
+						<Table Name="PLT_DB_POOL"/>
+						<Table Name="PLT_PROPERTY_METADATA"/>
+						<Table Name="YFS_DEVICE"/>
+						<Table Name="YFS_ADDITIONAL_ATTRIBUTE"/>
+						<Table Name="YFS_TRAN_LOCN_ATTRS"/>
+						<!-- OMNI-2866 : Start-->
+						<Table Name="YFS_ITEM_SHIP_NODE"/>
+						<!-- OMNI-2866 : End-->
+                    </Ignore>
+                    <AppendOnly>
+                    </AppendOnly>
+                </SourceTargetPair>
+				
+				<!-- Added for RHEL WN-1119 -->
+				
+				<SourceTargetPair SourceDatabase="XML" TargetDatabase="PRDOMS400">
+                    <Transformations>
+                        <Table Name="YFS_RULES">
+                            <Column Name="RULE_SET_VALUE">
+							    <Transform Match="COM_EXTERNAL_UI_HOST" Replace="sterlingoms.academy.com"/>
+						    </Column>
+						</Table>
+                        <Table Name="YFS_SUB_FLOW">
+                            <Column Name="CONFIG_XML">
+							    <Transform Match="DSV_SEND_SHIP_CONFIRM_MAIL_BUSINESS_GRP_TO" Replace="dropship@academy.com" XPath="xml:/SubFlowConfig/Node/Properties/@To" />
+							    <Transform Match="DSV_SEND_SHIP_CONFIRM_MAIL_BUSINESS_GRP_CC" Replace="Denene.Stewart@Academy.com" XPath="xml:/SubFlowConfig/Node/Properties/@CC" />
+							    <Transform Match="SEND_MAIL_ORPHAN_INV_SUBJ" Replace="List of orphaned inventory in MSC and PACKLOC for the day(PRODUCTION)" XPath="xml:/SubFlowConfig/Node/Properties/@Subject" />
+							    <Transform Match="SEND_MAIL_ORPHAN_INV_TO" Replace="ecomAdminTeamInternal@academy.com" XPath="xml:/SubFlowConfig/Node/Properties/@To" />
+							    <Transform Match="SEND_MAIL_ORPHAN_INV_CC" Replace="ecomCognizantSterling@academy.com" XPath="xml:/SubFlowConfig/Node/Properties/@CC" />
+							    <Transform Match="SEND_MAIL_ORPHAN_INV_BCC" Replace="ecomsiteoperations@academy.com" XPath="xml:/SubFlowConfig/Node/Properties/@BCC" />
+							    <Transform Match="SEND_MAIL_CLOSE_MANIFEST_FAILURE_TO" Replace="sfsadmin@academy.com,ecomsterlingsupport@academy.com" XPath="xml:/SubFlowConfig/Node/Properties/@To" />
+							    <Transform Match="SEND_MAIL_EOD_NOT_PUBLISH_SUBJ" Replace="EOD Message Not Published(PRODUCTION)" XPath="xml:/SubFlowConfig/Node/Properties/@Subject" />
+							    <Transform Match="SEND_MAIL_EOD_NOT_PUBLISH_TO" Replace="ecomAdminTeamInternal@academy.com" XPath="xml:/SubFlowConfig/Node/Properties/@To" />
+							    <Transform Match="SEND_MAIL_EOD_NOT_PUBLISH_CC" Replace="ecomCognizantSterling@academy.com" XPath="xml:/SubFlowConfig/Node/Properties/@CC" />
+							    <Transform Match="SEND_MAIL_EOD_NOT_PUBLISH_BCC" Replace="ecomsiteoperations@academy.com" XPath="xml:/SubFlowConfig/Node/Properties/@BCC" />
+							    <Transform Match="SEND_MAIL_RETURN_DRAFT_NOT_CONFIRMED_TO" Replace="ecomAdminTeamInternal@academy.com" XPath="xml:/SubFlowConfig/Node/Properties/@To" />
+							    <Transform Match="SEND_MAIL_RETURN_DRAFT_NOT_CONFIRMED_CC" Replace="ecomCognizantSterling@academy.com" XPath="xml:/SubFlowConfig/Node/Properties/@CC" />
+							    <Transform Match="SEND_MAIL_RETURN_DRAFT_NOT_CONFIRMED_BCC" Replace="ecomsiteoperations@academy.com" XPath="xml:/SubFlowConfig/Node/Properties/@BCC" />
+								<Transform Match="SEND_MAIL_SHIPMENT_EXCEED_TO" Replace="john.jones@academy.com, summer.schulten@academy.com, eureka.hart@academy.com, sfsadmin@academy.com" XPath="xml:/SubFlowConfig/Node/Properties/@To" />
+								<Transform Match="SEND_MAIL_SHIPMENT_EXCEED_CC" Replace="ecomsterlingsupport@academy.com" XPath="xml:/SubFlowConfig/Node/Properties/@CC" />
+								<Transform Match="SEND_MAIL_SHIPMENT_EXCEED_BCC" Replace="" XPath="xml:/SubFlowConfig/Node/Properties/@BCC" />
+								<Transform Match="SEND_EMAIL_ON_KOUNT_HOLD_DELAYS" Replace="ecomsiteoperations@academy.com,ecomsterlingsupport@academy.com" XPath="xml:/SubFlowConfig/Node/Properties/@To" />
+							</Column>
+						</Table>
+                    </Transformations>
+                    <Ignore>
+                        <Table Name="YFS_ZIP_CODE_LOCATION"/>
+                        <Table Name="YFS_USER"/>
+                        <Table Name="YFS_USER_GROUP_LIST"/>
+                        <Table Name="YFS_CUSTOMER"/>
+                        <Table Name="YFS_CUSTOMER_CONTACT"/>
+                        <Table Name="YFS_CUSTOMER_ADDNL_ADDRESS"/>
+                        <Table Name="YFS_PARTICIPANT_NOTE"/>
+                        <Table Name="YFS_QUEUE_SUBSCRIPTION"/>
+                        <Table Name="YFS_ITEM"/>
+                        <Table Name="YFS_ITEM_ALIAS"/>
+                        <Table Name="YFS_ITEM_TAG"/>
+                        <Table Name="YFS_ITEM_UOM"/>
+                        <Table Name="YFS_ITEM_INSTRUCTION"/>
+                        <Table Name="YFS_LOCATION"/>
+                        <Table Name="YFS_PERSON_INFO"/>
+						<Table Name="YFS_RES_POOL"/>
+                        <Table Name="YFS_RES_POOL_CAPCTY_CONSMPTN"/>
+                        <Table Name="YFS_RES_POOL_CAPCTY_OVERRIDE"/>
+                        <Table Name="YFS_RES_POOL_CONSMPTN_DTLS"/>
+                        <Table Name="YFS_RES_POOL_DOW_CAPCTY"/>
+                        <Table Name="YFS_RES_POOL_ITEM"/>
+                        <Table Name="YFS_RES_POOL_REGION"/>
+                        <Table Name="YFS_RES_POOL_SECONDARY_UOM"/>
+                        <Table Name="YFS_RES_POOL_SERVICE_SKILL"/>
+                        <Table Name="YFS_RES_POOL_STD_CAPCTY_PERD"/>
+						<Table Name="PLT_DB_POOL"/>
+						<Table Name="PLT_PROPERTY_METADATA"/>
+						<Table Name="YFS_DEVICE"/>
+						<Table Name="YFS_ADDITIONAL_ATTRIBUTE"/>
+						<Table Name="YFS_TRAN_LOCN_ATTRS"/>
+						<!-- OMNI-2866 : Start-->
+						<Table Name="YFS_ITEM_SHIP_NODE"/>
+						<!-- OMNI-2866 : End-->
+                    </Ignore>
+                    <AppendOnly>
+                    </AppendOnly>
+                </SourceTargetPair>
+				
+				<!-- Added for DR Start -->
+				<SourceTargetPair SourceDatabase="XML" TargetDatabase="PRDAUS">
+                    <Transformations>
+                        <Table Name="YFS_RULES">
+                            <Column Name="RULE_SET_VALUE">
+                                                   <Transform Match="COM_EXTERNAL_UI_HOST" Replace="plausapoms601e.academy.com"/>
+                                            </Column>
+                                        </Table>
+                        <Table Name="YFS_SUB_FLOW">
+                            <Column Name="CONFIG_XML">
+                                                   <Transform Match="DSV_SEND_SHIP_CONFIRM_MAIL_BUSINESS_GRP_TO" Replace="EcomSterlingShipConfirmationUAT@academy.com" XPath="xml:/SubFlowConfig/Node/Properties/@To" />
+                                                   <Transform Match="DSV_SEND_SHIP_CONFIRM_MAIL_BUSINESS_GRP_CC" Replace="" XPath="xml:/SubFlowConfig/Node/Properties/@CC" />
+                                                   <Transform Match="SEND_MAIL_ORPHAN_INV_SUBJ" Replace="List of orphaned inventory in MSC and PACKLOC for the day(UAT)" XPath="xml:/SubFlowConfig/Node/Properties/@Subject" />
+                                                   <Transform Match="SEND_MAIL_ORPHAN_INV_TO" Replace="girijadevi.p@academy.com" XPath="xml:/SubFlowConfig/Node/Properties/@To" />
+                                                   <Transform Match="SEND_MAIL_ORPHAN_INV_CC" Replace="upendra.dubey@academy.com" XPath="xml:/SubFlowConfig/Node/Properties/@CC" />
+                                                   <Transform Match="SEND_MAIL_ORPHAN_INV_BCC" Replace="" XPath="xml:/SubFlowConfig/Node/Properties/@BCC" />
+                                                   <Transform Match="SEND_MAIL_CLOSE_MANIFEST_FAILURE_TO" Replace="upendra.dubey@academy.com,girijadevi.p@academy.com" XPath="xml:/SubFlowConfig/Node/Properties/@To" />
+                                                   <Transform Match="SEND_MAIL_EOD_NOT_PUBLISH_SUBJ" Replace="EOD Message Not Published(UAT)" XPath="xml:/SubFlowConfig/Node/Properties/@Subject" />
+                                                   <Transform Match="SEND_MAIL_EOD_NOT_PUBLISH_TO" Replace="girijadevi.p@academy.com" XPath="xml:/SubFlowConfig/Node/Properties/@To" />
+                                                   <Transform Match="SEND_MAIL_EOD_NOT_PUBLISH_CC" Replace="upendra.dubey@academy.com" XPath="xml:/SubFlowConfig/Node/Properties/@CC" />
+                                                   <Transform Match="SEND_MAIL_EOD_NOT_PUBLISH_BCC" Replace="" XPath="xml:/SubFlowConfig/Node/Properties/@BCC" />
+                                                   <Transform Match="SEND_MAIL_RETURN_DRAFT_NOT_CONFIRMED_TO" Replace="girijadevi.p@academy.com" XPath="xml:/SubFlowConfig/Node/Properties/@To" />
+                                                   <Transform Match="SEND_MAIL_RETURN_DRAFT_NOT_CONFIRMED_CC" Replace="upendra.dubey@academy.com" XPath="xml:/SubFlowConfig/Node/Properties/@CC" />
+                                                   <Transform Match="SEND_MAIL_RETURN_DRAFT_NOT_CONFIRMED_BCC" Replace="" XPath="xml:/SubFlowConfig/Node/Properties/@BCC" />
+                                                      <Transform Match="SEND_MAIL_SHIPMENT_EXCEED_TO" Replace="girijadevi.p@academy.com" XPath="xml:/SubFlowConfig/Node/Properties/@To" />
+                                                      <Transform Match="SEND_MAIL_SHIPMENT_EXCEED_CC" Replace="" XPath="xml:/SubFlowConfig/Node/Properties/@CC" />
+                                                      <Transform Match="SEND_MAIL_SHIPMENT_EXCEED_BCC" Replace="" XPath="xml:/SubFlowConfig/Node/Properties/@BCC" />
+                                                      <Transform Match="SEND_MAIL_DSV_SHIPCONF_RMS_TO" Replace="girijadevi.p@academy.com" XPath="xml:/SubFlowConfig/Node/Properties/@To" />
+                                                      <Transform Match="SEND_MAIL_DSV_SHIPCONF_RMS_CC" Replace="" XPath="xml:/SubFlowConfig/Node/Properties/@CC" />
+                                                      <Transform Match="SEND_MAIL_DSV_SHIPCONF_RMS_BCC" Replace="" XPath="xml:/SubFlowConfig/Node/Properties/@BCC" />
+                                                      <Transform Match="SEND_EMAIL_ON_KOUNT_HOLD_DELAYS" Replace="arun.bendram@academy.com" XPath="xml:/SubFlowConfig/Node/Properties/@To" />
+                                               </Column>
+                                        </Table>
+                    </Transformations>
+                    <Ignore>
+                        <Table Name="YFS_ZIP_CODE_LOCATION"/>
+                        <Table Name="YFS_USER"/>
+                        <Table Name="YFS_USER_GROUP_LIST"/>
+                        <Table Name="YFS_CUSTOMER"/>
+                        <Table Name="YFS_CUSTOMER_CONTACT"/>
+                        <Table Name="YFS_CUSTOMER_ADDNL_ADDRESS"/>
+                        <Table Name="YFS_PARTICIPANT_NOTE"/>
+                        <Table Name="YFS_QUEUE_SUBSCRIPTION"/>
+                        <Table Name="YFS_ITEM"/>
+                        <Table Name="YFS_ITEM_ALIAS"/>
+                        <Table Name="YFS_ITEM_TAG"/>
+                        <Table Name="YFS_ITEM_UOM"/>
+                        <Table Name="YFS_ITEM_INSTRUCTION"/>
+                        <Table Name="YFS_LOCATION"/>
+                        <Table Name="YFS_PERSON_INFO"/>
+                                        <Table Name="YFS_RES_POOL"/>
+                        <Table Name="YFS_RES_POOL_CAPCTY_CONSMPTN"/>
+                        <Table Name="YFS_RES_POOL_CAPCTY_OVERRIDE"/>
+                        <Table Name="YFS_RES_POOL_CONSMPTN_DTLS"/>
+                        <Table Name="YFS_RES_POOL_DOW_CAPCTY"/>
+                        <Table Name="YFS_RES_POOL_ITEM"/>
+                        <Table Name="YFS_RES_POOL_REGION"/>
+                        <Table Name="YFS_RES_POOL_SECONDARY_UOM"/>
+                        <Table Name="YFS_RES_POOL_SERVICE_SKILL"/>
+                        <Table Name="YFS_RES_POOL_STD_CAPCTY_PERD"/>
+                                        <Table Name="PLT_DB_POOL"/>
+                                        <Table Name="PLT_PROPERTY_METADATA"/>
+                                        <Table Name="YFS_DEVICE"/>
+                                        <Table Name="YFS_ADDITIONAL_ATTRIBUTE"/>
+                                        <Table Name="YFS_TRAN_LOCN_ATTRS"/>
+                                        <!-- OMNI-2866 : Start-->
+                                        <Table Name="YFS_ITEM_SHIP_NODE"/>
+                                        <!-- OMNI-2866 : End-->
+                    </Ignore>
+                    <AppendOnly>
+                    </AppendOnly>
+                </SourceTargetPair>
+				<!-- Added for DR End -->
+				
+				<SourceTargetPair SourceDatabase="XML" TargetDatabase="MCPOMS400">
+                    <Transformations>
+                        <Table Name="YFS_RULES">
+                            <Column Name="RULE_SET_VALUE">
+							    <Transform Match="COM_EXTERNAL_UI_HOST" Replace="sterlingoms.academy.com"/>
+						    </Column>
+						</Table>
+                        <Table Name="YFS_SUB_FLOW">
+                            <Column Name="CONFIG_XML">
+							    <Transform Match="DSV_SEND_SHIP_CONFIRM_MAIL_BUSINESS_GRP_TO" Replace="EcomSterlingShipConfirmationUAT@academy.com" />
+							    <Transform Match="DSV_SEND_SHIP_CONFIRM_MAIL_BUSINESS_GRP_CC" Replace="" XPath="xml:/SubFlowConfig/Node/Properties/@CC" />
+							    <Transform Match="SEND_MAIL_ORPHAN_INV_SUBJ" Replace="List of orphaned inventory in MSC and PACKLOC for the day(UAT)" XPath="xml:/SubFlowConfig/Node/Properties/@Subject" />
+							    <Transform Match="SEND_MAIL_ORPHAN_INV_TO" Replace="girijadevi.p@academy.com" XPath="xml:/SubFlowConfig/Node/Properties/@To" />
+							    <Transform Match="SEND_MAIL_ORPHAN_INV_CC" Replace="upendra.dubey@academy.com" XPath="xml:/SubFlowConfig/Node/Properties/@CC" />
+							    <Transform Match="SEND_MAIL_ORPHAN_INV_BCC" Replace="" XPath="xml:/SubFlowConfig/Node/Properties/@BCC" />
+							    <Transform Match="SEND_MAIL_CLOSE_MANIFEST_FAILURE_TO" Replace="upendra.dubey@academy.com,girijadevi.p@academy.com" XPath="xml:/SubFlowConfig/Node/Properties/@To" />
+							    <Transform Match="SEND_MAIL_EOD_NOT_PUBLISH_SUBJ" Replace="EOD Message Not Published(UAT)" XPath="xml:/SubFlowConfig/Node/Properties/@Subject" />
+							    <Transform Match="SEND_MAIL_EOD_NOT_PUBLISH_TO" Replace="girijadevi.p@academy.com" XPath="xml:/SubFlowConfig/Node/Properties/@To" />
+							    <Transform Match="SEND_MAIL_EOD_NOT_PUBLISH_CC" Replace="upendra.dubey@academy.com" XPath="xml:/SubFlowConfig/Node/Properties/@CC" />
+							    <Transform Match="SEND_MAIL_EOD_NOT_PUBLISH_BCC" Replace="" XPath="xml:/SubFlowConfig/Node/Properties/@BCC" />
+							    <Transform Match="SEND_MAIL_RETURN_DRAFT_NOT_CONFIRMED_TO" Replace="girijadevi.p@academy.com" XPath="xml:/SubFlowConfig/Node/Properties/@To" />
+							    <Transform Match="SEND_MAIL_RETURN_DRAFT_NOT_CONFIRMED_CC" Replace="upendra.dubey@academy.com" XPath="xml:/SubFlowConfig/Node/Properties/@CC" />
+							    <Transform Match="SEND_MAIL_RETURN_DRAFT_NOT_CONFIRMED_BCC" Replace="" XPath="xml:/SubFlowConfig/Node/Properties/@BCC" />
+								<Transform Match="SEND_MAIL_SHIPMENT_EXCEED_TO" Replace="girijadevi.p@academy.com" XPath="xml:/SubFlowConfig/Node/Properties/@To" />
+								<Transform Match="SEND_MAIL_SHIPMENT_EXCEED_CC" Replace="" XPath="xml:/SubFlowConfig/Node/Properties/@CC" />
+								<Transform Match="SEND_MAIL_SHIPMENT_EXCEED_BCC" Replace="" XPath="xml:/SubFlowConfig/Node/Properties/@BCC" />
+								<Transform Match="SEND_MAIL_DSV_SHIPCONF_RMS_TO" Replace="girijadevi.p@academy.com" XPath="xml:/SubFlowConfig/Node/Properties/@To" />
+								<Transform Match="SEND_MAIL_DSV_SHIPCONF_RMS_CC" Replace="" XPath="xml:/SubFlowConfig/Node/Properties/@CC" />
+								<Transform Match="SEND_MAIL_DSV_SHIPCONF_RMS_BCC" Replace="" XPath="xml:/SubFlowConfig/Node/Properties/@BCC" />
+						    </Column>
+						</Table>
+                    </Transformations>
+                    <Ignore>
+                        <Table Name="YFS_ZIP_CODE_LOCATION"/>
+                        <Table Name="YFS_USER"/>
+                        <Table Name="YFS_USER_GROUP_LIST"/>
+                        <Table Name="YFS_CUSTOMER"/>
+                        <Table Name="YFS_CUSTOMER_CONTACT"/>
+                        <Table Name="YFS_CUSTOMER_ADDNL_ADDRESS"/>
+                        <Table Name="YFS_PARTICIPANT_NOTE"/>
+                        <Table Name="YFS_QUEUE_SUBSCRIPTION"/>
+                        <Table Name="YFS_ITEM"/>
+                        <Table Name="YFS_ITEM_ALIAS"/>
+                        <Table Name="YFS_ITEM_TAG"/>
+                        <Table Name="YFS_ITEM_UOM"/>
+                        <Table Name="YFS_ITEM_INSTRUCTION"/>
+                        <Table Name="YFS_LOCATION"/>
+                        <Table Name="YFS_PERSON_INFO"/>
+                        <Table Name="YFS_DEVICE"/>
+						<Table Name="YFS_RES_POOL"/>
+                        <Table Name="YFS_RES_POOL_CAPCTY_CONSMPTN"/>
+                        <Table Name="YFS_RES_POOL_CAPCTY_OVERRIDE"/>
+                        <Table Name="YFS_RES_POOL_CONSMPTN_DTLS"/>
+                        <Table Name="YFS_RES_POOL_DOW_CAPCTY"/>
+                        <Table Name="YFS_RES_POOL_ITEM"/>
+                        <Table Name="YFS_RES_POOL_REGION"/>
+                        <Table Name="YFS_RES_POOL_SECONDARY_UOM"/>
+                        <Table Name="YFS_RES_POOL_SERVICE_SKILL"/>
+                        <Table Name="YFS_RES_POOL_STD_CAPCTY_PERD"/>
+						<Table Name="PLT_DB_POOL"/>
+						<Table Name="PLT_PROPERTY_METADATA"/>
+						<!-- OMNI-2866 : Start-->
+						<Table Name="YFS_ITEM_SHIP_NODE"/>
+						<!-- OMNI-2866 : End-->
+                    </Ignore>
+                    <AppendOnly>
+                    </AppendOnly>
+                </SourceTargetPair>
+				
+				<!-- Added for RHEL WN-1119 -->
+				
+            </SourceTargetPrefs>
+        </SourceTargetPrefs>
+    </configsynch>
+</preferences>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Controller
+    className="com.sterlingcommerce.ui.web.platform.controller.SCUIXAPIMashupController"
+    controllerId="extn.components.shipment.container.pack.ContainerPackExtnBehaviorController"
+    requestMethodSupported="POST" screenId="extn.components.shipment.container.pack.ContainerPackExtn">
+    <MashupRefs>
+        <MashupRef extnType="ADD"
+            mashupId="extn_BeforeChangeShipmentOnFinishPack"
+            mashupRefId="extn_BeforeChangeShipmentOnFinishPack_ref" permissionId=""/>
+        <MashupRef extnType="ADD"
+            mashupId="extn_stampInvoiceNoOnBOPISOrders"
+            mashupRefId="extn_stampInvoiceNoOnBOPISOrders_ref" permissionId=""/>
+        <!--<MashupRef extnType="ADD" mashupId="extn_FinishPackCustomized"
+            mashupRefId="extn_FinishPackCustomized" permissionId=""/>
+        <MashupRef extnType="ADD"
+            mashupId="containerPack_changeShipmentForWeight"
+            mashupRefId="extn_containerPack_changeShipmentForWeight_Ref" permissionId=""/>-->
+		<MashupRef extnType="ADD"
+            mashupId="extn_AcademyUpdateWeightAndFinishPack"
+            mashupRefId="extn_AcademyUpdateWeightAndFinishPack_Ref" permissionId=""/>
+    </MashupRefs>
+</Controller>

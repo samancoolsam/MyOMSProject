@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DBSchema>
+	<Entities>
+				<!--Start OMNI- 13566 --> 
+		<Entity TableName="YFS_ITEM">
+			<Attributes>
+				<Attribute ColumnName="EXTN_IS_E_GIFTCARD" DefaultValue="N" Description="Y means EGC Item"  DataType="Flag"  Nullable="true" Size="1" Type="CHAR" XMLName="ExtneGiftCardFlag" XMLGroup="Extn" />
+			</Attributes>
+		</Entity>
+		<!--End OMNI- 13566 --> 
+	</Entities>
+</DBSchema>

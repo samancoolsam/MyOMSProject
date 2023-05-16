@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ScreenBundle
+    screenBundleId="extn.desktop.home.portlets.ConfirmShipmentPortletExtnBundle" screenId="extn.desktop.home.portlets.ConfirmShipmentPortletExtn">
+    <BundleEntries>
+        <BundleEntry bundleEntryId="portletName_Label_value"
+            bundleKey="extn_View_" bundleValueFn="_scSimpleBundle"
+            property="value" type="WIDGET" uId="portletName"/>
+    </BundleEntries>
+</ScreenBundle>

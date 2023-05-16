@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DBSchema>
+    <Entities>
+<Entity ApiNeeded="Y" Prefix="ACAD_" Name="ACAD_CLS_CARRIER_UPDATE_RECONCILIATION"
+		TableName="ACAD_CLS_CARRIER_UPDATE_RECONCILIATION" XMLName="AcademyCLSCarrierUpdate" HasHistory="N">
+		<Attributes>
+		<Attribute ColumnName="ACAD_CLS_CARRIER_UPDATE_RECONCILIATION_KEY" DataType="Key" DefaultValue="' '" Description="System generated primary ky for this table" Name="AcademyCLSCarrierUpdateKey" Nullable="false" XMLGroup="" XMLName="AcademyCLSCarrierUpdateKey"/> 
+				
+			<Attribute ColumnName="RETURN_ORDER_NO" Description="Return Order number"
+				DecimalDigits="" DefaultValue="' '" Nullable="false" Size="40" Type="VARCHAR2" XMLName="ReturnOrderNo"
+				Name="Return_ORDER_No"/>
+				
+			<Attribute ColumnName="ORDER_NO" DecimalDigits=""
+								DefaultValue="' '" Description="Order Number" 
+				Name="Order_No" Nullable="false" Size="40" Type="VARCHAR2" XMLName="OrderNo" />
+			<Attribute ColumnName="Tracking_No" DecimalDigits=""
+								DefaultValue="' '" Description="Return Tracking Number" 
+				Name="Tracking_No" Nullable="false" Size="40" Type="VARCHAR2" XMLName="TrackingNo" />
+			<Attribute ColumnName="SKU" DecimalDigits=""
+								DefaultValue="' '" Description="ItemId" 
+				Name="SKU" Nullable="false" Size="40" Type="VARCHAR2" XMLName="ItemID" />
+				
+			<Attribute ColumnName="QTY" DecimalDigits=""
+								DefaultValue="' '" Description="CLS Qty" 
+				Name="QTY" Nullable="false" Size="40" Type="VARCHAR2" XMLName="Qty" />
+				
+			<Attribute ColumnName="CARRIER_UPDATE_PROCESS_DATE" DecimalDigits=""
+				DefaultValue="sysdate" Description="Carrier update process date"
+				Name="Carrier_udpate_Process_Date" Size="40" DataType="TimeStamp" XMLName="CarrierUpdateProcessDate" />
+				
+			<Attribute ColumnName="CLS_RECEIVE_DATE" DecimalDigits=""
+				Description="CLS Receive date." DefaultValue="sysdate"
+				Name="CLS_Receive_Date" Size="40" DataType="TimeStamp" XMLName="CLSReceiveDate" />	
+				
+			
+		</Attributes>
+		<PrimaryKey Name="ACAD_CLS_PK">
+				<Attribute ColumnName="ACAD_CLS_CARRIER_UPDATE_RECONCILIATION_KEY" Name="AcademyCLSCarrierUpdateKey"/>
+			</PrimaryKey>
+		<Indices>
+               <Index Name="IND_CLS_CAR_UPD_I1" Unique="True">
+			   	<Column Name="RETURN_ORDER_NO" />
+			   	<Column Name="Tracking_No" />
+			   	<Column Name="SKU" />
+               </Index>
+         </Indices>
+	</Entity>
+</Entities>
+</DBSchema>	

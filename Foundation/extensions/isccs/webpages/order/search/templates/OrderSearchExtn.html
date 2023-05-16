@@ -1,0 +1,124 @@
+		<div>
+		<!--Start - OMNI-3717 Payment Tender Type Search-->
+		 	<div data-dojo-type="idx/layout/ContentPane" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_Payment_ContentPane' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '3' , 
+		_sc_extensibility_position : 'before' , 
+		_sc_extensibility_referenceUId : 'extn_PaymentType'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="idx/form/RadioButtonSet" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								groupAlignment : 'horizontal' , 
+		colspan : 3 , 
+		uId : 'extn_PaymentType' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '1' , 
+		_sc_extensibility_position : 'after' , 
+		scuiDataType : 'Text-100' , 
+		_sc_extensibility_referenceUId : 'radReadFromHistory'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	bindingData : 	{
+		 targetBinding : 	[
+	 		{
+		 namespace : 			'getAdvancedOrderList_input'
+,
+		 path : 			'Order.PaymentMethod.PaymentType'
+,
+		 scExtensibilityArrayItemId : 			'extn_TargetBindings_0'
+	}
+	]
+,
+		 radioBinding : 	{
+		 options : 	[
+	 		{
+		 label : 			this.getSimpleBundleString('Credit_Card')
+,
+		 scExtensibilityArrayItemId : 			'extn_RadioBinding_0'
+,
+		 value : 			'DisplayCreditCardNo'
+,
+		 selected : 			true
+	}
+,
+	 		{
+		 label : 			this.getSimpleBundleString('extn_PayPal_ID')
+,
+		 scExtensibilityArrayItemId : 			'extn_RadioBinding_1'
+,
+		 value : 			'PaymentReference2'
+	}
+,
+	 		{
+		 label : 			this.getSimpleBundleString('extn_Gift_Card')
+,
+		 scExtensibilityArrayItemId : 			'extn_RadioBinding_2'
+,
+		 value : 			'SvcNo'
+	}
+	]
+	}
+	}
+,	
+			 	label : 			this.getBundleString('extn_Payment_Type')
+			}
+		}
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="idx/form/RadioButtonSet" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_PaymentType' , 
+		_sc_extensibility_operation : 'move' , 
+		_sc_extensibility_moveOrder : '4' , 
+		_sc_extensibility_position : 'first' , 
+		_sc_extensibility_referenceUId : 'extn_Payment_ContentPane'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="idx/form/TextBox" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_PaymentCardValue' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '2' , 
+		_sc_extensibility_position : 'after' , 
+		scuiDataType : 'Text-100' , 
+		_sc_extensibility_referenceUId : 'extn_PaymentType'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	bindingData : 	{
+		 targetBinding : 	[
+	 		{
+		 namespace : 			'getAdvancedOrderList_input'
+,
+		 path : 			'Order.PaymentMethod.DisplayCreditCardNo'
+,
+		 scExtensibilityArrayItemId : 			'extn_TargetBindings_0'
+	}
+	]
+	}
+			}
+		}
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="idx/form/TextBox" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_PaymentCardValue' , 
+		_sc_extensibility_operation : 'move' , 
+		_sc_extensibility_moveOrder : '5' , 
+		_sc_extensibility_position : 'after' , 
+		_sc_extensibility_referenceUId : 'extn_PaymentType'  
+	 					}">
+		 	</div>  
+			<!--End - OMNI-3717 Payment Tender Type Search-->
+		 	<div data-dojo-type="idx/form/TextBox" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								renderHidden : false , 
+		_sc_extensibility_operation : 'change' , 
+		_sc_extensibility_referenceUId : 'txt_postalCode'  
+	 					}">
+		 	</div>  
+		</div>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Shipments>
+	<Shipment DocumentType=" " EnterpriseCode=" " ManifestNo=" " OrderHeaderKey=" " OrderNo=" " OrderReleaseKey=" " PipelineKey=" " 
+	ProNo=" " SCAC=" " ShipmentKey=" " ShipmentNo=" " ShipmentType=" " Status=" " TrackingNo=" " TrailerNo="">
+		<Containers>
+   		 <Container ContainerNo="" ContainerScm="" ContainerSeqNo="" ContainerType="" ParentContainerNo="" ShipmentContainerKey="" TrackingNo="" />
+		</Containers>
+	</Shipment>
+</Shipments>

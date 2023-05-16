@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ScreenBundle
+    screenBundleId="extn.payment.inquiry.PaymentInquiryExtnBundle" screenId="extn.payment.inquiry.PaymentInquiryExtn">
+    <BundleEntries>
+        <BundleEntry bundleEntryId="extn_ViewAutorizations_Link_value"
+            bundleKey="extn_View_Authorization_and_Charge_Details"
+            bundleValueFn="_scSimpleBundle" property="value"
+            type="WIDGET" uId="extn_ViewAutorizations"/>
+        <BundleEntry
+            bundleEntryId="extn_deffered Interest_DataLabel_label"
+            bundleKey="extn_Deffered_Interest" bundleValueFn="_scBundle"
+            property="label" type="WIDGET" uId="extn_deffered Interest"/>
+        <BundleEntry bundleEntryId="extn_Payment_Ref_View_name"
+            bundleKey="Payment_Reference"
+            bundleValueFn="_scSimpleBundle" property="name"
+            type="WIDGET" uId="extn_Payment_Ref"/>
+	    <!-- OMNI-1923 Customer Care: Sterling WCC: Y order Link - End  -->
+    </BundleEntries>
+</ScreenBundle>

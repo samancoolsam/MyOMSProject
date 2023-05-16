@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ScreenBundle screenBundleId="extn.mobile.home.MobileHomeExtnBundle" screenId="extn.mobile.home.MobileHomeExtn">
+    <BundleEntries>
+        <BundleEntry bundleEntryId="lblPickup_Label_value"
+            bundleKey="extn_New_Pick_up_Orders"
+            bundleValueFn="_scSimpleBundle" property="value"
+            type="WIDGET" uId="lblPickup"/>
+        <BundleEntry bundleEntryId="lblBatchPick_Label_value"
+            bundleKey="extn_SFS_Orders_Pick_"
+            bundleValueFn="_scSimpleBundle" property="value"
+            type="WIDGET" uId="lblBatchPick"/>
+	<!-- Start - OMNI-5402 : Curbside Pickup home screen -->
+        <BundleEntry bundleEntryId="extn_lblCurbOrders_Label_value"
+            bundleKey="extn_Waiting_for_Curbside_Pickup"
+            bundleValueFn="_scSimpleBundle" property="value"
+            type="WIDGET" uId="extn_lblCurbOrders"/>
+        <BundleEntry
+            bundleEntryId="extn_lblSearchEComOrders_Label_value"
+            bundleKey="extn_Search_eCom_Orders"
+            bundleValueFn="_scSimpleBundle" property="value"
+            type="WIDGET" uId="extn_lblSearchEComOrders"/>
+	<!-- Start - OMNI-6579,6580 : STS home screen changes-->
+        <BundleEntry
+            bundleEntryId="extn_STSReadytoReceiveContainers_Label_value"
+            bundleKey="extn_STS_Ready_To_Receive_Containers1"
+            bundleValueFn="_scSimpleBundle" property="value"
+            type="WIDGET" uId="extn_STSReadytoReceiveContainers"/>
+        <BundleEntry
+            bundleEntryId="extn_ReadytoStageContainers_Label_value"
+            bundleKey="extn_STS_Ready_To_Stage_Containers"
+            bundleValueFn="_scSimpleBundle" property="value"
+            type="WIDGET" uId="extn_ReadytoStageContainers"/>
+	<BundleEntry bundleEntryId="extn_SearchOrder_Link_value"
+            bundleKey="extn_Ship_To_Store_Order_Search"
+            bundleValueFn="_scSimpleBundle" property="value"
+            type="WIDGET" uId="extn_SearchOrder"/>
+	<!-- End - OMNI-6579,6580 : STS home screen changes-->
+        <BundleEntry
+            bundleEntryId="extn_img_SearchEComOrdersArrow_Link_ImageAlt"
+            bundleKey="extn_Click_to_search_ecom_orders"
+            bundleValueFn="_scSimpleBundle" property="ImageAlt"
+            type="WIDGET" uId="extn_img_SearchEComOrdersArrow"/>
+        <BundleEntry
+            bundleEntryId="extn_img_SearchEComOrdersArrow_Link_title"
+            bundleKey="extn_Click_to_search_ecom_orders"
+            bundleValueFn="_scSimpleBundle" property="title"
+            type="WIDGET" uId="extn_img_SearchEComOrdersArrow"/>
+        <!--OMNI-71303 Begin-->
+        <BundleEntry bundleEntryId="extn_OnMyWayLabel_Label_value"
+            bundleKey="extn_On_My_Way_Orders"
+            bundleValueFn="_scSimpleBundle" property="value"
+            type="WIDGET" uId="extn_OnMyWayLabel"/>
+        <!--OMNI-71303 End-->
+    </BundleEntries>
+</ScreenBundle>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExtensionMetaData>
+    <ScreenExtension extnClassName="PickOrdersPortletExtn"
+        extnPackage="extn.desktop.home.portlets"
+        originalScreen="wsc.desktop.home.portlets.PickOrdersPortlet"
+        originalScreenPackage="wsc.desktop.home.portlets" type="diffrential">
+        <Namespaces>
+            <SourceNamespaces>
+                <Source description="Namespace for Label Count"
+                    isExtn="true"
+                    scExtensibilityArrayItemId="extn_SourceNamespaces_2" value="extn_labelsCount"/>
+                <Source
+                    description="Namespace for storing the SFS orders count after mashup call"
+                    isExtn="true"
+                    scExtensibilityArrayItemId="extn_SourceNamespaces_3" value="extn_SFSOrdersOutput"/>
+            </SourceNamespaces>
+        </Namespaces>
+        <Items>
+            <Button _sc_extensibility_operation="change"
+                _sc_extensibility_referenceUId="btnViewPickupOrders"
+                disabled="true"
+                label="$(_scSimpleBundle:PickOrdersPortlet)" renderHidden="true"/>
+            <Button _sc_extensibility_moveOrder="1"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="btnViewPickupOrders"
+                class="idxSpecialButton"
+                label="$(_scSimpleBundle:PickOrdersPortlet)"
+                resourceId="WSC000028" uId="extn_btnViewPickupOrders">
+                <BindingData>
+                    <SourceBinding namespace="extn_labelsCount"
+                        path="labels.SFSCount" shouldEncodeSourceModelValue="true"/>
+                </BindingData>
+            </Button>
+            <Label _sc_extensibility_operation="change"
+                _sc_extensibility_referenceUId="portletName" value="$(_scSimpleBundle:PickOrdersPortlet_Desktop)"/>
+            <Link _sc_extensibility_moveOrder="2"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="btnViewPickupOrders"
+                appendToContextRoot="true" class="refreshLink"
+                hasImage="true"
+                imageSrc="wsc/resources/css/icons/images/refresh.png"
+                label="$(_scSimpleBundle:blank)" uId="extn_lnkRefresh" value="$(_scSimpleBundle:blank)"/>
+        </Items>
+        <Subscribers>
+            <Local>
+                <Subscriber description="showBatchList"
+                    eventId="extn_btnViewPickupOrders_onClick"
+                    isExtn="true" sequence="51">
+                    <Handler methodName="showBatchList"/>
+                </Subscriber>
+                <Subscriber description="extnRefreshLink"
+                    eventId="extn_lnkRefresh_onClick" isExtn="true" sequence="51">
+                    <Handler methodName="extnRefreshLink"/>
+                </Subscriber>
+            </Local>
+        </Subscribers>
+        <MashupRefs>
+            <Behavior>
+                <MashupRef extnType="ADD" mashupId="extn_SFSOrdersCount" mashupRefId="extn_SFSOrdersCount"/>
+            </Behavior>
+        </MashupRefs>
+    </ScreenExtension>
+</ExtensionMetaData>

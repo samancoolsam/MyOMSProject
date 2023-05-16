@@ -1,0 +1,16 @@
+<Order OrderDate="" OrderNo="" CustomerEMailID="">
+	<PersonInfoBillTo />
+	<OrderLines>
+		<OrderLine OrderLineKey="" DerivedFromOrderLineKey="" OrderedQty="">
+			<DerivedFromOrder OrderNo=""/>
+				<DerivedFromOrderLine OrderLineKey="" OrderedQty="" OriginalOrderedQty=""/>
+					<ItemDetails>
+						<PrimaryInformation ImageID="" ImageLocation=""
+							Description="" />
+					</ItemDetails>
+					<LineOverallTotals />
+		</OrderLine>
+	</OrderLines>
+	<OverallTotals LineSubTotal="" GrandDiscount=""
+		GrandCharges="" GrandTax="" GrandTotal="" />
+</Order>

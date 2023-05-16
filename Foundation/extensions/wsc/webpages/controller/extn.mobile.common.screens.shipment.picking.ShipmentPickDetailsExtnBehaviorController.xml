@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Controller
+    className="com.sterlingcommerce.ui.web.platform.controller.SCUIXAPIMashupController"
+    controllerId="extn.mobile.common.screens.shipment.picking.ShipmentPickDetailsExtnBehaviorController"
+    requestMethodSupported="POST" screenId="extn.mobile.common.screens.shipment.picking.ShipmentPickDetailsExtn">
+    <MashupRefs>
+        <MashupRef extnType="ADD" mashupId="extn_getShipmentList"
+            mashupRefId="extn_getShipmentList_mobile" permissionId=""/>
+	<!-- OMNI - 9236 - Ship to Store Order Search "customer pick up" - START -->
+        <MashupRef extnType="ADD" mashupId="extn_RFCP_getSOShipmentList"
+            mashupRefId="extn_getSOShipmentList" permissionId=""/>
+        <MashupRef extnType="ADD"
+            mashupId="extn_RecordStoreUserActionMashup"
+            mashupRefId="extn_RecordStoreUserActionMashup" permissionId=""/>
+		<!--OMNI-85083 Begin-->
+		 <MashupRef extnType="ADD" mashupId="extn_RecordStoreUserActionConsldCurbside"
+		 mashupRefId="extn_RecordStoreUserActionConsldCurbside" permissionId=""/>
+		<!--OMNI-85083 End-->
+    </MashupRefs>
+</Controller>

@@ -1,0 +1,74 @@
+		<div>
+		 	<div data-dojo-type="dijit/form/Button" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								renderHidden : true , 
+		_sc_extensibility_operation : 'change' , 
+		disabled : true , 
+		_sc_extensibility_referenceUId : 'btnViewPickupOrders'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	label : 			this.getSimpleBundleString('PickOrdersPortlet')
+			}
+		}
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="dijit/form/Button" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_btnViewPickupOrders' , 
+		resourceId : 'WSC000028' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '1' , 
+		'class' : 'idxSpecialButton' , 
+		_sc_extensibility_position : 'after' , 
+		_sc_extensibility_referenceUId : 'btnViewPickupOrders'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 shouldEncodeSourceModelValue : 			true
+,
+		 namespace : 			'extn_labelsCount'
+,
+		 path : 			'labels.SFSCount'
+	}
+	}
+,	
+			 	label : 			this.getSimpleBundleString('PickOrdersPortlet')
+			}
+		}
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/Label" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								_sc_extensibility_operation : 'change' , 
+		_sc_extensibility_referenceUId : 'portletName'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	value : 			this.getSimpleBundleString('PickOrdersPortlet_Desktop')
+			}
+		}
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/Link" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_lnkRefresh' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '2' , 
+		'class' : 'refreshLink' , 
+		_sc_extensibility_position : 'before' , 
+		hasImage : true , 
+		appendToContextRoot : true , 
+		imageSrc : 'wsc/resources/css/icons/images/refresh.png' , 
+		_sc_extensibility_referenceUId : 'btnViewPickupOrders'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	imageText : 			this.getSimpleBundleString('Action_Refresh')
+			}
+		}
+	 					}">
+		 	</div>  
+		</div>

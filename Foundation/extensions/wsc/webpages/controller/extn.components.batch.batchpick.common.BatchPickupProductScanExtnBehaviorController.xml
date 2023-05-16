@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Controller
+    className="com.sterlingcommerce.ui.web.platform.controller.SCUIXAPIMashupController"
+    controllerId="extn.components.batch.batchpick.common.BatchPickupProductScanExtnBehaviorController"
+    requestMethodSupported="POST" screenId="extn.components.batch.batchpick.common.BatchPickupProductScanExtn">
+    <MashupRefs>
+        
+        <MashupRef extnType="ADD" mashupId="extn_ItemPropertiesService"
+            mashupRefId="extn_ItemPropertiesService" permissionId=""/>
+        <MashupRef extnType="ADD" mashupId="extn_BatchCycleCount"
+            mashupRefId="extn_BatchCycleCount" permissionId=""/>
+        <MashupRef extnType="ADD" mashupId="extn_CloseCancelledBatch"
+            mashupRefId="extn_CloseCancelledBatchRef" permissionId=""/>
+    </MashupRefs>
+</Controller>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DBSchema>
+	<Entities>
+		<!-- Start - BOPIS-11 : ASO_Order Capture And Processing -->
+		<Entity TableName="YFS_ORDER_LINE">
+			<Attributes>
+				<Attribute ColumnName="EXTN_IS_AGE_RESTRICTED" XMLName="ExtnIsAgeRestricted" Size="1" Type="CHAR" DefaultValue="N" Nullable="false" Description="Signifies Item is age restricted or not" XMLGroup="Extn" />
+				<Attribute ColumnName="EXTN_AGE_RESTRICTION_CODE" XMLName="ExtnAgeRestrictionCode" Size="40" Type="VARCHAR2" DefaultValue="0" Nullable="false" Description="Signifies Age Group" XMLGroup="Extn" />
+				<!--OMNI-95578 start -->
+				<Attribute ColumnName="EXTN_IS_ASSEMBLY_REQUIRED" XMLName="ExtnIsAssemblyRequired" Size="1" Type="CHAR"  Nullable="true" Description="Indicator whether item is eligible for assembly" XMLGroup="Extn" />
+				<!--OMNI-95578 -->
+				<!--OMNI-105592 start -->
+				<Attribute ColumnName="EXTN_HAS_FIREARM02_ITEMS" XMLName="ExtnHasFireArm02Items" Size="1" Type="CHAR"  Nullable="true" Description="Indicator whether item is firearm or not" XMLGroup="Extn" />
+				<!--OMNI-105592 -->
+			</Attributes>
+		</Entity>
+		<!-- End - BOPIS-11 : ASO_Order Capture And Processing -->
+		<!-- BOPIS: Inventory Management : Begin -->
+		<Entity TableName="YFS_SHIPMENT_LINE">
+			<Attributes>
+				<Attribute ColumnName="EXTN_MSG_TO_SIM" DefaultValue="N" Description="Flag is maintained to identify if Msg to SIM is required." Nullable="false" Type="CHAR" Size="1" XMLName="ExtnMsgToSIM" XMLGroup="Extn" SqlServerDataType="" />
+			</Attributes>
+		</Entity>
+		<Entity TableName="YFS_SHIPMENT_LINE">
+			<Attributes>
+				<Attribute ColumnName="EXTN_REASON_CODE" DefaultValue="" Description="Attribute is maintained to identify if Msg to SIM for cycle count is required." Nullable="true" Type="VARCHAR2" Size="100" XMLName="ExtnReasonCode" XMLGroup="Extn" SqlServerDataType="" />
+			</Attributes>
+		</Entity>
+		<!-- BOPIS: Inventory Management : End -->
+		<!-- Planogram Extension Changes :Start -->
+		<Entity TableName="YFS_SHIPMENT_LINE">
+			<Attributes>
+				<Attribute ColumnName="EXTN_POG_ID" DefaultValue="" Description="Attribute is maintained to store Planogram Information: Pog Id" Nullable="true" Type="VARCHAR2" Size="100" XMLName="ExtnPogId" XMLGroup="Extn" SqlServerDataType="" />
+				<Attribute ColumnName="EXTN_DEPARTMENT" DefaultValue="" Description="Attribute is maintained to store Planogram Information: Department" Nullable="true" Type="VARCHAR2" Size="100" XMLName="ExtnDepartment" XMLGroup="Extn" SqlServerDataType="" />
+				<Attribute ColumnName="EXTN_SECTION" DefaultValue="" Description="Attribute is maintained to store Planogram Information: Section" Nullable="true" Type="VARCHAR2"
+				Size="100" XMLName="ExtnSection" XMLGroup="Extn" SqlServerDataType="" />
+				<Attribute ColumnName="EXTN_POG_NUMBER" DefaultValue="" Description="Attribute is maintained to store Planogram Information: Pog Number" Nullable="true" Type="VARCHAR2" Size="100" XMLName="ExtnPogNumber" XMLGroup="Extn" SqlServerDataType="" />
+				<Attribute ColumnName="EXTN_LIVE_DATE" DefaultValue="" Description="Attribute is maintained to store Planogram Information: Live Date" Nullable="true" Type="VARCHAR2"
+				Size="100" XMLName="ExtnLiveDate" XMLGroup="Extn" SqlServerDataType="" />
+				 <Attribute ColumnName="EXTN_PLANOGRAM_STATUS" Description="Attribute is maintained to identify if webservice call made or not." 
+			     DefaultValue="NOT_INITIATED"  Nullable="false" Type="VARCHAR2" Size="100" XMLName="ExtnPlanogramStatus" XMLGroup="Extn" SqlServerDataType="" />
+			</Attributes>
+		</Entity>
+		<!-- Planogram Extension Changes :End -->
+<!-- Staging location: START -->
+		<Entity TableName="YFS_SHIPMENT_LINE">
+			<Attributes>
+				<Attribute ColumnName="EXTN_STAGING_LOCATION" DefaultValue="" Description="Attribute is maintained to identify istaging location on shipment line level." Nullable="true" Type="VARCHAR2" Size="100" XMLName="ExtnStagingLocation" XMLGroup="Extn" SqlServerDataType="" />
+			</Attributes>
+		</Entity>
+<!-- Staging location: END -->
+<!-- SFS Batch Sorting BOPIS-1244: START -->
+		<Entity TableName="YFS_SHIPMENT_LINE">
+			<Attributes>
+				<Attribute ColumnName="EXTN_ORDER_DATE" DataType="TimeStamp" Description="Extended Order Date" Nullable="true" XMLName="ExtnOrderDate" XMLGroup="Extn"/>
+			</Attributes>
+		</Entity>
+<!-- SFS Batch Sorting BOPIS-1244: END -->
+<!--BOPIS - 1506 - start -->
+		<Entity TableName="YFS_SHIPMENT_LINE">
+			<Attributes>
+				<Attribute ColumnName="EXTN_AGE_VERIFIED" DefaultValue="N" Description="Attribute is maintained to identify if the Age Verified at shipment line level." Nullable="false" Type="VARCHAR2" Size="1" XMLName="ExtnAgeVerified" XMLGroup="Extn" SqlServerDataType="" />
+			</Attributes>
+		</Entity>
+<!--BOPIS - 1506 - End -->
+	</Entities>
+</DBSchema>

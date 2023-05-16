@@ -1,0 +1,337 @@
+<div class="sc-platform-screen-default receivedetailedreportscreen" role="region" aria-label="region_screenHeader">
+<div data-dojo-type="idx/layout/ContentPane" data-dojo-props="		spanLabel : true , 
+		title : 'Top Content' , 
+		'class' : 'mobileCommonScreen screenHeader' , 
+		colspan : 1 , 
+		uId : 'TopContent' , 
+		layoutAlign : 'top'  
+ ">
+        <div data-dojo-type="idx/layout/ContentPane" data-dojo-props="		spanLabel : true , 
+		'class' : 'screenTitle' , 
+		uId : 'pnlScreenDescription'  
+ ">
+      <div data-dojo-type="sc/plat/dojo/widgets/Label" data-dojo-props="		spanLabel : true , 
+		uId : 'lbl_ScreenTitle'  
+ 		,scParamDataFn :
+		 function() { 
+			return { 
+			 	value : 			this.getSimpleBundleString('Label_DetailedReceivingReport')
+			}
+		}
+	"></div>
+        </div>
+	    <div data-dojo-type="idx/layout/ContentPane" data-dojo-props="		spanLabel : true , 
+		'class' : 'rightPanel'  
+ ">
+      <div data-dojo-type="idx/layout/ContentPane" data-dojo-props="		spanLabel : true , 
+		uId : 'pnlScreenTasks'  
+ "></div>
+        </div>
+    </div>	
+
+	<div>
+	<div data-dojo-type="dijit/form/Button" data-dojo-props="		spanLabel : true ,	 				
+			uId : 'extn_btnClose' , 		
+			'class' : 'buttonConnect idxSpecialButton' , 
+			style : 'float:right; padding-left:20px; padding-right:15px; padding-top:0px;',
+			showLabel : true , 			
+			scParamDataFn :
+			 function() { 
+				return { 
+				
+					label : 			this.getSimpleBundleString('extn_Close')
+				}
+			}
+				">
+		</div>	
+		<!--		
+		<div data-dojo-type="dijit/form/Button" data-dojo-props="		spanLabel : true ,	 				
+			uId : 'extn_btnBack' , 		
+			'class' : 'buttonConnect idxSpecialButton' , 
+			style : 'float:right; padding-right:15px; padding-top:0px;',
+			showLabel : true , 			
+			scParamDataFn :
+			 function() { 
+				return { 
+				
+					label : 			this.getSimpleBundleString('extn_Back')
+				}
+			}
+				">
+		</div>
+		-->
+	</div>
+
+
+<div data-dojo-type="idx/layout/ContentPane" data-dojo-props="		spanLabel : true , 
+		uId : 'extn_shipmentDetailsCP' ,
+		'class': '', 
+		layoutAlign : 'top'   
+ ">
+<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" data-dojo-props="		spanLabel : true , 
+		'class' : 'extn_labelCssNC' , 	
+	 	uId : 'extn_countOfContainers' , 		
+		style : 'padding-left:10px; padding-top:30px;' ,		 
+ 		scParamDataFn :
+		 function() { 
+			return { 
+			 	label : 			this.getBundleString('extn_Total_Containers')
+,
+				bindingData : 	{
+		 		sourceBinding : 	{
+				 path : 			'AcadSTSTOContainersList.TotalReceivedContainers'
+,
+		 namespace : 			'getContainerDetails_output'
+	}
+	}
+		
+				
+			}
+		}
+">
+</div> 	
+</div>
+
+
+<div data-dojo-type="idx/layout/ContentPane" data-dojo-props="		spanLabel : true , 
+		'class' : '', 
+		uId : 'extn_noOfPartialContainers'  
+ ">	
+<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" 
+	 					data-dojo-props="		spanLabel : true , 
+		'class' : 'extn_labelCssPC' ,	
+	 	uId : 'extn_countOfPartialContainers' , 		
+		style : 'padding-top:10px; padding-left:10px;' , 		 
+ 		scParamDataFn :
+		 function() { 
+			return { 
+			 	label : 			this.getBundleString('extn_TotalPartiallyReceived')
+,	
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 path : 			'AcadSTSTOContainersList.PartailReceivedCount'
+,
+		 namespace : 			'getContainerDetails_output'
+	}
+	}
+				
+			}
+		}">
+</div> 	
+</div>
+
+
+<div data-dojo-type="idx/layout/ContentPane" data-dojo-props="		spanLabel : true , 
+		'class' : 'contentSeparator' , 
+		uId : 'extn_noOfContainers1'  
+ ">
+ 
+<!--
+ <div data-dojo-type="sc/plat/dojo/widgets/Label" data-dojo-props="		spanLabel : true , 
+		uId : 'extn_lblException' ,
+		style : 'padding-top:10px; padding-left:10px; color:#FF0000; font-size:16px;'  
+ 		,scParamDataFn :
+		 function() { 
+			return { 
+			 	value : 			this.getSimpleBundleString('Label_Exception_BOH')
+			}
+		}
+"></div>	
+
+
+<div data-dojo-type="sc/plat/dojo/widgets/Label" 
+	 					data-dojo-props="		spanLabel : true , 
+		'class' : 'blockComponent longTextbox zeroWidthLabelKey extnidxLabelBOH' ,	
+	 	uId : 'extn_countOfContainers1' , 		
+		style : 'padding-top:10px; padding-left:10px;' , 		 
+ 		scParamDataFn :
+		 function() { 
+			return { 
+			 	label : 			this.getBundleString('Label_Exception_BOH')
+				
+			}
+		}
+">
+</div> 	
+
+
+	<div data-dojo-type="idx/layout/ContentPane" data-dojo-props="		spanLabel : true , 
+			'class' : 'contentSeparator' , 
+			uId : 'extn_searchsoshipments'  
+	 ">
+	
+	</div>
+	-->
+	
+	<div data-dojo-type="idx/layout/ContentPane" data-dojo-props="		spanLabel : true , 
+		'class' : 'contentSeparator' , 
+		uId : 'extn_noOfContainers'  
+	 ">
+ 	<div data-dojo-type="sc/plat/dojo/widgets/Label" data-dojo-props="		spanLabel : true , 
+		uId : 'extn_lblException1' ,
+		'class' : 'blockComponent longTextbox zeroWidthLabelKey extnidxLabelBOH' ,
+		style : 'padding-top:20px; padding-left:10px; color:#FF0000; font-size:16px;' 
+		,renderHidden : true 
+ 		,scParamDataFn :
+		 function() { 
+			return { 
+			 	value : 			this.getSimpleBundleString('Label_Exception_BOH')
+			}
+		}
+	"></div>	 	
+	</div>
+
+
+
+<!--
+<div data-dojo-type="idx/layout/ContentPane" data-dojo-props="		spanLabel : true , 
+		'class' : 'contentSeparator' , 
+		uId : 'extn_searchsoshipments'  
+ ">
+	<div data-dojo-type="sc/plat/dojo/widgets/Link" 
+							data-dojo-props="spanLabel : true ,
+										uId : 'extn_ScannedCOntainers' , 
+			'class' : 'headerLink extnidxLink', 
+			style : 'padding-top:20px; padding-left:10px;' , 		
+			scParamDataFn :
+			 function() { 
+				return { 
+					value : 			this.getSimpleBundleString('extn_Scanned_Container')
+				}
+			}
+							">
+	</div>
+</div>
+-->
+
+<div data-dojo-type="idx/layout/ContentPane" data-dojo-props="		spanLabel : true , 
+		'class' : '' , 
+		uId : 'extn_lastScannedContainers'  
+ ">
+<!--
+<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" 
+	 					data-dojo-props="		spanLabel : true , 
+		'class' : 'extnidxLabelRC' ,		
+	 	uId : 'extn_lastScannedContainer' , 
+		style : 'padding-top:20px; padding-left:10px;' , 		
+ 		scParamDataFn :
+		 function() { 
+			return { 
+			 	label : 			this.getBundleString('extn_ContainerID'),
+				bindingData :  {
+  
+   sourceBinding :  {
+   path :    'EXTNStsContainerno.ContainerNo'
+,
+   namespace :    'createEXTNStsContainerno_output'
+ }
+ }
+			}
+			}
+">
+		 	</div>
+			
+	<div data-dojo-type="sc/plat/dojo/widgets/Link" 
+	 					data-dojo-props="spanLabel : true ,
+	 								uId : 'extn_Last_Scanned_ContainerID' , 
+		'class' : 'extnidxLinkRC', 
+		style : 'padding-top:20px; padding-left:0px;' , 		
+ 		scParamDataFn :
+		 function() { 
+			return { 
+			 	value : 			this.getSimpleBundleString('extn_LastScannedContainerID')
+			}
+		}
+	 					">
+		 	</div>
+-->
+
+
+<div data-dojo-type="idx/layout/ContentPane" data-dojo-props="		'class' : 'repeatingpanel' , 
+		uId : 'extn_cpContainerLinesPaginationPanel' ,
+		'class' : 'extn_NoBorder',
+		style : 'padding-top:20px; padding-left:10px;'  
+ 		,scParamDataFn :
+		 function() { 
+			return { 
+			 	bindingData : 	{
+		 customNoRecordsFoundMessageBundleKey : 			'Message_NoPackagesFound'
+,
+		 isPaginated : 			false
+,
+		 mashupRefId : 			'getScannedContainerCount'
+,
+		 repeatingscreenID : 			'wsc.components.shipment.summary.ShipmentSummaryContainerList'
+,
+		 repeatingScreen : 	{
+		 repeatingnamespace : 			'container_Src'
+,
+		 path : 			'AcadSTSTOContainersList.PartaillyReceivedContainers.Container'
+,
+		 repeatingscreenpath : 			'Container'
+,
+		 sourcenamespace : 			'getContainerDetails_output'
+			}
+		      }
+		   }
+		}
+"></div>
+
+
+</div>
+
+
+<div data-dojo-type="idx/layout/ContentPane" data-dojo-props="		spanLabel : true , 
+		'class' : 'contentSeparator' , 
+		uId : 'extn_searchsoshipments1'  
+ ">
+<div data-dojo-type="sc/plat/dojo/widgets/Link" 
+	 					data-dojo-props="spanLabel : true ,
+	 								uId : 'extn_ShipToStoreOrderSearch' , 
+		'class' : 'headerLink extnidxLink', 
+		style : 'padding-top:30px; padding-left:10px;' , 		
+ 		scParamDataFn :
+		 function() { 
+			return { 
+			 	value : 			this.getSimpleBundleString('extn_Ship_To_Store_Order_Search')
+			}
+		}
+	 					">
+</div>
+</div>	
+
+<div>
+<div data-dojo-type="dijit/form/Button" data-dojo-props="		spanLabel : true ,	 				
+			uId : 'extn_StagingScreenbtn' , 		
+			'class' : 'buttonConnect idxSpecialButton' , 
+			style : 'float:right; padding-left:20px; padding-right:15px; padding-top:30px;',
+			showLabel : true , 			
+			scParamDataFn :
+			 function() { 
+				return { 
+				
+					label : 			this.getSimpleBundleString('Stage Container')
+				}
+			}
+				">
+		</div>
+		<!--OMNI-102287 Removing close button - End-->
+		<!--
+		<div data-dojo-type="dijit/form/Button" data-dojo-props="		spanLabel : true ,	 				
+			uId : 'extn_btnBack1' , 		
+			'class' : 'buttonConnect idxSpecialButton' , 
+			style : 'float:right; padding-right:15px; padding-top:30px;',
+			showLabel : true , 			
+			scParamDataFn :
+			 function() { 
+				return { 
+				
+					label : 			this.getSimpleBundleString('extn_Back')
+				}
+			}
+				">
+		</div>
+		-->
+		
+</div>	
+</div>

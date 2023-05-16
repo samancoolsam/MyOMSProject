@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ScreenBundle
+    screenBundleId="extn.components.shipment.summary.ShipmentSummaryShipmentLineDetailsExtnBundle" screenId="extn.components.shipment.summary.ShipmentSummaryShipmentLineDetailsExtn">
+    <BundleEntries>
+    <!-- OMNI-71678 - Editable Staging Location - Start -->
+        <BundleEntry
+            bundleEntryId="extn_txtStagingLoc_DateTextBox_label"
+            bundleKey="extn_Staging_Location"
+            bundleValueFn="_scSimpleBundle" property="label"
+            type="WIDGET" uId="extn_txtStagingLoc"/>
+        <BundleEntry bundleEntryId="extn_btnEdit_Button_label"
+            bundleKey="Action_Edit" bundleValueFn="_scSimpleBundle"
+            property="label" type="WIDGET" uId="extn_btnEdit"/>
+        <BundleEntry bundleEntryId="extn_btnUpdate_Button_label"
+            bundleKey="Action_Update" bundleValueFn="_scSimpleBundle"
+            property="label" type="WIDGET" uId="extn_btnUpdate"/>
+        <BundleEntry bundleEntryId="extn_datalabel_DataLabel_label"
+            bundleKey="extn_Staging_Location" bundleValueFn="_scBundle"
+            property="label" type="WIDGET" uId="extn_datalabel"/>
+        <BundleEntry bundleEntryId="lbl_Quantity_DataLabel_label"
+            bundleKey="extn_Current_Quantity"
+            bundleValueFn="_scSimpleBundle" property="label"
+            type="WIDGET" uId="lbl_Quantity"/>
+        <BundleEntry bundleEntryId="extn_datalabel1_DataLabel_label"
+            bundleKey="extn_Original_Quantity"
+            bundleValueFn="_scSimpleBundle" property="label"
+            type="WIDGET" uId="extn_datalabel1"/>
+        <BundleEntry
+            bundleEntryId="extn_save_the_sale_label_DataLabel_label"
+            bundleKey="SaveTheSale" bundleValueFn="_scSimpleBundle"
+            property="label" type="WIDGET" uId="extn_save_the_sale_label"/>
+        <BundleEntry
+            bundleEntryId="extn_save_the_sale_label_DataLabel_title"
+            bundleKey="SaveTheSale" bundleValueFn="_scSimpleBundle"
+            property="title" type="WIDGET" uId="extn_save_the_sale_label"/>
+        <!-- OMNI-71678 - Editable Staging Location - END -->
+        <BundleEntry bundleEntryId="extn_CancelReason_DataLabel_label"
+            bundleKey="Label_CancelReason" bundleValueFn="_scBundle"
+            property="label" type="WIDGET" uId="extn_CancelReason"/>
+    </BundleEntries>
+</ScreenBundle>

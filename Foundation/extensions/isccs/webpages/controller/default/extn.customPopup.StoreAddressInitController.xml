@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Controller className="com.sterlingcommerce.ui.web.platform.controller.SCUIXAPIMashupController" controllerId="extn.customPopup.StoreAddressInitController" requestMethodSupported="POST" screenId="extn.customPopup.StoreAddress">
+<MashupRefs/>
+</Controller>

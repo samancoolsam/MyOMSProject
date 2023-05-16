@@ -1,0 +1,79 @@
+<div class="sc-platform-screen-default SFSContainerPopup">
+	<div data-dojo-type="idx/layout/ContentPane" data-dojo-props="		spanLabel : true , 
+		'class' : 'searchContent' , 
+		uId : 'InnerContainerExtn'  
+ ">
+<div data-dojo-type="idx/form/FilteringSelect" data-dojo-props="		highlightMatch : 'false' , 
+	'class' : 'autoLabelZeroWidth longTextbox nonEditable' , 
+	style : 'padding-bottom:50px' , 
+		autoComplete : true , 
+		uId : 'extn_ContainerNoFilter' , 
+		required : true  
+ 		,scParamDataFn :
+		 function() { 
+			return { 
+			 	label : 			this.getBundleString('extn_ContainerNoLabel')
+,	
+			 	bindingData : 	{
+		 optionsBinding : 	{
+		 descriptionField : 			'ContainerNo'
+,
+		 addEmptyOption : 			false
+,
+		 valueField : 			'ShipmentContainerKey'
+,
+		 path : 			'Container'
+,
+		 emptyOptionValue : 			''
+,
+		 emptyOptionDesc : 			''
+,
+		 namespace : 			'ContainerNoData'
+	}
+,
+		 targetBinding : 	[
+	 		{
+		 path : 			'Container'
+,
+		 namespace : 			'ContainerNoDataOutput'
+	}
+	]
+,
+		 sourceBinding : 	{
+		 path : 			''
+,
+		 namespace : 			''
+	}
+	}
+			}
+		}
+"></div>
+</div>
+ 	
+	<div data-dojo-type="idx/layout/ContentPane" data-dojo-props="		'class' : 'popupNavigation messageDialogFooter' , 
+		uId : 'Popup_navigationPanel'  
+ ">
+        <div data-dojo-type="dijit/form/Button" data-dojo-props="		spanLabel : true , 
+		'class' : 'idxSpecialButton' , 
+		showLabel : true , 
+		uId : 'Popup_btnNextContainer'  
+ 		,scParamDataFn :
+		 function() { 
+			return { 
+			 	label : 			this.getSimpleBundleString('Apply')
+			}
+		}
+"></div>
+        <div data-dojo-type="dijit/form/Button" data-dojo-props="		spanLabel : true , 
+		'class' : 'idxSecondaryButton' , 
+		showLabel : true , 
+		uId : 'Popup_btnCancelContainer'  
+ 		,scParamDataFn :
+		 function() { 
+			return { 
+			 	label : 			this.getSimpleBundleString('Cancel')
+			}
+		}
+"></div>
+    </div>
+</div>

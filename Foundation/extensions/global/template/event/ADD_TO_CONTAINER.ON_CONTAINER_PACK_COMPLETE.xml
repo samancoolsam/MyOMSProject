@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container ActualFreightCharge="" AppliedWeight="" AppliedWeightUOM="" 
+	BasicFreightCharge="" ContainerGrossWeight="" ContainerGrossWeightUOM="" 
+	ContainerHeight="" ContainerHeightUOM="" ContainerLength="" 
+	ContainerLengthUOM="" ContainerNetWeight="" ContainerNetWeightUOM="" 
+	ContainerNo="" ContainerScm="" ContainerSeqNo="" ContainerType="" 
+	ContainerWidth="" ContainerWidthUOM="" CustomsValue="" DeclaredValue="" 
+	DimmedFlag="" DiscountAmount="" HasOtherContainers="" OldParentContainerNo="" OversizedFlag="" ParentContainerGroup="" ParentContainerNo="" RoutingCode="" ShipmentContainerKey="" ShipmentKey="" SpecialServicesSurcharge="" TrackingNo="" Ucc128code="" Zone="" isHistory="" IsHazmat="" SystemSuggested="" TaskType="" WaveKey="">
+	<PackLocation Node="" LocationId="" StationId="" StationType=""/>
+   <SpecialServices TotalNumberOfRecords="">
+      <SpecialService ReferenceKey="" ReferenceType="" SpecialServiceKey="" 
+		SpecialServiceRefKey="" SpecialServiceSurcharge="" SpecialServicesCode=""/>
+   </SpecialServices>
+   <AdditionalAttributes TotalNumberOfRecords="">
+      <AdditionalAttribute AdditionalAttributeKey=""  Name="" ParentKey="" 
+		ParentTable="" Value="" isHistory=""/>
+   </AdditionalAttributes>
+   <ContainerDetails TotalNumberOfRecords="">
+      <ContainerDetail ContainerDetailsKey="" ItemID=""  ProductClass="" 
+		 Quantity="" OldQuantity="" ShipmentContainerKey="" ShipmentKey="" 
+		 UnitOfMeasure="" isHistory="">
+         <ShipmentTagSerials TotalNumberOfRecords="">
+			<ShipmentTagSerial  SerialNo="" ShipByDate="" ShipmentLineKey="  " 
+				ContainerDetailKey=""  ShipmentTagSerialKey="" RevisionNo="" 
+				BatchNo="" LotNumber="" LotKeyReference=" " ManufacturingDate=" " LotAttribute1=" " LotAttribute2=" " LotAttribute3=" " Quantity="" OldQuantity="" />	
+	     </ShipmentTagSerials>
+      </ContainerDetail>
+   </ContainerDetails>
+   <Instructions TotalNumberOfRecords="">
+    <Instruction InstructionText="" InstructionType="" InstructionURL="" InstructionUsage="" SequenceNo="" isHistory=""/>
+	</Instructions>
+	<ParentContainer ActualFreightCharge="" AppliedWeight="" AppliedWeightUOM="" 
+		BasicFreightCharge="" ContainerGrossWeight="" ContainerGrossWeightUOM="" 
+		ContainerHeight="" ContainerHeightUOM="" ContainerLength="" 
+		ContainerLengthUOM="" ContainerNetWeight="" ContainerNetWeightUOM="" 
+		ContainerNo="" ContainerScm="" ContainerSeqNo="" ContainerType="" 
+		ContainerWidth="" ContainerWidthUOM="" CustomsValue="" DeclaredValue="" 
+		DimmedFlag="" DiscountAmount="" HasOtherContainers=""  OversizedFlag="" 
+		ParentContainerNo="" RoutingCode="" ShipmentContainerKey="" ShipmentKey="" SpecialServicesSurcharge="" TrackingNo="" Ucc128code="" Zone="" isHistory=""/>
+	<ChildContainers TotalNumberOfRecords="">
+		<ChildContainer ActualFreightCharge="" AppliedWeight="" AppliedWeightUOM="" 
+			BasicFreightCharge="" ContainerGrossWeight="" ContainerGrossWeightUOM="" 
+			ContainerHeight="" ContainerHeightUOM="" ContainerLength="" 
+			ContainerLengthUOM="" ContainerNetWeight="" ContainerNetWeightUOM="" 
+			ContainerNo="" ContainerScm="" ContainerSeqNo="" ContainerType="" 
+			ContainerWidth="" ContainerWidthUOM="" CustomsValue="" DeclaredValue="" 
+			DimmedFlag="" DiscountAmount="" HasOtherContainers="" OldParentContainerNo="" OversizedFlag="" 
+			ParentContainerNo="" RoutingCode="" ShipmentContainerKey="" ShipmentKey="" SpecialServicesSurcharge="" TrackingNo="" Ucc128code="" Zone="" isHistory=""/>	
+	</ChildContainers>
+	<Notes>
+		<Note NoteText="" TranName="" Tranid=""/>
+	</Notes>
+	<ContainerActivities TotalNumberOfRecords="">
+			<ContainerActivity Action="" ActivityCode="" ActivityTimeStamp="" ActivityUserId="" ContainerActivityKey="" Createprogid="" Createts="" Createuserid="" Lockid="" Modifyprogid="" Modifyts="" Modifyuserid="" ShipmentContainerKey="" IsException="" Notes="" >
+				<ActivityLocation  ActivityLocationId="" ActivityNodeKey="" FirstName="" MiddleName="" LastName="" Company="" AddressLine1="" AddressLine2="" AddressLine3="" AddressLine4="" AddressLine5="" AddressLine6="" City="" State="" ZipCode="" Country=""  /> 
+			</ContainerActivity>
+</ContainerActivities>
+</Container>

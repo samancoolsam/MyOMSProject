@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExtensionMetaData>
+    <ScreenExtension extnClassName="CancelOrderListScreenExtn"
+        extnPackage="extn.order.cancel"
+        originalScreen="isccs.order.cancel.CancelOrderListScreen"
+        originalScreenPackage="isccs.order.cancel" type="diffrential">
+        <Items>
+            <GridX _sc_extensibility_operation="change" _sc_extensibility_referenceUId="OLST_listGrid">
+	  <!-- OMNI- 12711 eGift Card: Cancellation of eGC item is not allowed from web call center - START -->
+                <BindingData>
+                    <HiddenCustomColumnsList>
+                        <HiddenCustomColumn field="LineType" scExtensibilityArrayItemId="extn_HiddenCustomColumnsList_9">
+                            <SourceBinding path="LineType"/>
+                            <TargetBinding path="LineType"/>
+                        </HiddenCustomColumn>
+                        <HiddenCustomColumn field="FulfillmentType" scExtensibilityArrayItemId="extn_HiddenCustomColumnsList_10">
+                            <SourceBinding path="FulfillmentType"/>
+                            <TargetBinding path="FulfillmentType"/>
+                        </HiddenCustomColumn>
+                    </HiddenCustomColumnsList>
+                </BindingData>
+	    <!-- OMNI- 12711 eGift Card: Cancellation of eGC item is not allowed from web call center - END -->
+            </GridX>
+        </Items>
+        <Subscribers>
+            <Local>
+                <Subscriber description="extn_cellEdit"
+                    eventId="OLST_listGrid_ScOnBeginCellEdit"
+                    isExtn="true" sequence="51">
+                    <Handler methodName="extn_cellEdit"/>
+                </Subscriber>
+		<!-- OMNI- 12711 eGift Card: Cancellation of eGC item is not allowed from web call center - START -->
+                <Subscriber description="isGridRowDisabled"
+                    eventId="isGridRowDisabled" isExtn="true" sequence="51">
+                    <Handler methodName="isGridRowDisabled"/>
+                </Subscriber>
+		<!-- OMNI- 12711 eGift Card: Cancellation of eGC item is not allowed from web call center - END -->
+            </Local>
+        </Subscribers>
+	<!-- OMNI- 8718 Prevent STS Line Cancellation WEB COM - START -->
+        <MashupRefs>
+            <Behavior>
+                <MashupRef extnType="MODIFY"
+                    mashupId="CancelOrderListScreen_getCompleteOrderLineList" mashupRefId="getCompleteOrderLineList"/>
+            </Behavior>
+        </MashupRefs>
+	<!-- OMNI- 8718 Prevent STS Line Cancellation WEB COM - END -->
+    </ScreenExtension>
+</ExtensionMetaData>

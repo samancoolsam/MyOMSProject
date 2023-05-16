@@ -1,0 +1,5 @@
+<Order CustomerID="" DraftOrderFlag="Y" DocumentType="">
+ 	 <PersonInfoShipTo>
+<Extn ExtnIsAPOFPO="" ExtnIsPOBOXADDRESS="" ExtnIsSignatureRequired="" ExtnAddressNickName="" ExtnIsAddressVerified="" ExtnIsMilitary="" />
+</PersonInfoShipTo>
+</Order>

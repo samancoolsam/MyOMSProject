@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--getReceiptDetails Output XML-->
+<Receipt ArrivalDateTime="" DriverName="" EnterpriseCode="" NumOfCartons=""  NumOfPallets=""  OpenReceiptFlag=""  ShipmentKey=""  ShipmentNo=""  ReceiptDate=""  ReceiptHeaderKey=""  ReceiptNo=""  ReceivingNode=""  ReceivingDock=""  Status="" TrailerLPNNo="" >
+    <Instructions>
+        <Instruction Action="" InstructionDetailKey=""
+            InstructionText="" InstructionType="" InstructionURL=""
+            InstructionUsage="" ReferenceKey="" SequenceNo="" TableName=""/>
+    </Instructions>
+    <ReceiptLines TotalNumberOfRecords="">
+        <ReceiptLine BatchNo="" LotAttribute1="" LotAttribute2="" LotAttribute3="" LotKeyReference="" LotNumber="" ManufacturingDate="" RevisionNo="" FifoNo="" Segment="" SegmentType="" DispositionCode="" InspectedBy=""
+            InspectionComments="" InspectionDate="" LocationId="" OrderHeaderKey="" OrderLineKey="" OrderReleaseKey=""
+            OrigReceiptLineKey="" OriginalQuantity="" Quantity="" CaseId="" PalletId="" 
+            ReceiptHeaderKey="" ReceiptLineKey="" ReceiptLineNo="" ShipmentLineNo="" ShipmentLineKey="" 
+            SerialNo="" ShipByDate="" ItemID="" ProductClass="" UnitOfMeasure="" CountryOfOrigin=""  NetWeight="" NetWeightUom="">
+            <OrderLine AllocationDate="" CarrierAccountNo=""
+                CarrierServiceCode="" ChainedFromOrderHeaderKey=""
+                ChainedFromOrderLineKey="" CustomerLinePONo=""
+                CustomerPONo="" DeliveryCode="" DepartmentCode=""
+                DependencyShippingRule=""
+                DependentOnLineKey="" DerivedFromOrderHeaderKey=""
+                DerivedFromOrderLineKey="" DerivedFromOrderReleaseKey=""
+                FillQuantity="" FreightTerms="" HasChainedLines=""
+                HasDerivedChild="" HoldFlag="" HoldReasonCode=""
+                ImportLicenseExpDate="" ImportLicenseNo=""
+                InvoicedQty="" KitCode="" LineSeqNo="" LineType=""
+                MaxLineStatus="" MaxLineStatusDesc=""
+                MergeNode="" MinLineStatus="" MinLineStatusDesc=""
+                OpenQty="" OrderHeaderKey="" OrderLineKey=""
+                OrderedQty="" OrigOrderLineKey="" OriginalOrderedQty=""
+                OtherCharges="" PackListType=""
+                ParentOfDependentGroup="" PersonalizeCode=""
+                PersonalizeFlag="" PickableFlag="" PrimeLineNo=""
+                Purpose="" ReceivingNode="" RemainingQty=""
+                ReqCancelDate="" ReqDeliveryDate="" ReqShipDate=""
+                ReservationID="" ReservationPool="" SCAC=""
+                ScacAndService="" ScacAndServiceKey="" Segment="" SegmentType="" 
+				SerialNo="" ShipNode="" ShipToID="" ShipTogetherNo=""
+                SplitQty="" Status=""
+                StatusQuantity="" SubLineNo="" isHistory="" />
+        </ReceiptLine>
+    </ReceiptLines>
+	<Shipment Action=" " ActualDeliveryDate=" " ActualFreightCharge=" " ActualShipmentDate=" " AppointmentNo=" " AssociationAction=" " BolNo=" " BuyerOrganizationCode=" " CarrierAccountNo=" "     CarrierServiceCode=" " CarrierType=" " Code=" " CommercialValue=" " Currency=" " DeliveryCode=" " DeliveryPlanKey=" " DeliveryTS=" "     DestinationZone=" " DocumentType=" " DownLoadCount=" " EnterpriseCode=" " ExpectedDeliveryDate=" " ExpectedShipmentDate=" " ExportTaxpayerID=" " FreightTerms=" " FromAddressKey=" "     FromAppointment=" " HasOtherShipments=" " HazardousMaterialFlag=" " HeldForConfirmation=" " ITDate=" " ITNo=" " IsSingleOrder=" " LinesEntered=" " ManuallyEntered="" OverrideManualShipmentEntry="" ManifestKey=" " ManifestNo=" "     MergeNode=" "  NumOfCartons=" " NumOfPallets=" " OrderAvailableOnSystem=" " OrderNo=" " OriginZone=" " PackListType=" " ParentShipmentKey=" " PickListNo=" " PickticketNo=" " PipelineKey=" " PodNo=" " ProNo=" " ReceivingNode=" " ReleaseNo=" " RequestedDeliveryDate=" " RequestedShipmentDate=" " SCAC=" " ScacIntegrationRequired=" " SealNo=" " SellerOrganizationCode=" " ShipDate=" " ShipMode=" " ShipNode=" " ShipVia=" " ShipmentClosedFlag=" " ShipmentConfirmUpdatesDone=" " ShipmentContainerizedFlag=" " ShipmentDeliverUpdatesDone=" " ShipmentKey=" " ShipmentNo=" "     ShipmentPlannedFlag=" " ShipmentType=" " Status=" " StatusDate=" " ToAddressKey=" " ToAppointment=" " TotalActualCharge=" " TotalEstimatedCharge=" " TotalVolume=" " TotalVolumeUOM=" " TotalWeight=" " TotalWeightUOM=" " TrackingNo=" " TrailerNo=" " />
+</Receipt>

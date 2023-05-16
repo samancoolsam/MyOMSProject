@@ -1,0 +1,16 @@
+<ItemList>
+   <Item>
+     <Extn ExtnStreetDate="" ExtnEndDate="" ExtnDSV="" ExtnECommerce=""/>
+       <AssociationTypeList>
+         <AssociationType>
+            <AssociationList>
+               <Association>
+                  <Item>
+                        <Extn ExtnStreetDate="" ExtnEndDate="" ExtnDSV="" ExtnECommerce=""/>
+                  </Item>
+               </Association>
+            </AssociationList>
+         </AssociationType>
+      </AssociationTypeList>
+	</Item>
+</ItemList>

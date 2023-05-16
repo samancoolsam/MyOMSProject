@@ -1,0 +1,26 @@
+<Order OrderNo="7100520100" CustomerEMailID="mo@academy.com" CustomerPhoneNO="7138066339" PaymentRuleId="Academy_Payment_Rule" DocumentType="0001" EnterpriseCode="Academy_Direct" OrderDate="2018-08-22T05:20:35" SellerOrganizationCode="Academy_Direct" IsRegisteredCustomer="N" ExtnExternalCustomerID="583031" ExtnFraudCheck="Accept">
+	<PersonInfoBillTo AddressLine1="21500 Park Row Dr" AddressLine2="" AddressLine3="" AlternateEmailID="" City="Katy" Company="" Country="US" DayFaxNo="" DayPhone="7138066339" Department="" EveningFaxNo="" EveningPhone="" FirstName="Rathish" LastName="Krishnan" MiddleName="" State="TX" ZipCode="77449-2426" IsPOBox="N" IsMilitary="N" ExtnAddressNickName="RathishKrishnan21500 Park Row Dr" ExtnIsAPOFPO="N" IsSignatureRequired="N" IsAddressVerified="Y" ExtnIsAddressVerified="Y" EMailID="mo@academy.com"/>
+	<OrderLines>
+		<OrderLine OrderedQty="1.0" PrimeLineNo="1" ReservationID="710052036" SCAC="FEDX" SubLineNo="1" TransactionalLineId="" CarrierServiceCode="Ground" ReqShipDate="2018-08-22T05:20:35" >
+			<Extn ExtnWCOrderItemIdentifier="710020001" />
+			<Item ItemID="024873069" ManufacturerItem="1228539-009" UnitCost="10.40000" UnitOfMeasure="EACH"/>
+			<LinePriceInfo ListPrice="19.99" UnitPrice="19.99000" RetailPrice="19.99000" TaxableFlag="Y"/>
+			<LineCharges>
+				<LineCharge ChargeCategory="Shipping" ChargeName="ShippingCharge" ChargeAmount="8.07000" ChargePerLine="8.07000" ChargePerUnit="0" InvoicedChargeAmount="" InvoicedChargePerLine="" InvoicedChargePerUnit="" IsBillable="Y" IsDiscount="N" Reference=""/>
+			</LineCharges>
+			<LineTaxes>
+				<LineTax ChargeCategory="TAXES" ChargeName="Taxes" InvoicedTax="0" Reference_1="" Reference_2="" Reference_3="" RemainingTax="1.65000" Tax="1.65000" TaxName="Merchandise" TaxPercentage=""/>
+				<LineTax ChargeCategory="Shipping" ChargeName="ShippingCharge" InvoicedTax="0" Reference_1="" Reference_2="" Reference_3="" RemainingTax="0.66000" Tax="0.66000" TaxName="ShippingTax" TaxPercentage=""/>
+			</LineTaxes>
+			<PersonInfoShipTo AddressLine1="21500 Park Row Dr" AddressLine2="" AddressLine3="" AlternateEmailID="" City="Katy" Company="" Country="US" DayFaxNo="" DayPhone="7138066339" Department="" EveningFaxNo="" EveningPhone="" FirstName="Rathish" LastName="Krishnan" MiddleName="" State="TX" ZipCode="77449-2426" IsPOBox="N" IsMilitary="N" ExtnAddressNickName="RathishKrishnan21500 Park Row Dr" ExtnIsAPOFPO="N" IsSignatureRequired="N" IsAddressVerified="Y" ExtnIsAddressVerified="Y" EMailID="mo@academy.com"/>
+		</OrderLine>
+	</OrderLines>
+	<PaymentMethods>
+		<PaymentMethod UnlimitedCharges="N" MaxChargeLimit="30.37" CreditCardType="Visa" ChargeSequence="1" PaymentReference1="${notificationId}" CreditCardNo="8000086388187587" PaymentType="CREDIT_CARD" DisplayCreditCardNo="1111" FirstName="Rathish" LastName="Krishnan">
+			<PaymentDetailsList>
+				<PaymentDetails AuthTime="2018-08-29T05:20:35Z" AuthorizationExpirationDate="20190829" AuthorizationID="831000" AuthCode="831000" ChargeType="AUTHORIZATION" RequestAmount="30.37" ProcessedAmount="30.37" Reference_1="" Reference_2="" Reference_3=""/>
+			</PaymentDetailsList>
+		</PaymentMethod>
+	</PaymentMethods>
+</Order>
+

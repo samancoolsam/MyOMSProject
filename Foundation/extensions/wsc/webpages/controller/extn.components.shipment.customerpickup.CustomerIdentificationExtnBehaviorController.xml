@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Controller
+    className="com.sterlingcommerce.ui.web.platform.controller.SCUIXAPIMashupController"
+    controllerId="extn.components.shipment.customerpickup.CustomerIdentificationExtnBehaviorController"
+    requestMethodSupported="POST" screenId="extn.components.shipment.customerpickup.CustomerIdentificationExtn">
+    <MashupRefs>
+        <MashupRef extnType="ADD" mashupId="extn_getUserListByUserID"
+            mashupRefId="extn_getUserListByUserID" permissionId=""/>
+	<!-- START - (OMNI - 14)  : BOPIS Page Tagging/Reporting -->
+	<MashupRef extnType="ADD"
+            mashupId="extn_RecordStoreUserActionMashup"
+            mashupRefId="extn_RecordStoreUserActionMashup" permissionId=""/>
+	<!--END - (OMNI - 14)  : BOPIS Page Tagging/Reporting -->
+    </MashupRefs>
+</Controller>

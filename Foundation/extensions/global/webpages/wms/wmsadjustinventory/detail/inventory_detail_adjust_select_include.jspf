@@ -1,0 +1,61 @@
+<%@ page import="java.util.*" %>
+<%@ page import="com.yantra.yfc.util.*" %>
+<%@ include file="/console/jsp/editable_table_utils.jspf" %>
+
+<%
+
+	String sOperation = request.getParameter("userOperation");
+	 YFCElement errors = (YFCElement)request.getAttribute("YFC_EXCEPTIONXML");
+	 YFCElement root = null;
+	 YFCElement oNewAdjustLocationInventory = null;
+	 YFCElement eOrigAPIElem = null;
+
+		if(equals(request.getParameter("getRequestDOM"),"Y")) 
+		{
+			YFCElement detailAPIRoot = (YFCElement) request.getAttribute("AdjustLocationInventory");
+			if (detailAPIRoot != null) {
+				YFCElement oSource = null;
+				YFCElement oInventory = null;
+				oSource = detailAPIRoot.getChildElement("Source");
+				if ( oSource == null) {
+					oSource = detailAPIRoot.createChild("Source");
+				}
+				oInventory = oSource.getChildElement("Inventory");
+				if ( oInventory == null) {
+					oInventory = oSource.createChild("Inventory");
+				}
+				if (oInventory.getChildElement("SerialList") == null) {
+					oInventory.createChild("SerialList");
+				}
+				eOrigAPIElem = (YFCElement)detailAPIRoot.cloneNode(true);
+				request.setAttribute("OrigAPIOutput",eOrigAPIElem);
+				//System.out.println("eOrigAPIElem------>" + eOrigAPIElem.toString());
+			} else {
+				//System.out.println("detailAPIRoot is null");
+				YFCDocument oDoc = YFCDocument.createDocument("AdjustLocationInventory");
+				YFCElement oAdjust = oDoc.getDocumentElement();
+				((oAdjust.createChild("Source")).createChild("Inventory")).createChild("SerialList");
+				request.setAttribute("AdjustLocationInventory",oAdjust);
+			}
+			HashMap inventoryLineAttrs  = new HashMap();
+			inventoryLineAttrs.put("SerialDetail", "SerialNo");
+			
+			if(!isVoid(errors) || equals(sOperation,"Y") || equals(sOperation,"DELETE"))
+			{
+				root = getRequestDOM(); //Data that Posted from the Detail View
+				if (root.getChildElement("AdjustLocationInventory") == null) {
+					YFCElement adjustLoc = root.createChild("AdjustLocationInventory");
+					adjustLoc.createChild("SerialList");
+				}
+				request.setAttribute("getRequestDOMOutput",root);
+				if(root != null) {
+					oNewAdjustLocationInventory = root.getChildElement("AdjustLocationInventory");
+					//System.out.println("getRequestDOMOutput------>"+root.toString());
+				}
+				if(oNewAdjustLocationInventory !=null)		
+				{
+					mergeRequestAndAPIOutput(detailAPIRoot,oNewAdjustLocationInventory,inventoryLineAttrs);
+				}
+			}
+	}
+%>

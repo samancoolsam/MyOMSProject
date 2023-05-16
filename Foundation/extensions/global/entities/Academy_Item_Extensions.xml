@@ -1,0 +1,423 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright 2006-2008, Sterling Commerce, Inc. All rights reserved. -->
+<DBSchema>
+   <Entities>        
+      <Entity TableName="YFS_ITEM" >
+        <Attributes>
+			<!-- SFS2.0: The extended attribute, ExtnShpFromDC should be present in the 'Extended Attribute' pop-up of 'Item Details' screen.-->
+			<Attribute ColumnName="EXTN_SHP_FROM_DC" 
+			DataType="SFDCFlg" 
+			DefaultValue="N" 
+			Description="Y means ship from 001 and 701"  
+			Nullable="false" 
+			Type="CHAR"
+			Size="1"
+			XMLName="ExtnShpFromDC" 
+			XMLGroup="Extn" />
+		 
+		  <!--SFS2.0: Change Ends -->
+		  
+		<!--START: SHIN-5-->
+		<Attribute ColumnName="EXTN_SHIP_FROM_DQ" 
+			DataType="SFDQFlag" 
+			DefaultValue="N" 
+			Description="Y means ship from 711 and any next generation DC"  
+			Nullable="false" 
+			Type="CHAR"
+			Size="1"
+			XMLName="ExtnShipFromDQ" 
+			XMLGroup="Extn" />
+		<!--END: SHIN-5-->
+		
+        <Attribute ColumnName="EXTN_HIGHVALUE" 
+          DataType="HighValueFlag"
+          DecimalDigits="" 
+          DefaultValue="' '" 
+          Description=" "  
+          Nullable="true" 
+          Type="CHAR"
+          Size="1" 
+          XMLName="ExtnHighValue"
+          XMLGroup="Extn" 
+          SqlServerDataType=""/>
+		 <Attribute ColumnName="EXTN_SHIPALONE" 
+			DataType="ShipAloneFlag"
+			DecimalDigits="" 
+			DefaultValue="' '" 
+			Description=" "  
+			Nullable="true" 
+			Type="CHAR"
+			Size="1" 
+			XMLName="ExtnShipAlone"
+			XMLGroup="Extn" 
+          SqlServerDataType=""/>
+		 <Attribute ColumnName="EXTN_CONVEYABLE" 
+			DataType="ConveyableFlag"
+			DecimalDigits="" 
+			DefaultValue="' '" 
+			Description=" "  
+			Type="CHAR"
+			Nullable="true" 
+			Size="1" 
+			XMLName="ExtnConveyable"
+			XMLGroup="Extn" 
+			SqlServerDataType=""/>
+		<Attribute ColumnName="EXTN_KIT" 
+				DataType="KitFlag"
+				DecimalDigits="" 
+				DefaultValue="' '" 
+				Description=" "  
+				Type="CHAR"
+				Nullable="true" 
+				Size="1" 
+				XMLName="ExtnKit"
+				XMLGroup="Extn" 
+				SqlServerDataType=""/>      
+		<Attribute ColumnName="EXTN_WHITEGLOVEELIGIBLE" 
+				DataType="WhiteGloveEligibleFlag"
+				DecimalDigits="" 
+				DefaultValue="' '" 
+				Description=" "  
+				Nullable="true" 
+				Type="CHAR"
+				Size="1" 
+				XMLName="ExtnWhiteGloveEligible"
+				XMLGroup="Extn" 
+				SqlServerDataType=""/>
+		<Attribute ColumnName="EXTN_ECOMMERCEFLAG"
+				DataType="ECommerceFlag"
+				DecimalDigits="" 
+				DefaultValue="' '" 
+				Description=" "  
+				Nullable="true" 
+				Type="CHAR"
+				Size="1" 
+				XMLName="ExtnECommerceFlag"
+				XMLGroup="Extn" 
+				SqlServerDataType=""/>		
+		<Attribute ColumnName="EXTN_ECOMMERCE_DESCRIPTION"
+				DataType="ExtnEcommerceDescription"
+				DecimalDigits="" 
+				DefaultValue="' '" 
+				Description=" "  
+				Nullable="true" 
+				Type="CHAR"
+				Size="1" 
+				XMLName="ExtnEcommerceDescription"
+				XMLGroup="Extn" 
+				SqlServerDataType=""/>	
+		<Attribute ColumnName="EXTN_DROPSHIPFLAG" 
+				DataType="DropShipFlag"
+				DecimalDigits="" 
+				DefaultValue="' '" 
+				Description=" "  
+				Nullable="true" 
+				Type="CHAR"
+				Size="1" 
+				XMLName="ExtnDropShipFlag"
+				XMLGroup="Extn" 
+				SqlServerDataType=""/>
+		<Attribute ColumnName="EXTN_IS_GIFTCARD" 
+				DataType="IsGiftCardFlag"
+				DecimalDigits="" 
+				DefaultValue="' '" 
+				Description=" "  
+				Nullable="true" 
+				Type="CHAR"
+				Size="1" 
+				XMLName="ExtnIsGiftCard"
+				XMLGroup="Extn" 
+				SqlServerDataType=""/>
+		<Attribute ColumnName="EXTN_LABEL_PICK" 
+				DataType="LabelPick"
+				DecimalDigits="" 
+				DefaultValue="' '" 
+				Description=" "  
+				Nullable="true" 
+				Type="CHAR"
+				Size="1" 
+				XMLName="ExtnLabelPick"
+				XMLGroup="Extn" 
+				SqlServerDataType=""/>
+		<!-- removed as part of CR#34 --> 
+		 <Attribute ColumnName="EXTN_QUANTITY_RESTRICTIONS" 
+				DataType="QuantityRestrictions"
+				Description=" "
+				DefaultValue="0"
+				Nullable="true"
+				XMLName="ExtnQuantityRestrictions"
+				XMLGroup="Extn" 
+				SqlServerDataType=""/>
+						
+		<!-- OMNI-8716: Attribute Max Character Length - Start -->		
+		<!-- Updating EXTN_HAZMAT_NAME column DataType -->
+		<!--<Attribute ColumnName="EXTN_HAZMAT_NAME" 
+				DataType="HazmatName"
+				DecimalDigits="" 
+				DefaultValue="' '" 
+				Description=" "  
+				Nullable="true" 
+				Type="CHAR"
+				Size="1" 
+				XMLName="ExtnHazmatName"
+				XMLGroup="Extn" 
+				SqlServerDataType=""/> -->		
+		<Attribute ColumnName="EXTN_HAZMAT_NAME" 
+				DataType="Text-100"
+				DefaultValue="' '" 
+				Description="Description of Hazmat"  
+				Nullable="TRUE" 
+				XMLName="ExtnHazmatName"
+				XMLGroup="Extn"
+				Name="ExtnHazmatName"/>
+		<!-- Updating EXTN_NMFC_DESCRIPTION column DataType from DataType="Text-100" to DataType="Text-200" -->
+		<Attribute ColumnName="EXTN_NMFC_DESCRIPTION" DataType="Text-200" DefaultValue="' '" Description="Description of NMFC" Name="ExtnNMFCDescription" Nullable="TRUE" XMLGroup="Extn" XMLName="ExtnNMFCDescription"/>
+		<!-- OMNI-8716: Attribute Max Character Length - End -->
+			
+		<Attribute ColumnName="EXTN_COUNTRY_OF_ORIGIN" 
+				DataType="CountryOfOrigin"
+				DecimalDigits="" 
+				DefaultValue="' '" 
+				Description=" "  
+				Nullable="true" 
+				Type="CHAR"
+				Size="1" 
+				XMLName="ExtnCountryOfOriginDescription"
+				XMLGroup="Extn" 
+				SqlServerDataType=""/>
+		<Attribute ColumnName="EXTN_ITEM_DIVISION" 
+				DataType="ExtnItemDivision"
+				DecimalDigits="" 
+				DefaultValue="' '" 
+				Description=" "  
+				Nullable="true" 
+				Type="CHAR"
+				Size="1" 
+				XMLName="ExtnItemDivision"
+				XMLGroup="Extn" 
+				SqlServerDataType=""/>
+		<Attribute ColumnName="EXTN_ITEM_DIVISION_NAME" 
+				DataType="ExtnItemDivisionName"
+				DecimalDigits="" 
+				DefaultValue="' '" 
+				Description=" "  
+				Nullable="true" 
+				Type="CHAR"
+				Size="1" 
+				XMLName="ExtnItemDivisionName"
+				XMLGroup="Extn" 
+				SqlServerDataType=""/>
+		<!-- removed as part of CR#34 -->
+		  <Attribute ColumnName="EXTN_REBATE" 
+				DataType="Rebate"
+				DecimalDigits="" 
+				DefaultValue="' '" 
+				Description=" "  
+				Nullable="true" 
+				Type="CHAR"
+				Size="1" 
+				XMLName="ExtnRebate"
+				XMLGroup="Extn" 
+				SqlServerDataType=""/>
+		<Attribute ColumnName="EXTN_REBATE_START_DATE" 
+				DataType="ExtnTimeStamp"
+				DecimalDigits="" 
+				Description=" "
+				Nullable="true" 
+				Type="CHAR"
+				Size="1" 
+				XMLName="ExtnRebateStartDate"
+				XMLGroup="Extn" 
+				SqlServerDataType=""/>
+		<Attribute ColumnName="EXTN_REBATE_END_DATE" 
+				DataType="ExtnTimeStamp"
+				DecimalDigits="" 
+				Description=" "
+				Nullable="true" 
+				Type="CHAR"
+				Size="1" 
+				XMLName="ExtnRebateEndDate"
+				XMLGroup="Extn" 
+				SqlServerDataType=""/> 
+		<Attribute ColumnName="EXTN_EAS_TAG" 
+				DataType="ExtnEASTag"
+				DecimalDigits="" 
+				DefaultValue="' '" 
+				Description=" "  
+				Nullable="true" 
+				Type="CHAR"
+				Size="1" 
+				XMLName="ExtnEASTag"
+				XMLGroup="Extn" 
+				SqlServerDataType=""/>
+		<Attribute ColumnName="EXTN_SIZECODE_DESCRIPTION"
+				DataType="ExtnSizeCodeDescription"
+				DecimalDigits="" 
+				DefaultValue="' '" 
+				Description=" "  
+				Nullable="true" 
+				Type="CHAR"
+				Size="1" 
+				XMLName="ExtnSizeCodeDescription"
+				XMLGroup="Extn" 
+				SqlServerDataType=""/>
+		<Attribute ColumnName="EXTN_COLORCODE_DESCRIPTION" 
+				DataType="ExtnColorCodeDescription"
+				DecimalDigits="" 
+				DefaultValue="' '" 
+				Description=" "  
+				Nullable="true" 
+				Type="CHAR"
+				Size="1" 
+				XMLName="ExtnColorCodeDescription"
+				XMLGroup="Extn" 
+				SqlServerDataType=""/>
+		<Attribute ColumnName="EXTN_PRODUCTLINE"
+				DataType="ExtnProductLine"
+				DecimalDigits="" 
+				DefaultValue="' '" 
+				Description=" "  
+				Nullable="true" 
+				Type="CHAR"
+				Size="1" 
+				XMLName="ExtnProductLine"
+				XMLGroup="Extn" 
+				SqlServerDataType=""/>
+		<Attribute ColumnName="EXTN_VENDOR_COLOR_NAME"
+				DataType="ExtnVendorColorName"
+				DecimalDigits="" 
+				DefaultValue="' '" 
+				Description=" "  
+				Nullable="true" 
+				Type="CHAR"
+				Size="1" 
+				XMLName="ExtnVendorColorName"
+				XMLGroup="Extn" 
+				SqlServerDataType=""/>
+		<Attribute ColumnName="EXTN_END_DATE" DataType="Date" DecimalDigits="" Description=" " Nullable="true" Type="Date" Size="17" XMLName="ExtnEndDate" XMLGroup="Extn" SqlServerDataType="" />
+	<Attribute ColumnName="EXTN_STREET_DATE" DataType="Date" DecimalDigits="" Description=" " Nullable="true" Type="Date" Size="17" XMLName="ExtnStreetDate" XMLGroup="Extn" SqlServerDataType="" />
+     
+        <!-- Start changes:CR#34 -->
+		<Attribute ColumnName="EXTN_IP_ITEM_DESCRIPTION" DataType="Text-200" DefaultValue="' '" Description="IP Item Description" Name="ExtnIPItemDescription" Nullable="false" XMLGroup="Extn" XMLName="ExtnIPItemDescription"/>        
+		<Attribute ColumnName="EXTN_COLOR_DESCRIPTION" DataType="Text-200" DefaultValue="' '" Description="Color description of item" Name="ExtnColorDescription" Nullable="false" XMLGroup="Extn" XMLName="ExtnColorDescription"/>        
+		<Attribute ColumnName="EXTN_TAX_CATEGORY" DataType="Text-40" DefaultValue="' '" Description="Tax category" Name="ExtnTaxCategory" Nullable="false" XMLGroup="Extn" XMLName="ExtnTaxCategory"/>        
+		<Attribute ColumnName="EXTN_DEPARTMENT" DataType="Text-40" DefaultValue="' '" Description="Department code" Name="ExtnDepartment" Nullable="TRUE" XMLGroup="Extn" XMLName="ExtnDepartment"/>        
+		<Attribute ColumnName="EXTN_DEPARTMENT_NAME" DataType="Text-40" DefaultValue="' '" Description="Department Name" Name="ExtnDepartmentName" Nullable="TRUE" XMLGroup="Extn" XMLName="ExtnDepartmentName"/>        
+		<Attribute ColumnName="EXTN_CLASS" DataType="Text-40" DefaultValue="' '" Description="Class name" Name="ExtnClass" Nullable="TRUE" XMLGroup="Extn" XMLName="ExtnClass"/>        
+		<Attribute ColumnName="EXTN_CLASS_DESCRIPTION" DataType="Text-40" DefaultValue="' '" Description="Class Description" Name="ExtnClassDescription" Nullable="TRUE" XMLGroup="Extn" XMLName="ExtnClassDescription"/>        
+		<Attribute ColumnName="EXTN_STYLE" DataType="Text-40" DefaultValue="' '" Description="Style Code of item" Name="ExtnStyle" Nullable="TRUE" XMLGroup="Extn" XMLName="ExtnStyle"/>        
+		       
+		<Attribute ColumnName="EXTN_VENDOR" DataType="Text-40" DefaultValue="' '" Description="Vendor Name" Name="ExtnVendor" Nullable="TRUE" XMLGroup="Extn" XMLName="ExtnVendor"/>        
+		<Attribute ColumnName="EXTN_FAKC_CLASS" DataType="Text-40" DefaultValue="' '" Description="FAKC Class Name" Name="ExtnFAKClass" Nullable="TRUE" XMLGroup="Extn" XMLName="ExtnFAKClass"/>        
+  
+  
+        <!-- end changes:abhishek -->
+        
+        <Attribute ColumnName="EXTN_ECOMMERCE_CODE" DataType="Text-40" DefaultValue="' '" Description="Ecommmerce Code" Name="ExtnEcommerceCode" Nullable="TRUE" XMLGroup="Extn" XMLName="ExtnEcommerceCode"/>  
+        <Attribute ColumnName="EXTN_INSTR_SHIPPING" DataType="Text-200" DefaultValue="' '" Description="Instructions for Shipping" Name="ExtnInstructionsForShipping" Nullable="TRUE" XMLGroup="Extn" XMLName="ExtnInstructionsForShipping"/>              
+        
+        
+        <!-- Start changes: SFS -->
+		
+		<!-- SFS2.0: The flag, 'EXTN_SHIP_FROM_STORE_ITEM', should be configurable.	To do that, the current DataType ("Flag") is updated to "SFSFlag". The default value is set to 'N'. The additional attributes, Type and Size is added under <Attribute> tag -->
+        
+        <Attribute 
+			ColumnName="EXTN_SHIP_FROM_STORE_ITEM" 
+			DataType="SFSFlag"
+			DefaultValue="N" 
+			Description="Y means ship from store item"  
+			Nullable="true" 
+			Type="CHAR"
+			Size="1"
+			XMLName="ExtnShipFromStoreItem"
+			XMLGroup="Extn"/>
+			
+		<!--SFS2.0: Change Ends -->
+		
+		<Attribute 
+			ColumnName="EXTN_ITEM_IMAGE_URL" 
+			DataType="Text-2048" 
+			DefaultValue="' '" 
+			Description="IP Item image URL" 
+			Nullable="true" 
+			XMLGroup="Extn" 
+			XMLName="ExtnItemImageUrl"/>   
+
+		<Attribute 
+			ColumnName="EXTN_IMAGE_FILE_NAME" 
+			Type="VARCHAR2" Size="100" 
+			DefaultValue="' '" 
+			Description="Item image File Name" 
+			Nullable="true" 
+			XMLGroup="Extn" 
+			XMLName="ExtnItemImageName"/> 
+		<Attribute 
+			ColumnName="EXTN_IMAGE_LOCAL_PATH" 
+			Type="VARCHAR2" Size="255" 
+			DefaultValue="' '" 
+			Description="Item image Local Path" 
+			Nullable="true" 
+			XMLGroup="Extn" 
+			XMLName="ExtnImageLocalPath"/>    
+  
+        <!-- End changes: SFS -->
+		 <!--Data type added STL-934 Checkout Funnel -->
+        <Attribute 
+			ColumnName="EXTN_IS_CONT_SPLIT_ALLOWED" 
+			DataType="CONTFlag"
+			DefaultValue="N" 
+			Description="Y means manual contanerization is reqd"  
+			Nullable="true" 
+			Type="CHAR"
+			Size="1"
+			XMLName="ExtnIsContSplitAllowed"
+			XMLGroup="Extn"/>
+			<!--Data type added STL-934 Checkout Funnel -->
+			
+		<!-- Start : WN-802 Delayed Release/Pre Order -->
+		<Attribute 
+			ColumnName="EXTN_INV_AVL_DATE" 
+			DataType="TimeStamp"
+			Description="Inventory Available date for Pre-orders"  
+			Nullable="true"
+			XMLName="ExtnInvAvlDate"
+			XMLGroup="Extn" />
+		<!-- End : WN-802 Delayed Release/Pre Order -->
+		
+		<!-- Start :  As part of Reservation Jira Column Extensions -->
+		
+		<Attribute ColumnName="EXTN_VELOCITY_CATEGORY" DataType="Text-40" DefaultValue="' '" Description="Class Description" Name="ExtnVelocityCategory" Nullable="TRUE" XMLGroup="Extn" XMLName="ExtnVelocityCategory"/>
+        <Attribute ColumnName="EXTN_WATERMARK" DataType="Number" size="24" DecimalDigits="" DefaultValue="0" Description="Item Watermark" Name="ExtnWatermark" XMLName="ExtnWatermark" XMLGroup="Extn" Type="NUMBER"/>
+        <Attribute ColumnName="EXTN_RESERVE_INV" DataType="Flag"  DefaultValue="Y" Description="Reserve Inventory Flag" Name="ExtnReserveInv" Nullable="false" Size="1" Type="Flag" XMLName="ExtnReserveInv" XMLGroup="Extn"/>
+        <Attribute ColumnName="EXTN_PROM_CLEAR_FLAG" DataType="Flag"  DefaultValue="N" Description="Promotions or Clearance Item Flag" Name="ExtnPromClear" Nullable="false" Size="1" Type="Flag" XMLName="ExtnPromClear" XMLGroup="Extn"/>
+        <Attribute ColumnName="EXTN_PROM_START_DATE" DataType="Date" DecimalDigits="" Description=" " Nullable="true" Type="Date" Size="17" XMLName="ExtnPromStartDate" XMLGroup="Extn" SqlServerDataType="" />
+        <Attribute ColumnName="EXTN_PROM_END_DATE" DataType="Date" DecimalDigits="" Description=" " Nullable="true" Type="Date" Size="17" XMLName="ExtnPromEndDate" XMLGroup="Extn" SqlServerDataType="" />
+		
+		<!-- End : As part of Reservation Jira Column Extensions -->
+        
+        <!-- OMNI-98957 - Start: BMT Compliance Required -->
+        <Attribute ColumnName="EXTN_BMT_COMPLIANCE_REQUIRED" DataType="ExtnBMTComplianceFlag" XMLName="ExtnBMTComplianceRequired" Size="1" Type="CHAR" Nullable="true" Description="Indicator whether item requires BMT Compliance" XMLGroup="Extn" />	
+		<!-- OMNI-98957 - End: BMT Compliance Required -->
+        
+        </Attributes>
+        <Indices>
+				<Index Name="ACAD_GLITMID">
+					<Column Name="GLOBAL_ITEM_ID" />
+				</Index>
+				<Index Name="ACAD_SHRTDESC">
+					<Column Name="SHORT_DESCRIPTION" />
+				</Index>
+				<Index Name="ACAD_DEFPC">
+					<Column Name="DEFAULT_PRODUCT_CLASS" />
+				</Index>
+				<!-- Added ACD_YFS_ITEM_UNT for count issue -->
+				<Index Name="ACD_YFS_ITEM_UNT">
+					<Column Name="ORGANIZATION_CODE" />
+					<Column Name="ITEM_ID" />
+					<Column Name="UNIT_COST" />
+					<Column Name="UOM" />
+				</Index>
+		</Indices>        			
+      </Entity>
+    </Entities>
+</DBSchema>

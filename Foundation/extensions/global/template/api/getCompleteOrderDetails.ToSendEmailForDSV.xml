@@ -1,0 +1,63 @@
+<Order OrderName="" CustomerEMailID="" OrderNo="" OrderDate="" EnterpriseCode="" OrderHeaderKey="">
+<PersonInfoBillTo FirstName="" LastName="" AddressLine1="" AddressLine2="" AddressLine3="" City="" State="" ZipCode="" EMailID="" />
+<PersonInfoShipTo FirstName="" LastName="" AddressLine1="" AddressLine2="" AddressLine3="" City="" State="" ZipCode="" EMailID="" />
+<OverallTotals GrandTotal="" LineSubTotal="" GrandDiscount="" GrandCharges="" GrandTax="" />
+<OrderLines>
+<!-- OMNI-50596 - Email - Drop Ship Vendor email to Listrak - added  ChainedFromOrderHeaderKey-->
+<OrderLine DeliveryMethod="" PrimeLineNo="" OrderLineKey="" ChainedFromOrderLineKey="" CarrierServiceCode="" OrderedQty="" OriginalOrderedQty="" InvoicedQty="" DerivedFromOrderHeaderKey="" DerivedFromOrderLineKey="" ChainedFromOrderHeaderKey="">
+<!-- End OMNI-50596 - Email - Drop Ship Vendor email to Listrak -->
+<LinePriceInfo UnitPrice="" LineTotal="" />
+<DerivedFromOrder DocumentType="" OrderNo=""/>
+<DerivedFromOrderLine OrderLineKey="" OrderedQty="" OriginalOrderedQty=""/>
+<Instructions>
+<Instruction InstructionType="" InstructionText=""/>
+</Instructions>
+<LineOverallTotals UnitPrice="" ExtendedPrice=""/>
+<ItemDetails ItemID="" >
+<PrimaryInformation Description =""/>
+<Extn ExtnWhiteGloveEligible=""/>
+</ItemDetails>
+<LineCharges>
+<LineCharge ChargeAmount="" ChargeCategory="" ChargeName="" ChargePerLine="" IsBillable="" IsDiscount=""/>
+</LineCharges>
+<LineTaxes>
+<LineTax ChargeCategory="" ChargeName="" Tax=""/>
+</LineTaxes>
+<PersonInfoBillTo FirstName="" LastName="" AddressLine1="" AddressLine2="" AddressLine3="" City="" State="" ZipCode=""/>
+<PersonInfoShipTo FirstName="" LastName="" AddressLine1="" AddressLine2="" AddressLine3="" City="" State="" ZipCode=""/>
+<ShipmentLines>
+<ShipmentLine ShipmentKey="" OrderLineKey=""/>
+</ShipmentLines>
+</OrderLine>
+</OrderLines>
+<PaymentMethods>
+<PaymentMethod PaymentType="" DisplayCreditCardNo="" MaxChargeLimit="" SvcNo="" CreditCardNo="" DisplaySvcNo="" PaymentReference5="" />
+</PaymentMethods>
+<OrderHoldTypes>
+<OrderHoldType HoldType="" />
+</OrderHoldTypes>
+<Shipments>
+<Shipment ShipmentNo="" ShipmentKey="" SCAC="" CarrierServiceCode="" ActualFreightCharge ="" ScacAndService="" ActualShipmentDate="" ProNo="" SellerOrganizationCode="">
+
+<!-- Start WN-1627 Phase 1 Tracking link update from old to Narvar Link -->
+<ShipNode ShipNodeKey="" NodeType="">
+<ShipNodePersonInfo ZipCode = ""/>
+</ShipNode>
+<!-- End WN-1627 Phase 1 Tracking link update from old to Narvar Link -->
+
+<Containers TotalNumberOfRecords="">
+<Container SCAC="" TrackingNo="">
+<ContainerDetails>
+<ContainerDetail Quantity="" >
+</ContainerDetail>
+</ContainerDetails>
+</Container>
+</Containers>
+<ShipmentLines>
+<ShipmentLine OrderLineKey="" ShipmentKey="" Quantity="">
+<OrderRelease SupplierName=""/>
+</ShipmentLine>
+</ShipmentLines>
+</Shipment>
+</Shipments>
+</Order>

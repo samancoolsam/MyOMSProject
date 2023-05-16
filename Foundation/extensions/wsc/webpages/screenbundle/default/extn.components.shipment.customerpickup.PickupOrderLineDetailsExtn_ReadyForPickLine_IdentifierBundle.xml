@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ScreenBundle identifierId="ReadyForPickLine"
+    screenBundleId="extn.components.shipment.customerpickup.PickupOrderLineDetailsExtnBundle" screenId="extn.components.shipment.customerpickup.PickupOrderLineDetailsExtn">
+    <BundleEntries/>
+</ScreenBundle>

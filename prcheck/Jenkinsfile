@@ -1,0 +1,37 @@
+#!/usr/bin/env groovy
+pipeline {
+        agent { label 'STL_UAT2' }
+
+            stages{
+                        stage('Pre Code Checkout') {
+                                steps {
+                                  sh 'cd /apps/SterlingFiles/build/svnbuild/source/'
+		                          sh 'mkdir -p PRCheck'
+                                }
+                        }
+						
+						stage('Code Checkout') {
+                                steps {
+                                dir('/apps/SterlingFiles/build/svnbuild/source/PRCheck') {
+                                     checkout scm
+                                     }
+                                }
+                        }
+                        
+                        stage('Build') {
+                                steps {
+                                  sh 'cd /apps/SterlingFiles/build/svnbuild ; ./ster-build-prcheck PRCheck'
+                                }
+                        }
+        }
+        post {
+        failure {
+            echo 'Email Notifications'
+            emailext body: "${currentBuild.currentResult}: Job ${env.JOB_NAME} build ${env.BUILD_NUMBER}\n More info at: ${env.BUILD_URL}",
+                to: "prateek.jain@academy.com;raghul.ganesan@academy.com;sterlingpoddev@academy.com",
+                attachLog: true,
+                subject: "Jenkins Build ${currentBuild.currentResult}: Job ${env.JOB_NAME}"
+
+        }
+    }
+}

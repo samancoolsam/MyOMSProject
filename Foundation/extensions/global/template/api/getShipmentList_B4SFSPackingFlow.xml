@@ -1,0 +1,38 @@
+<Shipment CarrierServiceCode="" Createts="2018-06-25T17:55:48-04:00" DeliveryMethod="SHP" DocumentType="0001" EnterpriseCode="Academy_Direct" ExpectedShipmentDate="2018-06-25T17:55:43-04:00" SCAC="" SellerOrganizationCode="Academy_Direct" ShipDate="2018-06-25T17:55:43-04:00" ShipNode="033" ShipmentKey="20180625175548203739" ShipmentNo="100000081" ShipmentType="" Status="1100.70.06.70">
+		<Extn ExtnExeterContainerId=""/>
+		<Containers TotalNumberOfRecords="2">
+			<Container ActualFreightCharge="0.00" ActualWeight="10.00" ActualWeightUOM="LBS" AppliedWeight="0.00" AppliedWeightUOM="" AstraCode="" BarcodeDiscount="" BasicFreightCharge="0.00" CODReturnTrackingNo="" CarriageValue="0.00" ContainerGrossWeight="0.00" ContainerGrossWeightUOM="LBS" ContainerGroup="SHIPMENT" ContainerHeight="0.00" ContainerHeightUOM="IN" ContainerLength="0.00" ContainerLengthUOM="IN" ContainerNetWeight="0.00" ContainerNetWeightUOM="LBS" ContainerNo="100000040" ContainerScm="00000000001000000502" ContainerSeqNo="0" ContainerType="" ContainerWidth="0.00" ContainerWidthUOM="IN" CustomsValue="0.00" DeclaredValue="0.00" DimmedFlag="" DiscountAmount="0.00" ExportLicenseExpDate="2018-08-02" ExportLicenseNo="" HasOtherContainers="N" IsHazmat="N" IsManifested="N" IsPackProcessComplete="Y" IsReceived="N" LoadKey="" OversizedFlag="" ParentContainerGroup="" ParentContainerKey="" ParentContainerNo="" RequiredNoOfReturnLabels="0" RoutingCode="" SCAC="" ShipmentContainerKey="20180802131748229796" ShipmentKey="20180625175548203739" SpecialServicesSurcharge="0.00" SystemSuggested="" Ucc128code="" Zone="" isHistory="N">
+				<ContainerDetails TotalNumberOfRecords="1">
+					<ContainerDetail ContainerDetailsKey="20180802131748229797" ItemID="sfs3" ProductClass="GOOD" Quantity="2.00" ShipmentContainerKey="20180802131748229796" ShipmentKey="20180625175548203739" ShipmentLineKey="20180625175548203738" UnitOfMeasure="EACH" isHistory="N">
+						<ShipmentTagSerials TotalNumberOfRecords="0"/>
+						<ShipmentLine IsHazmat="N" ItemDesc="sfs test item 1 long desc" OrderNo="jk201806250009" PrimeLineNo="1" ReleaseNo="1" ShipmentLineNo="1" ShipmentSubLineNo="0" SubLineNo="1"/>
+					</ContainerDetail>
+				</ContainerDetails>
+				<Instructions TotalNumberOfRecords="0"/>
+			</Container>
+			
+		</Containers>
+		<ShipmentLines TotalNumberOfRecords="1">
+			<ShipmentLine BackroomPickedQuantity="4.00" DocumentType="0001" ItemDesc="sfs test item 1 long desc" ItemID="sfs3" OrderHeaderKey="20180625175443203682" OrderLineKey="20180625175443203683" OrderNo="jk201806250009" ProductClass="GOOD" Quantity="4.00" ReceivedQuantity="0.00" ShipmentKey="20180625175548203739" ShipmentLineKey="20180625175548203738" ShortageQty="0.00" UnitOfMeasure="EACH">
+				<Order DocumentType="0001" EnterpriseCode="Academy_Direct" OrderNo="jk201806250009"/>
+				<OrderLine IsBundleParent="N" OrderHeaderKey="20180625175443203682" OrderLineKey="20180625175443203683" OrderedQty="4.00" Status="Included In Shipment" StatusQuantity="4.00">
+					<Item ItemDesc="sfs test item 1 long desc" ItemID="sfs3" ItemShortDesc="sfs test item 3" ProductClass="GOOD" ProductLine="" UnitOfMeasure="EACH"/>
+					<ChildOrderLineRelationships/>
+					<ParentOrderLineRelationships/>
+					<ItemDetails ItemID="sfs3">
+						<Extn ExtnConveyable="" ExtnIsGiftCard="" ExtnShipAlone="" ExtnWhiteGloveEligible=""/>
+						<PrimaryInformation UnitHeight="4.65"
+                        UnitHeightUOM="IN" UnitLength="13.30"
+                        UnitLengthUOM="IN" UnitVolume="525.6825"
+                        UnitVolumeUOM="CIN" UnitWeight="2.18"
+                        UnitWeightUOM="LBS" UnitWidth="8.50" UnitWidthUOM="IN" BundleFulfillmentMode="01" CountryOfOrigin="" CreditWOReceipt="N" DefaultProductClass="GOOD" Description="sfs test item 1 long desc" KitCode="" ShortDescription="sfs test item 3"/>
+						<Components/>
+						<ItemAttributeGroupTypeList/>
+					</ItemDetails>
+				</OrderLine>
+			</ShipmentLine>
+		</ShipmentLines>
+		<BillToAddress FirstName="John" LastName="Maxwell"/>
+		<ToAddress AddressLine1="23155 I-10 West" AddressLine2="" AddressLine3="" AddressLine4="" AddressLine5="" AddressLine6="" AlternateEmailID="" Beeper="" City="Katy" Company="" Country="US" Createprogid="SterlingHttpTester" Createts="2018-06-11T22:18:55-04:00" Createuserid="admin" DayFaxNo="" DayPhone="9166259555" Department="" EMailID="John@XYZ.com" ErrorTxt="" EveningFaxNo="" EveningPhone="" FirstName="John" HttpUrl="" JobTitle="" LastName="Maxwell" Lockid="0" MiddleName="" MobilePhone="" Modifyprogid="SterlingHttpTester" Modifyts="2018-06-11T22:18:55-04:00" Modifyuserid="admin" OtherPhone="" PersonID="" PersonInfoKey="20180611221855180202" PreferredShipAddress="" ShortZipCode="77450" State="TX" Suffix="" Title="" UseCount="0" VerificationStatus="" ZipCode="77450" isHistory="N"/>
+		<Status Description="Shipment Being Packed" ProcessTypeKey="ORDER_DELIVERY" Status="1100.70.06.70"/>
+</Shipment>

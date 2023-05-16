@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExtensionMetaData>
+    <ScreenExtension extnClassName="HomeEditorRTExtn"
+        extnPackage="extn.editors"
+        originalScreen="isccs.editors.HomeEditorRT"
+        originalScreenPackage="isccs.editors" type="diffrential">
+        <Items>
+            <Link _sc_extensibility_operation="change"
+                _sc_extensibility_referenceUId="createReturn" renderHidden="true"/>
+        </Items>
+    </ScreenExtension>
+</ExtensionMetaData>

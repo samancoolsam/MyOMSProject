@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ScreenBundle
+    screenBundleId="extn.desktop.home.portlets.CustomerPickPortletExtnBundle" screenId="extn.desktop.home.portlets.CustomerPickPortletExtn">
+    <BundleEntries>
+        <BundleEntry
+            bundleEntryId="extn_scanProduct_CustPickPortlet_Link_ImageAlt"
+            bundleKey="Tooltip_arialabel_scanProduct"
+            bundleValueFn="_scSimpleBundle" property="ImageAlt"
+            type="WIDGET" uId="extn_scanProduct_CustPickPortlet"/>
+        <BundleEntry
+            bundleEntryId="extn_scanProduct_CustPickPortlet_Link_title"
+            bundleKey="Tooltip_arialabel_scanProduct"
+            bundleValueFn="_scSimpleBundle" property="title"
+            type="WIDGET" uId="extn_scanProduct_CustPickPortlet"/>
+        <BundleEntry bundleEntryId="txtOrderNo_TextField_hint"
+            bundleKey="extn_Scan_or_enter_Order_"
+            bundleValueFn="_scSimpleBundle" property="hint"
+            type="WIDGET" uId="txtOrderNo"/>
+    </BundleEntries>
+</ScreenBundle>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DBSchema>
+	<Entities>
+		<Entity Cacheable="true" ApiNeeded="Y" 
+			Description=""
+			HasHistory="False" Prefix="ACAD" TableName="ACAD_CARRIER_STATUS_LOOKUP" XMLName="AcadCarrierStatusLookup">
+			<Attributes>
+				<Attribute ColumnName="CARRIER_STATUS_LOOKUP_KEY" Size="40" DataType="Key" DefaultValue="' '" Description="Primary key for the table" Name="CarrierStatusLookupKey" Nullable="false" XMLGroup="" XMLName="CarrierStatusLookupKey" />			
+				<Attribute ColumnName="STATUS_CODE" Size="40" DataType="Text-40" DefaultValue="' '" Description="StatusCode" Name="StatusCode" Nullable="false" XMLGroup="" XMLName="StatusCode" />
+				<Attribute ColumnName="STATUS_DESCRIPTION" Size="100" Type="VARCHAR2" DefaultValue="' '" Description="STATUS_DESCRIPTION" Name="StatusDescription" Nullable="false" XMLGroup="" XMLName="StatusDescription" />
+				<Attribute ColumnName="MASTER_STATUS" Size="40" DataType="Text-40" DefaultValue="' '" Description="Status For SterlingOMS" Name="MasterStatus" Nullable="false" XMLGroup="" XMLName="MasterStatus" />
+				<Attribute ColumnName="SCAC" Size="40" DataType="Text-40" DefaultValue="' '" Description="SCAC" Name="SCAC" Nullable="false" XMLGroup="" XMLName="SCAC" />
+				<Attribute ColumnName="CREATETS" DataType="TimeStamp" DefaultValue="sysdate" Description="Create TimeStamp" />
+				<Attribute ColumnName="MODIFYTS" DataType="TimeStamp" DefaultValue="sysdate" Description="Modify TimeStamp" />
+				<Attribute ColumnName="CREATEUSERID" DataType="UserId" DefaultValue="&apos; &apos;" Description="Creating User ID" />
+				<Attribute ColumnName="MODIFYUSERID" DataType="UserId" DefaultValue="&apos; &apos;" Description="Modifying User ID" />
+				<Attribute ColumnName="CREATEPROGID" DataType="ProgramID" DefaultValue="&apos; &apos;" Description="Creating Program ID" />
+				<Attribute ColumnName="MODIFYPROGID" DataType="ProgramID" DefaultValue="&apos; &apos;" Description="Modifying Program ID" />
+				<Attribute ColumnName="LOCKID" DataType="Lockid" DefaultValue="0" Description="Lock ID" />
+			</Attributes>
+
+			<!-- PrimaryKey is a mandatory attribute in entity definition. This
+				element can have ONLY ONE attribute element -->
+			<PrimaryKey Name="CARRIER_LOOKUP_PK">
+				<Attribute ColumnName="CARRIER_STATUS_LOOKUP_KEY"
+					    Name="CarrierStatusLookupKey" />						
+			</PrimaryKey>
+			<Indices>
+				<Index Name="IND_STATUS_SCAC" Unique="True">
+					<Column Name="STATUS_CODE" />
+					<Column Name="SCAC" />
+				</Index>
+			</Indices>
+		</Entity>
+	</Entities>
+</DBSchema>

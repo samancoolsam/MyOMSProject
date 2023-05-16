@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomerList>
+    <Customer>
+        <BuyerOrganization/>
+        <CustomerContactList>
+            <CustomerContact>
+                <CustomerAdditionalAddressList>
+                    <CustomerAdditionalAddress>
+                        <PersonInfo>
+							 <Extn ExtnIsAPOFPO="" ExtnIsPOBOXADDRESS="" ExtnIsSignatureRequired="" ExtnAddressNickName="" ExtnIsAddressVerified="" ExtnIsMilitary=""/>
+							 </PersonInfo>
+                    </CustomerAdditionalAddress>
+                </CustomerAdditionalAddressList>
+            </CustomerContact>
+        </CustomerContactList>
+        <CustomerAdditionalAddressList>
+            <CustomerAdditionalAddress>
+                <PersonInfo>
+					<Extn ExtnIsAPOFPO="" ExtnIsPOBOXADDRESS="" ExtnIsSignatureRequired="" ExtnAddressNickName="" ExtnIsAddressVerified="" ExtnIsMilitary=""/>
+				</PersonInfo>
+            </CustomerAdditionalAddress>
+        </CustomerAdditionalAddressList>
+    </Customer>
+</CustomerList>

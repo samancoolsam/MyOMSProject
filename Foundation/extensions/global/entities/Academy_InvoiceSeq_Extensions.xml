@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright 2006-2008, Sterling Commerce, Inc. All rights reserved. --><DBSchema>
+      <Entities>
+      	<Entity ApiNeeded="Y" AuditRequired="N" HasHistory="False" Prefix="EXTN" 
+      	TableName="EXTN_INVOICENO_SEQ" XMLName="ExtnInvoiceSeqNo">
+			  <Attributes>
+			  		
+			      <Attribute ColumnName="SEQ_KEY"
+						  DataType="Key"
+						  Description="The primary key for the ACADEMY_INVOICENO_SEQ table."
+						  Name="SequenceKey" Nullable="false"
+						  DefaultValue="' '" XMLName="SequenceKey"/>
+				 <Attribute ColumnName="SEQ_DATE"
+						  DataType="AcademyEodTranDateTime"
+						  Description="The invoice date based on carrier's threshhold"
+						  Name="SequenceDate" Nullable="false"
+						  DefaultValue="sysdate" XMLName="SeqDate"/>
+					 <Attribute ColumnName="CURR_TRANS_NO" DataType="INVOICE_SEQ_NO"
+							DefaultValue="0"
+							Description="Current Running Invoice Seq.No."
+							Name="CurrentTransNo" Nullable="false" XMLName="CurrentTransNo"/>
+					 <Attribute ColumnName="CURR_REG_NO" DataType="INVOICE_SEQ_NO"
+							DefaultValue="0"
+							Description="Current Running Register Seq.No."
+							Name="CurrentRegNo" Nullable="false" XMLName="CurrentRegNo"/>
+			          <Attribute ColumnName="SHIP_DATE" DataType="TimeStamp"
+			                DefaultValue="sysdate"
+			                Description="The date on which the order was shipped."
+                   			 Name="ShipDate" Nullable="false" XMLName="ShipDate"/>
+					  <Attribute ColumnName="CREATETS" DataType="TimeStamp"
+							DefaultValue="sysdate"
+							Description="Timestamp when the record was created."
+							Name="Createts" Nullable="false" XMLName="Createts"/>
+					  <Attribute ColumnName="MODIFYTS" DataType="TimeStamp"
+							DefaultValue="sysdate"
+							Description="Timestamp when the record was last modified."
+							Name="Modifyts" Nullable="false" XMLName="Modifyts"/>
+					  <Attribute ColumnName="LOCKID" DataType="Lockid" DefaultValue="0" Description="Lock ID" XMLName="LockId"/>			  
+					  <Attribute ColumnName="CREATEUSERID" DataType="UserId" DefaultValue="' '" Description="Creating User ID" XMLName="CreateUserId"/>
+					  <Attribute ColumnName="MODIFYUSERID" DataType="UserId" DefaultValue="' '" Description="Modifying User ID" XMLName="ModifyUserId"/>
+					  <Attribute ColumnName="CREATEPROGID" DataType="ProgramID" DefaultValue="' '" Description="Creating Program ID" XMLName="CreateProgId"/>
+					  <Attribute ColumnName="MODIFYPROGID" DataType="ProgramID" DefaultValue="' '" Description="Modifying Program ID" XMLName="ModifyProgId"/>
+			  </Attributes>
+				<!-- PrimaryKey is a mandatory attribute in entity definition. This
+				element can have ONLY ONE attribute element -->
+				<PrimaryKey Name="INVOICENO_SEQ_PK">
+					<Attribute ColumnName="SEQ_KEY"  Name="SequenceKey" />
+				</PrimaryKey>
+		</Entity>
+	<Entity TableName="YFS_ORDER_INVOICE" >
+        <Attributes>
+            <Attribute ColumnName="EXTN_INVOICE_NO" 
+			DataType="InvoiceNo"
+			DecimalDigits="" 
+			DefaultValue="' '" 
+			Description=" "  
+			Type="CHAR"
+			Nullable="true" 
+			Size="1" 
+			XMLName="ExtnInvoiceNo"
+			XMLGroup="Extn" 
+			SqlServerDataType=""/>
+		 </Attributes>
+	   </Entity>
+	</Entities>
+</DBSchema>
+

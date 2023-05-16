@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--getOrderLineList Output XML-->
+<OrderLineList LastOrderLineKey="" LastRecordSet="" ReadFromHistory=""
+    TotalLineList="" >
+    <OrderLine AllocationDate="" CarrierAccountNo=""
+        CarrierServiceCode="" CustomerLinePONo="" CustomerPONo=""
+        DeliveryCode="" DepartmentCode="" 
+        FreightTerms="" FulfillmentType="" HoldFlag="" HoldReasonCode=""
+        ImportLicenseExpDate="" ImportLicenseNo="" InvoicedQty=""
+        KitCode="" LineSeqNo="" LineType="" MaxLineStatus=""
+        MaxLineStatusDesc="" MinLineStatus="" MinLineStatusDesc="" NumberOfWorkOrders="" 
+        OpenQty=""  OrderHeaderKey="" OrderLineKey=""
+        OrderedQty="" OrigOrderLineKey="" OriginalOrderedQty=""
+        OtherCharges="" PackListType="" PersonalizeCode="" PersonalizeFlag=""
+        PickableFlag="" PrimeLineNo="" Purpose="" ReceivingNode=""
+        RemainingQty="" ReqCancelDate="" ReqDeliveryDate=""
+        ReqShipDate="" ReservationID="" ReservationPool="" SCAC=""
+        ScacAndService="" ScacAndServiceKey="" Segment="" SegmentType=""
+		SerialNo="" ShipNode="" ShipToID=""
+        ShipTogetherNo=""  SplitQty="" Status="" StatusQuantity=""
+        SubLineNo="" isHistory="" SubstituteItemID="" SubstituteItemUOM="" >
+        <Order AllocationRuleID="" AuthorizationExpirationDate=""
+            BillToID="" BuyerOrganizationCode="" CarrierAccountNo=""
+            CarrierServiceCode="" ChargeActualFreightFlag=""
+            CustomerEMailID="" CustomerPONo="" DeliveryCode=""
+            Division="" DocumentType="" DraftOrderFlag="" EnteredBy=""
+            EnterpriseCode="" EntryType="" 
+            FreightTerms="" HoldFlag="" HoldReasonCode="" MaxOrderStatus="" 
+			MaxOrderStatusDesc="" MinOrderStatus=""
+            MinOrderStatusDesc="" NotificationReference=""
+            NotificationType="" NotifyAfterShipmentFlag="" OrderDate=""
+            OrderHeaderKey="" OrderName="" OrderNo="" OrderType=""
+            OriginalTax="" OriginalTotalAmount="" OtherCharges=""
+            PaymentStatus="" PersonalizeCode="" PriceProgramKey=""
+            PriorityCode="" PriorityNumber="" Purpose=""
+            ReceivingNode="" ReqCancelDate="" ReqDeliveryDate="" ReqShipDate=""
+            SCAC="" ScacAndService="" ScacAndServiceKey=""
+            SearchCriteria1="" SearchCriteria2=""
+            SellerOrganizationCode="" ShipCompleteFlag="" ShipToID=""
+            Status="" TaxExemptFlag="" TaxExemptionCertificate=""
+            TaxJurisdiction="" TaxPayerId="" TermsCode=""
+            TotalAdjustmentAmount="" isHistory="">
+            <PriceInfo Currency="USD" EnterpriseCurrency="USD" ReportingConversionDate="2011-07-25T03:38:13-04:00" ReportingConversionRate="0.00" TotalAmount="109.96"/>
+            </Order>
+      </OrderLine>
+</OrderLineList>

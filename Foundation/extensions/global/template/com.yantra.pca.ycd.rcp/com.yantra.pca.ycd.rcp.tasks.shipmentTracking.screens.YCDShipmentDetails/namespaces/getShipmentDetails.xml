@@ -1,0 +1,91 @@
+<!--
+Licensed Materials - Property of IBM
+IBM Sterling Call Center and Store
+(C) Copyright IBM Corp. 2006, 2012 All Rights Reserved.
+US Government Users Restricted Rights - Use, duplication or disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+-->
+<Shipment BolNo="" ManifestNo="" ShipmentType="" ManifestKey="" ActualDeliveryDate="" ActualShipmentDate=""
+	CarrierAccountNo="" CarrierServiceCode="" CarrierType="" Currency=""
+	DeliveryMethod="" DocumentType="" EnterpriseCode=""
+	ExpectedDeliveryDate="" ExpectedShipmentDate="" IsSingleOrder=" "
+	NumOfCartons="" OrderHeaderKey="" OrderNo="" RequestedShipmentDate=""
+	SCAC="" ScacAndService="" ScacAndServiceKey=""
+	SellerOrganizationCode="" ShipmentNo="" Status="" isHistory=""
+	ToAddressKey="" ScacIntegrationRequired="" ShipNode="" ShipmentKey="">
+	<!-- This extended field ExtnExeterContainerId is added as part of Jira STL-1528 to display Warehouse Container on Shipment detail screen-->
+	<Extn ExtnExeterContainerId=""/>
+	<ToAddressKey />
+	<ToAddress />
+	<BillToAddress AddressLine1="" AddressLine2="" AddressLine3=""
+		AddressLine4="" AddressLine5="" AddressLine6="" DayPhone="" EMailID=""
+		FirstName="" LastName="" ZipCode="" City="" State="" Country="" />
+	<ShipNode ShipnodeKey="">
+		<ShipNodePersonInfo AddressLine1="" AddressLine2=""
+			AddressLine3="" AddressLine4="" AddressLine5="" AddressLine6=""
+			AlternateEmailID="" City="" Company="" Country="" DayFaxNo=""
+			DayPhone="" Department="" EMailID="" EveningFaxNo="" EveningPhone=""
+			FirstName="" JobTitle="" LastName="" MiddleName="" MobilePhone=""
+			PersonID="" PersonInfoKey="" PreferredShipAddress="" State=""
+			Title="" ZipCode="" />
+	</ShipNode>
+	<FromAddress AddressLine1="" AddressLine2="" AddressLine3=""
+		AddressLine4="" AddressLine5="" AddressLine6="" AlternateEmailID=""
+		City="" Company="" Country="" DayFaxNo="" DayPhone="" Department=""
+		EMailID="" EveningFaxNo="" EveningPhone="" FirstName="" JobTitle=""
+		LastName="" MiddleName="" MobilePhone="" OtherPhone="" PersonID=""
+		PersonInfoKey="" PreferredShipAddress="" State="" Title="" ZipCode="" />
+	<ShipmentLines>
+		<ShipmentLine ActualQuantity="" DocumentType="" ItemDesc=""
+			ItemID="" KitCode="" OrderHeaderKey="" OrderLineKey="" OrderNo=""
+			OrderReleaseKey=" " Quantity="" UnitOfMeasure="" ReceivedQuantity=""
+			ShipmentLineKey="" ShipmentLineNo="" ShipmentSubLineNo=""
+			isHistory="">
+			<!-- OMNI-7980 : Added attribute 'LineType' -->
+			<OrderLine OrderLineKey="" IsBundleParent="" GiftWrap=""
+				DeliveryMethod="" GiftFlag="" LineType="" >
+				<PersonInfoShipTo Country="" DayPhone="" EMailID=""
+					EveningPhone="" FirstName="" LastName=" " MiddleName=""
+					PersonInfoKey="" State="" />
+				<PersonInfoMarkFor Country="" DayPhone="" EMailID=""
+					EveningPhone="" FirstName="" LastName=" " MiddleName=""
+					MobilePhone="" PersonInfoKey="" State="" />
+				<Item ItemID="" ItemShortDesc="" />
+				<LinePriceInfo UnitPrice="" />
+				<ComputedPrice UnitPrice="" />
+				<ItemDetails ItemID="">
+					<PrimaryInformation DefaultProductClass=""
+						Description="" ExtendedDescription="" ImageID="" ImageLabel=""
+						ImageLocation="" ShortDescription="" />
+				</ItemDetails>
+				<BundleParentLine OrderLineKey="" />
+			</OrderLine>
+		</ShipmentLine>
+	</ShipmentLines>
+	<Containers TotalNumberOfRecords="">
+	<!-- Start : OMNI-6616 : Added for STS -->
+		<Container ContainerGroup="" ContainerNo="" OrderNo="" SCAC=""
+			ShipmentContainerKey="" ShipmentKey="" TrackingNo="" IsReceived=""
+			isHistory="" Zone="">
+			<ContainerDetails TotalNumberOfRecords="">
+				<ContainerDetail ContainerDetailsKey="" ItemID=""
+					OrderHeaderKey="" OrderNo="" ProductClass="" Quantity=""
+					ShipmentContainerKey="" ShipmentKey="" ShipmentLineKey=""
+					UnitOfMeasure="" isHistory="">
+					<ShipmentLine OrderReleaseKey="" OrderLineKey="" />
+					<OrderLine OrderLineKey="">
+
+						<Item ItemID="" ItemShortDesc="" />
+						<LinePriceInfo UnitPrice="" />
+						<ComputedPrice UnitPrice="" />
+					</OrderLine>
+				</ContainerDetail>
+			</ContainerDetails>
+			<ContainerActivities>
+				<ContainerActivity ActivityCode="" ActivityTimeStamp=""
+					ActivityUserId="" IsException="" Notes="" />
+			</ContainerActivities>
+		</Container>
+	<!-- End : OMNI-6616 : Added for STS -->
+	</Containers>
+	<Status Description="" />
+</Shipment>

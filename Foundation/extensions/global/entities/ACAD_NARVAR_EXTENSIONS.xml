@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DBSchema>
+	<Entities>
+		<Entity TableName="YFS_ORDER_LINE">
+			<Attributes>
+				<!-- Start - OMNI-2821 : Narvar: Send Narvar ASO Promise Date -->
+				<Attribute ColumnName="EXTN_INITIAL_PROMISE_DATE" XMLName="ExtnInitialPromiseDate" DataType="TimeStamp" Nullable="true" Description="Contains the Inital Promise Date for each line" XMLGroup="Extn" />
+				<!-- End - OMNI-2821 : Narvar: Send Narvar ASO Promise Date -->
+				<!-- Start - OMNI-3137 : OMS_Narvar: Product Image URL -->
+				<!-- <Attribute ColumnName="EXTN_PRODUCT_IMAGE_URL" XMLName="ExtnProductImageURL" Size="255" Type="VARCHAR2" Nullable="true" Description="Contains the Product Image URL" XMLGroup="Extn" />
+				-->
+				<!-- End - OMNI-3137 : OMS_Narvar: Product Image URL -->
+			</Attributes>
+		</Entity>
+		</Entities>
+</DBSchema>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Order TaxExemptionCertificate="">
+    <OrderLines>
+        <OrderLine>
+             <Awards>
+               <Award AwardAmount="" AwardApplied="" AwardId="" AwardKey="" AwardType="" DenialReason="" Description="" PosReasonCode="" PromotionId="" PromotionKey=""/>
+             </Awards>
+        </OrderLine>
+    </OrderLines>
+    <Promotions>
+        <Promotion DenialReason="" Description="" PromotionApplied="" PromotionId="" PromotionKey="" PromotionType="">
+		    <Awards>
+        <Award AwardAmount="" AwardApplied="" AwardId="" AwardKey="" AwardType="" DenialReason="" Description="" PosReasonCode="" PromotionId="" PromotionKey=""/>
+    </Awards>
+	 </Promotion>
+    </Promotions>
+	<Containers>
+		<Container TrackingNo="" URL="">
+			<Shipment ProNo="" ShipmentType=""/>		
+		</Container>
+	</Containers>
+</Order>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExtensionMetaData>
+    <ScreenExtension extnClassName="TasksInProgressExtn"
+        extnPackage="extn.mobile.home.subscreens"
+        originalScreen="wsc.mobile.home.subscreens.TasksInProgress"
+        originalScreenPackage="wsc.mobile.home.subscreens" type="diffrential">
+        <MashupRefs>
+            <Init>
+                <MashupRef extnType="MODIFY"
+                    mashupId="tasksInProgress_getShipmentListInit"
+                    mashupRefId="getShipmentList" pageSize="5"
+                    pageSizeType="Shipment" paginationStrategy="NEXTPAGE"/>
+            </Init>
+        </MashupRefs>
+    </ScreenExtension>
+</ExtensionMetaData>

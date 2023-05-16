@@ -1,0 +1,48 @@
+<!--OMNI-48139: Start Change-->
+<Shipment CarrierServiceCode="" DeliveryMethod="" OrderNo="" SCAC="" ScacAndService="" ShipNode="" ReceivingNode="" ShipmentKey="" ShipmentNo="" Status="" StatusDate="" ShipDate="" ShipmentType="" DocumentType="" SellerOrganizationCode="" EnterpriseCode="">
+	<ShipNode ShipNode="" NodeType=""/>
+	<Extn/>
+	<ShipmentLines>
+		<ShipmentLine OrderHeaderKey="" OrderNo="" Quantity="" ShipmentLineKey="" ItemID="" ProductClass="" UnitOfMeasure="">
+			<OrderLine DeliveryMethod="" FulfillmentType="" OrderedQty="" OriginalOrderedQty="" PrimeLineNo="">
+				<Extn ExtnWCOrderItemIdentifier=""/>
+				<OrderStatuses>
+					<OrderStatus StatusDescription=""/>
+				</OrderStatuses>
+				<ChainedFromOrderLine PrimeLineNo="" OrderHeaderKey="">
+					<Order OrderNo=""/>
+				</ChainedFromOrderLine>
+			</OrderLine>
+		</ShipmentLine>
+	</ShipmentLines>
+	<Containers>
+		<Container>
+			<ContainerDetails>
+				<ContainerDetail>
+					<OrderLine>
+						<ChainedFromOrderLine PrimeLineNo="" OrderHeaderKey="" FulfillmentType="" OrderLineKey="" OrderedQty="">
+							<Order OrderNo=""/>
+							<Extn ExtnWCOrderItemIdentifier=""/>
+						</ChainedFromOrderLine>
+						<Item ItemID="" ItemShortDesc=""/>
+						<Extn ExtnWCOrderItemIdentifier=""/>
+					</OrderLine>
+					<ShipmentLine>
+						<Extn/>
+					</ShipmentLine>
+				</ContainerDetail>
+			</ContainerDetails>
+		</Container>
+	</Containers>
+	<ToAddress AddressLine1="" City="" EMailID="" FirstName="" LastName="" MiddleName="" PersonID="" State="" ZipCode=""/>
+	<OrderInvoiceList>
+		<OrderInvoice ActualFreightCharge="" AmountCollected="" DateInvoiced="" HeaderTax="" InvoiceNo="" InvoiceType="" LineSubTotal="" MasterInvoiceNo="" OrderHeaderKey="" OrderInvoiceKey="" OrderNo="" OtherCharges="" ShipmentKey="" Status="" TotalAmount="" TotalTax=""/>
+	</OrderInvoiceList>
+	<ShipmentStatusAudits>
+		<ShipmentStatusAudit NewStatus="" NewStatusDate="" OldStatus="" OldStatusDate="" ReasonCode="" ReasonText="" ShipmentStatusAuditKey=""/>
+	</ShipmentStatusAudits>
+	<ShipNode Localecode="" NodeType="">
+		<ShipNodePersonInfo AddressLine1="" City="" Country="" FirstName="" State="" ZipCode=""/>
+	</ShipNode>
+</Shipment>
+<!--OMNI-48139: End Change-->

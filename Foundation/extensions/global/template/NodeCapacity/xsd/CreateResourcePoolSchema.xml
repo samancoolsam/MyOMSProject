@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<FlatfileDelimitedSchema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation='delimitedreceiver.xsd'>
+	<ParserDefaults  DefaultRecordDelimiter="Newline" DefaultFieldDelimiter="," DefaultEscapeCharacter="\" DefaultPadCharacter="*" RecordIdStartPosition="1" SkipCarriageReturn="false">
+      <FileHeader FileHeaderId="000" FileHeaderStartPos="1" FileHeaderLength="3"/>
+      <FileTrailer FileTrailerId="666" FileTrailerStartPos="1" FileTrailerLength="3"/>
+	</ParserDefaults>
+
+	<Root Name="ResourcePoolList">
+		<Header Name="ResourcePool" RecordName="RESOURCEHEDR" MinOccurrence="1" MaxOccurrence="1"/>
+	</Root>
+   
+	<RecordDefinitions>
+		<Record RecordId="RESOURCEHEDR" Name="RESOURCEHEDR" XMLName="ResourcePool">
+			<Field Name="CPTYORGCODE" FieldPosition="2" XMLName="CapacityOrganizationCode"/>
+			<Field Name="CPTYUOM" FieldPosition="3" XMLName="CapacityUnitOfMeasure"/>
+			<Field Name="CONTEXTORGCODE" FieldPosition="4" XMLName="ContextOrganizationCode"/>
+			<Field Name="IGNOREORDER" FieldPosition="5" XMLName="IgnoreOrdering"/>
+			<Field Name="ITGRPCODE" FieldPosition="6" XMLName="ItemGroupCode"/>
+			<Field Name="NOD" FieldPosition="7" XMLName="Node"/>
+			<Field Name="PURP" FieldPosition="8" XMLName="Purpose"/>
+			<Field Name="RESPOOLID" FieldPosition="9" XMLName="ResourcePoolId"/>
+		</Record>
+	</RecordDefinitions>
+</FlatfileDelimitedSchema>

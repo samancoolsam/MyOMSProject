@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Receipt EnterpriseCode="" NumOfCartons=""  NumOfPallets=""  OpenReceiptFlag=""  ShipmentKey=""  ReceiptDate=""  
+	ReceiptHeaderKey=""  ReceiptNo=""  ReceivingNode=""  ReceivingDock=""  Status="" TrailerLPNNo=""  CaseId="" PalletId="" >
+	<Shipment Code="" PackListType="" ShipmentKey="" Status="" TotalQuantity="">
+		<ShipmentLines>
+			<ShipmentLine BackroomPickedQuantity="" OriginalQuantity="" Quantity="" ShortageQty=""/>
+		</ShipmentLines>
+	</Shipment>
+    <ReceiptLines>
+        <ReceiptLine DispositionCode="" InspectedBy=""
+            InspectionComments="" InspectionDate="" TagNumber=""
+            OrderHeaderKey="" OrderLineKey="" OrderReleaseKey=""
+            OrigReceiptLineKey="" OriginalQuantity="" Quantity=""
+            ReceiptHeaderKey="" ReceiptLineKey="" ReceiptLineNo=""
+            SerialNo="" ShipByDate="" TransactionId="" TransactionName="" LocationId="">
+            <OrderLine MaxLineStatus="" PackListType=""
+				MaxLineStatusDesc="" MinLineStatus="" MinLineStatusDesc=""
+				OrderHeaderKey="" OrderLineKey="" PrimeLineNo="" ChainedFromOrderLineKey=""
+				ChainedFromOrderHeaderKey="" >
+				<ChainedFromOrderLine OrderLineKey="" FulfillmentType="" PackListType="">
+					<OrderHoldTypes>
+						<OrderHoldType HoldType="" Status="" StatusDescription="" />
+					</OrderHoldTypes>
+					<Order DocumentType="" MaxOrderStatus=""
+					MaxOrderStatusDesc="" MinOrderStatus="" MinOrderStatusDesc=""
+					OrderHeaderKey=""/>
+				</ChainedFromOrderLine>
+				<Order DocumentType="" MaxOrderStatus=""
+					MaxOrderStatusDesc="" MinOrderStatus="" MinOrderStatusDesc=""
+					OrderHeaderKey="" OrderNo="" />
+			</OrderLine>
+        </ReceiptLine>
+    </ReceiptLines>
+
+</Receipt>

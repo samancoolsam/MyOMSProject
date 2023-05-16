@@ -1,0 +1,278 @@
+<div class="sc-platform-screen-default orderLineDetailsScreen"> 
+
+
+    <div data-dojo-type="idx/layout/ContentPane" data-dojo-props="      spanLabel : true , 
+        title : 'Top Content' , 
+        'class' : 'extnOrderLineDetailsScreenTitle' , 
+        colspan : 1 , 
+        uId : 'TopContent' , 
+        layoutAlign : 'top'  
+ ">
+        <div data-dojo-type="idx/layout/ContentPane" data-dojo-props="      spanLabel : true , 
+        'class' : 'extnOrderLineDetailsScreenTitle' , 
+        uId : 'pnlScreenDescription'  
+ ">
+            <div data-dojo-type="sc/plat/dojo/widgets/Label" data-dojo-props="      spanLabel : true , 
+        uId : 'lbl_ScreenTitle',
+        style:'text-align:center;',
+        'class' : 'extnOrderLineDetailsScreenTitle' 
+        ,scParamDataFn :
+         function() { 
+            return { 
+                value :             this.getSimpleBundleString('Title_OrderLineDetails')
+            }
+        }
+"></div>
+        </div>
+    </div>
+
+
+
+
+
+
+<div data-dojo-type="idx/layout/ContentPane" data-dojo-props="      'class' : 'detailsSecondaryInfoPanel' , 
+        uId : 'DST_SecondaryInfoPanel'  
+ ">
+    <div style="padding-top: 1px;" data-dojo-type="idx/layout/TitlePane" data-dojo-props="        open : false , 
+        spanLabel : true , 
+        toggleable : true , 
+        open : true ,
+        'class' : 'collapsablePane boxLayout' , 
+        uId : 'extn_tpOL_Overview' , 
+        renderHidden : false  
+        ,scParamDataFn :
+         function() { 
+            return { 
+                'aria-label' :          this.getSimpleBundleString('Title_OL_tp_Overview')
+,   
+                title :             this.getSimpleBundleString('Title_OL_tp_Overview')
+            }
+        }
+" role='region'>
+
+        
+<div id="imageAndDesciption">
+
+        <div style="display: inline-block; "data-dojo-type="idx/layout/ContentPane" data-dojo-props="      spanLabel : true , 
+        'class' : 'screen itemImageSmallDivAlt showCursorPointer' , 
+        colspan : 1 , 
+        uId : 'imagePanel'  
+ ">
+        <div data-dojo-type="sc/plat/dojo/widgets/Image" data-dojo-props="      'class' : '' , 
+        uId : 'itemImage'  
+        ,scParamDataFn :
+         function() { 
+            return { 
+                bindingData :   {
+         sourceBinding :    {
+         path :             'OrderLine.ItemDetails.PrimaryInformation'
+,
+         namespace :            'eComOrder_getCompleteOrderLineDetails_output'
+    }
+,
+         imageBindings :    {
+         defaultImage :     {
+         style :            ''
+,
+         src :          ''
+,
+         styleClass :           'noItemImage'
+    }
+,
+         imageUrl :     {
+         path :             'ImageLocation'
+,
+         dynamicBindingPackage :            'ias.utils'
+,
+         dynamicBindingFunc :           'getItemImageLocation'
+,
+         dynamicBindingClassName :          'ScreenUtils'
+    }
+,
+         imageIcon :    {
+         path :             'ImageID'
+,
+         dynamicBindingPackage :            'ias.utils'
+,
+         dynamicBindingFunc :           'getItemImageId'
+,
+         dynamicBindingClassName :          'ScreenUtils'
+    }
+    }
+    }
+            }
+        }
+"></div>
+
+</div>
+
+
+<div id="itemDescription" style="display: inline-block; width: 75%; margin-left: 7px; vertical-align: top;">
+
+    <div data-dojo-type="sc/plat/dojo/widgets/Label" data-dojo-props="       spanLabel : true , 
+        'class' : 'groupHeader blockComponent productdesclink' , 
+        uId : 'itemdescriptionLink'  
+        ,scParamDataFn :
+         function() { 
+            return { 
+                'aria-label' :          this.getSimpleBundleString('arialabel_product_title')
+,   
+                bindingData :   {
+         sourceBinding :    {
+         path :             'OrderLine.ItemDetails.PrimaryInformation.ExtendedDisplayDescription'
+,
+         namespace :            'eComOrder_getCompleteOrderLineDetails_output'
+    }
+    }
+            }
+        }
+"></div>
+</div>
+</div>
+
+
+
+        <div data-dojo-type="idx/layout/ContentPane" data-dojo-props="      spanLabel : true , 
+        'class' : 'detailsPanel' , 
+        colspan : 1 , 
+        uId : 'productDetailsPanel'  
+ ">
+        
+    </div>
+
+    
+
+
+    
+        <div data-dojo-type="sc/plat/dojo/widgets/Label" data-dojo-props="      spanLabel : true , 
+        'class' : 'blockComponent shortageQty' , 
+        style:'padding-left:50px;',
+        uId : 'extn_eComlbl_OL_DelMethod'  
+        ,scParamDataFn :
+         function() { 
+            return { 
+
+                bindingData :   {
+         sourceBinding :    {
+         path :             'OrderLine.DeliveryMethod',
+        dynamicBindingFunc :           'getDeliveryMethod', 
+         namespace :            'eComOrder_getCompleteOrderLineDetails_output'
+    }
+    }
+            }
+        }
+"></div>
+
+
+
+<div data-dojo-type="idx/layout/ContentPane" data-dojo-props="      spanLabel : true , 
+        'class' : 'detailsPanel' ,
+        style:'width:1050em;', 
+        colspan : 1 , 
+        uId : 'extn_dynamicDataLabel_cp'  
+         ">
+
+    <div data-dojo-type="sc/plat/dojo/widgets/DataLabel" data-dojo-props="      spanLabel : true , 
+        'class' : 'blockComponent shortageQty' , 
+        style:'width:950em; padding-left:50px;',
+        uId : 'extn_eComlbl_OL_OrderedQty'  
+        ,scParamDataFn :
+         function() { 
+            return { 
+                label :             this.getBundleString('extn_eCom_OL_OrderedQty')
+,   
+                bindingData :   {
+         sourceBinding :    {
+         path :             'OrderLine.OriginalOrderedQty'
+,
+         namespace :            'eComOrder_getCompleteOrderLineDetails_output'
+    }
+    }
+            }
+        }
+"></div>
+
+        
+        </div>
+
+
+
+
+    </div>
+</div>
+
+
+
+
+
+
+
+<div data-dojo-type="idx/layout/ContentPane" data-dojo-props="      'class' : 'detailsSecondaryInfoPanel' , 
+        uId : 'DST_SecondaryInfoPanel'  
+ ">
+    <div data-dojo-type="idx/layout/TitlePane" data-dojo-props="        open : false , 
+        spanLabel : true , 
+        toggleable : true ,
+        open : true , 
+        'class' : 'collapsablePane boxLayout' , 
+        uId : 'extn_tpOL_ShipmentInfo' , 
+        renderHidden : false  
+        ,scParamDataFn :
+         function() { 
+            return { 
+                'aria-label' :          this.getSimpleBundleString('Title_OL_tp_ShipmentInfo')
+,   
+                title :             this.getSimpleBundleString('Title_OL_tp_ShipmentInfo')
+            }
+        }
+" role='region'>
+
+
+        
+
+        
+        <div data-dojo-type="idx/layout/ContentPane" data-dojo-props="      'class' : 'repeatingpanel showCursorPointer' ,
+        style : 'padding-top:initial',
+         uId: 'extn_shipmentInfoRepeatingScreen',
+        scParamDataFn: function() {
+            return {
+                bindingData: {
+                    customNoRecordsFoundMessageBundleKey: 'Message_NoShipmentsFound',
+                    repeatingscreenGeneratorFunction: 'extn_showShipmentRepeatingScreen',
+                    repeatingScreen: {
+                        repeatingnamespace: 'shipmentInfo_Src',
+                         path: 'ShipmentList.Shipment',
+                          repeatingScreenClass: 'accentPanel', sourcenamespace: 'eComOrder_getShipmentListForOrder_output'
+                    },
+                }
+            }
+        }
+
+        ">
+         </div>
+
+         
+
+        <div data-dojo-type="sc/plat/dojo/widgets/Label" data-dojo-props="  spanLabel : true , 
+  'class' : 'screenMessage' , 
+  uId : 'noShipmentMsg' , 
+  renderHidden : true  
+   ,scParamDataFn :
+   function() { 
+   return { 
+     value :    this.getSimpleBundleString('Message_NoShipmentsFound')
+   }
+  }
+"></div>
+
+
+
+
+    </div>
+</div>
+
+
+
+
+

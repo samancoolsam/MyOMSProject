@@ -1,0 +1,11 @@
+<Receipt>
+<Shipment>
+<Extn/>
+<ShipmentLines>
+<ShipmentLine/>
+</ShipmentLines>
+</Shipment>
+<ReceiptLines>
+  <ReceiptLine />
+</ReceiptLines>
+</Receipt>

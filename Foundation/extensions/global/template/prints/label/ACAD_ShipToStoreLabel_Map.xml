@@ -1,0 +1,35 @@
+<LabelFieldMap>
+
+	<LabelField Binding="Container/Shipment/@ShipmentNo" DataType="Text" LabelFieldName="ShipmentNo" RepeatingElement="" Sequence="N" /> 
+
+	<LabelField Binding="Container/@SalesOrderNo" DataType="Text" LabelFieldName="OrderNo" RepeatingElement="" Sequence="N" /> 
+
+	<LabelField Binding="Container/@FirearmsValue" DataType="Text" LabelFieldName="FirearmsValue" RepeatingElement="" Sequence="N" /> 
+	
+	<LabelField Binding="Container/@FirearmsText" DataType="Text" LabelFieldName="FirearmsText" RepeatingElement="" Sequence="N" />
+
+	<LabelField Binding="Container/@ContainerNo" DataType="Text" LabelFieldName="ContainerNoBarcode" RepeatingElement="" Sequence="N" />
+	
+	<LabelField Binding="Container/@ContainerPackDate" DataType="Text" LabelFieldName="ContainerPackDate" RepeatingElement="" Sequence="N" />
+	
+	<LabelField Binding="Container/@StoreDeliveryDate" DataType="Text" LabelFieldName="StoreDeliveryDate" RepeatingElement="" Sequence="N" />
+	
+	<LabelField Binding="Container/@CustomerName" DataType="Text" LabelFieldName="CustomerName" RepeatingElement="" Sequence="N" />
+	
+	<LabelField Binding="Container/@FirstName" DataType="Text" LabelFieldName="FirstName" RepeatingElement="" Sequence="N" />
+	
+	<LabelField Binding="Container/@LastName" DataType="Text" LabelFieldName="LastName" RepeatingElement="" Sequence="N" />
+	
+	<LabelField Binding="Container/@PickUpDate" DataType="Text" LabelFieldName="PickUpDate" RepeatingElement="" Sequence="N" />
+	
+	<LabelField Binding="Container/Shipment/Extn/@ExtnLane" DataType="Text" LabelFieldName="Lane" RepeatingElement="" Sequence="N" />
+	
+	<LabelField Binding="Container/Shipment/Extn/@ExtnSorter" DataType="Text" LabelFieldName="Sorter" RepeatingElement="" Sequence="N" />
+	
+	<LabelField Binding="Container/Shipment/Extn/@ExtnDoor" DataType="Text" LabelFieldName="Door" RepeatingElement="" Sequence="N" />
+	
+	<LabelField Binding="Container/@ContainerNoPart1" DataType="Text" LabelFieldName="ContainerNoPart1" RepeatingElement="" Sequence="N" />
+	
+	<LabelField Binding="Container/@ContainerNoPart2" DataType="Text" LabelFieldName="ContainerNoPart2" RepeatingElement="" Sequence="N" />
+
+</LabelFieldMap>

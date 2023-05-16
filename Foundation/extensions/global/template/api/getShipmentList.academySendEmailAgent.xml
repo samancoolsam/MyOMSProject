@@ -1,0 +1,18 @@
+<Shipments>
+    <Shipment DeliveryMethod="" ShipNode="" ShipmentKey=""
+        ShipmentNo="" Status="">
+        <ShipmentLines>
+            <ShipmentLine OrderHeaderKey="">
+			    <Order OrderNo="">
+					<Extn ExtnASShipNode=""/>
+                </Order>
+                <OrderLine MaxLineStatus="" MinLineStatus="" FulfillmentType="" OrderLineKey="" OrderedQty="" ShipNode="">
+                    <Extn ExtnIsASP="" ExtnOriginalFulfillmentType=""/>
+                </OrderLine>
+            </ShipmentLine>
+        </ShipmentLines>
+        <Containers>
+            <Container ContainerNo="" TrackingNo=""/>
+        </Containers>
+    </Shipment>
+</Shipments>

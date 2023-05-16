@@ -1,0 +1,42 @@
+<OrderList>
+<Order OrderHeaderKey="" Createprogid="" OrderDate="" ShipNode="" OrderNo="" DocumentType="" OrderName="">
+ <PersonInfoShipTo AddressLine1="" City=" "
+        Country="" State="" ZipCode=""/>
+    <AdditionalAddresses>
+        <AdditionalAddress AddressType="">
+            <PersonInfo AddressLine1=""
+                City="" Country="" State="" ZipCode=""/>
+        </AdditionalAddress>
+    </AdditionalAddresses>
+    <PersonInfoBillTo AddressLine1="" City=" "
+        Country="" State="" ZipCode=""/>
+ <OrderLines>
+	<OrderLine OrderLineKey="" DerivedFromOrderHeaderKey="" PrimeLineNo="" Status="" ScacAndService="" OrderedQty="" SCAC="" ShipNode="" ReturnReason="" ReturnReasonLongDesc="" ReturnReasonShortDesc="">
+	<DerivedFromOrder DocumentType="" EnterpriseCode="" OrderNo="">
+	
+	<!--START WN-199 Returns: Academy is unable to receive a tax credit after a return is initiated (BE Dev) -->
+	<PersonInfoShipTo AddressLine1="" City=" "
+        Country="" State="" ZipCode=""/>
+	<!--END WN-199 Returns: Academy is unable to receive a tax credit after a return is initiated (BE Dev) -->	
+		
+		<PaymentMethods>
+			<PaymentMethod PaymentType="" SuspendAnyMoreCharges=""/>
+		</PaymentMethods>
+	</DerivedFromOrder>	
+	<Item ItemID="" UnitOfMeasure=""/>
+	<LinePriceInfo UnitPrice="" />
+		<LineCharges>
+			<LineCharge/>
+		</LineCharges>
+		<LineTaxes>
+            <LineTax/>
+		</LineTaxes>
+		<OrderStatuses>
+            <OrderStatus OrderLineKey="" Status="" StatusDescription="" StatusDate="">
+				<OrderStatusTranQuantity StatusQty="" TotalQuantity=""/>
+			</OrderStatus>
+		</OrderStatuses>	
+	</OrderLine>
+ </OrderLines>
+</Order>
+</OrderList>

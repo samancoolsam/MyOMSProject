@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Promise OrganizationCode="">
+    <EvaluateOptions >
+        <EvaluateOption DeliveryMethod=""
+            Node="" OptionNo="">
+            <ShipToAddress PersonInfoKey="" />
+        </EvaluateOption>
+    </EvaluateOptions>
+    <PromiseLines>
+        <PromiseLine ItemID="" RequiredQty="">
+            <Options>
+                <Option DeliveryDate="" HasAnyUnavailableQty=""
+                    IsUnavailable="" OptionNo="" ProductAvailableDate="">
+                    <Assignments>
+                        <Assignment 
+                            ProductAvailDate="" Quantity="" ShipDate="" >
+                            <SubstituteItems/>
+                            <Procurements/>
+                        </Assignment>
+                    </Assignments>
+                </Option>
+            </Options>
+			<OrderLine OrderLineKey="" PrimeLineNo="" SubLineNo=""/>
+        </PromiseLine>
+	</PromiseLines>
+    <OptionNodes >
+        <Node NodeType="" >
+            <ShipNodePersonInfo PersonInfoKey="" />
+        </Node>
+    </OptionNodes>
+</Promise>

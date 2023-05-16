@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExtensionMetaData>
+    <ScreenExtension
+        extnClassName="ShipmentSummaryContainerMoreOptionExtn"
+        extnPackage="extn.components.shipment.summary"
+        originalScreen="wsc.components.shipment.summary.ShipmentSummaryContainerMoreOption"
+        originalScreenPackage="wsc.components.shipment.summary" type="diffrential">
+        <Items>
+            <Link _sc_extensibility_operation="change"
+                _sc_extensibility_referenceUId="reprintCarrierLblLink" renderHidden="true"/>
+            <Link _sc_extensibility_operation="change"
+                _sc_extensibility_referenceUId="unpackLink" renderHidden="true"/>
+        </Items>
+    </ScreenExtension>
+</ExtensionMetaData>

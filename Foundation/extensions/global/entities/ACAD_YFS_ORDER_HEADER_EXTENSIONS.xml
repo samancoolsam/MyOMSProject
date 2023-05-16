@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--/*#############################################################################
+* Alternate Store -Save the base store info for Alternate Store at an order level
+* As Business would like to save the original BOPIS store info of the line items
+* which have been routed to Alternate store flow so that it will be easy for tracking and reporting purpose
+##############################################################################*/-->
+<DBSchema>
+<Entities>
+<!--OMNI-77413-AlternateStore Changes-BEGIN-->
+<Entity TableName="YFS_ORDER_HEADER" >
+<Attributes>
+<Attribute ColumnName="EXTN_ORIGINAL_SHIPNODE" DataType="ShipNode" DefaultValue=" " Description="Original ShipNode" Nullable="true"
+    XMLName="ExtnOriginalShipNode" XMLGroup="Extn" />
+<Attribute ColumnName="EXTN_AS_SHIPNODE" DataType="ShipNode" DefaultValue=" " Description="Alternate Store ShipNode" Nullable="true"
+    XMLName="ExtnASShipNode" XMLGroup="Extn" />
+ <!--OMNI-106259-Store Distance from Original Store to Alternate Store -BEGIN -->
+<Attribute ColumnName="EXTN_AS_DISTANCE" Type="NUMBER" Size="9" DecimalDigits="4" Description="Store Distance from Original Store to Alternate Store" Nullable="true"  XMLName="ExtnASDistance" XMLGroup="Extn" />
+<!--OMNI-106259-Store Distance from Original Store to Alternate Store -END -->   
+<!--OMNI-OMNI-107478-OMS to store original  Shipnode Last Name as EXTN_ORIGINAL_SHIPNODE_NAME  -BEGIN -->
+<Attribute ColumnName="EXTN_ORIGINAL_SHIPNODE_NAME" Type="VARCHAR2" Size="64" DefaultValue="' '" Description="Last name of the Original Shipnode" Nullable="true" XMLGroup="Extn" XMLName="ExtnOriginalShipNodeName"/>
+<!--OMNI-OMNI-107478-OMS to store original  Shipnode Last Name as EXTN_ORIGINAL_SHIPNODE_NAME  -END -->	
+</Attributes>
+<Indices></Indices>
+</Entity>
+<!--OMNI-77413-AlternateStore Changes-END-->
+</Entities>
+</DBSchema>

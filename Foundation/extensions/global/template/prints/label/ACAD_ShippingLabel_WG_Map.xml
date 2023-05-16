@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LabelFieldMap>
+	<!-- Displaying the Nodes Address -->
+	<LabelField
+		Binding="Shipment/FromAddress/@FirstName"
+		LabelFieldName="FromFirstName" RepeatingElement="" />
+		<LabelField
+		Binding="Shipment/FromAddress/@LastName"
+		LabelFieldName="FromLastName" RepeatingElement="" />
+	<LabelField
+		Binding="Shipment/FromAddress/@AddressLine1"
+		LabelFieldName="FromAddressLine1" RepeatingElement="" />
+	<LabelField
+		Binding="Shipment/FromAddress/@AddressLine2"
+		LabelFieldName="FromAddressLine2" RepeatingElement="" />		
+	<LabelField
+		Binding="Shipment/FromAddress/@City"
+		LabelFieldName="FromCity" RepeatingElement="" />
+	<LabelField
+		Binding="Shipment/FromAddress/@State"
+		LabelFieldName="FromState" RepeatingElement="" />
+	<LabelField
+		Binding="Shipment/FromAddress/@ZipCode"
+		LabelFieldName="FromZip" RepeatingElement="" />
+	<LabelField
+		Binding="Shipment/FromAddress/@DeliveryZoneCode"
+		LabelFieldName="FromDeliveryZoneCode" RepeatingElement="" />	
+	<LabelField
+		Binding="Shipment/FromAddress/@AirLocCode"
+		LabelFieldName="FromAirLocCode" RepeatingElement="" />	
+		
+	<LabelField
+		Binding="Shipment/ToAddress/@FirstName"
+		LabelFieldName="ToFirstName" RepeatingElement="" />
+		<LabelField
+		Binding="Shipment/ToAddress/@LastName"
+		LabelFieldName="ToLastName" RepeatingElement="" />		
+	<LabelField
+		Binding="Shipment/ToAddress/@AddressLine1"
+		LabelFieldName="ToAddressLine1" RepeatingElement="" />
+	<LabelField
+		Binding="Shipment/ToAddress/@AddressLine2"
+		LabelFieldName="ToAddressLine2" RepeatingElement="" />		
+	<LabelField
+		Binding="Shipment/ToAddress/@City"
+		LabelFieldName="ToCity" RepeatingElement="" />
+	<LabelField
+		Binding="Shipment/ToAddress/@State"
+		LabelFieldName="ToState" RepeatingElement="" />
+	<LabelField
+		Binding="Shipment/ToAddress/@ZipCode"
+		LabelFieldName="ToZip" RepeatingElement="" />
+	<LabelField
+		Binding="Shipment/ToAddress/@DeliveryZoneCode"
+		LabelFieldName="ToDeliveryZoneCode" RepeatingElement="" />	
+	<LabelField
+		Binding="Shipment/ToAddress/@AirLocCode"
+		LabelFieldName="ToAirLocCode" RepeatingElement="" />	
+
+	<LabelField
+		Binding="Shipment/@ProNo"
+		LabelFieldName="ProNo" RepeatingElement="" />
+	<LabelField
+		Binding="Shipment/@ShipmentNo"
+		LabelFieldName="ShipmentNo" RepeatingElement="" />
+		<LabelField
+		Binding="Shipment/@ContainerNo"
+		LabelFieldName="ContainerNo" RepeatingElement="" />
+	<LabelField
+		Binding="Shipment/@ExpectedDeliveryDate"
+		LabelFieldName="ExpectedDeliveryDate" RepeatingElement="" />
+	<LabelField
+		Binding="Shipment/@Label"
+		LabelFieldName="Label" RepeatingElement="" />	
+	<LabelField
+		Binding="Shipment/@NumberOfPieces"
+		LabelFieldName="NumberOfPieces" RepeatingElement="" />	
+	<!-- Start - OMNI-66580 -->
+	<LabelField
+		Binding="Shipment/@OrderNo"
+		LabelFieldName="OrderNo" RepeatingElement="" />
+	<!-- End - OMNI-66580 -->
+</LabelFieldMap>

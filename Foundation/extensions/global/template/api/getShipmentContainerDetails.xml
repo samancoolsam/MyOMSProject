@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container ActualFreightCharge="" AppliedWeight="" AppliedWeightUOM="" 
+	BasicFreightCharge="" ContainerGrossWeight="" ContainerGrossWeightUOM="" 
+	ContainerHeight="" ContainerHeightUOM="" ContainerLength="" 
+	ContainerLengthUOM="" ContainerNetWeight="" ContainerNetWeightUOM="" 
+	ContainerNo="" ContainerScm="" ContainerSeqNo="" ContainerType="" 
+	ContainerWidth="" ContainerWidthUOM="" CustomsValue="" DeclaredValue="" 
+	DimmedFlag="" DiscountAmount="" HasOtherContainers=""  OversizedFlag=""
+	ParentContainerNo="" RoutingCode="" ShipmentContainerKey="" ShipmentKey="" SpecialServicesSurcharge="" TrackingNo="" Ucc128code="" Zone="" isHistory="" RequiredNoOfReturnLabels="" ActualNoOfReturnLabels="">
+   <SpecialServices >
+      <SpecialService ReferenceKey="" ReferenceType="" SpecialServiceKey="" 
+		SpecialServiceRefKey="" SpecialServiceSurcharge="" SpecialServicesCode=""/>
+   </SpecialServices>
+   <AdditionalAttributes >
+      <AdditionalAttribute AdditionalAttributeKey=""  Name="" ParentKey="" 
+		ParentTable="" Value="" isHistory=""/>
+   </AdditionalAttributes>
+   <ContainerDetails >
+      <ContainerDetail ContainerDetailsKey="" ItemID=""  ProductClass="" 
+		 Quantity="" ShipmentContainerKey="" ShipmentKey="" 
+		 UnitOfMeasure="" isHistory="">
+ <ShipmentLine ActualQuantity="" BuyerMarkForNodeId="" ChainedFromOrderHeaderKey="" ChainedFromOrderLineKey="" CountryOfOrigin="" CustomerPoLineNo="" CustomerPoNo="" ExternalReleaseIdentifier="" FifoNo="" IsHazmat="" IsPickable="" ItemDesc="" ItemID="" KitCode="LK" NetWeight="" NetWeightUom="" OrderAvailableOnSystem="" OrderHeaderKey="" OrderLineKey="" OrderNo="" OrderReleaseKey="" OverShipQuantity="" PlacedQuantity="" PrimeLineNo="" ProductClass="" Quantity="" ReceivedQuantity="" ReleaseNo="" RequestedSerialNo="" ReturnShippingLabelLevel="" Segment="" SegmentType="" ShipToCustomerId="" ShipmentConsolidationGroupId="" ShipmentKey="" ShipmentLineKey="" ShipmentLineNo="" ShipmentSubLineNo="" ShortageQty="" SubLineNo="" UnitOfMeasure="" WaveNo="" isHistory="">
+ <ShipmentTagSerials TotalNumberOfRecords="">
+  <ShipmentTagSerial BatchNo="" ContainerDetailKey="" LotAttribute1="" LotAttribute2="" LotAttribute3="" LotKeyReference="" LotNumber="" ManufacturingDate="" Quantity="" RevisionNo="" SerialNo="" ShipByDate="" ShipmentLineKey="" ShipmentTagSerialKey="" /> 
+  </ShipmentTagSerials>
+ <OrderLine Action="" AllocationDate="" AllocationLeadTime="" ApptStatus="" ApptWarning="" AvailableQtyForStopDelivery="" AwaitingDeliveryRequest="" BuyerMarkForNodeId="" BuyerReceivingNodeId="" CanAddServiceLines="" CarrierAccountNo="" CarrierServiceCode="" ChainedFromOrderHeaderKey="" ChainedFromOrderLineKey="" CommittedQuantity="" ConditionVariable1="" ConditionVariable2="" ConfigurationKey="" CustomerLinePONo="" CustomerPONo="" DeliveryCode="" DeliveryMethod="" DepartmentCode="" DependencyShippingRule="" DependentOnLineKey="" DerivedFromOrderHeaderKey="" DerivedFromOrderLineKey="" DerivedFromOrderReleaseKey="" DistributionRuleId="" FillQuantity="" FirstIterationSeqNo="" FreightTerms="" FulfillmentType="" FutureAvailabilityDate="" GiftFlag="" HasChainedLines="" HasDeliveryLines="" HasDerivedChild="" HasServiceLines="" HoldFlag="" HoldReasonCode="" ImportLicenseExpDate="" ImportLicenseNo="" IntentionalBackorder="" InvoicedExtendedPrice="" InvoicedQty="" InvoicedQuantity="" IsBundleParent="" IsFirmPredefinedNode="" ItemGroupCode="" KitCode="" KitQty="" LastIterationSeqNo="" LineSeqNo="" LineType="" MaxLineStatus="" MaxLineStatusDesc="" MergeNode="" MinLineStatus="" MinLineStatusDesc="" MinShipByDate="" MultipleStatusesExist="" OpenQty="" OrderHeaderKey="" OrderLineKey="" OrderedQty="" OrigOrderLineKey="" OriginalOrderedQty="" OtherCharges="" PackListType="" ParentOfDependentGroup="" PersonalizeCode="" PersonalizeFlag="" PickableFlag="" PipelineKey="" PrimeLineNo="" ProcureFromNode="" PromisedApptEndDate="" PromisedApptStartDate="" Purpose="" ReceivingNode="" RemainingQty="" ReqCancelDate="" ReqDeliveryDate="" ReqShipDate="" ReservationID="" ReservationMandatory="" ReservationPool="" ReturnReason="" ReturnReasonLongDesc="" ReturnReasonShortDesc="" SCAC="" ScacAndService="" ScacAndServiceKey="" SchedFailureReasonCode="" Segment="" SegmentType="" SerialNo="" ShipNode="" ShipToID="" ShipToKey="" ShipTogetherNo="" ShipmentConsolidationGroupId="" SourceFromOrganization="" SplitQty="" Status="" StatusQuantity="" SubLineNo="" SubstituteItemID="" SubstituteItemUOM="" Timezone="" TranDiscrepancyQty="" isHistory="">
+   <LinePriceInfo ActualPricingQty="" BundleTotal="" DiscountPercentage="" InvoicedLineTotal="" InvoicedPricingQty="" IsLinePriceForInformationOnly="" IsPriceLocked="" LineTotal="" ListPrice="" OrderedPricingQty="" PricingQtyConversionFactor="" PricingUOM="" RepricingQty="" RetailPrice="" SettledAmount="" SettledQuantity="" TaxExemptionCertificate="" TaxableFlag="" UnitPrice="" /> 
+   <LineCharges>
+  <LineCharge ChargeAmount="" ChargeCategory="" ChargeName="" ChargeNameKey="" ChargePerLine="" ChargePerUnit="" InvoicedChargeAmount="" InvoicedChargePerLine="" InvoicedChargePerUnit="" IsBillable="" IsDiscount="" Reference="" RemainingChargeAmount="" RemainingChargePerLine="" RemainingChargePerUnit="" /> 
+  </LineCharges>
+  <LineTaxes>
+  <LineTax ChargeCategory="" ChargeName="" ChargeNameKey="" InvoicedTax="" Reference_1="" Reference_2="" Reference_3="" RemainingTax="" Tax="" TaxName="" TaxPercentage="" /> 
+   <TaxSummary>
+  <TaxSummaryDetail InvoicedTax="" OverallTax="" RemainingTax="" TaxName="" /> 
+  </TaxSummary>
+  </LineTaxes>
+  </OrderLine>
+  </ShipmentLine>
+	   </ContainerDetail>
+   </ContainerDetails>
+   <Instructions >
+    <Instruction InstructionText="" InstructionType="" InstructionURL="" InstructionUsage="" SequenceNo="" isHistory=""/>
+	</Instructions>
+	<ParentContainer ActualFreightCharge="" AppliedWeight="" AppliedWeightUOM="" 
+		BasicFreightCharge="" ContainerGrossWeight="" ContainerGrossWeightUOM="" 
+		ContainerHeight="" ContainerHeightUOM="" ContainerLength="" 
+		ContainerLengthUOM="" ContainerNetWeight="" ContainerNetWeightUOM="" 
+		ContainerNo="" ContainerScm="" ContainerSeqNo="" ContainerType="" 
+		ContainerWidth="" ContainerWidthUOM="" CustomsValue="" DeclaredValue="" 
+		DimmedFlag="" DiscountAmount="" HasOtherContainers=""  OversizedFlag="" 
+		ParentContainerNo="" RoutingCode="" ShipmentContainerKey="" ShipmentKey="" SpecialServicesSurcharge="" TrackingNo="" Ucc128code="" Zone="" isHistory=""/>
+	<ChildContainers >
+		<ChildContainer ActualFreightCharge="" AppliedWeight="" AppliedWeightUOM="" 
+			BasicFreightCharge="" ContainerGrossWeight="" ContainerGrossWeightUOM="" 
+			ContainerHeight="" ContainerHeightUOM="" ContainerLength="" 
+			ContainerLengthUOM="" ContainerNetWeight="" ContainerNetWeightUOM="" 
+			ContainerNo="" ContainerScm="" ContainerSeqNo="" ContainerType="" 
+			ContainerWidth="" ContainerWidthUOM="" CustomsValue="" DeclaredValue="" 
+			DimmedFlag="" DiscountAmount="" HasOtherContainers=""  OversizedFlag="" 
+			ParentContainerNo="" RoutingCode="" ShipmentContainerKey="" ShipmentKey="" SpecialServicesSurcharge="" TrackingNo="" Ucc128code="" Zone="" isHistory=""/>	
+	</ChildContainers>
+	<Notes>
+		<Note NoteText="" TranName="" Tranid=""/>
+	</Notes>
+	 <Corrugation ItemID="" ItemKey="" OrganizationCode="" UnitOfMeasure="" >
+	  <PrimaryInformation Description="" ExtendedDescription="" />
+	 </Corrugation>
+</Container>

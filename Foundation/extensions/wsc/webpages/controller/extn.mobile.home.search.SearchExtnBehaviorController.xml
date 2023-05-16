@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Controller
+    className="com.sterlingcommerce.ui.web.platform.controller.SCUIXAPIMashupController"
+    controllerId="extn.mobile.home.search.SearchExtnBehaviorController"
+    requestMethodSupported="POST" screenId="extn.mobile.home.search.SearchExtn">
+	 <!--OMNI-71289 Pick Up Order Grouping - Flag Based  START -->
+    <MashupRefs>
+        <MashupRef extnType="ADD"
+            mashupId="extn_getFlagToDisableAddQtyAndReadOnlyScannedQty"
+            mashupRefId="extn_getFlagToDisableAddQtyAndReadOnlyScannedQty" permissionId=""/>
+    </MashupRefs>
+	<!--OMNI-71289 Pick Up Order Grouping - Flag Based  END -->
+</Controller>

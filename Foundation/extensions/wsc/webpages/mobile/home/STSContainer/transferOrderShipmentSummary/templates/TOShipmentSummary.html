@@ -1,0 +1,783 @@
+<div class="sc-platform-screen-default toshipmentsummary" role="region" aria-label="region_screenHeader">
+
+
+<!--  Start:  TO Summary Screen   --->
+
+
+
+ <div data-dojo-type="idx/layout/ContentPane" data-dojo-props="		spanLabel : true , 
+		title : 'Top Content' , 
+		'class' : 'mobileCommonScreen screenHeader' , 
+		colspan : 1 , 
+		uId : 'TopContent' , 
+		layoutAlign : 'top'">
+        <div data-dojo-type="idx/layout/ContentPane" data-dojo-props="		spanLabel : true , 
+		'class' : 'screenTitle' , 
+		uId : 'pnlScreenDescription'">
+            <div data-dojo-type="sc/plat/dojo/widgets/Label" data-dojo-props="		spanLabel : true , 
+		uId : 'lbl_ScreenTitle'  
+ 		,scParamDataFn :
+		 function() { 
+			return { 
+			 	value : 			this.getSimpleBundleString('extn_Title_ShipmentSummary')
+			}
+		}
+"></div>
+        </div>
+	    <div data-dojo-type="idx/layout/ContentPane" data-dojo-props="		spanLabel : true , 
+		'class' : 'rightPanel'  
+ ">
+            <div data-dojo-type="idx/layout/ContentPane" data-dojo-props="		spanLabel : true , 
+		uId : 'pnlScreenTasks'  
+ "></div>
+        </div>
+</div>
+
+<div data-dojo-type="idx/layout/ContentPane" data-dojo-props="		spanLabel : true , 
+		uId : 'extn_btnClosePane' ,
+		'class': 'shipmentDetails' , 
+		layoutAlign : 'top'   
+ ">
+<div data-dojo-type="dijit/form/Button" data-dojo-props="		spanLabel : true ,	 				
+	 	uId : 'extn_btnClose' , 		
+		'class' : 'buttonConnect idxSpecialButton' , 
+		style : 'float:right; padding-left:20px; padding-right:15px; padding-top:0px;',
+		showLabel : true , 			
+ 		scParamDataFn :
+		 function() { 
+			return { 
+			
+			 	label : 			this.getSimpleBundleString('extn_Close')
+			}
+		}
+	 		">
+	</div>	
+	<!--
+	<div data-dojo-type="dijit/form/Button" data-dojo-props="		spanLabel : true ,	 				
+	 	uId : 'extn_btnBack' , 		
+		'class' : 'buttonConnect idxSpecialButton' , 
+		style : 'float:right; padding-right:15px; padding-top:0px;',
+		showLabel : true , 			
+ 		scParamDataFn :
+		 function() { 
+			return { 
+			
+			 	label : 			this.getSimpleBundleString('extn_Back')
+			}
+		}
+	 		">
+	</div>
+	-->
+</div>
+
+
+<!-- OMNI-63942 - Adding Related Task Panel for STS - HIP Printer - START -->
+<div data-dojo-type="sc/plat/dojo/widgets/ControllerWidget" data-dojo-props="
+					uId: 'RelatedTaskScreenHolder',
+					packageName: 'wsc.components.shipment.summary',
+					className: 'ShipmentRT',
+					handleInit: true,
+					'class': 'relatedTaskHolder',
+				scParamDataFn: function() {
+					return {
+					}
+				}">
+</div>
+<!--OMNI-63942 - Adding Related Task Panel for STS - HIP Printer - END -->
+<div data-dojo-type="idx/layout/ContentPane" data-dojo-props="		'class' : 'detailsPrimaryInfoPanel' , 
+		uId : 'DST_PrimaryInfoPanel'  
+ ">
+<div data-dojo-type="idx/layout/ContentPane" data-dojo-props="		spanLabel : true , 
+		uId : 'extn_shipmentDetailsCP' ,
+		'class': 'shipmentDetails' , 
+		layoutAlign : 'top'   
+ ">
+ 
+ <div data-dojo-type="sc/plat/dojo/widgets/DataLabel" data-dojo-props="		spanLabel : true , 
+		'class' : 'extn_summarylabel hashNumberAlign autoLabelZeroWidth blockComponent comappsWrapWord' , 
+		uId : 'extn_lblOrderNo',
+		style : 'padding-left:10px; padding-top:15px;' ,   
+ 		scParamDataFn :
+		 function() { 
+			return { 
+			 	label : 			this.getSimpleBundleString('extn_Order_No')
+,	
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 path : 			'Shipment.ShipmentLines.ShipmentLine.0.OrderLine.ChainedFromOrderLine.Order.OrderNo'
+,
+		 namespace : 			'getShipmentDetails_output'
+	}
+	}
+			}
+		}
+"></div>
+ <div data-dojo-type="sc/plat/dojo/widgets/DataLabel" data-dojo-props="		spanLabel : true , 
+		'class' : 'extn_TOdate hashNumberAlign autoLabelZeroWidth blockComponent comappsWrapWord' , 
+		uId : 'extn_lblOrderDate',
+		style : 'padding-left:10px;' ,   
+ 		scParamDataFn :
+		 function() { 
+			return { 
+			 	label : 			this.getSimpleBundleString('extn_Order_Date')
+,	
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 path : 			'Shipment.ShipmentLines.ShipmentLine.0.OrderLine.ChainedFromOrderLine.Order.OrderDate1'
+
+,
+		 namespace : 			'getShipmentDetails_output'
+	}
+	}
+			}
+		}
+"></div>
+ <div data-dojo-type="sc/plat/dojo/widgets/DataLabel" data-dojo-props="		spanLabel : true , 
+		'class' : 'extn_CancelLabel hashNumberAlign autoLabelZeroWidth blockComponent comappsWrapWord' , 
+		uId : 'extn_lblOrderStatus',
+		style : 'padding-left:10px;' ,   
+ 		scParamDataFn :
+		 function() { 
+			return { 
+			 	label : 			this.getSimpleBundleString('extn_Order_Status')
+,	
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 path : 			'Shipment.ShipmentLines.ShipmentLine.0.OrderLine.ChainedFromOrderLine.Order.Status'
+,
+		 namespace : 			'getShipmentDetails_output'
+	}
+	}
+			}
+		}
+"></div>
+<!-- OMNI-9303 Unable to reprint the pickup acknowledgment slip for STS orders - Start -->
+<div data-dojo-type="dijit/form/Button" data-dojo-props="		spanLabel : true ,	 				
+	 	uId : 'extn_btnPrintAck' , 		
+		'class' : 'buttonConnect idxSpecialButton' , 
+		style : 'float:right; padding-right:15px; padding-top: 1px;',
+		renderHidden : true,
+		showLabel : true , 			
+ 		scParamDataFn :
+		 function() { 
+			return { 
+			
+			 	label : 			this.getSimpleBundleString('PrintReceipt')
+			}
+		}
+	 		">
+	</div>
+<!-- OMNI-9303 Unable to reprint the pickup acknowledgment slip for STS orders - End -->
+ <!-- <div data-dojo-type="sc/plat/dojo/widgets/DataLabel" data-dojo-props="		spanLabel : true , 
+		'class' : 'extn_summarylabel blockComponent noColonLabels comappsWrapWord zeroWidthLabelValueDesktop' , 
+		uId : 'extn_lblTOShipmentNo',
+		style : 'padding-top:10px; padding-left:10px;' ,   
+ 		scParamDataFn :
+		 function() { 
+			return { 
+			 	label : 			this.getSimpleBundleString('extn_Label_Inbound_Shipment_number')
+,	
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 path : 			'Shipment.ShipmentNo'
+,
+		 namespace : 			'getShipmentDetails_output'
+	}
+	}
+			}
+		}
+"></div> -->
+
+  <div data-dojo-type="sc/plat/dojo/widgets/DataLabel" data-dojo-props="		spanLabel : true , 
+		'class' : 'blockComponent noColonLabels comappsWrapWord zeroWidthLabelValueDesktop' , 
+		uId : 'extn_lblCustomerDetails',
+		style : 'padding-top:10px; padding-left:10px; ' ,  
+		scParamDataFn :
+		 function() { 
+			return { 
+			 	label : 			this.getSimpleBundleString('extn_Label_Customer_Details')
+
+			 	
+			}
+		}
+"></div>  
+
+   <div data-dojo-type="idx/layout/ContentPane" data-dojo-props="		spanLabel : true , 
+		'class' : 'customerInfo' , 
+		uId : 'extn_pnlPrimaryInfo' , 
+		layoutAlign : 'top'  
+ ">
+                    <div data-dojo-type="sc/plat/dojo/widgets/DataLabel" data-dojo-props="		spanLabel : true , 
+		'class' : 'blockComponent a11yHiddenLabel' , 
+		style : 'padding-top:0px; padding-left:10px;' ,  
+		uId : 'extn_lblName'  
+ 		,scParamDataFn :
+		 function() { 
+			return { 
+			 	label : 			this.getBundleString('Label_Customername')
+,	
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 path : 			'Shipment.ShipmentLines.ShipmentLine.0.OrderLine.ChainedFromOrderLine.Order.PersonInfoShipTo.FirstName'
+,
+		 dynamicBindingFunc : 			'getFormattedNameDisplay'
+,
+		 namespace : 			'getShipmentDetails_output'
+	}
+	}
+			}
+		}
+"></div>
+                    <div data-dojo-type="idx/layout/ContentPane" data-dojo-props="		'class' : 'displayPhone blockComponent' , 
+		uId : 'extn_pnlPhoneHolder'  
+ ">
+                        <div data-dojo-type="sc/plat/dojo/widgets/Image" data-dojo-props="		imageSrc : 'wsc/resources/css/icons/images/phone.png' , 
+		'class' : 'defaultImageSize floatLeft' , 
+		appendToContextRoot : true , 
+		style : 'padding-left:10px;' ,  
+		uId : 'extn_imgPhoneNo'  
+ 		,scParamDataFn :
+		 function() { 
+			return { 
+			 	title : 			this.getSimpleBundleString('Tooltip_PhoneNo')
+,	
+			 	imageAlt : 			this.getSimpleBundleString('Tooltip_PhoneNo')
+			}
+		}
+"></div>
+                        <div data-dojo-type="sc/plat/dojo/widgets/DataLabel" data-dojo-props="		'class' : 'icon-image-label  a11yHiddenLabel zeroWidthLabelKey' , 
+		uId : 'extn_lblDayPhone'  
+ 		,scParamDataFn :
+		 function() { 
+			return { 
+			 	label : 			this.getBundleString('Label_Phone_number')
+,	
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 path : 			'Shipment.ShipmentLines.ShipmentLine.0.OrderLine.ChainedFromOrderLine.PersonInfoShipTO.DayPhone'
+,
+		 dynamicBindingFunc : 			'getDayPhone'
+,
+		 namespace : 			'getShipmentDetails_output'
+	}
+	}
+			}
+		}
+"></div>
+                    </div>
+                    <div data-dojo-type="idx/layout/ContentPane" data-dojo-props="		'class' : 'displayEmail' , 
+		uId : 'extn_pnlEmailHolder'  
+ ">
+                        <div data-dojo-type="sc/plat/dojo/widgets/Image" data-dojo-props="		imageSrc : 'wsc/resources/css/icons/images/email.png' , 
+		'class' : 'defaultImageSize floatLeft' , 
+		appendToContextRoot : true , 
+		style : 'padding-left:10px;' ,  
+		uId : 'extn_imgEmailLabel'  
+ 		,scParamDataFn :
+		 function() { 
+			return { 
+			 	title : 			this.getSimpleBundleString('Tooltip_Email')
+,	
+			 	imageAlt : 			this.getSimpleBundleString('Tooltip_Email')
+			}
+		}
+"></div>
+                        <div data-dojo-type="sc/plat/dojo/widgets/DataLabel" data-dojo-props="		'class' : 'icon-image-label  a11yHiddenLabel zeroWidthLabelKey' , 
+		uId : 'extn_lnkEmail'  
+ 		,scParamDataFn :
+		 function() { 
+			return { 
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 path : 			'Shipment.ShipmentLines.ShipmentLine.0.OrderLine.ChainedFromOrderLine.PersonInfoShipTO.EMailID'
+,
+		 dynamicBindingFunc : 			'getEmailID'
+,
+		 namespace : 			'getShipmentDetails_output'
+	}
+	}
+			}
+		}
+"></div>
+                    </div>
+
+</div>
+ <div></div>
+ 
+ <div data-dojo-type="sc/plat/dojo/widgets/DataLabel" data-dojo-props="		spanLabel : true , 
+		'class' : 'hashNumberAlign autoLabelZeroWidth blockComponent comappsWrapWord' , 
+		uId : 'extn_lblPickupDate',
+		renderHidden : true ,
+		style : 'padding-top:10px; padding-left:10px;' ,   
+ 		scParamDataFn :
+		 function() { 
+			return { 
+			 	label : 			this.getSimpleBundleString('extn_PickedUp_Date')
+,	
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 path : 			'Shipment.ShipmentNo1'
+,
+		 namespace : 			'getShipmentDetails_output'
+	}
+	}
+			}
+		}
+"></div>
+<!--background-color: #F8F9F9;-->
+ <div data-dojo-type="sc/plat/dojo/widgets/DataLabel" data-dojo-props="		spanLabel : true , 
+		'class' : 'hashNumberAlign autoLabelZeroWidth blockComponent comappsWrapWord' , 
+		uId : 'lblTOShipmentNo',
+		renderHidden : true ,
+		style : 'padding-top:15px; padding-left:10px;' ,   
+ 		scParamDataFn :
+		 function() { 
+			return { 
+			 	label : 			this.getSimpleBundleString('extn_Customer_Shipment_Number')
+,	
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 path : 			'ShipmentNo'
+,
+		 namespace : 			'mvalidShipment_output'
+	}
+	}
+			}
+		}
+"></div>
+<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" data-dojo-props="		spanLabel : true , 
+		'class' : 'extn_LabelStatus hashNumberAlign autoLabelZeroWidth blockComponent comappsWrapWord' , 
+		uId : 'lblShipmentStatus' ,
+		renderHidden : true ,
+		style : 'padding-left:10px;' ,  
+ 		scParamDataFn :
+		function() { 
+			return { 
+			 	label : 			this.getSimpleBundleString('extn_customer_shipment_status')
+,	
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 path : 			'Status.Description'
+,
+		 namespace : 			'mvalidShipment_output'
+	}
+	}
+			}
+		}
+"></div>
+ </div>
+ <!-- OMNI-72012 Start-->
+<div data-dojo-type="idx/layout/ContentPane" data-dojo-props=" spanLabel : true , 
+	 	uId : 'extn_CompleteOMYPane' ">
+		 	
+<div data-dojo-type="dijit/form/Button" data-dojo-props="		spanLabel : true ,	 				
+	 	uId : 'extn_CompleteOnMyWaybutton' , 		
+		'class' : 'longButtons' , 
+		
+		showLabel : true , 			
+ 		scParamDataFn :
+		 function() { 
+			return { 
+			
+			 	label : 			this.getSimpleBundleString('extn_Complete')
+			}
+		}
+	 		">
+	</div>	
+</div> 
+<!-- OMNI-72012 End-->
+<div data-dojo-type="idx/layout/TitlePane" data-dojo-props="		open : true , 
+		spanLabel : true , 
+		'class' : 'collapsablePane boxLayout repeatingContent containerList' ,  
+		style : 'padding-top:10px' ,
+		uId : 'extn_tpContainerDetails'  
+ 		,scParamDataFn :
+		 function() { 
+			return { 
+			 	'aria-label' : 			this.getSimpleBundleString('arialabel_PackagesDetails')
+,	
+			 	title : 			this.getSimpleBundleString('extn_InboundContainerDetails')
+			}
+		}
+" role='region'>
+<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" data-dojo-props="		spanLabel : true , 
+		'class' : 'extn_labelReceiving hashNumberAlign autoLabelZeroWidth blockComponent comappsWrapWord' , 
+		uId : 'extn_lblReceivingStatus' ,
+		style : 'display: inline-block; padding-top:10px; padding-left:10px;' ,  
+ 		scParamDataFn :
+		function() { 
+			return { 
+			 	label : 			this.getSimpleBundleString('extn_Receivng_status')
+,	
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 path : 			'Shipment.Status.Description'
+,
+		 dynamicBindingFunc : 			'getReceivingStatus'
+,
+		 namespace : 			'getShipmentDetails_output'
+	}
+	}
+			}
+		}
+"></div>
+
+ <div data-dojo-type="idx/layout/ContentPane" data-dojo-props="		spanLabel : true , 
+		'class' : 'noProductScanPanel informationLabelAlt' , 
+		uId : 'noContainersPnl'  
+ ">
+                <div data-dojo-type="sc/plat/dojo/widgets/Label" data-dojo-props="		'class' : 'screenMessage' , 
+		uId : 'lblnoContainers'  
+ 		,scParamDataFn :
+		 function() { 
+			return { 
+			 	value : 			this.getSimpleBundleString('extn_No_Container_lbl')
+			}
+		}
+"></div></div>
+
+ <div data-dojo-type="idx/layout/ContentPane" data-dojo-props="		'class' : 'repeatingpanel' , 
+		uId : 'extn_cpContainerLinesPaginationPanel'  
+ 		,scParamDataFn :
+		 function() { 
+			return { 
+			 	bindingData : 	{
+					 customNoRecordsFoundMessageBundleKey : 			'Message_NoPackagesFound'
+			,
+					 isPaginated : 			false
+			,
+					 mashupRefId : 			'extn_getTOShipmentDetails'
+			,
+					 repeatingscreenID : 			'extn.mobile.home.STSContainer.transferOrderShipmentSummary.containerSummaryScreen.ContainerSummary'
+			,
+					 repeatingScreen : 	{
+					 repeatingnamespace : 			'container_Src'
+			,
+					 path : 			'Shipment.Containers.Container'
+			,
+					 repeatingscreenpath : 			'Container'
+			,
+					 sourcenamespace : 			'getShipmentDetails_output'
+						}
+		      }
+		   }
+		}
+"></div>
+            </div>
+
+    </div>
+
+<!--	
+<div data-dojo-type="idx/layout/ContentPane" data-dojo-props="		spanLabel : true , 
+		uId : 'extn_shipmentDetailsCP' ,
+		layoutAlign : 'top'   , colspan : 2 ,
+ ">
+ 
+
+ <div data-dojo-type="idx/layout/ContentPane" data-dojo-props="		
+		'class' : '' , 
+		uId : 'extn_pnlEmailHolder'  
+ ">
+ 
+   <div data-dojo-type="sc/plat/dojo/widgets/DataLabel" data-dojo-props="		spanLabel : true , 
+		'class' : 'extnidxLabelICD' , 
+		uId : 'extn_lblShipmentStatus' ,
+		style : 'padding-top: 5px;' ,
+ 		scParamDataFn :
+		function() { 
+			return { 
+			 	label : 			this.getSimpleBundleString('extn_Label_TOContainerID')
+		,	
+						bindingData : 	{
+				 sourceBinding : 	{
+				 path : 			'Shipment.Status.Description'
+		,
+				 namespace : 			'getShipmentDetails_output'
+			}
+			}
+					}
+				}
+		"></div>
+		
+		<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" data-dojo-props="		spanLabel : true , 
+				'class' : 'extnidxLabelICD2' , 
+				style : 'padding-top: 5px;',
+				uId : 'extn_lblOrderNo',
+				
+				scParamDataFn :
+				 function() { 
+					return { 
+						label : 			this.getSimpleBundleString('extn_Received')
+		,	
+						bindingData : 	{
+				 sourceBinding : 	{
+				 path : 			'Shipment.ShipmentLines.ShipmentLine.0.OrderLine.ChainedFromOrderLine.Order.OrderNo'
+		,
+				 namespace : 			'getShipmentDetails_output'
+			}
+			}
+					}
+				}
+		"></div>
+
+
+
+
+
+<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" data-dojo-props="		spanLabel : true , 
+		'class' : 'blockComponent noColonLabels comappsWrapWord zeroWidthLabelValueDesktop' , 
+		uId : 'extn_lblTOShipmentNo',
+		style : 'padding-top:5px; padding-left:30px;' ,   
+ 		scParamDataFn :
+		 function() { 
+			return { 
+			 	label : 			this.getSimpleBundleString('extn_ItemID')
+,	
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 path : 			'Shipment.ShipmentNo'
+,
+		 namespace : 			'getShipmentDetails_output'
+	}
+	}
+			}
+		}
+"></div>
+
+<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" data-dojo-props="		spanLabel : true , 
+		'class' : 'blockComponent noColonLabels comappsWrapWord zeroWidthLabelValueDesktop' , 
+		uId : 'extn_lblOrderNo',
+		style : 'padding-top:5px; padding-left:30px;' ,   
+ 		scParamDataFn :
+		 function() { 
+			return { 
+			 	label : 			this.getSimpleBundleString('extn_Quantity')
+,	
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 path : 			'Shipment.ShipmentLines.ShipmentLine.0.OrderLine.ChainedFromOrderLine.Order.OrderNo'
+,
+		 namespace : 			'getShipmentDetails_output'
+	}
+	}
+			}
+		}
+"></div>	
+
+</div>
+<div data-dojo-type="dijit/form/Button" data-dojo-props="		spanLabel : true ,	 				
+	 	uId : 'extn_btnMarkAsLost' , 		
+		'class' : 'buttonConnect idxSpecialButton' , 
+		style : 'float:right; padding-right:15px; padding-top:30px;',
+		showLabel : true , 			
+ 		scParamDataFn :
+		 function() { 
+			return { 
+			
+			 	label : 			this.getSimpleBundleString('Mark As Lost')
+			}
+		}
+	 		">
+	</div>
+
+
+</div>
+
+	
+<div data-dojo-type="idx/layout/ContentPane" data-dojo-props="		spanLabel : true , 
+		uId : 'extn_shipmentDetailsCP' ,
+		layoutAlign : 'top'   
+ ">
+ 
+
+ <div data-dojo-type="idx/layout/ContentPane" data-dojo-props="		
+		'class' : '' , 
+		uId : 'extn_pnlEmailHolder'  
+ ">
+ 
+   <div data-dojo-type="sc/plat/dojo/widgets/DataLabel" data-dojo-props="		spanLabel : true , 
+		'class' : 'extnidxLabelICD' , 
+		uId : 'extn_lblShipmentStatus' ,
+		style : 'padding-top: 25px;' ,
+ 		scParamDataFn :
+		function() { 
+			return { 
+			 	label : 			this.getSimpleBundleString('extn_Label_TOContainerID')
+		,	
+						bindingData : 	{
+				 sourceBinding : 	{
+				 path : 			'Shipment.Status.Description'
+		,
+				 namespace : 			'getShipmentDetails_output'
+			}
+			}
+					}
+				}
+		"></div>
+		
+		<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" data-dojo-props="		spanLabel : true , 
+				'class' : 'extnidxLabelICD2' , 
+				style : 'padding-top: 25px;',
+				uId : 'extn_lblOrderNo',
+				
+				scParamDataFn :
+				 function() { 
+					return { 
+						label : 			this.getSimpleBundleString('extn_Received')
+		,	
+						bindingData : 	{
+				 sourceBinding : 	{
+				 path : 			'Shipment.ShipmentLines.ShipmentLine.0.OrderLine.ChainedFromOrderLine.Order.OrderNo'
+		,
+				 namespace : 			'getShipmentDetails_output'
+			}
+			}
+					}
+				}
+		"></div>
+</div>
+
+
+
+
+<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" data-dojo-props="		spanLabel : true , 
+		'class' : 'blockComponent noColonLabels comappsWrapWord zeroWidthLabelValueDesktop' , 
+		uId : 'extn_lblTOShipmentNo',
+		style : 'padding-top:5px; padding-left:30px;' ,   
+ 		scParamDataFn :
+		 function() { 
+			return { 
+			 	label : 			this.getSimpleBundleString('extn_ItemID')
+,	
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 path : 			'Shipment.ShipmentNo'
+,
+		 namespace : 			'getShipmentDetails_output'
+	}
+	}
+			}
+		}
+"></div>
+
+<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" data-dojo-props="		spanLabel : true , 
+		'class' : 'blockComponent noColonLabels comappsWrapWord zeroWidthLabelValueDesktop' , 
+		uId : 'extn_lblOrderNo',
+		style : 'padding-top:5px; padding-left:30px;' ,   
+ 		scParamDataFn :
+		 function() { 
+			return { 
+			 	label : 			this.getSimpleBundleString('extn_Quantity')
+,	
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 path : 			'Shipment.ShipmentLines.ShipmentLine.0.OrderLine.ChainedFromOrderLine.Order.OrderNo'
+,
+		 namespace : 			'getShipmentDetails_output'
+	}
+	}
+			}
+		}
+"></div>	 
+
+
+
+</div>	-->
+<!--  OMNI -9408 - STS - Order Search Result - Cancellation Product Information - START -->
+<div data-dojo-type="idx/layout/TitlePane" data-dojo-props="		open : true , 
+		spanLabel : true , 
+		'class' : 'collapsablePane boxLayout repeatingContent', renderHidden : 'true' , 
+		style : 'padding-top:10px' ,
+		uId : 'extn_tpCancellationDetails'  
+ 		,scParamDataFn :
+		 function() { 
+			return { 
+			 	'aria-label' : 			this.getSimpleBundleString('arialabel_PackagesDetails')
+,	
+			 	title : 			this.getSimpleBundleString('extn_Label_Cancellation_Details')
+			}
+		}
+" role='region'>
+
+<div data-dojo-type="idx/layout/TitlePane" data-dojo-props="		open : false , 
+		spanLabel : true , 
+		'class' : 'collapsablePane boxLayout repeatingContent extn_NoProductBorder' ,  
+		uId : 'extn_Products' ,
+		toggleable : true , 
+		style : 'width:100% ! important' 
+ 		,scParamDataFn :
+		 function() { 
+			return { 
+			 	'aria-label' : 			this.getSimpleBundleString('Title_Products')
+,	
+			 	title : 			this.getSimpleBundleString('Title_Products')
+			}
+		}
+" role='region'>
+ <div data-dojo-type="idx/layout/ContentPane" data-dojo-props="		'class' : 'repeatingpanel' , 
+		uId : 'extn_CancelLinesPaginationPanel'  
+ 		,scParamDataFn :
+		 function() { 
+			return { 
+			 	bindingData : 	{
+					 customNoRecordsFoundMessageBundleKey : 			'Message_NoPackagesFound'
+			,
+					 isPaginated : 			false
+			,
+					 mashupRefId : 			'extn_getTOShipmentDetails'
+			,
+					 repeatingscreenID : 			'extn.mobile.home.STSContainer.transferOrderShipmentSummary.containerProductsDetailsScreen.ContainerProductDetails'
+
+			,
+					 repeatingScreen : 	{
+					 repeatingnamespace : 			'cancelLine_Src'
+			,
+					 path : 			'Shipment.ShipmentLines.ShipmentLine'
+			,
+					 repeatingscreenpath : 			'ShipmentLine'
+			,
+					 sourcenamespace : 			'canceledItemsList'
+						}
+		      }
+		   }
+		}
+"></div>
+</div>
+</div>
+<!--   OMNI -9408 - STS - Order Search Result - Cancellation Product Information - END -->	
+<div>
+<div data-dojo-type="dijit/form/Button" data-dojo-props="		spanLabel : true ,	 				
+	 	uId : 'extn_btnClose1' , 		
+		'class' : 'buttonConnect idxSpecialButton' , 
+		style : 'float:right; padding-left:20px; padding-right:15px; padding-top:0px; padding-bottom:30px',
+		showLabel : true , 			
+ 		scParamDataFn :
+		 function() { 
+			return { 
+			
+			 	label : 			this.getSimpleBundleString('extn_Close')
+			}
+		}
+	 		">
+	</div>			
+	<!--
+	<div data-dojo-type="dijit/form/Button" data-dojo-props="		spanLabel : true ,	 				
+	 	uId : 'extn_btnBack1' , 		
+		'class' : 'buttonConnect idxSpecialButton' , 
+		style : 'float:right; padding-right:15px; padding-top:30px;',
+		showLabel : true , 			
+ 		scParamDataFn :
+		 function() { 
+			return { 
+			
+			 	label : 			this.getSimpleBundleString('extn_Back')
+			}
+		}
+	 		">
+	</div>
+	-->
+</div>			
+			
+			
+   <!--  End:  TO Summary Screen   --->  
+</div>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Shipment ShipmentKey="" ShipmentNo="" Status="" OrderNo="" DeliveryMethod="" ShipNode="" AppointmentNo="">
+	<ShipmentLines>
+		<ShipmentLine OrderNo=""/>
+	</ShipmentLines>
+	<Extn ExtnIsCurbsidePickupOpted="" ExtnCurbsidePickupInfo="" ExtnOnMyWayOpted="" />
+</Shipment>

@@ -1,0 +1,12 @@
+<InvoiceDetail>
+<InvoiceHeader DateInvoiced="" DerivedFromOrderHeaderKey="" LineSubTotal="" OrderInvoiceKey="" TotalAmount="" TotalCharges="" TotalDiscount="" TotalTax="">
+<LineDetails>
+<LineDetail ExtendedPrice="" UnitPrice="" OrderLineKey="" ShippedQty=""/>
+</LineDetails>
+<CollectionDetails>
+<CollectionDetail AmountCollected="" ChargeType="">
+<PaymentMethod PaymentType="" DisplayCreditCardNo="" MaxChargeLimit="" SvcNo="" CreditCardNo="" DisplaySvcNo=""/>
+</CollectionDetail>
+</CollectionDetails>
+</InvoiceHeader>
+</InvoiceDetail>

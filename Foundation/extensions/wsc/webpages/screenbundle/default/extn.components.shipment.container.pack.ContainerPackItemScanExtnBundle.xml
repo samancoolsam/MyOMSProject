@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ScreenBundle
+    screenBundleId="extn.components.shipment.container.pack.ContainerPackItemScanExtnBundle" screenId="extn.components.shipment.container.pack.ContainerPackItemScanExtn">
+    <BundleEntries>
+        <BundleEntry bundleEntryId="lblCurrentPackage_DataLabel_label"
+            bundleKey="extn_Current_" bundleValueFn="_scSimpleBundle"
+            property="label" type="WIDGET" uId="lblCurrentPackage"/>
+        <BundleEntry bundleEntryId="lblnoProdscan_Label_value"
+            bundleKey="extn__Scan_products_to_be_packed_into_current_Container_"
+            bundleValueFn="_scSimpleBundle" property="value"
+            type="WIDGET" uId="lblnoProdscan"/>
+    </BundleEntries>
+</ScreenBundle>

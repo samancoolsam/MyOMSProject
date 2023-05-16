@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExtensionMetaData>
+    <ScreenExtension extnClassName="SearchExtn"
+        extnPackage="extn.mobile.home.search"
+        originalScreen="wsc.mobile.home.search.Search"
+        originalScreenPackage="wsc.mobile.home.search" type="diffrential">
+        <Items>
+		<!-- OMNI-71126 Pick Up Order Grouping - Pick Up Order Grouping Order Search TC70  START -->
+      	  <CheckBox _sc_extensibility_moveOrder="7"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="txt_SearchShipNo"
+                label="$(_scSimpleBundle:extn_Show_Related_Orders)"
+                renderHidden="false" uId="extn_relatedOrders_checkbox">
+                <BindingData>
+                    <CheckedValue value="Y"/>
+                    <SourceBinding namespace="SavedSearchCriteria" path="Shipment.ShowRelatedOrders"/>
+                    <TargetBindings>
+                        <TargetBinding
+                            namespace="getShipmentSearch_input"
+                            path="Shipment.ShowRelatedOrders" scExtensibilityArrayItemId="extn_TargetBindings_0"/>
+                    </TargetBindings>
+                    <UncheckedValue value="N"/>
+                </BindingData>
+            </CheckBox>
+			<!-- OMNI-71126 Pick Up Order Grouping - Pick Up Order Grouping Order Search TC70  END -->
+            <TextField _sc_extensibility_operation="change"
+                _sc_extensibility_referenceUId="txt_SearchOrderNo" renderHidden="false"/>
+            <TextField _sc_extensibility_operation="change"
+                _sc_extensibility_referenceUId="txt_SearchOrderNo" hint="$(_scSimpleBundle:extn_Scan_or_enter_Order_)"/>
+            <TextField _sc_extensibility_operation="change"
+                _sc_extensibility_referenceUId="txt_SearchShipNo" renderHidden="false"/>
+                <!-- OMNI-102370 START -->
+                 <TextField _sc_extensibility_moveOrder="8"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="extn_ship_or_order_no"
+                class="autoLabelZeroWidth longTextbox"
+                hint="$(_scSimpleBundle:extn_Scan_or_enter_SKU)"
+                label="$(_scSimpleBundle:extn_Sku_number)" uId="extn_ScanProductIDTextBox">
+                <BindingData>
+                    <SourceBinding namespace="SavedSearchCriteria" path="Shipment.itemID"/>
+                    <TargetBindings>
+                        <TargetBinding
+                            namespace="getShipmentSearch_input"
+                            path="Shipment.itemID" scExtensibilityArrayItemId="extn_TargetBindings_0"/>
+                    </TargetBindings>
+                </BindingData>
+            </TextField>
+         <!-- OMNI-102370 END -->
+        </Items>
+        <Subscribers>
+            <Local>
+                <Subscriber eventId="afterScreenInit" isExtn="true" sequence="51">
+                    <Handler methodName="extn_afterInitializeScreen"/>
+                </Subscriber>
+                <Subscriber eventId="afterScreenLoad" isExtn="true" sequence="51">
+                    <Handler methodName="extn_afterScreenLoad"/>
+                </Subscriber>
+				<!-- OMNI-71126 Pick Up Order Grouping - Pick Up Order Grouping Order Search TC70  START -->
+                <Subscriber
+                    description="On checkbox checked disable fields"
+                    eventId="extn_relatedOrders_checkbox_onClick"
+                    isExtn="true" sequence="51">
+                    <Handler methodName="disableWidgets"/>
+                </Subscriber>
+				<!-- OMNI-71126 Pick Up Order Grouping - Pick Up Order Grouping Order Search TC70  END -->
+                 <!-- OMNI-102370 START -->
+                 <Subscriber description="Scan or enter ProductID"
+                    eventId="extn_ScanProductIDTextBox_onKeyUp"
+                    isExtn="true" sequence="51">
+                    <Handler description="Scan or enter ProductID" methodName="scanProductOnEnter"/>
+                </Subscriber>
+                 <!-- OMNI-102370 END -->
+            </Local>
+        </Subscribers>
+		<!-- OMNI-71126 Pick Up Order Grouping - Pick Up Order Grouping Order Search TC70  START -->
+         <MashupRefs>
+            <Behavior>
+                <MashupRef extnType="ADD"
+                    mashupId="extn_getFlagToDisableAddQtyAndReadOnlyScannedQty" mashupRefId="extn_getFlagToDisableAddQtyAndReadOnlyScannedQty"/>
+            </Behavior>
+        </MashupRefs>
+		<!-- OMNI-71126 Pick Up Order Grouping - Pick Up Order Grouping Order Search TC70  END -->
+    </ScreenExtension>
+</ExtensionMetaData>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Shipment ShipmentKey="" ShipmentNo="" Status="" StatusDate="" SCAC="" ScacAndService="" CarrierServiceCode="" OrderNo="" DeliveryMethod="" >
+
+   <ShipmentLines>
+   	  <ShipmentLine OrderHeaderKey="" Quantity="" OrderNo="" ShipmentLineKey="">
+	   <OrderLine OriginalOrderedQty="" OrderedQty="" DeliveryMethod="" FulfillmentType="" >
+            <Extn ExtnWCOrderItemIdentifier="" />
+			<OrderStatuses>
+				<OrderStatus StatusDescription="" />
+			</OrderStatuses>
+         </OrderLine>
+      </ShipmentLine>
+   </ShipmentLines>
+   <ToAddress EMailID="" FirstName="" LastName="" MiddleName="" PersonID=""  AddressLine1="" City="" State="" ZipCode=""/>
+   <OrderInvoiceList>
+		<OrderInvoice ActualFreightCharge="" AmountCollected=""
+			DateInvoiced="" HeaderTax="" InvoiceNo="" InvoiceType=""
+			LineSubTotal="" MasterInvoiceNo="" OrderHeaderKey=""
+			OrderInvoiceKey="" OrderNo="" OtherCharges="" 
+			ShipmentKey="" Status="" TotalAmount="" TotalTax="" />
+	</OrderInvoiceList>
+   <ShipmentStatusAudits>
+      <ShipmentStatusAudit ShipmentStatusAuditKey="" OldStatus="" NewStatus="" OldStatusDate="" NewStatusDate="" ReasonCode="" ReasonText=""/>
+   </ShipmentStatusAudits>
+   <!-- START STL-1435 Packing in SI DCs doesn't generate ShipAckMsg to Exeter -->
+   <ShipNode NodeType=""/>
+    <!-- END STL-1435 Packing in SI DCs doesn't generate ShipAckMsg to Exeter -->
+	<AdditionalDates>
+	<AdditionalDate />
+	</AdditionalDates>
+</Shipment>

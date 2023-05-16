@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<DBSchema> 
+   <Entities> 
+      <Entity ApiNeeded="Y" AuditRequired="N" Description="This table is to store the counter value to track the number of retries made for Authorization/Settlement" HasHistory="false" Prefix="ACAD" TableName="ACAD_GC_PAY_RETRY" XMLName="ACADGCPayRetry"> 
+         <Attributes> 
+            <Attribute ColumnName="GCPAY_RETRY_KEY" DataType="Key" DefaultValue="' '" Description="System generated primary key" Nullable="false" XMLName="GCPayRetryKey" Name="GCPayRetryKey" /> 
+			<Attribute ColumnName="CHARGE_TRANSACTION_KEY" DataType="Key" DefaultValue="' '" Description="This stores the chargeTransactionKey of the chargeType" Nullable="false" XMLName="ChargeTransactionKey" Name="ChargeTransactionKey" /> 
+			<Attribute ColumnName="ORDER_HEADER_KEY" DataType="Key" DefaultValue="' '" Description="This stores the OrderHeaderKey of the Order" Nullable="false" XMLName="OrderHeaderKey" Name="OrderHeaderKey" />
+			<Attribute ColumnName="CHARGE_TYPE" Type="VARCHAR2" Size="40" DefaultValue="' '" Description="This stores the ChargeType of the Order" Nullable="false" XMLName="ChargeType" Name="ChargeType" />
+			<Attribute ColumnName="NUMBER_OF_RETRY" Type="NUMBER" DefaultValue="0" Description="No of times retried for the Authorization/Settlement which got failed " Nullable="false" XMLName="NumberOfRetry" Name="NumberOfRetry" />
+			<Attribute ColumnName="CREATETS" DataType="TimeStamp" DefaultValue="SYSDATE" Description="Create TimeStamp" /> 
+			<Attribute ColumnName="MODIFYTS" DataType="TimeStamp" DefaultValue="SYSDATE" Description="Modify TimeStamp" /> 
+			<Attribute ColumnName="CREATEUSERID" DataType="UserId" DefaultValue="' '" Description="Creating User ID" /> 
+			<Attribute ColumnName="MODIFYUSERID" DataType="UserId" DefaultValue="' '" Description="Modifying User ID" /> 
+			<Attribute ColumnName="CREATEPROGID" DataType="ProgramID" DefaultValue="' '" Description="Creating Program ID" /> 
+			<Attribute ColumnName="MODIFYPROGID" DataType="ProgramID" DefaultValue="' '" Description="Modifying Program ID" /> 
+			<Attribute ColumnName="LOCKID" DataType="Lockid" DefaultValue="0" Description="Lock ID" /> 
+         </Attributes> 
+		 <PrimaryKey Name="GCPAY_RETRY_KEY_PK"> 
+            <Attribute ColumnName="GCPAY_RETRY_KEY" Name="GCPayRetryKey" /> 
+         </PrimaryKey> 
+      </Entity> 
+   </Entities> 
+</DBSchema> 

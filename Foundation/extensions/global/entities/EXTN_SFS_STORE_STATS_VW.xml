@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright 2006-2008, Sterling Commerce, Inc. All rights reserved. -->
+<DBSchema>
+	<Entities>  
+		<Entity TableName="EXTN_SFS_STORE_STATS_VW" EntityType="VIEW" ApiNeeded="Y" AuditRequired="N" Description="" Prefix="EXTN" HasHistory="false" View="true" XMLName="SFSStoreStats">
+			<Attributes>
+				<Attribute ColumnName="DESCRIPTION"  DataType="Description" DefaultValue="' '" Description="" Nullable="False" XMLName="Description" />
+				<Attribute ColumnName="COUNT"  DataType="Count" DefaultValue="0" Description="" Nullable="False" XMLName="Count" />
+				<Attribute ColumnName="SHIP_NODE"  DataType="ShipNode" DefaultValue="' '" Description="" Nullable="False" XMLName="ShipNode" />
+			</Attributes>
+			<PrimaryKey Name="TABLE_KEY_PK">
+				<Attribute ColumnName="SHIP_NODE" />
+				<Attribute ColumnName="DESCRIPTION" />
+			</PrimaryKey>
+		</Entity>
+	</Entities>
+</DBSchema>

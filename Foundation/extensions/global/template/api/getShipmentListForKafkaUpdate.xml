@@ -1,0 +1,23 @@
+<Shipment DocumentType="" EnterpriseCode="" ReceivingNode="" SellerOrganizationCode="" ShipNode="" ShipmentKey="" ShipmentNo="" ShipmentType="" Status="" DeliveryMethod="">
+	<ShipNode ShipNode="" NodeType=""/>
+	<ShipmentLines>
+		<ShipmentLine ChainedFromOrderHeaderKey="" ChainedFromOrderLineKey="" ItemID="" OrderHeaderKey="" OrderLineKey="" OrderNo="" OrderReleaseKey="" PrimeLineNo="" ProductClass="" Quantity="" ReleaseNo="" ShipmentKey="" ShipmentLineKey="" ShipmentLineNo="" UnitOfMeasure="">
+			<OrderLine OrderLineKey="" OrderedQty="" OriginalOrderedQty="">
+				<ItemDetails DisplayItemId="" ItemGroupCode="" ItemID="">
+					<PrimaryInformation ExtendedDisplayDescription=""/>
+				</ItemDetails>
+				<ChainedFromOrderLine OrderHeaderKey="" OrderLineKey="">
+					<Order DocumentType="" MaxOrderStatus="" MinOrderStatus="" OrderDate="" OrderNo="" Status=""/>
+				</ChainedFromOrderLine>
+			</OrderLine>
+		</ShipmentLine>
+	</ShipmentLines>
+	<Containers>
+		<Container >
+			<ContainerDetails>
+				<ContainerDetail ContainerDetailsKey="" ItemID="" ProductClass="" Quantity="" ShipmentContainerKey="" ShipmentKey="" ShipmentLineKey="" UnitOfMeasure="">
+				</ContainerDetail>
+			</ContainerDetails>
+		</Container>
+		</Containers>
+</Shipment>

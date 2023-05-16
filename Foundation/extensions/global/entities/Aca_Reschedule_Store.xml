@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright 2006-2008, Sterling Commerce, Inc. All rights reserved. -->
+<DBSchema>
+   <Entities>        
+    
+      <Entity TableName="ACA_RESCHEDULE_STORE" ApiNeeded="Y" AuditRequired="N" Description="This table contains details of all the released and shipment created record against a store"
+Prefix="ACA" HasHistory="False">
+        <Attributes>
+		<Attribute ColumnName="CREATETS" DataType="TimeStamp" DefaultValue="sysdate" Description="Create TimeStamp" />
+		<Attribute ColumnName="MODIFYTS" DataType="TimeStamp" DefaultValue="sysdate" Description="Modify TimeStamp" />
+		<Attribute ColumnName="CREATEUSERID" DataType="UserId" DefaultValue="&apos; &apos;" Description="Creating User ID" />
+		<Attribute ColumnName="MODIFYUSERID" DataType="UserId" DefaultValue="&apos; &apos;" Description="Modifying User ID" />
+		<Attribute ColumnName="CREATEPROGID" DataType="ProgramID" DefaultValue="&apos; &apos;" Description="Creating Program ID" />
+		<Attribute ColumnName="MODIFYPROGID" DataType="ProgramID" DefaultValue="&apos; &apos;" Description="Modifying Program ID" />
+		<Attribute ColumnName="LOCKID" DataType="Lockid" DefaultValue="0" Description="Lock ID" />
+		<Attribute ColumnName="TABLE_KEY" DataType="Key" DefaultValue="&apos; &apos;" Description="Unique Key of each record" Nullable="False" XMLName="TableKey" />
+        <Attribute ColumnName="ENTITY_KEY"  Size="24" Type="CHAR" DefaultValue="&apos; &apos;" Description="Unique Key of Release or shipment record" Nullable="False" XMLName="EntityKey" />
+		<Attribute ColumnName="ENTITY_FLAG"  Size="1" Type="CHAR" DefaultValue="&apos; &apos;" Description="To distiguish between release or shipment record" Nullable="False" XMLName="EntityFlag" />
+		<Attribute ColumnName="CANCEL_STATUS"  Size="1" Type="CHAR" DefaultValue="&apos; &apos;" Description="Record Cancel Status Flag" Nullable="False" XMLName="CancelStatus" />
+	</Attributes>
+	<PrimaryKey Name="TABLE_KEY_PK">
+          <Attribute ColumnName="TABLE_KEY" />
+        </PrimaryKey>
+    <!-- Indices -->
+    <Indices>
+     <Index Name="INDEX_I1" Unique="False" >
+      <Column Name="TABLE_KEY" />
+	  <Column Name="ENTITY_KEY" />
+	  <Column Name="ENTITY_FLAG" />
+	  <Column Name="CANCEL_STATUS" />
+    </Index>
+    </Indices>
+ </Entity>
+</Entities>
+</DBSchema>

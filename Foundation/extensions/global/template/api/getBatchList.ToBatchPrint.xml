@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BatchList TotalNumberOfRecords="">
+    <Batch BatchKey="" BatchNo=""  Node="" WaveNo="" Status="">
+		<BatchLocations>
+			<BatchLocation CartLocationId="" ShipmentKey=""/>
+		</BatchLocations>
+		<Tasks>
+			<Task SourceZoneId="" TargetLocationId="" TargetZoneId="" TaskId="" TaskKey="" />
+		</Tasks>
+	</Batch>
+</BatchList>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Controller className="com.sterlingcommerce.ui.web.platform.controller.SCUIXAPIMashupController" controllerId="extn.mobile.home.STSContainer.container.ReceiveContainerBehaviorController" requestMethodSupported="POST" screenId="extn.mobile.home.STSContainer.container.ReceiveContainer">
+<MashupRefs>
+ <MashupRef mashupId="receiveContainer_createAndReceiveTOContainer"
+            mashupRefId="createAndReceiveTOContainer" permissionId=""/>
+ <MashupRef mashupId="receiveContainer_getExtnSTSContainerList"
+            mashupRefId="getExtnSTSContainerList" permissionId=""/>
+ <MashupRef mashupId="receiveContainerCount_getExtnSTSContainerList"
+            mashupRefId="getExtnSTSContainerCountList" permissionId=""/>
+ <MashupRef mashupId="receiveContainer_getShipmentContainerList"
+            mashupRefId="getShipmentContainerList" permissionId=""/>
+ <MashupRef mashupId="extn_readyToStage_updateExtnCancellationActioned"
+            mashupRefId="extn_updateExtnCancellationActionedOnSOCancellationByCustomer" permissionId=""/>						
+ </MashupRefs>
+</Controller>

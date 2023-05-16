@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OrderHoldType Status="" FromStatus="" HoldType="" ReasonText="" TransactionId="" OrderHeaderKey="" ResolverUserId="" Modifyuserid="" TransactionName="" >
+	<Order BillToID="" CustomerContactID="" DocumentType="" EnterpriseCode="" OrderHeaderKey="" OrderNo="" MaxOrderStatus="" MinOrderStatus="" Status="">
+		<!-- Start: FPT-1,2,6 -->
+		<Extn ExtnTransactionID="" ></Extn> 
+		<!-- End: FPT-1,2,6 -->
+		<!-- As part of OMNI-5004 added FulfillmentType & LineType -->
+		<OrderLines>
+			<OrderLine DeliveryMethod="" OrderLineKey="" FulfillmentType="" LineType=""/>
+		</OrderLines>
+		<!-- Start: OMNI-1585 -->
+		<OrderHoldTypes>
+			<OrderHoldType HoldType="" ReasonText="" Status= ""/>
+		</OrderHoldTypes>
+		<!-- End: OMNI-1585 -->
+    </Order>
+</OrderHoldType>

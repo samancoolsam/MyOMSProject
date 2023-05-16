@@ -1,0 +1,11 @@
+<Order OrderNo="" OrderHeaderKey="" DocumentType="" EnterpriseCode="" OrderType="" OrderDate="">
+	<OrderLines>
+		<OrderLine OrderLineKey="" PrimeLineNo="" SubLineNo="" ShipNode="" OrderedQty="">
+			<Item ItemID=""  />
+			<ItemDetails ItemID="" />
+			<DerivedFromOrder DocumentType="" EnterpriseCode="" OrderNo="">
+				<Extn ExtnTransactionID=""/>
+			</DerivedFromOrder>			
+		</OrderLine>
+	</OrderLines>
+</Order>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExtensionMetaData>
+    <ScreenExtension extnClassName="ContainerPackContainerListExtn"
+        extnPackage="extn.components.shipment.container.pack"
+        originalScreen="wsc.components.shipment.container.pack.ContainerPackContainerList"
+        originalScreenPackage="wsc.components.shipment.container.pack" type="diffrential">
+        <Items>
+            <ContentPane _sc_extensibility_moveOrder="1"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="uidAction" uId="extn_contentpane"/>
+            <FilteringSelect _sc_extensibility_moveOrder="8"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="extn_label" uId="extn_filteringselect">
+                <BindingData>
+                    <TargetBindings>
+                        <TargetBinding namespace="extn_dropDownTM"
+                            path="ContainerID" scExtensibilityArrayItemId="extn_TargetBindings_0"/>
+                    </TargetBindings>
+                    <OptionsBinding descriptionField="ItemID"
+                        namespace="extn_containerIDs"
+                        path="ItemList.Item" valueField="ItemID"/>
+                </BindingData>
+            </FilteringSelect>
+            <DataLabel _sc_extensibility_operation="change"
+                _sc_extensibility_referenceUId="lbl_containerId" label="$(_scSimpleBundle:extn_Container_)"/>
+            <DataLabel _sc_extensibility_moveOrder="6"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="extn_textfield"
+                label="$(_scSimpleBundle:extn_Container)"
+                uId="extn_datalabel" value="$(_scSimpleBundle:blank)"/>
+            <Label _sc_extensibility_moveOrder="7"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="extn_textfield"
+                class="width25" uId="extn_label"/>
+            <TextField _sc_extensibility_moveOrder="2"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="first"
+                _sc_extensibility_referenceUId="extn_contentpane"
+                hint="$(_scSimpleBundle:extn_Scan_or_enter_Container_ID)"
+                required="true" uId="extn_textfield">
+                <BindingData>
+                    <TargetBindings>
+                        <TargetBinding namespace="extn_containerBarCode"
+                            path="UPCCode" scExtensibilityArrayItemId="extn_TargetBindings_0"/>
+                    </TargetBindings>
+                </BindingData>
+            </TextField>
+        </Items>
+        <Namespaces>
+            <SourceNamespaces>
+                <Source isExtn="true"
+                    scExtensibilityArrayItemId="extn_SourceNamespaces_2" value="extn_containerIDs"/>
+            </SourceNamespaces>
+            <TargetNamespaces>
+                <Target isExtn="true"
+                    scExtensibilityArrayItemId="extn_TargetNamespaces_4" value="extn_tNS"/>
+                <Target isExtn="true"
+                    scExtensibilityArrayItemId="extn_TargetNamespaces_5" value="extn_containerBarCode"/>
+                <Target isExtn="true"
+                    scExtensibilityArrayItemId="extn_TargetNamespaces_6" value="extn_dropDownTM"/>
+            </TargetNamespaces>
+        </Namespaces>
+        <Subscribers>
+            <Local>
+                <Subscriber eventId="afterScreenInit" isExtn="true" sequence="21">
+                    <Handler methodName="beforeScreenInit"/>
+                </Subscriber>
+                <Subscriber eventId="extn_textfield_onKeyDown"
+                    isExtn="true" sequence="51">
+                    <Handler methodName="ExtnhandleBarcodeScan"/>
+                </Subscriber>
+                <Subscriber eventId="afterBehaviorMashupCall"
+                    isExtn="true" sequence="51">
+                    <Handler methodName="afterBehaviousMashup"/>
+                </Subscriber>
+                <Subscriber eventId="extn_filteringselect_onChange"
+                    isExtn="true" sequence="51">
+                    <Handler methodName="onDropDownChange"/>
+                </Subscriber>
+            </Local>
+        </Subscribers>
+        <MashupRefs>
+            <Behavior>
+                <MashupRef extnType="ADD"
+                    mashupId="extn_getContainerDetail" mashupRefId="extn_getContainerDetail_ref"/>
+            </Behavior>
+			<Behavior>
+                <MashupRef extnType="ADD"
+                    mashupId="extn_getAcadDirectPackLookup" mashupRefId="extn_getAcadDirectPackLookup_ref"/>
+            </Behavior>
+        </MashupRefs>
+    </ScreenExtension>
+</ExtensionMetaData>

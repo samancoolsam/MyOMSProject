@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- OMNI-14551:  Ship to Address in Sterling WCC - Start -->
+<Controller
+    className="com.sterlingcommerce.ui.web.platform.controller.SCUIXAPIMashupController"
+    controllerId="extn.common.address.display.AddressDisplayExtnBehaviorController"
+    requestMethodSupported="POST" screenId="extn.common.address.display.AddressDisplayExtn"/>
+<!-- OMNI-14551:  Ship to Address in Sterling WCC - End -->

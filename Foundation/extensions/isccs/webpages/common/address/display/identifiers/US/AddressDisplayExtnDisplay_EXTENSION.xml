@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExtensionMetaData>
+    <ScreenDisplayExtension extnClassName="AddressDisplayExtn"
+        identifierId="US"
+        originalScreen="isccs.common.address.display.AddressDisplay" originalScreenPackage="isccs.common.address.display"/>
+</ExtensionMetaData>

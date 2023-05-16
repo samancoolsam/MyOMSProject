@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Controller
+    className="com.sterlingcommerce.ui.web.platform.controller.SCUIXAPIMashupController"
+    controllerId="extn.mobile.home.subscreens.CustomOrderDetailsScreenBehaviorController"
+    requestMethodSupported="POST" screenId="extn.mobile.home.subscreens.CustomOrderDetailsScreen">
+    <MashupRefs>
+    	<MashupRef mashupId="eComOrderSearch_AcademyCancelOrder"
+            mashupRefId="cancelOrderFromOrderSummaryScreen" permissionId=""/>
+        <MashupRef mashupId="eComOrderSearch_getOrderDetails"
+            mashupRefId="getOrderDetailsReload" permissionId=""/>
+    </MashupRefs>
+</Controller>

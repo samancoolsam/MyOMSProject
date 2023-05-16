@@ -1,0 +1,26 @@
+<Shipments TotalNumberOfRecords="">
+	<Shipment>
+		<AdditionalDates>
+			<AdditionalDate />
+		</AdditionalDates>
+		<ToAddress>
+			<Extn />
+		</ToAddress>
+		<FromAddress>
+			<Extn />
+		</FromAddress>
+		<Extn />
+		<!-- START: Added for STL-1606 --> 
+		<ShipNode NodeType=""/>
+		<!-- END: Added for STL-1606 -->
+		<!-- START: Added for OMNI-4211 --> 
+		<ShipmentLines>
+			<ShipmentLine  ShipmentLineKey="" >
+				<OrderLine OrderLineKey="" >
+					<Extn ExtnInitialPromiseDate=""/>
+				</OrderLine>
+			</ShipmentLine>
+		</ShipmentLines>
+		<!-- END: Added for OMNI-4211 --> 
+	</Shipment>
+</Shipments>

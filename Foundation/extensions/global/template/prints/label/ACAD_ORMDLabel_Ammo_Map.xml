@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<LabelFieldMap>
+
+   <!--    
+    <LabelField Binding="Container/Shipment/@ShipmentNo" DataType="Text"
+        LabelFieldName="ShipmentNo" RepeatingElement="" Sequence="N"/>
+    -->
+	<!-- Start WN-214, WN-216, WN-217, WN-211, WN-419 Hazmat Implementation -->
+	<LabelField Binding="Container/Shipment/@ShipmentNo" DataType="Text"
+        LabelFieldName="ShipmentNo" RepeatingElement="" Sequence="N"/>
+		<LabelField Binding="Container/Shipment/@ShipmentType" DataType="Text"
+        LabelFieldName="ShipmentType" RepeatingElement="" Sequence="N"/>
+	<!-- End WN-214, WN-216, WN-217, WN-211, WN-419 Hazmat Implementation -->
+		
+</LabelFieldMap>

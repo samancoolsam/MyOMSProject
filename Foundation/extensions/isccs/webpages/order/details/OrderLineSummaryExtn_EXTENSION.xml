@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExtensionMetaData>
+    <ScreenExtension extnClassName="OrderLineSummaryExtn"
+        extnPackage="extn.order.details"
+        originalScreen="isccs.order.details.OrderLineSummary"
+        originalScreenPackage="isccs.order.details" type="diffrential">
+        <Namespaces>
+            <SourceNamespaces>
+                <Source isExtn="true"
+                    scExtensibilityArrayItemId="extn_SourceNamespaces_3" value="extn_TrackingData"/>
+            </SourceNamespaces>
+        </Namespaces>
+        <Items>
+            <DataLabel _sc_extensibility_operation="change"
+                _sc_extensibility_referenceUId="lblPromisedDate" renderHidden="true"/>
+            <DataLabel _sc_extensibility_moveOrder="1"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="lblShipNode"
+                label="$(_scBundle:extn_Promised_Date)" uId="extn_promiseDate">
+                <BindingData>
+                    <SourceBinding
+                        dynamicBindingFunc="extn_getPromisedDate"
+                        namespace="getCompleteOrderLineDetails_output" path="OrderLine.Extn.ExtnInitialPromiseDate"/>
+                </BindingData>
+            </DataLabel>
+            <DataLabel _sc_extensibility_operation="change"
+                _sc_extensibility_referenceUId="lblPromisedDate" renderHidden="true"/>
+            <DataLabel _sc_extensibility_moveOrder="2"
+                _sc_extensibility_operation="remove"
+                _sc_extensibility_position="first"
+                _sc_extensibility_referenceUId="_extensibilityHiddenWidgetsHolder" uId="lblPromisedDate"/>
+        </Items>
+        <MashupRefs>
+            <Init>
+                <MashupRef callSequence="1"
+                    mashupId="lineSummary_getCompleteOrderLineDetails"
+                    mashupRefId="getCompleteOrderLineDetails"
+                    sequence="5" sourceNamespace="getCompleteOrderLineDetails_output"/>
+            </Init>
+        </MashupRefs>
+    </ScreenExtension>
+</ExtensionMetaData>

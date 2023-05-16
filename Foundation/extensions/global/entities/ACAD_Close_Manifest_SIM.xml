@@ -1,0 +1,21 @@
+<DBSchema>
+   <Entities>        
+		<Entity TableName="ACAD_Close_Manifest_SIM" ApiNeeded="Y" AuditRequired="N" 
+		Description="This table contains Manifest Key of closure manifest requested from SIM console" Prefix="ACAD" HasHistory="False">
+		<Attributes>
+			<Attribute ColumnName="Manifest_Key" DataType="Key" DefaultValue="' '" 
+				Description="Manifest Key" Nullable="false" XMLName="ManifestKey" />
+		    <Attribute ColumnName="CREATETS" DataType="TimeStamp" DefaultValue="SYSDATE"  Description="" />
+            <Attribute ColumnName="MODIFYTS" DataType="TimeStamp" DefaultValue="SYSDATE" Description="" />
+            <Attribute ColumnName="CREATEUSERID" DataType="UserId" DefaultValue="' '" Description="" />
+            <Attribute ColumnName="MODIFYUSERID" DataType="UserId" DefaultValue="' '" Description="" />
+            <Attribute ColumnName="CREATEPROGID" DataType="ProgramID" DefaultValue="' '" Description="" />
+            <Attribute ColumnName="MODIFYPROGID" DataType="ProgramID" DefaultValue="' '" Description="" />
+            <Attribute ColumnName="LOCKID" DataType="Lockid" DefaultValue="0" Description=""/>
+		</Attributes>
+			<PrimaryKey Name="Manifest_KEY_PK">
+				<Attribute ColumnName="Manifest_Key"/>
+			</PrimaryKey>
+		</Entity>
+	</Entities>
+</DBSchema>

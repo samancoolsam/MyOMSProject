@@ -1,0 +1,63 @@
+<DBSchema>
+	<Entities>
+		<Entity ApiNeeded="Y" Prefix="ACAD_" Name="ACAD_SCAN_BATCH_HEADER"
+			TableName="ACAD_SCAN_BATCH_HEADER" XMLName="ACADScanBatchHeader"
+			HasHistory="N">
+			<Attributes>
+				<Attribute ColumnName="ACAD_SCAN_BATCH_HEADER_KEY"
+					Description="The primary key of the ACAD_SCAN_BATCH_HEADER table."
+					DecimalDigits="" DefaultValue="' '" Nullable="false" DataType="Key"
+					XMLName="AcadScanBatchHeaderKey" Name="AcadScanBatchHeaderKey" />
+				<Attribute ColumnName="STORE_NO" DecimalDigits=""
+					Description="Identifier for STORE_NO" DefaultValue="' '"
+					Name="StoreNo" Nullable="false" Size="24" Type="VARCHAR2"
+					XMLName="StoreNo" />
+				<Attribute ColumnName="BATCH_SCAN_STATUS" DecimalDigits=""
+					Description="Identifier for batch status" DefaultValue="INPROGRESS"
+					Name="BatchScanStatus" Nullable="false" Size="24" Type="VARCHAR2"
+					XMLName="BatchScanStatus" />
+				<Attribute ColumnName="START_TIME" DataType="TimeStamp"
+				    Name="Start_Time" XMLName="StartTime"
+					DefaultValue="sysdate" Nullable="false" Description="StartTime" />
+				<Attribute ColumnName="END_TIME" DataType="TimeStamp"
+					Name="End_Time" XMLName="EndTime" Nullable="true"
+					Description="EndTime" />
+				<Attribute ColumnName="BATCH_ID" DecimalDigits=""
+					Description="Identifier for Batch ID" DefaultValue="' '"
+					Name="BatchID" Nullable="false" Size="24" Type="VARCHAR2"
+					XMLName="BatchID" />
+				<Attribute ColumnName="USERID" DataType="UserId" Name="UserID" XMLName="UserID"
+					DefaultValue="' '" Description="Identifier for User ID" />
+				<Attribute ColumnName="USERNAME" DecimalDigits=""
+					Description="Identifier for User Name" DefaultValue="' '"
+					Name="UserName" Nullable="false" Size="50" Type="VARCHAR2"
+					XMLName="UserName" />	
+				<Attribute ColumnName="CREATETS" DataType="TimeStamp"
+					DefaultValue="sysdate" Description="Create TimeStamp" />
+				<Attribute ColumnName="MODIFYTS" DataType="TimeStamp"
+					DefaultValue="sysdate" Description="Modify TimeStamp" />
+				<Attribute ColumnName="CREATEUSERID" DataType="UserId"
+					DefaultValue="' '" Description="Creating User ID" />
+				<Attribute ColumnName="MODIFYUSERID" DataType="UserId"
+					DefaultValue="' '" Description="Modifying User ID" />
+				<Attribute ColumnName="CREATEPROGID" DataType="ProgramID"
+					DefaultValue="' '" Description="Creating Program ID" />
+				<Attribute ColumnName="MODIFYPROGID" DataType="ProgramID"
+					DefaultValue="' '" Description="Modifying Program ID" />
+				<Attribute ColumnName="LOCKID" DataType="Lockid"
+					DefaultValue="0" Description="Lock ID" />
+				<Attribute ColumnName="MISSED_SCAN_TOTAL" DecimalDigits=""
+					Description="Count of Missed Shipments" DefaultValue="' '"
+					Name="MissedScanTotal" Type="VARCHAR2" Size="5"
+					XMLName="MissedScanTotal" />
+				<Attribute ColumnName="CANCELLED_NOT_SCANNED_TOTAL" DecimalDigits=""
+					Description="Count of Cancelled and Not Scanned Shipments" DefaultValue="' '"
+					Name="CancelledNotScannedTotal" Type="VARCHAR2" Size="5"
+					XMLName="CancelledNotScannedTotal" />
+			</Attributes>
+			<PrimaryKey Name="SCAN_BATCH_HDR_PK">
+				<Attribute ColumnName="ACAD_SCAN_BATCH_HEADER_KEY" Name="AcadScanBatchHeaderKey" />
+			</PrimaryKey>
+		</Entity>
+	</Entities>
+</DBSchema>

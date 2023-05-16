@@ -1,0 +1,148 @@
+<div class="sc-platform-screen-default searchresult" role="region" aria-label="region_screenHeader">
+    <div data-dojo-type="idx/layout/ContentPane" data-dojo-props="		spanLabel : true , 
+		title : 'Top Content' , 
+		'class' : 'mobileCommonScreen screenHeader' , 
+		colspan : 1 , 
+		uId : 'TopContent' , 
+		layoutAlign : 'top'  
+ ">
+        <div data-dojo-type="idx/layout/ContentPane" data-dojo-props="		spanLabel : true , 
+		'class' : 'screenTitle' , 
+		uId : 'pnlScreenDescription'  
+ ">
+            <div data-dojo-type="sc/plat/dojo/widgets/Label" data-dojo-props="		spanLabel : true , 
+		uId : 'lbl_eComSearchResultScreenTitle'  
+ 		,scParamDataFn :
+		 function() { 
+			return { 
+			 	value : 			this.getSimpleBundleString('Title_eComSearchResults')
+			}
+		}
+"></div>
+        </div>
+        <div data-dojo-type="idx/layout/ContentPane" data-dojo-props="		spanLabel : true , 
+		'class' : 'rightPanel'  
+ ">
+            <div data-dojo-type="idx/layout/ContentPane" data-dojo-props="		spanLabel : true , 
+		uId : 'pnlScreenTasks'  
+ ">
+                <div data-dojo-type="sc/plat/dojo/widgets/Link" data-dojo-props="		spanLabel : true , 
+		uId : 'backToSearchLink'  
+ 		,scParamDataFn :
+		 function() { 
+			return { 
+			 	'aria-label' : 			this.getSimpleBundleString('arialabel_backToSearch')
+,	
+			 	value : 			this.getSimpleBundleString('Action_backToSearch')
+			}
+		}
+"></div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+    <div data-dojo-type="idx/layout/ContentPane" data-dojo-props="		spanLabel : true , 
+		'class' : 'searchResultsPanel' , 
+		uId : 'pnlResults'  
+ ">
+       
+
+
+      <!--  Out Of the box  -->
+
+
+ <div data-dojo-type="idx/layout/ContentPane" data-dojo-props="		'class' : 'repeatingpanel showCursorPointer' , 
+		uId : 'repeatingIdentifierScreen'  
+ 		,scParamDataFn :
+		 function() { 
+			return { 
+			 	bindingData : 	{
+		 customNoRecordsFoundMessageBundleKey : 			'Message_NoOrdersFound'
+,
+		 isPaginated : 			true
+,
+		 mashupRefId : 			'getOrderListOnNext'
+,
+
+		 repeatingScreen : 	{
+		 repeatingnamespace : 			'Order'
+,
+		 path : 			'OrderList.Order'
+,
+		 repeatingscreenpath : 			'Order'
+,
+		 sourcenamespace : 			'getOrderList_output'
+	}
+,
+		 pagination : 	{
+		 pageSizesClassName : 			'UIUtils'
+,
+		 pageSizePackage : 			'ias.utils'
+,
+		 pageSizesFunc : 			'getPageSizesForRepeatingScreen'
+,
+		 strategy : 			'NEXTPAGE'
+,
+		 pageSizeFunc : 			'getPageSizeForRepeatingScreen'
+,
+		 pageSizeClassName : 			'UIUtils'
+,
+		 pageSizesPackage : 			'ias.utils'
+	}
+,
+
+		 repeatingscreenGeneratorFunction : 			'getIdentifierRepeatingScreenData'
+	}
+			}
+		}
+"></div>
+
+
+
+
+<!-- Working in diff screen  -->
+
+<!-- 
+ <div data-dojo-type="idx/layout/ContentPane" data-dojo-props="		'class' : 'repeatingpanel showCursorPointer' , 
+ uId: 'repeatingIdentifierScreen',
+scParamDataFn: function() {
+    return {
+        bindingData: {
+        	customNoRecordsFoundMessageBundleKey: 'Message_NoOrdersFound',
+            repeatingscreenGeneratorFunction: 'extn_getRepetingScreen',
+            isPaginated: true,
+             mashupRefId: 'getOrderListOnNext',
+            repeatingScreen: {
+                repeatingnamespace: 'Order',
+                 path: 'Page.Output.OrderList.Order',
+                  repeatingScreenClass: 'accentPanel', sourcenamespace: 'getOrderList_output'
+            },
+            pagination: {
+                 pageSizesClassName: 'UIUtils', pageSizePackage: 'ias.utils', pageSizesFunc: 'getPageSizesForRepeatingScreen', strategy: 'NEXTPAGE', pageSizeFunc: 'getPageSizeForRepeatingScreen', pageSizeClassName: 'UIUtils', pageSizesPackage: 'ias.utils'
+             }
+        }
+    }
+}
+
+">
+ </div>
+ -->
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+</div>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Task AssignedToUserId=" " BatchHold=" "
+     DependencyHold=" " CanTaskBeSuggested=""
+    EnterpriseKey=" " EquipmentId=" " ExceptionHold=" "
+    FinishNoLaterThan=" " HoldReasonCode=" " HoldReasonText=" "
+    InternalApp=" " IsSummaryTask=" "  Modifyprogid=" "
+    Node=" " OrganizationCode=" "
+    ParentTaskId=" " PredecessorTaskId=" " SourceAisle=" "
+    SourceLocationId=" " SourceSortSequence=" " SourceZoneId=" "
+    StartNoEarlierThan=" " TargetAisle=" " TargetLocationId=" "
+    TargetSortSequence=" " TargetZoneId=" " TaskId=" " TaskKey=" "
+    TaskPriority=" " TaskStatus=" " TaskStatusDesc="" TaskType=" ">
+    <Inventory InventoryStatus=" " ItemId=" " LPNType=" " LpnNo=" "
+        ProductClass=" " Quantity=" " ReceiptHeaderKey=" " Segment=" "
+        SegmentType=" " SerialNo=" " ShipByDate=" " TagNumber=" " UnitOfMeasure="" SerializedFlag="">
+	<TagAttributes TagNumber="" LotNumber="" RevisionNo="" BatchNo="" LotKeyReference="" LotAttribute1="" LotAttribute2="" LotAttribute3="" ManufacturingDate=""/>
+<Item ItemID="" ItemKey="" OrganizationCode="" UnitOfMeasure="">
+    <PrimaryInformation CostCurrency="" CountryOfOrigin=""
+        CreditWOReceipt="" DefaultProductClass="" Description=""
+        ExtendedDescription="" IsReturnable="" ItemType="" KitCode=""
+        ManufacturerItem="" ManufacturerItemDesc="" ManufacturerName=""
+        MasterCatalogID="" MaxOrderQuantity="" MinOrderQuantity=""
+        ProductLine="" ReturnWindow="" 
+        ShortDescription="" SerializedFlag="" Status="" TaxableFlag="" UnitCost=""
+        UnitHeight="" UnitHeightUOM="" UnitLength="" UnitLengthUOM=""
+        UnitWeight="" UnitWeightUOM="" UnitWidth="" UnitWidthUOM=""/>
+    <InventoryParameters ATPRule="" DefaultExpirationDays=""
+        InventoryMonitorRule="" LeadTime="" ProcessingTime=""
+        TimeSensitive="" TotControlFlag=""/>
+    <ClassificationCodes CommodityCode="" ECCNNo="" HarmonizedCode=""
+        HazmatClass="" NAICSCode="" NMFCClass="" NMFCCode=""
+        Schedule_B_Code="" TaxProductCode="" UNSPSC=""/>
+    <ItemAliasList>
+        <ItemAlias AliasName="" AliasValue=""/>
+    </ItemAliasList>
+    <ItemExclusionList>
+        <ItemExclusion ExclusionCode=""/>
+    </ItemExclusionList>
+    <AdditionalAttributeList>
+        <AdditionalAttribute Name="" Value=""/>
+    </AdditionalAttributeList>
+    <CategoryList>
+        <Category CategoryID="" CategoryKey="" CategoryPath="" OrganizationCode=""/>
+    </CategoryList>
+    <Components>
+        <Component ComponentItemID="" ComponentItemKey=""
+            ComponentOrganizationCode="" ComponentUnitOfMeasure=""
+            ItemKey="" KitQuantity=""/>
+    </Components>
+    <LanguageDescriptionList>
+        <LanguageDescription Description="" ExtendedDescription=""
+            LocaleCode="" ShortDescription=""/>
+    </LanguageDescriptionList>
+    <InventoryTagAttributes BatchNo="" ItemKey="" ItemTagKey=""
+        LotNumber="" RevisionNo="" SerialTracking=""/>
+</Item>
+	</Inventory>
+    <TaskReferences BatchNo=" " BolNo=" " ContainerNo=" " CountRequestNo=" " CountRequestKey=" "
+        DocumentType=" " LoadNo=" " ManifestNo=" " MoveRequestNo=" " MoveRequestKey=" " MoveRequestLineKey=" " OrderHeaderKey=" "
+        OrderLineKey=" " OrderNo=" " OrderReleaseKey=" " PrimeLineNo=" "
+        ReleaseNo=" " Scac=" " ShipmentContainerKey=" "
+        ShipmentKey=" " ShipmentNo=" " SubLineNo=" " TrailerNo=" "
+        WaveNo=" "/>
+<TaskType BatchRequired=" " BatchRuleKey=" " EnterpriseKey=" "
+    ExecTasksThruDropoff=" " HoldTaskOnCreation=" " 
+    MaxUsersAllowed=" " 
+    Node=" " OrganizationCode=" " PickMethod=" "
+    PrimaryTaskReference=" " SourceTaskOrderBy=" "
+    SourceTaskSuggestion=" " TargetTaskOrderBy=" "
+    TargetTaskSuggestion=" " TaskType=" " ActivityGroupId=" "
+    TaskTypeKey=" " TaskTypeName=" " TaskTypePriority=" "  />
+    <Batch BatchKey=" " BatchNo=" " 
+        EndTime=" " EquipmentType=" " 
+        Node=" "
+        OrganizationCode=" " RequestNo=" " ShipmentNo=" " StartTime=" "
+        Status=" " TaskType=" " WaveNo=" "/>
+    <AllowedModifications>
+        <Modification ModificationType=" "/>
+    </AllowedModifications>
+    <TaskStatusAudits>
+        <TaskStatusAudit  
+            NewStatus=" " OldStatus=" " ReasonCode=" " ReasonText=" "
+            TaskKey=" " TaskStatusAuditKey=" ">
+        </TaskStatusAudit>
+    </TaskStatusAudits>
+	<GetNextTask AssignedToUserId=" " AutoAccept=" " BatchNo=" " 
+    EnterpriseKey=" " EquipmentId=" " IsConsolidatedTask=" "
+    Node=" "
+    OrganizationCode=" " ParentTaskId=" " PredecessorTaskId=" " TaskId=" " TaskKey=" " 
+    TaskStatus=" " TaskType=" ">
+    <TaskReferences ContainerNo=" " DocumentType=" " OrderHeaderKey=" "
+        OrderLineKey=" " OrderNo=" " OrderReleaseKey=" " PrimeLineNo=" "
+        ReleaseNo=" " ShipmentContainerKey=" " ShipmentKey=" "
+        ShipmentNo=" " SubLineNo=" " WaveNo=" "/>
+    <TaskType TaskType=" " ActivityGroupId=" "
+        TaskTypeKey=" " TaskTypeName=" " TaskTypePriority=" "/>
+</GetNextTask>
+</Task>
+
+

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DBSchema>
+    <Entities>
+<Entity ApiNeeded="Y" Prefix="ACAD_" Name="ACAD_LABEL_PRINT_DATA"
+		TableName="ACAD_LABEL_PRINT_DATA" XMLName="AcademyLabelPrintData" HasHistory="N">
+		<Attributes>
+			<Attribute ColumnName="LABEL_PRINT_DATA_KEY" Description="The primary key of the ACAD_LABEL_PRINT_DATA table."
+				DecimalDigits="" DefaultValue="' '" Nullable="false" DataType="Key" XMLName="LabelPrintDataKey" Name="LabelPrintDataKey"/>
+				
+			<Attribute ColumnName="SHIPMENT_NO" DecimalDigits=""
+				Description="Identifier for ShipmentNo" DefaultValue="' '"
+				Name="Shipment_no" Nullable="false" Size="40" Type="VARCHAR2" XMLName="ShipmentNo" />
+				
+			<Attribute ColumnName="PRIMARY_PICKUP_FNAME" DecimalDigits=""
+				Description="Primary Pickup Person First Name." DefaultValue="' '"
+				Name="Primary_Pickup_FName" Size="64" Type="VARCHAR2" XMLName="PrimaryPickupFName" />
+				
+			<Attribute ColumnName="PRIMARY_PICKUP_LNAME" DecimalDigits=""
+				Description="Primary Pickup Person Last Name." DefaultValue="' '"
+				Name="Primary_Pickup_LName" Size="64" Type="VARCHAR2" XMLName="PrimaryPickupLName" />	
+				
+			<Attribute ColumnName="CUST_PHONE_NO" DecimalDigits=""
+				Description="Pickup Person Phone Number." DefaultValue="' '"
+				Name="Cust_Phone_No" DataType="PhoneNo" XMLName="CustPhoneNo" />	
+				
+			<Attribute ColumnName="ALT_PICKUP_FNAME" DecimalDigits=""
+				Description="Alternate Pickup Person First Name." DefaultValue="' '"
+				Name="Alt_Pickup_FName" Size="64" Type="VARCHAR2" XMLName="AltPickupFName" />
+				
+			<Attribute ColumnName="ALT_PICKUP_LNAME" DecimalDigits=""
+				Description="Alternate Pickup Person Last Name." DefaultValue="' '"
+				Name="Alt_Pickup_LName" Size="64" Type="VARCHAR2" XMLName="AltPickupLName" />
+				
+			<Attribute ColumnName="ALT_CUST_PHONE_NO" DecimalDigits=""
+				Description="Alternate Pickup Person Phone Number." DefaultValue="' '"
+				Name="Alt_Cust_Phone_No" DataType="PhoneNo" XMLName="AltCustPhoneNo" />		
+				
+			<Attribute ColumnName="ORDER_NO" DecimalDigits=""
+				Description="Customer Order Number." DefaultValue="' '"
+				Name="Order_No" Nullable="false" Size="40" Type="VARCHAR2" XMLName="OrderNo" />
+			<Attribute ColumnName="ORDER_DATE" DataType="TimeStamp" Name="Order_Date" XMLName="OrderDate"
+				DefaultValue="sysdate" Description="Order Date TimeStamp" />
+							
+			<Attribute ColumnName="NO_OF_UNITS" DecimalDigits=""
+				Description="Number of units." DefaultValue="' '"
+				Name="No_Of_Units" Nullable="false" Size="3" Type="CHAR" XMLName="NoOfUnits" />
+			<Attribute ColumnName="STORE_NAME" DecimalDigits=""
+				Description="Name of Store." DefaultValue="' '"
+				Name="Store_Name" Nullable="false" Size="40" Type="VARCHAR2" XMLName="StoreName" />	
+			<Attribute ColumnName="STORE_NO" DecimalDigits=""
+				Description="Store Number." DefaultValue="' '"
+				Name="Store_No" Nullable="false" DataType="ShipNode" XMLName="StoreNo" />				
+			<Attribute ColumnName="STORE_PHONE_NO" DecimalDigits=""
+				Description="Alternate Pickup Person Phone Number." DefaultValue="' '"
+				Name="Store_Phone_No" DataType="PhoneNo" XMLName="StorePhoneNo" />
+				
+			<Attribute ColumnName="PICK_DATE" DataType="TimeStamp" Name="Pick_Date" XMLName="PickDate"
+				DefaultValue="sysdate" Nullable="false" Description="Order Date TimeStamp" />				
+			<Attribute ColumnName="CURRENT_LABEL_NO" DecimalDigits=""
+				Description="Label no. being printed." DefaultValue="' '"
+				Name="Current_Label_No" Nullable="false" Size="8" Type="VARCHAR2" XMLName="CurrentLabelNo" />
+			<Attribute ColumnName="TOTAL_LABEL_COUNT" DecimalDigits=""
+				Description="Total no. of Labels to print." DefaultValue="' '"
+				Name="Total_Label_Count" Nullable="false" Size="8" Type="VARCHAR2" XMLName="TotalLabelCount" />	
+			<Attribute ColumnName="ENCODE_ORDER_NO" DecimalDigits=""
+                Description="Encoded value for Order Number" DefaultValue="' '"
+		        Name="EncodeOrderNo" Nullable="false" Size="30" Type="VARCHAR2" XMLName="EncodeOrderNo" />	
+				
+			<Attribute ColumnName="CREATETS" DataType="TimeStamp"
+				DefaultValue="sysdate" Description="Create TimeStamp" />
+			<Attribute ColumnName="MODIFYTS" DataType="TimeStamp"
+				DefaultValue="sysdate" Description="Modify TimeStamp" />
+			<Attribute ColumnName="CREATEUSERID" DataType="UserId"
+				DefaultValue="' '" Description="Creating User ID" />
+			<Attribute ColumnName="MODIFYUSERID" DataType="UserId"
+				DefaultValue="' '" Description="Modifying User ID" />
+			<Attribute ColumnName="CREATEPROGID" DataType="ProgramID"
+				DefaultValue="' '" Description="Creating Program ID" />
+			<Attribute ColumnName="MODIFYPROGID" DataType="ProgramID"
+				DefaultValue="' '" Description="Modifying Program ID" />
+			<Attribute ColumnName="LOCKID" DataType="Lockid"
+					  DefaultValue="0" Description="Lock ID" />
+		</Attributes>
+		<PrimaryKey Name="LABEL_PRINT_PK">
+			<Attribute ColumnName="LABEL_PRINT_DATA_KEY" Name="LabelPrintDataKey"/>
+		</PrimaryKey>
+		
+		
+	</Entity>
+</Entities>
+</DBSchema>	

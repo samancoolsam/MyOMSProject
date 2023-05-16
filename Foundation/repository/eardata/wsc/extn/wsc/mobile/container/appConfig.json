@@ -1,0 +1,115 @@
+{
+	"header" : {
+		"primaryTitle" : "WSC_Product_Name",
+		
+		"hasPrimarySearch" : false,
+		"hasHelp" : true,
+		"hasPreference" : false,
+		
+		"primarySearch" : {
+			"entryPrompt" : "Search",
+			"submitPrompt" : "search"
+		},
+	
+		"userName" : "TestUser",
+		"userImage" : "../../wsc/resources/css/icons/images/blank.gif",
+		
+		"preferences" : "no",
+		"logoutUrl" : "/store/mobile/logout.do"
+	},
+	
+	"container" : {
+		"contextPath" : "",
+		"defaultEditor" : "wsc.mobile.editors.MobileEditor",
+		"aboutScreen":"wsc.common.about.AboutPopup",
+		"defaultScreen" : {
+			"screenName" : "wsc.mobile.home.MobileHome",
+			"screenConfig" : {"editorConfig": {"closable":false,"iconClass":"homeEditorIcon"}},
+			"editor" : "wsc.mobile.editors.MobileEditor"
+		},		
+		"screens": [
+			
+		
+		]		
+	},
+
+	"applicationMenu" : [
+		{
+			"menuItem":"Mobile_Menu_Home",
+			"hitchMethod":"showHome",
+			"hitchClass":"wsc/mobile/container/AppHeader",
+			"imageUrl":"/wsc/resources/css/icons/images/menuhome.png"
+		},
+		{
+			"menuItem":"Mobile_Menu_Setting",
+			"hitchMethod":"",
+			"imageUrl":"/wsc/resources/css/icons/images/menusettings.png",
+			"mode":"dev",
+			"subItems":[
+				{
+					"menuItem":"Direction",
+					"hitchMethod":"switchDirection"
+				},
+				{
+					"menuItem":"Mobile_Menu_ScreenTester",
+					"hitchClass":"wsc/mobile/container/AppHeader",
+					"hitchMethod":"showScreenTester"
+				}
+			]
+		},
+		{
+			"menuItem":"Mobile_Menu_Help",
+			"hitchMethod":"loadOnlineHelpWindow",
+			"hitchClass":"ias/container/containerUtil",
+			"imageUrl":"/wsc/resources/css/icons/images/menuhelp.png"
+		},
+		{
+			"menuItem":"Mobile_Menu_About",
+			"hitchMethod":"showAboutBox",
+			"hitchClass":"ias/container/containerUtil",
+			"imageUrl":"/wsc/resources/css/icons/images/about_blue.png"
+		},
+		{
+			"menuItem":"Mobile_Logout",
+			"hitchMethod":"logout",
+			"imageUrl":"/wsc/resources/css/icons/images/menulogout.png"
+		}
+		
+	],
+	
+	"resourceBundles" : [
+		{
+			"basePath" : "ias.resources.bundle",
+			"bundleName" : "ias_bundle"
+		},	
+		{
+			"basePath" : "wsc.resources.bundle",
+			"bundleName" : "wsc_bundle"
+		},
+		{
+			"basePath" : "wsc.resources.bundle",
+			"bundleName" : "wsc_common_bundle"
+		},
+		{
+			"basePath" : "wsc.resources.bundle",
+			"bundleName" : "wsc_error_message_bundle"
+		},
+		{
+			"basePath" : "wsc.resources.bundle",
+			"bundleName" : "wsc_cust_message_bundle"
+		}/*,
+		{
+			"basePath" : "wsc.resources.bundle",
+			"bundleName" : "wsc_generated_bundle.js"
+		},
+		{
+			"basePath" : "wsc.resources.bundle",
+			"bundleName" : "wsc_product_bundle.js"
+		}*/	
+		
+	],
+	"contextEntries" : [
+		
+		
+	]
+}

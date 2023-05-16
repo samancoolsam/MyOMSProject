@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OrderList>
+	<Order OrderHeaderKey="" >
+		<OrderLines>
+			<OrderLine ChainedFromOrderHeaderKey="" OrderedQty="" OrderLineKey="" ChainedFromOrderLineKey="" >
+				<LineCharges> 
+					<LineCharge Reference="" ChargePerLine="" ChargeName="" ChargeCategory=""/>
+				</LineCharges>
+			</OrderLine>
+		</OrderLines>
+	</Order>
+</OrderList>

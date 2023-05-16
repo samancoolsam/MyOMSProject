@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DBSchema>
+   <Entities>
+
+      <Entity ApiNeeded="Y" AuditRequired="N" Description="Order Appeasements for Academy" HasHistory="False" Prefix="ACAD" TableName="ACAD_ORDER_APPEASEMENT">
+         <Attributes>
+			  <Attribute ColumnName="ACAD_ORD_APP_KEY" DataType="Key" DefaultValue="' '" Description="System generated primary ky for this table" Name="AcademyOrderAppeasementKey" Nullable="false" XMLGroup="" XMLName="AcademyOrderAppeasementKey"/> 
+			  <Attribute ColumnName="ACAD_ORDER_HEADER_KEY" DataType="Key" DefaultValue="' '" Description="Order Header Key" Name="AcademyOrderHeaderKey" Nullable="false" XMLGroup="" XMLName="AcademyOrderHeaderKey"/> 
+			  <Attribute ColumnName="ACAD_ORDER_LINE_KEY" DataType="Key" DefaultValue="' '" Description="Order Line Key" Name="AcademyOrderLineKey" Nullable="false" XMLGroup="" XMLName="AcademyOrderLineKey"/> 
+			  <Attribute ColumnName="USER_ID" DataType="Text-37" DefaultValue="' '" Description="User Id" Name="UserId" Nullable="false" XMLGroup="" XMLName="UserId"/>
+			  <Attribute ColumnName="USER_GROUP" DataType="Text-37" DefaultValue="' '" Description="User Group" Name="UserGroup" Nullable="true" XMLGroup="" XMLName="UserGroup"/>
+			  <Attribute ColumnName="APPEASEMENT_REASON" DataType="Text-37" DefaultValue="' '" Description="APPEASEMENT REASON" Name="AppeasementReason" Nullable="false" XMLGroup="" XMLName="AppeasementReason"/>  
+			  <Attribute ColumnName="APPEASEMENT_DESCRIPTION" DataType="Text-69" DefaultValue="' '" Description="APPEASEMENT DESCRIPTION" Name="AppeasementDescription" Nullable="true" XMLGroup="" XMLName="AppeasementDescription"/>
+			  <Attribute ColumnName="APPEASEMENT_PERCENT" DataType="Percentage" DefaultValue="" Description="APPEASEMENT_PERCENT" Name="AppeasementPercent" Nullable="true" XMLGroup="" XMLName="AppeasementPercent"/>
+			  <Attribute ColumnName="APPEASEMENT_AMOUNT" DataType="Amount" DefaultValue="" Description="Appeasement Amount" Name="AppeasementAmount" Nullable="true" XMLGroup="" XMLName="AppeasementAmount"/>
+			  <Attribute ColumnName="OFFER_TYPE" DataType="Text-37" DefaultValue="' '" Description="Offer Type" Name="OfferType" Nullable="true" XMLGroup="" XMLName="OfferType"/>
+			  <Attribute ColumnName="ORDER_NUMBER" DataType="Text-37" DefaultValue="' '" Description="Order Number" Name="OrderNumber" Nullable="true" XMLGroup="" XMLName="OrderNumber"/>
+			  <Attribute ColumnName="USER_NAME" DataType="Text-50" DefaultValue="' '" Description="User Name" Name="UserName" Nullable="true" XMLGroup="" XMLName="UserName"/>
+			 
+            <Attribute ColumnName="CREATETS" DataType="TimeStamp" DefaultValue="SYSDATE" Description="Create TimeStamp"/>
+			<Attribute ColumnName="MODIFYTS" DataType="TimeStamp" DefaultValue=" SYSDATE" Description="Modify TimeStamp"/>
+			<Attribute ColumnName="CREATEUSERID" DataType="UserId" DefaultValue="' '" Description="Creating User ID"/>
+			<Attribute ColumnName="MODIFYUSERID" DataType="UserId" DefaultValue="' '" Description="Modifying User ID"/>
+			<Attribute ColumnName="CREATEPROGID" DataType="ProgramID" DefaultValue="' '" Description="Creating Program ID"/>
+			<Attribute ColumnName="MODIFYPROGID" DataType="ProgramID" DefaultValue="' '" Description="Modifying Program ID"/>
+			<Attribute ColumnName="LOCKID" DataType="Lockid" DefaultValue="0" Description="Lock ID"/>
+
+         </Attributes>
+
+		 
+			<PrimaryKey Name="ACAD_ORD_APP_PK">
+				<Attribute ColumnName="ACAD_ORD_APP_KEY" Name="AcademyOrderAppeasementKey"/>
+			</PrimaryKey>
+			<Parent ParentTableName="YFS_ORDER_HEADER" XMLName="YFSOrderHeader" >
+
+                                    <Attribute ColumnName="ACAD_ORDER_HEADER_KEY" ParentColumnName="ORDER_HEADER_KEY" />
+
+                        </Parent>
+
+      </Entity>
+     
+   </Entities>
+</DBSchema>

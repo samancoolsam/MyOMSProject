@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+ <Inbox Createts=""  Modifyts="" Createuserid="" ActiveFlag="" ApiName="" AssignedToUserId="" AssignedToUserKey="" AutoResolvedFlag="" ClosedOn="" ConsolidationCount="" Description="" DetailDescription="" EnterpriseKey="" ErrorReason="" ErrorType="" ExceptionEscalatedFlag="" ExceptionType="" ExpirationDays="" FlowName="" FollowupDate="" GeneratedOn="" InboxKey="" InboxType="" ItemId="" LastExceedAlert="" LastOccurredOn="" LastUnassignAlert="" LastUnresolveAlert="" ListDescription="" LoadDocumentType="" LoadNo="" LockedByUserKey="" LockedFlag="" LockedOn="" OrderDocumentType="" OrderHeaderKey="" OrderLineKey="" OrderNo="" OwnerKey="" OwnerType="" ParentInboxKey="" Priority="" QueueId="" QueueKey="" ResolutionDate="" ResolveBy="" ShipmentDocumentType="" ShipmentNo="" ShipnodeKey="" Status="" SubFlowName="" SupplierKey="" ViewId="" WaveKey="" WaveNo="" WorkOrderKey="" WorkOrderNo="">
+  <User Activateflag="" BillingaddressKey="" BusinessKey="" ContactaddressKey="" CreatorOrganizationKey="" Imagefile="" Localecode="" Loginid="" Longdesc="" MenuId="" NoteKey="" OrganizationKey="" ParentUserKey="" Password="" PreferenceKey="" Pwdlastchangedon="" Theme="" UserKey="" UsergroupKey="" Username="" Usertype="" /> 
+  <Queue AuditThisQueue="" HoursAssignExceedAction="" HoursForAssignRealert="" HoursForAssignment="" HoursForExceedRealert="" HoursForResolution="" HoursForResolveRealert="" HoursResolveExceedAction="" LastQueueExceedAlert="" MaximumActiveSize="" MaximumSizeExceedAction="" OwnerKey="" OwnerType="" Priority="" QKeyForAssignAlert="" QKeyForExceedAlert="" QKeyForResolveAlert="" QueueDescription="" QueueGroup="" QueueId="" QueueKey="" QueueName="" /> 
+ <InboxReferencesList>
+  <InboxReferences InboxKey="" InboxReferenceKey="" Name="" ReferenceType="" Value="" /> 
+  </InboxReferencesList>
+  <InboxNotesList>
+    <InboxNotes ContactReference="" ContactType=""
+            NoteText="" NoteType=""
+            Priority="" SaveOnOrder=""  ContactTime="" ContactUser="" 
+              ReasonCode="" CustomerSatIndicator=""/>
+    </InboxNotesList>
+ <InboxAuditList>
+  <InboxAudit FromQueueId="" Createts="" FromQueueKey="" ContactTime="" FromQueueOwnerKey="" FromStatus="" FromUserId=""
+   FromUserKey="" InboxAuditKey="" InboxKey="" OwnerKey="" OwnerType="" ReasonCode="" ReasonText=""
+    ToQueueId="" ToQueueKey="" ToQueueOwnerKey="" ToStatus="" ToUserId="" ToUserKey="" TransactionType="" /> 
+  </InboxAuditList>
+  <Extn ExtnAlertKey="" ExtnAssociatedCustID="" ExtnCustomerKey="" ExtnOrderTotal="" ExtnCustomerEmailID="" ExtnCustomerFName="" ExtnCustomerLName=""/>
+</Inbox>

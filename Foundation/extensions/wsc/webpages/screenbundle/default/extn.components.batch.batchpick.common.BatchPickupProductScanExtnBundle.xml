@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ScreenBundle
+    screenBundleId="extn.components.batch.batchpick.common.BatchPickupProductScanExtnBundle" screenId="extn.components.batch.batchpick.common.BatchPickupProductScanExtn">
+    <BundleEntries>
+        <BundleEntry bundleEntryId="extn_datalabel1_DataLabel_label"
+            bundleKey="Label_Batch" bundleValueFn="_scSimpleBundle"
+            property="label" type="WIDGET" uId="extn_datalabel1"/>
+    </BundleEntries>
+</ScreenBundle>

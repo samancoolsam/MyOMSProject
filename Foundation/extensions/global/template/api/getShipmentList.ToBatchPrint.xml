@@ -1,0 +1,119 @@
+<Shipments>
+   <Shipment ActualFreightCharge="" AllowOverage="" AppointmentNo="" BolNo="" BuyerOrganizationCode="" CarrierAccountNo="" CarrierServiceCode="" CarrierType="" DeliveryCode="" DeliveryMethod="" DeliveryPlanKey="" DestinationZone="" DocumentType="" DownLoadCount="0" EnterpriseCode="" ExpectedDeliveryDate="" ExpectedShipmentDate="" ExportTaxpayerID="" FreightTerms="" FromAddressKey="" FromAppointment="2010-09-22" HasOtherShipments="N" HazardousMaterialFlag="N" ITDate="2010-09-22" ITNo="" IsSingleOrder="N" ManifestKey="" ManifestNo="100000634" ManuallyEntered="N" NextAlertTs="1900-01-01T00:00:00-05:00" NumOfCartons="1" NumOfPallets="0" OrderAvailableOnSystem="Y" OrderHeaderKey="" OrderNo="" OrderReleaseKey="" OriginZone="" PackListType="" ParentShipmentKey="" PickListNo="" PickticketNo="" PipelineKey="" PodNo="" ProNo="" ReceivingNode="" ReleaseNo="0" RequestedDeliveryDate="2010-09-22T04:48:31-04:00" RequestedShipmentDate="" SCAC="UPSN" ScacAndService="" ScacAndServiceKey="" SealNo="" SellerOrganizationCode="" ShipMode="" ShipNode="005" ShipVia="" ShipmentClosedFlag="N" ShipmentConfirmUpdatesDone="N" ShipmentContainerizedFlag="03" ShipmentDeliverUpdatesDone="N" ShipmentKey="" ShipmentNo="" ShipmentPlannedFlag="N" ShipmentType="CON" Status="1300" StatusDate="" ToAddressKey="" ToAppointment="" TotalActualCharge="000" TotalEstimatedCharge="" TotalVolume="8000" TotalVolumeUOM="CIN" TotalWeight="954" TotalWeightUOM="LBS" TrackingNo="" TrailerNo="" isHistory="N">
+      <OrderInvoiceList TotalNumberOfRecords="">
+         <OrderInvoice ActualFreightCharge="" AmountCollected="" ChargeTransactionKey="" ChargedActualFreight="" CollectedExternally="" CollectedThroughAR="" Currency="" DateInvoiced="" DerivedFromOrderHeaderKey="" DocumentType="" EnterpriseCode="" HeaderTax="" InvoiceNo="" InvoiceType="" LineSubTotal="" MasterInvoiceNo="" OrderHeaderKey="" OrderInvoiceKey="" OrderNo="" OtherCharges="" Reference1="" ReturnReleaseKey="" SellerOrganizationCode="" ShipNode="" ShipmentKey="" ShipmentNo="" Status="" TotalAmount="" TotalTax="" isHistory="">
+            <Extn ExtnInvoiceNo="" ExtnProcessed="" />
+
+            <Order BuyerOrganizationCode="" DeliveryCode="" DocumentType="" EnteredBy="" EnterpriseCode="" EntryType="" OrderHeaderKey="" OrderNo="" SellerOrganizationCode="" Status="" TermsCode="">
+               <PriceInfo Currency="USD" />
+
+               <PersonInfoBillTo AddressLine1="" AddressLine2="" AddressLine3="" AddressLine4="" AddressLine5="" AddressLine6="" AlternateEmailID="" Beeper="" City="" Company="" Country="US" DayFaxNo="" DayPhone="" Department="" EMailID="" EveningFaxNo="" EveningPhone="" FirstName="John" JobTitle="" LastName="" MiddleName="" MobilePhone="" OtherPhone="" PersonID="" PersonInfoKey="" State="TX" Suffix="" Title="Mr" ZipCode="" />
+
+               <AdditionalAddresses />
+
+               <References />
+            </Order>
+
+            <Shipment ManifestNo="" ReceivingNode="" SCAC="UPSN" ShipDate="" ShipNode="" ShipmentKey="">
+               <ToAddress AddressLine1="" AddressLine2="" AddressLine3="" AddressLine4="" AddressLine5="" AddressLine6="" AlternateEmailID="" Beeper="" City="Dallas" Company="" Country="US" DayFaxNo="" DayPhone="" Department="" EMailID="" EveningFaxNo="" EveningPhone="" FirstName="John" HttpUrl="" JobTitle="" LastName="Mitchell" MiddleName="" MobilePhone="" OtherPhone="" PersonID="" State="TX" Suffix="" Title="Mr" ZipCode="75234" />
+
+               <ShipNode ShipnodeKey="">
+                  <ShipNodePersonInfo AddressLine1="1  Drive" AddressLine2="" AddressLine3="" AddressLine4="" AddressLine5="" AddressLine6="" AlternateEmailID="" Beeper="" City="Jeffersonville" Company="" Country="US" DayFaxNo="" DayPhone="" Department="" EMailID="" EveningFaxNo="" EveningPhone="" FirstName=" Sports and Outdoors" HttpUrl="" JobTitle="" LastName="" MiddleName="" MobilePhone="" OtherPhone="" PersonID="" State="GA" Suffix="" Title="" ZipCode="31044-7454" />
+               </ShipNode>
+            </Shipment>
+
+            <TaxBreakupList TotalNumberOfRecords="">
+               <TaxBreakup ChargeCategory="" ChargeName="" HeaderKey="" InvoicedTax="" LineKey="" RecordType="" Reference1="" Reference2="" Reference3="" Tax="" TaxBreakupKey="" TaxName="" TaxPercentage="" TaxableFlag="" />
+            </TaxBreakupList>
+
+            <LineDetails TotalLines="">
+               <LineDetail Charges="" ExtendedPrice="" ItemID="" LineTotal="" OptionPrice="" OrderInvoiceDetailKey="" OrderLineKey="" PricingQty="" PrimeLineNo="1" ProductClass="GOOD" Quantity="300" ShippedQty="300" SubLineNo="1" Tax="000" UnitOfMeasure="EACH" UnitPrice="000">
+                  <OrderLine OrderLineKey="" PrimeLineNo="1" SubLineNo="">
+                     <Item ItemID="" ProductClass="" UnitOfMeasure="">
+                        <LanguageDescriptionList />
+                     </Item>
+
+                     <LinePriceInfo DiscountPercentage="000" DiscountReference="" DiscountType="" InvoicedPricingQty="000" ListPrice="000" OrderedPricingQty="" PricingQtyConversionFactor="000" PricingUOM="EACH" RetailPrice="000" TaxableFlag="N" UnitPrice="000" />
+
+                     <References />
+
+                     <LineCharges>
+                        <LineCharge ChargeAmount="" ChargeCategory="" ChargeName="" ChargeNameKey="" ChargePerLine="" ChargePerUnit="" InvoicedChargeAmount="" InvoicedChargePerLine="000" InvoicedChargePerUnit="000" IsBillable="Y" IsDiscount="N" Reference="" RemainingChargeAmount="20000" RemainingChargePerLine="20000" RemainingChargePerUnit="000" />
+                     </LineCharges>
+
+                     <LineTaxes />
+                  </OrderLine>
+
+                  <LineDetailTranQuantity PricingQty="" Quantity="" ShippedQty="" TransactionalUOM="EACH" />
+
+              	<LineChargeList TotalNumberOfRecords="">
+					<LineCharge ChargeAmount="" ChargeCategory="" ChargeName="" ChargePerLine="" ChargePerUnit="" HeaderKey="" InvoicedChargePerLine="" InvoicedExtendedCharge="" IsBillable="" IsDiscount="" LineChargesKey="" LineKey="" RecordType="" Reference="" /> 
+				</LineChargeList>
+				<LineTaxList>
+					<LineTax ChargeCategory="" ChargeName="" HeaderKey="" InvoicedTax="" LineKey="" RecordType="" Reference1="" Reference2="" Reference3="" Tax="" TaxBreakupKey="" TaxName="" TaxPercentage="" TaxableFlag="" /> 
+				</LineTaxList>
+               </LineDetail>
+            </LineDetails>
+
+            <TotalSummary>
+               <ChargeSummary />
+
+               <TaxSummary />
+            </TotalSummary>
+
+            <HeaderCharges />
+
+            <HeaderTaxes />
+
+            <CollectionDetails TotalLines="0" />
+         </OrderInvoice>
+      </OrderInvoiceList>
+
+      <ToAddress AddressLine1="11701 Luna Road" AddressLine2="" AddressLine3="" AddressLine4="" AddressLine5="" AddressLine6="" AlternateEmailID="" Beeper="" City="Dallas" Company="" Country="US" DayFaxNo="" DayPhone="" Department="" EMailID="" ErrorTxt="" EveningFaxNo="" EveningPhone="" FirstName="John" HttpUrl="" JobTitle="" LastName="Mitchell" MiddleName="" MobilePhone="" OtherPhone="" PersonID="" PersonInfoKey="20100510133523498618" PreferredShipAddress="" State="TX" Suffix="" Title="Mr" UseCount="0" VerificationStatus="" ZipCode="75234" isHistory="N" />
+
+      <BillToAddress AddressLine1="11701 Luna Road" AddressLine2="" AddressLine3="" AddressLine4="" AddressLine5="" AddressLine6="" AlternateEmailID="" Beeper="" City="Dallas" Company="" Country="US" DayFaxNo="" DayPhone="" Department="" EMailID="" ErrorTxt="" EveningFaxNo="" EveningPhone="" FirstName="John" HttpUrl="" JobTitle="" LastName="Mitchell" MiddleName="" MobilePhone="" OtherPhone="" PersonID="" PersonInfoKey="20100510133523498618" PreferredShipAddress="" State="TX" Suffix="" Title="Mr" UseCount="0" VerificationStatus="" ZipCode="75234" isHistory="N" />
+
+      <FromAddress AddressLine1="490 Missle Base Rd" AddressLine2="" AddressLine3="" AddressLine4="" AddressLine5="" AddressLine6="" AlternateEmailID="" Beeper="" City="Jeffersonville" Company="" Country="US" DayFaxNo="" DayPhone="" Department="" EMailID="" ErrorTxt="" EveningFaxNo="" EveningPhone="" FirstName=" Sports + Outdoors" HttpUrl="" JobTitle="" LastName="" MiddleName="" MobilePhone="" OtherPhone="" PersonID="" PersonInfoKey="201009021555502760258" PreferredShipAddress="" State="GA" Suffix="" Title="" UseCount="0" VerificationStatus="" ZipCode="31044-7454" isHistory="N" />
+
+      <Instructions NumberOfInstructions="">
+         <Instruction InstructionText="" InstructionType="" InstructionURL="" SequenceNo="" />
+      </Instructions>
+
+      <ShipmentLines>
+         <ShipmentLine Action="" CountryOfOrigin="" Createprogid="" Createts="" Createuserid="" CustomerPoLineNo="" CustomerPoNo="" DepartmentCode="" ExternalReleaseIdentifier="" FifoNo="" GiftFlag="" IsPickable="" ItemDesc="" ItemID="" KitCode="" KitQty="" Lockid="1" MarkForKey="" Modifyprogid="Console" Modifyts="2011-01-03T07:03:23-05:00" Modifyuserid="wmsadmin1" NetWeight="000" NetWeightUom="" OrderHeaderKey="201101030647327687955" OrderLineKey="201101030647327687956" OrderNo="MITHILA_TEST_05" OrderReleaseKey="201101030701477688569" OriginalQuantity="200" OverShipQuantity="000" PrimeLineNo="1" ProductClass="GOOD" Quantity="200" ReleaseNo="1" RequestedSerialNo="" RequestedTagNo="" Segment="" SegmentType="" ShipmentKey="201101030702077688582" ShipmentLineKey="201101030702077688580" ShipmentLineNo="1" ShipmentSubLineNo="0" ShortageQty="000" SubLineNo="1" UnitOfMeasure="EACH" WaveNo="1001994" isHistory="N">
+            <OrderLine AddToOrderReleaseKey="" AllocationDate="" AllocationLeadTime="0" ApptStatus="" BackorderNotificationQty="" BasicCapacityRequired="" CanAddServiceLines="" CannotMeetAppt="" CapacityUOM="" CarrierAccountNo="" CarrierServiceCode="Ground" ChainedFromOrderHeaderKey="" ChainedFromOrderLineKey="" ConditionVariable1="" ConditionVariable2="" Createprogid="SterlingHttpTester" Createts="2011-01-03T06:47:33-05:00" Createuserid="SterlingHttpTester" CurrentWorkOrderKey="" CustomerLinePONo="" CustomerPONo="" DeliveryCode="" DeliveryMethod="SHP" DepartmentCode="" DependencyRatio="000" DependencyShippingRule="" DependentOnLineKey="" DerivedFromOrderHeaderKey="" DerivedFromOrderLineKey="" DerivedFromOrderReleaseKey="" DistributionRuleId="" EarliestDeliveryDate="2011-01-03T06:47:32-05:00" EarliestShipDate="2011-01-03T06:47:32-05:00" FillQuantity="000" FixedCapacityQtyPerLine="000" FixedPricingQtyPerLine="000" FreightTerms="" FulfillmentType="" GiftFlag="N" HoldFlag="N" HoldReasonCode="" ImportLicenseNo="" IntentionalBackorder="N" InvoiceBasedOnActuals="N" InvoiceComplete="Y" InvoicedExtendedPrice="10000" InvoicedQuantity="200" IsCapacityOverridden="N" IsCostOverridden="Y" IsFirmPredefinedNode="Y" IsPickUpNow="N" IsPriceMatched="N" IsStandaloneService="" ItemGroupCode="PROD" KitCode="" LineSeqNo="11" LineType="" Lockid="2" MaintainRatio="" MarkForKey="" MergeNode="" Modifyprogid="CREATE_SHMNT_INVOICE0001" Modifyts="2011-01-03T07:23:02-05:00" Modifyuserid="CreateShipmentInvoice" OptionCapacityRequired="000" OrderClass="NEW" OrderHeaderKey="201101030647327687955" OrderLineKey="201101030647327687956" OrderedQty="200" OrderingUOM="EACH" OrigOrderLineKey="" OriginalOrderedQty="200" OtherCharges="-1200" OverReceiptQuantity="000" PackListType="" ParentOfDependentGroup="N" PersonalizeCode="" PersonalizeFlag="" PickableFlag="Y" PipelineKey="20090930143405142858" PricingDate="2011-01-03" PrimeLineNo="1" ProcureFromNode="" PropagationQty="000" PropagationToParentRequired="" Purpose="" QuantityToSplit="000" ReceivedAsComponents="" ReceivedQty="000" ReceivingNode="" ReservationID="" ReservationMandatory="N" ReservationPool="" ReturnReason="" SCAC="UPSN" SchedFailureReasonCode="" Segment="" SegmentType="" SerialNo="" ShipNode="005" ShipToID="" ShipToKey="201012210031357374286" ShipTogetherNo="" ShippedQuantity="200" SourceFromOrganization="" SplitFromLineKey="" SplitFromPrimeLineNo="0" SplitFromSubLineNo="0" SplitQty="000" SubLineNo="1" Timezone="" TotalQtyToCancel="000" TranDiscrepancyQty="000" TransactionalLineId="" WaitForSeqLine="N" isHistory="N">
+               <Item CostCurrency="" CountryOfOrigin="" CustomerItem="" CustomerItemDesc="" ECCNNo="" HarmonizedCode="" ISBN="" ItemDesc="" ItemID="" ItemShortDesc="; Plastic Basketball Mini Backboard and Ball Set" ItemWeight="" ItemWeightUOM="LBS" ManufacturerItem="" ManufacturerItemDesc="" ManufacturerName="" NMFCClass="" NMFCCode="" NMFCDescription="" ProductClass="GOOD" ProductLine="ItemAttributes" ScheduleBCode="" SupplierCode="" SupplierItem="" SupplierItemDesc="" TaxProductCode="101" UPCCode="" UnitCost="5000" UnitOfMeasure="EACH" />
+
+               <LinePriceInfo ActualPricingQty="" DiscountPercentage="" DiscountReference="" DiscountType="" InvoicedLineTotal="" InvoicedPricingQty="200" IsPriceLocked="N" LineTotal="8800" ListPrice="5000" OrderedPricingQty="200" PricingQtyConversionFactor="000" PricingQuantityStrategy="IQTY" PricingUOM="EACH" RepricingQty="200" RetailPrice="5000" SettledAmount="000" SettledQuantity="000" Tax="000" TaxableFlag="Y" UnitPrice="5000" />
+
+               <Order AdjustmentInvoicePending="N" AllAddressesVerified="N" AllocationRuleID="" AuthorizationExpirationDate="" BillToID="" BillToKey="" BuyerOrganizationCode="" CarrierAccountNo="" CarrierServiceCode="" ChainType="" ChargeActualFreightFlag="N" ComplimentaryGiftBoxQty="0" ContactKey="" CreatedAtNode="" Createprogid="SterlingHttpTester" Createts="2011-01-03T06:47:33-05:00" Createuserid="SterlingHttpTester" CustCustPONo="" CustomerEMailID="Mithila_Uchil@stercommcom" CustomerFirstName="John" CustomerLastName="Mitchell" CustomerPONo="" CustomerPhoneNo="" CustomerZipCode="78205-2615" DefaultTemplate="" DeliveryCode="" Division="" DoNotConsolidate="N" DocumentType="0001" DraftOrderFlag="N" EnteredBy="" EnterpriseCode="_Direct" EntryType="" ExchangeType="" FreightTerms="" HasDerivedChild="" HasDerivedParent="" HoldFlag="N" HoldReasonCode="" InternalApp="" InvoiceComplete="Y" Lockid="11" MarkForKey="" Modifyprogid="CREATE_SHMNT_INVOICE0001" Modifyts="2011-01-03T07:23:02-05:00" Modifyuserid="CreateShipmentInvoice" NextAlertTs="2011-01-03T07:23:02-05:00" NoOfAuthStrikes="0" NotificationReference="" NotificationType="" NotifyAfterShipmentFlag="N" OptimizationType="" OrderComplete="N" OrderDate="2011-01-03T06:47:33-05:00" OrderHeaderKey="201101030647327687955" OrderName="" OrderNo="MITHILA_TEST_05" OrderPurpose="" OrderType="" OriginalTax="000" OriginalTotalAmount="18688" OtherCharges="000" Override="" PaymentRuleId="_Payment_Rule" PaymentStatus="AUTHORIZED" PendingTransferIn="000" PersonalizeCode="" PriceOrder="" PriceProgramKey="" PriceProgramName="" PriorityCode="" PriorityNumber="0" PropagateCancellations="" Purpose="" ReceivingNode="" ReserveInventoryFlag="" ReturnByGiftRecipient="" ReturnOrderHeaderKeyForExchange="" SCAC="" SaleVoided="N" SearchCriteria1="" SearchCriteria2="" SellerOrganizationCode="_Direct" ShipNode="" ShipToID="" ShipToKey="201012210031357374286" SourceIPAddress="" SourcingClassification="" TaxExemptFlag="N" TaxExemptionCertificate="" TaxJurisdiction="" TaxPayerId="" TermsCode="" TotalAdjustmentAmount="000" VendorID="" isHistory="N">
+                  <PaymentMethods>
+                     <PaymentMethod Action="" BillToKey="" ChargeSequence="0" CheckNo="" CheckReference="" Createprogid="Console" Createts="" Createuserid="admin" CreditCardExpDate="" CreditCardName="" CreditCardNo="" CreditCardType="" CustomerAccountNo="" CustomerPONo="" DisplayCreditCardNo="" DisplayCustomerAccountNo="" DisplayPaymentReference1="" DisplaySvcNo="4871" ExtendedFlag="" FirstName="" IncompletePaymentType="" LastName="" Lockid="1" MaxChargeLimit="5000" MiddleName="" Modifyprogid="Console" Modifyts="2011-01-03T06:50:10-05:00" Modifyuserid="admin" OrderHeaderKey="201101030647327687955" PayMethodOverride="" PaymentKey="201101030649387687994" PaymentReference1="" PaymentReference2="" PaymentReference3="" PaymentType="GIFT_CARD" RequestedAuthAmount="000" RequestedChargeAmount="000" SuspendAnyMoreCharges="N" SvcNo="4325900094871" TotalAltRefundedAmount="000" TotalAuthorized="5000" TotalCharged="000" TotalRefundedAmount="000" UnlimitedCharges="N" isHistory="N" />
+
+                     <PaymentMethod Action="" BillToKey="" ChargeSequence="0" CheckNo="" CheckReference="" Createprogid="Console" Createts="" Createuserid="admin" CreditCardExpDate="" CreditCardName="" CreditCardNo="" CreditCardType="" CustomerAccountNo="" CustomerPONo="" DisplayCreditCardNo="" DisplayCustomerAccountNo="" DisplayPaymentReference1="" DisplaySvcNo="3607" ExtendedFlag="" FirstName="" IncompletePaymentType="" LastName="" Lockid="1" MaxChargeLimit="8688" MiddleName="" Modifyprogid="Console" Modifyts="2011-01-03T06:51:35-05:00" Modifyuserid="admin" OrderHeaderKey="201101030647327687955" PayMethodOverride="" PaymentKey="201101030650547688434" PaymentReference1="" PaymentReference2="" PaymentReference3="" PaymentType="GIFT_CARD" RequestedAuthAmount="000" RequestedChargeAmount="000" SuspendAnyMoreCharges="N" SvcNo="4325900093607" TotalAltRefundedAmount="000" TotalAuthorized="8688" TotalCharged="000" TotalRefundedAmount="000" UnlimitedCharges="N" isHistory="N" />
+
+                     <PaymentMethod Action="" BillToKey="" ChargeSequence="2" CheckNo="" CheckReference="" Createprogid="SterlingHttpTester" Createts="2011-01-03T06:47:33-05:00" Createuserid="SterlingHttpTester" CreditCardExpDate="" CreditCardName="" CreditCardNo="6666666666666666" CreditCardType="" CustomerAccountNo="" CustomerPONo="" DisplayCreditCardNo="4123" DisplayCustomerAccountNo="" DisplayPaymentReference1="" DisplaySvcNo="" ExtendedFlag="" FirstName="J" IncompletePaymentType="" LastName="P" Lockid="1" MaxChargeLimit="260000" MiddleName="" Modifyprogid="Console" Modifyts="2011-01-03T06:48:40-05:00" Modifyuserid="admin" OrderHeaderKey="201101030647327687955" PayMethodOverride="" PaymentKey="201101030647327687958" PaymentReference1="" PaymentReference2="" PaymentReference3="" PaymentType="CREDIT_CARD" RequestedAuthAmount="000" RequestedChargeAmount="000" SuspendAnyMoreCharges="N" SvcNo="" TotalAltRefundedAmount="000" TotalAuthorized="10000" TotalCharged="000" TotalRefundedAmount="000" UnlimitedCharges="N" isHistory="N" />
+                  </PaymentMethods>
+               </Order>
+
+               <LineCharges>
+                  <LineCharge ChargeAmount="" ChargeCategory="Promotions" ChargeName="BOGO" ChargeNameKey="" ChargePerLine="1400" ChargePerUnit="000" InvoicedChargeAmount="" InvoicedChargePerLine="" InvoicedChargePerUnit="" IsBillable="Y" IsDiscount="" Reference="" RemainingChargeAmount="000" RemainingChargePerLine="000" RemainingChargePerUnit="000" />
+
+                  <LineCharge ChargeAmount="" ChargeCategory="Shipping" ChargeName="ShippingCharge" ChargeNameKey="" ChargePerLine="800" ChargePerUnit="000" InvoicedChargeAmount="" InvoicedChargePerLine="" InvoicedChargePerUnit="" IsBillable="Y" IsDiscount="N" Reference="" RemainingChargeAmount="000" RemainingChargePerLine="000" RemainingChargePerUnit="000" />
+
+                  <LineCharge ChargeAmount="" ChargeCategory="" ChargeName="" ChargeNameKey="" ChargePerLine="500" ChargePerUnit="000" InvoicedChargeAmount="500" InvoicedChargePerLine="" InvoicedChargePerUnit="" IsBillable="Y" IsDiscount="Y" Reference="" RemainingChargeAmount="" RemainingChargePerLine="000" RemainingChargePerUnit="000" />
+
+                  <LineCharge ChargeAmount="" ChargeCategory="" ChargeName="" ChargeNameKey="" ChargePerLine="100" ChargePerUnit="000" InvoicedChargeAmount="100" InvoicedChargePerLine="" InvoicedChargePerUnit="" IsBillable="" IsDiscount="" Reference="" RemainingChargeAmount="000" RemainingChargePerLine="000" RemainingChargePerUnit="000" />
+               </LineCharges>
+
+               <LineTaxes>
+                  <LineTax ChargeCategory="" ChargeName="Taxes" ChargeNameKey="" InvoicedTax="" Reference_1="" Reference_2="" Reference_3="" RemainingTax="000" Tax="000" TaxName="Merchandise" TaxPercentage="" />
+
+                  <LineTax ChargeCategory="" ChargeName="" ChargeNameKey="" InvoicedTax="" Reference_1="" Reference_2="" Reference_3="" RemainingTax="000" Tax="000" TaxName="ShippingTax" TaxPercentage="" />
+               </LineTaxes>
+            </OrderLine>
+         </ShipmentLine>
+      </ShipmentLines>
+   </Shipment>
+</Shipments>
+

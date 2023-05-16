@@ -1,0 +1,60 @@
+<%@ page import="java.util.*" %>
+<%@ include file="/console/jsp/editable_table_utils.jspf" %>
+
+<%
+		String sOperation = request.getParameter("userOperation");
+		int iNumShipmentLines = 0;
+		YFCElement errors = (YFCElement)request.getAttribute("YFC_EXCEPTIONXML");
+		YFCElement oNewAdjustLocationInventory = null;
+		YFCElement oNewSerialList = null;
+		YFCElement oAdjustLocationInventory = null;
+		YFCElement oExistingSerialList = null;
+		YFCElement detailAPIRoot = (YFCElement) request.getAttribute("AdjustLocationInventory");
+		if (detailAPIRoot != null) {
+			//System.out.println("root is not null root -->" + detailAPIRoot.toString());
+			if (detailAPIRoot.getChildElement("Source") != null)
+				if (detailAPIRoot.getChildElement("Source").getChildElement("Inventory") != null)
+					oExistingSerialList = detailAPIRoot.getChildElement("Source").getChildElement("Inventory").getChildElement("SerialList");
+			if (oExistingSerialList != null) {
+			   for (Iterator oIter = oExistingSerialList.getChildren();oIter.hasNext();) {
+			       YFCElement oChild = (YFCElement) oIter.next();
+			       oExistingSerialList.removeChild(oChild);
+			   }
+			}
+		}
+		//System.out.println("sOperation-->" + sOperation);
+		if(!isVoid(errors) || equals(sOperation,"Y") || equals(sOperation,"DELETE"))
+		{
+			//System.out.println("Inside");
+			YFCElement root = (YFCElement)request.getAttribute("getRequestDOMOutput");
+			if(root != null)
+			{
+				//System.out.println("Inside -->1" + root.getChildElement("AdjustLocationInventory"));
+				oNewAdjustLocationInventory = root.getChildElement("AdjustLocationInventory");
+				if(oNewAdjustLocationInventory != null) {
+					if (oNewAdjustLocationInventory.getChildElement("Source") != null)
+					    if (oNewAdjustLocationInventory.getChildElement("Source").getChildElement("Inventory") != null) {
+						oNewSerialList = oNewAdjustLocationInventory.getChildElement("Source").getChildElement("Inventory").getChildElement("SerialList");
+						/*if (oNewSerialList == null) {
+						     oNewSerialList = oNewAdjustLocationInventory.getChildElement("Source").getChildElement("Inventory").createChild("SerialList");
+						}*/
+					    }
+					/*if (oNewSerialList != null) 
+						//System.out.println("oNewSerialList---------------->" + oNewSerialList.toString());*/
+				}
+			} else {
+				//System.out.println("root is null");
+			}
+			mergeDOMGeneral("AdjustLocationInventory",oNewSerialList,oExistingSerialList,"SerialList","SerialDetail","SerialKey","Junk","SerialNo");//SerialKey is Junk attribute name is passed to identify the new serials
+		}
+		else
+		{
+			//Need to check if it's a blank draft Shipment.if so, add 8 blank rows
+			if(oExistingSerialList != null)
+			{
+				//System.out.println("Calling appendBlankTemplateNodes to append 8 blank rows");
+				appendBlankTemplateNodesGeneral(oExistingSerialList,"SerialDetail","Junk");
+			}
+		}
+
+%>

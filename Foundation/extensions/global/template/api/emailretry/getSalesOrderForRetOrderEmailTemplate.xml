@@ -1,0 +1,14 @@
+<Order OrderHeaderKey="" CustomerEMailID="">
+<OrderLines>
+<OrderLine OrderLineKey="" OrderedQty=""/>
+</OrderLines>
+<PaymentMethods>
+<PaymentMethod  PaymentType="" CreditCardNo=""  DisplayCreditCardNo="" DisplaySvcNo="" SvcNo="">
+</PaymentMethod>
+</PaymentMethods>
+<ReturnOrders>
+<ReturnOrder OrderHeaderKey="" OrderNo="">
+<OverallTotals GrandCharges="" GrandDiscount="" GrandTax="" GrandTotal="" HdrCharges="" HdrDiscount="" HdrTax="" HdrTotal="" LineSubTotal="" />   
+</ReturnOrder>
+</ReturnOrders>
+</Order>

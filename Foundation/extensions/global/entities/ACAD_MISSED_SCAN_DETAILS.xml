@@ -1,0 +1,44 @@
+<DBSchema>
+        <Entities>
+                <Entity ApiNeeded="Y" Prefix="ACAD_" Name="ACAD_MISSED_SCAN_DETAILS"
+                        TableName="ACAD_MISSED_SCAN_DETAILS" XMLName="AcadMissedScanDetails"
+                        HasHistory="N">
+                        <Attributes>
+                                <Attribute ColumnName="ACAD_MISSED_SCAN_DETAILS_KEY"
+                                        Description="The Primary Key of the ACAD_MISSED_SCAN_DETAILS table."
+                                        DecimalDigits="" DefaultValue="' '" Nullable="false" DataType="Key"
+                                        XMLName="AcadMissedScanDetailsKey" Name="AcadMissedScanDetailsKey" />
+                                <Attribute ColumnName="STORE_NO" DecimalDigits=""
+                                        Description="Identifier for STORE_NO" DefaultValue="' '"
+                                        Name="StoreNo" Nullable="false" Size="24" Type="VARCHAR2"
+                                        XMLName="StoreNo" />
+								<Attribute ColumnName="ACAD_SCAN_BATCH_HEADER_KEY" Type="VARCHAR2" Size="40"
+                                    Name="AcadScanBatchHeaderKey" XMLName="AcadScanBatchHeaderKey"
+                                        DefaultValue="' '" Nullable="false" Description="AcadScanBatchHeaderKey of Audit Scan" />
+                                <Attribute ColumnName="SHIPMENT_NO" Type="VARCHAR2" Size="40"
+                                    Name="ShipmentNo" XMLName="ShipmentNo"
+                                        DefaultValue="' '" Nullable="false" Description="ShipmentNo missed as part of Audit Scan" />
+                                <Attribute ColumnName="LAST_SCAN_DATE" DataType="TimeStamp"
+                                        Name="LastScanDate" XMLName="LastScanDate" Nullable="true"
+                                        Description="LastScannedOn"/>
+                                <Attribute ColumnName="CREATETS" DataType="TimeStamp"
+                                        DefaultValue="sysdate" Description="Create TimeStamp" />
+                                <Attribute ColumnName="MODIFYTS" DataType="TimeStamp"
+                                        DefaultValue="sysdate" Description="Modify TimeStamp" />
+                                <Attribute ColumnName="CREATEUSERID" DataType="UserId"
+                                        DefaultValue="' '" Description="Create User ID" />
+								<Attribute ColumnName="MODIFYUSERID" DataType="UserId"
+                                        DefaultValue="' '" Description="Modify User ID" />
+                                <Attribute ColumnName="CREATEPROGID" DataType="ProgramID"
+                                        DefaultValue="' '" Description="Create Program ID" />
+                                <Attribute ColumnName="MODIFYPROGID" DataType="ProgramID"
+                                        DefaultValue="' '" Description="Modify Program ID" />
+                                <Attribute ColumnName="LOCKID" DataType="Lockid"
+                                        DefaultValue="0" Description="Lock ID" />
+                            </Attributes>
+						 <PrimaryKey Name="MISSED_SCAN_DTL_PK">
+                                <Attribute ColumnName="ACAD_MISSED_SCAN_DETAILS_KEY" Name="AcadMissedScanDetailsKey" />
+                        </PrimaryKey>
+                </Entity>
+        </Entities>
+</DBSchema>

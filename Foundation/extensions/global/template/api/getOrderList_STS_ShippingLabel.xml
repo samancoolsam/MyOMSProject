@@ -1,0 +1,12 @@
+<OrderList>
+	<Order CustomerEMailID="" CustomerPONo="" DocumentType="" EnterpriseCode="" OrderDate="" OrderHeaderKey="" OrderNo="">
+		<OrderLines>
+			<OrderLine OrderHeaderKey="" OrderLineKey="" OrderedQty="" OrigOrderLineKey="" PrimeLineNo="" 	ShipNode="" Status="" StatusQuantity="" SubLineNo="">
+				<Extn />
+				<ItemDetails ItemID="" OrganizationCode="" UnitOfMeasure=""/>
+				<Item ItemDesc="" ItemID="" ItemShortDesc="" ProductClass="" UnitOfMeasure=""/>
+			</OrderLine>
+		</OrderLines>
+		<PersonInfoShipTo AddressLine1="" AddressLine2="" AddressLine3="" AddressLine4="" AddressLine5="" AddressLine6="" Beeper="" City="" Company="" Country="" DayFaxNo="" DayPhone="" Department="" EMailID="" EveningPhone="" FirstName="" IsCommercialAddress="" LastName="" MiddleName="" MobilePhone="" OtherPhone="" PersonID="" PersonInfoKey="" State="" Title="" ZipCode=""/>
+	</Order>
+</OrderList>

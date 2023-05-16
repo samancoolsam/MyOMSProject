@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Shipment ShipmentNo="" ShipNode="" ShipmentKey="" DocumentType="" ShipmentType="" Status="" ScacAndService="" Createts=""  ExpectedDeliveryDate="" RequestedShipmentDate="" ReceivingNode="" ManifestKey="" ManifestNo="" OrderNo="">
+	<ToAddress AddressLine1="" AddressLine2="" AddressLine3="" AddressLine4="" AddressLine5="" AddressLine6="" City="" Company="" Country="" DayFaxNo="" DayPhone="" EMailID="" FirstName="" HttpUrl="" LastName=""  MiddleName="" PersonInfoKey="" State="" Suffix="" ZipCode="" />	
+	<BillToAddress AddressLine1="" AddressLine2="" AddressLine3="" AddressLine4="" AddressLine5="" AddressLine6="" City="" Company="" Country="" DayFaxNo="" DayPhone="" EMailID="" FirstName="" HttpUrl="" LastName=""  MiddleName="" PersonInfoKey="" State="" Suffix="" ZipCode="" />	
+	<ShipmentLines>
+		<ShipmentLine OrderNo="" ItemID="" ItemDesc="" ActualQuantity="" UnitOfMeasure="">
+			<OrderLine >
+				<Item ItemID="" ItemDesc="" ItemWeightUOM=""/>
+				<LinePriceInfo ActualPricingQty="" LineTotal="" UnitPrice=""/>
+				<LineCharges>
+                      <LineCharge ChargeAmount=""/>
+                </LineCharges>
+                <LineTaxes>
+                       <LineTax Tax=""/>
+				</LineTaxes>
+			</OrderLine>
+			<ShipmentLineInvAttRequest BatchNo="" LotAttribute1="" LotAttribute2="" LotAttribute3="" LotKeyReference="" LotNumber="" ManufacturingDate="" RevisionNo="" /> 
+			<ShipmentTagSerials Replace="">
+				<ShipmentTagSerial Action="" BatchNo="" ContainerDetailKey="" LotAttribute1="" LotAttribute2="" LotAttribute3="" LotKeyReference="" LotNumber="" ManufacturingDate="" Quantity="" RevisionNo="" SerialNo="" ShipByDate="" ShipmentLineKey="" ShipmentTagSerialKey="" /> 
+		</ShipmentTagSerials>
+		</ShipmentLine>
+	</ShipmentLines>
+	<Status Status="" Description=""/>
+	<Containers>
+			<Container ContainerNo="" ShipmentContainerKey="" ManifestKey=""/>
+		</Containers>
+	<AllowedTransactions>
+		<Transaction  BaseTransactionKey="" /> 
+	</AllowedTransactions>
+	<LoadShipments >
+		<LoadShipment LoadKey="" />
+	</LoadShipments>
+</Shipment>

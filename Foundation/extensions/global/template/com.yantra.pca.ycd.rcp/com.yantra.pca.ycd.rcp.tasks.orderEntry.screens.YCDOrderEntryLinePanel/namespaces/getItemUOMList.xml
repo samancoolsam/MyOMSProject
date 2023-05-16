@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ItemUOMList>
+	<ItemUOM>
+		<Item>  
+		<ComputedPrice ListPrice=""  UnitPrice="">
+	  <QuantityRangePriceList>
+		<QuantityRangePrice />
+	</QuantityRangePriceList>
+	</ComputedPrice>
+		 <PromotionList>
+            <Promotion LongDescription="" ShortDescription="" URL=""/>
+        </PromotionList>
+				   <Extn ExtnStreetDate="" ExtnEndDate="" ExtnDSV="" ExtnECommerce=""/>
+		</Item>
+		</ItemUOM>
+</ItemUOMList>

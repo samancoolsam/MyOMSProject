@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Controller
+    className="com.sterlingcommerce.ui.web.platform.controller.SCUIXAPIMashupController"
+    controllerId="extn.payment.inquiry.PaymentInquiryExtnInitController"
+    requestMethodSupported="POST" screenId="extn.payment.inquiry.PaymentInquiryExtn">
+    <!-- OMNI-1923 Customer Care: Sterling WCC: Y order Link - Start -->
+    <Group isAggregator="Y"/>
+    <MashupRefs>
+        <MashupRef callSequence="1" extnType=""
+            mashupId="paymentInquiry-getPaymentInquiryDetails"
+            mashupRefId="getPaymentInquiryDetails" permissionId=""/>
+    </MashupRefs>
+    <!-- OMNI-1923 Customer Care: Sterling WCC: Y order Link - End -->
+</Controller>

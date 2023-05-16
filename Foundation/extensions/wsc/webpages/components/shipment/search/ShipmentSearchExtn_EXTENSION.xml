@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExtensionMetaData>
+    <ScreenExtension extnClassName="ShipmentSearchExtn"
+        extnPackage="extn.components.shipment.search"
+        originalScreen="wsc.components.shipment.search.ShipmentSearch"
+        originalScreenPackage="wsc.components.shipment.search" type="diffrential">
+        <Items>
+            <CheckBox _sc_extensibility_operation="change"
+                _sc_extensibility_referenceUId="isGiftRecpt" renderHidden="true"/>
+            <TextField _sc_extensibility_operation="change"
+                _sc_extensibility_referenceUId="txt_orderNo" hint="$(_scSimpleBundle:extn_Enter_or_Scan_Order_)"/>
+            <TextField _sc_extensibility_operation="change"
+                _sc_extensibility_referenceUId="txt_shipmentNo" hint="$(_scSimpleBundle:extn_Enter_or_Scan_Shipment_)"/>
+            <TextField _sc_extensibility_operation="change"
+                _sc_extensibility_referenceUId="txt_recipientFirstName" renderHidden="true"/>
+            <TextField _sc_extensibility_operation="change"
+                _sc_extensibility_referenceUId="txt_recipientLastName" renderHidden="true"/>
+        </Items>
+        <Subscribers>
+            <Local>
+                <Subscriber eventId="afterScreenInit" isExtn="true" sequence="51">
+                    <Handler methodName="afterScreenInit"/>
+                </Subscriber>
+                <Subscriber eventId="afterScreenLoad" isExtn="true" sequence="51">
+                    <Handler methodName="afterScreenLoad"/>
+                </Subscriber>
+            </Local>
+        </Subscribers>
+    </ScreenExtension>
+</ExtensionMetaData>

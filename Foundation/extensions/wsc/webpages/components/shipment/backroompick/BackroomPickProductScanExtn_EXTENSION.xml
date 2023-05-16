@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExtensionMetaData>
+    <ScreenExtension extnClassName="BackroomPickProductScanExtn"
+        extnPackage="extn.components.shipment.backroompick"
+        originalScreen="wsc.components.shipment.backroompick.BackroomPickProductScan"
+        originalScreenPackage="wsc.components.shipment.backroompick" type="diffrential">
+        <Namespaces>
+            <SourceNamespaces>
+                <Source
+                    description="Namespace to check if any hip printers are available for a store"
+                    isExtn="true"
+                    scExtensibilityArrayItemId="extn_SourceNamespaces_7" value="extn_getPrinterDeviceMashupRefId_output"/>
+					<!--OMNI-90674 - START-->
+					<Source
+                    description="Namespace to store traslateBarCode API output"
+                    isExtn="true"
+                    scExtensibilityArrayItemId="extn_SourceNamespaces_8" value="extn_translateBarcode_ref_output"/>
+					<Source
+                    description="This namespace contains scanned serial no model"
+                    isExtn="true"
+                    scExtensibilityArrayItemId="extn_SourceNamespaces_9" value="extn_SerialNo_output"/>
+            </SourceNamespaces>
+			 <TargetNamespaces>
+                <Target
+                    description="This fetches the serial no input from the screen." 
+					 isExtn="true"
+                    scExtensibilityArrayItemId="extn_TargetNamespaces_10"  value="extn_SerialNo_input"/>                
+            </TargetNamespaces>
+					<!--OMNI-90674 - END-->
+        </Namespaces>
+		<!--OMNI-90829 START-->
+        <Items>
+            <ContentPane _sc_extensibility_moveOrder="4"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="lastProductScannedDetailsScreenRef"
+                class="scanPanelData" uId="extn_SerialNoScan"/>
+            <ContentPane _sc_extensibility_moveOrder="5"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="first"
+                _sc_extensibility_referenceUId="extn_SerialNoScan"
+                class="barcodeScanPanel" uId="extn_SerialNoScanPane"/>
+            <Button _sc_extensibility_operation="change"
+                _sc_extensibility_referenceUId="pickAll" renderHidden="true"/>
+           <TextField _sc_extensibility_moveOrder="7"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="last"
+                _sc_extensibility_referenceUId="extn_SerialNoScanPane"
+                hint="$(_scSimpleBundle:extn_Scan_or_Enter_Serial_No)"
+                scExcludeForDirtyCheck="true" spanLabel="true"
+                title="$(_scSimpleBundle:extn_Scan_or_enter_serialno)" uId="extn_serialNoBox">
+				 <BindingData>
+                    <SourceBinding namespace="extn_SerialNo_output" path="SerialNo"/>
+                    <TargetBindings>
+                    <TargetBinding
+                    namespace="extn_SerialNo_input" path="Shipment.SerialNo"/>
+                    </TargetBindings>
+                    </BindingData>
+			</TextField>
+            <TextField _sc_extensibility_moveOrder="8"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="extn_SerialNoScanPane" uId="extn_serialNoBox"/>
+            <TextField _sc_extensibility_moveOrder="9"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="last"
+                _sc_extensibility_referenceUId="extn_SerialNoScanPane" uId="extn_serialNoBox"/>
+            <TextField _sc_extensibility_moveOrder="16"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="extn_serialNoButton" uId="extn_serialNoBox"/>
+            <DataLabel _sc_extensibility_moveOrder="1"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="productScanPanel"
+                class="a11yHiddenLabel duein backroomPickTimeRemaining"
+                renderHidden="true" uId="extn_timeRemaining">
+                <BindingData>
+                    <SourceBinding
+                        dynamicBindingClassName="BackroomPickUpUtils"
+                        dynamicBindingFunc="applyOverdueStyling"
+                        dynamicBindingPackage="wsc.components.shipment.backroompick.utils"
+                        namespace="backroomPickShipmentDetails_output" path="Shipment.TimeRemaining"/>
+                </BindingData>
+            </DataLabel>
+            <DataLabel _sc_extensibility_moveOrder="2"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="last"
+                _sc_extensibility_referenceUId="productScanPanel" uId="extn_timeRemaining"/>
+            <DataLabel _sc_extensibility_moveOrder="3"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="shipmentDetails" uId="extn_timeRemaining"/>
+            <Link
+                ImageAlt="$(_scSimpleBundle:extn_Click_to_Scan_the_SerialNo)"
+                _sc_extensibility_moveOrder="6"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="first"
+                _sc_extensibility_referenceUId="extn_SerialNoScanPane"
+                appendToContextRoot="true" class="buttonConnect"
+                hasImage="true"
+                imageSrc="wsc/resources/css/icons/images/barcode_blue.png"
+                title="$(_scSimpleBundle:extn_Click_to_Scan_the_SerialNo)" uId="extn_serialNoButton"/>
+            <Link _sc_extensibility_moveOrder="10"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="last"
+                _sc_extensibility_referenceUId="extn_SerialNoScanPane" uId="extn_serialNoButton"/>
+            <Link _sc_extensibility_moveOrder="11"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="extn_SerialNoScanPane" uId="extn_serialNoButton"/>
+            <Link _sc_extensibility_moveOrder="12"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="last"
+                _sc_extensibility_referenceUId="extn_SerialNoScanPane" uId="extn_serialNoButton"/>
+            <Link _sc_extensibility_moveOrder="13"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="last"
+                _sc_extensibility_referenceUId="extn_SerialNoScan" uId="extn_serialNoButton"/>
+            <Link _sc_extensibility_moveOrder="14"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="last"
+                _sc_extensibility_referenceUId="extn_SerialNoScanPane" uId="extn_serialNoButton"/>
+            <Link _sc_extensibility_moveOrder="15"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="extn_serialNoBox" uId="extn_serialNoButton"/>
+        </Items>
+		<!--OMNI-90829 END-->
+        <Subscribers>
+            <Local>
+				<!--OMNI-90829 START-->
+                <Subscriber eventId="afterScreenLoad" isExtn="true" sequence="51">
+                    <Handler methodName="extn_afterOOTBafterScreenLoad"/>
+                </Subscriber>
+                <Subscriber eventId="afterScreenInit" isExtn="true" sequence="51">			
+                    <Handler methodName="extn_afterInitializeScreen"/>
+                </Subscriber>
+				<!--OMNI-90829 END-->
+                <Subscriber eventId="afterScreenInit" isExtn="true" sequence="51">				
+                    <Handler methodName="checkIfHipPrinterAvailableFlag"/>
+                </Subscriber>
+				<!--OMNI-90829 START-->
+				<Subscriber eventId="extn_serialNoButton_onClick"
+                    isExtn="true" sequence="51">
+                    <Handler methodName="scanProductAndSerialNo"/>
+                </Subscriber>
+                <Subscriber eventId="extn_serialNoBox_onKeyDown"
+                    isExtn="true" sequence="51">
+                    <Handler methodName="scanProductAndSerialNoOnEnter"/>
+                </Subscriber>
+				<!--OMNI-90829 END-->
+            </Local>
+        </Subscribers>
+        <MashupRefs>
+            <Behavior>
+                <MashupRef extnType="MODIFY"
+                    mashupId="backroomPick_updateShipmentQuantity" mashupRefId="updateShipmentQuantityForPickAllLine"/>
+				<!-- OMNI - 4017, 5888, 5885 BOPIS: Cancel Email consolidation at Order level for cancellations- start -->
+                <MashupRef extnType="ADD"
+                    mashupId="extn_SendBOPISCancelMailMashup" mashupRefId="extn_SendBOPISCancelMailMashup"/>
+                <MashupRef extnType="ADD" mashupId="getPrinterDevice" mashupRefId="extn_getPrinterDeviceMashupRefId"/>
+				<!--OMNI-90674 START-->
+				<MashupRef extnType="ADD"
+                    mashupId="extn_translateBarcode" mashupRefId="extn_translateBarcode_ref"/>
+				<!--OMNI-90674 START-->
+            </Behavior>
+        </MashupRefs>
+    </ScreenExtension>
+</ExtensionMetaData>

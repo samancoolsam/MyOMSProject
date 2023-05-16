@@ -1,0 +1,75 @@
+<!--SOF :: Start WN-1814 Ready for Customer Pickup Email-->
+<Order OrderNo="" OrderDate="" EnterpriseCode="" OrderHeaderKey="" CustomerEMailID="" CustomerPhoneNo="" MaxOrderStatus="" MinOrderStatus="">
+	<!-- START Alternate StorePick Email changes -->
+	<Extn/>
+	<!-- END Alternate StorePick Email changes -->
+	<PersonInfoBillTo AddressLine1="" AddressLine2="" AddressLine3="" AlternateEmailID="" 
+	City="" Company="" Country="" DayFaxNo="" DayPhone="" 
+	Department="" EveningFaxNo="" EveningPhone="" FirstName="" LastName="" MiddleName="" 
+	State="" ZipCode="" IsPOBox="" IsMilitary="" ExtnAddressNickName=""
+	ExtnIsAPOFPO="" IsSignatureRequired="" IsAddressVerified="" ExtnIsAddressVerified="" EMailID="" />
+	<PersonInfoShipTo AddressLine1="" AddressLine2="" AddressLine3="" AlternateEmailID="" 
+	City="" Company="" Country="" DayFaxNo="" DayPhone="" 
+	Department="" EveningFaxNo="" EveningPhone="" FirstName="" LastName="" MiddleName="" 
+	State="" ZipCode="" IsPOBox="" IsMilitary="" ExtnAddressNickName=""
+	ExtnIsAPOFPO="" IsSignatureRequired="" IsAddressVerified="" ExtnIsAddressVerified="" EMailID="" />
+	<PersonInfoMarkFor AddressLine1="" AddressLine2="" AddressLine3="" AlternateEmailID="" 
+	City="" Company="" Country="" DayFaxNo="" DayPhone="" 
+	Department="" EveningFaxNo="" EveningPhone="" FirstName="" LastName="" MiddleName="" 
+	State="" ZipCode="" IsPOBox="" IsMilitary="" ExtnAddressNickName=""
+	ExtnIsAPOFPO="" IsSignatureRequired="" IsAddressVerified="" ExtnIsAddressVerified="" EMailID="" />
+	<OverallTotals GrandTotal="" LineSubTotal="" GrandDiscount="" GrandCharges="" GrandTax="" />
+	<OrderLines>
+		<!--OMNI-86861- added PackListType-->
+		<OrderLine PrimeLineNo="" SubLineNo="" OrderLineKey="" CarrierServiceCode="" OrderedQty="" OriginalOrderedQty="" InvoicedQty="" DerivedFromOrderHeaderKey="" 
+		DerivedFromOrderLineKey="" DeliveryMethod="" ShipNode="" MaxLineStatus="" MinLineStatus="" Modifyprogid="" FulfillmentType="" PackListType="">
+		<Extn/>
+		 <OrderLineSourcingControls>
+                                                                <OrderLineSourcingCntrl Node="" ReasonText="" SuppressNodeCapacity="" SuppressProcurement="" SuppressSourcing=""/>
+                                                </OrderLineSourcingControls>
+			<ItemDetails ItemID="">
+				<PrimaryInformation ImageLocation="" ImageID="" Description =""/>
+				<Extn ExtnDepartmentName="" />
+			</ItemDetails>
+			<PersonInfoShipTo FirstName="" LastName="" AddressLine1="" AddressLine2="" AddressLine3="" City="" State="" ZipCode="" DayPhone=""/>
+			<ShipmentLines>
+				<ShipmentLine ShipmentKey="" OrderLineKey=""/>
+			</ShipmentLines>
+			<!--SMS :: Start OMNI-4346 to 4349-->
+			<Notes NumberOfNotes="">
+				<Note AuditTransactionId="" ContactReference="" ContactTime="" ContactType="" ContactUser="" CustomerSatIndicator="" NoteText="" Priority="" ReasonCode="" SequenceNo="" Tranid="" Tranname="" VisibleToAll="">
+				</Note>
+			</Notes>
+			<!--SMS :: End OMNI-4346 to 4349-->
+			<LinePriceInfo LineTotal="" ListPrice="" UnitPrice=""/>
+		</OrderLine>
+	</OrderLines>
+	<Shipments>
+		<Shipment ShipmentKey="" ShipmentNo="" CarrierServiceCode = "" SCAC="" ScacAndService="" ActualShipmentDate="" ProNo="" DeliveryMethod="" Status="" ShipNode="">
+		<ShipmentStatusAudits>
+				<ShipmentStatusAudit NewStatus="" NewStatusDate="" OldStatus="" OldStatusDate="" ShipmentKey="" />
+			</ShipmentStatusAudits>
+			<Extn ExtnSopModifyts="" ExtnShipmentPickedBy="" />
+			<ShipNode ShipNodeKey="">
+				<ShipNodePersonInfo ZipCode = ""/>
+			</ShipNode>
+			<ShipmentLines>
+				<ShipmentLine OrderLineKey="" ShipmentKey="" Quantity="" ShortageQty="">
+				<OrderLine MaxLineStatus="" >
+					<Extn ExtnIsASP="" />
+				</OrderLine>
+				</ShipmentLine>
+			</ShipmentLines>
+			<AdditionalDates>
+				<AdditionalDate ActualDate="" AdditionalDateKey="" DateTypeId=""
+            ExpectedDate="" FromActualDate="" FromExpectedDate=""
+            FromRequestedDate="" ReferenceKey="" ReferenceType=""
+            RequestedDate="" ToActualDate="" ToExpectedDate="" ToRequestedDate=""/>
+			</AdditionalDates>
+		</Shipment>
+	</Shipments>
+	<OrderInvoiceList>
+		<OrderInvoice InvoiceNo="" InvoiceType="" OrderHeaderKey="" OrderNo="" ShipNode="" ShipmentKey="" Status="" /> 
+	</OrderInvoiceList>
+</Order>
+<!--SOF :: End WN-1814 Ready for Customer Pickup Email-->

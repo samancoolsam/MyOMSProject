@@ -1,0 +1,40 @@
+<!--SOF :: Start OMNI-42477 Ready for Customer Pickup Email -->
+<Order OrderNo="" OrderDate="" EnterpriseCode="" OrderHeaderKey=""
+	CustomerEMailID="" CustomerPhoneNo="" MaxOrderStatus=""
+	MinOrderStatus="">
+	<PersonInfoBillTo AddressLine1="" AddressLine2=""
+		AddressLine3="" AlternateEmailID="" City="" Company="" Country=""
+		DayFaxNo="" DayPhone="" Department="" EveningFaxNo="" EveningPhone=""
+		FirstName="" LastName="" MiddleName="" State="" ZipCode="" IsPOBox=""
+		IsMilitary="" ExtnAddressNickName="" ExtnIsAPOFPO=""
+		IsSignatureRequired="" IsAddressVerified="" ExtnIsAddressVerified=""
+		EMailID="" />
+	<PersonInfoShipTo AddressLine1="" AddressLine2=""
+		AddressLine3="" AlternateEmailID="" City="" Company="" Country=""
+		DayFaxNo="" DayPhone="" Department="" EveningFaxNo="" EveningPhone=""
+		FirstName="" LastName="" MiddleName="" State="" ZipCode="" IsPOBox=""
+		IsMilitary="" ExtnAddressNickName="" ExtnIsAPOFPO=""
+		IsSignatureRequired="" IsAddressVerified="" ExtnIsAddressVerified=""
+		EMailID="" />
+	<PersonInfoMarkFor AddressLine1="" AddressLine2=""
+		AddressLine3="" AlternateEmailID="" City="" Company="" Country=""
+		DayFaxNo="" DayPhone="" Department="" EveningFaxNo="" EveningPhone=""
+		FirstName="" LastName="" MiddleName="" State="" ZipCode="" IsPOBox=""
+		IsMilitary="" ExtnAddressNickName="" ExtnIsAPOFPO=""
+		IsSignatureRequired="" IsAddressVerified="" ExtnIsAddressVerified=""
+		EMailID="" />
+	<OrderLines>
+		<OrderLine PrimeLineNo="" SubLineNo="" OrderLineKey=""
+			CarrierServiceCode="" OrderedQty="" OriginalOrderedQty=""
+			InvoicedQty="" DerivedFromOrderHeaderKey=""
+			DerivedFromOrderLineKey="" DeliveryMethod="" ShipNode=""
+			MaxLineStatus="" MinLineStatus="" Modifyprogid="" FulfillmentType="">
+			<ItemDetails ItemID="">
+				<PrimaryInformation ImageLocation="" ImageID=""
+					Description="" />
+				<Extn ExtnDepartmentName="" />
+			</ItemDetails>
+		</OrderLine>
+	</OrderLines>
+</Order>
+<!--SOF :: End OMNI-42477 Ready for Customer Pickup Email -->

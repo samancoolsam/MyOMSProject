@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DBSchema>
+   <Entities>
+
+      <Entity ApiNeeded="Y" AuditRequired="N" Description="BOPIS Item Exclusion in Stores" HasHistory="False" Prefix="ACAD" TableName="ACAD_BOPIS_ITEM_EXCLUSION" XMLName="AcademyBopisItemExclusion" >
+         <Attributes>
+		   <Attribute ColumnName="ACAD_BOPIS_ITEM_EXCLUSION_KEY" DataType="Key" DefaultValue="' '" Description="System generated primary ky for this table" Name="AcademyBopisItemExclusionKey" Nullable="false" XMLGroup="" XMLName="AcademyBopisItemExclusionKey"/> 
+
+			 <Attribute ColumnName="ITEM_KEY" DataType="Key" DefaultValue="' '" Description="Item Key" Name="ItemKey" Nullable="false" XMLGroup="" XMLName="ItemKey"/> 
+			  <Attribute ColumnName="STORE_NO" DataType="Text-24" DefaultValue="' '" Description="Store No in which item is excluded" Name="StoreNo" Nullable="false" XMLGroup="" XMLName="StoreNo"/> 
+			  <Attribute ColumnName="DELIVERY_METHOD" DataType="Text-40"  DefaultValue="' '" Description="Delivery Method" Name="DeliveryMethod" Nullable="false" XMLGroup="" XMLName="DeliveryMethod"/>
+			  
+            <Attribute ColumnName="CREATETS" DataType="TimeStamp" DefaultValue="SYSDATE" Description="Create TimeStamp"/>
+			<Attribute ColumnName="MODIFYTS" DataType="TimeStamp" DefaultValue=" SYSDATE" Description="Modify TimeStamp"/>
+			<Attribute ColumnName="CREATEUSERID" DataType="UserId" DefaultValue="' '" Description="Creating User ID"/>
+			<Attribute ColumnName="MODIFYUSERID" DataType="UserId" DefaultValue="' '" Description="Modifying User ID"/>
+			<Attribute ColumnName="CREATEPROGID" DataType="ProgramID" DefaultValue="' '" Description="Creating Program ID"/>
+			<Attribute ColumnName="MODIFYPROGID" DataType="ProgramID" DefaultValue="' '" Description="Modifying Program ID"/>
+			<Attribute ColumnName="LOCKID" DataType="Lockid" DefaultValue="0" Description="Lock ID"/>
+
+         </Attributes>
+
+		 	<PrimaryKey Name="ACAD_BPS_ITM_EX_PK">
+				<Attribute ColumnName="ACAD_BOPIS_ITEM_EXCLUSION_KEY" Name="AcademyBopisItemExclusionKey"/>
+			</PrimaryKey>
+
+			
+			<Parent ParentTableName="YFS_ITEM" XMLName="YFSItem" >
+             <Attribute ColumnName="ITEM_KEY" ParentColumnName="ITEM_KEY" />
+			</Parent>
+<Indices>
+ 			<Index DB2Name="ITEM_STR_I1" Name="ACAD_ITM_STR_I1" Unique="true">
+        		<Column Name="STORE_NO"/>
+        		<Column Name="ITEM_KEY"/>
+      		</Index>
+   		</Indices>
+      </Entity>
+     
+   </Entities>
+</DBSchema>

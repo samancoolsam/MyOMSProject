@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataTypes>
+	<!-- SFS2.0: The extended attributes, ExtnShpFromDC and ExtnShipFromStoreItem should be present in the 'Extended Attribute' pop-up of 'Item Details' screen.
+	Change Begins!-->
+
+	<DataType Name="SFDCFlg" Size="1" Type="CHAR">
+		<UIType Size="10" UITableSize="20" DisplayInUI="true" />
+	</DataType>
+	
+	<DataType Name="SFSFlag" Size="1" Type="CHAR">
+		<UIType Size="10" UITableSize="20" DisplayInUI="true" />
+	</DataType>
+	
+	<!--SFS2.0: Change Ends -->
+	<!-- DSV-Phase 1 Implementation-Store feed:: OMNI- 9572 Begin-->
+	<DataType Name="DSVFlag" Size="1" Type="CHAR">
+		<UIType Size="10" UITableSize="20" DisplayInUI="true" />
+	</DataType>
+	<!-- DSV-Phase 1 Implementation-Store feed:: OMNI- 9572 END-->
+	<!-- BOPIS Phase 1 Implementation - Store BOPIS Eligibility changes -->
+	<DataType Name="BPSFlag" Size="1" Type="CHAR">
+		<UIType Size="10" UITableSize="20" DisplayInUI="true" />
+	</DataType>
+	
+	<DataType Name="HighValueFlag" Size="1" Type="CHAR">
+		<UIType Size="10" UITableSize="20" DisplayInUI="true"/>
+	</DataType>
+	<DataType Name="ShipAloneFlag" Size="1" Type="CHAR">
+		<UIType Size="10" UITableSize="20" DisplayInUI="true"/>
+	</DataType>
+	<DataType Name="ConveyableFlag" Size="1" Type="CHAR">
+		<UIType Size="10" UITableSize="20" DisplayInUI="true"/>
+	</DataType>
+	<DataType Name="KitFlag" Size="1" Type="CHAR">
+		<UIType Size="10" UITableSize="20" DisplayInUI="true"/>
+	</DataType>
+	<DataType Name="WhiteGloveEligibleFlag" Size="1" Type="CHAR">
+		<UIType Size="10" UITableSize="20" DisplayInUI="true"/>
+	</DataType>
+	<DataType Name="ECommerceFlag" Size="40" Type="VARCHAR2">
+		<UIType Size="10" UITableSize="20" DisplayInUI="true"/>
+	</DataType>
+	<DataType Name="ExtnEcommerceDescription" Size="40" Type="VARCHAR2">
+			<UIType Size="10" UITableSize="20" DisplayInUI="true"/>
+	</DataType>
+	<DataType Name="ExtnSizeCodeDescription" Size="40" Type="VARCHAR2">
+				<UIType Size="10" UITableSize="20" DisplayInUI="true"/>
+	</DataType>
+	<DataType Name="ExtnColorCodeDescription" Size="40" Type="VARCHAR2">
+				<UIType Size="10" UITableSize="20" DisplayInUI="true"/>
+	</DataType>
+	<DataType Name="DropShipFlag" Size="1" Type="CHAR">
+		<UIType Size="10" UITableSize="20" DisplayInUI="true"/>
+	</DataType>
+	<DataType Name="IsGiftCardFlag" Size="1" Type="CHAR">
+		<UIType Size="10" UITableSize="20" DisplayInUI="true"/>
+	</DataType>
+		<DataType Name="ExtnTimeStamp" Size="17" Type="DATETIME"/> 
+		<DataType Name="Date" PpcSize="12" Size="7" Type="DATE">
+        <UIType Size="8" UITableSize="15"/>
+		 </DataType>
+	<DataType Name="LabelPick" Size="1" Type="CHAR">
+		<UIType Size="10" UITableSize="20" DisplayInUI="true"/>
+	</DataType>
+	<DataType DecimalDigits="4" Name="QuantityRestrictions" NegativeAllowed="false" Size="14" Type="NUMBER"/>
+	<DataType Name="INVOICE_SEQ_NO" NegativeAllowed="false" Size="4" Type="NUMBER"/>
+	<DataType Name="HazmatName" Size="40" Type="VARCHAR2">
+		<UIType Size="10" UITableSize="20" DisplayInUI="true"/>
+	</DataType>
+	<DataType Name="CountryOfOrigin" Size="40" Type="VARCHAR2">
+		<UIType Size="10" UITableSize="20" DisplayInUI="true"/>
+	</DataType>
+	<DataType Name="ExtnItemDivision" Size="40" Type="VARCHAR2">
+			<UIType Size="10" UITableSize="20" DisplayInUI="true"/>
+	</DataType>
+	<DataType Name="ExtnItemDivisionName" Size="40" Type="VARCHAR2">
+			<UIType Size="10" UITableSize="20" DisplayInUI="true"/>
+	</DataType>
+	<DataType Name="ExtnProductLine" Size="40" Type="VARCHAR2">
+				<UIType Size="10" UITableSize="20" DisplayInUI="true"/>
+	</DataType>
+	<DataType Name="ExtnVendorColorName" Size="40" Type="VARCHAR2">
+		<UIType Size="10" UITableSize="20" DisplayInUI="true"/>
+	</DataType>
+	
+	<DataType Name="Rebate" Size="40" Type="VARCHAR2">
+			<UIType Size="10" UITableSize="20" DisplayInUI="true"/>
+	</DataType>
+	<DataType Name="ExtnEASTag" Size="1" Type="CHAR">
+		<UIType Size="10" UITableSize="20" DisplayInUI="true"/>
+	</DataType>
+	<DataType Name="ExtnIsCorporateCustomer" Size="1" Type="CHAR">
+		<UIType Size="10" UITableSize="20" DisplayInUI="true"/>
+	</DataType>
+			<DataType Name="CorporateCustomerFlag" Size="40" Type="CHAR">
+			<UIType Size="10" UITableSize="20" DisplayInUI="true"/>
+	</DataType>
+		<DataType Name="RequiresWebprofileIDFlag" Size="40" Type="CHAR">
+			<UIType Size="10" UITableSize="20" DisplayInUI="true"/>
+	</DataType>
+		<DataType Name="IsRedLinedFlag" Size="40" Type="CHAR">
+			<UIType Size="10" UITableSize="20" DisplayInUI="true"/>
+	</DataType>
+	<DataType Name="IsSignatureRequiredFlag" Size="40" Type="CHAR">
+			<UIType Size="10" UITableSize="20" DisplayInUI="true"/>
+	</DataType>
+		<DataType Name="IsPOBOXADDRESSFlag" Size="40" Type="CHAR">
+			<UIType Size="10" UITableSize="20" DisplayInUI="true"/>
+	</DataType>
+		<DataType Name="IsAPOFPOFlag" Size="40" Type="CHAR">
+			<UIType Size="10" UITableSize="20" DisplayInUI="true"/>
+	</DataType>
+			<DataType Name="IsRegularAddress" Size="40" Type="CHAR">
+			<UIType Size="10" UITableSize="20" DisplayInUI="true"/>
+	</DataType>
+	<DataType Name="IsOptInFlag" Size="40" Type="CHAR">
+			<UIType Size="10" UITableSize="20" DisplayInUI="true"/>
+	</DataType>
+		<DataType Name="InstructionName" Size="40" Type="VARCHAR2">
+			<UIType Size="10" UITableSize="20" DisplayInUI="true"/>
+	</DataType>
+	<DataType Name="ExternalCustomerID" Size="40" Type="VARCHAR2">
+			<UIType Size="10" UITableSize="20" DisplayInUI="true"/>
+	</DataType>
+	<DataType Name="ExtnAddressNickName" Size="40" Type="VARCHAR2">
+			<UIType Size="10" UITableSize="20" DisplayInUI="true"/>
+	</DataType>
+	<DataType Name="ExtnIsAddressVerified" Size="40" Type="CHAR">
+			<UIType Size="10" UITableSize="20" DisplayInUI="true"/>
+	</DataType>
+		<DataType Name="ExtnIsMilitary" Size="40" Type="CHAR">
+			<UIType Size="10" UITableSize="20" DisplayInUI="true"/>
+	</DataType>
+	<!-- start changes:CR#34-->
+	<DataType Name="Text-40" Size="40" Type="VARCHAR2">
+			<UIType Size="20" UITableSize="20" DisplayInUI="true"/>
+	</DataType>
+	<DataType Name="Text-200" Size="200" Type="VARCHAR2">
+			<UIType Size="50" UITableSize="50" DisplayInUI="true"/>
+	</DataType>
+
+	<DataType Name="Text-100" Size="100" Type="VARCHAR2">
+			<UIType Size="50" UITableSize="50" DisplayInUI="true"/>
+	</DataType>
+	
+	
+	<!-- end changes -->
+	<!-- Data type added for YFS_ORDER_LINE -->
+	<DataType Name="ExtnWCOrderItemIdentifier" Size="40" Type="VARCHAR2">
+		<UIType Size="40" UITableSize="40" DisplayInUI="true"/>
+	</DataType>
+
+	<!-- Data type added for EXTN_USER_GROUP_NAME -->
+	<DataType Name="ExtnUserGroupName" Size="40" Type="VARCHAR2">
+		<UIType Size="40" UITableSize="40" DisplayInUI="true"/>
+	</DataType>
+	<!-- Data type added for EXTN_GC_BULK_ACTIVATION_FLAG -->
+	<DataType Name="ExtnGCBulkActivationFlag" Size="1" Type="CHAR">
+		<UIType Size="10" UITableSize="20" DisplayInUI="true"/>
+	</DataType>
+	
+	<!-- Data type added for EXTN_ALERT_KEY in YFS_INBOX -->
+	<DataType Name="ExtnAlertKey" Size="20" Type="VARCHAR2">
+		<UIType Size="10" UITableSize="20" DisplayInUI="true"/>
+	</DataType>
+	<!-- Data type added for EXTN_ASSOCIATED_CUST_ID in YFS_INBOX -->
+	<DataType Name="ExtnAssociatedCustID" Size="40" Type="VARCHAR2">
+			<UIType Size="10" UITableSize="20" DisplayInUI="true"/>
+	</DataType>
+	<!-- Data type added for EXTN_ORDER_TOTAL in YFS_INBOX -->
+	<DataType DecimalDigits="2" Name="ExtnOrderTotal" NegativeAllowed="false" Size="15" Type="NUMBER">
+        <UIType Size="12" UITableSize="15"/>
+    </DataType>
+	<!-- Data type added for EXTN_CUSTOMERKEY in YFS_INBOX -->
+	<DataType Name="ExtnCustomerKey" Size="24" Type="CHAR">
+		<UIType Size="24" UITableSize="24" DisplayInUI="true"/>
+	</DataType>
+	<!-- Data type added for EXTN_CUSTOMER_EMAILID in YFS_INBOX -->
+	<DataType Name="ExtnCustomerEmailID" Size="150" Type="VARCHAR2">
+		<UIType Size="150" UITableSize="150" DisplayInUI="true"/>
+	</DataType>
+		<!-- Data type added for EXTN_CUSTOMER_FNAME in YFS_INBOX -->
+	<DataType Name="ExtnCustomerFName" Size="40" Type="VARCHAR2">
+		<UIType Size="40" UITableSize="40" DisplayInUI="true"/>
+	</DataType>
+	<!-- Data type added for EXTN_CUSTOMER_LNAME in YFS_INBOX -->
+	<DataType Name="ExtnCustomerLName" Size="40" Type="VARCHAR2">
+		<UIType Size="40" UITableSize="40" DisplayInUI="true"/>
+	</DataType>
+	<DataType Name="ExtnClosedAlert" Size="20" Type="CHAR">
+		<UIType Size="10" UITableSize="20" DisplayInUI="true"/>
+	</DataType>
+		<!-- Data type added for ACAD_FIN_TRANS_TYPE -->
+	<DataType Name="AcademyFinTranCodeType" Size="3" Type="NUMBER" />
+	<DataType Name="AcademyFinTranDescription" Size="200"
+		Type="VARCHAR2" />
+	<DataType Name="AcademyFinImpactFlag" Size="1" Type="CHAR" />
+
+	<!-- Data type added for ACAD_FIN_EOD -->
+	<DataType Name="AcademyFinTranDate" Size="8" Type="VARCHAR2" />
+	<DataType Name="AcademyEodFinTranKey" Size="40" Type="VARCHAR2" />
+	<DataType Name="AcademyEodTranDateTime" Size="17" Type="DATETIME" />
+	<DataType Name="AcademyEodFinTransNo" Size="4" Type="CHAR" />
+	<DataType Name="AcademyEodFinRegisterNo" Size="4" Type="CHAR" />
+	<DataType Name="AcademyEodFinStoreNo" Size="5" Type="CHAR" />
+
+	<!-- Data type added for ACAD_FIN_INVOICE_DETAIL -->
+	<DataType Name="AcademyFinInvoicedDateTime" Size="17" Type="DATETIME" />
+	
+	<!-- Data type added for ACAD_FIN_TRANSACT -->
+	<DataType Name="AcademyFinTranDateTime" Size="17" Type="DATETIME" />
+	<DataType Name="AcademyFinTranEntityCode" Size="5" Type="VARCHAR2" />
+	<DataType Name="AcademyFinTranSourceKey" Size="40" Type="VARCHAR2" />
+	<DataType Name="AcademyFinTranSourceLine" Size="5" Type="NUMBER" />
+	<DataType Name="AcademyFinTranReferenceKey" Size="40" Type="VARCHAR2" />
+	<DataType Name="AcademyFinTranOrderNo" Size="40" Type="VARCHAR2" />
+	<DataType Name="AcademyFinTranReferenceLine" Size="5" Type="NUMBER" />
+	<DataType DecimalDigits="6" Name="AcademyFinTranAmountField"
+		NegativeAllowed="false" Size="19" Type="NUMBER" />
+	<DataType DecimalDigits="4" Name="AcademyFinTranQtyField"
+		NegativeAllowed="false" Size="14" Type="NUMBER" />
+	<DataType Name="AcademyFinTranShipLineFlag" Size="1" Type="CHAR" />
+	<DataType Name="AcademyFinTranShipMethod" Size="40" Type="VARCHAR2" />
+	<DataType Name="AcademyFinTranShipType" Size="40" Type="VARCHAR2" />
+	<DataType Name="AcademyFinTranShortSKU" Size="40" Type="VARCHAR2" />
+	<DataType Name="AcademyFinTranCustNo" Size="40" Type="VARCHAR2" />
+	<DataType Name="AcademyFinTranCustExmpt" Size="40" Type="VARCHAR2" />
+	<DataType Name="AcademyFinTranCouponCode" Size="50" Type="VARCHAR2" />
+	<DataType Name="AcademyFinTranDiscountId" Size="50" Type="VARCHAR2" />
+	<DataType Name="AcademyFinTranAppsementCode" Size="50" Type="VARCHAR2" />
+	<DataType Name="AcademyFinTranReturnReasonCode" Size="50" Type="VARCHAR2" />
+	<DataType Name="AcademyFinTranItemDesc" Size="100" Type="VARCHAR2" />
+	<DataType Name="AcademyFinTranTenderType" Size="20" Type="VARCHAR2" />
+	<DataType Name="AcademyFinTranCCType" Size="32" Type="VARCHAR2" />
+	<DataType Name="AcademyFinTranProcessedFlag" Size="1" Type="CHAR" />
+	<DataType Name="AcademyFinTranErrorStatus" Size="1" Type="CHAR" />
+	<DataType Name="AcademyFinTranProcessTime" Size="17" Type="DATETIME" />
+	<DataType Name="AcademyFinTranExtractFlag" Size="1" Type="CHAR" />
+	<DataType Name="AcademyFinTranOperator" Size="8" Type="VARCHAR2" />
+	<DataType Name="AcademyFinTranTLogTerminal" Size="10" Type="VARCHAR2" />
+	<DataType Name="AcademyFinTranTLogTranId" Size="10" Type="VARCHAR2" />
+	<DataType Name="AcademyFinTranFutureField" Size="50" Type="VARCHAR2" />
+	<DataType Name="ExtnLinesCancelled" Size="1" Type="CHAR" />
+	<DataType Name="ExtnNonCCExceptionType" Size="1" Type="CHAR" />
+	<DataType Name="ExtnOriginalShipmentScac" Size="24" Type="CHAR" />
+	<DataType Name="ExtnOriginalShipmentLos" Size="40" Type="VARCHAR2" />
+	<DataType Name="ExtnShipUpgrdOrDowngrd" Size="24" Type="CHAR" />
+	<!-- Data type added for STL-721 -->
+	<DataType Name="ExtnOverrideUOrD" Size="1" Type="CHAR" /> 
+        <!-- Data type added for STL-721 -->
+	<!--Data type added for STL-934 Checkout Funnel -->
+	<DataType Name="CONTFlag" Size="1" Type="CHAR">
+		<UIType Size="10" UITableSize="20" DisplayInUI="true" />
+	</DataType>
+    <!--Data type added for STL-934 Checkout Funnel -->
+	<!-- STS-Phase 1 Implementation-Store feed:: OMNI- 6378 Begin-->
+	<DataType Name="STSFlag" Size="1" Type="CHAR">
+		<UIType Size="10" UITableSize="20" DisplayInUI="true" />
+	</DataType>
+	<!-- STS-Phase 1 Implementation-Store feed:: OMNI- 6378 End-->
+     <!-- OMNI-95457 BMT Compliance Required Flag-Begin-->
+	<DataType Name="ExtnBMTComplianceFlag" Size="1" Type="CHAR">
+		<UIType Size="10" UITableSize="20" DisplayInUI="true"/>
+	</DataType>
+	
+	<!--OMNI-95457 BMT Compliance required -End-->
+</DataTypes>

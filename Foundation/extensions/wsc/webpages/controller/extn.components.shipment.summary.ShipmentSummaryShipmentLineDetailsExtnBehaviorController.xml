@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Controller
+    className="com.sterlingcommerce.ui.web.platform.controller.SCUIXAPIMashupController"
+    controllerId="extn.components.shipment.summary.ShipmentSummaryShipmentLineDetailsExtnBehaviorController"
+    requestMethodSupported="POST" screenId="extn.components.shipment.summary.ShipmentSummaryShipmentLineDetailsExtn">
+    <MashupRefs>
+    <!-- OMNI-71678 - Editable Staging Location - Start -->
+    	<MashupRef mashupId="extn_getFlagToDisableAddQtyAndReadOnlyScannedQty"
+			mashupRefId="extn_getFlagEditStagingLocation" permissionId=""/>
+         <MashupRef extnType=""
+            mashupId="backroomPickUp_saveHoldLocationToShipment"
+            mashupRefId="saveHoldLocation_ref" permissionId=""/>
+    </MashupRefs>
+    <!-- OMNI-71678 - Editable Staging Location - End -->
+</Controller>

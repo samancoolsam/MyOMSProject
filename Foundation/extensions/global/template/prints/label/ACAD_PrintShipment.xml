@@ -1,0 +1,43 @@
+<LabelFieldMap>
+	
+	<LabelField Binding="Shipment/@ShipmentNo" DataType="Text" LabelFieldName="ShipmentNo" RepeatingElement="" Sequence="N" /> 
+	<LabelField Binding="Shipment/@ShipNode" DataType="Text" LabelFieldName="ShipNode" RepeatingElement="" Sequence="N" /> 
+	<LabelField Binding="Shipment/@ShipmentNo" DataType="Text" LabelFieldName="ShipmentBarcode" RepeatingElement="" Sequence="N" /> 
+	<LabelField Binding="Shipment/@SCAC" DataType="Text" LabelFieldName="SCAC" RepeatingElement="" Sequence="N" /> 
+	<LabelField Binding="Shipment/@CarrierServiceCode" DataType="Text" LabelFieldName="CarrierServiceCode" RepeatingElement="" Sequence="N" /> 
+	<LabelField Binding="Shipment/@PickticketNo" DataType="Text" LabelFieldName="PickticketNo" RepeatingElement="" Sequence="N" /> 
+	<LabelField Binding="Shipment/@PageNumber" DataType="Text" LabelFieldName="PageNumber" RepeatingElement="" Sequence="N" /> 
+
+	<LabelField Binding="Shipment/ShipmentLines/ShipmentLine/@Quantity" DataType="Text" LabelFieldName="Quantity" RepeatingElement="ShipmentLine" Sequence="N" /> 
+	<LabelField Binding="Shipment/ShipmentLines/ShipmentLine/@PogId" DataType="Text" LabelFieldName="PogId" RepeatingElement="ShipmentLine" Sequence="N" /> 
+	<LabelField Binding="Shipment/ShipmentLines/ShipmentLine/@Department" DataType="Text" LabelFieldName="Department" RepeatingElement="ShipmentLine" Sequence="N" /> 
+	<LabelField Binding="Shipment/ShipmentLines/ShipmentLine/@Section" DataType="Text" LabelFieldName="Section" RepeatingElement="ShipmentLine" Sequence="N" /> 
+	<LabelField Binding="Shipment/ShipmentLines/ShipmentLine/@PogNumber" DataType="Text" LabelFieldName="PogNumber" RepeatingElement="ShipmentLine" Sequence="N" /> 
+	<LabelField Binding="Shipment/ShipmentLines/ShipmentLine/@LiveDate" DataType="Text" LabelFieldName="LiveDate" RepeatingElement="ShipmentLine" Sequence="N" /> 
+	<LabelField Binding="Shipment/ShipmentLines/ShipmentLine/OrderLine/Item/@ItemID" DataType="Text" LabelFieldName="ItemID" RepeatingElement="ShipmentLine" Sequence="N" /> 
+	<LabelField Binding="Shipment/ShipmentLines/ShipmentLine/OrderLine/Item/@ItemShortDesc" DataType="Text" LabelFieldName="ItemDesc" RepeatingElement="ShipmentLine" Sequence="N" /> 
+	<LabelField Binding="Shipment/ShipmentLines/ShipmentLine/OrderLine/Item/@ItemBarcode" DataType="Text" LabelFieldName="ItemBarcode" RepeatingElement="ShipmentLine" Sequence="N" /> 
+	<LabelField Binding="Shipment/ShipmentLines/ShipmentLine/OrderLine/Item/@ImageURL" DataType="Text" LabelFieldName="ImageURL" RepeatingElement="ShipmentLine" Sequence="N" /> 
+	<LabelField Binding="Shipment/ShipmentLines/ShipmentLine/OrderLine/Item/@LongSKU" DataType="Text" LabelFieldName="LongSKU" RepeatingElement="ShipmentLine" Sequence="N" /> 
+	<LabelField Binding="Shipment/ShipmentLines/ShipmentLine/@AvailableStockOnHand" DataType="Text" LabelFieldName="AvailableStockOnHand" RepeatingElement="ShipmentLine" Sequence="N" /> 
+	<LabelField Binding="Shipment/ShipmentLines/ShipmentLine/@LastReceivedDate" DataType="Text" LabelFieldName="LastReceivedDate" RepeatingElement="ShipmentLine" Sequence="N" />
+	<LabelField Binding="Shipment/ShipmentLines/ShipmentLine/@ItemPrice" DataType="Text" LabelFieldName="ItemPrice" RepeatingElement="ShipmentLine" Sequence="N" />
+	
+	<RepeatingFields> 
+		<RepeatingField LabelFieldName="ItemID" MaxFirstPage="40" MaxLastPage="0" MaxMidPage="0"/> 
+		<RepeatingField LabelFieldName="Quantity" MaxFirstPage="40" MaxLastPage="0" MaxMidPage="0"/> 
+		<RepeatingField LabelFieldName="ItemDesc" MaxFirstPage="40" MaxLastPage="0" MaxMidPage="0"/> 
+		<RepeatingField LabelFieldName="ItemBarcode" MaxFirstPage="40" MaxLastPage="0" MaxMidPage="0"/> 
+		<RepeatingField LabelFieldName="PogId" MaxFirstPage="40" MaxLastPage="0" MaxMidPage="0"/> 
+		<RepeatingField LabelFieldName="Department" MaxFirstPage="40" MaxLastPage="0" MaxMidPage="0"/> 
+		<RepeatingField LabelFieldName="Section" MaxFirstPage="40" MaxLastPage="0" MaxMidPage="0"/> 
+		<RepeatingField LabelFieldName="PogNumber" MaxFirstPage="40" MaxLastPage="0" MaxMidPage="0"/> 
+		<RepeatingField LabelFieldName="LiveDate" MaxFirstPage="40" MaxLastPage="0" MaxMidPage="0"/> 
+		<RepeatingField LabelFieldName="ImageURL" MaxFirstPage="40" MaxLastPage="0" MaxMidPage="0"/> 
+		<RepeatingField LabelFieldName="LongSKU" MaxFirstPage="40" MaxLastPage="0" MaxMidPage="0"/> 
+		<RepeatingField LabelFieldName="AvailableStockOnHand" MaxFirstPage="40" MaxLastPage="0" MaxMidPage="0"/> 
+		<RepeatingField LabelFieldName="LastReceivedDate" MaxFirstPage="40" MaxLastPage="0" MaxMidPage="0"/> 
+		<RepeatingField LabelFieldName="ItemPrice" MaxFirstPage="40" MaxLastPage="0" MaxMidPage="0"/> 
+	</RepeatingFields>
+	
+</LabelFieldMap>

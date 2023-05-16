@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DBSchema>
+	<Entities>
+		<!-- Start - Instore Pickup -->
+		<Entity TableName="YFS_SHIPMENT">
+			<Attributes>
+				<Attribute ColumnName="EXTN_IS_INSTORE_PICKUP_OPTED" XMLName="ExtnIsInstorePickupOpted" DataType="Flag" Nullable="true" Description="Contains flag details if the shipment has Instore pickup enabled" XMLGroup="Extn" />
+				<Attribute ColumnName="EXTN_INSTORE_PICKUP_INFO" XMLName="ExtnInstorePickupInfo" Size="200" Type="VARCHAR2" Nullable="true" Description="Contains Customer info for Instore pickup" XMLGroup="Extn" />
+				<Attribute ColumnName="EXTN_INSTORE_ATTENDED_BY" Type="VARCHAR2" Size="110" XMLName="ExtnInstoreAttendedBy" DefaultValue="' '" 
+				Nullable="true" Description="Contains user id of the TM who is attending the Instore pick up" XMLGroup="Extn" />
+			</Attributes>
+		</Entity>
+		<!-- End - Instore Pickup -->		
+		</Entities>
+</DBSchema>

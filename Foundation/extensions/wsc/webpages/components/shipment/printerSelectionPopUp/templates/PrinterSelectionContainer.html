@@ -1,0 +1,47 @@
+<div class="sc-platform-screen-default PrinterSelectionContainer">
+	<div data-dojo-type="idx/form/FilteringSelect" data-dojo-props="		highlightMatch : 'false' , 
+		'class' : 'nonEditable longTextBox autoLabelZeroWidth idxTextBoxWrap' , 
+		uId : 'PrinterSelectionContainerUID',
+ 		scParamDataFn :
+		function() { 
+			return { 
+			 	label :this.getSimpleBundleString('Print To'),	
+			 	bindingData : 	{
+					optionsBinding : 	{
+						 valueField : 			'DeviceId',
+						 path : 			'Devices.Device',
+						 descriptionField : 			'DeviceId',
+						 namespace : 			'getPrinterDevice_output'
+					 }, 
+					 targetBinding : 	[
+						{
+						 path : 			'Devices.Device.DeviceId',
+						 namespace : 			'selectedPrinterDevice',
+						}	
+					],
+					sourceBinding : 	{
+							path : 			'Devices.Device.DeviceId',
+							namespace : 			'extn_printerFromSession'
+					}
+
+
+				}
+			}
+		}">
+	</div>
+	<br/>
+
+    <div data-dojo-type="dijit/form/Button" data-dojo-props="		spanLabel : true , 
+	'class' : 'idxSpecialButton zeroWidthLabelKey' , 
+	style:'margin-left: 40%',
+	showLabel : true , 
+	uId : 'Popup_btnOK'  ,
+	scParamDataFn :
+	function() { 
+		return { 
+		 	label : 			this.getSimpleBundleString('OK')
+		}
+	}">
+	</div>
+	<br/>
+</div>

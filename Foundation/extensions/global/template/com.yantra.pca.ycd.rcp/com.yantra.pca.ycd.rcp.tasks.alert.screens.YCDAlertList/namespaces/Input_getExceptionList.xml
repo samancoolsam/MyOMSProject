@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Inbox ConsolidationCount="" ConsolidationCountQryType="" ExceptionType="" FollowupDate="" FromFollowupDate="" FromGeneratedOn="" Priority="" PriorityQryType="" QueueKey="" ShipnodeKey="" Status="" ToGeneratedOn="" OrderNo="" OrderNoQryType="" >
+    <User LoginIdQryType="" Loginid=""/>
+    <Extn ExtnAlertKey="" ExtnAssociatedCustID=""/>
+</Inbox>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExtensionMetaData>
+    <ScreenExtension extnClassName="PickorPackWarningDialogExtn"
+        extnPackage="extn.components.shipment.common.screens"
+        originalScreen="wsc.components.shipment.common.screens.PickorPackWarningDialog"
+        originalScreenPackage="wsc.components.shipment.common.screens" type="diffrential">
+        <MashupRefs>
+            <Behavior>
+                <MashupRef extnType="ADD"
+                    mashupId="extn_getUserListByUserID" mashupRefId="extn_getUserListByUserID"/>
+            </Behavior>
+        </MashupRefs>
+    </ScreenExtension>
+</ExtensionMetaData>

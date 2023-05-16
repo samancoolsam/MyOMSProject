@@ -1,0 +1,17 @@
+<Manifest ManifestClosedFlag="" ManifestDate="" ManifestKey="" ManifestNo=""  Scac="" ShipNode="">
+   <Shipments>
+      <Shipment ShipmentKey="" ShipmentNo="" ShipmentType="" Status="" >
+         <Containers TotalNumberOfRecords="">
+            <Container IsManifested="" ManifestKey="">
+               <ContainerDetails>
+                  <ContainerDetail Quantity="" />
+               </ContainerDetails>
+            </Container>
+			</Containers>
+         <ShipmentLines>
+            <ShipmentLine ActualQuantity="" OverShipQuantity="" Quantity=""/>
+         </ShipmentLines>
+      </Shipment>
+   </Shipments>
+</Manifest>
+

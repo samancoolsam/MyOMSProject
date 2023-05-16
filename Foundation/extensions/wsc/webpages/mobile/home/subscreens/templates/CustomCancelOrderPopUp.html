@@ -1,0 +1,78 @@
+<div class="sc-platform-screen-default CustomCancelOrderPopUp">
+	<div data-dojo-type="idx/layout/ContentPane" data-dojo-props="		spanLabel : true , 
+		uId : 'systemMessagePanelPopup' , 
+		renderHidden : true  
+ "></div>
+    <div data-dojo-type="idx/layout/ContentPane" data-dojo-props="		spanLabel : true , 
+		'class' : 'screen ' , 
+		colspan : 1 , 
+		uId : 'innerContainer'  
+ ">
+
+<!-- Cancellation Reason Code Filtering Select -->
+
+ <div data-dojo-type="idx/form/FilteringSelect" data-dojo-props="		highlightMatch : 'false' , 
+		'class' : 'nonEditable longTextBox autoLabelZeroWidth idxTextBoxWrap' , 
+		autoComplete : true , 
+		uId : 'filteringSelectCancellationReason' , 
+		required : true  
+ 		,scParamDataFn :
+		 function() { 
+			return { 
+			 	label : 			this.getSimpleBundleString('extn_Label_Cancellation_Reason_Code')
+,	
+			 	bindingData : 	{
+		 optionsBinding : 	{
+		 valueField : 			'CodeValue'
+,
+		 path : 			'CommonCodeList.CommonCode'
+,
+		 descriptionField : 			'CodeShortDescription'
+,
+		 namespace : 			'getReasonCodeList_output'
+	}
+,
+		 targetBinding : 	[
+	 		{
+		 path : 			'Reason.value'
+,
+		 namespace : 			'selectedReasonCode'
+	}
+	]
+
+	}
+			}
+		}
+"></div>
+
+
+
+
+    </div>
+    <div data-dojo-type="idx/layout/ContentPane" data-dojo-props="		'class' : 'popupNavigation messageDialogFooter' , 
+		uId : 'Popup_navigationPanel'  
+ ">
+        <div data-dojo-type="dijit/form/Button" data-dojo-props="		spanLabel : true , 
+		'class' : 'idxSpecialButton' , 
+		showLabel : true , 
+		uId : 'Popup_btnApply'  
+ 		,scParamDataFn :
+		 function() { 
+			return { 
+			 	label : 			this.getSimpleBundleString('Apply')
+			}
+		}
+"></div>
+        <div data-dojo-type="dijit/form/Button" data-dojo-props="		spanLabel : true , 
+		'class' : 'idxSecondaryButton' , 
+		showLabel : true , 
+		uId : 'Popup_btnCancel'  
+ 		,scParamDataFn :
+		 function() { 
+			return { 
+			 	label : 			this.getSimpleBundleString('Cancel')
+			}
+		}
+"></div>
+    </div>
+</div>

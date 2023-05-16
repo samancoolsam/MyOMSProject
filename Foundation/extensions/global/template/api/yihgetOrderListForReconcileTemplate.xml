@@ -1,0 +1,22 @@
+<OrderList>
+    <Order OrderHeaderKey="" OrderNo="" DocumentType="" EnterpriseCode="" Modifyts="">
+        <OrderLines>
+            <OrderLine FulfillmentType="" OrderLineKey="" PrimeLineNo="" DeliveryMethod="" OrderedQty="" ShipNode="" ReqShipDate="" ProcureFromNode="">
+                <Item ItemID="" UnitOfMeasure=""/>
+                <PersonInfoShipTo ZipCode=""/>
+                <Schedules>
+                    <Schedule OrderLineScheduleKey="" ProcureFromNode="" ShipNode="" Quantity="" Modifyts="" ExpectedShipmentDate="">
+                    </Schedule>
+                </Schedules>
+                <OrderStatuses>
+                    <OrderStatus OrderHeaderKey='' OrderLineKey='' OrderLineScheduleKey='' OrderReleaseKey='' OrderReleaseStatusKey='' ReceivingNode='' ShipNode='' Status='' StatusDate='' StatusQty='' TotalQuantity=''>
+                        <Details ExpectedDeliveryDate='' ExpectedShipmentDate='' ShipByDate='' >
+                        </Details>
+                        <OrderStatusTranQuantity StatusQty='' TotalQuantity='' TransactionalUOM=''/>
+                    </OrderStatus>
+                </OrderStatuses>
+            </OrderLine>
+        </OrderLines>
+        <PersonInfoShipTo ZipCode=""/>
+    </Order>
+</OrderList>															

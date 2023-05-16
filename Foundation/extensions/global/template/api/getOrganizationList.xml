@@ -1,0 +1,12 @@
+<OrganizationList>
+	<Organization OrganizationCode="" OrganizationKey="" OrganizationName="" OrganizationSuffix="" ParentOrganizationCode="" >
+		<CorporatePersonInfo AddressLine1="" AddressLine2=""
+        AddressLine3="" AddressLine4="" AddressLine5="" AddressLine6=""
+        Beeper="" City="" Company="." Country="" DayFaxNo=""
+        DayPhone="" Department=""
+        EMailID="" EveningPhone=""
+        FirstName="" LastName="" MiddleName="" MobilePhone=""
+        OtherPhone="" PersonID=""
+        PersonInfoKey="" State="" Title="" ZipCode=""/> 
+	</Organization>
+</OrganizationList>

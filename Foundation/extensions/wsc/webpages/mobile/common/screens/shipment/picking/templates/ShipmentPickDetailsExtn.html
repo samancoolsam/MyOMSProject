@@ -1,0 +1,384 @@
+		<div>
+		<!-- OMNI- 10393 STS Identifier on the customer pick up screen  - START -->
+		 	<div data-dojo-type="sc/plat/dojo/widgets/Label" 
+		 				data-ibmsc-uid="extn_sts_tag_label"
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_sts_tag_label' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '19' , 
+		_sc_extensibility_position : 'after' , 
+		_sc_extensibility_referenceUId : 'extn_STSOrderNum'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 path : 			'DeliveryMethod'
+,
+		 dynamicBindingFunc : 			'extn_getSTSLabel'
+,
+		 namespace : 			'Shipment'
+	}
+	}
+			}
+		}
+	 					}">
+		 	</div>  
+	<!-- OMNI- 10393 STS Identifier on the customer pick up screen  - END -->
+		 	<div data-dojo-type="sc/plat/dojo/widgets/Label" 
+		 				data-ibmsc-uid="extn_deliveryMethod"
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_deliveryMethod' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '1' , 
+		_sc_extensibility_position : 'after' , 
+		_sc_extensibility_referenceUId : 'lbl_Status'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 path : 			'DeliveryMethod'
+,
+		 dynamicBindingFunc : 			'getDeliveryMethod'
+,
+		 namespace : 			'Shipment'
+	}
+	}
+			}
+		}
+	 					}">
+		 	</div>  
+			<!--End: OMNI-6585-->
+			<!--Start: OMNI-102104-->
+			<div data-dojo-type="sc/plat/dojo/widgets/Label" 
+	 				data-ibmsc-uid="extn_lblShipmentSource"
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_lblShipmentSource' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '35' , 
+		_sc_extensibility_position : 'before' , 
+		_sc_extensibility_referenceUId : 'lbl_Products'  
+		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 path : 			'Shipment.ShipmentNodeType'
+,
+		 namespace : 			'Shipment'
+	}
+	}
+			}
+		}
+	 					}">
+		 	</div>
+			<!--End: OMNI-102104-->
+			<!--Start: OMNI-6624-->
+		 	<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" 
+		 				data-ibmsc-uid="extn_stsCustomerName"
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_stsCustomerName' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '15' , 
+		_sc_extensibility_position : 'before' , 
+		_sc_extensibility_referenceUId : 'extn_STSOrderNum'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 path : 			'Shipment.BillToAddress.FirstName'
+,
+		 dynamicBindingFunc : 			'extn_CustomerNameForSTSOrders'
+,
+		 namespace : 			'Shipment'
+	}
+	}
+			}
+		}
+	 					}">
+		 	</div>  
+		     <!--End: OMNI-6624-->
+		 	<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" 
+		 				data-ibmsc-uid="extn_STSOrderNum"
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_STSOrderNum' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '9' , 
+		spanLabel : true , 
+		_sc_extensibility_position : 'before' , 
+		_sc_extensibility_referenceUId : 'lbl_Products'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 path : 			'Shipment.DisplayOrderNo'
+,
+		 dynamicBindingFunc : 			'getDisplayOrderNumberList'
+,
+		 namespace : 			'Shipment'
+	}
+	}
+,	
+			 	label : 			this.getSimpleBundleString('Label_Order_number_mobile')
+			}
+		}
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" 
+		 				data-ibmsc-uid="extn_STSContainers"
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_STSContainers' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '12' , 
+		spanLabel : true , 
+		_sc_extensibility_position : 'after' , 
+		_sc_extensibility_referenceUId : 'lbl_Products'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 path : 			'Shipment.TotalContainers'
+,
+		 dynamicBindingFunc : 			'getNumberOfContainersLabel'
+,
+		 namespace : 			'Shipment'
+	}
+	}
+,	
+			 	label : 			this.getSimpleBundleString('extn_Label_NumberOfContainers')
+			}
+		}
+	 					}">
+		 	</div> 
+			<!--End: OMNI-6585--> 
+			<!--Start: STS Curbside UI Changes-->		
+			<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" 
+		 				data-ibmsc-uid="lbl_timeRemaining"
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								renderHidden : false , 
+		_sc_extensibility_operation : 'change' , 
+		_sc_extensibility_referenceUId : 'lbl_timeRemaining'  
+	 					}">
+		 	</div>  
+			<!-- OMNI-87502, OMNI-87879 Start -->				
+		 	<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" 
+		 				data-ibmsc-uid="extn_STS_ShipmentNo"
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								renderHidden : true , 
+		uId : 'extn_STS_ShipmentNo' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '31' , 
+		'class' : 'extnInlineBlock' , 
+		_sc_extensibility_position : 'after' , 
+		_sc_extensibility_referenceUId : 'lbl_timeRemaining'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 path : 			'Shipment.ShipmentNo'
+,
+		 namespace : 			'Shipment'
+	}
+	}
+,	
+			 	label : 			this.getSimpleBundleString('extn_Shipment_number')
+			}
+		}
+	 					}">
+		 	</div>
+			<!-- OMNI-87502, OMNI-87879 End -->				  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" 
+		 				data-ibmsc-uid="extn_lbl_timeRemaining"
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_lbl_timeRemaining' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '21' , 
+		'class' : 'a11yHiddenLabel duein dueInLabel' , 
+		spanLabel : true , 
+		_sc_extensibility_position : 'after' , 
+		_sc_extensibility_referenceUId : 'lbl_timeRemaining'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 path : 			'Shipment.ExpectedShipmentDat'
+,
+		 dynamicBindingPackage : 			'wsc.mobile.home.utils'
+,
+		 dynamicBindingFunc : 			'applyOverdueStyling'
+,
+		 namespace : 			'Shipment'
+,
+		 dynamicBindingClassName : 			'MobileHomeUtils'
+	}
+	}
+,	
+			 	label : 			this.getBundleString('Label_DueIn')
+			}
+		}
+	 					}">
+		 	</div>  
+			<!--End: STS Curbside UI Changes-->
+		 	<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" 
+		 				data-ibmsc-uid="extn_shipmentNo"
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_shipmentNo' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '4' , 
+		'class' : 'extnInlineBlock' , 
+		_sc_extensibility_position : 'after' , 
+		_sc_extensibility_referenceUId : 'lbl_Carrier'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 path : 			'Shipment.ShipmentNo'
+,
+		 namespace : 			'Shipment'
+	}
+	}
+,	
+			 	label : 			this.getSimpleBundleString('extn_Shipment_number')
+			}
+		}
+	 					}">
+		 	</div>  
+			<!--Start: OMNI-72475-->
+			<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" 
+		 				data-ibmsc-uid="extn_OMWStatusTimer"
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								renderHidden : true , 
+		uId : 'extn_OMWStatusTimer' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '23' , 
+		'class' : 'blockComponent autoLabelZeroWidth comappsWrapWord extn_OnMyWayTimer extnOnMyWayTimerLabel' , 
+		_sc_extensibility_position : 'after' , 
+		_sc_extensibility_referenceUId : 'lbl_IncludedInBatch'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 path : 			'Shipment.OMWStatusTimer'
+,
+		 dynamicBindingFunc : 			'getOnMyWayStatusTimer'
+,
+		 namespace : 			'Shipment'
+	}
+	}
+			}
+		}
+	 					}">
+		 	</div> 
+			<!--End: OMNI-72475-->
+		<!--OMNI-81595-MSL: Last Scan date Changes-START-->		
+		 	<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" 
+		 				data-ibmsc-uid="extn_Last_Scanned_On"
+	 					data-dojo-props="data_dojo_props_diff: {
+		uId : 'extn_Last_Scanned_On' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '25' , 
+		_sc_extensibility_position : 'after' , 
+		_sc_extensibility_referenceUId : 'lbl_Status'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 path : 			'Shipment.LastScanDate'
+,
+		 dynamicBindingFunc : 			''
+,
+		 namespace : 			'Shipment'
+	}
+	}
+,	
+			 	label : 			this.getSimpleBundleString('extn_Last_Scanned_On')
+			}
+		}
+	 					}">
+		 	</div>
+			<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" 
+		 				data-ibmsc-uid="extn_STS_LastScan_Date"
+	 					data-dojo-props="data_dojo_props_diff: {
+		uId : 'extn_STS_LastScan_Date' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '28' , 
+		_sc_extensibility_position : 'after' , 
+		_sc_extensibility_referenceUId : 'extn_stsCustomerName'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 path : 			'Shipment.LastScanDate'
+,
+		 dynamicBindingFunc : 			''
+,
+		 namespace : 			'Shipment'
+	}
+	}
+,	
+			 	label : 			this.getSimpleBundleString('extn_Last_Scanned_On')
+			}
+		}
+	 					}">
+		 	</div>
+		<!--OMNI-81595-MSL: Last Scan date Changes-END-->	
+
+		<!--OMNI-96066 START-->
+			<div data-dojo-type="sc/plat/dojo/widgets/Link" 
+		 				data-ibmsc-uid="extn_screenbase_link_Assembly"
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								renderHidden : true , 
+		uId : 'extn_screenbase_link_Assembly' , 
+		resourceId : 'WSC000015' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '32' , 
+		_sc_extensibility_position : 'before' , 
+		_sc_extensibility_referenceUId : 'lnk_PackAction'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	value : 			this.getSimpleBundleString('extn_Complete_Assembly1')
+			}
+		}
+	 					}">
+		 	</div>  
+			
+			<!--OMNI-96066 END-->
+			
+				<!--OMNI-102127 START-->
+			
+		 	<div data-dojo-type="sc/plat/dojo/widgets/Link" 
+		 				data-ibmsc-uid="extn_Receive_link"
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								renderHidden : true , 
+		uId : 'extn_Receive_link' , 
+		resourceId : 'WSC000015' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '33' , 
+		_sc_extensibility_position : 'after' , 
+		_sc_extensibility_referenceUId : 'extn_screenbase_link_Assembly'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	title : 			this.getSimpleBundleString('extn_Receive')
+,	
+			 	value : 			this.getSimpleBundleString('extn_Receive')
+,	
+			 	imageAlt : 			this.getSimpleBundleString('extn_Receive')
+			}
+		}
+	 					}">
+		 	</div> 
+				<!--OMNI-102127 START-->
+			 
+		</div>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Order OrderNo="" OrderDate="" OrderHeaderKey="" MaxOrderStatus="" MaxOrderStatusDesc="" MinOrderStatus="" MinOrderStatusDesc="" Status="">
+  <OrderLines>
+	   <OrderLine DeliveryMethod="" OrderHeaderKey="" OrderLineKey="" MinLineStatus="" MaxLineStatus="" OrderedQty="" >
+	      <OrderStatuses>
+			<OrderStatus OrderHeaderKey="" OrderLineKey="" Status="" StatusQty="" ></OrderStatus>
+		  </OrderStatuses>
+	      <ShipmentLines>
+		       <ShipmentLine OrderHeaderKey="" OrderLineKey="" ShipmentKey="" ShipmentLineKey=""  OriginalQuantity="" Quantity="" >
+	              <Shipment ManifestKey="" ShipmentKey="" Status="" ShipmentNo="" ManifestNo="" ShipNode="" 
+					IsPackProcessComplete="" ShipmentType="" DocumentType="" />     
+		       </ShipmentLine>
+	      </ShipmentLines>
+	   </OrderLine>
+  </OrderLines>
+</Order>
+

@@ -1,0 +1,10 @@
+<Containers> 
+<Container ShipmentContainerKey="" ShipmentKey="" SCAC="" ManifestNo="" ContainerLocation="" ContainerNo=""> 
+        <ContainerDetails>
+            <ContainerDetail>
+                <ShipmentLine/>
+                <Shipment ShipmentNo=""/>
+            </ContainerDetail>
+        </ContainerDetails>
+        </Container>
+</Containers>

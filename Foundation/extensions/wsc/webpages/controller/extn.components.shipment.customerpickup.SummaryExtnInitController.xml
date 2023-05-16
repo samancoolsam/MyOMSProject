@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Controller
+    className="com.sterlingcommerce.ui.web.platform.controller.SCUIXAPIMashupController"
+    controllerId="extn.components.shipment.customerpickup.SummaryExtnInitController"
+    requestMethodSupported="POST" screenId="extn.components.shipment.customerpickup.SummaryExtn">
+    <Group isAggregator="Y"/>
+    <MashupRefs>
+	<!--OMNI-85085 - START-->			
+	<MashupRef extnType="ADD"
+            mashupId="extn_getCurbsideGetShipmentLine" 
+	    mashupRefId="extn_getCurbsideGetShipmentLine" permissionId=""/>
+	<!--OMNI-85085 - END-->			
+    </MashupRefs>
+</Controller>

@@ -1,0 +1,381 @@
+<div class="sc-platform-screen-default ScanSummaryPopUp" >
+	<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" data-dojo-props="		highlightMatch : 'false' , 
+		'class' : 'extn_ScanSummaryPopUpHdr hashNumberAlign autoLabelZeroWidth blockComponent comappsWrapWord', 
+		uId : 'extn_scanSummaryHeader',
+ 		scParamDataFn :
+		function() { 
+			return { 
+			    label :'Audit Staging Summary',	
+				style:'text-align: center',
+			}
+		}">
+	</div>
+	<br/>
+<table>
+	<tr >	
+	<th style="text-align:left"> 
+	<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" data-dojo-props="spanLabel : true , 'class' : 'hashNumberAlign  blockComponent longTextbox zeroWidthLabelKey' ,		
+	 	uId : 'extn_shipmentRFCPCount_parent' , style : 'padding-top:0px; padding-left:10px;' , scParamDataFn :
+		 function() { 
+			return { 
+			 	label : this.getSimpleBundleString('extn_Scan_Summary_ShipmentRFCP_Count'),
+				bindingData :  {     
+				}
+			}
+			}">
+	</div>
+	</th>
+	<th style="text-align:left"> 
+	<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" data-dojo-props="spanLabel : true , 'class' : 'hashNumberAlign  blockComponent longTextbox zeroWidthLabelKey' ,		
+	 	uId : 'extn_shipmentRFCPCount_Colon' , style : 'padding-top:0px; padding-left:0px;' , scParamDataFn :
+		 function() { 
+			return { 
+			 	label : ':',
+				bindingData :  {     
+				}
+			}
+			}">
+	</div>
+	</th>
+	<th style="text-align:left"> 
+		<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" data-dojo-props="spanLabel : true , 'class' : 'hashNumberAlign  blockComponent longTextbox zeroWidthLabelKey' ,		
+	 	uId : 'extn_shipmentRFCPCount' , style : 'padding-top:0px; padding-left:10px;' , scParamDataFn :
+		 function() { 
+			return { 
+			 	label : '',
+				bindingData : 	{
+							 sourceBinding : 	{
+								 path : 			'ACADScanBatchDetails.StagedShipmentsCount'
+						,
+								 namespace : 			'getScanSummaryData_output'
+							}
+					}
+			}
+			}">
+	</div>
+	</th>
+	</tr>
+	
+	<tr >	
+	<th style="text-align:left"> 
+	<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" data-dojo-props="spanLabel : true , 'class' : 'hashNumberAlign  blockComponent longTextbox zeroWidthLabelKey' ,		
+	 	uId : 'extn_ShipmentScanCount_Parent' , style : 'padding-top:0px; padding-left:10px;' , scParamDataFn :
+		 function() { 
+			return { 
+			 	label : this.getSimpleBundleString('extn_Scan_Summary_ShipmentScan_Count'),
+				bindingData :  {     
+				}
+			}
+			}">
+	</div>
+	</th>
+	<th style="text-align:left"> 
+	<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" data-dojo-props="spanLabel : true , 'class' : 'hashNumberAlign  blockComponent longTextbox zeroWidthLabelKey' ,		
+	 	uId : 'extn_ShipmentScanCount_Colon' , style : 'padding-top:0px; padding-left:0px;' , scParamDataFn :
+		 function() { 
+			return { 
+			 	label : ':',
+				bindingData :  {     
+				}
+			}
+			}">
+	</div>
+	</th>
+	<th style="text-align:left"> 
+		<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" data-dojo-props="spanLabel : true , 'class' : 'hashNumberAlign  blockComponent longTextbox zeroWidthLabelKey' ,		
+	 	uId : 'extn_ShipmentScanCount' , style : 'padding-top:0px; padding-left:10px;' , scParamDataFn :
+		 function() { 
+			return { 
+			 	label : '',
+					bindingData : 	{
+							 sourceBinding : 	{
+								 path : 			'ACADScanBatchDetails.ShipmentsScanned'
+						,
+								 namespace : 			'getScanSummaryData_output'
+							}
+					}
+			}
+			}">
+	</div>
+	</th>
+	</tr>
+	
+	<tr >	
+	<th style="text-align:left"> 
+	<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" data-dojo-props="spanLabel : true , 'class' : 'hashNumberAlign  blockComponent longTextbox zeroWidthLabelKey' ,		
+	 	uId : 'extn_ShipmentCancelCount_Parent' , style : 'padding-top:0px; padding-left:10px;' , scParamDataFn :
+		 function() { 
+			return { 
+			 	label : this.getSimpleBundleString('extn_Scan_Summary_ShipmentCancel_Count'),
+				bindingData :  {     
+				}
+			}
+			}">
+	</div>
+	</th>
+	<th style="text-align:left"> 
+	<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" data-dojo-props="spanLabel : true , 'class' : 'hashNumberAlign  blockComponent longTextbox zeroWidthLabelKey' ,		
+	 	uId : 'extn_ShipmentCancelCount_Colon' , style : 'padding-top:0px; padding-left:0px;' , scParamDataFn :
+		 function() { 
+			return { 
+			 	label : ':',
+				bindingData :  {     
+				}
+			}
+			}">
+	</div>
+	</th>
+	<th style="text-align:left"> 
+		<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" data-dojo-props="spanLabel : true , 'class' : 'hashNumberAlign  blockComponent longTextbox zeroWidthLabelKey' ,		
+	 	uId : 'extn_ShipmentCancelCount' , style : 'padding-top:0px; padding-left:10px;' , scParamDataFn :
+		 function() { 
+			return { 
+			 	label : '',
+					bindingData : 	{
+							 sourceBinding : 	{
+								 path : 			'ACADScanBatchDetails.ShipmentsCancelled'
+						,
+								 namespace : 			'getScanSummaryData_output'
+							}
+					}
+			}
+			}">
+	</div>
+	</th>
+	</tr>
+	
+	<tr >	
+	<th style="text-align:left"> 
+	<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" data-dojo-props="spanLabel : true , 'class' : 'hashNumberAlign  blockComponent longTextbox zeroWidthLabelKey' ,		
+	 	uId : 'extn_ElapsedTime_Parent' , style : 'padding-top:0px; padding-left:10px;' , scParamDataFn :
+		 function() { 
+			return { 
+			 	label : this.getSimpleBundleString('extn_Scan_Summary_Elapsed_Time'),
+				bindingData :  {     
+				}
+			}
+			}">
+	</div>
+	</th>
+	<th style="text-align:left"> 
+	<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" data-dojo-props="spanLabel : true , 'class' : 'hashNumberAlign  blockComponent longTextbox zeroWidthLabelKey' ,		
+	 	uId : 'extn_ElapsedTime_Colon' , style : 'padding-top:0px; padding-left:0px;' , scParamDataFn :
+		 function() { 
+			return { 
+			 	label : ':',
+				bindingData :  {     
+				}
+			}
+			}">
+	</div>
+	</th>
+	<th style="text-align:left"> 
+		<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" data-dojo-props="spanLabel : true , 'class' : 'hashNumberAlign  blockComponent longTextbox zeroWidthLabelKey' ,		
+	 	uId : 'extn_ElapsedTime' , style : 'padding-top:0px; padding-left:10px;' , scParamDataFn :
+		 function() { 
+			return { 
+			 	label : '',
+					bindingData : 	{
+							 sourceBinding : 	{
+								 path : 			'ACADScanBatchDetails.BatchScanDuration'
+						,
+								 namespace : 			'getScanSummaryData_output'
+							}
+					}
+			}
+			}">
+	</div>
+	</th>
+	</tr>
+</table>
+<br/>
+<br/>	
+ <!-- START - OMNI-70025( UI: Finish Scanned activity - Missed & Cancelled & Abandoned NOT scanned counts) -->  
+ 	<table>
+		<tr >	
+	<th style="text-align:left"> 
+	<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" data-dojo-props="spanLabel : true , 'class' : 'hashNumberAlign  blockComponent longTextbox zeroWidthLabelKey' ,		
+	 	uId : 'extn_missedShipmentCount_parent' , style : 'padding-top:0px; padding-left:10px;' , scParamDataFn :
+		 function() { 
+			return { 
+			 	label : this.getSimpleBundleString('extn_Scan_Activity_Summary_MissedShipment_Count'),
+				bindingData :  {     
+				}
+			}
+			}">
+	</div>
+	</th>
+	<th style="text-align:left"> 
+	<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" data-dojo-props="spanLabel : true , 'class' : 'hashNumberAlign  blockComponent longTextbox zeroWidthLabelKey' ,		
+	 	uId : 'extn_missedShipmentCount_colon' , style : 'padding-top:0px; padding-left:0px;' , scParamDataFn :
+		 function() { 
+			return { 
+			 	label : ':',
+				bindingData :  {     
+				}
+			}
+			}">
+	</div>
+	</th>
+	<th style="text-align:left"> 
+		<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" data-dojo-props="spanLabel : true , 'class' : 'hashNumberAlign  blockComponent longTextbox zeroWidthLabelKey' ,		
+	 	uId : 'extn_missedShipmentCount' , style : 'padding-top:0px; padding-left:10px;' , scParamDataFn :
+		 function() { 
+			return { 
+			 	label : '',
+				bindingData : 	{
+							 sourceBinding : 	{
+								 path : 			'ACADScanBatchDetails.MissedShipments'
+						,
+								 namespace : 			'getScanSummaryData_output'
+							}
+					}
+			}
+			}">
+	</div>
+	</th>
+	</tr>
+	<tr >	
+	<th style="text-align:left"> 
+	<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" data-dojo-props="spanLabel : true , 'class' : 'hashNumberAlign  blockComponent longTextbox zeroWidthLabelKey' ,		
+	 	uId : 'extn_cancelledAndNotScannedCount_parent' , style : 'padding-top:0px; padding-left:10px;' , scParamDataFn :
+		 function() { 
+			return { 
+			 	label : this.getSimpleBundleString('extn_Scan_Activity_Summary_CancelledAndNoScan_Count'),
+				bindingData :  {     
+				}
+			}
+			}">
+	</div>
+	</th>
+	<th style="text-align:left"> 
+	<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" data-dojo-props="spanLabel : true , 'class' : 'hashNumberAlign  blockComponent longTextbox zeroWidthLabelKey' ,		
+	 	uId : 'extn_cancelledAndNotScannedCount_colon' , style : 'padding-top:0px; padding-left:0px;' , scParamDataFn :
+		 function() { 
+			return { 
+			 	label : ':',
+				bindingData :  {     
+				}
+			}
+			}">
+	</div>
+	</th>
+	<th style="text-align:left"> 
+		<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" data-dojo-props="spanLabel : true , 'class' : 'hashNumberAlign  blockComponent longTextbox zeroWidthLabelKey' ,		
+	 	uId : 'extn_cancelledAndNotScannedCount' , style : 'padding-top:0px; padding-left:10px;' , scParamDataFn :
+		 function() { 
+			return { 
+			 	label : '',
+				bindingData : 	{
+							 sourceBinding : 	{
+								 path : 			'ACADScanBatchDetails.CancelledAndNotScanned'
+						,
+								 namespace : 			'getScanSummaryData_output'
+							}
+					}
+			}
+			}">
+	</div>
+	</th>
+	</tr>
+	<!--	<tr >	
+	<th style="text-align:left"> 
+	<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" data-dojo-props="spanLabel : true , 'class' : 'hashNumberAlign  blockComponent longTextbox zeroWidthLabelKey' ,		
+	 	uId : 'extn_abandonedAndNotScannedCount_parent' , style : 'padding-top:0px; padding-left:10px;' , scParamDataFn :
+		 function() { 
+			return { 
+			 	label : this.getSimpleBundleString('extn_Scan_Activity_Summary_AbandonAndNoScan_Count'),
+				bindingData :  {     
+				}
+			}
+			}">
+	</div>
+	</th>
+	<th style="text-align:left"> 
+	<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" data-dojo-props="spanLabel : true , 'class' : 'hashNumberAlign  blockComponent longTextbox zeroWidthLabelKey' ,		
+	 	uId : 'extn_abandonedAndNotScannedCount_colon' , style : 'padding-top:0px; padding-left:0px;' , scParamDataFn :
+		 function() { 
+			return { 
+			 	label : ':',
+				bindingData :  {     
+				}
+			}
+			}">
+	</div>
+	</th>
+	<th style="text-align:left"> 
+		<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" data-dojo-props="spanLabel : true , 'class' : 'hashNumberAlign  blockComponent longTextbox zeroWidthLabelKey' ,		
+	 	uId : 'extn_abandonedAndNotScannedCount' , style : 'padding-top:0px; padding-left:10px;' , scParamDataFn :
+		 function() { 
+			return { 
+			 	label : '',
+				bindingData : 	{
+							 sourceBinding : 	{
+								 path : 			'ACADScanBatchDetails.AbandonedAndNotScanned'
+						,
+								 namespace : 			'getScanSummaryData_output'
+							}
+					}
+			}
+			}">
+	</div>
+	</th>
+	</tr> -->
+	</table>	
+<br/>
+<br/>
+ <!-- END - OMNI-70025( UI: Finish Scanned activity - Missed & Cancelled & Abandoned NOT scanned counts) -->  
+<table style="margin-left:auto;margin-right:auto;">
+		<tr>
+			<th>
+				<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" data-dojo-props="		highlightMatch : 'false' , 
+					'class' : 'extn_labelReceiving hashNumberAlign autoLabelZeroWidth blockComponent comappsWrapWord', 
+					uId : 'extn_finish_scan_activity',
+					scParamDataFn :
+					function() { 
+						return { 
+							label :'Finish Scanning Activity ?',	
+							style:'text-align: center',	
+						}
+					}">
+				</div>
+			</th>
+		</tr>
+		<tr></tr>
+	</table>
+	<br/>
+	<table style="margin-left:auto;margin-right:auto;">
+		<tr >
+			<th >
+				<div data-dojo-type="dijit/form/Button" data-dojo-props="		spanLabel : true , 
+				'class' : 'idxSpecialButton extnScanSummarybuttoncss' , 
+				style : 'float:left; padding-right:15px;',
+				showLabel : true , 
+				uId : 'Popup_btnYes'  ,
+				scParamDataFn :
+				function() { 
+					return { 
+						label : 'YES'
+					}
+				}">
+				</div>
+			</th>
+			<th >
+				<div data-dojo-type="dijit/form/Button" data-dojo-props="		spanLabel : true , 
+				'class' : 'idxSpecialButton extnScanSummarybuttoncss' ,
+				style : 'float:right; padding-left:15px;',
+				showLabel : true , 
+				uId : 'Popup_btnNo'  ,
+				scParamDataFn :
+				function() { 
+					return { 
+						label : 'NO'
+					}
+				}">
+				</div>
+			</th>
+		</tr>
+	</table>
+	
+	<br/>
+</div>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExtensionMetaData>
+    <ScreenExtension extnClassName="PaymentConfirmationExtn"
+        extnPackage="extn.payment.confirmation"
+        originalScreen="isccs.payment.confirmation.PaymentConfirmation"
+        originalScreenPackage="isccs.payment.confirmation" type="diffrential">
+        <Subscribers>
+            <Local>
+                <Subscriber description="extn_disablebuttons"
+                    eventId="afterScreenInit" isExtn="true" sequence="51">
+                    <Handler methodName="extn_disablebuttons"/>
+                </Subscriber>
+                <Subscriber description="extn_skipProcessOrderPayments"
+                    eventId="saveCurrentPage" isExtn="true" sequence="19">
+                    <Handler methodName="extn_skipProcessOrderPayments"/>
+                </Subscriber>
+            </Local>
+        </Subscribers>
+    </ScreenExtension>
+</ExtensionMetaData>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope"
+	xmlns:agil="http://AgileAcademyWhiteGlove.org/">
+	<soap:Header />
+	<soap:Body>
+		<agil:WhiteGlove>
+			<!--Optional:-->
+			<agil:xmlRequest>
+				<PierbridgeRateRequest>
+					<Carrier></Carrier>
+					<ServiceType></ServiceType>
+					<ShipDate />
+					<Sender>
+						<SentBy></SentBy>
+						<City></City>
+						<Region></Region>
+						<PostalCode></PostalCode>
+						<Country></Country>
+					</Sender>
+					<Receiver>
+						<CompanyName></CompanyName>
+						<Street></Street>
+						<Locale />
+						<Other />
+						<City></City>
+						<Region></Region>
+						<PostalCode></PostalCode>
+						<Country></Country>
+					</Receiver>
+					<Packages>
+						<Package>
+							<PackageType></PackageType>
+							<Weight></Weight>
+							<FreightClass></FreightClass>
+						</Package>
+					</Packages>
+					<UserName></UserName>
+				</PierbridgeRateRequest>
+			</agil:xmlRequest>
+		</agil:WhiteGlove>
+	</soap:Body>
+</soap:Envelope>

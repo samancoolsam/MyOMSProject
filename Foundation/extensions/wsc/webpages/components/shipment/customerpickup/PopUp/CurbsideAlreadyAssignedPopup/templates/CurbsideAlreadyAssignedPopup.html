@@ -1,0 +1,97 @@
+<div class="sc-platform-screen-default CurbsideAlreadyAssignedPopup" >
+    	 
+	
+	
+		<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" data-dojo-props=" highlightMatch : 'false' , 
+			      'class' : 'extn_ConfirmCss hashNumberAlign autoLabelZeroWidth blockComponent comappsWrapWord',
+				  style : 'text-align:center',
+                 uId : 'extn_UserName' ,
+				 _sc_extensibility_operation : 'insert' ,
+                _sc_extensibility_moveOrder : '20' ,
+                _sc_extensibility_position : 'before' ,
+                _sc_extensibility_referenceUId : 'extn_attending',
+				
+                
+                                                ">
+                        </div>
+		 
+	<br/>
+	
+			 <div data-dojo-type="sc/plat/dojo/widgets/DataLabel" data-dojo-props=" highlightMatch : 'false' , 
+			      'class' : 'extn_AlreadyAssignedtxt hashNumberAlign autoLabelZeroWidth blockComponent comappsWrapWord',
+				  style : 'text-align:center',
+                 uId : 'extn_attending' ,
+				 _sc_extensibility_operation : 'insert' ,
+                _sc_extensibility_moveOrder : '20' ,
+                _sc_extensibility_position : 'after' ,
+                _sc_extensibility_referenceUId : 'extn_UserName',
+				scParamDataFn :
+				 function() { 
+                     return {
+			     label : 	this.getSimpleBundleString('extn_is_attending_this_Order')
+
+     
+                     }
+                 }">
+                        </div>
+		 
+	
+     <br/>
+	 <br/>
+	 
+	 <div data-dojo-type="sc/plat/dojo/widgets/DataLabel" data-dojo-props=" highlightMatch : 'false' , 
+			      'class' : 'extn_AlreadyAssignedtxt hashNumberAlign autoLabelZeroWidth blockComponent comappsWrapWord',
+				  style : 'text-align:center',
+                 uId : 'extn_assign' ,
+				 _sc_extensibility_operation : 'insert' ,
+                _sc_extensibility_moveOrder : '20' ,
+                _sc_extensibility_position : 'after' ,
+                _sc_extensibility_referenceUId : 'extn_attending',
+				scParamDataFn :
+				 function() { 
+                     return { 
+			     label : 	this.getSimpleBundleString('extn_assign_it_to_you')
+
+                       
+                     }
+                 }">
+                        </div>
+		 
+	
+     <br/>
+	
+     <table style="margin-left:auto;margin-right:auto;">
+         <tr >
+             <th>
+                 <div data-dojo-type="dijit/form/Button" data-dojo-props="		spanLabel : true , 
+                 'class' : 'extn_Yes_Buttoncss ' , 
+                 style : 'float:left; padding-right:30px;',
+                 showLabel : true , 
+                 uId : 'extn_Yes_btn'  ,
+                 scParamDataFn :
+                 function() { 
+                     return { 
+                         label : 	this.getSimpleBundleString('extn_YES_Text')
+                     }
+                 }">
+                 </div>
+             </th>
+             <th>
+                 <div data-dojo-type="dijit/form/Button" data-dojo-props="		spanLabel : true , 
+                 'class' : 'extn_No_Buttoncss ' , 
+                 style : 'float:right; padding-left:30px;',
+                 showLabel : true ,  
+                 uId : 'extn_No_btn'  ,
+                 scParamDataFn :
+                 function() { 
+                     return { 
+                         label : 			this.getSimpleBundleString('extn_NO_Text')
+                     }
+                 }">
+                 </div>
+             </th>
+         </tr>
+         
+ </table>	
+ <br/>
+ </div>

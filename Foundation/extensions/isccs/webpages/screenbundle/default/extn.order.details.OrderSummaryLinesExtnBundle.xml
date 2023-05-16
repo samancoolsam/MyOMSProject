@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ScreenBundle
+    screenBundleId="extn.order.details.OrderSummaryLinesExtnBundle" screenId="extn.order.details.OrderSummaryLinesExtn">
+    <BundleEntries>
+        <BundleEntry bundleEntryId="extn_CarrierService_View_name"
+            bundleKey="extn_CarrierService"
+            bundleValueFn="_scSimpleBundle" property="name"
+            type="WIDGET" uId="extn_CarrierService"/>
+        <BundleEntry bundleEntryId="extn_SaveTheSale_View_name"
+            bundleKey="extn_Save_The_Sale"
+            bundleValueFn="_scSimpleBundle" property="name"
+            type="WIDGET" uId="extn_SaveTheSale"/>
+    </BundleEntries>
+</ScreenBundle>

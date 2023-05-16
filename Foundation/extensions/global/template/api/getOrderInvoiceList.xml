@@ -1,0 +1,5 @@
+<OrderInvoiceList LastOrderInvoiceKey="" LastRecordSet="" ReadFromHistory="" TotalOrderInvoiceList="1">
+<OrderInvoice ActualFreightCharge="" AmountCollected="" ChargeTransactionKey="" ChargedActualFreight="" CollectedExternally="" CollectedThroughAR="" DateInvoiced="" DerivedFromOrderHeaderKey="" HeaderTax="" InvoiceNo="" InvoiceType="" LineSubTotal="" MasterInvoiceNo="" OrderHeaderKey="" OrderInvoiceKey="" OtherCharges="" Reference1="" ReturnReleaseKey="" ShipmentKey="" Status="" TotalAmount="" TotalTax="">
+  <Extn ExtnInvoiceNo="" /> 
+  </OrderInvoice>
+  </OrderInvoiceList>

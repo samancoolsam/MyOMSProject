@@ -1,0 +1,30 @@
+		<div>
+		 	<div data-dojo-type="sc/plat/dojo/widgets/Label" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								renderHidden : true , 
+									'style' : 'color: #FF0000 !important;' ,
+		uId : 'extn_datalabel1' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '1' , 
+		'class' : 'screenHeader extn_Express' , 
+		_sc_extensibility_position : 'after' , 
+		_sc_extensibility_referenceUId : 'BatchNolbl'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 path : 			'Page.Output.StoreBatch.BatchNo'
+,
+		 dynamicBindingFunc : 			'getBatchNoLabel'
+,
+		 namespace : 			'StoreBatchLines'
+	}
+	}
+,	
+			 	label : 			this.getSimpleBundleString('Label_Batch')
+			}
+		}
+	 					}">
+		 	</div>  
+		</div>

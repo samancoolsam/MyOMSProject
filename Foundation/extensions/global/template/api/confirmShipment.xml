@@ -1,0 +1,5 @@
+<Shipment SellerOrganizationCode="" DocumentType="" EnterpriseCode="" OrderHeaderKey="" OrderNo="" ShipNode="" ShipmentType="" ShipmentKey="" ShipmentNo="">
+	<ShipmentLines>
+		<ShipmentLine ShipmentKey="" ItemID="" OrderHeaderKey="" OrderLineKey="" OrderNo="" PrimeLineNo="" ProductClass="" Quantity="" SubLineNo="" UnitOfMeasure="" ShipmentLineKey=""/>
+	</ShipmentLines>
+</Shipment>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright 2006-2008, Sterling Commerce, Inc. All rights reserved. -->
+<DBSchema>
+   <Entities>        
+      <Entity TableName="YFS_ORGANIZATION" >
+        <Attributes>
+			<!-- BOPIS-Phase 1 Implementation-Store feed::Begin-->
+			<Attribute ColumnName="EXTN_IS_BOPIS_ENABLED" 
+			DataType="BPSFlag" 
+			DefaultValue=" " 
+			Description="Y means Bopis Enabled"  
+			Nullable="true" 
+			Type="CHAR"
+			Size="1"
+			XMLName="ExtnIsBopisEnabled" 
+			XMLGroup="Extn" />
+		<!-- BOPIS-Phase 1 Implementation-Store feed::End-->
+		<!--BOPIS-2025 - Start -->
+         <Attribute ColumnName="EXTN_IS_SFS_ENABLED" DataType="BPSFlag" DefaultValue=" " Description="Y means SFS Enabled" Nullable="true" 
+              Type="CHAR" Size="1" XMLName="ExtnIsSFSEnabled" XMLGroup="Extn" />
+        <!--BOPIS-2025 - End -->
+		<!-- STS-Phase 1 Implementation-Store feed:: OMNI-6378 Begin-->
+		<Attribute ColumnName="EXTN_IS_STS_ENABLED"  DataType="STSFlag" DefaultValue="'N'" Description="Y means STS Enabled"  Nullable="true"
+		Type="CHAR"	Size="1" XMLName="ExtnIsSTSEnabled" XMLGroup="Extn" />
+		<!-- STS-Phase 1 Implementation-Store feed:: OMNI-6378 End-->
+		<!-- DSV-Phase 1 Implementation-Store feed:: OMNI-9572 Begin-->
+		<Attribute ColumnName="EXTN_IS_DSV_ENABLED"  DataType="DSVFlag" DefaultValue="'N'" Description="Y means DSV Enabled"  Nullable="true"
+		Type="CHAR"	Size="1" XMLName="ExtnIsDSVEnabled" XMLGroup="Extn" />
+		<!-- DSV-Phase 1 Implementation-Store feed:: OMNI-9572 End-->
+        </Attributes>
+        <Indices>
+		</Indices>        			
+      </Entity>
+    </Entities>
+</DBSchema>

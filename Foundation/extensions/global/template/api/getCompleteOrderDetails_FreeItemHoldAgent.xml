@@ -1,0 +1,75 @@
+<Order DocumentType="" EnterpriseCode="" MaxOrderStatus=""
+	MaxOrderStatusDesc="" MinOrderStatus="" MinOrderStatusDesc=""
+	OrderDate="" OrderHeaderKey="" OrderName="" OrderNo="" Status="">
+	<OverallTotals AdditionalLinePriceTotal=""
+		GrandCharges="" GrandDiscount="" GrandShippingBaseCharge=""
+		GrandShippingCharges="" GrandShippingDiscount="" GrandShippingTotal=""
+		GrandTax="" GrandTotal="" HdrCharges="" HdrDiscount=""
+		HdrShippingBaseCharge="" HdrShippingCharges="" HdrShippingDiscount=""
+		HdrShippingTotal="" HdrTax="" HdrTotal="" LineSubTotal=""
+		ManualDiscountPercentage="" PercentProfitMargin=""
+		RecurringAdditionalLinePriceTotal="">
+	</OverallTotals>
+	<OrderLines LastOrderLineKey="" TotalNumberOfRecords="">
+		<OrderLine OrderHeaderKey="" OrderLineKey="" OrderedQty=""
+			OrigOrderLineKey="" PrimeLineNo="" Purpose="" MaxLineStatus=""
+			MaxLineStatusDesc="" MinLineStatus="" MinLineStatusDesc=""
+			ScacAndService="" ShipNode="" ShipToKey="" Status="">
+			<Extn />
+			<ShipmentLines>
+				<ShipmentLine ActualQuantity=""
+					BackroomPickedQuantity="" BuyerMarkForNodeId="" CancelReason=""
+					DocumentType="" ItemID="" LevelOfService="" OrderHeaderKey=""
+					OrderLineKey="" OrderNo="" Quantity="" ShipmentKey=""
+					ShipmentLineKey="" ShipmentLineNo="" ShortageQty=""
+					ShortageResolutionReason="">
+					<Shipment ActualDeliveryDate="" ActualFreightCharge=""
+						ActualShipmentDate="" AllowOverage="" AppointmentNo=""
+						AssignedToUserId="" AssociationAction="" BBNMinVolume=""
+						DocumentType="" EnterpriseCode="" LevelOfService=""
+						OrderHeaderKey="" OrderNo="" ShipDate="" ShipMode="" ShipNode=""
+						ShipmentKey="" ShipmentNo="" ShipmentType="" Status=""
+						StatusDate="" />
+				</ShipmentLine>
+			</ShipmentLines>
+			<LineOverallTotals Charges="" Discount=""
+				ExtendedPrice="" LineTotal="" OptionPrice="" PricingQty="" Tax=""
+				UnitPrice="" />
+			<Item IsReturnable="" ItemDesc="" ItemID="" ItemShortDesc=""
+				ProductClass="" UnitOfMeasure="" />
+		</OrderLine>
+	</OrderLines>
+	<ReturnOrders>
+		<ReturnOrder EntryType="" DocumentType=""
+			DraftOrderFlag="" MaxOrderStatus="" MaxOrderStatusDesc=""
+			MinOrderStatus="" MinOrderStatusDesc="" OrderDate=""
+			OrderHeaderKey="" OrderName="" OrderNo="">
+			<OverallTotals AdditionalLinePriceTotal=""
+				GrandCharges="" GrandDiscount="" GrandShippingBaseCharge=""
+				GrandShippingCharges="" GrandShippingDiscount=""
+				GrandShippingTotal="" GrandTax="" GrandTotal="" HdrCharges=""
+				HdrDiscount="" HdrShippingBaseCharge="" HdrShippingCharges=""
+				HdrShippingDiscount="" HdrShippingTotal="" HdrTax="" HdrTotal=""
+				LineSubTotal="" ManualDiscountPercentage="" PercentProfitMargin=""
+				RecurringAdditionalLinePriceTotal="">
+			</OverallTotals>
+			<OrderLines>
+				<OrderLine DerivedFromOrderHeaderKey="" OrderNo=""
+					EntryType="" DerivedFromOrderLineKey="" MaxLineStatus=""
+					MaxLineStatusDesc="" MinLineStatus="" MinLineStatusDesc=""
+					OrderHeaderKey="" OrderLineKey="" OrderedQty="" OverallStatus=""
+					PrimeLineNo="" ReturnReason="" ReturnReasonLongDesc=""
+					ReturnReasonShortDesc="" ShipNode="" Status="" StatusQuantity="">
+					<Item ItemID="" />
+					<LineOverallTotals Charges="" Discount=""
+						ExtendedPrice="" LineTotal="" OptionPrice="" PricingQty="" Tax=""
+						UnitPrice="" />
+					<LinePriceInfo LineTotal="" ListPrice=""
+						PricingUOM="" UnitPrice="" />
+					<Extn />
+				</OrderLine>
+			</OrderLines>
+			<Extn />
+		</ReturnOrder>
+	</ReturnOrders>
+</Order>

@@ -1,0 +1,34 @@
+<Order OrderNo="" OrderHeaderKey="" PaymentStatus=""
+	CustomerEMailID="">
+	<Extn />
+	<OrderLines>
+		<OrderLine CanAddServiceLines="" CarrierServiceCode=""
+			ScacAndService="" ChainedFromOrderHeaderKey="" DeliveryMethod=""
+			DerivedFromOrderHeaderKey="" DerivedFromOrderLineKey=""
+			DerivedFromOrderReleaseKey="" OrderHeaderKey="" OrderLineKey=""
+			OrderedQty="" PrimeLineNo="" ReturnReason="" SCAC="" ShipNode="">
+			<PersonInfoShipTo AddressLine1="" AddressLine2=""
+				AddressLine3="" AddressLine4="" AddressLine5="" AddressLine6=""
+				City="" Company="" Country="" ZipCode="" State="">
+			</PersonInfoShipTo>
+			<PersonInfoBillTo AddressLine1="" AddressLine2=""
+				AddressLine3="" AddressLine4="" AddressLine5="" AddressLine6=""
+				City="" Company="" Country="" ZipCode="" State="">
+			</PersonInfoBillTo>
+			<ItemDetails ItemGroupCode="" ItemID="" ItemKey=""
+				UnitOfMeasure="">
+				<Extn />
+			</ItemDetails>
+			<Item ItemID="" ItemShortDesc="" ProductClass=""
+				ProductLine="" UnitOfMeasure="" />
+			<Extn />
+		</OrderLine>
+	</OrderLines>
+	<Shipments>
+		<Shipment ShipmentNo="" ProNo=""></Shipment>
+	</Shipments>
+	<PersonInfoShipTo AddressLine1="" AddressLine2="" AddressLine3=""
+		AddressLine4="" AddressLine5="" AddressLine6="" City="" Company=""
+		Country="US" ZipCode="" State="">
+	</PersonInfoShipTo>
+</Order>

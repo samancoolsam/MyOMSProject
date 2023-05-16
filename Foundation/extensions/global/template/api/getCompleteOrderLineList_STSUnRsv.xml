@@ -1,0 +1,16 @@
+<OrderLineList>
+	<OrderLine ChainedFromOrderHeaderKey="" ChainedFromOrderLineKey="" Status="" LineType="" MaxLineStatus="" MinLineStatus="" FulfillmentType="" OrderLineKey="" OrderHeaderKey="" >
+		<ShipmentLines>
+			<ShipmentLine ActualQuantity="" BackroomPickComplete="" BackroomPickedQuantity="" ChainedFromOrderHeaderKey="" ChainedFromOrderLineKey=""  IsCustomerPickComplete="" IsPackComplete="" ItemID="" OrderHeaderKey="" OrderLineKey="" OrderNo="" ShipmentKey="" ShipmentLineKey="">
+				<!-- Start OMNI-53518: STS2.0 - Do not send SIM Cancel Reserve Update before Shipment moves to Ready to Ship status -->
+				<Shipment ShipmentNo="" OrderNo="" ShipNode="" ReceivingNode="" DocumentType="" Status="">
+				<!-- End OMNI-53518 -->
+				<Extn ExtnRMSTransferNo="" />
+				<ShipNode NodeType="" />
+				</Shipment>				
+			</ShipmentLine>
+		</ShipmentLines>
+		<Order OrderHeaderKey="" OrderName="" OrderNo="" MaxOrderStatus="" MinOrderStatus="">
+		</Order>
+	</OrderLine>
+</OrderLineList>

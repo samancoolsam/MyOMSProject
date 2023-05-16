@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DBSchema>
+	<Entities>
+		<Entity ApiNeeded="Y" 
+			Description=""
+			HasHistory="False" Prefix="ACAD" TableName="ACAD_MULTIBOX_LOOKUP" XMLName="AcadMultiboxLookup">
+			<Attributes>
+			        <Attribute ColumnName="MULTIBOX_LOOKUP_KEY" Size="40" DataType="Key" DefaultValue="' '" Description="Primary key for the table" Name="MultiboxLookupKey" Nullable="false" XMLGroup="" XMLName="MultiboxLookupKey" />
+					<Attribute ColumnName="ITEM_ID" DataType="ItemID" DefaultValue="' '" Description="Item ID"      		Name="ItemID" Nullable="false" XMLGroup="" XMLName="ItemID" />
+					<Attribute ColumnName="MB_FACTOR" DataType="PositiveInteger" Description="MB Factor"           		Name="MbFactor" Nullable="true" XMLGroup="" XMLName="MbFactor" />
+					<Attribute ColumnName="ITEM_PARTS" DataType="PositiveInteger"  Description="Item Parts"       			Name="ItemParts" Nullable="true" XMLGroup="" XMLName="ItemParts" />
+					<Attribute ColumnName="HEIGHT" DataType="Number" Type="NUMBER" Size="24" DecimalDigits=""  Description="Height"        			Name="Height" Nullable="true" XMLGroup="" XMLName="Height" />
+					<Attribute ColumnName="WIDTH" DataType="Number" Type="NUMBER"  Size="24" DecimalDigits="" Description="Width"                		Name="Width" Nullable="true" XMLGroup="" XMLName="Width" />
+					<Attribute ColumnName="LENGTH" DataType="Number" Type="NUMBER" Size="24" DecimalDigits="" Description="Length"              			Name="Length" Nullable="true" XMLGroup="" XMLName="Length" />
+					<Attribute ColumnName="WEIGHT" DataType="Number" Type="NUMBER" Size="24" DecimalDigits="" Description="Weight"       			Name="Weight" Nullable="true" XMLGroup="" XMLName="Weight" />
+					
+			    
+					<Attribute ColumnName="CREATETS" DataType="TimeStamp" DefaultValue="sysdate" Description="Create TimeStamp" />
+					<Attribute ColumnName="MODIFYTS" DataType="TimeStamp" DefaultValue="sysdate" Description="Modify TimeStamp" />
+					<Attribute ColumnName="CREATEUSERID" DataType="UserId" DefaultValue="&apos; &apos;" Description="Creating User ID" />
+					<Attribute ColumnName="MODIFYUSERID" DataType="UserId" DefaultValue="&apos; &apos;" Description="Modifying User ID" />
+					<Attribute ColumnName="CREATEPROGID" DataType="ProgramID" DefaultValue="&apos; &apos;" Description="Creating Program ID" />
+					<Attribute ColumnName="MODIFYPROGID" DataType="ProgramID" DefaultValue="&apos; &apos;" Description="Modifying Program ID" />
+					<Attribute ColumnName="LOCKID" DataType="Lockid" DefaultValue="0" Description="Lock ID" />
+			</Attributes>
+			
+			<!-- PrimaryKey is a mandatory attribute in entity definition. This
+				element can have ONLY ONE attribute element -->
+					<PrimaryKey Name="MULTIBOX_LOOKUP_PK">
+				       <Attribute ColumnName="MULTIBOX_LOOKUP_KEY"
+					    Name="MultiboxLookupKey" />
+			       </PrimaryKey>
+			<Indices>
+				<Index Name="IND_ITEMID_PART" Unique="True">
+					<Column Name="ITEM_ID" />
+					<Column Name="ITEM_PARTS" />
+				</Index>
+			</Indices>
+
+		</Entity>
+	</Entities>
+</DBSchema>

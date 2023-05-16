@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Controller
+    className="com.sterlingcommerce.ui.web.platform.controller.SCUIXAPIMashupController"
+    controllerId="extn.components.shipment.container.pack.ContainerPackProductListExtnBehaviorController"
+    requestMethodSupported="POST" screenId="extn.components.shipment.container.pack.ContainerPackProductListExtn">
+    <MashupRefs>
+        <MashupRef extnType="ADD" mashupId="UnResrvMsgToSIMOnShrtg"
+            mashupRefId="extn_recordShortageForPack" permissionId=""/>
+        <MashupRef extnType="ADD" mashupId="extn_recordShortageForPack"
+            mashupRefId="extn_recordShortageForPack_ref" permissionId=""/>
+    </MashupRefs>
+</Controller>

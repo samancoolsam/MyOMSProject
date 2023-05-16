@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<InboxList>
+    <Inbox ConsolidationCount="" ExceptionType="" GeneratedOn="" InboxKey="" Priority="">
+        <Queue QueueName=""/>
+	    <Extn ExtnAlertKey="" ExtnAssociatedCustID=""/>
+    </Inbox>
+</InboxList>

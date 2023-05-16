@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DBSchema>
+	<Entities>
+		<Entity ApiNeeded="Y" 
+			Description=""
+			HasHistory="False" Prefix="ACAD" TableName="ACAD_WG_CARRIER_OVERRIDE" XMLName="AcadWgCarrierOverride">
+			<Attributes>
+				<Attribute ColumnName="WG_CARRIER_OVERRIDE_KEY" Size="40" DataType="Key" DefaultValue="' '" Description="Primary key for the table" Name="WGCarrierOverrideKey" Nullable="false" XMLGroup="" XMLName="WGCarrierOverrideKey" />
+				<Attribute ColumnName="ZIP_CODE" DataType="Text-37" DefaultValue="' '" Description="Primary key for the table" Name="ZipCode" Nullable="false" XMLGroup="" XMLName="ZipCode" />
+				<Attribute ColumnName="SCAC" DataType="Text-37" DefaultValue="' '" Description="SCAC"   Name="SCAC" Nullable="false" XMLGroup="" XMLName="SCAC" />
+				<Attribute ColumnName="CREATETS" DataType="TimeStamp" DefaultValue="sysdate" Description="Create TimeStamp" />
+				<Attribute ColumnName="MODIFYTS" DataType="TimeStamp" DefaultValue="sysdate" Description="Modify TimeStamp" />
+				<Attribute ColumnName="CREATEUSERID" DataType="UserId" DefaultValue="&apos; &apos;" Description="Creating User ID" />
+				<Attribute ColumnName="MODIFYUSERID" DataType="UserId" DefaultValue="&apos; &apos;" Description="Modifying User ID" />
+				<Attribute ColumnName="CREATEPROGID" DataType="ProgramID" DefaultValue="&apos; &apos;" Description="Creating Program ID" />
+				<Attribute ColumnName="MODIFYPROGID" DataType="ProgramID" DefaultValue="&apos; &apos;" Description="Modifying Program ID" />
+				<Attribute ColumnName="LOCKID" DataType="Lockid" DefaultValue="0" Description="Lock ID" />
+			</Attributes>
+
+			<!-- PrimaryKey is a mandatory attribute in entity definition. This
+				element can have ONLY ONE attribute element -->
+			<PrimaryKey Name="CARR_OVERRIDE_PK">
+				<Attribute ColumnName="WG_CARRIER_OVERRIDE_KEY"
+					    Name="WGCarrierOverrideKey" />
+			</PrimaryKey>
+			
+			<Indices>
+				<Index Name="INDEX_ZIPCODE" Unique="True">
+					<Column Name="ZIP_CODE" />
+				</Index>
+			</Indices>
+
+		</Entity>
+	</Entities>
+</DBSchema>

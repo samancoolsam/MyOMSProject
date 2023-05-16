@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Controller className="com.sterlingcommerce.ui.web.platform.controller.SCUIXAPIMashupController"
+ controllerId="extn.mobile.home.AuditStagedShipment.PopUp.ScanSummaryPopUp.ScanSummaryPopUpBehaviorController" 
+ requestMethodSupported="POST" screenId="extn.mobile.home.AuditStagedShipment.PopUp.ScanSummaryPopUp.ScanSummaryPopUp">
+<MashupRefs>
+	<MashupRef mashupId="getScanSummaryData"
+            mashupRefId="getScanSummaryDataOnInit" permissionId=""/>
+<!--  OMNI-60712 Changes	 -->	
+    <MashupRef mashupId="startBatchScanProcess_AuditShipmentHomeScreen"
+            mashupRefId="updateBatchStatusAsCompletedOnFinish" permissionId=""/>
+<!--  OMNI-60712 Changes	 -->	
+<!--  OMNI-82354 Changes	 -->	
+    <MashupRef mashupId="insertMissedShipments_AcadMissedScanDetails" 
+            mashupRefId="insertMissedShipmentsInDBOnFinish" permissionId=""/>
+<!--  OMNI-82354 Changes	 -->	
+</MashupRefs>
+</Controller>

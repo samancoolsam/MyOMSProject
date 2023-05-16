@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Controller
+    className="com.sterlingcommerce.ui.web.platform.controller.SCUIXAPIMashupController"
+    controllerId="extn.components.shipment.container.pack.ContainerPackItemScanExtnBehaviorController"
+    requestMethodSupported="POST" screenId="extn.components.shipment.container.pack.ContainerPackItemScanExtn">
+    <!-- OMNI-69797 START -->  
+	<MashupRefs>
+        <MashupRef extnType="ADD"
+            mashupId="extn_getFlagToDisableAddQtyAndReadOnlyScannedQty"
+            mashupRefId="extn_getFlagToDisableAddQtyAndReadOnlyScannedQty" permissionId=""/>
+    </MashupRefs>
+    </Controller>
+	<!-- OMNI-69797 END -->

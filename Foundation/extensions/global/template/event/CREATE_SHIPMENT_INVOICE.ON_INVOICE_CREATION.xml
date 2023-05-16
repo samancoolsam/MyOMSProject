@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OrderInvoice OrderNo="" DateInvoiced="" InvoiceNo="" InvoiceType="" ShipmentKey="" OrderHeaderKey="">
+<!-- OMNI-2732 Narvar: Separate Source for BOPIS and SFS Emails - START -->
+   <Shipment ShipmentKey="" ShipmentType="" OrderNo="" ActualShipmentDate="" DeliveryMethod="">
+<!-- OMNI-2732 Narvar: Separate Source for BOPIS and SFS Emails - END -->
+      <ShipmentLines>
+         <ShipmentLine Quantity="" OrderNo="" ShipmentLineKey="" OrderLineKey="">
+	    <!-- OMNI-15425 : Adding attributes FulfillmentType -->
+            <OrderLine OrderLineKey="" OriginalOrderedQty="" OrderedQty="" ShippedQuantity="" FulfillmentType="">
+               <Extn ExtnWCOrderItemIdentifier="" />        
+            </OrderLine>
+         </ShipmentLine>
+      </ShipmentLines>
+      <!-- OMNI-42008 Adding ShipmentAudits - Start -->
+	  <ShipmentStatusAudits TotalNumberOfRecords="">
+		<ShipmentStatusAudit NewStatus="" NewStatusDate="" ShipmentKey="" >
+	</ShipmentStatusAudit>
+	</ShipmentStatusAudits>
+       <!-- OMNI-42008 Adding ShipmentAudits - End -->
+      <Containers>
+         <Container TrackingNo="">
+            <ContainerDetails>
+               <ContainerDetail ShipmentLineKey="" />
+            </ContainerDetails>
+         </Container>
+      </Containers>
+	</Shipment>
+</OrderInvoice>
+

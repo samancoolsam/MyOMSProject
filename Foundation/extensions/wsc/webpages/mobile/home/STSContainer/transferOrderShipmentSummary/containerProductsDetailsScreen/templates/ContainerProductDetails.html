@@ -1,0 +1,247 @@
+<div class="sc-platform-screen-default containerProductDetails">
+    <div data-dojo-type="idx/layout/ContentPane" data-dojo-props="		spanLabel : true , 
+		'class' : 'detailsPanel' , 
+		colspan : 1 , 
+		uId : 'productDetailsPanel'  
+ ">
+        <div data-dojo-type="sc/plat/dojo/widgets/DataLabel" data-dojo-props="		spanLabel : true , 
+		'class' : 'hashNumberAlign autoLabelZeroWidth blockComponent comappsWrapWord' , 
+		uId : 'itemid'  
+ 		,scParamDataFn :
+		 function() { 
+			return { 
+			 		label : 			this.getBundleString('extn_ItemID1')
+,	
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 path : 			'ContainerDetail.ShipmentLine.OrderLine.Item.ItemID'
+,
+		 namespace : 			'containerDetail_Src'
+	}
+	}
+			}
+		}
+"></div>
+<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" data-dojo-props="		spanLabel : true , 
+		'class' : 'hashNumberAlign autoLabelZeroWidth blockComponent comappsWrapWord' , 
+		uId : 'itemdescriptionLink'  
+ 		,scParamDataFn :
+		 function() { 
+			return { 
+			 		label : 			this.getBundleString('extn_ItemDesc')
+,	
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 path : 			'ContainerDetail.ShipmentLine.OrderLine.Item.ItemDesc'
+,
+		 namespace : 			'containerDetail_Src'
+	}
+	}
+			}
+		}
+"></div>
+
+      
+        <div data-dojo-type="sc/plat/dojo/widgets/DataLabel" data-dojo-props="		spanLabel : true , 
+		'class' : 'blockComponent zeroWidthLabelKey' , 
+		uId : 'lbl_Quantity'  
+ 		,scParamDataFn :
+		 function() { 
+			return { 
+			 	label : 			this.getBundleString('Label_Quantity')
+,	
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 path : 			'ContainerDetail.Quantity'
+,
+				 namespace : 			'containerDetail_Src'
+	}
+	}
+			}
+		}
+"></div>
+</div>
+<!-- OMNI -9408 - STS - Order Search Result - Cancellation Product Information - START -->
+ <div data-dojo-type="idx/layout/ContentPane" data-dojo-props="		spanLabel : true , 
+		'class' : 'screen itemImageSmallDivAlt showCursorPointer' , 
+		'style' : ' float: left; margin-right: 10px;' ,
+		colspan : 1 ,  renderHidden: true,
+		uId : 'imagePanel'  
+ ">
+        <div data-dojo-type="sc/plat/dojo/widgets/Image" data-dojo-props="		'class' : '' , 
+		uId : 'itemImage'  
+ 		,scParamDataFn :
+		 function() { 
+			return { 
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 path : 			'ShipmentLine.OrderLine.ItemDetails.PrimaryInformation'
+,
+		 namespace : 			'cancelLine_Src'
+	}
+,
+		 imageBindings : 	{
+		 defaultImage : 	{
+		 style : 			''
+,
+		 src : 			''
+,
+		 styleClass : 			'noItemImage'
+	}
+,
+		 imageUrl : 	{
+		 path : 			'ImageLocation'
+,
+		 dynamicBindingPackage : 			'ias.utils'
+,
+		 dynamicBindingFunc : 			'getItemImageLocation'
+,
+		 dynamicBindingClassName : 			'ScreenUtils'
+	}
+,
+		 imageIcon : 	{
+		 path : 			'ImageID'
+,
+		 dynamicBindingPackage : 			'ias.utils'
+,
+		 dynamicBindingFunc : 			'getItemImageId'
+,
+		 dynamicBindingClassName : 			'ScreenUtils'
+	}
+	}
+	}
+			}
+		}
+"></div>
+    </div>
+    <div data-dojo-type="idx/layout/ContentPane" data-dojo-props="		spanLabel : true , 
+		'class' : 'detailsPanel' , renderHidden: true ,
+		colspan : 1 , 
+		'style' :'  min-height: 65px; margin-left: 40px; padding-left: 12px;',
+		uId : 'CancelproductDetailsPanel', 
+ ">
+    <!--    <div data-dojo-type="sc/plat/dojo/widgets/DataLabel" data-dojo-props="		spanLabel : true , 
+		'class' : 'hashNumberAlign autoLabelZeroWidth blockComponent comappsWrapWord' , 
+		uId : 'Cancelleditemid'  
+ 		,scParamDataFn :
+		 function() { 
+			return { 
+			 		label : 			this.getBundleString('extn_ItemID1')
+,	
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 path : 			'ShipmentLine.OrderLine.Item.ItemID'
+,
+		 namespace : 			'cancelLine_Src'
+	}
+	}
+			}
+		}
+"></div> -->
+
+<!--       // OMNI -9408 - STS - Order Search Result - Cancellation Product Information - START -->
+<div data-dojo-type="sc/plat/dojo/widgets/Link" data-dojo-props="		spanLabel : true , 
+		'class' : 'groupHeader blockComponent productdesclink disableLink' , 
+		uId : 'CancelleditemdescriptionLink'  
+ 		,scParamDataFn :
+		 function() { 
+			return { 
+			 		'aria-label' : 			this.getSimpleBundleString('arialabel_product_title')
+,				 	bindingData : 	{
+		 sourceBinding : 	{
+		 path : 			'ShipmentLine.OrderLine.ItemDetails.PrimaryInformation.ExtendedDisplayDescription'
+,
+		 namespace : 			'cancelLine_Src'
+	}
+	}
+			}
+		}
+"></div>
+
+      
+        <div data-dojo-type="sc/plat/dojo/widgets/DataLabel" data-dojo-props="		spanLabel : true , 
+		'class' : 'blockComponent zeroWidthLabelKey' , 
+		uId : 'lbl_CurrentQuantity'  
+ 		,scParamDataFn :
+		 function() { 
+			return { 
+			 	label : 			this.getBundleString('extn_Current_Quantity')
+,	
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 path : 			'ShipmentLine.OrderLine.OrderedQty'
+,
+ 		 dynamicBindingFunc : 			'getCurrentQuantityWithUOM'
+
+,
+				 namespace : 			'cancelLine_Src'
+	}
+	}
+			}
+		}
+"></div>
+	  <div data-dojo-type="sc/plat/dojo/widgets/DataLabel" data-dojo-props="		spanLabel : true , 
+		'class' : 'blockComponent zeroWidthLabelKey' , 
+		uId : 'lbl_OrderedQuantity'  
+ 		,scParamDataFn :
+		 function() { 
+			return { 
+			 	label : 			this.getBundleString('extn_Original_Quantity')
+,	
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 path : 			'ShipmentLine.OrderLine.OriginalOrderedQty'
+,
+ 		 dynamicBindingFunc : 			'getOriginalQuantityWithUOM'
+
+,
+				 namespace : 			'cancelLine_Src'
+	}
+	}
+			}
+		}
+"></div>
+  <div data-dojo-type="sc/plat/dojo/widgets/DataLabel" data-dojo-props="		spanLabel : true , 
+		'class' : 'blockComponent zeroWidthLabelKey extn_STS_CancellationLabel',
+		uId : 'lbl_ReasonCode'  
+ 		,scParamDataFn :
+		 function() { 
+			return { 
+			 	label : 			this.getBundleString('Label_CancelReason')
+,	
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 path : 			'ShipmentLine.ExtnShortPickedReasonCode'
+,
+				 namespace : 			'cancelLine_Src'
+	}
+	}
+			}
+		}
+"></div>
+  <div data-dojo-type="sc/plat/dojo/widgets/DataLabel" data-dojo-props="		spanLabel : true , 
+		'class' : 'blockComponent zeroWidthLabelKey extn_STS_CancellationLabel',
+		renderHidden : 'true' ,
+		uId : 'lbl_SOReasonCode'  
+ 		,scParamDataFn :
+		 function() { 
+			return { 
+			 	label : 			this.getBundleString('Label_CancelReason')
+,	
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 path : 			'ShipmentLine.ExtnShortPickedReasonCode'
+,
+		  		 dynamicBindingFunc : 			'getSOCancelReason'
+
+,
+				 namespace : 			'cancelLine_Src'
+
+	}
+	}
+			}
+		}
+"></div>
+</div>
+<!--     OMNI -9408 - STS - Order Search Result - Cancellation Product Information - END -->
+</div>

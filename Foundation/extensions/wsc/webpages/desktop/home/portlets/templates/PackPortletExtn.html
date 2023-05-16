@@ -1,0 +1,120 @@
+		<div>
+		 	<div data-dojo-type="idx/layout/ContentPane" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_scanPanel_PackPortlet' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '7' , 
+		'class' : 'scanPanel ' , 
+		_sc_extensibility_position : 'before' , 
+		_sc_extensibility_referenceUId : 'extn_productScanForm_PackPortlet'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="idx/layout/ContentPane" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_productScanForm_PackPortlet' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '5' , 
+		_sc_extensibility_position : 'before' , 
+		_sc_extensibility_referenceUId : 'extn_barcodeScanPanelForm_PackPortlet'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="idx/layout/ContentPane" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_productScanForm_PackPortlet' , 
+		_sc_extensibility_operation : 'move' , 
+		_sc_extensibility_moveOrder : '8' , 
+		_sc_extensibility_position : 'first' , 
+		_sc_extensibility_referenceUId : 'extn_scanPanel_PackPortlet'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="idx/layout/ContentPane" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_barcodeScanPanelForm_PackPortlet' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '1' , 
+		'class' : 'barcodeScanPanel' , 
+		_sc_extensibility_position : 'before' , 
+		_sc_extensibility_referenceUId : 'pnlContent'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="idx/layout/ContentPane" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_barcodeScanPanelForm_PackPortlet' , 
+		_sc_extensibility_operation : 'move' , 
+		_sc_extensibility_moveOrder : '6' , 
+		_sc_extensibility_position : 'first' , 
+		_sc_extensibility_referenceUId : 'extn_productScanForm_PackPortlet'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="idx/layout/ContentPane" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								_sc_extensibility_operation : 'change' , 
+		style : 'width:405px; height: 60px;' , 
+		_sc_extensibility_referenceUId : 'pnlContent'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="idx/layout/ContentPane" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'pnlContent' , 
+		_sc_extensibility_operation : 'move' , 
+		_sc_extensibility_moveOrder : '3' , 
+		_sc_extensibility_position : 'last' , 
+		_sc_extensibility_referenceUId : 'extn_barcodeScanPanelForm_PackPortlet'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="dijit/form/Button" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								_sc_extensibility_operation : 'change' , 
+		style : 'padding-left: 15px; padding-top: -50px;' , 
+		_sc_extensibility_referenceUId : 'btnPack'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="idx/form/TextBox" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								fieldWidth : '350' , 
+		_sc_extensibility_operation : 'change' , 
+		'class' : 'extn_Width' , 
+		style : 'width:200px; height:65px;' , 
+		_sc_extensibility_referenceUId : 'txtOrderNumber'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	hint : 			this.getSimpleBundleString('extn_Scan_or_enter_Order_or_Shipment_')
+,	
+			 	label : 			this.getSimpleBundleString('Label_Order_number_or_shipment_number')
+			}
+		}
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="idx/form/TextBox" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'txtOrderNumber' , 
+		_sc_extensibility_operation : 'move' , 
+		_sc_extensibility_moveOrder : '2' , 
+		_sc_extensibility_position : 'first' , 
+		_sc_extensibility_referenceUId : 'extn_barcodeScanPanelForm_PackPortlet'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/Link" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_scanProduct_PackPortlet' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '4' , 
+		'class' : 'buttonConnect singlecolumntable' , 
+		_sc_extensibility_position : 'after' , 
+		style : 'width:50px; height:33px; padding-right:60px; padding-top:24px;' , 
+		hasImage : true , 
+		appendToContextRoot : true , 
+		imageSrc : 'wsc/resources/css/icons/images/barcode_blue.png' , 
+		_sc_extensibility_referenceUId : 'txtOrderNumber'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	title : 			this.getSimpleBundleString('Tooltip_arialabel_scanProduct')
+,	
+			 	imageAlt : 			this.getSimpleBundleString('Tooltip_arialabel_scanProduct')
+			}
+		}
+	 					}">
+		 	</div>  
+		</div>

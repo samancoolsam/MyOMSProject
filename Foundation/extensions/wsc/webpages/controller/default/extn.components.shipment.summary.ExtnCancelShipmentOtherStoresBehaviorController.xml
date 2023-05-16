@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Controller className="com.sterlingcommerce.ui.web.platform.controller.SCUIXAPIMashupController" controllerId="extn.components.shipment.summary.ExtnCancelShipmentOtherStoresBehaviorController" requestMethodSupported="POST" screenId="extn.components.shipment.summary.ExtnCancelShipmentOtherStores">
+	<MashupRefs>
+        <MashupRef extnType="ADD" mashupId="common_getReasonCodeList"
+            mashupRefId="extn_getCancellationReasonList" permissionId=""/>
+        <MashupRef extnType="ADD" mashupId="common_getReasonCodeList_new"
+            mashupRefId="extn_getShortageReasonCode_new" permissionId=""/>
+    </MashupRefs>
+</Controller>

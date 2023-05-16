@@ -1,0 +1,8 @@
+<OrderInvoiceList>
+<OrderInvoice OrderInvoiceKey="" InvoiceNo="" InvoiceType="" OrderHeaderKey="" TotalAmount="" OrderNo="">
+<Order OrderNo="" OrderHeaderKey="" CustomerEMailID="" PaymentStatus="" SellerOrganizationCode=""/>
+<LineDetails>
+	<LineDetail ItemID="" ShippedQty="" />
+</LineDetails>
+</OrderInvoice>
+</OrderInvoiceList>

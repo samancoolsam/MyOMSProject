@@ -1,0 +1,38 @@
+		<div>
+		 	<div data-dojo-type="idx/form/FilteringSelect" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								_sc_extensibility_operation : 'change' , 
+		_sc_extensibility_referenceUId : 'cmbReasoncode'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="idx/form/Textarea" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_CancelNotes' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '2' , 
+		'class' : 'noteText' , 
+		_sc_extensibility_position : 'after' , 
+		scuiDataType : 'NoteText' , 
+		_sc_extensibility_referenceUId : 'cancelOrderListScreen' , 
+		cols : 80  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	bindingData : 	{
+		 targetBinding : 	[
+	 		{
+		 namespace : 			'getCancelProp_input'
+,
+		 path : 			'Order.Notes.Note.NoteText'
+,
+		 scExtensibilityArrayItemId : 			'extn_TargetBindings_0'
+	}
+	]
+	}
+,	
+			 	label : 			this.getSimpleBundleString('extn_Notes')
+			}
+		}
+	 					}">
+		 	</div>  
+		</div>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- OMNI-14551:  Ship to Address in Sterling WCC - Start -->
+<ScreenBundle identifierId="US"
+    screenBundleId="extn.common.address.display.AddressDisplayExtnBundle" screenId="extn.common.address.display.AddressDisplayExtn">
+    <BundleEntries/>
+</ScreenBundle>
+<!-- OMNI-14551:  Ship to Address in Sterling WCC - End -->

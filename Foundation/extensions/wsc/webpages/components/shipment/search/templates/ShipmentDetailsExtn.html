@@ -1,0 +1,72 @@
+		<div>
+		 	<div data-dojo-type="idx/layout/ContentPane" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_contentpane' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '1' , 
+		'class' : 'shipmentInformationPanel' , 
+		_sc_extensibility_position : 'after' , 
+		style : 'margin-left: 20px; position: relative; top: -15px' , 
+		_sc_extensibility_referenceUId : 'pnlright'  
+	 					}">
+		 	</div>
+		 	<!-- OMNI-95718 Complete Assembly start -->  
+		 	<div data-dojo-type="dijit/form/Button" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								renderHidden : true , 
+		uId : 'extn_buttonWS_Assembly' , 
+		resourceId : 'WSC000001' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '3' , 
+		spanLabel : true , 
+		_sc_extensibility_position : 'before' , 
+		_sc_extensibility_referenceUId : 'lnkStartCustomerPickup' , 
+		showLabel : true  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	label : 			this.getSimpleBundleString('extn_Complete_Assembly2')
+			}
+		}
+	 					}">
+		 	</div>  
+
+		 	<!-- OMNI-95718 Complete Assembly end-->  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/Label" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_label' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '2' , 
+		_sc_extensibility_position : 'first' , 
+		_sc_extensibility_referenceUId : 'extn_contentpane'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 path : 			'DeliveryMethod'
+,
+		 dynamicBindingFunc : 			'getDeliveryMethod'
+,
+		 namespace : 			'getShipmentList_output'
+	}
+	}
+			}
+		}
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/Link" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								_sc_extensibility_operation : 'change' , 
+		'class' : 'icon-image-label ellipsisText disableLink' , 
+		_sc_extensibility_referenceUId : 'lnkEmail'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								renderHidden : true , 
+		_sc_extensibility_operation : 'change' , 
+		_sc_extensibility_referenceUId : 'lblExpectedShipDate'  
+	 					}">
+		 	</div>  
+		</div>

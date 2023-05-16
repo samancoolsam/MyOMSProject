@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ <DBSchema>
+   <Entities>
+
+      <Entity ApiNeeded="Y" AuditRequired="N" Description="" HasHistory="false" Prefix="ACAD" TableName="ACAD_STORE_PRINT_MSG">
+         <Attributes>
+
+			  <Attribute ColumnName="PRINT_KEY" DataType="Key" DefaultValue="' '" Description="" Nullable="false" XMLName="PrintKey"/> 
+			   <Attribute ColumnName="CONTAINER_KEY" DataType="Key" DefaultValue="' '" Description="" Nullable="false" XMLName="ShipmentContainerKey"/> 
+			   <Attribute ColumnName="MESSAGE_TYPE" DataType="Key" DefaultValue="' '" Description="" Nullable="false" XMLName="MessageType"/> 
+			  <Attribute ColumnName="PRINT_MESSAGE" DataType="CLOB" DefaultValue="' '" Description="" Name="" Nullable="false" XMLName="PrintMessage"/> 
+			  <Attribute ColumnName="PURGE_DATA" Type="CHAR" Size="1" DefaultValue="' '" Description="" Name="" Nullable="false" XMLName="PurgeData"/> 
+		 
+            <Attribute ColumnName="CREATETS" DataType="TimeStamp" DefaultValue="SYSDATE" Description=""/>
+			<Attribute ColumnName="MODIFYTS" DataType="TimeStamp" DefaultValue=" SYSDATE" Description=""/>
+			<Attribute ColumnName="CREATEUSERID" DataType="UserId" DefaultValue="' '" Description=""/>
+			<Attribute ColumnName="MODIFYUSERID" DataType="UserId" DefaultValue="' '" Description=""/>
+			<Attribute ColumnName="CREATEPROGID" DataType="ProgramID" DefaultValue="' '" Description=""/>
+			<Attribute ColumnName="MODIFYPROGID" DataType="ProgramID" DefaultValue="' '" Description=""/>
+			<Attribute ColumnName="LOCKID" DataType="Lockid" DefaultValue="0" Description=""/>
+
+         </Attributes>
+	<PrimaryKey Name="STORE_PRINT_PK">
+ 		 <Attribute ColumnName="PRINT_KEY"/> 
+  	</PrimaryKey>
+	<Indices>
+     <Index Name="STORE_PRINT_I2" Unique="False" >
+      	   <Column Name="CONTAINER_KEY" />
+	  <Column Name="MESSAGE_TYPE" />
+    </Index>
+    </Indices>		 
+
+      </Entity>
+     
+   </Entities>
+ </DBSchema>

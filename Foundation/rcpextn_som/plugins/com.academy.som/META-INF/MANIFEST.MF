@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: SOM Plug-in
+Bundle-SymbolicName: com.academy.som; singleton:=true
+Bundle-Version: 1.0.0
+Bundle-Activator: com.academy.som.AcademySOMPlugin
+Bundle-Vendor: ACADEMY
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ com.yantra.yfc.rcp
+Eclipse-LazyStart: true

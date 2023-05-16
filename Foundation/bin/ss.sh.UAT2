@@ -1,0 +1,30 @@
+#!/bin/sh
+# Licensed Materials - Property of IBM
+# IBM Sterling Selling and Fulfillment Suite
+# (C) Copyright IBM Corp. 2001, 2013 All Rights Reserved.
+# US Government Users Restricted Rights - Use, duplication or disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+
+if [ $# -lt 3 ] 
+then
+       echo "Usage :"
+       echo "nohup $0 <server name> <memory parameters> <instance number> > /dev/null &"
+       echo "E.g. :"
+       echo "nohup ./ss.sh SCHEDULE_ORDER \"-Xms1024m -Xmx1024m\" 1 > /dev/null &"
+       exit 1
+fi
+
+. /apps/SterlingOMS/Foundation/bin/tmp.sh
+
+USE_AGENT_JAVA=1
+export USE_JAVA_AGENT
+
+AGENT_JAVA_OPTS="-Dvendor=shell -DvendorFile=/apps/SterlingOMS/Foundation/properties/servers.properties -DCACHE_PS=true -DDISABLE_DS_EXTENSIONS=Y"
+export AGENT_JAVA_OPTS
+
+GC_LOG="-verbose:gc -Xverbosegclog:/appslog/gc/$1_$3_GC.log"
+#DYNATRACE="-agentpath:/apps/dynatrace/dynatrace-5.0.0/agent/lib64/libdtagent.so=name=$1,server=swapdyn01e"
+AGENT_LOG="-DBSC_APP_LOG_FILE=$1_$3 -DLOG_DIR=/appslog"
+
+set -x
+   ${JAVA} $2 ${GC_LOG} ${DYNATRACE} -classpath /apps/SterlingOMS/Foundation/jar/bootstrapper.jar ${AGENT_JAVA_OPTS} ${AGENT_LOG} com.sterlingcommerce.woodstock.noapp.NoAppLoader -class com.yantra.integration.adapter.IntegrationAdapter -f /apps/SterlingOMS/Foundation/properties/AGENTDynamicclasspath.cfg -invokeargs $1
+set +x

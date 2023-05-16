@@ -1,0 +1,167 @@
+<div class="sc-platform-screen-default ReceiveContainerEditor">
+    <!-- Licensed Materials - Property of IBM IBM Call Center for Commerce
+    (5725-P82) (C) Copyright IBM Corp. 2013 All Rights Reserved. US Government
+    Users Restricted Rights - Use, duplication or disclosure restricted by
+    GSA ADP Schedule Contract with IBM Corp. -->
+    <div data-dojo-type="idx/layout/ContentPane" data-dojo-props="		spanLabel : true , 
+		'class' : 'screenTitleContainer' , 
+		uId : 'titleMessagePanel'  
+ ">
+        <div data-dojo-type="idx/layout/ContentPane" data-dojo-props="		spanLabel : true , 
+		'class' : 'screenTitlePanel' , 
+		uId : 'pnlTitleBar' , 
+		'aria-live' : 'assertive'  
+ 		,scParamDataFn :
+		 function() { 
+			return { 
+			 	'aria-label' : 			this.getSimpleBundleString('arialabel_screenTitle')
+			}
+		}
+" role='region'>
+            <div data-dojo-type="sc/plat/dojo/layout/AdvancedTableLayout" data-dojo-props="		showLabels : false , 
+		cols : 2 , 
+		customClass : 'screenTitleTableContainer'  
+ ">
+                <div data-dojo-type="sc/plat/dojo/widgets/Image" data-dojo-props="		imageSrc : '/isccs/resources/css/icons/images/order48x48.png' , 
+		'class' : 'screenTitleImage' , 
+		appendToContextRoot : true , 
+		uId : 'lb_titleImage'  
+ "></div>
+                <div data-dojo-type="idx/layout/ContentPane" data-dojo-props="		spanLabel : true , 
+		uId : 'pnlTitleContainer'  
+ ">
+                    <div data-dojo-type="sc/plat/dojo/widgets/Label" data-dojo-props="		spanLabel : true , 
+		'class' : 'screenTitle' , 
+		uId : 'lb_screenTitle'  
+ "></div>
+                    <div data-dojo-type="sc/plat/dojo/widgets/Label" data-dojo-props="		spanLabel : true , 
+		'class' : 'screenSubTitle' , 
+		uId : 'lb_screenSubTitle'  
+ 		,scParamDataFn :
+		 function() { 
+			return { 
+			 	title : 			this.getSimpleBundleString('blank')
+,	
+			 	value : 			this.getSimpleBundleString('blank')
+			}
+		}
+"></div>
+                </div>
+            </div>
+        </div>
+        <div data-dojo-type="idx/layout/ContentPane" data-dojo-props="		'class' : 'enterpriseHolder' , 
+		uId : 'pnlEnterpriseHolder'  
+ 		,scParamDataFn :
+		 function() { 
+			return { 
+			 	'aria-label' : 			this.getSimpleBundleString('CurrentEnterprise')
+			}
+		}
+" role='region'>
+            <!--div data-dojo-type="sc/plat/dojo/widgets/Image" data-dojo-props="		imageSrc : '/isccs/resources/css/icons/images/enterprisePortlet.png' , 
+		'class' : 'portletImage' , 
+		appendToContextRoot : true , 
+		uId : 'imgEnterprise'  
+ 		,scParamDataFn :
+		 function() { 
+			return { 
+			 	title : 			this.getSimpleBundleString('CurrentEnterprise')
+,	
+			 	imageAlt : 			this.getSimpleBundleString('CurrentEnterprise')
+			}
+		}
+"></div-->
+            <div data-dojo-type="sc/plat/dojo/widgets/Label" data-dojo-props="		'class' : 'icon-image-label groupHeader' , 
+		uId : 'lblEnterprise'  
+ 		,scParamDataFn :
+		 function() { 
+			return { 
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 path : 			'.EnterpriseName'
+,
+		 namespace : 			'enterpriseContext'
+	}
+	}
+			}
+		}
+"></div>
+        </div>
+    </div>
+    <div data-dojo-type="idx/layout/ContentPane" data-dojo-props="		spanLabel : true , 
+		'class' : 'csrMessagePanel' , 
+		uId : 'customerMessagePanel'  
+ ">
+        <div data-dojo-type="idx/layout/ContentPane" data-dojo-props="		spanLabel : true , 
+		'class' : 'customerMessageBox' , 
+		uId : 'lb_customerMessageBox' , 
+		renderHidden : true  
+ 		,scParamDataFn :
+		 function() { 
+			return { 
+			 	'aria-label' : 			this.getSimpleBundleString('CUST_ImageAlt')
+			}
+		}
+" role='region'>
+            <div data-dojo-type="sc/plat/dojo/widgets/Image" data-dojo-props="		imageSrc : '/isccs/resources/css/icons/images/scriptingImage48x48.png' , 
+		'class' : 'customer-message' , 
+		appendToContextRoot : true , 
+		uId : 'imgCustomer'  
+ 		,scParamDataFn :
+		 function() { 
+			return { 
+			 	title : 			this.getSimpleBundleString('CUST_ImageAlt')
+,	
+			 	imageAlt : 			this.getSimpleBundleString('CUST_ImageAlt')
+			}
+		}
+"></div>
+            <div data-dojo-type="sc/plat/dojo/widgets/Link" data-dojo-props="		imageStyleClass : 'idxMessageCloseIcon' , 
+		hasImage : true , 
+		'class' : 'idxMessageRightAligned' , 
+		imageText : 'X' , 
+		uId : 'linkclose'  
+ 		,scParamDataFn :
+		 function() { 
+			return { 
+			 	title : 			this.getSimpleBundleString('CUST_closeAlt')
+,	
+			 	imageAlt : 			this.getSimpleBundleString('CUST_closeAlt')
+			}
+		}
+"></div>
+            <div data-dojo-type="idx/layout/ContentPane" data-dojo-props="		'class' : 'customerMessageText' , 
+		uId : 'pnlCustomerMessageText'  
+ ">
+                <div data-dojo-type="sc/plat/dojo/widgets/Label" data-dojo-props="		uId : 'messageDescriptionText'  
+ "></div>
+            </div>
+        </div>
+    </div>
+    <div data-dojo-type="idx/layout/ContentPane" data-dojo-props="		spanLabel : true , 
+		uId : 'systemMessagePanel' , 
+		renderHidden : true  
+ "></div>
+    <div data-dojo-type="idx/layout/ContentPane" data-dojo-props="		spanLabel : true , 
+		'class' : 'editorContent' , 
+		uId : 'editorContent'  
+ " role='main'>
+        <div data-dojo-type="idx/layout/ContentPane" data-dojo-props="		spanLabel : true , 
+		uId : 'scScreenHolder'  
+ "></div>
+    </div>
+    <div data-dojo-type="idx/layout/ContentPane" data-dojo-props="		spanLabel : true , 
+		resourceId : 'ISCFO0TER001' , 
+		'class' : 'footer' , 
+		uId : 'scFooterHolder'  
+ " role='region'>
+        <div data-dojo-type="sc/plat/dojo/widgets/Link" data-dojo-props="		uId : 'siteMapLink'  
+ 		,scParamDataFn :
+		 function() { 
+			return { 
+			 	value : 			this.getSimpleBundleString('Action_SiteMap')
+			}
+		}
+"></div>
+    </div>
+</div>

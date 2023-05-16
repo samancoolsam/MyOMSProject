@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Controller
+    className="com.sterlingcommerce.ui.web.platform.controller.SCUIXAPIMashupController"
+    controllerId="extn.components.shipment.summary.ShipmentRTExtnBehaviorController"
+    requestMethodSupported="POST" screenId="extn.components.shipment.summary.ShipmentRTExtn">
+    <MashupRefs>
+        <MashupRef extnType="ADD"
+            mashupId="shipmentRT_getShipmentDetails"
+            mashupRefId="getShipmentDetails" permissionId=""/>
+        <MashupRef extnType="MODIFY"
+            mashupId="containerPack_StorePackSlip_94"
+            mashupRefId="containerPack_StorePackSlip_94" permissionId=""/>
+        <MashupRef extnType="ADD" mashupId="extn_PrintOrderTicket"
+            mashupRefId="extn_PrintOrderTicketSummary_ref" permissionId=""/>
+        <MashupRef extnType="ADD"
+            mashupId="extn_PrintShipmentPickTickets"
+            mashupRefId="extn_PrintShipmentPickTickets_ref" permissionId=""/>
+        <MashupRef extnType="ADD" mashupId="extn_PrintShippingLabel"
+            mashupRefId="extn_PrintShippingLabelSummary_ref" permissionId=""/>
+        <MashupRef extnType="ADD" mashupId="extn_PrintReturnLabel"
+            mashupRefId="extn_PrintReturnLabelSummary_ref" permissionId=""/>
+        <MashupRef extnType="ADD" mashupId="extn_PrintORMDLabel"
+            mashupRefId="extn_PrintORMDLabelSummary_ref" permissionId=""/>
+        <MashupRef extnType="ADD"
+            mashupId="extn_AcademyBOPISPrintAckSlip"
+            mashupRefId="extn_AcademyBOPISPrintAckSlip_ref" permissionId=""/>
+		<MashupRef extnType="ADD" mashupId="getPrinterDevice"
+            mashupRefId="extn_getPrinterDeviceInitMashup" permissionId=""/>
+        <MashupRef extnType="ADD"
+            mashupId="extn_RecordStoreUserActionMashup"
+            mashupRefId="extn_RecordStoreUserActionMashup" permissionId=""/>
+		<MashupRef extnType="ADD" mashupId="extn_STS_RePrintShippingLabel"
+            mashupRefId="extn_STS_RePrintShippingLabelSummary_ref" permissionId=""/>
+    </MashupRefs>
+</Controller>

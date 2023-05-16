@@ -1,0 +1,46 @@
+<ShipmentLines>
+   <ShipmentLine ShipmentKey="" ShipmentLineKey="" ItemDesc="" ItemID="" OrderNo="" Quantity="">
+      <OrderLine OrderLineKey="">
+         <Item ItemDesc="" ItemID="" />
+
+         <Order OrderDate="">
+            <PaymentMethods>
+               <PaymentMethod CreditCardType="" DisplayCreditCardNo="" DisplaySvcNo="" PaymentType="" TotalAuthorized="" TotalCharged="" />
+            </PaymentMethods>
+         </Order>
+      </OrderLine>
+
+      <Shipment ShipmentKey="" ShipmentNo="" CarrierServiceCode="" DocumentType="" EnterpriseCode="" SCAC="" ScacAndService="" SellerOrganizationCode="" ShipNode="" ShipDate="" BuyerOrganizationCode="" Modifyuserid="">
+         <ShipNode NodeOrgCode="" />
+
+         <OrderInvoiceList TotalNumberOfRecords="">
+            <OrderInvoice LineSubTotal="" OrderInvoiceKey="" ShipNode="">
+               <Extn ExtnInvoiceNo="" ExtnProcessed="" />
+
+               <LineDetails>
+                  <LineDetail UnitPrice="" OrderLineKey="" ExtendedPrice="" ShippedQty="">
+                     <OrderLine OrderLineKey="" PrimeLineNo="" SubLineNo="">
+                        <LineCharges>
+                           <LineCharge ChargeAmount="" ChargeCategory="" ChargeName="" IsDiscount="" />
+                        </LineCharges>
+                     </OrderLine>
+
+                     <LineTaxList>
+                        <LineTax ChargeCategory="" ChargeName="" Tax="" />
+                     </LineTaxList>
+                  </LineDetail>
+               </LineDetails>
+            </OrderInvoice>
+         </OrderInvoiceList>
+
+         <ToAddress AddressLine1="" AddressLine2="" City="" Country="" EMailID="" FirstName="" LastName="" State="" ZipCode="" />
+
+         <BillToAddress AddressLine1="" AddressLine2="" City="" Country="" EMailID="" FirstName="" LastName="" State="" ZipCode="" />
+
+         <Instructions>
+            <Instruction InstructionType="" InstructionText="" SequenceNo="" />
+         </Instructions>
+      </Shipment>
+   </ShipmentLine>
+</ShipmentLines>
+

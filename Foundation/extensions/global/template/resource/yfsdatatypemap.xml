@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Attributes>
+	<!--SFS2.0: The extended attributes, ExtnShpFromDC and ExtnShipFromStoreItem should be present in the 'Extended Attribute' pop-up of 'Item Details' screen.-->
+	
+	<Attribute DataType="SFDCFlg" Name="SFDCFlg"/>
+	<Attribute DataType="SFSFlag" Name="SFSFlag"/>
+
+	<!--SFS2.0: Change Ends -->
+	
+    <Attribute DataType="GlobalItemID" Name="GlobalItemID"/>
+    <Attribute DataType="ExtnOrderTotal" Name="ExtnOrderTotal"/>
+    
+
+</Attributes>

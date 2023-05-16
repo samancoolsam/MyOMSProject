@@ -1,0 +1,279 @@
+		<div>
+	<div data-dojo-type="idx/layout/ContentPane" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								_sc_extensibility_operation : 'change' , 
+		spanLabel : false , 
+		_sc_extensibility_referenceUId : 'pnlOrderIndicatorHolder'  
+	 					}">
+		 	</div>  
+			<!--OMNI-63466 changes BEGIN-->
+		 	<div data-dojo-type="idx/layout/ContentPane" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_pnlCnclRsn' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '28' , 
+		_sc_extensibility_position : 'last' , 
+		_sc_extensibility_referenceUId : 'tabContainer'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	title : 			this.getSimpleBundleString('extn_Cancel_Reason')
+			}
+		}
+	 					}">
+		 	</div>  
+				<!--OMNI-63466 changes END-->
+		 	<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								renderHidden : true , 
+		_sc_extensibility_operation : 'change' , 
+		scuiDataType : 'Date' , 
+		_sc_extensibility_referenceUId : 'lblOrderDateDisplay'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								renderHidden : false , 
+		uId : 'extn_OrderDate' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '24' , 
+		_sc_extensibility_position : 'after' , 
+		scuiDataType : 'VARCHAR2-50' , 
+		_sc_extensibility_referenceUId : 'lblOrderDateDisplay'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 path : 			'Order.OrderDate'
+,
+		 dynamicBindingFunc : 			'extn_getOrderDate'
+,
+		 namespace : 			'getCompleteOrderDetails_output'
+	}
+	}
+,	
+			 	label : 			this.getSimpleBundleString('extn_Order_Date')
+			}
+		}
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_CustomerPhoneNo' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '1' , 
+		_sc_extensibility_position : 'after' , 
+		_sc_extensibility_referenceUId : 'lblChannelDisplay'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 path : 			'Order.CustomerPhoneNo'
+,
+		 namespace : 			'getCompleteOrderDetails_output'
+	}
+	}
+,	
+			 	label : 			this.getBundleString('extn_Customer_Phone_No')
+			}
+		}
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_EmailID' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '2' , 
+		_sc_extensibility_position : 'after' , 
+		_sc_extensibility_referenceUId : 'extn_CustomerPhoneNo'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 path : 			'Order.CustomerEMailID'
+,
+		 namespace : 			'getCompleteOrderDetails_output'
+	}
+	}
+,	
+			 	label : 			this.getBundleString('extn_Customer_EmailID')
+			}
+		}
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/Link" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								_sc_extensibility_operation : 'change' , 
+		spanLabel : true , 
+		style : 'float:left' , 
+		_sc_extensibility_referenceUId : 'lnkHasAlerts'  
+	 					}">
+		 	</div>  
+			<!--OMNI-63466 changes begin-->
+		 	<div data-dojo-type="gridx/Grid" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_gridCnclRsn' , 
+		_sc_extensibility_moveOrder : '29' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_position : 'first' , 
+		cacheClass : 'gridx/core/model/cache/Async' , 
+		_sc_extensibility_referenceUId : 'extn_pnlCnclRsn'  
+ 			 , modules : 	[
+	 		{
+		 moduleClass : 			'gridx/modules/ColumnResizer'
+,
+		 minWidth : 			0
+	}
+,
+	 		{
+		 moduleClass : 			'gridx/modules/ColumnWidth'
+,
+		 autoResize : 			true
+	}
+,
+	 		{
+		 moduleClass : 			'gridx/modules/HLayout'
+	}
+,
+	 		{
+		 moduleClass : 			'gridx/modules/select/Row'
+,
+		 triggerOnCell : 			true
+	}
+	]
+		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	__scModuleInfo : 	{
+		 Modules : 	{
+		 Module : 	[
+	 		{
+		 isExtn : 			true
+,
+		 name : 			'columnResizer'
+,
+		 Properties : 	{
+		 Property : 	[
+	 		{
+		 name : 			'minWidth'
+,
+		 scExtensibilityArrayItemId : 			'extn_ModuleProperty_1'
+,
+		 type : 			'Number'
+,
+		 initialValue : 			'0'
+	}
+	]
+	}
+	}
+,
+	 		{
+		 isExtn : 			true
+,
+		 name : 			'columnWidth'
+,
+		 Properties : 	{
+		 Property : 	[
+	 		{
+		 name : 			'autoResize'
+,
+		 scExtensibilityArrayItemId : 			'extn_ModuleProperty_1'
+,
+		 type : 			'Boolean'
+,
+		 initialValue : 			'true'
+	}
+	]
+	}
+	}
+,
+	 		{
+		 isExtn : 			true
+,
+		 name : 			'selectRow'
+,
+		 Properties : 	{
+		 Property : 	[
+	 		{
+		 name : 			'triggerOnCell'
+,
+		 scExtensibilityArrayItemId : 			'extn_ModuleProperty_1'
+,
+		 type : 			'Boolean'
+,
+		 initialValue : 			'true'
+	}
+	]
+	}
+	}
+	]
+	}
+	}
+,	
+			 	toolBar : 	[
+	]
+,	
+			 	structure : 	[
+	 		{
+		 uId : 			'extn_view_99820'
+,
+		 _sc_extensibility_operation : 			'insert'
+,
+		 _sc_extensibility_moveOrder : 			'30'
+,
+		 field : 			'extn_LineNo'
+,
+		 _sc_extensibility_position : 			'first'
+,
+		 bindingData : 	{
+		 sFieldBinding : 	{
+		 path : 			'PrimeLineNo'
+	}
+	}
+,
+		 name : 			this.getSimpleBundleString('extn_LineNo')
+,
+		 width : 			'10%'
+,
+		 _sc_extensibility_referenceUId : 			'extn_gridCnclRsn'
+	}
+,
+	 		{
+		 uId : 			'extn_gridCnclRsn_view'
+,
+		 _sc_extensibility_operation : 			'insert'
+,
+		 _sc_extensibility_moveOrder : 			'31'
+,
+		 field : 			'extn_CancelReason'
+,
+		 _sc_extensibility_position : 			'last'
+,
+		 bindingData : 	{
+		 sFieldBinding : 	{
+		 path : 			'CancelReason'
+	}
+	}
+,
+		 name : 			this.getSimpleBundleString('extn_Cancel_Reason')
+,
+		 _sc_extensibility_referenceUId : 			'extn_gridCnclRsn'
+	}
+	]
+,	
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 path : 			'Order.OrderLines.OrderLine'
+,
+		 namespace : 			'extn_CnclReason_output'
+	}
+	}
+			}
+		}
+	 					}">
+		 	</div>
+				<!--OMNI-63466 changes End-->  
+		</div>

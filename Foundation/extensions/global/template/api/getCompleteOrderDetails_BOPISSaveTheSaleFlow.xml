@@ -1,0 +1,18 @@
+<Order DocumentType="" OrderHeaderKey="" OrderNo="">
+	<Containers>
+		<Container ContainerNo="" ShipmentContainerKey="" ShipmentKey="" IsReceived="">
+			<Shipment ShipmentNo="">
+				<ShipmentLines> 
+					<ShipmentLine ChainedFromOrderHeaderKey="" ChainedFromOrderLineKey="" ShipmentLineNo="" /> 
+				</ShipmentLines> 
+			</Shipment>
+			<!--OMNI-80134,OMNI-80135 - Starts -->
+			<ContainerDetails>
+				<ContainerDetail ContainerDetailsKey="" ShipmentKey="" ShipmentLineKey="">
+					<ShipmentLine ChainedFromOrderHeaderKey="" ChainedFromOrderLineKey="" ShipmentLineNo=""/>
+				</ContainerDetail>
+			</ContainerDetails>
+			 <!--OMNI-80134,OMNI-80135 - Ends -->
+		</Container>
+	</Containers>
+</Order>

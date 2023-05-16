@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ScreenBundle
+    screenBundleId="extn.desktop.home.portlets.PackPortletExtnBundle" screenId="extn.desktop.home.portlets.PackPortletExtn">
+    <BundleEntries>
+        <BundleEntry bundleEntryId="txtOrderNumber_TextField_hint"
+            bundleKey="extn_Scan_or_enter_Order_or_Shipment_"
+            bundleValueFn="_scSimpleBundle" property="hint"
+            type="WIDGET" uId="txtOrderNumber"/>
+        <BundleEntry bundleEntryId="txtOrderNumber_TextField_label"
+            bundleKey="Label_Order_number_or_shipment_number"
+            bundleValueFn="_scSimpleBundle" property="label"
+            type="WIDGET" uId="txtOrderNumber"/>
+        <BundleEntry
+            bundleEntryId="extn_scanProduct_PackPortlet_Link_ImageAlt"
+            bundleKey="Tooltip_arialabel_scanProduct"
+            bundleValueFn="_scSimpleBundle" property="ImageAlt"
+            type="WIDGET" uId="extn_scanProduct_PackPortlet"/>
+        <BundleEntry
+            bundleEntryId="extn_scanProduct_PackPortlet_Link_title"
+            bundleKey="Tooltip_arialabel_scanProduct"
+            bundleValueFn="_scSimpleBundle" property="title"
+            type="WIDGET" uId="extn_scanProduct_PackPortlet"/>
+    </BundleEntries>
+</ScreenBundle>

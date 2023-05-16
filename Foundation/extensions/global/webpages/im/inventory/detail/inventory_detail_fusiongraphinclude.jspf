@@ -1,0 +1,101 @@
+<%/*******************************************************************************
+Licensed Materials - Property of IBM
+IBM Sterling Selling And Fulfillment Suite
+(C) Copyright IBM Corp. 2005, 2013 All Rights Reserved.
+US Government Users Restricted Rights - Use, duplication or disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+ ********************************************************************************/%>
+
+<%@ page import="java.util.ArrayList" %>
+<%@ page import="com.yantra.yfs.ui.backend.*" %>
+<%@ page import="com.yantra.yfc.dom.*" %>
+<%@ page import="com.yantra.yfc.ui.backend.util.*" %>
+<%@ page import="com.yantra.ycp.ui.backend.*" %>
+
+<%@include file="/console/jsp/encodeSpecialCharForGraph.jspf"%>
+
+<%!
+String getSupplyGraphData(YFCElement inventoryInfoElem) 
+{
+	String sGraphData = "";
+	if(inventoryInfoElem != null)
+	{
+		YFCElement oItem = inventoryInfoElem.getChildElement("Item"); 
+		if(oItem!= null)
+		{
+			YFCElement oInvTotals = oItem.getChildElement("InventoryTotals");
+			if(oInvTotals != null) 
+			{
+				/* set Colors Attributes for the Supply Nodes */
+				YFCElement oSupplies = oInvTotals.getChildElement("Supplies");
+				if(oSupplies != null) {
+					YFCElement graphDataElem = oSupplies.getChildElement("chart", true);
+					sGraphData = graphDataElem.toString();
+				}
+			}
+		}
+	}
+	sGraphData = encodeSpecialCharecters(sGraphData).replaceAll("\"", "\'");
+	return sGraphData;
+}
+%>
+
+<%! 
+String getDemandGraphData(YFCElement inventoryInfoElem) 
+{
+	String sGraphData = "";
+	if(inventoryInfoElem != null)
+	{
+		YFCElement oItem = inventoryInfoElem.getChildElement("Item"); 
+		if(oItem!= null)
+		{
+			YFCElement oInvTotals = oItem.getChildElement("InventoryTotals");
+			if(oInvTotals != null) 
+			{
+				/* set Colors Attributes for the Demand Nodes */
+				YFCElement oDemands = oInvTotals.getChildElement("Demands");
+				if(oDemands != null) {
+					YFCElement graphDataElem = oDemands.getChildElement("chart", true);
+					sGraphData = graphDataElem.toString();
+				}
+			}
+		}
+	}
+	sGraphData = encodeSpecialCharecters(sGraphData).replaceAll("\"", "\'");
+	return sGraphData;
+}
+%>
+
+<%! 
+String getATPGraphData(YFCElement inventoryInfoElem) 
+{
+	String sGraphData = "";
+	if(inventoryInfoElem != null)
+	{
+		YFCElement oItem = inventoryInfoElem.getChildElement("Item"); 
+		if(oItem!= null)
+		{
+			YFCElement graphDataElem = oItem.getChildElement("chart", true);
+			sGraphData = graphDataElem.toString();
+		}
+	}
+	sGraphData = encodeSpecialCharecters(sGraphData).replaceAll("\"", "\'");
+	return sGraphData;
+}
+%>
+
+<%! 
+String getATPGraphWidth(YFCElement inventoryInfoElem) 
+{
+	int sGraphWidth = 400;
+	if(inventoryInfoElem != null) 
+	{
+		int iNumChildren =  inventoryInfoElem.getIntAttribute("ATPGraphNodes");
+		if(iNumChildren > 5)
+		    sGraphWidth = (iNumChildren)*200; 
+		else if(iNumChildren > 1 && iNumChildren <= 5)
+		    sGraphWidth= (iNumChildren)*250; 
+	}
+	return Integer.toString(sGraphWidth);
+}
+%>
+

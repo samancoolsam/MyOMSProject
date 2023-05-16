@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExtensionMetaData>
+    <ScreenDisplayExtension extnClassName="ShipmentPickDetailsExtn"
+        identifierId="Pack"
+        originalScreen="wsc.mobile.common.screens.shipment.picking.ShipmentPickDetails" originalScreenPackage="wsc.mobile.common.screens.shipment.picking">
+        <Items>
+            <ContentPane _sc_extensibility_moveOrder="7"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="extn_deliveryMethod" uId="extn_contentpane1"/>
+            <Label _sc_extensibility_moveOrder="2"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="lbl_timeRemaining"
+                class="dueInLabel groupLabelSpacing" uId="extn_deliveryMethod"/>
+            <Label _sc_extensibility_moveOrder="6"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="lbl_IncludedInBatch" uId="extn_deliveryMethod"/>
+            <Label _sc_extensibility_moveOrder="8"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="first"
+                _sc_extensibility_referenceUId="extn_contentpane1" uId="extn_deliveryMethod"/>
+            <DataLabel _sc_extensibility_moveOrder="5"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="lbl_timeRemaining" uId="extn_shipmentNo"/>
+        </Items>
+    </ScreenDisplayExtension>
+</ExtensionMetaData>

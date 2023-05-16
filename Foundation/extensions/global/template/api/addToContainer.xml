@@ -1,0 +1,23 @@
+<Container ActualNoOfReturnLabels="" ActualWeight="" ActualWeightUOM="" CODReturnTrackingNo="" ContainerNetWeight="" ContainerNetWeightUOM="" ContainerNo="" ContainerScm="" ContainerType="" CorrugationItemKey="" IsLoaded="" IsReceived="" ManifestKey="" RequiredNoOfReturnLabels="" ShipmentContainerKey="" ShipmentKey="" Status="" SystemSuggested="">
+   <PackLocation LocationId="" Node="" StationId="" />
+
+   <ContainerDetails>
+      <ContainerDetail ItemID="" ProductClass="" Quantity="" QuantityPlaced="" UnitOfMeasure="">
+         <ShipmentLine>
+            <ShipmentLineInvAttRequest BatchNo="" LotAttribute1="" LotAttribute2="" LotAttribute3="" LotKeyReference="" LotNumber="" ManufacturingDate="" RevisionNo="">
+               <Extn />
+            </ShipmentLineInvAttRequest>
+         </ShipmentLine>
+      </ContainerDetail>
+   </ContainerDetails>
+
+   <Notes>
+      <Note NoteText="" NotesKey="" Tranid="" Tranname="" />
+   </Notes>
+
+   <ActivityList>
+      <Activity />
+   </ActivityList>
+
+   <Shipment ITNNo="" IsDomesticShipment="" IsProductPlacingComplete="" />
+</Container>

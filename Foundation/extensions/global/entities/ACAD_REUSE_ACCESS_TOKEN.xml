@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DBSchema>
+	<Entities>
+		<Entity ApiNeeded="Y" Description="" HasHistory="False" Prefix="ACAD" TableName="ACAD_REUSE_ACCESS_TOKEN" XMLName="AcadReuseAccessToken">
+			<Attributes>
+				<Attribute ColumnName="REUSE_ACCESS_TOKEN_KEY" Size="40" DataType="Key" DefaultValue="' '" Description="Primary key for the table" Name="ReuseAccessTokenKey" Nullable="false" XMLGroup="" XMLName="ReuseAccessTokenKey" />
+				<Attribute ColumnName="ACCESS_TOKEN" DataType="VARCHAR2-2000" DefaultValue="' '" Description="Access Token" Nullable="false" XMLName="AccessToken" />
+				<Attribute ColumnName="EXPIRES_ON" DataType="TimeStamp" DefaultValue="sysdate" Description="Token Expires On" Name="ExpiresOn" Nullable="false" XMLName="ExpiresOn" />
+				<Attribute ColumnName="TARGET_SYSTEM" DataType="Text-20" DefaultValue="' '" Description="TargetSystem for which access token is stored" Nullable="false" XMLName="TargetSystem" />
+				<Attribute ColumnName="CREATETS" DataType="TimeStamp" DefaultValue="sysdate" Description="Create TimeStamp" />
+				<Attribute ColumnName="MODIFYTS" DataType="TimeStamp" DefaultValue="sysdate" Description="Modify TimeStamp" />
+				<Attribute ColumnName="CREATEUSERID" DataType="UserId" DefaultValue="&apos; &apos;" Description="Creating User ID" />
+				<Attribute ColumnName="MODIFYUSERID" DataType="UserId" DefaultValue="&apos; &apos;" Description="Modifying User ID" />
+				<Attribute ColumnName="CREATEPROGID" DataType="ProgramID" DefaultValue="&apos; &apos;" Description="Creating Program ID" />
+				<Attribute ColumnName="MODIFYPROGID" DataType="ProgramID" DefaultValue="&apos; &apos;" Description="Modifying Program ID" />
+				<Attribute ColumnName="LOCKID" DataType="Lockid" DefaultValue="0" Description="Lock ID" />
+			</Attributes>
+			<!-- PrimaryKey is a mandatory attribute in entity definition. This element can have ONLY ONE attribute element -->
+			<PrimaryKey Name="ACCESS_TOKEN_PK">
+				<Attribute ColumnName="REUSE_ACCESS_TOKEN_KEY" Name="ReuseAccessTokenKey" />
+			</PrimaryKey>
+		</Entity>
+	</Entities>
+</DBSchema>

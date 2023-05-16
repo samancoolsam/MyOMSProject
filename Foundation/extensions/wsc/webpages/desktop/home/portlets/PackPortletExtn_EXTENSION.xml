@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExtensionMetaData>
+    <ScreenExtension extnClassName="PackPortletExtn"
+        extnPackage="extn.desktop.home.portlets"
+        originalScreen="wsc.desktop.home.portlets.PackPortlet"
+        originalScreenPackage="wsc.desktop.home.portlets" type="diffrential">
+        <Items>
+            <ContentPane _sc_extensibility_moveOrder="7"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="extn_productScanForm_PackPortlet"
+                class="scanPanel " uId="extn_scanPanel_PackPortlet"/>
+            <ContentPane _sc_extensibility_moveOrder="5"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="extn_barcodeScanPanelForm_PackPortlet" uId="extn_productScanForm_PackPortlet"/>
+            <ContentPane _sc_extensibility_moveOrder="8"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="first"
+                _sc_extensibility_referenceUId="extn_scanPanel_PackPortlet" uId="extn_productScanForm_PackPortlet"/>
+            <ContentPane _sc_extensibility_moveOrder="1"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="pnlContent"
+                class="barcodeScanPanel" uId="extn_barcodeScanPanelForm_PackPortlet"/>
+            <ContentPane _sc_extensibility_moveOrder="6"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="first"
+                _sc_extensibility_referenceUId="extn_productScanForm_PackPortlet" uId="extn_barcodeScanPanelForm_PackPortlet"/>
+            <ContentPane _sc_extensibility_operation="change"
+                _sc_extensibility_referenceUId="pnlContent" style="width:405px; height: 60px;"/>
+            <ContentPane _sc_extensibility_moveOrder="3"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="last"
+                _sc_extensibility_referenceUId="extn_barcodeScanPanelForm_PackPortlet" uId="pnlContent"/>
+            <Button _sc_extensibility_operation="change"
+                _sc_extensibility_referenceUId="btnPack" style="padding-left: 15px; padding-top: -50px;"/>
+            <TextField _sc_extensibility_operation="change"
+                _sc_extensibility_referenceUId="txtOrderNumber"
+                class="extn_Width" fieldWidth="350"
+                hint="$(_scSimpleBundle:extn_Scan_or_enter_Order_or_Shipment_)"
+                label="$(_scSimpleBundle:Label_Order_number_or_shipment_number)" style="width:200px; height:65px;"/>
+            <TextField _sc_extensibility_moveOrder="2"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="first"
+                _sc_extensibility_referenceUId="extn_barcodeScanPanelForm_PackPortlet" uId="txtOrderNumber"/>
+            <Link
+                ImageAlt="$(_scSimpleBundle:Tooltip_arialabel_scanProduct)"
+                _sc_extensibility_moveOrder="4"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="txtOrderNumber"
+                appendToContextRoot="true"
+                class="buttonConnect singlecolumntable" hasImage="true"
+                imageSrc="wsc/resources/css/icons/images/barcode_blue.png"
+                style="width:50px; height:33px; padding-right:60px; padding-top:24px;"
+                title="$(_scSimpleBundle:Tooltip_arialabel_scanProduct)" uId="extn_scanProduct_PackPortlet"/>
+        </Items>
+        <Subscribers>
+            <Local>
+                <Subscriber description="extn_initScreenHandlerPack"
+                    eventId="afterScreenInit" isExtn="true" sequence="56">
+                    <Handler methodName="extn_initScreenHandlerPack"/>
+                </Subscriber>
+                <Subscriber
+                    eventId="extn_scanProduct_PackPortlet_onClick"
+                    isExtn="true" sequence="51">
+                    <Handler methodName="extn_BarcodeIconOnClick_packIfPermitted"/>
+                </Subscriber>
+            </Local>
+        </Subscribers>
+		<MashupRefs>
+            <Behavior>
+                <MashupRef extnType="MODIFY"
+                    mashupId="portlet_getShipmentList" mashupRefId="getShipmentList"/>
+            </Behavior>
+        </MashupRefs>
+    </ScreenExtension>
+</ExtensionMetaData>

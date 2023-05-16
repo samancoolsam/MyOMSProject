@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- OMNI- 45623 Added OrderLine element and attributes for STS Label by extending the OOB template-->
+<Container ActualFreightCharge=" " ActualWeight=" " ActualWeightUOM=" "
+    AppliedWeight=" " AppliedWeightUOM=" " AstraCode=" "
+    BarcodeDiscount=" " BasicFreightCharge=" " CarriageValue=" "
+    ContainerGrossWeight=" " ContainerGrossWeightUOM=" "
+    ContainerHeight=" " ContainerHeightUOM=" " ContainerLength=" "
+    ContainerLengthUOM=" " ContainerNetWeight=" " SCAC=" "
+    ContainerNetWeightUOM=" " ContainerNo=" " ContainerScm=" "
+    ContainerSeqNo=" " ContainerType=" " ContainerWidth=" "
+    ContainerWidthUOM=" " CustomsValue=" " DeclaredValue=" "
+    DimmedFlag=" " DiscountAmount=" " ExportLicenseExpDate=" "
+    ExportLicenseNo=" " HasOtherContainers=" "
+    IncludedInInventoryPallet=" " IsReceived=" " LoadKey=" "
+    OversizedFlag=" " ParentContainerKey=" " ParentContainerNo=" "
+    ParentContainerType=" " RoutingCode=" " ShipmentContainerKey=" "
+    ShipmentKey=" " SpecialServicesSurcharge=" " TrackingNo=" "
+    Ucc128code=" " isHistory="" PrintBuffer="">
+    <SpecialServices TotalNumberOfRecords="">
+        <SpecialService ReferenceKey=" " ReferenceType=" "
+            SpecialServiceKey=" " SpecialServiceRefKey=" "
+            SpecialServiceSurcharge=" " SpecialServicesCode=" "/>
+    </SpecialServices>
+    <AdditionalAttributes TotalNumberOfRecords="">
+        <AdditionalAttribute AdditionalAttributeKey=" " Name=" "
+            ParentKey=" " ParentTable=" " Value=" " isHistory=""/>
+    </AdditionalAttributes>
+    <ContainerDetails TotalNumberOfRecords="">
+        <ContainerDetail ItemID=" " ProductClass=" " Quantity=" "
+            ShipmentContainerKey=" " ShipmentKey=" " ShipmentLineKey=" "
+            UnitOfMeasure=" " isHistory="">
+            <ShipmentTagSerials>
+                <ShipmentTagSerial BatchNo=" " ContainerDetailKey=" "
+                    LotNumber=" " LotKeyReference=" " ManufacturingDate=" " LotAttribute1=" " LotAttribute2=" " LotAttribute3=" " Quantity=" " RevisionNo=" "
+                    SerialNo=" " ShipByDate=" " ShipmentLineKey=" " ShipmentTagSerialKey=" "/>
+            </ShipmentTagSerials>
+            <ShipmentLine DocumentType="" OrderNo=" " PrimeLineNo=" " ReleaseNo=" "
+                ShipmentLineNo=" " SubLineNo=" ">
+                <ShipmentLineInvAttRequest BatchNo=" " LotAttribute1=" "
+                    LotAttribute2=" " LotAttribute3=" "
+                    LotExpirationDate=" " LotKeyReference=" "
+                    LotNumber=" " ManufacturingDate=" " RevisionNo=" "/>
+            		<OrderLine ChainedFromOrderHeaderKey="" ChainedFromOrderLineKey=""/>
+		</ShipmentLine>
+        </ContainerDetail>
+    </ContainerDetails>	
+	<ContainerReturnTrackingList TotalNumberOfRecords="" >
+		<ContainerReturnTracking ReturnTrackingNumber="" ReturnPrintBuffer="" PierbridgeReturnLabelURL="" />
+	</ContainerReturnTrackingList>
+    <Shipment Action=" " ActualDeliveryDate=" " ActualFreightCharge=" "
+        ActualShipmentDate=" " AllowOverage=" " AppointmentNo=" "
+        AssociationAction=" " BolNo=" " BuyerOrganizationCode=" "
+        CarrierAccountNo=" " CarrierServiceCode=" " CarrierType=" "
+        Code=" " CommercialValue=" " Currency=" " DeliveryCode=" "
+        DeliveryMethod="" DeliveryPlanKey=" " DeliveryTS=" "
+        DestinationZone=" " DocumentType=" " DownLoadCount=" "
+        EnterpriseCode=" " ExpectedDeliveryDate=" "
+        ExpectedShipmentDate=" " ExportTaxpayerID=" " FreightTerms=" "
+        FromAddressKey=" " FromAppointment=" " HasOtherShipments=" "
+        HazardousMaterialFlag=" " HeldForConfirmation=" " ITDate=" "
+        ITNo=" " IsProvidedService="" IsSingleOrder=" " LinesEntered=" "
+        Lockid=" " ManifestKey=" " ManifestNo=" " ManuallyEntered=" "
+        MergeNode=" " NextAlertTs=" " NumOfCartons=" " NumOfPallets=" "
+        OptimizedApptEndDate="" OptimizedApptStartDate=""
+        OrderAvailableOnSystem=" " OrderNo=" " OriginZone=" "
+        OverrideManualShipmentEntry=" " PackListType=" "
+        ParentShipmentKey=" " PickListNo=" " PickticketNo=" "
+        PipelineKey=" " PodNo=" " ProNo=" " PromisedApptEndDate=""
+        PromisedApptStartDate="" ReceivingNode=" " ReleaseNo=" "
+        RequestedDeliveryDate=" " RequestedShipmentDate=" "
+        RequiresApptConfirmation="" SCAC=" " ScacIntegrationRequired=" "
+        SealNo=" " SellerOrganizationCode=" " ServiceLineKey=""
+        ShipDate=" " ShipMode=" " ShipNode=" " ShipVia=" "
+        ShipmentClosedFlag=" " ShipmentConfirmUpdatesDone=" "
+        ShipmentContainerizedFlag=" " ShipmentDeliverUpdatesDone=" "
+        ShipmentKey=" " ShipmentNo=" " ShipmentPlannedFlag=" "
+        ShipmentType=" " Status=" " StatusDate=" " ToAddressKey=" "
+        ToAppointment=" " TotalActualCharge=" " TotalEstimatedCharge=" "
+        TotalVolume=" " TotalVolumeUOM=" " TotalWeight=" "
+        TotalWeightUOM=" " TrackingNo=" " TrailerNo=" " isHistory="" IsShipmentLevelIntegration="" StationId=" " StationType=" ">
+        <ToAddress AddressLine1=" " AddressLine2=" " AddressLine3=" "
+            AddressLine4=" " AddressLine5=" " AddressLine6=" "
+            AlternateEmailID=" " Beeper=" " City=" " Company=" "
+            Country=" " DayFaxNo=" " DayPhone=" " Department=" "
+            EMailID=" " ErrorTxt=" " EveningFaxNo=" " EveningPhone=" "
+            FirstName=" " HttpUrl=" " JobTitle=" " LastName=" "
+            MiddleName=" " MobilePhone=" " OtherPhone=" " PersonID=" "
+            PersonInfoKey=" " PreferredShipAddress=" " State=" "
+            Suffix=" " Title=" " UseCount=" " VerificationStatus=" " ZipCode=" "/>
+        <ShipNode AcceptanceRequired=" " ActivateFlag=" "
+            ContactAddressKey=" " CurrentBolNumber=" "
+            DefaultDeclaredValue=" " Description=" "
+            ExportLicenseExpDate=" " ExportLicenseNo=" "
+            ExportTaxpayerId=" " GenerateBolNumber=" "
+            InterfaceSubType=" " InterfaceType=" " InventoryTracked=" "
+            Inventorytype=" " Localecode=" " LocationLatitude=" "
+            LocationLongitude=" " MaintainInventoryCost=" " OwnerKey=" "
+            OwnerType=" " PicklistType=" " ReceivingNode=" "
+            RequiresChangeRequest=" " ReturnCenterFlag=" "
+            ReturnsNode=" " ShipNode=" " ShipNodeAddressKey=" "
+            ShipNodeClass=" " ShipnodeKey=" " ShipnodeType=" "
+            ShippingNode=" " SupplierKey=" " ThreePlNode=" " TimeDiff=" ">
+            <ShipNodePersonInfo AddressLine1=" " AddressLine2=" "
+                AddressLine3=" " AddressLine4=" " AddressLine5=" "
+                AddressLine6=" " AlternateEmailID=" " Beeper=" "
+                City=" " Company=" " Country=" " DayFaxNo=" "
+                DayPhone=" " Department=" " EMailID=" " ErrorTxt=" "
+                EveningFaxNo=" " EveningPhone=" " FirstName=" "
+                HttpUrl=" " JobTitle=" " LastName=" " MiddleName=" "
+                MobilePhone=" " OtherPhone=" " PersonID=" "
+                PersonInfoKey=" " PreferredShipAddress=" " State=" "
+                Suffix=" " Title=" " UseCount=" " VerificationStatus=" " ZipCode=" "/>
+        </ShipNode>
+        <ScacAndService OrganizationCode="" CarrierServiceKey=" " CarrierType=" "
+            DistancePerDay=" " DistanceUOM=" " ElectronicCode=" "
+            FixedTransitDays=" " HostCode=" " InternalReference1=" "
+            InternalReference2=" " InternalReference3=" "
+            InternalReference4=" " InternalReference5=" "
+            InternationalShipping=" " ScacAndService=" "
+            ScacAndServiceDesc=" " ScacAndServiceKey=" " ScacKey=" " ShipMode=" "/>
+    </Shipment>
+    <Location LocationId="" LocationKey=""/>
+	<PrinterPreference OrganizationCode="" PrinterId="" UserId="" UsergroupId="" WorkStationId="" />
+</Container>

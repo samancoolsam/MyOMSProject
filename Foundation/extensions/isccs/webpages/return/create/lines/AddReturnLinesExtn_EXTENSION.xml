@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExtensionMetaData>
+    <ScreenExtension extnClassName="AddReturnLinesExtn"
+        extnPackage="extn.return.create.lines"
+        originalScreen="isccs.return.create.lines.AddReturnLines"
+        originalScreenPackage="isccs.return.create.lines" type="diffrential">
+        <Items>
+            <Button _sc_extensibility_operation="change"
+                _sc_extensibility_referenceUId="btnCreateExchange" renderHidden="true"/>
+			<Button _sc_extensibility_operation="change"
+                _sc_extensibility_referenceUId="btnFindLinesForReturn" renderHidden="true"/>
+        </Items>
+        <Subscribers>
+            <Local>
+                <Subscriber description="extn_HideAddMoreOrders"
+                    eventId="afterScreenLoad" isExtn="true" sequence="51">
+                    <Handler methodName="extn_HideAddMoreOrders"/>
+                </Subscriber>
+            </Local>
+        </Subscribers>
+        <MashupRefs>
+            <Behavior>
+                <MashupRef extnType="MODIFY"
+                    mashupId="createReturn_changeReturnOrder" mashupRefId="updateReturnOrder"/>
+                <MashupRef extnType="MODIFY"
+                    mashupId="createReturn_processReturnOrder" mashupRefId="processReturnOrder"/>
+            </Behavior>
+        </MashupRefs>
+    </ScreenExtension>
+</ExtensionMetaData>

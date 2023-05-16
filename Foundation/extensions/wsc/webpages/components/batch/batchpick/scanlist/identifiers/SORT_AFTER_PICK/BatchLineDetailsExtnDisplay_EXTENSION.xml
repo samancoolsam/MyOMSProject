@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExtensionMetaData>
+    <ScreenDisplayExtension extnClassName="BatchLineDetailsExtn"
+        identifierId="SORT_AFTER_PICK"
+        originalScreen="wsc.components.batch.batchpick.scanlist.BatchLineDetails" originalScreenPackage="wsc.components.batch.batchpick.scanlist">
+        <Items>
+	
+	
+	<!--OMNI-45645-SIM Integration Changes -- Start -->
+            <ContentPane _sc_extensibility_moveOrder="13"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="pickPanel" uId="extn_ItemPrice"/>
+	<!--OMNI-45645-SIM Integration Changes -- End -->
+
+            <Label _sc_extensibility_moveOrder="2"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="itemVariationPanelHolder" uId="extn_ItemDetails"/>
+            <Label _sc_extensibility_moveOrder="4"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="extn_ItemDetails" uId="extn_ItemOnHandStock"/>
+
+	    <!--OMNI-45645-SIM Integration Changes -- Start -->
+            <Label _sc_extensibility_moveOrder="10"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="extn_ItemOnHandStock"
+                style="padding-left:3px" uId="extn_AvlStockOnHand"/>
+            <Label _sc_extensibility_moveOrder="12"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="extn_AvlStockOnHand"
+                style="padding-left:3px" uId="extn_ItemLRD"/>
+	    <!--OMNI-45645-SIM Integration Changes -- End -->
+
+            <Label _sc_extensibility_moveOrder="6"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="extn_ItemOnHandStock" uId="extn_ItemLiveDate"/>
+
+	    <!--OMNI-45645-SIM Integration Changes -- Start -->
+            <Label _sc_extensibility_moveOrder="15"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="first"
+                _sc_extensibility_referenceUId="extn_ItemPrice"
+                style="padding-left:10px" uId="extn_ItemPriceLabel"/>
+	    <!--OMNI-45645-SIM Integration Changes -- End -->
+
+            <Link _sc_extensibility_operation="change"
+                _sc_extensibility_referenceUId="itemdescriptionLink" class="groupHeader blockComponent disableLink"/>
+            <DataLabel _sc_extensibility_moveOrder="8"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="departmentLbl" uId="extn_ItemPlanogram"/>
+        </Items>
+    </ScreenDisplayExtension>
+</ExtensionMetaData>

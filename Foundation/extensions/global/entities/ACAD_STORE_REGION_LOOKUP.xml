@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DBSchema>
+	<Entities>
+		<Entity Cacheable="true" ApiNeeded="Y" 
+			Description=""
+			HasHistory="False" Prefix="ACAD" TableName="ACAD_STORE_REGION_LOOKUP" XMLName="AcadStoreRegionLookup">
+			<Attributes>
+				<Attribute ColumnName="STORE_REGION_LOOKUP_KEY" Size="40" DataType="Key" DefaultValue="' '" Description="Primary key for the table" Name="StoreRegionLookupKey" Nullable="false" XMLGroup="" XMLName="StoreRegionLookupKey" />				
+				<Attribute ColumnName="STORE_REGION_DISTRICT_CODE" Size="40" DataType="Text-40" DefaultValue="' '" Description="Ship Node Region District Code" Name="StoreRegionDistrictCode" Nullable="false" XMLGroup="" XMLName="StoreRegionDistrictCode" />
+				<Attribute ColumnName="SHIPNODE" Size="40" DataType="Text-40" DefaultValue="' '" Description="Ship Node ID" Name="ShipNode" Nullable="false" XMLGroup="" XMLName="ShipNode" />
+				<Attribute ColumnName="STORE_EMAIL_ID" Size="100" Type="VARCHAR2" DataType="StoreEmailID" DefaultValue="' '" Description="Store Leader Email ID" Name="StoreEmailID" Nullable="false" XMLGroup="" XMLName="StoreEmailID" />
+				<Attribute ColumnName="STORE_RDM_EMAIL_ID" Size="100" Type="VARCHAR2" DataType="StoreRDMEmailID" DefaultValue="' '" Description="Store Reginal District Manager Email ID" Name="StoreRDMEmailID" Nullable="false" XMLGroup="" XMLName="StoreRDMEmailID" />
+				<Attribute ColumnName="STORE_DESCRIPTION" Size="300" Type="VARCHAR2" DataType="ShipNodeDescription" DefaultValue="' '" Description="Ship Node Description" Name="ShipNodeDescription" Nullable="false" XMLGroup="" XMLName="ShipNodeDescription" />
+				<Attribute ColumnName="REGION_ID" Size="40" DataType="Text-40" DefaultValue="' '" Description="Number for Store Region Name" Name="RegionID" Nullable="false" XMLGroup="" XMLName="RegionID" />
+				<Attribute ColumnName="REGION_NAME" Size="40" DataType="Text-40" DefaultValue="' '" Description="Store Region Name" Name="RegionName" Nullable="false" XMLGroup="" XMLName="RegionName" />
+				<Attribute ColumnName="STORE_DISTRICT" Size="40" DataType="Text-40" DefaultValue="' '" Description="Store District" Name="StoreDistrict" Nullable="false" XMLGroup="" XMLName="StoreDistrict" />
+				<Attribute ColumnName="CREATETS" DataType="TimeStamp" DefaultValue="sysdate" Description="Create TimeStamp" />
+				<Attribute ColumnName="MODIFYTS" DataType="TimeStamp" DefaultValue="sysdate" Description="Modify TimeStamp" />
+				<Attribute ColumnName="CREATEUSERID" DataType="UserId" DefaultValue="' '" Description="Creating User ID" />
+				<Attribute ColumnName="MODIFYUSERID" DataType="UserId" DefaultValue="' '" Description="Modifying User ID" />
+				<Attribute ColumnName="CREATEPROGID" DataType="ProgramID" DefaultValue="' '" Description="Creating Program ID" />
+				<Attribute ColumnName="MODIFYPROGID" DataType="ProgramID" DefaultValue="' '" Description="Modifying Program ID" />
+				<!--Attribute ColumnName="LOCKID" DataType="Lockid" DefaultValue="0" Description="Lock ID" /-->
+			</Attributes>
+			<!-- PrimaryKey is a mandatory attribute in entity definition. This
+				element can have ONLY ONE attribute element -->
+			<PrimaryKey Name="REGION_LOOKUP_PK">
+				<Attribute ColumnName="STORE_REGION_LOOKUP_KEY" Name="StoreRegionLookupKey" />
+			</PrimaryKey>
+			<Indices>
+				<Index Name="IND_SHIPNODE" Unique="True">
+					<Column Name="SHIPNODE" />
+				</Index>
+			</Indices>
+		</Entity>
+	</Entities>
+</DBSchema>

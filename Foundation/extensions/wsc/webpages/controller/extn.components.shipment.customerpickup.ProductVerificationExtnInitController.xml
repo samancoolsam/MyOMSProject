@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Controller
+    className="com.sterlingcommerce.ui.web.platform.controller.SCUIXAPIMashupController"
+    controllerId="extn.components.shipment.customerpickup.ProductVerificationExtnInitController"
+    requestMethodSupported="POST" screenId="extn.components.shipment.customerpickup.ProductVerificationExtn">
+    <Group isAggregator="Y"/>
+    <MashupRefs>
+        <MashupRef extnType="MODIFY"
+            mashupId="customerpickup_getBasicShipmentDetails"
+            mashupRefId="getShipmentDetails" permissionId=""/>
+        <MashupRef extnType="ADD"
+            mashupId="customerpickup_getBasicShipmentDetails"
+            mashupRefId="getShipmentDetails" permissionId=""/>
+        <MashupRef extnType="ADD"
+            mashupId="customerpickup_getCustomerVerficationMethodList"
+            mashupRefId="extn_CustomerVerifcationMethodList" permissionId=""/>
+	<!--OMNI-79056 Curbside Estimated Time delay Changes - START-->
+	<MashupRef extnType="ADD"
+            mashupId="extn_CurbsideEstimatedTimeDelay" 
+	    mashupRefId="extn_CurbsideEstimatedTimeDelay_ref" permissionId=""/>
+	<!--OMNI-79056 Curbside Estimated Time delay Changes - END-->	
+	<!--OMNI-85079 - START-->	
+	<MashupRef extnType="ADD"
+            mashupId="extn_getCurbsideGetShipmentLine" 
+	    mashupRefId="extn_getCurbsideGetShipmentLine" permissionId=""/>
+	<!--OMNI-85079 - ENDS-->	
+    </MashupRefs>
+</Controller>

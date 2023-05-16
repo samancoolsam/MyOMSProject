@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExtensionMetaData>
+    <ScreenExtension extnClassName="BatchListDetailsScreenExtn"
+        extnPackage="extn.components.batch.batchlist"
+        originalScreen="wsc.components.batch.batchlist.BatchListDetailsScreen"
+        originalScreenPackage="wsc.components.batch.batchlist" type="diffrential">
+        <Items>
+            <ContentPane _sc_extensibility_moveOrder="3"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="last"
+                _sc_extensibility_referenceUId="batchstatuspanel"
+                dir="rtl" spanLabel="true" style="padding-right:0.01px" uId="extn_ResetAndPrintCP">
+                <TableLayout cols="1" spacing="0.1"/>
+            </ContentPane>
+            <Link _sc_extensibility_operation="change"
+                _sc_extensibility_referenceUId="lnk_PickAction" style="padding-right:2px"/>
+            <Link _sc_extensibility_moveOrder="2"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="extn_PrintBatch"
+                class="actionLinks" style="padding:2px"
+                uId="extn_BatchReset" value="$(_scSimpleBundle:extn_Batch_Reset)"/>
+            <Link _sc_extensibility_moveOrder="4"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="first"
+                _sc_extensibility_referenceUId="extn_ResetAndPrintCP" uId="extn_BatchReset"/>
+            <Link _sc_extensibility_moveOrder="1"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="lnk_PickAction"
+                class="actionLinks" style="padding:2px"
+                uId="extn_PrintBatch" value="$(_scSimpleBundle:extn_Print_Batch)"/>
+            <Link _sc_extensibility_moveOrder="5"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="last"
+                _sc_extensibility_referenceUId="extn_ResetAndPrintCP" uId="extn_PrintBatch"/>
+        </Items>
+        <Subscribers>
+            <Local>
+                <Subscriber description="extnResetBatch"
+                    eventId="extn_BatchReset_onClick" isExtn="true" sequence="51">
+                    <Handler methodName="extnResetBatch"/>
+                </Subscriber>
+                <Subscriber description="extnPrintBatch"
+                    eventId="extn_PrintBatch_onClick" isExtn="true" sequence="51">
+                    <Handler methodName="extnPrintBatch"/>
+                </Subscriber>
+            </Local>
+        </Subscribers>
+        <MashupRefs>
+            <Behavior>
+                <MashupRef extnType="ADD" mashupId="extn_ResetBatch" mashupRefId="extn_ResetBatch"/>
+                <MashupRef extnType="ADD" mashupId="extn_PrintBatch" mashupRefId="extn_PrintBatch"/>
+                <MashupRef extnType="ADD" mashupId="extn_PrintBatchNew" mashupRefId="extn_PrintBatchNew"/>
+            </Behavior>
+        </MashupRefs>
+    </ScreenExtension>
+</ExtensionMetaData>

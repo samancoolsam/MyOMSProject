@@ -1,0 +1,193 @@
+<div class="sc-platform-screen-default BatchPopUp">
+	<table style="margin-left:auto;margin-right:auto;">
+		<tr>
+		<th>
+			<div data-dojo-type="sc/plat/dojo/widgets/Image" data-ibmsc-uid=""
+			data-dojo-props="		imageSrc : 'extn/wsc/resources/icons/images/ExclamationIcon.png' , 
+				'class' : 'icon-updateNeeded ' , 
+				appendToContextRoot : true , 
+				uId : 'alertImage'  
+				,scParamDataFn :
+				 function() { 
+					return { 
+						title : 			this.getSimpleBundleString('extn_Alert_Icon_alt_text')
+		,	
+						imageAlt : 			this.getSimpleBundleString('extn_Alert_Icon_alt_text')
+					}
+				}">
+			</div>
+		</th>
+		<th>
+			<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" data-dojo-props=" highlightMatch : 'false' , 
+				'class' : 'extn_AlertMessageCss hashNumberAlign autoLabelZeroWidth blockComponent comappsWrapWord',
+				style:'text-align: center;',
+				uId : 'alertMessage',
+				scParamDataFn :
+				function() { 
+					return { 
+						label : 	this.getSimpleBundleString('extn_Alert_String')
+					}
+				}">
+			</div>
+		</th>
+		</tr>
+	</table>
+	<br/>
+	<table style="margin-left:auto;margin-right:auto;">
+		<tr>
+		<th>
+			<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" data-dojo-props="		highlightMatch : 'false' , 
+				'class' : 'hashNumberAlign autoLabelZeroWidth blockComponent comappsWrapWord',
+				uId : 'batchMessage',
+				scParamDataFn :
+				function() { 
+					return { 
+						label :		this.getSimpleBundleString('extn_Alert_Message1'),
+						style:'text-align: center;'
+					}
+				}">
+			</div>
+		</th>
+		<th>
+			<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" data-dojo-props="		highlightMatch : 'false' , 
+				'class' : 'hashNumberAlign autoLabelZeroWidth blockComponent comappsWrapWord' , 
+				style:'text-align: center',
+				showLabel : true , 
+				uId : 'extn_Btch_UserID'  ,
+				scParamDataFn :
+				function() { 
+					return { 
+						label : '',
+							bindingData : 	{
+									 sourceBinding : 	{
+										 path : 			'0.UserID'
+								,
+										 namespace : 			'BatchUserData'
+									}
+							}
+						}
+				}">
+			</div>
+		</th>
+		</tr>
+	</table>
+	<table style="margin-left:auto;margin-right:auto;">
+		<tr>
+	<th>
+			<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" data-dojo-props="		highlightMatch : 'false' , 
+				'class' : 'hashNumberAlign autoLabelZeroWidth blockComponent comappsWrapWord',
+				uId : 'batchMessage',
+				scParamDataFn :
+				function() { 
+					return { 
+						label :		this.getSimpleBundleString('extn_Alert_Message2'),
+						style:'text-align: center;'
+					}
+				}">
+			</div>
+		</th>
+		</tr>
+	</table>
+	<br/>
+	<table style="margin-left:auto;margin-right:auto;">
+		<tr >
+		<th>
+			<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" data-dojo-props="		highlightMatch : 'false' , 
+				'class' : 'hashNumberAlign autoLabelZeroWidth blockComponent comappsWrapWord', 
+				uId : 'batchLastScanned',
+				scParamDataFn :
+				function() { 
+					return { 
+						label : 	this.getSimpleBundleString('extn_LastScanned_Text'),
+						style:'text-align: center;',	
+					}
+				}">
+			</div>
+		</th>
+		<th>
+			<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" data-dojo-props="		highlightMatch : 'false' , 
+				'class' : 'hashNumberAlign autoLabelZeroWidth blockComponent comappsWrapWord' , 
+				style:'text-align: center',
+				showLabel : true , 
+				uId : 'extn_LastScanDate'  ,
+				scParamDataFn :
+				function() { 
+				return { 
+			 	label : '',
+					bindingData : 	{
+							 sourceBinding : 	{
+								 path : 			'0.LastScannedTime'
+						,
+								 namespace : 			'BatchUserData'
+							}
+					}
+				}
+				}">
+			</div>
+			</th>
+		</tr>
+	</table>
+	</br>
+	<table style="margin-left:auto;margin-right:auto;">
+		<tr >
+			<th style="margin-right: 10%">
+				<div data-dojo-type="dijit/form/Button" data-dojo-props="		spanLabel : true , 
+				'class' : 'floatLeft extnAbortButtoncss idxSpecialButton' , 
+				style:'margin-right: 10%;padding-left:12%',
+				showLabel : true , 
+				uId : 'abortButton'  ,
+				scParamDataFn :
+				function() { 
+					return { 
+						label : 	this.getSimpleBundleString('extn_AbortButton_text')
+					}
+				}">
+				</div>
+			</th>
+			<th style="margin-left: 10%">
+				<div data-dojo-type="dijit/form/Button" data-dojo-props="		spanLabel : true , 
+				'class' : 'floatRight extnContinueButtoncss idxSpecialButton' , 
+				style:'margin-left: 10%;padding-right:10%',
+				showLabel : true , 
+				uId : 'continueButton'  ,
+				scParamDataFn :
+				function() { 
+					return { 
+						label : 	this.getSimpleBundleString('extn_ContinueButton_text')
+					}
+				}">
+				</div>
+			</th>
+		</tr>
+		<tr>
+		<th style="margin-right: 20%">
+		<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" data-dojo-props="		highlightMatch : 'false' , 
+		'class' : 'hashNumberAlign autoLabelZeroWidth blockComponent comappsWrapWord', 
+		uId : 'Question',
+		scParamDataFn :
+		function() { 
+			return { 
+				label :		this.getSimpleBundleString('extn_Alert_Confirm_String'),	
+				style:'text-align: center',	
+			}
+		}">
+		</div>
+	</th>
+	<th style="margin-right: 20%">
+		<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" data-dojo-props="		highlightMatch : 'false' , 
+		'class' : 'hashNumberAlign autoLabelZeroWidth blockComponent comappsWrapWord', 
+		uId : 'QuestionNew',
+		scParamDataFn :
+		function() { 
+			return { 
+				label :		this.getSimpleBundleString('extn_Alert_Confirm_String_new'),	
+				style:'text-align: center',	
+			}
+		}">
+		</div>
+	</th>
+		</tr>
+	</table>
+	</br>
+	</br>
+</div>

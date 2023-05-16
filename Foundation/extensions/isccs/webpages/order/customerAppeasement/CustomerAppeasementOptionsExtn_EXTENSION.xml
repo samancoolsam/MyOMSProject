@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExtensionMetaData>
+    <ScreenExtension extnClassName="CustomerAppeasementOptionsExtn"
+        extnPackage="extn.order.customerAppeasement"
+        originalScreen="isccs.order.customerAppeasement.CustomerAppeasementOptions"
+        originalScreenPackage="isccs.order.customerAppeasement" type="diffrential">
+        <Subscribers>
+            <Local>
+                <Subscriber description="extn_handleBehaviorMashupInput"
+                    eventId="beforeBehaviorMashupCall" isExtn="true" sequence="51">
+                    <Handler methodName="extn_handleBehaviorMashupInput"/>
+                </Subscriber>
+            </Local>
+        </Subscribers>
+        <MashupRefs>
+            <Behavior>
+                <MashupRef extnType="MODIFY"
+                    mashupId="customerAppeasement_getAppeasementOffersUE" mashupRefId="getAppeasementOffersUE"/>
+                <MashupRef extnType="MODIFY"
+                    mashupId="customerAppeasement_recordInvoiceCreation" mashupRefId="recordInvoiceCreation"/>
+                <MashupRef extnType="MODIFY"
+                    mashupId="customerAppeasement_sendFutureOrderCustomerAppeasementUE" mashupRefId="sendFutureOrderCustomerAppeasementUE"/>
+                <MashupRef extnType="MODIFY"
+                    mashupId="customerAppeasement_changeOrder" mashupRefId="changeOrder"/>
+            </Behavior>
+        </MashupRefs>
+    </ScreenExtension>
+</ExtensionMetaData>

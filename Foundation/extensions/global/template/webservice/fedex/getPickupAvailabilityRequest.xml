@@ -1,0 +1,37 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:q0="http://fedex.com/ws/pickup/v17" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <soapenv:Body>
+    <q0:PickupAvailabilityRequest>
+      <q0:WebAuthenticationDetail>
+        <q0:UserCredential>
+          <q0:Key></q0:Key>
+          <q0:Password></q0:Password>
+        </q0:UserCredential>
+      </q0:WebAuthenticationDetail>
+      <q0:ClientDetail>
+        <q0:AccountNumber></q0:AccountNumber>
+        <q0:MeterNumber></q0:MeterNumber>
+      </q0:ClientDetail>
+      <q0:TransactionDetail>
+        <q0:CustomerTransactionId></q0:CustomerTransactionId>
+      </q0:TransactionDetail>
+      <q0:Version>
+        <q0:ServiceId>disp</q0:ServiceId>
+        <q0:Major>17</q0:Major>
+        <q0:Intermediate>0</q0:Intermediate>
+        <q0:Minor>0</q0:Minor>
+      </q0:Version>
+      <q0:PickupType></q0:PickupType>
+      <q0:PickupAddress>
+        <q0:StreetLines></q0:StreetLines>
+        <q0:City></q0:City>
+        <q0:StateOrProvinceCode></q0:StateOrProvinceCode>
+        <q0:PostalCode></q0:PostalCode>
+        <q0:CountryCode></q0:CountryCode>
+        <q0:Residential>false</q0:Residential>
+      </q0:PickupAddress>
+      <q0:PickupRequestType></q0:PickupRequestType>
+      <q0:DispatchDate></q0:DispatchDate>
+      <q0:Carriers></q0:Carriers>
+    </q0:PickupAvailabilityRequest>
+  </soapenv:Body>
+</soapenv:Envelope>

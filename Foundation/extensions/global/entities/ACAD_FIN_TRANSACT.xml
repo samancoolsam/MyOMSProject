@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DBSchema>
+	<Entities>
+		<Entity ApiNeeded="Y" AuditRequired="N"
+			Description="Academy financial transaction record table" HasHistory="False"
+			Prefix="ACAD" TableName="ACAD_FIN_TRANSACT" XMLName="ACADFinTrans">
+			<Attributes>
+				<Attribute ColumnName="FIN_TRAN_KEY" DataType="Key"
+					DefaultValue="' '" Description="System generated financial transaction record key"
+					Name="AcademyFinTranKey" Nullable="false" XMLGroup=""
+					XMLName="AcademyFinTranKey" />
+				<Attribute ColumnName="FIN_TRAN_DATETIME"
+					DataType="AcademyFinTranDateTime" DefaultValue="SYSDATE"
+					Description="Financial transaction date time"
+					Name="AcademyFinTranDateTime" Nullable="true" XMLGroup=""
+					XMLName="AcademyFinTranDateTime" />
+				<Attribute ColumnName="FIN_TRAN_CODE" DataType="AcademyFinTranCodeType"
+					DefaultValue="0" Description="Financial transaction code"
+					Name="AcademyFinTranCode" Nullable="false" XMLGroup=""
+					XMLName="AcademyFinTranCode" />
+				<Attribute ColumnName="ENTITY"
+					DataType="AcademyFinTranEntityCode" DefaultValue="' '"
+					Description="Financial transaction entity code"
+					Name="AcademyFinTranEntityCode" Nullable="true" XMLGroup=""
+					XMLName="AcademyFinTranEntityCode" />
+				<Attribute ColumnName="FIN_TRAN_DATE" DataType="AcademyFinTranDate"
+					DefaultValue="' '" Description="Financial transaction date"
+					Name="AcademyFinTranDate" Nullable="true" XMLGroup=""
+					XMLName="AcademyFinTranDate" />
+				<Attribute ColumnName="SOURCE_KEY"
+					DataType="AcademyFinTranSourceKey" DefaultValue="' '"
+					Description="Sterling Order or Invoice number"
+					Name="AcademyFinTranSourceKey" Nullable="true" XMLGroup=""
+					XMLName="AcademyFinTranSourceKey" />
+				<Attribute ColumnName="SOURCE_LINE" DataType="AcademyFinTranSourceLine"
+					DefaultValue="0" Description="Financial transaction source line No"
+					Name="AcademyFinTranSourceLine" Nullable="true" XMLGroup=""
+					XMLName="AcademyFinTranSourceLine" />
+				<Attribute ColumnName="REFERENCE_KEY"
+					DataType="AcademyFinTranReferenceKey" DefaultValue="' '"
+					Description="Sterling Order number"
+					Name="AcademyFinTranReferenceKey" Nullable="true" XMLGroup=""
+					XMLName="AcademyFinTranReferenceKey" />
+				<Attribute ColumnName="ORIGINAL_ORDER_NO" DataType="AcademyFinTranOrderNo"
+					DefaultValue="' '" Description="Sterling order number"
+					Name="AcademyFinTranOrderNo" Nullable="true" XMLGroup=""
+					XMLName="AcademyFinTranOrderNo" />
+				<Attribute ColumnName="REFERENCE_LINE"
+					DataType="AcademyFinTranReferenceLine" DefaultValue="0"
+					Description="Line number"
+					Name="AcademyFinTranReferenceLine" Nullable="true" XMLGroup=""
+					XMLName="AcademyFinTranReferenceLine" />
+				<Attribute ColumnName="EXTENDED_AMOUNT" DataType="AcademyFinTranAmountField"
+					DefaultValue="0.0" Description="Extended amount including tax"
+					Name="AcademyFinTranExtendedAmount" Nullable="true" XMLGroup=""
+					XMLName="AcademyFinTranExtendedAmount" />
+				<Attribute ColumnName="MERCHANDISE_AMOUNT"
+					DataType="AcademyFinTranAmountField" DefaultValue="0.0"
+					Description="Merchandise price"
+					Name="AcademyFinTranMerchandiseAmount" Nullable="true" XMLGroup=""
+					XMLName="AcademyFinTranMerchandiseAmount" />
+				<Attribute ColumnName="GIFT_CARD_ISSUE" DataType="AcademyFinTranAmountField"
+					DefaultValue="0.0" Description="Gift card issued amount"
+					Name="AcademyFinTranGiftCardIssuedAmount" Nullable="true" XMLGroup=""
+					XMLName="AcademyFinTranGiftCardIssuedAmount" />
+				<Attribute ColumnName="DEFERRED_CUST_CREDIT"
+					DataType="AcademyFinTranAmountField" DefaultValue="0.0"
+					Description="Deffered customer credit"
+					Name="AcademyFinTranDefferedCustCredit" Nullable="true" XMLGroup=""
+					XMLName="AcademyFinTranDefferedCustCredit" />
+				<Attribute ColumnName="GIFT_CARD_REDEMPTION"
+					DataType="AcademyFinTranAmountField" DefaultValue="0.0"
+					Description="Gift card redemption amount" Name="AcademyFinTranGCRedemptionAmount"
+					Nullable="true" XMLGroup="" XMLName="AcademyFinTranGCRedemptionAmount" />
+				<Attribute ColumnName="CREDIT_CARD_CHARGE"
+					DataType="AcademyFinTranAmountField" DefaultValue="0.0"
+					Description="Amount charged on Credit Card" Name="AcademyFinTranCCChargeAmount"
+					Nullable="true" XMLGroup="" XMLName="AcademyFinTranCCChargeAmount" />
+				<Attribute ColumnName="DEFERRED_REVENUE"
+					DataType="AcademyFinTranAmountField" DefaultValue="0.0"
+					Description="Deferred revenue"
+					Name="AcademyFinTranDeferredRevenue" Nullable="true" XMLGroup=""
+					XMLName="AcademyFinTranDeferredRevenue" />
+				<Attribute ColumnName="SHIP_CHARGE_AMOUNT"
+					DataType="AcademyFinTranAmountField" DefaultValue="0.0"
+					Description="Shipping charge amount" Name="AcademyFinTranShipChargeAmount"
+					Nullable="true" XMLGroup="" XMLName="AcademyFinTranShipChargeAmount" />
+				<Attribute ColumnName="TAX_AMOUNT"
+					DataType="AcademyFinTranAmountField" DefaultValue="0.0"
+					Description="Tax amount"
+					Name="AcademyFinTranTaxAmount" Nullable="true" XMLGroup=""
+					XMLName="AcademyFinTranTaxAmount" />
+				<Attribute ColumnName="RECYCLE_FEE" DataType="AcademyFinTranAmountField"
+					DefaultValue="0.0" Description="Recycle fee"
+					Name="AcademyFinTranRecycleFee" Nullable="true" XMLGroup=""
+					XMLName="AcademyFinTranRecycleFee" />
+				<Attribute ColumnName="DISCOUNT_AMOUNT"
+					DataType="AcademyFinTranAmountField" DefaultValue="0.0"
+					Description="Discount amount"
+					Name="AcademyFinTranDiscountAmount" Nullable="true" XMLGroup=""
+					XMLName="AcademyFinTranDiscountAmount" />
+				<Attribute ColumnName="APPEASEMENT_AMOUNT"
+					DataType="AcademyFinTranAmountField" DefaultValue="0.0"
+					Description="Appeasement amount" Name="AcademyFinTranAppesementAmount"
+					Nullable="true" XMLGroup="" XMLName="AcademyFinTranAppesementAmount" />
+				<Attribute ColumnName="STORE_COUPON_AMOUNT"
+					DataType="AcademyFinTranAmountField" DefaultValue="0.0"
+					Description="Store coupon amount"
+					Name="AcademyFinTranStoreCouponAmount" Nullable="true" XMLGroup=""
+					XMLName="AcademyFinTranStoreCouponAmount" />
+				<Attribute ColumnName="MFG_COUPON_AMOUNT" DataType="AcademyFinTranAmountField"
+					DefaultValue="0.0" Description="Mfg coupon amount"
+					Name="AcademyFinTranMfgCouponAmount" Nullable="true" XMLGroup=""
+					XMLName="AcademyFinTranMfgCouponAmount" />
+				<Attribute ColumnName="FUTURE_FIELD_AMOUNT1"
+					DataType="AcademyFinTranAmountField" DefaultValue="0.0"
+					Description="Amount field1"
+					Name="AcademyFinTranFFAmount1" Nullable="true" XMLGroup=""
+					XMLName="AcademyFinTranFFAmount1" />
+				<Attribute ColumnName="FUTURE_FIELD_AMOUNT2"
+					DataType="AcademyFinTranAmountField" DefaultValue="0.0"
+					Description="Amount field2" Name="AcademyFinTranFFAmount2"
+					Nullable="true" XMLGroup="" XMLName="AcademyFinTranFFAmount2" />
+				<Attribute ColumnName="FUTURE_FIELD_AMOUNT3"
+					DataType="AcademyFinTranAmountField" DefaultValue="0.0"
+					Description="Amount field3"
+					Name="AcademyFinTranFFAmount3" Nullable="true" XMLGroup=""
+					XMLName="AcademyFinTranFFAmount3" />
+				<Attribute ColumnName="FUTURE_FIELD_AMOUNT4"
+					DataType="AcademyFinTranAmountField" DefaultValue="0.0"
+					Description="Amount field4" Name="AcademyFinTranFFAmount4"
+					Nullable="true" XMLGroup="" XMLName="AcademyFinTranFFAmount4" />
+				<Attribute ColumnName="TAX_RESERVE"
+					DataType="AcademyFinTranAmountField" DefaultValue="0.0"
+					Description="Tax reserve"
+					Name="AcademyFinTranTaxReserve" Nullable="true" XMLGroup=""
+					XMLName="AcademyFinTranTaxReserve" />
+				<Attribute ColumnName="QUANTITY"
+					DataType="AcademyFinTranQtyField" DefaultValue="0.0"
+					Description="Quantity" Name="AcademyFinTranQty"
+					Nullable="true" XMLGroup="" XMLName="AcademyFinTranQty" />
+				<Attribute ColumnName="UNIT_PRICE" DataType="AcademyFinTranAmountField" 
+					Description="Unit price" DefaultValue="0.0"
+					Name="AcademyFinTranUnitPrice" Nullable="true" XMLGroup=""
+					XMLName="AcademyFinTranUnitPrice" />
+				<Attribute ColumnName="SHIPPING_LINE_FLAG"
+					DataType="AcademyFinTranShipLineFlag" DefaultValue="'N'"
+					Description="Ship line flag"
+					Name="AcademyFinTranShipLineFlag" Nullable="true" XMLGroup=""
+					XMLName="AcademyFinTranShipLineFlag" />
+				<Attribute ColumnName="SHIPMENT_METHOD" DataType="AcademyFinTranShipMethod"
+					DefaultValue="' '" Description="Scac value"
+					Name="AcademyFinTranShipMethod" Nullable="true" XMLGroup=""
+					XMLName="AcademyFinTranShipMethod" />
+				<Attribute ColumnName="SHIPMENT_TYPE"
+					DataType="AcademyFinTranShipType" DefaultValue="' '"
+					Description="Shipment type"
+					Name="AcademyFinTranShipType" Nullable="true" XMLGroup=""
+					XMLName="AcademyFinTranShipType" />
+				<Attribute ColumnName="SHORT_SKU" DataType="AcademyFinTranShortSKU"
+					DefaultValue="' '" Description="Short SKU"
+					Name="AcademyFinTranShortSKU" Nullable="true" XMLGroup=""
+					XMLName="AcademyFinTranShortSKU" />
+				<Attribute ColumnName="CUST_NO" DataType="AcademyFinTranCustNo"
+					DefaultValue="' '" Description="Customer Number"
+					Name="AcademyFinTranCustNo" Nullable="true" XMLGroup=""
+					XMLName="AcademyFinTranCustNo" />
+				<Attribute ColumnName="CUST_EXEMPTION"
+					DataType="AcademyFinTranCustExmpt" DefaultValue="' '"
+					Description="Customer exemption"
+					Name="AcademyFinTranCustExmpt" Nullable="true" XMLGroup=""
+					XMLName="AcademyFinTranCustExmpt" />
+				<Attribute ColumnName="COUPON_PROMO_CODE"
+					DataType="AcademyFinTranCouponCode" DefaultValue="' '"
+					Description="Coupon code" Name="AcademyFinTranCouponCode"
+					Nullable="true" XMLGroup="" XMLName="AcademyFinTranCouponCode" />
+				<Attribute ColumnName="DISCOUNT_PROMO_ID" DataType="AcademyFinTranDiscountId"
+					DefaultValue="' '" Description="Financial transaction code"
+					Name="AcademyFinTranDiscountId" Nullable="true" XMLGroup=""
+					XMLName="AcademyFinTranDiscountId" />
+				<Attribute ColumnName="APPEASEMENT_CODE"
+					DataType="AcademyFinTranAppsementCode" DefaultValue="' '"
+					Description="Appsement Code"
+					Name="AcademyFinTranAppsementCode" Nullable="true" XMLGroup=""
+					XMLName="AcademyFinTranAppsementCode" />
+				<Attribute ColumnName="RETURN_REASON_CODE"
+					DataType="AcademyFinTranReturnReasonCode" DefaultValue="' '"
+					Description="Return reason code" Name="AcademyFinTranReturnReasonCode"
+					Nullable="true" XMLGroup="" XMLName="AcademyFinTranReturnReasonCode" />
+				<Attribute ColumnName="ITEM_DESC"
+					DataType="AcademyFinTranItemDesc" DefaultValue="' '"
+					Description="Item short description"
+					Name="AcademyFinTranItemDesc" Nullable="true" XMLGroup=""
+					XMLName="AcademyFinTranItemDesc" />
+				<Attribute ColumnName="TENDER_TYPE" DataType="AcademyFinTranTenderType"
+					DefaultValue="' '" Description="Payment tender type"
+					Name="AcademyFinTranTenderType" Nullable="true" XMLGroup=""
+					XMLName="AcademyFinTranTenderType" />
+				<Attribute ColumnName="CC_TYPE"
+					DataType="AcademyFinTranCCType" DefaultValue="' '"
+					Description="Credit card type"
+					Name="AcademyFinTranCCType" Nullable="true" XMLGroup=""
+					XMLName="AcademyFinTranCCType" />
+				<Attribute ColumnName="DBR_PROCESSED_FLAG"
+					DataType="AcademyFinTranProcessedFlag" DefaultValue="'N'"
+					Description="Processed by batch program. Default to N on new records" 
+					Name="AcademyFinTranProcessedFlag"
+					Nullable="true" XMLGroup="" XMLName="AcademyFinTranProcessedFlag" />
+				<Attribute ColumnName="DBR_ERROR_STATUS"
+					DataType="AcademyFinTranErrorStatus" DefaultValue="'0'"
+					Description="Error status"
+					Name="AcademyFinTranErrorStatus" Nullable="true" XMLGroup=""
+					XMLName="AcademyFinTranErrorStatus" />
+				<Attribute ColumnName="DBR_PROCESSED_DATETIME"
+					DataType="AcademyFinTranProcessTime" DefaultValue="SYSDATE"
+					Description="Processing datetime" Name="AcademyFinTranProcessTime"
+					Nullable="true" XMLGroup="" XMLName="AcademyFinTranProcessTime" />
+				<Attribute ColumnName="DB_EXTRACT_FLAG"
+					DataType="AcademyFinTranExtractFlag" DefaultValue="'N'"
+					Description="Extract flag"
+					Name="AcademyFinTranExtractFlag" Nullable="true" XMLGroup=""
+					XMLName="AcademyFinTranExtractFlag" />
+				<Attribute ColumnName="OPERATOR" DataType="AcademyFinTranOperator"
+					DefaultValue="' '" Description="Operator code"
+					Name="AcademyFinTranOperator" Nullable="true" XMLGroup=""
+					XMLName="AcademyFinTranOperator" />
+				<Attribute ColumnName="TLOG_TERMINAL"
+					DataType="AcademyFinTranTLogTerminal" DefaultValue="' '" 
+					Description="TLog terminal code"
+					Name="AcademyFinTranTLogTerminal" Nullable="true" XMLGroup=""
+					XMLName="AcademyFinTranTLogTerminal" />
+				<Attribute ColumnName="TLOG_TRAN_ID" DataType="AcademyFinTranTLogTranId"
+					DefaultValue="' '" Description="TLog transaction ID"
+					Name="AcademyFinTranTLogTranId" Nullable="true" XMLGroup=""
+					XMLName="AcademyFinTranTLogTranId" />
+				<Attribute ColumnName="FUTURE_FIELD1"
+					DataType="AcademyFinTranFutureField" DefaultValue="' '"
+					Description="Future field 1"
+					Name="AcademyFinTranFutureField1" Nullable="true" XMLGroup=""
+					XMLName="AcademyFinTranFutureField1" />
+				<Attribute ColumnName="FUTURE_FIELD2"
+					DataType="AcademyFinTranFutureField" DefaultValue="' '"
+					Description="Future field 2" Name="AcademyFinTranFutureField2"
+					Nullable="true" XMLGroup="" XMLName="AcademyFinTranFutureField2" />
+				<Attribute ColumnName="FUTURE_FIELD3"
+					DataType="AcademyFinTranFutureField" DefaultValue="' '"
+					Description="Future field 3"
+					Name="AcademyFinTranFutureField3" Nullable="true" XMLGroup=""
+					XMLName="AcademyFinTranFutureField3" />
+				<Attribute ColumnName="FUTURE_FIELD4"
+					DataType="AcademyFinTranFutureField" DefaultValue="' '"
+					Description="Future field 4" Name="AcademyFinTranFutureField4"
+					Nullable="true" XMLGroup="" XMLName="AcademyFinTranFutureField4" />
+				<Attribute ColumnName="CREATETS" DataType="TimeStamp"
+					DefaultValue="SYSDATE" Description="Create TimeStamp" />
+				<Attribute ColumnName="MODIFYTS" DataType="TimeStamp"
+					DefaultValue=" SYSDATE" Description="Modify TimeStamp" />
+				<Attribute ColumnName="CREATEUSERID" DataType="UserId"
+					DefaultValue="' '" Description="Creating User ID" />
+				<Attribute ColumnName="MODIFYUSERID" DataType="UserId"
+					DefaultValue="' '" Description="Modifying User ID" />
+				<Attribute ColumnName="CREATEPROGID"
+					DataType="ProgramID" DefaultValue="' '"
+					Description="Creating Program ID" />
+				<Attribute ColumnName="MODIFYPROGID"
+					DataType="ProgramID" DefaultValue="' '"
+					Description="Modifying Program ID" />
+				<Attribute ColumnName="LOCKID" DataType="Lockid"
+					DefaultValue="0" Description="Lock ID" />
+			</Attributes>
+			<PrimaryKey Name="FIN_TRAN_KEY_PK">
+				<Attribute ColumnName="FIN_TRAN_KEY"
+					Name="AcademyFinTranKey" />
+			</PrimaryKey>
+		</Entity>
+	</Entities>
+</DBSchema>

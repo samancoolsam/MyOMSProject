@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- 
+Licensed Materials - Property of IBM
+IBM Sterling Selling And Fulfillment Suite
+(C) Copyright IBM Corp. 2005, 2013 All Rights Reserved.
+US Government Users Restricted Rights - Use, duplication or disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+ -->
+<InvoiceDetail >
+	<InvoiceHeader HeaderCharges="" HeaderDiscount=""
+        HeaderTax="" InvoiceCreationReason="" InvoiceType=""
+        LineSubTotal="" TotalCharges="" TotalDiscount="" TotalHeaderCharges="">
+		 <Order OrderNo="" EnterpriseCode="" DocumentType="" />
+		 <!-- WN-2037 SOF SO Shipment Invoicing and SettlementShipmentType=""-->
+		<Shipment ShipmentKey="" ShipDate="" SCAC="" ManifestNo="" ReceivingNode="" ShipNode="" ShipmentType=""/>
+	</InvoiceHeader>
+</InvoiceDetail>

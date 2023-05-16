@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ScreenBundle
+    screenBundleId="extn.components.shipment.customerpickup.CustomerIdentificationExtnBundle" screenId="extn.components.shipment.customerpickup.CustomerIdentificationExtn">
+    <BundleEntries>
+        <BundleEntry
+            bundleEntryId="extn_filteringselect_FilteringSelect_label"
+            bundleKey="extn_Picked_Up_By"
+            bundleValueFn="_scSimpleBundle" property="label"
+            type="WIDGET" uId="extn_filteringselect"/>
+	    <!-- OMNI- 5402 Mobile Web SOM Home Page: Ready For Curbside PickUp Section  - Start -->
+        <BundleEntry bundleEntryId="extn_Curbsidelbl_DataLabel_label"
+            bundleKey="extn_Curbbside_Make_Color"
+            bundleValueFn="_scSimpleBundle" property="label"
+            type="WIDGET" uId="extn_Curbsidelbl"/>
+	     <!-- OMNI- 5402 Mobile Web SOM Home Page: Ready For Curbside PickUp Section  - End -->
+        <BundleEntry bundleEntryId="extn_datalabel_DataLabel_label"
+            bundleKey="extn_Max_Pick_Date"
+            bundleValueFn="_scSimpleBundle" property="label"
+            type="WIDGET" uId="extn_datalabel"/>
+        <BundleEntry bundleEntryId="extn_datalabel_DataLabel_value"
+            bundleKey="" bundleValueFn="_scSimpleBundle"
+            property="value" type="WIDGET" uId="extn_datalabel"/>
+    </BundleEntries>
+</ScreenBundle>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Added TotalQuantity, Status and Quantity Attributes as a part of WN-643 -->
+<Shipment ShipmentKey=" " DocumentType=" " ShipmentNo=" " ShipNode=" " SellerOrganizationCode=" " TotalQuantity=" " Status=" "> 
+  <ShipmentLines>
+    <ShipmentLine ShipmentLineKey="" OrderHeaderKey="" OrderLineKey="" Quantity=""/>
+  </ShipmentLines>
+</Shipment>

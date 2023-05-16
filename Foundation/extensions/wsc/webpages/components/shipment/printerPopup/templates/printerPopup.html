@@ -1,0 +1,109 @@
+		<div>
+		<!-- Add Screen Widgets Here -->
+
+
+		<div data-dojo-type="idx/form/RadioButtonSet" data-dojo-props="	 
+		'class' : 'blockComponent fulfillmentType zeroWidthLabelKey' , 
+			style:'margin-left: 10%',
+		uId : 'PrintPickRadioSet'  	, 
+ 		scParamDataFn :
+		 function() { 
+			return { 
+			 	label : 			this.getSimpleBundleString('Number of Print Pick Labels')
+				}
+				}
+				
+"></div>
+        <div data-dojo-type="idx/form/RadioButtonSet" data-dojo-props="	 
+		'class' : 'blockComponen fulfillmentType zeroWidthLabelKey' ,
+
+<!--style : 'padding-bottom:20px' , -->
+		autoComplete : true ,
+		uId : 'PrintPickRadioSet'  
+		, 
+groupAlignment : 'horizontal',
+
+		<!--required : true, --> 
+ 		scParamDataFn :
+		 function() { 
+				 return { 
+				bindingData : 	{
+									radioBinding : 	{
+													 options : 	[
+														{
+													 label : 			this.getSimpleBundleString('1')
+											,
+													 scExtensibilityArrayItemId : 			'extn_RadioBinding_0'
+											,
+													 value : 			'1'
+												} 
+											,
+											{
+													 label : 			this.getSimpleBundleString('2')
+											,
+													 scExtensibilityArrayItemId : 			'extn_RadioBinding_1'
+											,
+													 value : 			'2'
+											<!--,selected : 			true-->
+												}
+											,
+												{
+													 label : 			this.getSimpleBundleString('3')
+											,
+													 scExtensibilityArrayItemId : 			'extn_RadioBinding_2'
+											,
+													 value : 			'3'
+												}
+											,
+											{
+													 label : 			this.getSimpleBundleString('4')
+											,
+													 scExtensibilityArrayItemId : 			'extn_RadioBinding_3'
+											,
+													 value : 			'4'
+												}
+											,{
+													 label : 			this.getSimpleBundleString('5')
+											,
+													 scExtensibilityArrayItemId : 			'extn_RadioBinding_4'
+											,
+													 value : 			'5'
+												}
+											,
+														{
+													 label : 			this.getSimpleBundleString('6')
+											,
+													 scExtensibilityArrayItemId : 			'extn_RadioBinding_5'
+											,
+													 value : 			'6'
+												}
+
+											] 
+								},
+								targetBinding : [
+									{
+									path : 'Option',
+									namespace : 'TotalNoPickPrintLabels',
+									}	
+								]	
+					}
+
+			}
+		}">
+
+	</div>
+<div data-dojo-type="dijit/form/Button" data-dojo-props="		spanLabel : true , 
+		'class' : 'idxSpecialButton zeroWidthLabelKey' , 
+		<!--style : 'padding-left:200px' ,-->
+	style:'margin-left: 43%',
+		showLabel : true , 
+		uId : 'Popup_btnOK',
+		scParamDataFn :
+		 function() { 
+			return { 
+			 	label : 			this.getSimpleBundleString('OK')
+			}
+		}
+"></div>
+<br/>
+</div>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Controller
+    className="com.sterlingcommerce.ui.web.platform.controller.SCUIXAPIMashupController"
+    controllerId="extn.desktop.home.portlets.BackroomPickPortletExtnInitController"
+    requestMethodSupported="POST" screenId="extn.desktop.home.portlets.BackroomPickPortletExtn">
+    <Group isAggregator="Y"/>
+    <MashupRefs>
+        <MashupRef extnType="MODIFY"
+            mashupId="backroomPickPortlet_getShipmentListPickCount"
+            mashupRefId="getShipmentListReadyForPickInit" permissionId=""/>
+    </MashupRefs>
+</Controller>

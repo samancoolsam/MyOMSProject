@@ -1,0 +1,16 @@
+<Shipment ShipmentNo="" Status="" ShipmentType="" DeliveryMethod="">
+<Extn />
+<ShipmentLines>
+<ShipmentLine OrderLineKey="" OrderHeaderKey="" Quantity="" OrderNo="" ItemID="" ShipmentKey="" ShipmentLineKey="" >
+<Extn/>
+<Order CustomerEMailID="" OrderNo="" PaymentStatus="" OriginalTotalAmount="" TotalAdjustmentAmount=""/>
+<OrderLine  OrderClass="" OrderHeaderKey="" ShipToKey="" OrderLineKey="" OrderedQty=""   ShipNode="" ShippedQuantity="" OriginalOrderedQty="" >
+<LinePriceInfo/>
+<PersonInfoShipTo LastName="" FirstName=""/>
+</OrderLine>
+<ShipmentTagSerials>
+<ShipmentTagSerial BatchNo="" LotAttribute1="" LotAttribute2="" LotAttribute3="" LotKeyReference="" LotNumber="" Quantity="1.00" RevisionNo="" SerialNo="" ShipmentLineKey="" ShipmentTagSerialKey=""/>
+</ShipmentTagSerials>
+</ShipmentLine>
+</ShipmentLines>
+</Shipment>

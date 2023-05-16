@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Theme>
+    <ThemeEntry Name="ListTitle">
+        <Font Height="10" Name="Tahoma" Style="BOLD"/>
+        <ForegroundColor Blue="255" Green="255" Red="255"/>
+        <BackgroundColor Blue="0" Green="0" Red="0"/>
+    </ThemeEntry>
+    <ThemeEntry Name="Composite">
+        <Font Height="10" Name="Tahoma" Style="BOLD"/>
+        <ForegroundColor Blue="255" Green="255" Red="255"/>
+        <BackgroundColor Blue="0" Green="0" Red="0"/>
+    </ThemeEntry>
+    <ThemeEntry Name="Gift Card Load Orders">
+        <Font Height="10" Name="Tahoma" Style="BOLD"/>
+        <ForegroundColor Blue="255" Green="255" Red="255"/>
+        <BackgroundColor Blue="0" Green="0" Red="0"/>
+    </ThemeEntry>
+</Theme>

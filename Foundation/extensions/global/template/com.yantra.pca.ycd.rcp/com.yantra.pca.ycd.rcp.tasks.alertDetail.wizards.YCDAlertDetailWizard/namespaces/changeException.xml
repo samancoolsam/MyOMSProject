@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+ <Inbox Createts="" Modifyts="" AssignedToUserId="" AssignedToUserKey="" AutoResolvedFlag="" ClosedOn="" ConsolidationCount="" 
+        Description="" DetailDescription="" EnterpriseKey="" ErrorReason="" ErrorType="" ExceptionEscalatedFlag="" 
+        ExceptionType="" ExpirationDays="" FlowName="" FollowupDate="" GeneratedOn="" InboxKey="" InboxType="" 
+        ItemId="" LastExceedAlert="" LastOccurredOn="" LastUnassignAlert="" LastUnresolveAlert="" 
+        ListDescription="" Priority="" QueueId="" QueueKey="" ResolutionDate="" ResolveBy="" Status="">        
+   <InboxNotesList>
+<InboxNotes ContactReference="" ContactType=""
+            NoteText="" NoteType=""
+            Priority="" SaveOnOrder=""  ContactTime="" ContactUser="" 
+              ReasonCode="" CustomerSatIndicator=""/>
+    </InboxNotesList>
+ <InboxAuditList>
+        <InboxAudit Createts="" FromStatus="" ToStatus="" FromQueueKey=" " FromUserId=" " 
+                    FromUserKey=" " InboxAuditKey=" " InboxKey=" "  OwnerKey=" " OwnerType=" " 
+                    ReasonCode=" " ReasonText=" " ToUserId=" " ToQueueKey=" " ToUserKey=" " TransactionType=""/>
+  </InboxAuditList>
+  <Extn ExtnAlertKey="" ExtnAssociatedCustID=""/>
+</Inbox>

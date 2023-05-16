@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Controller
+    className="com.sterlingcommerce.ui.web.platform.controller.SCUIXAPIMashupController"
+    controllerId="extn.components.shipment.backroompick.BackroomPickProductScanExtnBehaviorController"
+    requestMethodSupported="POST" screenId="extn.components.shipment.backroompick.BackroomPickProductScanExtn">
+    <MashupRefs>
+        <MashupRef extnType="MODIFY"
+            mashupId="backroomPick_updateShipmentQuantity"
+            mashupRefId="updateShipmentQuantityForPickAllLine" permissionId=""/>
+	  <!-- OMNI - 4017, 5888, 5885 BOPIS: Cancel Email consolidation at Order level for cancellations - start -->
+        <MashupRef extnType="ADD"
+            mashupId="extn_SendBOPISCancelMailMashup"
+            mashupRefId="extn_SendBOPISCancelMailMashup" permissionId=""/>
+	  <!-- OMNI - 4017, 5888, 5885 BOPIS: Cancel Email consolidation at Order level for cancellations - end -->
+	 <MashupRef extnType="ADD" mashupId="getPrinterDevice"
+            mashupRefId="extn_getPrinterDeviceMashupRefId" permissionId=""/>
+		 <!-- OMNI - 90674 - Start -->
+		<MashupRef extnType="ADD" mashupId="extn_translateBarcode"
+            mashupRefId="extn_translateBarcode_ref" permissionId=""/>
+		<!-- OMNI - 90674 - End -->
+    </MashupRefs>
+</Controller>

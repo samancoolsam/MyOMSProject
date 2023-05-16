@@ -1,0 +1,471 @@
+
+<div class="sc-platform-screen-default ScanShipmentLabel" role="region" aria-label="region_screenHeader" >
+
+	<!-- header start -->
+	<div data-dojo-type="idx/layout/ContentPane" data-dojo-props=" spanLabel:true ,title:'Top Content','class':'mobileCommonScreen screenHeader',
+		colspan:1,uId:'TopContent',layoutAlign:'top'">
+
+		<div data-dojo-type="idx/layout/ContentPane" data-dojo-props="spanLabel:true ,'class':'screenTitle',uId:'pnlScreenDescription' ">
+			<div data-dojo-type="sc/plat/dojo/widgets/Label" data-dojo-props="spanLabel:true,uId:'lbl_ScreenTitle',scParamDataFn :
+				function() { 
+						return { 
+						value: this.getSimpleBundleString('extn_Audit_Staging_Location')
+							}
+				}"/>
+		</div>
+
+		<div data-dojo-type="idx/layout/ContentPane" data-dojo-props="spanLabel:true,'class':'rightPanel' ">
+			<div data-dojo-type="idx/layout/ContentPane" data-dojo-props="spanLabel:true,uId:'pnlScreenTasks' "/>
+		</div>
+	</div>	
+
+	<!-- header end -->
+</div>
+</div>
+
+
+<!-- START search pannel -->
+<div data-dojo-type="idx/layout/ContentPane" data-dojo-props="	'class':'scanPanelData',uId:'productScanForm',style : 'padding-top:0px; padding-bottom:0px !important'   ">		
+		<div data-dojo-type="idx/layout/ContentPane" data-dojo-props="spanLabel:true,'class':'barcodeScanPanel',uId:'extn_containerPanel' ">		
+			<div data-dojo-type="sc/plat/dojo/widgets/Link" data-dojo-props="spanLabel:true,	uId:'extn_scanLabelNo' ,'class':'buttonConnect',		
+			style:'padding-top:15px; padding-right:10px;',hasImage:true ,appendToContextRoot:true,imageSrc:'wsc/resources/css/icons/images/barcode_blue.png',
+				scParamDataFn :
+						function() { 
+							return { 
+								title :this.getSimpleBundleString('Tooltip_arialabel_scanProduct'),	
+								imageAlt :this.getSimpleBundleString('Tooltip_arialabel_scanProduct')
+							}
+						}">
+			</div>
+			<div data-dojo-type="idx/form/TextBox" instantValidate="true" data-dojo-props="regExp:'[0-9]+', spanLabel:true,'class':'autoLabelZeroWidth longTextbox' ,
+				selectOnClick:true,style:'margin-left:1px; padding-top:0px !important;',uId:'extn_txt_LabelNo',scParamDataFn :
+				function() { 
+					return { 			 	
+							hint:this.getSimpleBundleString('extn_scan_the_label'),	
+							label:this.getSimpleBundleString('extn_scan_the_label'),
+							bindingData :{sourceBinding :{path :'ACADScanBatchDetails.LabelNo',namespace :'LabelNo_Input'},
+								      targetBinding :[{path :'ACADScanBatchDetails.LabelNo',namespace :'LabelNo_Output'}]},	
+							invalidMessage :this.getSimpleBundleString('extn_Alert_Msg_invalidLAbelNo')
+					}
+				}">
+			</div>
+			<!-- OMNI-67004 : Active Shipment Label - Start -->
+			<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" data-dojo-props="	spanLabel : true , 
+				'class' : 'extn_ActiveShipmentCss hashNumberAlign autoLabelZeroWidth blockComponent comappsWrapWord' , 
+				renderHidden : true ,
+				uId : 'extn_ActiveShipment' ,
+				style : ' margin-top: 0%; text-align: center; ' ,  
+				scParamDataFn :
+				function() { 
+					return { 
+						label :  this.getSimpleBundleString('extn_Active_Shipment')
+					}
+				}">
+			</div>
+			<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" data-dojo-props="	spanLabel : true , 
+				'class' : 'hashNumberAlign autoLabelZeroWidth blockComponent comappsWrapWord' , 
+				renderHidden : true ,
+				uId : 'extn_ActiveShipmentMessage' ,
+				style : ' margin-top: 0%; text-align: center; ' ,  
+				scParamDataFn :
+				function() { 
+					return { 
+						label :  this.getSimpleBundleString('extn_Active_ShipmentMessage')
+					}
+				}">
+			</div>
+			<!-- OMNI-67004 : Active Shipment Label - End -->
+			<!-- OMNI-67006 : Cancelled Shipment Label - Start -->
+			<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" data-dojo-props="	spanLabel : true , 
+				'class' : 'extn_CancelledShipmentCss hashNumberAlign autoLabelZeroWidth blockComponent comappsWrapWord' , 
+				renderHidden : true ,
+				uId : 'extn_CancelledShipment' ,
+				style : ' margin-top: 0%; text-align: center; ' ,  
+				scParamDataFn :
+				function() { 
+					return { 
+						label : 	this.getSimpleBundleString('extn_Cancelled_Shipment')
+					}
+				}">
+			</div>
+			<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" data-dojo-props="	spanLabel : true , 
+				'class' : 'hashNumberAlign autoLabelZeroWidth blockComponent comappsWrapWord' , 
+				renderHidden : true ,
+				uId : 'extn_CancelledShipmentMessage' ,
+				style : ' margin-top: 0%; text-align: center; ' ,  
+				scParamDataFn :
+				function() { 
+					return { 
+						label : 	this.getSimpleBundleString('extn_CancelledShipment_Message')
+					}
+				}">
+			</div>
+			<!-- OMNI-67006 : Cancelled Shipment Label - End -->
+		</div>
+</div>
+<br> 
+<!-- END search pannel -->
+
+<!--Start Scanned and Cancelled Count -->
+
+
+<table style="margin-left:auto;margin-right:auto;">
+	<tr >	
+		<th style="text-align:center"> 	<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" data-dojo-props="spanLabel : true , 'class' : 'extn_ScanLabelCountCssBig blockComponent longTextbox zeroWidthLabelKey' ,		
+	 	uId : 'extn_lastScannedShipmentCount' , style : 'padding-top:0px; padding-left:10px;' , scParamDataFn :
+		 function() { 
+			return { 
+			 	label : ' ',
+				bindingData :  {     sourceBinding :  {path :    'ACADScanBatchHeader.ScannedCount',
+							namespace :    'getScannedLabelDetails_ScanShipmentLabel_output'
+						}
+				}
+			}
+			}">
+	</div> </th>
+		<th style="text-align:center"> <div data-dojo-type="sc/plat/dojo/widgets/DataLabel" data-dojo-props="spanLabel : true , 'class' : 'extn_ScanLabelCountCssBig blockComponent longTextbox zeroWidthLabelKey' ,		
+	 	uId : 'extn_lastScannedCancelledShipmentCount' , style : 'padding-top:0px; padding-left:10px;' , scParamDataFn :
+		 function() { 
+			return { 
+			 	label : ' ',
+				bindingData :  {     sourceBinding :  {path :    'ACADScanBatchHeader.CancelledCount',
+							namespace :    'getScannedLabelDetails_ScanShipmentLabel_output'
+						}
+				}
+			}
+			}">
+	</div> </th>
+	</tr>
+
+	<tr >
+		<th style="text-align:center"> 	<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" data-dojo-props="spanLabel : true , 'class' : 'extn_ScanLabelCountCss blockComponent longTextbox zeroWidthLabelKey' ,		
+	 	uId : 'extn_lastScannedShipment' , style : 'padding-top:0px; padding-left:10px;' , scParamDataFn :
+		 function() { 
+			return { 
+			 	label : this.getSimpleBundleString('extn_scanned'),
+				bindingData :  {     sourceBinding :  {path :    'ACADScanBatchHeader.ScannedCount',
+							namespace :    'getScannedLabelDetails_ScanShipmentLabel_output'
+						}
+				}
+			}
+			}">
+	</div> </th>
+		<th style="text-align:center"> <div data-dojo-type="sc/plat/dojo/widgets/DataLabel" data-dojo-props="spanLabel : true , 'class' : 'extn_ScanLabelCountCss blockComponent longTextbox zeroWidthLabelKey' ,		
+	 	uId : 'extn_lastScannedCancelledShipmentCount' , style : 'padding-top:0px; padding-left:10px;' , scParamDataFn :
+		 function() { 
+			return { 
+			 	label : this.getSimpleBundleString('extn_cancelled'),
+				bindingData :  {     sourceBinding :  {path :    'ACADScanBatchHeader.CancelledCount',
+							namespace :    'getScannedLabelDetails_ScanShipmentLabel_output'
+						}
+				}
+			}
+			}">
+	</div> </th>
+	</tr>
+</table>
+
+<!-- END of Scanned and Cancelled Shipment Count -->
+<!--Start of RFCP Count -->
+
+<table style="margin-left:auto;margin-right:auto;">
+	<tr >	
+		<th style="text-align:center">
+	<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" data-dojo-props="	spanLabel : true , 
+				'class' : 'extn_ActiveShipmentCountCss hashNumberAlign autoLabelZeroWidth blockComponent comappsWrapWord' , 
+				renderHidden : false ,
+				uId : 'extn_StagedShipmentsCount_Count' ,
+				style : ' margin-top: 0%; text-align: center; ' ,  
+				scParamDataFn :
+				function() { 
+					return { 
+						label : ''					}
+				}">
+	</div>
+		</th>
+		<th style="text-align:center"> 
+			<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" data-dojo-props="	spanLabel : true , 
+				'class' : 'hashNumberAlign autoLabelZeroWidth blockComponent comappsWrapWord' , 
+				renderHidden : false ,
+				uId : 'extn_StagedShipmentsCount' ,
+				style : ' margin-top: 0%; text-align: center; ' ,  
+				scParamDataFn :
+				function() { 
+					return { 
+						label : ''					}
+				}">
+	</div>
+		</th>
+	</tr>
+</table>
+
+<!-- ENDS of RFCP Count-->
+<br>
+<!-- START screen ElapsedTime,ShipmentID,OrderID -->
+<div>
+<table>
+	<tr >	
+	<th style="text-align:left"> 
+		<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" data-dojo-props="spanLabel : true , 'class' : 'hashNumberAlign blockComponent longTextbox zeroWidthLabelKey' ,		
+			uId : 'extn_lastScannedElapsedTime_Parent' , style : 'padding-top:0px; padding-left:10px;' , scParamDataFn :
+			 function() { 
+				return { 
+					label : this.getSimpleBundleString('extn_elapsed_time'),
+					bindingData :  {     sourceBinding :  {path :    'ACADScanBatchHeader.ElapsedTime',
+										 namespace : 'getScannedLabelDetails_ScanShipmentLabel_output'
+							}
+					}
+				}
+				}">
+		</div>
+	</th>
+	<th style="text-align:left"> 
+		<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" data-dojo-props="spanLabel : true , 'class' : 'hashNumberAlign blockComponent longTextbox zeroWidthLabelKey' ,		
+			uId : 'extn_lastScannedElapsedTime' , style : 'padding-top:0px; padding-left:10px;' , scParamDataFn :
+			 function() { 
+				return { 
+					label : '',
+					bindingData :  {     sourceBinding :  {path :    'ACADScanBatchHeader.ElapsedTime',
+										 namespace : 'getScannedLabelDetails_ScanShipmentLabel_output'
+							}
+					}
+				}
+				}">
+		</div>
+	</th>
+	</tr>
+	
+	<tr >
+	<th style="text-align:left"> 
+		<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" data-dojo-props="spanLabel : true , 'class' : 'hashNumberAlign  blockComponent longTextbox zeroWidthLabelKey' ,		
+			uId : 'extn_lastScannedShipmentNo_parent' , style : 'padding-top:0px; padding-left:10px;' , scParamDataFn :
+			 function() { 
+				return { 
+					label : this.getSimpleBundleString('extn_shipment_id'),
+					bindingData :  {     
+					}
+				}
+				}">
+		</div>
+	</th>
+	<th style="text-align:left"> 
+		<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" data-dojo-props="spanLabel : true , 'class' : 'hashNumberAlign  blockComponent longTextbox zeroWidthLabelKey' ,		
+	 	uId : 'extn_lastScannedShipmentNo' , style : 'padding-top:0px; padding-left:10px;' , scParamDataFn :
+		 function() { 
+			return { 
+			 	label : '',
+				bindingData :  {     
+				}
+			}
+			}">
+		</div>
+	</th>
+	</tr>
+		
+	<tr>	
+	<th style="text-align:left"> 
+	<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" data-dojo-props="spanLabel : true , 'class' : 'hashNumberAlign  blockComponent longTextbox zeroWidthLabelKey' ,		
+	 	uId : 'extn_lastScannedOrderNo_Parent' , style : 'padding-top:0px; padding-left:10px;' , scParamDataFn :
+		 function() { 
+			return { 
+			 	label : this.getSimpleBundleString('extn_order_no'),
+				bindingData :  {     
+				}
+			}
+			}">
+	</div>
+	</th>
+	<th style="text-align:left"> 
+		<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" data-dojo-props="spanLabel : true , 'class' : 'hashNumberAlign  blockComponent longTextbox zeroWidthLabelKey' ,		
+	 	uId : 'extn_lastScannedOrderNo' , style : 'padding-top:0px; padding-left:10px;' , scParamDataFn :
+		 function() { 
+			return { 
+			 	label : '',
+				bindingData :  {     
+				}
+			}
+			}">
+		</div>
+	</th>
+	</tr>
+	
+	<tr >
+	<th style="text-align:left"> 
+		<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" data-dojo-props="spanLabel : true , 'class' : 'hashNumberAlign blockComponent longTextbox zeroWidthLabelKey' ,	renderHidden : true ,	
+	 	uId : 'extn_OrderDate_Parent' , style : 'padding-top:0px; padding-left:10px;' , scParamDataFn :
+		 function() { 
+			return { 
+			 	label : this.getSimpleBundleString('extn_OrderDate'),
+				bindingData :  {  	
+				}
+			}
+			}">
+	</div>
+	</th>
+	<th style="text-align:left">
+		<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" data-dojo-props="spanLabel : true , 'class' : 'hashNumberAlign blockComponent longTextbox zeroWidthLabelKey' ,	renderHidden : true ,	
+			uId : 'extn_OrderDate' , style : 'padding-top:0px; padding-left:10px;' , scParamDataFn :
+			 function() { 
+				return { 
+					label : '',
+					bindingData :  {  	
+					}
+				}
+				}">
+		</div>
+	</th>
+	</tr>
+	
+	<tr >
+	<th style="text-align:left"> 
+		<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" data-dojo-props="spanLabel : true , 'class' : 'hashNumberAlign blockComponent longTextbox zeroWidthLabelKey' ,	
+		renderHidden : true ,
+	 	uId : 'extn_PickDate_Parent' , style : 'padding-top:0px; padding-left:10px;' , scParamDataFn :
+		 function() { 
+			return { 
+			 	label : this.getSimpleBundleString('extn_Pick_Date'),
+				bindingData :  {     
+				}
+			}
+			}">
+		</div>
+	</th>
+	<th style="text-align:left">
+		<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" data-dojo-props="spanLabel : true , 'class' : 'hashNumberAlign blockComponent longTextbox zeroWidthLabelKey' ,	
+		renderHidden : true ,
+	 	uId : 'extn_PickDate' , style : 'padding-top:0px; padding-left:10px;' , scParamDataFn :
+		 function() { 
+			return { 
+			 	label : '',
+				bindingData :  {   
+				}
+			}
+			}">
+		</div>
+	</th>
+	</tr>
+	
+	<tr >
+	<th style="text-align:left"> 
+		<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" data-dojo-props="spanLabel : true , 'class' : 'hashNumberAlign blockComponent longTextbox zeroWidthLabelKey' ,	 renderHidden : true ,	
+	 	uId : 'extn_FirstName_Parent' , style : 'padding-top:0px; padding-left:10px;' , scParamDataFn :
+		 function() { 
+			return { 
+			 	label : this.getSimpleBundleString('extn_First_Name'),
+				bindingData :  {
+				}
+			}
+			}">
+		</div>
+	</th>
+	<th style="text-align:left">
+		<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" data-dojo-props="spanLabel : true , 'class' : 'hashNumberAlign blockComponent longTextbox zeroWidthLabelKey' ,	 renderHidden : true ,	
+	 	uId : 'extn_FirstName' , style : 'padding-top:0px; padding-left:10px;' , scParamDataFn :
+		 function() { 
+			return { 
+			 	label : '',
+				bindingData : { 
+				}
+			}
+			}">
+		</div>
+	</th>
+	</tr>
+	
+	<th style="text-align:left"> 
+		<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" data-dojo-props="spanLabel : true , 'class' : 'hashNumberAlign blockComponent longTextbox zeroWidthLabelKey' ,	 renderHidden : true ,	
+	 	uId : 'extn_LastName_Parent' , style : 'padding-top:0px; padding-left:10px;' , scParamDataFn :
+		 function() { 
+			return { 
+			 	label : this.getSimpleBundleString('extn_Last_Name'),
+				bindingData :  {
+				}
+			}
+			}">
+		</div>
+	</th>
+	<th style="text-align:left">
+		<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" data-dojo-props="spanLabel : true , 'class' : 'hashNumberAlign blockComponent longTextbox zeroWidthLabelKey' ,	 renderHidden : true ,	
+	 	uId : 'extn_LastName' , style : 'padding-top:0px; padding-left:10px;' , scParamDataFn :
+		 function() { 
+			return { 
+			 	label : '',
+				bindingData : { 
+				}
+			}
+			}">
+		</div>
+	</th>
+	</tr>
+	
+	<tr >
+	<th style="text-align:left"> 
+	<!--OMNI-71479 - START --> 
+		<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" data-dojo-props="spanLabel : true , 'class' : 'hashNumberAlign blockComponent longTextbox zeroWidthLabelKey' ,	 renderHidden : true ,	
+	 	uId : 'extn_AltPickup_FirstName_Parent' , style : 'padding-top:0px; padding-left:10px;' , scParamDataFn :
+		 function() { 
+			return { 
+			 	label : this.getSimpleBundleString('extn_AltPickup_FirstName'),
+				bindingData :  {    
+				}
+			}
+			}">
+		</div>
+	</th>
+	<th style="text-align:left">
+		<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" data-dojo-props="spanLabel : true , 'class' : 'hashNumberAlign blockComponent longTextbox zeroWidthLabelKey' ,	 renderHidden : true ,	
+	 	uId : 'extn_AltPickup_FirstName' , style : 'padding-top:0px; padding-left:10px;' , scParamDataFn :
+		 function() { 
+			return { 
+			 	label : '',
+				bindingData :  {    
+				}
+			}
+			}">
+		</div>	
+	</th>
+	</tr>
+	<tr >
+	<th style="text-align:left"> 
+		<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" data-dojo-props="spanLabel : true , 'class' : 'hashNumberAlign blockComponent longTextbox zeroWidthLabelKey' ,	 renderHidden : true ,	
+	 	uId : 'extn_AltPickup_LastName_Parent' , style : 'padding-top:0px; padding-left:10px;' , scParamDataFn :
+		 function() { 
+			return { 
+			 	label : this.getSimpleBundleString('extn_AltPickup_LastName'),
+				bindingData :  {    
+				}
+			}
+			}">
+		</div>
+	</th>
+	<th style="text-align:left">
+		<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" data-dojo-props="spanLabel : true , 'class' : 'hashNumberAlign blockComponent longTextbox zeroWidthLabelKey' ,	 renderHidden : true ,	
+	 	uId : 'extn_AltPickup_LastName' , style : 'padding-top:0px; padding-left:10px;' , scParamDataFn :
+		 function() { 
+			return { 
+			 	label : '',
+				bindingData :  {    
+				}
+			}
+			}">
+		</div>	
+	</th>
+	</tr>
+	<!--OMNI-71479 - END-->
+</table>	
+	<!-- OMNI-67006 : For a cancelled shipment display OrderDate,PickUpDate,CustomerName,AltPickup - END -->
+</div> 
+<!-- END screen ElapsedTime,ShipmentID,OrderID -->
+
+ 
+
+<div  data-dojo-type="dijit/form/Button" data-dojo-props="'class':'idxSpecialButton longButtons',uId:'extn_btnFinish',scParamDataFn :
+		 function() { 
+			return { 
+			 	label: this.getSimpleBundleString('extn_finished')
+			}
+		}
+"> 
+</div>
+
+

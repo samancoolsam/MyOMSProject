@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LabelFieldMap>
+  
+	<LabelField Binding="AcademyMergedDocument/EnvironmentDocument/Container/Shipment/@ShipmentNo" DataType="Text"
+        LabelFieldName="ShipmentNo" RepeatingElement="" Sequence="N"/>
+       
+	<LabelField Binding="AcademyMergedDocument/EnvironmentDocument/Container/Shipment/@InstructionText" LabelFieldName="GiftMessage"
+		RepeatingElement="" Sequence="N"/>
+	
+	<LabelField Binding="AcademyMergedDocument/EnvironmentDocument/Container/Shipment/@ShipmentNo" DataType="Text"
+        LabelFieldName="ShipmentNo1" RepeatingElement="" Sequence="N"/>
+    
+	<LabelField Binding="AcademyMergedDocument/EnvironmentDocument/Container/@ContainerScm" DataType="Text"
+        LabelFieldName="ContainerSCM" RepeatingElement="" Sequence="N"/>
+	
+	<LabelField Binding="AcademyMergedDocument/EnvironmentDocument/Container/@ContainerScm" DataType="Text"
+        LabelFieldName="ContainerScm1" RepeatingElement="" Sequence="N"/>
+		
+    <LabelField Binding="AcademyMergedDocument/EnvironmentDocument/Container/Shipment/ToAddress/@FirstName" DataType="Text"
+        LabelFieldName="FromName" RepeatingElement="" Sequence="N"/>
+
+    <LabelField Binding="AcademyMergedDocument/EnvironmentDocument/Container/Shipment/ToAddress/@LastName" DataType="Text"
+        LabelFieldName="FromLastName" RepeatingElement="" Sequence="N"/>
+
+	<LabelField Binding="AcademyMergedDocument/EnvironmentDocument/Container/Shipment/ToAddress/@AddressLine2" DataType="Text"
+        LabelFieldName="FromAddressLine2" RepeatingElement="" Sequence="N"/>
+    
+	<LabelField Binding="AcademyMergedDocument/EnvironmentDocument/Container/Shipment/ToAddress/@AddressLine1" DataType="Text"
+        LabelFieldName="FromAddressLine1" RepeatingElement="" Sequence="N"/>
+    
+	<LabelField Binding="AcademyMergedDocument/EnvironmentDocument/Container/Shipment/ToAddress/@ZipCode" DataType="Text"
+        LabelFieldName="FromZip" RepeatingElement="" Sequence="N"/>
+    
+	<LabelField Binding="AcademyMergedDocument/EnvironmentDocument/Container/Shipment/ToAddress/@State" DataType="Text"
+        LabelFieldName="FromState" RepeatingElement="" Sequence="N"/>
+    
+	<LabelField Binding="AcademyMergedDocument/EnvironmentDocument/Container/Shipment/ToAddress/@City" DataType="Text"
+        LabelFieldName="FromCity" RepeatingElement="" Sequence="N"/>
+    
+	<LabelField Binding="AcademyMergedDocument/EnvironmentDocument/Container/Shipment/BillToAddress/@FirstName" DataType="Text"
+        LabelFieldName="BillToName" RepeatingElement="" Sequence="N"/>
+    
+	<LabelField Binding="AcademyMergedDocument/EnvironmentDocument/Container/Shipment/BillToAddress/@LastName" DataType="Text"
+        LabelFieldName="BillToLastName" RepeatingElement="" Sequence="N"/>
+
+	<LabelField Binding="AcademyMergedDocument/EnvironmentDocument/Container/Shipment/BillToAddress/@State" DataType="Text"
+        LabelFieldName="BillToState" RepeatingElement="" Sequence="N"/>
+    
+	<LabelField Binding="AcademyMergedDocument/EnvironmentDocument/Container/Shipment/BillToAddress/@City" DataType="Text"
+        LabelFieldName="BillToCity" RepeatingElement="" Sequence="N"/>
+    
+	<LabelField Binding="AcademyMergedDocument/EnvironmentDocument/Container/Shipment/BillToAddress/@AddressLine1" DataType="Text"
+        LabelFieldName="BillToAddress1" RepeatingElement="" Sequence="N"/>
+    
+	<LabelField Binding="AcademyMergedDocument/EnvironmentDocument/Container/Shipment/BillToAddress/@AddressLine2" DataType="Text"
+        LabelFieldName="BillToAddress2" RepeatingElement="" Sequence="N"/>
+    
+	<LabelField Binding="AcademyMergedDocument/EnvironmentDocument/Container/Shipment/BillToAddress/@ZipCode" DataType="Text"
+        LabelFieldName="BillToZip" RepeatingElement="" Sequence="N"/>
+	
+    <LabelField Binding="AcademyMergedDocument/EnvironmentDocument/Container/Shipment/ToAddress/@FirstName" DataType="Text"
+        LabelFieldName="LabelFromName" RepeatingElement="" Sequence="N"/>
+
+    <LabelField Binding="AcademyMergedDocument/EnvironmentDocument/Container/Shipment/ToAddress/@LastName" DataType="Text"
+        LabelFieldName="LabelFromLastName" RepeatingElement="" Sequence="N"/>
+    
+	<LabelField Binding="AcademyMergedDocument/EnvironmentDocument/Container/Shipment/ToAddress/@AddressLine2" DataType="Text"
+        LabelFieldName="LabelFromAddressLine2" RepeatingElement="" Sequence="N"/>
+    
+	<LabelField Binding="AcademyMergedDocument/EnvironmentDocument/Container/Shipment/ToAddress/@AddressLine1" DataType="Text"
+        LabelFieldName="LabelFromAddressLine1" RepeatingElement="" Sequence="N"/>
+    
+	<LabelField Binding="AcademyMergedDocument/EnvironmentDocument/Container/Shipment/ToAddress/@ZipCode" DataType="Text"
+        LabelFieldName="LabelFromZip" RepeatingElement="" Sequence="N"/>
+    
+	<LabelField Binding="AcademyMergedDocument/EnvironmentDocument/Container/Shipment/ToAddress/@State" DataType="Text"
+        LabelFieldName="LabelFromState" RepeatingElement="" Sequence="N"/>
+    
+	<LabelField Binding="AcademyMergedDocument/EnvironmentDocument/Container/Shipment/ToAddress/@City" DataType="Text"
+        LabelFieldName="LabelFromCity" RepeatingElement="" Sequence="N"/>
+    
+	<LabelField Binding="AcademyMergedDocument/EnvironmentDocument/Container/Shipment/ToAddress/@FirstName" DataType="Text"
+        LabelFieldName="LabelToName" RepeatingElement="" Sequence="N"/>
+
+	<LabelField Binding="AcademyMergedDocument/EnvironmentDocument/Container/Shipment/ToAddress/@LastName" DataType="Text"
+        LabelFieldName="LabelToLastName" RepeatingElement="" Sequence="N"/>
+
+	<LabelField Binding="AcademyMergedDocument/EnvironmentDocument/Container/Shipment/ToAddress/@State" DataType="Text"
+        LabelFieldName="LabelToState" RepeatingElement="" Sequence="N"/>
+    
+	<LabelField Binding="AcademyMergedDocument/EnvironmentDocument/Container/Shipment/ToAddress/@City" DataType="Text"
+        LabelFieldName="LabelToCity" RepeatingElement="" Sequence="N"/>
+    
+	<LabelField Binding="AcademyMergedDocument/EnvironmentDocument/Container/Shipment/ToAddress/@AddressLine1" DataType="Text"
+        LabelFieldName="LabelToAddress1" RepeatingElement="" Sequence="N"/>
+    
+	<LabelField Binding="AcademyMergedDocument/EnvironmentDocument/Container/Shipment/ToAddress/@AddressLine2" DataType="Text"
+        LabelFieldName="LabelToAddress2" RepeatingElement="" Sequence="N"/>
+    
+	<LabelField Binding="AcademyMergedDocument/EnvironmentDocument/Container/Shipment/ToAddress/@ZipCode" DataType="Text"
+        LabelFieldName="LabelToZip" RepeatingElement="" Sequence="N"/>
+	
+	<LabelField Binding="AcademyMergedDocument/EnvironmentDocument/Container/ContainerDetails/@InvoiceNo" DataType="Text"
+        LabelFieldName="InvoiceNo" RepeatingElement="" Sequence="N"/>
+
+	<LabelField Binding="AcademyMergedDocument/EnvironmentDocument/Container/ContainerDetails/@InvoiceNo" DataType="Text"
+        LabelFieldName="InvoiceNo1" RepeatingElement="" Sequence="N"/>
+    
+	<LabelField Binding="AcademyMergedDocument/EnvironmentDocument/Container/@MarketingLine1" DataType="Text"
+        LabelFieldName="MarketingLines1" RepeatingElement="" Sequence="N"/>
+    
+	<LabelField Binding="AcademyMergedDocument/EnvironmentDocument/Container/@MarketingLine2" DataType="Text"
+        LabelFieldName="MarketingLines2" RepeatingElement="" Sequence="N"/>
+    
+	<LabelField Binding="AcademyMergedDocument/EnvironmentDocument/Container/ContainerDetails/ContainerDetail/ShipmentLine/@OrderNo" DataType="Text"
+        LabelFieldName="OrderNo" RepeatingElement="" Sequence="N"/>
+
+	<LabelField Binding="AcademyMergedDocument/EnvironmentDocument/Container/ContainerDetails/ContainerDetail/ShipmentLine/@OrderNo" DataType="Text"
+        LabelFieldName="OrderNo1" RepeatingElement="" Sequence="N"/>
+
+	
+	<LabelField Binding="AcademyMergedDocument/EnvironmentDocument/Container/Shipment/@ShipDate" DataType="Text"
+        LabelFieldName="ShipDate" RepeatingElement="" Sequence="N"/>
+	
+	<LabelField Binding="AcademyMergedDocument/EnvironmentDocument/Container/@SCAC" DataType="Text"
+        LabelFieldName="Carrier" RepeatingElement="" Sequence="N"/>
+	
+	<LabelField Binding="AcademyMergedDocument/EnvironmentDocument/Container/ContainerDetails/ContainerDetail/ShipmentLine/OrderLine/Item/@ItemID"
+		DataType="Text" LabelFieldName="ItemID" RepeatingElement="" Sequence="N"/>
+    
+	<LabelField Binding="AcademyMergedDocument/EnvironmentDocument/Container/ContainerDetails/ContainerDetail/ShipmentLine/OrderLine/Item/@ItemDesc"
+		DataType="Text" LabelFieldName="ItemDescription" RepeatingElement="" Sequence="N"/>
+
+	<LabelField Binding="AcademyMergedDocument/EnvironmentDocument/Container/ContainerDetails/ContainerDetail/ShipmentLine/@Quantity" DataType="Text"
+        LabelFieldName="OrderQty" RepeatingElement="" Sequence="N"/>
+    
+	<LabelField Binding="AcademyMergedDocument/EnvironmentDocument/Container/ContainerDetails/ContainerDetail/@Quantity" DataType="Text"
+        LabelFieldName="ShipQty" RepeatingElement="" Sequence="N"/>
+    
+	<LabelField Binding="AcademyMergedDocument/EnvironmentDocument/Container/ContainerDetails/ContainerDetail/ShipmentLine/OrderLine/@UnitPrice" DataType="Text" LabelFieldName="UnitPrice" RepeatingElement="" Sequence="N"/>
+
+	<LabelField Binding="AcademyMergedDocument/EnvironmentDocument/Container/ContainerDetails/ContainerDetail/ShipmentLine/OrderLine/@ExtendedPrice" DataType="Text" LabelFieldName="ExtendedPrice" RepeatingElement="" Sequence="N"/>
+
+	<LabelField Binding="AcademyMergedDocument/EnvironmentDocument/Container/ContainerDetails/ContainerDetail/ShipmentLine/OrderLine/@DiscountForLine"
+		DataType="Text" LabelFieldName="Discount" RepeatingElement="" Sequence="N"/>
+ 
+	<LabelField Binding="AcademyMergedDocument/EnvironmentDocument/Container/ContainerDetails/@TotalTax" DataType="Text"
+        LabelFieldName="Tax" RepeatingElement="" Sequence="N"/>
+    
+	<LabelField Binding="AcademyMergedDocument/EnvironmentDocument/Container/ContainerDetails/@ShippingCharges" DataType="Text"
+        LabelFieldName="ShippingCharges" RepeatingElement="" Sequence="N"/>   
+    
+	<LabelField 
+	Binding="AcademyMergedDocument/EnvironmentDocument/Container/ContainerDetails/ContainerDetail/ShipmentLine/OrderLine/Order/PaymentMethods/PaymentMethod/@CreditCardType" DataType="Text" LabelFieldName="PaymentType" RepeatingElement="" Sequence="N"/>
+	
+	 <LabelField Binding="AcademyMergedDocument/EnvironmentDocument/Container/ContainerDetails/ContainerDetail/ShipmentLine/OrderLine/Order/PaymentMethods/PaymentMethod/@DisplayCreditCardNo" DataType="Text" LabelFieldName="PaymentDetails" RepeatingElement="" Sequence="N"/>
+
+	<LabelField Binding="AcademyMergedDocument/EnvironmentDocument/Container/ContainerDetails/ContainerDetail/ShipmentLine/OrderLine/@USD" DataType="Text"  LabelFieldName="ExtendPriceDollar" RepeatingElement="" Sequence="N"/>
+	
+	 <LabelField Binding="AcademyMergedDocument/EnvironmentDocument/Container/ContainerDetails/ContainerDetail/ShipmentLine/OrderLine/@USD" DataType="Text"  LabelFieldName="UnitPriceDollar" RepeatingElement="" Sequence="N"/>
+
+     <LabelField Binding="AcademyMergedDocument/EnvironmentDocument/Container/ContainerDetails/@CartonTotal" DataType="Text"
+        LabelFieldName="CartonTotal" RepeatingElement="" Sequence="N"/>   
+
+<!-- CR#38 changes start -->
+    <!-- START corrected xpath for STL-1279 -->	   
+    <!-- <LabelField Binding="AcademyMergedDocument/EnvironmentDocument/Container/ContainerDetails/ContainerDetail/ShipmentLine/OrderLine/Order/PaymentMethods/PaymentMethod/@TotalCharged" DataType="Text"  LabelFieldName="PaymentAmount" RepeatingElement="PaymentMethod" Sequence="N"/> -->
+    <LabelField Binding="AcademyMergedDocument/InputDocument/InvoiceDetail/InvoiceHeader/Order/OverallTotals/@GrandTotal" DataType="Text"
+        LabelFieldName="PaymentAmount" RepeatingElement="OverallTotals" Sequence="N"/>
+    <!-- END corrected xpath for STL-1279 -->	
+
+	<LabelField Binding="AcademyMergedDocument/EnvironmentDocument/Container/ContainerDetails/ContainerDetail/ShipmentLine/OrderLine/@ItemTaxLineLevel" DataType="Text"   LabelFieldName="LineItemTax" RepeatingElement="" Sequence="N"/>
+
+	<LabelField Binding="AcademyMergedDocument/EnvironmentDocument/Container/ContainerDetails/ContainerDetail/ShipmentLine/OrderLine/@ShippingChargeAtLineLevel" DataType="Text"  LabelFieldName="LineShippingCharge" RepeatingElement="" Sequence="N"/>
+
+	<LabelField Binding="AcademyMergedDocument/EnvironmentDocument/Container/ContainerDetails/ContainerDetail/ShipmentLine/OrderLine/@ShippingTaxLineLevel" DataType="Text"   LabelFieldName="LineShippingTax" RepeatingElement="" Sequence="N"/>
+
+    <LabelField Binding="AcademyMergedDocument/EnvironmentDocument/Container/ContainerDetails/ContainerDetail/ShipmentLine/OrderLine/@ItemDiscDesc" DataType="Text"
+        LabelFieldName="ItemDiscDesc" RepeatingElement="" Sequence="N"/>
+
+    <LabelField Binding="AcademyMergedDocument/InputDocument/InvoiceDetail/InvoiceHeader/@LineSubTotal" DataType="Text"
+        LabelFieldName="LineSubTotal" RepeatingElement="" Sequence="N"/>
+    <LabelField Binding="AcademyMergedDocument/EnvironmentDocument/Container/ContainerDetails/@TotalDiscount" DataType="Text"
+        LabelFieldName="TotalDiscount" RepeatingElement="" Sequence="N"/>   
+    <LabelField Binding="AcademyMergedDocument/EnvironmentDocument/Container/ContainerDetails/@TotalExtendedPrice" DataType="Text"
+        LabelFieldName="TotalExtendedPrice" RepeatingElement="" Sequence="N"/>   
+        
+
+<!-- CR#38 changes end -->
+
+<!-- Issue# 3845 changes start -->
+
+ <LabelField Binding="AcademyMergedDocument/EnvironmentDocument/Container/ContainerDetails/ContainerDetail/Task/@SourceLocationId" DataType="Text"
+        LabelFieldName="LocationId" RepeatingElement="" Sequence="N"/>
+
+<!-- Issue# 3845 changes end -->
+
+<!-- Issue# 3845 changes start -->
+
+ <LabelField Binding="AcademyMergedDocument/EnvironmentDocument/Container/ContainerDetails/ContainerDetail/Task/@SourceLocationId" DataType="Text"
+        LabelFieldName="LocationId" RepeatingElement="" Sequence="N"/>
+
+<!-- Issue# 3845 changes end -->
+
+
+      <RepeatingFields>
+        <RepeatingField LabelFieldName="PaymentType" MaxFirstPage="3"
+            MaxLastPage="3" MaxMidPage="3"/>
+        <RepeatingField LabelFieldName="PaymentDetails"
+            MaxFirstPage="3" MaxLastPage="3" MaxMidPage="0"/>
+        <RepeatingField LabelFieldName="PaymentAmount" MaxFirstPage="3"
+            MaxLastPage="3" MaxMidPage="3"/>
+   		<RepeatingField LabelFieldName="PaymentMethodDollar" MaxFirstPage="3"
+            MaxLastPage="3" MaxMidPage="3"/>
+
+    </RepeatingFields>    
+    
+    
+</LabelFieldMap>

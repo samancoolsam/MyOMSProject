@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--createOrder Output XML-->
+<Order EnterpriseCode="" OrderHeaderKey="" DocumentType="" OrderNo="">
+<PersonInfoShipTo>
+<Extn ExtnIsAPOFPO="" ExtnIsPOBOXADDRESS="" ExtnIsSignatureRequired="" ExtnAddressNickName="" ExtnIsAddressVerified="" ExtnIsMilitary="" /> 
+</PersonInfoShipTo>
+<PersonInfoBillTo>
+<Extn ExtnIsAPOFPO="" ExtnIsPOBOXADDRESS="" ExtnIsSignatureRequired="" ExtnAddressNickName="" ExtnIsAddressVerified="" ExtnIsMilitary="" />
+</PersonInfoBillTo>
+</Order>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ScreenBundle screenBundleId="extn.order.details.OrderSummaryExtnBundle" screenId="extn.order.details.OrderSummaryExtn">
+    <BundleEntries>
+    <!--OMNI-63466 BEGIN-->
+        <BundleEntry bundleEntryId="extn_pnlCnclRsn_ContentPane_title"
+            bundleKey="extn_Cancel_Reason"
+            bundleValueFn="_scSimpleBundle" property="title"
+            type="WIDGET" uId="extn_pnlCnclRsn"/>
+	    <!--OMNI-63466 END-->
+        <BundleEntry bundleEntryId="extn_OrderDate_DataLabel_label"
+            bundleKey="extn_Order_Date" bundleValueFn="_scSimpleBundle"
+            property="label" type="WIDGET" uId="extn_OrderDate"/>
+        <BundleEntry
+            bundleEntryId="extn_CustomerPhoneNo_DataLabel_label"
+            bundleKey="extn_Customer_Phone_No" bundleValueFn="_scBundle"
+            property="label" type="WIDGET" uId="extn_CustomerPhoneNo"/>
+        <BundleEntry bundleEntryId="extn_EmailID_DataLabel_label"
+            bundleKey="extn_Customer_EmailID" bundleValueFn="_scBundle"
+            property="label" type="WIDGET" uId="extn_EmailID"/>
+	    <!--OMNI-63466 BEGIN-->
+        <BundleEntry bundleEntryId="extn_view_99820_View_name"
+            bundleKey="extn_LineNo" bundleValueFn="_scSimpleBundle"
+            property="name" type="WIDGET" uId="extn_view_99820"/>
+        <BundleEntry bundleEntryId="extn_gridCnclRsn_view_View_name"
+            bundleKey="extn_Cancel_Reason"
+            bundleValueFn="_scSimpleBundle" property="name"
+            type="WIDGET" uId="extn_gridCnclRsn_view"/>
+	    <!--OMNI-63466 END-->
+    </BundleEntries>
+</ScreenBundle>

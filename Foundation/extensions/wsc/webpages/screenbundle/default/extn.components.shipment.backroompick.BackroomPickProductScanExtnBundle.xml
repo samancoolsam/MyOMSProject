@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ScreenBundle
+    screenBundleId="extn.components.shipment.backroompick.BackroomPickProductScanExtnBundle" screenId="extn.components.shipment.backroompick.BackroomPickProductScanExtn">
+	<!--OMNI-90829 START-->
+    <BundleEntries>
+        <BundleEntry bundleEntryId="extn_serialNoBox_TextField_hint"
+            bundleKey="extn_Scan_or_Enter_Serial_No"
+            bundleValueFn="_scSimpleBundle" property="hint"
+            type="WIDGET" uId="extn_serialNoBox"/>
+        <BundleEntry bundleEntryId="extn_serialNoBox_TextField_title"
+            bundleKey="extn_Scan_or_enter_serialno"
+            bundleValueFn="_scSimpleBundle" property="title"
+            type="WIDGET" uId="extn_serialNoBox"/>
+        <BundleEntry bundleEntryId="extn_serialNoButton_Link_ImageAlt"
+            bundleKey="extn_Click_to_Scan_the_SerialNo"
+            bundleValueFn="_scSimpleBundle" property="ImageAlt"
+            type="WIDGET" uId="extn_serialNoButton"/>
+        <BundleEntry bundleEntryId="extn_serialNoButton_Link_title"
+            bundleKey="extn_Click_to_Scan_the_SerialNo"
+            bundleValueFn="_scSimpleBundle" property="title"
+            type="WIDGET" uId="extn_serialNoButton"/>
+    </BundleEntries>
+	<!--OMNI-90829 END-->
+</ScreenBundle>

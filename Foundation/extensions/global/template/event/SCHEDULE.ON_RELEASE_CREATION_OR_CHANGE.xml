@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OrderRelease CarrierAccountNo="" CarrierServiceCode="" Currency=""
+    CustomerPoNo="" DeliveryCode="" Division="" EnterpriseCode=""
+    FOB="" HoldFlag="" HoldReasonCode="" MarkForKey=""
+    MaxOrderReleaseStatus="" MaxOrderReleaseStatusDesc="" MergeNode=""
+    MinOrderReleaseStatus="" MinOrderReleaseStatusDesc=""
+    NotificationReference="" NotificationType=""
+    NotifyAfterShipmentFlag="" OrderDate="" OrderHeaderKey=""
+    OrderName="" OrderReleaseKey="" OrderType="" OtherCharges=""
+    PacklistType="" PersonalizeCode="" PickListNo="" PriorityCode=""
+    Purpose="" ReceivingNode="" ReleaseNo="" ReleaseSeqNo=""
+    ReqCancelDate="" ReqDeliveryDate="" ReqShipDate="" 
+    SCAC="" SalesOrderNo="" ScacAndService="" ScacAndServiceKey=""
+    ShipAdviceNo="" ShipCompleteFlag="" ShipLineComplete="" ShipNode=""
+    ShipNodeClass="" ShipOrderComplete="" ShipToId="" ShipToKey=""
+    Status="" SupplierCode="" SupplierName="" TaxpayerId="" isHistory="" DeliveryMethod="" >
+    <Order EnterpriseCode="" OrderHeaderKey="" DocumentType="" OrderNo=""/>
+    <PersonInfoShipTo AddressLine1="" AddressLine2="" AddressLine3=""
+        AddressLine4="" AddressLine5="" AddressLine6=""
+        AlternateEmailID="" Beeper="" City="" Company="" Country=""
+        DayFaxNo="" DayPhone="" Department="" EMailID="" EveningFaxNo=""
+        EveningPhone="" FirstName="" JobTitle="" LastName=""
+        MiddleName="" MobilePhone="" OtherPhone="" PersonID=""
+        PersonInfoKey="" State="" Suffix="" Title="" ZipCode=""/>
+    <PersonInfoMarkFor AddressLine1="" AddressLine2="" AddressLine3=""
+        AddressLine4="" AddressLine5="" AddressLine6=""
+        AlternateEmailID="" Beeper="" City="" Company="" Country=""
+        DayFaxNo="" DayPhone="" Department="" EMailID="" EveningFaxNo=""
+        EveningPhone="" FirstName="" JobTitle="" LastName=""
+        MiddleName="" MobilePhone="" OtherPhone="" PersonID=""
+        PersonInfoKey="" State="" Suffix="" Title="" ZipCode=""/>
+    <OrderLine OrderLineKey="" OrderHeaderKey="" OrderReleaseKey="" PrimeLineNo="" SubLineNo="" OrderedQty="">
+        <Item CostCurrency="" CountryOfOrigin="" CustomerItem=""
+            CustomerItemDesc="" ECCNNo="" HarmonizedCode="" ISBN=""
+            ItemDesc="" ItemID="" ItemShortDesc="" ItemWeight=""
+            ItemWeightUOM="" ManufacturerItem="" ManufacturerItemDesc=""
+            ManufacturerName="" NMFCClass="" NMFCCode=""
+            NMFCDescription="" ProductClass="" ProductLine=""
+            ScheduleBCode="" SupplierItem="" SupplierItemDesc=""
+            TaxProductCode="" UPCCode="" UnitCost="" UnitOfMeasure=""/>
+        <OrderStatuses>
+            <OrderStatus  
+                OrderHeaderKey="" OrderLineKey=""
+                OrderLineScheduleKey="" OrderReleaseKey=""
+                OrderReleaseStatusKey="" PipelineKey="" Status=""
+                StatusDate="" StatusDescription="" StatusQty=""
+                StatusReason="" TotalQuantity=""/>
+        </OrderStatuses>
+        <LinePackListPriceInfo Charges="" DiscountPercentage="" ExtendedPrice="" LineTotal="" Tax="" UnitPrice="" ListPrice="" RetailPrice=""/>
+		<LinePriceInfo /> 
+ <LineCharges>
+  <LineCharge /> 
+  </LineCharges>
+ <LineTaxes>
+  <LineTax /> 
+  </LineTaxes>
+    </OrderLine>
+    <PackListPriceInfo Currency="" HeaderCharges="" HeaderDiscount="" HeaderTax="" LineSubTotal="" TotalAmount="" TotalCharges="" TotalDiscountAmount="" TotalTax="" />
+</OrderRelease>

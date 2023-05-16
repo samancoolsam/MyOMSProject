@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExtensionMetaData>
+    <ScreenExtension extnClassName="BatchListDetailsExtn"
+        extnPackage="extn.components.shipment.common.screens"
+        originalScreen="wsc.components.shipment.common.screens.BatchListDetails"
+        originalScreenPackage="wsc.components.shipment.common.screens" type="diffrential">
+        <Items>
+            <ContentPane _sc_extensibility_operation="change"
+                _sc_extensibility_referenceUId="timeRemainingClockContainer" renderHidden="true"/>
+        </Items>
+    </ScreenExtension>
+</ExtensionMetaData>

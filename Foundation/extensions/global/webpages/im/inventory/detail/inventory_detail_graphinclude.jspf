@@ -1,0 +1,254 @@
+<%/*******************************************************************************
+Licensed Materials - Property of IBM
+IBM Sterling Selling And Fulfillment Suite
+(C) Copyright IBM Corp. 2005, 2013 All Rights Reserved.
+US Government Users Restricted Rights - Use, duplication or disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+ ********************************************************************************/%>
+
+<%@include file="/yfsjspcommon/yfsutil.jspf"%>
+<%@ page import="java.util.ArrayList" %>
+<%@ page import="com.yantra.yfs.ui.backend.*" %>
+<%@ page import="com.yantra.yfc.ui.laf.YFCTheme" %>
+<%@ page import="com.yantra.yfc.dom.*" %>
+<%@ page import="com.yantra.yfc.ui.backend.util.*" %>
+<%@ page import="com.yantra.ycp.ui.backend.*" %>
+<%@ page import="com.yantra.yfc.core.YFCIterable"  %>
+<%@ page import="java.text.*" %>
+
+<%
+    String sRequestID="";
+	int iGraphCount = 0;
+	ArrayList colorList = new ArrayList(); 
+	ArrayList ATPcolorList = new ArrayList(); 
+	double iTotalDemand = 0;
+    double iTotalSupply = 0;
+    double iAvailableToSell = 0;
+	String sTheme =getTheme();
+	YFCLocale sLocal = getLocale();
+	String sLocaleCode = sLocal.getLocaleCode();
+    YFCTheme oTheme = APIManager.getInstance().getThemeObj(request,sTheme, sLocaleCode); 
+	if(oTheme == null){
+		sTheme ="sapphire";
+		oTheme = APIManager.getInstance().getThemeObj(request,sTheme, sLocaleCode); 
+	}
+	if(oTheme != null){
+		//Read Colors for the  PieGraphs
+		int currIndx = 0;   
+		int iCtr = 0;
+		for(int l=1;l <=20;l++)
+		{
+			colorList.add(currIndx,getColor(oTheme.getColor("PieChartSeries"+l)));    
+			currIndx++;
+		}
+		
+		
+		ATPcolorList.add(0,getColor(oTheme.getColor("ATPSeries1"))); /* Color used for the Supply Series in the ATP Graph */
+		ATPcolorList.add(1,getColor(oTheme.getColor("ATPSeries2")));  /* Color used for the Demand Series in the ATP Graph */
+		ATPcolorList.add(2,getColor(oTheme.getColor("ATPSeries4"))); /* Color used for the Shortage Series in the ATP Graph */
+		ATPcolorList.add(3,getColor(oTheme.getColor("ATPSeries3"))); /* Color used for the Availability Series in the ATP Graph */
+		ATPcolorList.add(4,getColor(oTheme.getColor("ATPGraphYAxisGridColor"))); /* Color used for the Availability Series in the ATP Graph */
+			
+		YFCElement root = (YFCElement)request.getAttribute("InventoryInformation");
+		YFCElement oNode = null;
+		if(root != null)
+		{	
+			root.setIntAttribute("ATPGraphNodes", 0);
+			YFCElement oItem = root.getChildElement("Item"); 
+			if(oItem!= null)
+			{
+				com.ibm.icu.text.DecimalFormatSymbols df = new com.ibm.icu.text.DecimalFormatSymbols(sLocal.getLocale());
+				String decimalSeparator = String.valueOf(df.getDecimalSeparator());
+				String thousandSeparator = String.valueOf(df.getGroupingSeparator());
+				
+				iAvailableToSell = oItem.getDoubleAttribute("AvailableToSell");
+				YFCElement oColors = oItem.createChild("Colors");
+				oColors.setAttribute("SupplyColor",(String)ATPcolorList.get(0));
+				oColors.setAttribute("DemandColor",(String)ATPcolorList.get(1));
+				oColors.setAttribute("ShortageColor",(String)ATPcolorList.get(2));
+				oColors.setAttribute("AvailabilityColor",(String)ATPcolorList.get(3));
+				oColors.setAttribute("YAxisGridColor",(String)ATPcolorList.get(4));
+				oColors.setAttribute("BGColor",getColor(oTheme.getColor("BGColor")));
+				oColors.setAttribute("FontName",(oTheme.getFont("InvGraphFont")).getName());
+				oColors.setIntAttribute("FontStyle",(oTheme.getFont("InvGraphFont")).getStyle());
+				oColors.setIntAttribute("FontSize",(oTheme.getFont("InvGraphFont")).getSize());
+			  
+
+				/* set Colors for the  Inv Total Nodes */
+				YFCElement oInvTotals = oItem.getChildElement("InventoryTotals");
+				if(oInvTotals != null)
+				{
+					/* set Colors Attributes for the Demand Nodes */
+					YFCElement oDemands = oInvTotals.getChildElement("Demands");
+					if(oDemands != null)
+					{
+					   YFCElement graphDataElem = oDemands.createChild("chart");
+					   graphDataElem.setAttribute("decimalSeparator",decimalSeparator);
+					   graphDataElem.setAttribute("thousandSeparator",thousandSeparator);
+					   graphDataElem.setAttribute("bgcolor", getColor(oTheme.getColor("BGColor")));
+					   graphDataElem.setAttribute("decimalPrecision", "0");
+					   graphDataElem.setAttribute("showPercentageValues", "1");
+					   graphDataElem.setAttribute("showNames", "0");
+					   graphDataElem.setAttribute("showValues", "1");
+					   graphDataElem.setAttribute("showPercentageInLabel", "0");
+					   graphDataElem.setAttribute("pieYScale", "70");
+					   graphDataElem.setAttribute("pieFillAlpha", "100");
+					   graphDataElem.setAttribute("pieRadius", "70");
+					   graphDataElem.setAttribute("enableSmartLabels", "1");
+						if(oDemands.getDoubleAttribute("TotalDemand") > 0)
+							iGraphCount = iGraphCount + 1;
+						
+						for (Iterator i = oDemands.getChildren(); i.hasNext();) 
+						{
+							oNode = (YFCElement) i.next();
+							YFCElement set = graphDataElem.createChild("set");
+							if(oNode.getDoubleAttribute("Quantity") >0)
+							{
+							  set.setAttribute("name", "");
+							  set.setAttribute("value", oNode.getDoubleAttribute("Quantity"));
+							  set.setAttribute("color",(String)colorList.get(iCtr % 20));
+							  oNode.setAttribute("Color",(String)colorList.get(iCtr % 20));
+							  iTotalDemand = iTotalDemand  + oNode.getDoubleAttribute("Quantity");
+							}
+							else
+							{
+							  set.setAttribute("name", "");
+							  set.setAttribute("value", "");
+							  set.setAttribute("color","");
+							   oNode.setAttribute("Color","");
+							}
+							iCtr++;
+						}
+					}
+				
+					iCtr = 0;
+					/* set Colors Attributes for the Supply Nodes */
+					YFCElement oSupplies = oInvTotals.getChildElement("Supplies");
+					if(oSupplies != null)
+					{
+					   YFCElement graphDataElem = oSupplies.createChild("chart");//YFCDocument.createDocument("chart").getDocumentElement();
+					   graphDataElem.setAttribute("decimalSeparator",decimalSeparator);
+					   graphDataElem.setAttribute("thousandSeparator",thousandSeparator);
+					   graphDataElem.setAttribute("bgcolor", getColor(oTheme.getColor("BGColor")));
+					   graphDataElem.setAttribute("decimalPrecision", "0");
+					   graphDataElem.setAttribute("showPercentageValues", "1");
+					   graphDataElem.setAttribute("showNames", "0");
+					   graphDataElem.setAttribute("showValues", "1");
+					   graphDataElem.setAttribute("showPercentageInLabel", "0");
+					   graphDataElem.setAttribute("pieYScale", "70");
+					   graphDataElem.setAttribute("pieFillAlpha", "100");
+					   graphDataElem.setAttribute("pieRadius", "70");
+					   graphDataElem.setAttribute("enableSmartLabels", "1");
+						if(oSupplies.getDoubleAttribute("TotalSupply") > 0)
+							iGraphCount = iGraphCount + 1;
+					
+						for (Iterator j = oSupplies.getChildren(); j.hasNext();) 
+						{
+							oNode = (YFCElement) j.next();
+							YFCElement set = graphDataElem.createChild("set");
+							if(oNode.getDoubleAttribute("Quantity") >0)
+							{
+							set.setAttribute("name", "");
+							set.setAttribute("value", oNode.getDoubleAttribute("Quantity"));
+							  set.setAttribute("color",(String)colorList.get(iCtr % 20));
+							  oNode.setAttribute("Color",(String)colorList.get(iCtr % 20));
+							  iTotalSupply = iTotalSupply + oNode.getDoubleAttribute("Quantity");
+							}
+							else
+							{
+							  set.setAttribute("name", "");
+							  set.setAttribute("value", "");
+							  set.setAttribute("color","");
+							  oNode.setAttribute("Color","");
+							}
+							iCtr++;
+						}
+					}
+					
+				}
+				
+				
+				/* set Colors for the Availability Nodes */
+				YFCIterable oATPNodeList = oItem.getChildren("AvailableToPromiseInventory");
+				int nodeSize = 0;
+				if(oATPNodeList != null && oATPNodeList.hasNext())
+				{
+					iGraphCount = iGraphCount + 1;
+					YFCElement graphDataElem = oItem.createChild("chart");
+					   graphDataElem.setAttribute("decimalSeparator",decimalSeparator);
+					   graphDataElem.setAttribute("thousandSeparator",thousandSeparator);
+					   graphDataElem.setAttribute("bgcolor", getColor(oTheme.getColor("BGColor")));
+					   graphDataElem.setAttribute("paletteColors", (String)ATPcolorList.get(0) + "," + (String)ATPcolorList.get(1) + "," + (String)ATPcolorList.get(2) + "," + (String)ATPcolorList.get(3));
+					   graphDataElem.setAttribute("xAxisName", getI18N("ATP_Time_Interval"));
+					   graphDataElem.setAttribute("yAxisName", getI18N("Availability"));
+					   graphDataElem.setAttribute("rotateYAxisName", "0");
+					   graphDataElem.setAttribute("canvasBgColor", (String)ATPcolorList.get(4));
+					graphDataElem.setAttribute("baseFont",(oTheme.getFont("InvGraphFont")).getName());
+					graphDataElem.setIntAttribute("FontStyle",(oTheme.getFont("InvGraphFont")).getStyle());
+					graphDataElem.setIntAttribute("baseFontSize",(oTheme.getFont("InvGraphFont")).getSize());
+					graphDataElem.setAttribute("showYAxisValues","1");
+					   graphDataElem.setAttribute("showLegend", "1");
+
+					   
+					   graphDataElem.setAttribute("yaxisminvalue", "0");
+					   graphDataElem.setAttribute("formatNumberScale", "0");
+					graphDataElem.setAttribute("maxColWidth", "50");
+
+					YFCElement categories = graphDataElem.createChild("categories");
+					YFCElement datasetSupply = graphDataElem.createChild("dataset");
+					YFCElement datasetDemand = graphDataElem.createChild("dataset");
+					YFCElement datasetShortage = graphDataElem.createChild("dataset");
+					YFCElement datasetAvailability = graphDataElem.createChild("dataset");
+					datasetSupply.setAttribute("seriesname", getI18N("Supply"));
+					datasetDemand.setAttribute("seriesname", getI18N("Demand"));
+					datasetShortage.setAttribute("seriesname", getI18N("Shortage"));
+					datasetAvailability.setAttribute("seriesname", getI18N("Availability"));
+					datasetSupply.setAttribute("showValue", "1");
+					datasetDemand.setAttribute("showValue", "1");
+					datasetShortage.setAttribute("showValue", "1");
+					datasetAvailability.setAttribute("renderAs", "Line");
+					YFCElement trendlines = graphDataElem.createChild("trendlines");
+					YFCElement line = trendlines.createChild("line");
+					//line.setAttribute("SYAxisMinValue", "1");
+					line.setAttribute("color", (String)ATPcolorList.get(3));
+					//line.setAttribute("displayValue", "Target");
+					line.setAttribute("showOnTop", "1");
+
+
+
+				while (oATPNodeList.hasNext()) {
+					nodeSize++;
+					YFCElement oATPNode = (YFCElement) oATPNodeList.next();
+					YFCElement categoryElem = categories.createChild("category");
+					YDate endDate = YDate.newDate(oATPNode.getAttribute("FromDate"));
+					categoryElem.setAttribute("name", endDate.getString(sLocal.getDateFormat(),sLocal.getLocale()));
+					YFCElement set = datasetSupply.createChild("set");
+					  set.setAttribute("name", "");
+					  set.setAttribute("value", oATPNode.getDoubleAttribute("Supply"));
+					  set.setAttribute("label", "");
+					 set = datasetDemand.createChild("set");
+					  set.setAttribute("name", "");
+					  set.setAttribute("value", oATPNode.getDoubleAttribute("Demand"));
+					  set.setAttribute("label", "");
+					 set = datasetShortage.createChild("set");
+					  set.setAttribute("name", "");
+					  set.setAttribute("value", oATPNode.getDoubleAttribute("Shortage"));
+					  set.setAttribute("label", "");
+					 set = datasetAvailability.createChild("set");
+					  set.setAttribute("name", "");
+					  set.setAttribute("value", oATPNode.getDoubleAttribute("Available"));
+					  set.setAttribute("label", "");
+					}
+				root.setIntAttribute("ATPGraphNodes", nodeSize);
+
+				}
+				
+			}
+			if(iGraphCount > 0)
+			{
+				root.setAttribute("GraphCount",iGraphCount);
+				sRequestID = String.valueOf(System.currentTimeMillis());
+				YFCUISessionCache.getInstance().setAttribute(request,sRequestID, root);
+			}
+		}
+	}    
+%>

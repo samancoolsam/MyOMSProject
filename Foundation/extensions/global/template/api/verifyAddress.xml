@@ -1,0 +1,8 @@
+<PersonInfoList TotalNumberOfRecords="" Status="">
+	<PersonInfo AddressLine1="" AddressLine2="" AddressLine3="" AddressLine4="" AddressLine5="" AddressLine6="" AlternateEmailID="" Beeper="" City="" Company="" Country="" DayFaxNo="" DayPhone="" Department="" EMailID="" EveningFaxNo="" EveningPhone="" FirstName="" HttpUrl="" JobTitle="" LastName="" MiddleName="" MobilePhone="" OtherPhone="" PersonID="" PersonInfoKey="" State="" Suffix="" Title="" ZipCode="" >
+	<Extn ExtnIsAPOFPO="" ExtnIsPOBOXADDRESS="" ExtnIsSignatureRequired="" ExtnAddressNickName="" ExtnIsAddressVerified="" ExtnIsMilitary="" />
+	</PersonInfo>
+	<AddressVerificationResponseMessages>
+        <AddressVerificationResponseMessage MessageCode="" MessageText="" />
+    </AddressVerificationResponseMessages >
+</PersonInfoList>

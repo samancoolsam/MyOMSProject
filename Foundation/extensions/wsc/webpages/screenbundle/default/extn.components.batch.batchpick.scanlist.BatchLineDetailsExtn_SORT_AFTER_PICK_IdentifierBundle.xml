@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ScreenBundle identifierId="SORT_AFTER_PICK"
+    screenBundleId="extn.components.batch.batchpick.scanlist.BatchLineDetailsExtnBundle" screenId="extn.components.batch.batchpick.scanlist.BatchLineDetailsExtn">
+    <BundleEntries/>
+</ScreenBundle>

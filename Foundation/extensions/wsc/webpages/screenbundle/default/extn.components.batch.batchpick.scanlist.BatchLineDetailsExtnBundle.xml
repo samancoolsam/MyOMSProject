@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ScreenBundle
+    screenBundleId="extn.components.batch.batchpick.scanlist.BatchLineDetailsExtnBundle" screenId="extn.components.batch.batchpick.scanlist.BatchLineDetailsExtn">
+    <BundleEntries>
+        <BundleEntry bundleEntryId="extn_ItemOnHandStock_Label_label"
+            bundleKey="blank" bundleValueFn="_scSimpleBundle"
+            property="label" type="WIDGET" uId="extn_ItemOnHandStock"/>
+        <BundleEntry bundleEntryId="extn_ItemLiveDate_Label_label"
+            bundleKey="blank" bundleValueFn="_scSimpleBundle"
+            property="label" type="WIDGET" uId="extn_ItemLiveDate"/>
+        <BundleEntry bundleEntryId="extn_ItemPlanogram_DataLabel_label"
+            bundleKey="extn_Pog_ID_Dept_Section_Pog_"
+            bundleValueFn="_scBundle" property="label" type="WIDGET" uId="extn_ItemPlanogram"/>
+    </BundleEntries>
+</ScreenBundle>

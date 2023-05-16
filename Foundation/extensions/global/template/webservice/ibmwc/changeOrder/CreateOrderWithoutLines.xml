@@ -1,0 +1,43 @@
+<soapenv:Envelope
+	xmlns:soapenv='http://schemas.xmlsoap.org/soap/envelope/'
+	xmlns:soapenc='http://schemas.xmlsoap.org/soap/encoding/'
+	xmlns:xsd='http://www.w3.org/2001/XMLSchema'
+	xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'>
+	<soapenv:Header
+		xmlns:soapenv='http://schemas.xmlsoap.org/soap/envelope/'>
+		<wsse:Security soapenv:mustUnderstand='1'
+			xmlns:wsse='http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd'>
+			<wsse:UsernameToken>
+				<wsse:Username></wsse:Username>
+				<wsse:Password
+					Type='http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordText'>
+				</wsse:Password>
+			</wsse:UsernameToken>
+		</wsse:Security>
+	</soapenv:Header>
+	<soapenv:Body>
+		<_ord:ChangeOrder versionID='6.0.0.4'
+			xmlns:Oagis9='http://www.openapplications.org/oagis/9'
+			xmlns:_ord='http://www.ibm.com/xmlns/prod/commerce/9/order'
+			xmlns:_wcf='http://www.ibm.com/xmlns/prod/commerce/9/foundation'
+			xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'>
+			<Oagis9:ApplicationArea	xsi:type='_wcf:ApplicationAreaType'>
+				<_wcf:BusinessContext>
+					<_wcf:ContextData name='storeId'></_wcf:ContextData>
+				</_wcf:BusinessContext>
+			</Oagis9:ApplicationArea>
+			<_ord:DataArea>
+				<Oagis9:Change>
+					<Oagis9:ActionCriteria>
+						<Oagis9:ActionExpression actionCode='CreateGuestOrder' expressionLanguage='_wcf:XPath' />
+					</Oagis9:ActionCriteria>
+				</Oagis9:Change>
+				<_ord:Order>
+					<_ord:OrderIdentifier>
+						<_wcf:UniqueID>**</_wcf:UniqueID>
+					</_ord:OrderIdentifier>
+				</_ord:Order>
+			</_ord:DataArea>
+		</_ord:ChangeOrder>
+	</soapenv:Body>
+</soapenv:Envelope>

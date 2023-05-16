@@ -1,0 +1,44 @@
+<PierbridgeRateShopRequest>
+  <RateGroup></RateGroup> 
+  <RequiredDate></RequiredDate>
+  <ShipDate></ShipDate> 
+<FilterMode></FilterMode> 
+  <Sender>
+<SentBy></SentBy>
+    <City></City>
+    <Region></Region>
+    <PostalCode></PostalCode>
+    <Country></Country>
+	<!-- Start : OMNI-324 : Updated for Agile stabilization to update the different URL -->
+    <NodeType></NodeType>
+	<!-- Start : OMNI-324 : Updated for Agile stabilization to update the different URL  -->
+	<!-- Start : OMNI-444 : Rate Shop - Ship From Location-->
+	<OverrideType></OverrideType>
+	<!-- End : OMNI-444 : Rate Shop - Ship From Location-->
+  </Sender>
+  <Receiver>
+<CompanyName></CompanyName>
+<Residential></Residential>
+<Street></Street>
+    <City></City>
+    <Region></Region>
+    <PostalCode></PostalCode>
+    <Country></Country>
+  </Receiver>
+  <Packages>
+    <Package>
+	<!-- Start WN-1118 Split out the FedEx Smartpost SCAC -->
+	<ReceiverName>.</ReceiverName>
+	<!-- End WN-1118 Split out the FedEx Smartpost SCAC -->
+      <Weight></Weight>
+	
+	<!-- Start WN-1838 Sterling to send DIM weight to Agile -->	
+	  <Length></Length>
+	  <Height></Height>
+	  <Width></Width>
+	<!-- End WN-1838 Sterling to send DIM weight to Agile -->
+	
+    </Package>
+  </Packages>
+  <UserName></UserName>
+</PierbridgeRateShopRequest>

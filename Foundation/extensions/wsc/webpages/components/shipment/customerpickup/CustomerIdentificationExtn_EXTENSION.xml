@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExtensionMetaData>
+    <ScreenExtension extnClassName="CustomerIdentificationExtn"
+        extnPackage="extn.components.shipment.customerpickup"
+        originalScreen="wsc.components.shipment.customerpickup.CustomerIdentification"
+        originalScreenPackage="wsc.components.shipment.customerpickup" type="diffrential">
+        <Items>
+            <ContentPane _sc_extensibility_operation="change"
+                _sc_extensibility_referenceUId="PersonInfoContainer" class="personInfoPanel testClass"/>
+            <ContentPane _sc_extensibility_moveOrder="2"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="orderInfoPanel"
+                class="testClass alternateCustomer marginTop" uId="extn_contentpane"/>
+            <FilteringSelect _sc_extensibility_operation="change"
+                _sc_extensibility_referenceUId="cmbCustVerfMethod" required="true"/>
+            <FilteringSelect _sc_extensibility_moveOrder="1"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="cmbCustVerfMethod"
+                label="$(_scSimpleBundle:extn_Picked_Up_By)"
+                required="true" uId="extn_filteringselect">
+                <BindingData>
+                    <TargetBindings>
+                        <TargetBinding namespace="extn_Test"
+                            path="customerName" scExtensibilityArrayItemId="extn_TargetBindings_0"/>
+                    </TargetBindings>
+                    <OptionsBinding descriptionField="Customer"
+                        path="CustomerName" valueField="Customer_Name"/>
+                </BindingData>
+            </FilteringSelect>
+            <DataLabel _sc_extensibility_operation="change"
+                _sc_extensibility_referenceUId="lblPickupDate" renderHidden="true"/>
+		<!-- OMNI- 5403 Mobile Web SOM Home Page: Ready For Curbside PickUp Section  - Start -->	
+	    <DataLabel _sc_extensibility_moveOrder="7"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="lblPickupDate"
+                class="blockComponent noColonLabels comappsWrapWord zeroWidthLabelValueDesktop extn_labelCssPadding"
+                label="$(_scSimpleBundle:extn_Max_Pick_Date)" uId="extn_datalabel"/>
+			<!-- OMNI- 5403 Mobile Web SOM Home Page: Ready For Curbside PickUp Section  - End -->
+	    <DataLabel _sc_extensibility_operation="change"
+                _sc_extensibility_referenceUId="lblShipmentNo" class="blockComponent noColonLabels comappsWrapWord zeroWidthLabelValueDesktop extn_labelCssPadding"/>
+            <DataLabel _sc_extensibility_operation="change"
+                _sc_extensibility_referenceUId="lblAssignedToUsr" class="blockComponent noColonLabels zeroWidthLabelValueDesktop extn_labelCssPadding"/>
+            <DataLabel _sc_extensibility_operation="change"
+                _sc_extensibility_referenceUId="lblPaymentMethod" class="paymentMethod noColonLabels zeroWidthLabelValueDesktop extn_labelCssPadding"/>
+		
+            <DataLabel _sc_extensibility_operation="change"
+                _sc_extensibility_referenceUId="Hold_LocationLabel" renderHidden="true"/>
+		<!-- OMNI- 5403 Mobile Web SOM Home Page: Ready For Curbside PickUp Section  - Start -->
+            <DataLabel _sc_extensibility_moveOrder="8"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="last"
+                _sc_extensibility_referenceUId="orderInfoPanel"
+                class="blockComponent noColonLabels comappsWrapWord zeroWidthLabelValueDesktop extn_labelCss"
+                label="$(_scSimpleBundle:extn_Curbbside_Make_Color)"
+                renderHidden="true" uId="extn_Curbsidelbl">
+                <BindingData>
+                    <SourceBinding namespace="ShipmentDetails" path="Shipment.Extn.ExtnCurbsidePickupInfo"/>
+                </BindingData>
+            </DataLabel>
+			<DataLabel _sc_extensibility_moveOrder="9"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="Hold_LocationLabel" uId="extn_Curbsidelbl"/>
+            <DataLabel _sc_extensibility_moveOrder="10"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="lblShipmentNo" uId="extn_Curbsidelbl"/>
+	    <!-- OMNI- 5403 Mobile Web SOM Home Page: Ready For Curbside PickUp Section  - enD -->
+            <Label _sc_extensibility_moveOrder="3"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="first"
+                _sc_extensibility_referenceUId="extn_contentpane"
+                class="blockComponent" uId="extn_label"/>
+            <Label _sc_extensibility_moveOrder="4"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="last"
+                _sc_extensibility_referenceUId="extn_contentpane"
+                class="blockComponent" uId="extn_label1"/>
+            <Label _sc_extensibility_moveOrder="5"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="last"
+                _sc_extensibility_referenceUId="extn_contentpane"
+                class="blockComponent" uId="extn_label2"/>
+        </Items>
+        <Namespaces>
+            <SourceNamespaces>
+                <Source isExtn="true"
+                    scExtensibilityArrayItemId="extn_SourceNamespaces_4" value="extn_customerNS"/>
+            </SourceNamespaces>
+            <TargetNamespaces>
+                <Target isExtn="true"
+                    scExtensibilityArrayItemId="extn_TargetNamespaces_3" value="extn_Test"/>
+            </TargetNamespaces>
+        </Namespaces>
+        <Subscribers>
+            <Local>
+                <Subscriber eventId="afterScreenInit" isExtn="true" sequence="51">
+                    <Handler methodName="extn_afterInitialize"/>
+                </Subscriber>
+                <Subscriber eventId="afterScreenInit" isExtn="true" sequence="50">
+                    <Handler methodName="extn_afterScreenInit"/>
+                </Subscriber>
+                <Subscriber eventId="afterScreenLoad" isExtn="true" sequence="51">
+                    <Handler methodName="updateCustomerDropDown"/>
+		</Subscriber>
+	    	<!-- START - (OMNI - 1434)  : BOPIS Page Tagging/Reporting -->
+                <Subscriber description="extn_RecordStoreUserAction"
+                    eventId="saveCurrentPage" isExtn="true" sequence="19">
+                    <Handler methodName="extn_RecordStoreUserAction"/>
+                </Subscriber>
+		<!-- END - (OMNI - 1434)  : BOPIS Page Tagging/Reporting -->
+                <Subscriber eventId="extn_filteringselect_onChange"
+                    isExtn="true" sequence="51">
+                    <Handler methodName="customerDropDown"/>
+                </Subscriber>
+            </Local>
+        </Subscribers>
+        <MashupRefs>
+            <Behavior>
+                <MashupRef extnType="ADD"
+                    mashupId="extn_getUserListByUserID" mashupRefId="extn_getUserListByUserID"/>
+		<!-- START - (OMNI - 1434)  : BOPIS Page Tagging/Reporting -->
+                <MashupRef extnType="ADD"
+                    mashupId="extn_RecordStoreUserActionMashup" mashupRefId="extn_RecordStoreUserActionMashup"/>
+		<!-- END - (OMNI - 1434)  : BOPIS Page Tagging/Reporting -->
+            </Behavior>
+        </MashupRefs>
+    </ScreenExtension>
+</ExtensionMetaData>

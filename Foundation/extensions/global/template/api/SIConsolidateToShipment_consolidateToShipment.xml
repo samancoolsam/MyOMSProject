@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Shipment ShipmentNo="" ShipmentKey="" ShipNode="" Status="" >
+	<ShipmentLines>
+		<ShipmentLine OrderHeaderKey="" OrderLineKey="" OrderReleaseKey="" ShipmentLineNo=""/>
+	</ShipmentLines>
+</Shipment>

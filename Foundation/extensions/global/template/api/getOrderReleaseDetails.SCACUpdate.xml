@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OrderRelease OrderDate="" ShipNode="" >
+	<PersonInfoShipTo PersonInfoKey="" ZipCode="">
+		<Extn ExtnIsAPOFPO="" ExtnIsPOBOXADDRESS="" />
+	</PersonInfoShipTo>
+</OrderRelease>
+

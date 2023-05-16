@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExtensionMetaData>
+    <ScreenExtension extnClassName="OrderSummaryExtn"
+        extnPackage="extn.order.details"
+        originalScreen="isccs.order.details.OrderSummary"
+        originalScreenPackage="isccs.order.details" type="diffrential">
+	<!-- OMNI-63466 BEGIN-->
+        <Namespaces>
+            <SourceNamespaces>
+                <Source isExtn="true"
+                    scExtensibilityArrayItemId="extn_SourceNamespaces_3" value="extn_CnclReason_output"/>
+            </SourceNamespaces>
+        </Namespaces>
+	<!--OMNI-63466 END-->
+        <Items>
+            <ContentPane _sc_extensibility_operation="change"
+                _sc_extensibility_referenceUId="pnlOrderIndicatorHolder" spanLabel="false"/>
+          <!-- OMNI-63466 BEGIN-->
+	    <ContentPane _sc_extensibility_moveOrder="28"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="last"
+                _sc_extensibility_referenceUId="tabContainer"
+                title="$(_scSimpleBundle:extn_Cancel_Reason)" uId="extn_pnlCnclRsn"/>
+            <!--OMNI-63466 END-->
+            <DataLabel _sc_extensibility_operation="change"
+                _sc_extensibility_referenceUId="lblOrderDateDisplay"
+                renderHidden="true" scuiDataType="Date"/>
+            <DataLabel _sc_extensibility_moveOrder="24"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="lblOrderDateDisplay"
+                label="$(_scSimpleBundle:extn_Order_Date)"
+                renderHidden="false" scuiDataType="VARCHAR2-50" uId="extn_OrderDate">
+                <BindingData>
+                    <SourceBinding
+                        dynamicBindingFunc="extn_getOrderDate"
+                        namespace="getCompleteOrderDetails_output" path="Order.OrderDate"/>
+                </BindingData>
+            </DataLabel>
+            <DataLabel _sc_extensibility_moveOrder="1"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="lblChannelDisplay"
+                label="$(_scBundle:extn_Customer_Phone_No)" uId="extn_CustomerPhoneNo">
+                <BindingData>
+                    <SourceBinding
+                        namespace="getCompleteOrderDetails_output" path="Order.CustomerPhoneNo"/>
+                </BindingData>
+            </DataLabel>
+            <DataLabel _sc_extensibility_moveOrder="2"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="extn_CustomerPhoneNo"
+                label="$(_scBundle:extn_Customer_EmailID)" uId="extn_EmailID">
+                <BindingData>
+                    <SourceBinding
+                        namespace="getCompleteOrderDetails_output" path="Order.CustomerEMailID"/>
+                </BindingData>
+            </DataLabel>
+            <Link _sc_extensibility_operation="change"
+                _sc_extensibility_referenceUId="lnkHasAlerts"
+                spanLabel="true" style="float:left"/>
+          <!-- OMNI-63466 BEGIN-->
+	    <GridX _sc_extensibility_moveOrder="29"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="first"
+                _sc_extensibility_referenceUId="extn_pnlCnclRsn"
+                cacheClass="gridx/core/model/cache/Async" uId="extn_gridCnclRsn">
+                <Modules>
+                    <Module isExtn="true" name="columnResizer">
+                        <Properties>
+                            <Property initialValue="0" name="minWidth"
+                                scExtensibilityArrayItemId="extn_ModuleProperty_1" type="Number"/>
+                        </Properties>
+                    </Module>
+                    <Module isExtn="true" name="columnWidth">
+                        <Properties>
+                            <Property initialValue="true"
+                                name="autoResize"
+                                scExtensibilityArrayItemId="extn_ModuleProperty_1" type="Boolean"/>
+                        </Properties>
+                    </Module>
+                    <Module isExtn="true" name="selectRow">
+                        <Properties>
+                            <Property initialValue="true"
+                                name="triggerOnCell"
+                                scExtensibilityArrayItemId="extn_ModuleProperty_1" type="Boolean"/>
+                        </Properties>
+                    </Module>
+                </Modules>
+                <Structure>
+                    <Layout>
+                        <View _sc_extensibility_moveOrder="30"
+                            _sc_extensibility_operation="insert"
+                            _sc_extensibility_position="first"
+                            _sc_extensibility_referenceUId="extn_gridCnclRsn"
+                            field="extn_LineNo"
+                            name="$(_scSimpleBundle:extn_LineNo)"
+                            uId="extn_view_99820" width="10%">
+                            <BindingData>
+                                <SourceBinding path="PrimeLineNo"/>
+                            </BindingData>
+                        </View>
+                        <View _sc_extensibility_moveOrder="31"
+                            _sc_extensibility_operation="insert"
+                            _sc_extensibility_position="last"
+                            _sc_extensibility_referenceUId="extn_gridCnclRsn"
+                            field="extn_CancelReason"
+                            name="$(_scSimpleBundle:extn_Cancel_Reason)" uId="extn_gridCnclRsn_view">
+                            <BindingData>
+                                <SourceBinding path="CancelReason"/>
+                            </BindingData>
+                        </View>
+                    </Layout>
+                </Structure>
+                <BindingData>
+                    <SourceBinding namespace="extn_CnclReason_output" path="Order.OrderLines.OrderLine"/>
+                </BindingData>
+                <__scModuleInfo>
+                    <Modules>
+                        <Module isExtn="true" name="columnResizer">
+                            <Properties>
+                                <Property initialValue="0"
+                                    name="minWidth"
+                                    scExtensibilityArrayItemId="extn_ModuleProperty_1" type="Number"/>
+                            </Properties>
+                        </Module>
+                        <Module isExtn="true" name="columnWidth">
+                            <Properties>
+                                <Property initialValue="true"
+                                    name="autoResize"
+                                    scExtensibilityArrayItemId="extn_ModuleProperty_1" type="Boolean"/>
+                            </Properties>
+                        </Module>
+                        <Module isExtn="true" name="selectRow">
+                            <Properties>
+                                <Property initialValue="true"
+                                    name="triggerOnCell"
+                                    scExtensibilityArrayItemId="extn_ModuleProperty_1" type="Boolean"/>
+                            </Properties>
+                        </Module>
+                    </Modules>
+                </__scModuleInfo>
+            </GridX>
+	    <!--OMNI-63466 END-->
+        </Items>
+        <Subscribers>
+            <Local>
+                <Subscriber description="On Click of Hold"
+                    eventId="imgOnHold_imageClick" isExtn="true" sequence="51">
+                    <Handler methodName="extn_ResolveHoldWizard_onClickHandler"/>
+                </Subscriber>
+            </Local>
+        </Subscribers>
+	<!--OMNI-63466 BEGIN-->
+        <MashupRefs>
+            <Init>
+                <MashupRef extnType="ADD"
+                    mashupId="extn_getCancelReasons"
+                    mashupRefId="extn_getCancelReasons" sourceNamespace="extn_CnclReason_output"/>
+            </Init>
+        </MashupRefs>
+		<!--OMNI-63466 END-->
+    </ScreenExtension>
+</ExtensionMetaData>

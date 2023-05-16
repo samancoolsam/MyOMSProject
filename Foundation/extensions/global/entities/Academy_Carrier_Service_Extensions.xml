@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright 2006-2008, Sterling Commerce, Inc. All rights reserved. -->
+<DBSchema>
+   <Entities>        
+      <Entity TableName="YFS_CARRIER_SERVICE" >
+        <Attributes>
+        <Attribute ColumnName="EXTN_CONVEYABLE" 
+			DataType="ConveyableFlag"
+			DecimalDigits="" 
+			DefaultValue="' '" 
+			Description=" "  
+			Type="CHAR"
+			Nullable="true" 
+			Size="1" 
+			XMLName="ExtnConveyable"
+			XMLGroup="Extn" 
+			SqlServerDataType=""/>
+		 <Attribute ColumnName="EXTN_IS_GIFTCARD" 
+				DataType="IsGiftCardFlag"
+				DecimalDigits="" 
+				DefaultValue="' '" 
+				Description=" "  
+				Nullable="true" 
+				Type="CHAR"
+				Size="1" 
+				XMLName="ExtnIsGiftCard"
+				XMLGroup="Extn" 
+				SqlServerDataType=""/>
+		<Attribute ColumnName="EXTN_KIT" 
+				DataType="KitFlag"
+				DecimalDigits="" 
+				DefaultValue="' '" 
+				Description=" "  
+				Type="CHAR"
+				Nullable="true" 
+				Size="1" 
+				XMLName="ExtnKit"
+				XMLGroup="Extn" 
+				SqlServerDataType=""/> 
+		<Attribute ColumnName="EXTN_IS_HAZMAT" 
+				DataType="HazmatName"
+				DecimalDigits="" 
+				DefaultValue="' '" 
+				Description=" "  
+				Nullable="true" 
+				Type="CHAR"
+				Size="1" 
+				XMLName="ExtnIsHazmat"
+				XMLGroup="Extn" 
+				SqlServerDataType=""/>
+	   <Attribute ColumnName="EXTN_WHITEGLOVEELIGIBLE" 
+				DataType="WhiteGloveEligibleFlag"
+				DecimalDigits="" 
+				DefaultValue="' '" 
+				Description=" "  
+				Nullable="true" 
+				Type="CHAR"
+				Size="1" 
+				XMLName="ExtnWhiteGloveEligible"
+				XMLGroup="Extn" 
+				SqlServerDataType=""/>
+       
+				<Attribute ColumnName="EXTN_IS_PO_BOX_ADDRESS" 
+				DataType="IsPOBOXADDRESSFlag"
+				DecimalDigits="" 
+				DefaultValue="' '" 
+				Description=" "  
+				Type="CHAR"
+				Nullable="true" 
+				Size="1" 
+				XMLName="ExtnIsPOBOXADDRESS"
+				XMLGroup="Extn" 
+				SqlServerDataType=""/>
+		<Attribute ColumnName="EXTN_IS_APO_FPO" 
+				DataType="IsAPOFPOFlag"
+				DecimalDigits="" 
+				DefaultValue="' '" 
+				Description=" "  
+				Type="CHAR"
+				Nullable="true" 
+				Size="1" 
+				XMLName="ExtnIsAPOFPO"
+				XMLGroup="Extn" 
+				SqlServerDataType=""/> 
+		<Attribute ColumnName="EXTN_IS_REGULAR_ADDRESS" 
+				DataType="IsRegularAddress"
+				DecimalDigits="" 
+				DefaultValue="' '" 
+				Description=" "  
+				Type="CHAR"
+				Nullable="true" 
+				Size="1" 
+				XMLName="ExtnIsRegularAddress"
+				XMLGroup="Extn" 
+				SqlServerDataType=""/> 
+				 </Attributes>
+		</Entity>
+  </Entities>
+</DBSchema>
+
+
+

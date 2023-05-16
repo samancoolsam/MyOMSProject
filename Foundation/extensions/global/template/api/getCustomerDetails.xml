@@ -1,0 +1,73 @@
+<Customer CustomerID="" CustomerKey="" CustomerType="" ExternalCustomerID=""
+    OrganizationCode="" RegisteredDate="">
+    <Extn ExtnTaxExemptID=""/>
+    <CustomerContactList TotalNumberOfRecords="">
+        <CustomerContact ApproverProxyUserId="" ApproverUserId=""
+            Company="" CustomerContactID="" DateOfBirth="" DayFaxNo=""
+            DayPhone="" EmailID="" EveningFaxNo="" EveningPhone=""
+            FirstName="" LastName="" MiddleName="" MobilePhone=""
+            SpendingLimit="" SpendingLimitCurrency=""
+            SpouseDateOfBirth="" Title="" UserID="" WeddingAnniversaryDate="">
+			<Extn ExtnIsCorporateCustomer="" ExtnRequiresWebprofileID="" ExtnCustRedLineCount="" ExtnIsRedLined="" ExtnOptIn=""/>
+            <CustomerAdditionalAddressList TotalNumberOfRecords="">
+                <CustomerAdditionalAddress AddressType=""
+                    CustomerAdditionalAddressID="" IsBillTo=""
+                    IsDefaultBillTo="" IsDefaultShipTo=""
+                    IsDefaultSoldTo="" IsShipTo="" IsSoldTo="">
+                    <PersonInfo AddressLine1="" AddressLine2=""
+                        AddressLine3="" AddressLine4="" AddressLine5=""
+                        AddressLine6="" AlternateEmailID="" Beeper=""
+                        City="" Company="" Country="" DayFaxNo=""
+                        DayPhone="" Department="" EMailID="" ErrorTxt=""
+                        EveningFaxNo="" EveningPhone="" FirstName=""
+                        HttpUrl="" JobTitle="" LastName="" Latitude=""
+                        Longitude="" MiddleName="" MobilePhone=""
+                        OtherPhone="" PersonID="" PersonInfoKey=""
+                        PreferredShipAddress="" State="" Suffix=""
+                        Title="" UseCount="" VerificationStatus="" ZipCode="">
+						<Extn ExtnIsSignatureRequired="" ExtnIsPOBOXADDRESS="" ExtnAddressNickName="" ExtnIsAPOFPO=""/>
+						</PersonInfo>
+                </CustomerAdditionalAddress>
+            </CustomerAdditionalAddressList>
+            <CustomerPaymentMethodList TotalNumberOfRecords="">
+                <CustomerPaymentMethod AccountLimit=""
+                    AccountLimitCurrency="" CreditCardExpDate=""
+                    CreditCardName="" CreditCardNo="" CreditCardType=""
+                    CustomerAccountNo="" CustomerPaymentMethodKey=""
+                    DisplayCreditCardNo="" DisplayCustomerAccountNo=""
+                    DisplayPaymentReference1="" FirstName=""
+                    IsDefaultMethod="" LastName="" MiddleName=""
+                    PaymentReference1="" PaymentReference2=""
+                    PaymentReference3="" PaymentType=""/>
+            </CustomerPaymentMethodList>
+        </CustomerContact>
+    </CustomerContactList>
+    <CustomerAdditionalAddressList TotalNumberOfRecords="">
+        <CustomerAdditionalAddress AddressType=""
+            CustomerAdditionalAddressID="" IsBillTo=""
+            IsDefaultBillTo="" IsDefaultShipTo="" IsDefaultSoldTo=""
+            IsInherited="" IsShipTo="" IsSoldTo="">
+            <PersonInfo AddressLine1="" AddressLine2="" AddressLine3=""
+                AddressLine4="" AddressLine5="" AddressLine6=""
+                AlternateEmailID="" Beeper="" City="" Company=""
+                Country="" DayFaxNo="" DayPhone="" Department=""
+                EMailID="" ErrorTxt="" EveningFaxNo="" EveningPhone=""
+                FirstName="" HttpUrl="" JobTitle="" LastName=""
+                Latitude="" Longitude="" MiddleName="" MobilePhone=""
+                OtherPhone="" PersonID="" PersonInfoKey=""
+                PreferredShipAddress="" State="" Suffix="" Title=""
+                UseCount="" VerificationStatus="" ZipCode=""/>
+        </CustomerAdditionalAddress>
+    </CustomerAdditionalAddressList>
+    <CustomerPaymentMethodList TotalNumberOfRecords="">
+        <CustomerPaymentMethod AccountLimit="" AccountLimitCurrency=""
+            AvailableAccountBalance="" CreditCardExpDate=""
+            CreditCardName="" CreditCardNo="" CreditCardType=""
+            CustomerAccountNo="" CustomerPaymentMethodKey=""
+            DisplayCreditCardNo="" DisplayCustomerAccountNo=""
+            DisplayPaymentReference1="" FirstName="" IsDefaultMethod=""
+            IsInherited="" LastName="" MiddleName=""
+            PaymentReference1="" PaymentReference2=""
+            PaymentReference3="" PaymentType=""/>
+    </CustomerPaymentMethodList>
+</Customer>

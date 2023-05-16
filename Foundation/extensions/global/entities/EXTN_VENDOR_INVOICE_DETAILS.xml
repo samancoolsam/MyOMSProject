@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DBSchema>
+    <Entities>
+        <Entity ApiNeeded="Y" AuditRequired="N" 
+            Description="This table stores the Vendor Invoice Details From VendorNet"
+            Prefix="EXTN_"
+            TableName="EXTN_VENDOR_INVOICE_DETAILS" XMLName="ExtnVendorInvoiceDetails">
+            <Attributes>
+			
+	<Attribute ColumnName="VENDOR_INVOICE_DETAILS_KEY"
+                    DataType="Key" DefaultValue="' '"
+                    Description="The primary key of the EXTN_VENDOR_INVOICE_DETAILS table."
+                    Name="Vendor_Invoice_Details_Key" Nullable="false" XMLName="VendorInvoiceDetailsKey"/>
+			
+		<Attribute ColumnName="VENDOR_INVOICE_KEY"
+                    DataType="Key" DefaultValue="' '"
+                    Description="The Reference Key of the Field Vendor_Invoice_Key in the EXTN_VENDOR_INVOICE table"
+                    Name="Vendor_Invoice_Key" Nullable="false" XMLName="VendorInvoicekey"/>		
+					
+				
+                <Attribute ColumnName="ORDER_NO"
+                    DataType="DocumentNo" DefaultValue="' '"
+                    Description="The unique identifier for the vendor."
+                    Name="Order_NO" Nullable="false" XMLName="OrderNO"/>
+					
+                <Attribute ColumnName="SHIPMENT_NO"
+                    DataType="DocumentNo" DefaultValue="' '"
+                    Description="The Unique Identifier for the Shipment"
+                    Name="Shipment_NO" Nullable="false" XMLName="ShipmentNO"/>
+				
+		<Attribute ColumnName="PRIME_LINE_NO"
+                    DataType="LineNo" DefaultValue="0"
+                    Description="The unique Identifier for the particular OrderLine "
+                    Name="Prime_Line_NO" Nullable="false" XMLName="PrimeLineNO"/>
+					
+		<Attribute ColumnName="ITEM_ID"
+                    DataType="ItemID" DefaultValue="' '"
+                    Description="The unique Identifier for Item. "
+                    Name="Item_ID" Nullable="true" XMLName="ItemID"/>
+					
+		<Attribute ColumnName="SKU_NO"
+                    DataType="ItemID" DefaultValue="' '"
+                    Description="The SKU no of the Item "
+                    Name="SKU_NO" Nullable="true" XMLName="SKUNO"/>
+					
+		<Attribute ColumnName="INVOICE_QTY"
+                    DataType="Quantity" DefaultValue="0"
+                    Description="The Quantity of the Item "
+                    Name="Invoice_Qty" Nullable="false" XMLName="InvoiceQty"/>
+					
+		<Attribute ColumnName="UNIT_COST"
+                    DataType="UnitPrice" DefaultValue="0"
+                    Description="The unit cost of the respected Item "
+                    Name="Unit_Cost" Nullable="true" XMLName="UnitCost"/>
+	
+		<Attribute ColumnName="EXTENDED_COST"
+                    DataType="UnitPrice" DefaultValue="0"
+                    Description="The Extended cost of the respected Item "
+                    Name="Extended_Cost" Nullable="true" XMLName="ExtendedCost"/>
+					
+		<Attribute ColumnName="STANDARD_FREIGHT"
+                    DataType="Money" DefaultValue="0"
+                    Description="The Standard freight amount "
+                    Name="Standard_Freight" Nullable="true" XMLName="StandardFreight"/>
+					
+		<Attribute ColumnName="DISCOUNT"
+                    DataType="Money" DefaultValue="0"
+                    Description="The Discount for the Item"
+                    Name="Discount" Nullable="true" XMLName="Discount"/>
+					
+		<Attribute ColumnName="CREATETS" DataType="TimeStamp"
+					DefaultValue="SYSDATE" Description="Create TimeStamp" />
+				<Attribute ColumnName="MODIFYTS" DataType="TimeStamp"
+					DefaultValue=" SYSDATE" Description="Modify TimeStamp" />
+				<Attribute ColumnName="CREATEUSERID" DataType="UserId"
+					DefaultValue="' '" Description="Creating User ID" />
+				<Attribute ColumnName="MODIFYUSERID" DataType="UserId"
+					DefaultValue="' '" Description="Modifying User ID" />
+				<Attribute ColumnName="CREATEPROGID"
+					DataType="ProgramID" DefaultValue="' '"
+					Description="Creating Program ID" />
+				<Attribute ColumnName="MODIFYPROGID"
+					DataType="ProgramID" DefaultValue="' '"
+					Description="Modifying Program ID" />
+				<Attribute ColumnName="LOCKID" DataType="Lockid"
+					DefaultValue="0" Description="Lock ID" />
+            </Attributes>  
+			<PrimaryKey Name="VEN_INV_DTL_KEY_PK">
+                <Attribute ColumnName="VENDOR_INVOICE_DETAILS_KEY" />
+            </PrimaryKey>
+			
+		<!-- Relationship -->
+			<Parent ParentTableName="EXTN_VENDOR_INVOICE" XMLName="EXTNVendorInvoice">
+				<Attribute ColumnName="VENDOR_INVOICE_KEY" ParentColumnName="VENDOR_INVOICE_KEY"/>
+			</Parent>
+		</Entity>
+	</Entities>
+</DBSchema>

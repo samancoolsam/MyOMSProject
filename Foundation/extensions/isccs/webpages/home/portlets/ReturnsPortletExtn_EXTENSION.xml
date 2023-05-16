@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExtensionMetaData>
+    <ScreenExtension extnClassName="ReturnsPortletExtn"
+        extnPackage="extn.home.portlets"
+        originalScreen="isccs.home.portlets.ReturnsPortlet"
+        originalScreenPackage="isccs.home.portlets" type="diffrential">
+        <Items>
+            <Link _sc_extensibility_operation="change"
+                _sc_extensibility_referenceUId="bCreate" renderHidden="true"/>
+        </Items>
+    </ScreenExtension>
+</ExtensionMetaData>

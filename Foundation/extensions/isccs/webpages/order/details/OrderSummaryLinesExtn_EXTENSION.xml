@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExtensionMetaData>
+    <ScreenExtension extnClassName="OrderSummaryLinesExtn"
+        extnPackage="extn.order.details"
+        originalScreen="isccs.order.details.OrderSummaryLines"
+        originalScreenPackage="isccs.order.details" type="diffrential">
+        <Items>
+            <GridX _sc_extensibility_operation="change" _sc_extensibility_referenceUId="OLST_listGrid">
+                <Structure>
+                    <Layout>
+                        <View _sc_extensibility_moveOrder="1"
+                            _sc_extensibility_operation="insert"
+                            _sc_extensibility_position="after"
+                            _sc_extensibility_referenceUId="tblColStatus"
+                            field="extn_CarrierService"
+                            name="$(_scSimpleBundle:extn_CarrierService)"
+                            uId="extn_CarrierService" width="15%">
+                            <BindingData>
+                                <SourceBinding
+                                    dynamicBindingFunc="getCarrierService" path="CarrierServiceCode"/>
+                            </BindingData>
+                        </View>
+                        <View _sc_extensibility_moveOrder="2"
+                            _sc_extensibility_operation="insert"
+                            _sc_extensibility_position="after"
+                            _sc_extensibility_referenceUId="extn_CarrierService"
+                            field="extn_SaveTheSale"
+                            name="$(_scSimpleBundle:extn_Save_The_Sale)"
+                            uId="extn_SaveTheSale" width="10%">
+                            <BindingData>
+                                <SourceBinding
+                                    dynamicBindingFunc="getSaveTheSale" path="SaveTheSale"/>
+                            </BindingData>
+                        </View>
+                        <View _sc_extensibility_moveOrder="3"
+                            _sc_extensibility_operation="insert"
+                            _sc_extensibility_position="before"
+                            _sc_extensibility_referenceUId="tblColStatus"
+                            field="extn_tblColShipmentNo"
+                            name="$(_scSimpleBundle:Shipment_No)"
+                            uId="extn_tblColShipmentNo" width="15%">
+                            <BindingData>
+                                <SourceBinding
+                                    dynamicBindingFunc="getShipmentNo" path="ShipmentNo"/>
+                            </BindingData>
+                        </View>
+                        <View _sc_extensibility_moveOrder="4"
+                            _sc_extensibility_operation="insert"
+                            _sc_extensibility_position="before"
+                            _sc_extensibility_referenceUId="tblColStatus"
+                            field="extn_tblColShipNode"
+                            name="$(_scSimpleBundle:ShipNode)"
+                            uId="extn_tblColShipNode" width="5%">
+                            <BindingData>
+                                <SourceBinding
+                                    dynamicBindingFunc="getShipNode" path="ShipNode"/>
+                            </BindingData>
+                        </View>
+                    </Layout>
+                </Structure>
+            </GridX>
+        </Items>
+        <Subscribers>
+            <Local>
+                <Subscriber description="On click of tracking number"
+                    eventId="OLST_listGrid_Link_ScHandleLinkClicked"
+                    isExtn="true" sequence="19">
+                    <Handler methodName="extn_cellClick"/>
+                </Subscriber>
+            </Local>
+        </Subscribers>
+    </ScreenExtension>
+</ExtensionMetaData>

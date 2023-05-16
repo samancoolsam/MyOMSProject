@@ -1,0 +1,79 @@
+		<div>
+		 	<div data-dojo-type="idx/layout/ContentPane" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_ResetAndPrintCP' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '3' , 
+		spanLabel : true , 
+		_sc_extensibility_position : 'last' , 
+		style : 'padding-right:0.01px' , 
+		_sc_extensibility_referenceUId : 'batchstatuspanel' , 
+		dir : 'rtl'  
+	 					}">
+		 	<div data-dojo-type="sc/plat/dojo/layout/AdvancedTableLayout" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								spacing : 0.1 , 
+		cols : 1  
+	 					}">
+		 	</div>  
+		 	</div>  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/Link" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								_sc_extensibility_operation : 'change' , 
+		style : 'padding-right:2px' , 
+		_sc_extensibility_referenceUId : 'lnk_PickAction'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/Link" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_BatchReset' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '2' , 
+		'class' : 'actionLinks' , 
+		_sc_extensibility_position : 'before' , 
+		style : 'padding:2px' , 
+		_sc_extensibility_referenceUId : 'extn_PrintBatch'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	value : 			this.getSimpleBundleString('extn_Batch_Reset')
+			}
+		}
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/Link" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_BatchReset' , 
+		_sc_extensibility_operation : 'move' , 
+		_sc_extensibility_moveOrder : '4' , 
+		_sc_extensibility_position : 'first' , 
+		_sc_extensibility_referenceUId : 'extn_ResetAndPrintCP'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/Link" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_PrintBatch' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '1' , 
+		'class' : 'actionLinks' , 
+		_sc_extensibility_position : 'before' , 
+		style : 'padding:2px' , 
+		_sc_extensibility_referenceUId : 'lnk_PickAction'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	value : 			this.getSimpleBundleString('extn_Print_Batch')
+			}
+		}
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/Link" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_PrintBatch' , 
+		_sc_extensibility_operation : 'move' , 
+		_sc_extensibility_moveOrder : '5' , 
+		_sc_extensibility_position : 'last' , 
+		_sc_extensibility_referenceUId : 'extn_ResetAndPrintCP'  
+	 					}">
+		 	</div>  
+		</div>

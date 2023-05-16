@@ -1,0 +1,213 @@
+<div class="StagingParent">
+	<div>
+		<!-- Add Screen Widgets Here -->
+<!-- 				            <div data-dojo-type="sc/plat/dojo/widgets/Label" data-dojo-props="		spanLabel : true , 
+		'class' : 'blockComponent' , 
+		colspan : 2 , 
+		uId : 'itemdescriptionLink_test'  
+ 		,scParamDataFn :
+		 function() { 
+			return { 
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 path : 			'ItemDesc'
+,
+		 namespace : 			'getCustomerList_output'
+	}
+	}
+			}
+		}
+"></div> -->
+
+         <div data-dojo-type="idx/layout/ContentPane" data-dojo-props="		'class' : 'scanPanel' , 
+		uId : 'scanPanel1' , 
+		layoutAlign : 'top'  
+ ">
+ <div data-dojo-type="sc/plat/dojo/widgets/DataLabel" data-dojo-props="  uId : 'itemdescriptionLink_test' , 'class' : 'blockComponent addStagingLocation'  
+   ,scParamDataFn :
+   function() { 
+   return { 
+     bindingData :  {
+  
+   sourceBinding :  {
+   path :    'ItemDesc'
+,
+   namespace :    'getCustomerList_output'
+ }
+ }
+, 
+     label :    this.getBundleString('Item desc')
+   }
+  }
+">
+</div>
+</div>
+
+ <div data-dojo-type="sc/plat/dojo/widgets/DataLabel" data-dojo-props="  uId : 'hiddenShipmentKey' , 'class' : 'blockComponent addStagingLocation'  ,
+ 		renderHidden : true 
+   ,scParamDataFn :
+   function() { 
+   return { 
+     bindingData :  {
+  
+   sourceBinding :  {
+   path :    'ShipmentLineKey'
+,
+   namespace :    'getCustomerList_output'
+ }
+ }
+, 
+     label :    this.getBundleString('Item desc')
+   }
+  }
+">
+</div>
+
+<!-- 				            <div data-dojo-type="sc/plat/dojo/widgets/Label" data-dojo-props="		spanLabel : true , 
+		'class' : 'blockComponent' , 
+		colspan : 2 , 
+		uId : 'itemdescriptionLink_test_1'  
+ 		,scParamDataFn :
+		 function() { 
+			return { 
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 path : 			'BackroomPickedQuantity'
+,
+		 namespace : 			'getCustomerList_output'
+	}
+	}
+			}
+		}
+"></div> -->
+
+ <div data-dojo-type="sc/plat/dojo/widgets/DataLabel" data-dojo-props="  uId : 'itemdescriptionLink_test_1' ,'class' : 'blockComponent screen addStagingLocation' 
+   ,scParamDataFn :
+   function() { 
+   return { 
+     bindingData :  {
+  
+   sourceBinding :  {
+   path :    'BackroomPickedQuantity'
+,
+   namespace :    'getCustomerList_output'
+ }
+ }
+, 
+     label :    this.getBundleString('Quantity picked')
+   }
+  }
+">
+</div>
+
+<!-- 				            <div data-dojo-type="sc/plat/dojo/widgets/Label" data-dojo-props="		spanLabel : true , 
+		'class' : 'blockComponent' , 
+		colspan : 2 , 
+		uId : 'itemdescriptionLink_test_1'  
+ 		,scParamDataFn :
+		 function() { 
+			return { 
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 path : 			'ItemID'
+,
+		 namespace : 			'getCustomerList_output'
+	}
+	}
+			}
+		}
+"></div> -->
+
+ <div data-dojo-type="sc/plat/dojo/widgets/DataLabel" data-dojo-props="  uId : 'itemdescriptionLink_test_2'  ,'class' : 'blockComponent screen addStagingLocation'
+   ,scParamDataFn :
+   function() { 
+   return { 
+     bindingData :  {
+  
+   sourceBinding :  {
+   path :    'ItemID'
+,
+   namespace :    'getCustomerList_output'
+ }
+ }
+, 
+     label :    this.getBundleString('Item ID')
+   }
+  }
+">
+</div>
+
+
+        <div data-dojo-type="idx/form/TextBox" data-dojo-props="		spanLabel : true , 
+		'class' : 'addlocation longTextbox zeroWidthLabelKey' , 
+		regExp : '[^,][^,]*' , 
+		uId : 'holdLocationTxtField_satging'  
+		, 
+		required : true  
+ 		,scParamDataFn :
+		 function() { 
+			return { 
+			 	label : 			this.getSimpleBundleString('Label_Hold_Location')
+,	
+			 	hint : 			this.getSimpleBundleString('extn_Scan_or_enter_Staging_Loc')
+,	
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 path : 			'HoldLocation'
+,
+		 namespace : 			'HoldLocation_Input_staging'
+	}
+,
+		 targetBinding : 	[
+	 		{
+		 path : 			'HoldLocation'
+,
+		 namespace : 			'HoldLocation_Add_staging'
+	}
+	]
+	}
+,	
+			 	invalidMessage : 			this.getSimpleBundleString('Message_InvalidHoldLocationText')
+			}
+		}
+"></div>
+        <div data-dojo-type="dijit/form/Button" data-dojo-props="		spanLabel : true , 
+		'class' : 'idxSpecialButton longButtons' , 
+		showLabel : true , 
+		uId : 'addHoldLocationButton_satging'  
+ 		,scParamDataFn :
+		 function() { 
+			return { 
+			 	'aria-label' : 			this.getSimpleBundleString('arialabel_Add_Location')
+,	
+			 	label : 			this.getSimpleBundleString('Action_Add_Location')
+			}
+		}
+"></div>
+
+
+
+    <div data-dojo-type="idx/layout/ContentPane" data-dojo-props="		'class' : '' , 
+		uId : 'Hold_location_shipmentLine'  
+ ">
+            <div data-dojo-type="sc/plat/dojo/widgets/Label" data-dojo-props="		'class' : '' , 
+		shouldEncodeValue : false , 
+		uId : 'Hold_shipmentLine'  
+ 		,scParamDataFn :
+		 function() { 
+			return { 
+			 	bindingData :  {
+  
+   sourceBinding :  {
+   path :    'Extn.ExtnStagingLocation'
+,
+   namespace :    'getCustomerList_output'
+ }
+ }
+			}
+		}
+"></div>
+    </div>
+
+	</div>
+</div>

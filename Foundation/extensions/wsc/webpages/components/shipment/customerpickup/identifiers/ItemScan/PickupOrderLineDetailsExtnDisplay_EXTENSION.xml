@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExtensionMetaData>
+    <ScreenDisplayExtension extnClassName="PickupOrderLineDetailsExtn"
+        identifierId="ItemScan"
+        originalScreen="wsc.components.shipment.customerpickup.PickupOrderLineDetails" originalScreenPackage="wsc.components.shipment.customerpickup">
+        <Items>
+            <ContentPane _sc_extensibility_operation="change"
+                _sc_extensibility_referenceUId="productQuantityDetailsPanel" renderHidden="false"/>
+	    <!--Start - OMNI-3680 BOPIS:Record Shortage Button-->
+            <Button __isCurrentOrgInsert="true"
+                _sc_extensibility_moveOrder="6"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="shortageResolutionLink" uId="extn_screenbase_button"/>
+	    <!--End - OMNI-3680 BOPIS:Record Shortage Button-->
+            <Link _sc_extensibility_operation="change"
+                _sc_extensibility_referenceUId="itemdescriptionLink" class="groupHeader blockComponent productdesclink disableLink"/>
+            <DataLabel __isCurrentOrgInsert="true"
+                _sc_extensibility_moveOrder="2"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="remainingQtylbl" uId="extn_screenbase_datalabel_staging"/>
+            <DataLabel _sc_extensibility_moveOrder="4"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="productQuantityDetailsPanel" uId="extn_ageRestriction"/>
+			<!-- OMNI- 84925 - Start --> 
+			<DataLabel __isCurrentOrgInsert="true"
+                _sc_extensibility_moveOrder="8"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="remainingQtylbl" uId="extn_Line_Shipment_No"/>
+			<!-- OMNI- 84925 - End -->
+        </Items>
+    </ScreenDisplayExtension>
+</ExtensionMetaData>

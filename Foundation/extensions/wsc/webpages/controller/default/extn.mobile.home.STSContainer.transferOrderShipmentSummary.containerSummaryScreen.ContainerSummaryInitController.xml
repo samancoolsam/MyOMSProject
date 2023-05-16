@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Controller className="com.sterlingcommerce.ui.web.platform.controller.SCUIXAPIMashupController" controllerId="extn.mobile.home.STSContainer.transferOrderShipmentSummary.containerSummaryScreen.ContainerSummaryInitController" requestMethodSupported="POST" screenId="extn.mobile.home.STSContainer.transferOrderShipmentSummary.containerSummaryScreen.ContainerSummary">
+<MashupRefs>
+	<!-- OMNI-68038 Start -->
+	<MashupRef mashupId="extn_lostContainerReasonCodes"
+            mashupRefId="extn_getLostContainerReasonCodes" permissionId=""/>
+    <!-- OMNI-68038 End -->
+ </MashupRefs>
+</Controller>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DBSchema>
+	<Entities>
+		<Entity TableName="YFS_ORDER_INVOICE">
+			<Attributes>
+				<Attribute ColumnName="EXTN_PROCESSED" DataType="Flag"
+					Nullable="true" DefaultValue="N" XMLName="ExtnProcessed"
+					XMLGroup="Extn" />
+			</Attributes>
+		</Entity>
+
+		<Entity ApiNeeded="Y" AuditRequired="N"
+			Description="This custom table stores final invoice processed for the current date"
+			HasHistory="False" Prefix="ACAD_"
+			TableName="ACAD_FINAL_INVOICE_DETAIL"
+			XMLName="ACAD_FINAL_INVOICE_DETAIL">
+			<Attributes>
+				<Attribute ColumnName="CREATETS" DataType="TimeStamp"
+					DefaultValue="sysdate" Description="Create TimeStamp" />
+				<Attribute ColumnName="MODIFYTS" DataType="TimeStamp"
+					DefaultValue="sysdate" Description="Modify TimeStamp" />
+				<Attribute ColumnName="CREATEUSERID" DataType="UserId"
+					DefaultValue="&apos; &apos;" Description="Creating User ID" />
+				<Attribute ColumnName="MODIFYUSERID" DataType="UserId"
+					DefaultValue="&apos; &apos;" Description="Modifying User ID" />
+				<Attribute ColumnName="CREATEPROGID"
+					DataType="ProgramID" DefaultValue="&apos; &apos;"
+					Description="Creating Program ID" />
+				<Attribute ColumnName="MODIFYPROGID"
+					DataType="ProgramID" DefaultValue="&apos; &apos;"
+					Description="Modifying Program ID" />
+				<Attribute ColumnName="LOCKID" DataType="Lockid"
+					DefaultValue="0" Description="Lock ID" />
+				<Attribute ColumnName="FINAL_INVOICE_KEY" DataType="Key"
+					DefaultValue=" "
+					Description="System generated primary key of the table"
+					Nullable="False" XMLName="FINAL_INVOICE_KEY" />
+				<Attribute ColumnName="INVOICE_NO" Type="CHAR" Size="40"
+					Nullable="false" XMLName="InvoiceNo" />
+				<Attribute ColumnName="PROCESSED" DataType="Flag"
+					Nullable="false" DefaultValue="N" XMLName="Processed" />
+				<Attribute ColumnName="DATE_INVOICED"
+					DataType="AcademyFinInvoicedDateTime" DefaultValue="SYSDATE"
+					Description="Date time of last financial invoice transaction for the day"
+					Name="DateInvoiced" Nullable="true" XMLGroup=""
+					XMLName="DateInvoiced" />
+			</Attributes>
+			<PrimaryKey Name="ACAD_FINL_INVE_KEY">
+				<Attribute ColumnName="FINAL_INVOICE_KEY" />
+			</PrimaryKey>
+			<Indices>
+				<Index Name="INDEX_ACAD_INVE_NO" Unique="True">
+					<Column Name="INVOICE_NO" />
+				</Index>
+			</Indices>
+		</Entity>
+	</Entities>
+</DBSchema>

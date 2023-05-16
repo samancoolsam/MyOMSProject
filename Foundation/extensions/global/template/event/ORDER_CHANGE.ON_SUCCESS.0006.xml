@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Order DocumentType="" MaxOrderStatus=""
+    MaxOrderStatusDesc="" MinOrderStatus="" MinOrderStatusDesc=""
+    OrderHeaderKey="" OrderNo="" >
+    <OrderLines>
+        <OrderLine MaxLineStatus=""
+            MaxLineStatusDesc="" MinLineStatus="" MinLineStatusDesc=""
+            OrderHeaderKey="" OrderLineKey="" PrimeLineNo="" ChainedFromOrderLineKey=""
+			ChainedFromOrderHeaderKey="" >
+            <OrderStatuses>
+                <OrderStatus OrderHeaderKey="" OrderLineKey=""
+                    OrderLineScheduleKey="" OrderReleaseKey=""
+                    OrderReleaseStatusKey="" PipelineKey="" Status=""
+                    StatusDate="" StatusDescription="" StatusQty=""
+                    StatusReason="" TotalQuantity=""/>
+            </OrderStatuses>
+			<ChainedFromOrderLine OrderLineKey="" FulfillmentType="">
+				<OrderHoldTypes>
+					<OrderHoldType HoldType="" Status="" StatusDescription="" />
+				</OrderHoldTypes>
+			</ChainedFromOrderLine>
+        </OrderLine>
+    </OrderLines>
+    <OrderStatuses>
+        <OrderStatus OrderHeaderKey="" OrderLineKey=""
+            OrderLineScheduleKey="" OrderReleaseKey=""
+            OrderReleaseStatusKey="" PipelineKey="" Status=""
+            StatusDate="" StatusDescription="" StatusQty=""
+            StatusReason="" TotalQuantity=""/>
+    </OrderStatuses>
+	<OrderAudit AuditTransactionId="" NewBuffer="" OldBuffer=""
+        OrderAuditKey="" OrderHeaderKey="" OrderLineKey=""
+        OrderReleaseKey="" ReasonCode="" ReasonText="" Reference1=""
+        Reference2="" Reference3="" Reference4="" XMLFlag="">
+        <Order EnterpriseCode="" OrderNo=""/>
+        <OrderAuditLevels>
+            <OrderAuditLevel ModificationLevel="" OrderLineKey="" OrderReleaseKey="">
+                <ModificationTypes>
+                    <ModificationType Name=""/>
+                </ModificationTypes>
+                <OrderLine PrimeLineNo="" SubLineNo=""/>
+                <OrderRelease ReleaseNo=""/>
+                <OrderAuditDetails>
+                    <OrderAuditDetail Action="" AuditType="">
+                        <IDs>
+                            <ID Name="" Value=""/>
+                        </IDs>
+                        <Attributes>
+                            <Attribute Name="" NewValue="" OldValue=""/>
+                        </Attributes>
+                    </OrderAuditDetail>
+                </OrderAuditDetails>
+            </OrderAuditLevel>
+        </OrderAuditLevels>
+    </OrderAudit>
+</Order>

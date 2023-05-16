@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<FlatfileDelimitedSchema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation='delimitedreceiver.xsd'>
+	<ParserDefaults  DefaultRecordDelimiter="Newline" DefaultFieldDelimiter="," DefaultEscapeCharacter="\" DefaultPadCharacter="*" RecordIdStartPosition="1" SkipCarriageReturn="false">
+      <FileHeader FileHeaderId="000" FileHeaderStartPos="1" FileHeaderLength="3"/>
+      <FileTrailer FileTrailerId="666" FileTrailerStartPos="1" FileTrailerLength="3"/>
+	</ParserDefaults>
+
+	<Root Name="ItemList">
+		<Header Name="Item" RecordName="ITEMHEDR" MinOccurrence="1" MaxOccurrence="1"/>
+	</Root>
+   
+	<RecordDefinitions>
+		<Record RecordId="ITEMHEDR" Name="ITEMHEDR" XMLName="Item">
+			<Field Name="ItemID" FieldPosition="2" XMLName="ItemID"/>
+			<Field Name="ExtnWatermark" FieldPosition="3" XMLName="ExtnWatermark"/>
+		</Record>
+	</RecordDefinitions>
+</FlatfileDelimitedSchema>

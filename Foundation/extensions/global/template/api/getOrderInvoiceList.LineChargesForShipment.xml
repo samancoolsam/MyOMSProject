@@ -1,0 +1,14 @@
+<OrderInvoiceList TotalNumberOfRecords="">
+<OrderInvoice Currency="" DateInvoiced="" DerivedFromOrderHeaderKey="" DocumentType="" EnterpriseCode="" InvoiceNo="" InvoiceType="" LineSubTotal="" MasterInvoiceNo="" OrderHeaderKey="" OrderInvoiceKey="" OrderNo="" ShipNode="" ShipmentKey="" ShipmentNo="" Status="" TotalAmount="" TotalTax="" isHistory="">
+<LineDetails TotalNumberOfRecords="">
+<LineDetail Charges="" ExtendedPrice="" ItemID="" LineTotal="" OrderInvoiceDetailKey="" OrderInvoiceKey="" OrderLineKey="" PrimeLineNo="" ProductClass="" ShippedQty="" SubLineNo="" Tax="" UnitOfMeasure="" UnitPrice="">
+<LineChargeList TotalNumberOfRecords="">
+<LineCharge ChargeAmount="" ChargeCategory="" ChargeName="" ChargePerLine="" ChargePerUnit="" HeaderKey="" InvoicedChargePerLine="" InvoicedExtendedCharge="" IsBillable="" IsDiscount="" LineChargesKey="" LineKey="" RecordType="" Reference="" /> 
+</LineChargeList>
+<LineTaxList>
+<LineTax ChargeCategory="" ChargeName="" HeaderKey="" InvoicedTax="" LineKey="" RecordType="" Reference1="" Reference2="" Reference3="" Tax="" TaxBreakupKey="" TaxName="" TaxPercentage="" TaxableFlag="" /> 
+</LineTaxList>
+</LineDetail>
+</LineDetails>
+</OrderInvoice>
+</OrderInvoiceList>

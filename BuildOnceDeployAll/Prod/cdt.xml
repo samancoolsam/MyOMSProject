@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="CDT Script For Academy" default="cdt" basedir=".">
+   <taskdef resource="net/sf/antcontrib/antcontrib.properties"/>
+   <taskdef resource="net/sf/antcontrib/antlib.xml" />
+    <property file="build95.properties" />
+    <property file="/apps/SterlingFiles/build/svnbuild/deploy.properties"/>
+   <path id="project.class.path">
+        <fileset dir="${YFS_HOME}/jar/">
+         <include name="**/**/**/*.jar" />
+      </fileset>
+   </path>
+   <target name="cdt" >
+                <property name="server" value="${server}"/>
+                  <property name="ANT_HOME" value="/apps/SterlingOMS/Foundation/Migration/apache-ant-1.7.1"/>
+                  <property name="JAVA_HOME" value="/usr/java8_64"/>
+                  <property name="YFS_HOME" value="/apps/SterlingOMS/Foundation"/>
+                  <property name="cdttgt" value="${sterid}"/>
+                  <property name="cdttgtpwd" value="${passwd}"/>
+                <if>
+                        <equals arg1="${build.cdt}" arg2="n" />
+                        <then>
+                               <echo message="*** No CDT build. ***"/>
+                        </then>
+                        <else>
+                               <echo message="*** Forced CDT build. ***"/>
+                                <antcall target="deploy-cdt"/>
+                        </else>
+                </if>
+   </target>
+   <target name="deploy-cdt" description="Extract archive and deploy CDT" >
+      <propertycopy name="cdttgt" from="${server}.cdttgt" />
+      <propertycopy name="cdttgtpwd" from="${server}.cdttgtpwd" />
+          <delete>
+         <fileset dir="/apps/SterlingOMS/CDT/xml" includes="**/*"/>
+      </delete>
+      <unzip src="OMS_package/CDT.zip" dest="/apps/SterlingOMS/CDT/xml"/>
+      <exec executable="${YFS_HOME}/bin/cs.sh" failonerror="true">
+         <arg value="XML" />
+         <arg value="academy" />
+         <arg value="${cdttgt}" />
+         <arg value="${cdttgtpwd}" />
+      </exec>
+   </target>
+</project>

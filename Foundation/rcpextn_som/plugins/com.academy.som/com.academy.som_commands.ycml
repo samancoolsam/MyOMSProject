@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<forms>
+    <!--<form Id="">
+		<commands>
+			<command Name="" APIName="" APIType="" prototype="" inputNamespace="" outputNamespace="" version="ver77" URL="DEFAULT"/>
+		</commands>
+		<namespaces>
+			<namespace name="" templateName="" type="output"/>
+		</namespaces>
+	</form>-->
+    <form Id="com.yantra.pca.ycd.rcp.tasks.printPickTicket.wizards.YCDPrintPickTicketWizard">
+        <commands>
+            <command APIName="AcademySFSPrintShipmentPickTickets"
+                APIType="SERVICE"
+                Name="AcademySFSPrintShipmentPickTickets" URL="DEFAULT"
+                inputNamespace="" outputNamespace="" version="ver77"/>
+            <command APIName="AcademySFSPrintItemPickTickets"
+                APIType="SERVICE" Name="AcademySFSPrintItemPickTickets"
+                URL="DEFAULT" inputNamespace="" outputNamespace="" version="ver77"/>
+            <command APIName="AcademySFSShipmentPickTicketNo"
+                APIType="SERVICE" Name="GetPickTicketNoList"
+                URL="DEFAULT" inputNamespace="" outputNamespace="" version="ver77"/>
+            <command APIName="getCommonCodeList" APIType="API"
+                Name="GetPrintBatchSizeCC" URL="DEFAULT"
+                inputNamespace=""
+                outputNamespace="Extn_printBatchSizeCC_Output" version="ver77"/>
+            <command APIName="getCommonCodeList" APIType="API"
+                Name="getCommonCodeList" URL="DEFAULT" inputNamespace="getCommonCodeList_IT"
+                outputNamespace="getCommonCodeList_OT" version="ver77"/>
+                <!--SIM to SOM Upgrade : START : Creating New Command for populating the pending shipments count in Screen-->
+           <command APIName="getShipmentList" APIType="API"
+                Name="GetPendingShipments" URL="DEFAULT" inputNamespace=""
+                outputNamespace="EXTN_GetShipmentList_OTNS" version="ver77"/>
+                <!--SIM to SOM Upgrade : END-->
+                <!--Start: Updated as part of STL-1493-->
+           <command APIName="AcademySFSResetPickTickets"
+                APIType="SERVICE"
+                Name="AcademySFSResetPickTickets" URL="DEFAULT"
+                inputNamespace="" outputNamespace="" version="ver77"/>
+                <!--End: Updated as part of STL-1493-->
+        </commands>
+        <namespaces>
+            <namespace name="Extn_printBatchSizeCC_Output"
+                templateName="Extn_printBatchSizeCC_Output" type="output"/>
+                 <!--SIM to SOM Upgrade : START : Output NameSpace to store getShipmentList API Output-->
+             <namespace name="EXTN_GetShipmentList_OTNS"
+                templateName="EXTN_GetShipmentList_OTNS" type="output"/>
+                <!--SIM to SOM Upgrade : END-->
+        </namespaces>
+        
+        <Wizard>
+            <WizardEntities>
+                <WizardEntity canBeHidden="true" id="YCDPrintPickTicketScreen"
+                    impl="com.yantra.pca.ycd.rcp.tasks.printPickTicket.wizardpages.YCDPrintPickTicketScreen"
+                    last="false" start="true" type="PAGE" xPos="362" yPos="146"/>
+            </WizardEntities>
+            <WizardTransitions/>
+        </Wizard>
+        
+    </form>
+    <form Id="com.academy.som.printpickticket.screens.AcademyShipmentStatsDashboardPanel">
+        <commands>
+            <command APIName="getCommonCodeList" APIType="API"
+                Name="GetStoreStatsCC" URL="DEFAULT" inputNamespace=""
+                outputNamespace="StoreStatsCC_Output" version="ver77"/>
+            <command APIName="AcademySFSGetStoreOperationStats"
+                APIType="SERVICE" Name="GetStoreOpStatsList"
+                URL="DEFAULT" inputNamespace="" outputNamespace="" version="ver77"/>
+        </commands>
+        <namespaces>
+            <namespace name="StoreStatsCC_Output"
+                templateName="StoreStatsCC_Output" type="output"/>
+        </namespaces>
+    </form>
+    <form Id="com.academy.som.printpickticket.screens.AcademyManifestingDayPanel">
+        <commands>
+            <command APIName="AcademySFSGetCalendarWorkingDays"
+                APIType="SERVICE" Name="GetCalendarWorkingDays"
+                URL="DEFAULT" inputNamespace="" outputNamespace="" version="ver77"/>
+            <command APIName="multiApi" APIType="API"
+                Name="MultiApiCalendarUpdate" URL="DEFAULT"
+                inputNamespace="" outputNamespace="" version="ver77"/>
+            <command APIName="getLocaleList" APIType="API"
+                Name="GetUserLocale" URL="DEFAULT" inputNamespace=""
+                outputNamespace="" version="ver77"/>
+        </commands>
+        <namespaces/>
+    </form>
+     <form Id="com.yantra.pca.ycd.rcp.tasks.backroompick.wizards.YCDBackroompickWizard">
+        <commands>
+            <command APIName="getItemList" APIType="API"
+                Name="getItemList" URL="DEFAULT" inputNamespace=""
+                outputNamespace="Extn_getItemList_Output" version="ver77"/>
+            <command APIName="AcademySFSCreateContainersAndPrintService"
+                APIType="SERVICE" Name="CreateContainersAndPrintService"
+                URL="DEFAULT" inputNamespace="" outputNamespace="" version="ver77"/>
+            <command APIName="StopAPICallService" APIType="SERVICE"
+                Name="changeShipment" URL="DEFAULT" inputNamespace=""
+                outputNamespace="" version="ver77"/>
+            <command APIName="StopAPICallService" APIType="SERVICE"
+                Name="changeShipmentStatus" URL="DEFAULT"
+                inputNamespace="" outputNamespace="" version="ver77"/>
+            <command APIName="getItemList" APIType="API"
+                Name="getItemDetailsList" URL="DEFAULT"
+                inputNamespace=""
+                outputNamespace="Extn_getItemDetailList_Output" version="ver77"/>
+				<!-- STL-1292 -->
+            <command APIName="AcademySFSTranslateBarCodeForSOM" APIType="SERVICE"
+                Name="translateBarCode" URL="DEFAULT"
+                inputNamespace="translateBarCode_input" outputNamespace="translateBarCode_output"/>
+                <!-- STL- 1292 -->
+				<!-- START SHIN-22 Commenting the changes did as part of SHIN-6 work around
+				 SHIN-6 
+            <command APIName="getShipNodeList" APIType="API"
+                Name="GetShipNodeList" URL="DEFAULT"
+                inputNamespace="" outputNamespace="Extn_getShipNodeList_Output" version="ver77"/>
+                 SHIN-6 
+				 END SHIN-22 -->
+			 <!-- START STL-1678 added UPC based search in BackroomPick search screen -->
+			<command APIName="AcademyGetShipmentListForBackroomPickSearch" APIType="SERVICE"
+                Name="getShipmentList" URL="DEFAULT"
+                inputNamespace="getShipmentList_input" outputNamespace="getShipmentList_output"/>
+            <!-- END STL-1678 added UPC based search in BackroomPick search screen -->
+            <!-- START WN-2980 GC Activation and fulfillment for SI DCs -->
+            <command APIName="translateBarCode" APIType="API" Name="translateBarCodeForSerialNo" 
+            	URL="DEFAULT" inputNamespace="" outputNamespace=""/>
+            <!-- END WN-2980 GC Activation and fulfillment for SI DCs -->
+            <command APIName="AcadGetDPLookup" APIType="SERVICE"
+                Name="AcadGetDPLookup" URL="DEFAULT"
+                inputNamespace="" outputNamespace=""/>
+            <command APIName="AcadListDPContainerPriority" APIType="SERVICE"
+                Name="AcadListDPContainerPriority" URL="DEFAULT"
+                inputNamespace="" outputNamespace=""/>
+            <command APIName="getCommonCodeList" APIType="API"
+                Name="AcadGetContainerThreshold" URL="DEFAULT"
+                inputNamespace="" outputNamespace=""/>
+            <command APIName="translateBarCode" APIType="API"
+                Name="translateBarCodeForContainerType" URL="DEFAULT"
+                inputNamespace="" outputNamespace=""/>
+			<command APIName="getItemList" APIType="API"
+                Name="checkMultiboxItem" URL="DEFAULT" inputNamespace=""
+                outputNamespace="Extn_getMultiboxItemList_Output" version="ver77"/>
+             <command APIName="AcadMultiboxLookup"
+                APIType="SERVICE" Name="getAcadMultiboxLookup"
+                URL="DEFAULT" inputNamespace="" outputNamespace="" version="ver77"/>
+        </commands>
+        <namespaces>
+            <namespace name="Extn_getItemList_Output"
+                templateName="Extn_getItemList_Output" type="output"/>
+            <namespace name="Extn_getItemDetailList_Output"
+                templateName="Extn_getItemDetailList_Output" type="output"/>
+				<!-- STL 1292 -->
+            <namespace name="translateBarCode_input"
+                templateName="translateBarCode_input" type="input"/>
+            <namespace name="translateBarCode_output"
+                templateName="translateBarCode_output" type="output"/>
+                <!-- STL 1292 -->
+				<!-- START SHIN-22 Commenting the changes did as part of SHIN-6 work around
+				 SHIN-6 
+            <namespace name="Extn_getShipNodeList_Output"
+                templateName="Extn_getShipNodeList_Output" type="output"/>
+				 SHIN-6 
+				 END SHIN-22 -->
+            <namespace name="Extn_getMultiboxItemList_Output"
+                templateName="Extn_getMultiboxItemList_Output" type="output"/>
+        </namespaces>
+    </form>
+    <form Id="com.yantra.pca.ycd.rcp.tasks.common.advancedShipmentSearch.screens.YCDAdvancedShipmentSearchCriteriaPanel">
+        <commands>            
+            <command APIName="getQueryTypeList"
+                APIType="API"
+                Name="getQueryTypeList" URL="DEFAULT"
+                inputNamespace="" outputNamespace="" version="ver77"/>
+            <command APIName="getManifestList" APIType="API"
+                Name="GetManifestList" URL="DEFAULT" inputNamespace=""
+                outputNamespace="Extn_openManifestList_Output" version="ver77"/>
+            <command APIName="getStatusList" APIType="API"
+                Name="GetStatusList" URL="DEFAULT" inputNamespace=""
+                outputNamespace="" version="ver77"/>
+             <command APIName="AcademySFSShipmentPickTicketNo"
+                APIType="SERVICE" Name="GetPickTicketNoList"
+                URL="DEFAULT" inputNamespace="" outputNamespace="" version="ver77"/>   
+			<!-- START: SHIN-6 invoking getShipNodeList API-->
+            <command APIName="getShipNodeList" APIType="API"
+                Name="GetShipNodeList" URL="DEFAULT"
+                inputNamespace="" outputNamespace="Extn_getShipNodeList_Output" version="ver77"/>
+             <!-- START STL-1678 -->
+             <command APIName="getCommonCodeList" APIType="API"
+                Name="getCommonCodeList" URL="DEFAULT" inputNamespace=""
+                outputNamespace="" version="ver77"/>	
+              <!-- END STL-1678 -->				
+        </commands>
+        <namespaces>
+            <namespace name="Extn_getShipNodeList_Output"
+                templateName="Extn_getShipNodeList_Output" type="output"/>
+        </namespaces>   
+        <!--END: SHIN-6 -->
+   </form>
+    <form Id="com.yantra.pca.ycd.rcp.tasks.shipmentTracking.screens.YCDShipmentDetails">
+        <commands>
+		<!--Start STL-737 Changes: Adding list of ORMD specific labels-->
+        	<command APIName="AcademyPrintORMDLabel"
+                APIType="SERVICE"
+                Name="AcademyPrintORMDLabel" URL="DEFAULT"
+                inputNamespace="" outputNamespace="" version="ver77"/>
+            <command APIName="AcademySFSRePrintORMDLabel"
+                APIType="SERVICE"
+                Name="AcademySFSRePrintORMDLabel" URL="DEFAULT"
+                inputNamespace="" outputNamespace="" version="ver77"/>            
+            <!--End STL-737 Changes-->
+        <command APIName="getCommonCodeList" APIType="API"
+                Name="GetShipmentTypeCC" URL="DEFAULT" inputNamespace=""
+                outputNamespace="Extn_getShipmentTypeCC_Output" version="ver77"/> 
+        <command APIName="AcademySFSRePrintPackList"
+                APIType="SERVICE" Name="AcademySFSRePrintPackList"
+                URL="DEFAULT" inputNamespace="" outputNamespace="" version="ver77"/>
+        <command APIName="AcademySFSRePrintInvoice"
+                APIType="SERVICE" Name="AcademySFSRePrintInvoice"
+                URL="DEFAULT" inputNamespace="" outputNamespace="" version="ver77"/>
+         <command APIName="AcademySFSRePrintShippingLabel"
+                APIType="SERVICE" Name="AcademySFSRePrintShippingLabel"
+                URL="DEFAULT" inputNamespace="" outputNamespace="" version="ver77"/>
+         <command APIName="AcademySFSPrintShipmentPickTicket"
+                APIType="SERVICE"
+                Name="AcademySFSPrintShipmentPickTicket" URL="DEFAULT"
+                inputNamespace="" outputNamespace="" version="ver77"/>
+         <command APIName="AcademySFSAutoCorrectShipmentError"
+                APIType="SERVICE"
+                Name="AcademySFSAutoCorrectShipmentError" URL="DEFAULT"
+                inputNamespace="" outputNamespace="" version="ver77"/>
+         <command APIName="AcademySFSAutoCorrectManifestError"
+                APIType="SERVICE"
+                Name="AcademySFSAutoCorrectManifestError" URL="DEFAULT"
+                inputNamespace="" outputNamespace="" version="ver77"/>
+		<!-- STL - 685 : Start -->
+		<command APIName="AcademyCancelShipmentService" APIType="SERVICE"
+                Name="AcademyCancelShipmentService" URL="DEFAULT" inputNamespace=""
+                outputNamespace="" version="ver77"/>
+		<!-- STL - 685 : End -->
+		<!-- WMS Optimization -->
+		<command APIName="AcademySFSReprintShipmentBOL"
+                APIType="SERVICE" Name="AcademySFSReprintShipmentBOL"
+                URL="DEFAULT" inputNamespace="" outputNamespace="" version="ver77"/>
+                <!-- WMS Optimization -->
+		<!-- START SHIN-22 Commenting the changes did as part of SHIN-11 work around
+         START: SHIN-11 
+        <command APIName="getShipNodeList" APIType="API"
+                Name="GetShipNodeList" URL="DEFAULT"
+                inputNamespace="" outputNamespace="Extn_getShipNodeList_Output" version="ver77"/>
+         END: SHIN-11   	
+		END SHIN-22 -->	
+         </commands>
+         <namespaces>
+                <namespace name="Extn_getShipmentTypeCC_Output"
+                templateName="Extn_getShipmentTypeCC_Output" type="output"/>    
+         <!-- START SHIN-22 Commenting the changes did as part of SHIN-11 work around
+		  START: SHIN-11 
+            	<namespace name="Extn_getShipNodeList_Output"
+                templateName="Extn_getShipNodeList_Output" type="output"/>
+		 END SHIN-22 -->			
+         </namespaces>   
+
+         <!-- END: SHIN-11 -->
+     </form>
+
+	<!--Close Manifest functionality related Start-->
+	<form Id="com.academy.som.closemanifest.wizards.AcademyCloseManifestWizard">
+        <Wizard>
+            <WizardEntities>
+                <WizardEntity id="CloseManifestEndingRule"
+                    impl="java:com.academy.som.closemanifest.rules.AcademyCloseManifestEndRule"
+                    type="RULE" xPos="305" yPos="33">
+                    <Namespace name="SelectedManifestForCloseOperation"/>
+                    <Namespace name="OpenManifestList"/>
+                </WizardEntity>
+                <WizardEntity id="CloseManifestPage"
+                    impl="com.academy.som.closemanifest.wizardpages.AcademyCloseManifest"
+                    start="true" type="PAGE" xPos="17" yPos="32"/>
+            </WizardEntities>
+            <WizardTransitions>
+                <WizardTransition id="CLOSE_MANIFEST" source="CloseManifestEndingRule">
+                    <Output target="CloseManifestPage" value="CLOSE_MANIFEST"/>
+                </WizardTransition>
+                <WizardTransition id="CloseManifestTran"
+                    source="CloseManifestPage" target="CloseManifestEndingRule"/>
+            </WizardTransitions>
+        </Wizard>
+        <commands>
+            <command APIName="getManifestList" APIType="API"
+                Name="GetManifestList" URL=""
+                inputNamespace="InputGetManifestList"
+                outputNamespace="OpenManifestList" postCommand="" preCommand=""/>
+            <command APIName="closeManifest" APIType="API"
+                Name="CloseManifest" URL=""
+                inputNamespace="InputCloseManifest"
+                outputNamespace="OutputCloseManifest" postCommand="" preCommand=""/>
+            <command APIName="changeShipment" APIType="API"
+                Name="ChangeShipment" URL=""
+                inputNamespace="InputChangeShipment"
+                outputNamespace="OutputChangeShipment" postCommand="" preCommand=""/>
+          
+          <!--From SIM Custom Code Start-->
+          	 <command APIName="getLocaleList" APIType="API"
+                Name="GetUserLocale" URL="DEFAULT" inputNamespace=""
+                outputNamespace="" version="ver77"/>
+            <command APIName="StopAPICallService" APIType="SERVICE"
+                Name="CloseManifest" URL="DEFAULT" inputNamespace=""
+                outputNamespace="" version="ver77"/>
+            <command APIName="StopAPICallService" APIType="SERVICE"
+                Name="ChangeShipment" URL="DEFAULT" inputNamespace=""
+                outputNamespace="" version="ver77"/>
+            <command APIName="manageTaskQueue" APIType="API"
+                Name="manageTaskQueue" URL="DEFAULT"
+                inputNamespace="" outputNamespace="" version="ver77"/>
+            <command APIName="AcademySFSMakeNonWorkingDay"
+                APIType="SERVICE" Name="MakeNonWorking" URL="DEFAULT"
+                inputNamespace="" outputNamespace="" version="ver77"/>
+            <command APIName="multiApi" APIType="API"
+                Name="MultiApiChangeShipmentPack" URL="DEFAULT"
+                inputNamespace="" outputNamespace="" version="ver77"/>
+      <!-- STL - 689 -->
+      		<command APIName="getTaskQueueDataList"
+                APIType="API"
+                Name="getTaskQueueDataList" URL="DEFAULT"
+                inputNamespace="" outputNamespace="" version="ver77"/>
+				
+         <!--From SIM Custom Code End-->       
+                
+        </commands>
+        <namespaces>
+            <namespace name="OpenManifestList"
+                templateName="GetManifestList_Output" type="output"/>
+            <namespace name="OutputCloseManifest"
+                templateName="CloseManifest_Output" type="output"/>
+            <namespace name="OutputChangeShipment"
+                templateName="ChangeShipment_Output" type="output"/>
+            <namespace name="InputGetManifestList"
+                templateName="GetManifestList_Input" type="input"/>
+            <namespace name="InputCloseManifest"
+                templateName="CloseManifest_Input" type="input"/>
+            <namespace name="SelectedManifestForCloseOperation"
+                templateName="SelectedManifestForCloseOperation" type="input"/>
+            <namespace name="InputChangeShipment"
+                templateName="ChangeShipment_Input" type="input"/>
+        </namespaces>
+    </form>
+    <!--Close Manifest functionality related End-->
+	
+ <form Id="com.academy.som.shipmentDetails.screens.AcademyContainerSelectionPanelPopup">
+        <commands>		
+        	<command APIName="getCommonCodeList" APIType="API"
+                Name="GetCCLForPackStation" URL="DEFAULT" inputNamespace=""
+                outputNamespace="Extn_PackSlip_PrinterID_Output" version="ver77"/> 
+          </commands>
+          <namespaces>
+            <namespace name=""
+                templateName="" type=""/>
+                 </namespaces>
+          </form>
+    </forms>

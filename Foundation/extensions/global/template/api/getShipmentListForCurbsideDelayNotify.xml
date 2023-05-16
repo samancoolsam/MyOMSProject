@@ -1,0 +1,21 @@
+<Shipments>
+        <Shipment CarrierServiceCode="" DeliveryMethod="" SCAC=""
+            ShipNode="" ShipmentKey=""
+            ShipmentNo="" Status="">
+            <Extn />
+			<ShipmentLines>
+				<ShipmentLine>
+				<Order CustomerEMailID="" OrderNo="" >
+					<PersonInfoBillTo />
+					</Order>
+						<OrderLine OrderedQty="" OriginalOrderedQty="" >
+							<ItemDetails ItemID="">
+									<PrimaryInformation
+									Description=""
+									ImageID="" ImageLocation="" />
+								</ItemDetails>
+						</OrderLine>	
+				</ShipmentLine>
+			</ShipmentLines>
+     </Shipment>
+</Shipments>

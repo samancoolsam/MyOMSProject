@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DBSchema>
+	<Entities>
+		<Entity ApiNeeded="Y" 	Description=""	HasHistory="False" Prefix="ACAD" TableName="ACAD_DIRECTED_PACKAGING_LOOKUP" XMLName="AcadDirectedPackagingLookup">
+			<Attributes>
+				<Attribute ColumnName="DIR_PACKAGING_LOOKUP_KEY" Size="40" DataType="Key" DefaultValue="' '" Description="Primary key for the 	table" Name="DirPackagingLookupKey" Nullable="false" XMLGroup="" XMLName="DirPackagingLookupKey" />				
+				<Attribute ColumnName="PKG_CLASS" DataType="Text-40" DefaultValue="' '" Description="PkgClass"      		Name="PkgClass" Nullable="false" XMLGroup="" XMLName="PkgClass" />
+				<Attribute ColumnName="SIZE" DataType="Text-40" DefaultValue="' '" Description="Size"           		Name="Size" Nullable="false" XMLGroup="" XMLName="Size" />
+				<Attribute ColumnName="LOW" DataType="Text-40" DefaultValue="' '" Description="Low"        			Name="Low" Nullable="false" XMLGroup="" XMLName="Low" />
+				<Attribute ColumnName="MEDIUM" DataType="Text-40" DefaultValue="' '" Description="Medium"                		Name="Medium" Nullable="false" XMLGroup="" XMLName="Medium" />
+				<Attribute ColumnName="HIGH" DataType="Text-40" DefaultValue="' '" Description="High"              			Name="High" Nullable="false" XMLGroup="" XMLName="High" />
+				<Attribute ColumnName="CONTAINER" DataType="Text-40" DefaultValue="' '" Description="Container"       			Name="Container" Nullable="false" XMLGroup="" XMLName="Container" />				
+				<Attribute ColumnName="CREATETS" DataType="TimeStamp" DefaultValue="sysdate" Description="Create TimeStamp" />
+				<Attribute ColumnName="MODIFYTS" DataType="TimeStamp" DefaultValue="sysdate" Description="Modify TimeStamp" />
+				<Attribute ColumnName="CREATEUSERID" DataType="UserId" DefaultValue="&apos; &apos;" Description="Creating User ID" />
+				<Attribute ColumnName="MODIFYUSERID" DataType="UserId" DefaultValue="&apos; &apos;" Description="Modifying User ID" />
+				<Attribute ColumnName="CREATEPROGID" DataType="ProgramID" DefaultValue="&apos; &apos;" Description="Creating Program ID" />
+				<Attribute ColumnName="MODIFYPROGID" DataType="ProgramID" DefaultValue="&apos; &apos;" Description="Modifying Program ID" />
+				<Attribute ColumnName="LOCKID" DataType="Lockid" DefaultValue="0" Description="Lock ID" />
+			</Attributes>
+			<!-- PrimaryKey is a mandatory attribute in entity definition. This	element can have ONLY ONE attribute element -->
+			<PrimaryKey Name="ACAD_DIR_PKG_PK">
+				<Attribute ColumnName="DIR_PACKAGING_LOOKUP_KEY" Name="DirPackagingLookupKey" />							
+			</PrimaryKey>
+			<Indices>
+				<Index Name="INDEX_DPLKUP" Unique="True">
+					<Column Name="PKG_CLASS" />
+					<Column Name="SIZE" />
+					<Column Name="LOW" />
+					<Column Name="MEDIUM" />
+					<Column Name="HIGH" />
+				</Index>
+			</Indices>
+		</Entity>
+	</Entities>
+</DBSchema>

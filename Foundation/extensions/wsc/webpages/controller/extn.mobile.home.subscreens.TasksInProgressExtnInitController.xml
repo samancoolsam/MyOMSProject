@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Controller
+    className="com.sterlingcommerce.ui.web.platform.controller.SCUIXAPIMashupController"
+    controllerId="extn.mobile.home.subscreens.TasksInProgressExtnInitController"
+    requestMethodSupported="POST" screenId="extn.mobile.home.subscreens.TasksInProgressExtn">
+    <Group isAggregator="Y"/>
+    <MashupRefs>
+        <MashupRef extnType="MODIFY"
+            mashupId="tasksInProgress_getShipmentListInit"
+            mashupRefId="getShipmentList" pageSize="5"
+            pageSizeType="Shipment" paginationStrategy="NEXTPAGE" permissionId=""/>
+    </MashupRefs>
+</Controller>

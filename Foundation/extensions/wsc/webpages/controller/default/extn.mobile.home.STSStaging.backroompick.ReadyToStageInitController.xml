@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Controller className="com.sterlingcommerce.ui.web.platform.controller.SCUIXAPIMashupController" controllerId="extn.mobile.home.STSStaging.backroompick.ReadyToStageInitController" requestMethodSupported="POST" screenId="extn.mobile.home.STSStaging.backroompick.ReadyToStage">
+	<MashupRefs>
+        <MashupRef extnType="" mashupId="getPrinterDevice"
+            mashupRefId="getPrinterDeviceRef" permissionId=""/>
+	</MashupRefs>
+</Controller>

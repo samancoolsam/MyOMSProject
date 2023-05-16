@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExtensionMetaData>
+    <ScreenDisplayExtension extnClassName="PickupOrderLineDetailsExtn"
+        identifierId="PickedLine"
+        originalScreen="wsc.components.shipment.customerpickup.PickupOrderLineDetails" originalScreenPackage="wsc.components.shipment.customerpickup">
+        <Items>
+            <DataLabel __isCurrentOrgInsert="true"
+                _sc_extensibility_moveOrder="2"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="quantityLabelDetails"
+                data-ibmsc-uid="extn_screenbase_datalabel_staging" uId="extn_screenbase_datalabel_staging"/>
+        </Items>
+    </ScreenDisplayExtension>
+</ExtensionMetaData>

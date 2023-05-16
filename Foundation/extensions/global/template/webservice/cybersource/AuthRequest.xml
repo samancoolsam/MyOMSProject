@@ -1,0 +1,39 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" 
+xmlns:urn="urn:schemas-cybersource-com:transaction-data-1.47">
+   <soapenv:Header>
+      <wsse:Security soapenv:mustUnderstand="1" 
+	  xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd">
+         <wsse:UsernameToken wsu:Id="UsernameToken-25663439" 
+		 xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+            <wsse:Username></wsse:Username>
+            <wsse:Password Type="PasswordText"></wsse:Password>
+         </wsse:UsernameToken>
+      </wsse:Security>
+   </soapenv:Header>
+   <soapenv:Body>
+      <urn:requestMessage>
+         <urn:merchantID></urn:merchantID>
+         <urn:merchantReferenceCode></urn:merchantReferenceCode>
+         <urn:billTo>
+            <urn:firstName></urn:firstName>
+            <urn:lastName></urn:lastName>
+            <urn:street1></urn:street1>
+            <urn:city></urn:city>
+            <urn:state></urn:state>
+            <urn:postalCode></urn:postalCode>
+            <urn:country></urn:country>
+            <urn:email></urn:email>
+         </urn:billTo>
+         <urn:purchaseTotals>
+            <urn:currency></urn:currency>
+            <urn:grandTotalAmount></urn:grandTotalAmount>
+         </urn:purchaseTotals>
+         <urn:card>
+            <urn:accountNumber></urn:accountNumber>
+            <urn:expirationMonth></urn:expirationMonth>
+            <urn:expirationYear></urn:expirationYear>
+         </urn:card>
+         <urn:ccAuthService run="true"/>
+      </urn:requestMessage>
+   </soapenv:Body>
+</soapenv:Envelope>

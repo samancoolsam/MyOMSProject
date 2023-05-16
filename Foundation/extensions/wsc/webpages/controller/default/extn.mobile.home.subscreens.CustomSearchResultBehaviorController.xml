@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Controller
+    className="com.sterlingcommerce.ui.web.platform.controller.SCUIXAPIMashupController"
+    controllerId="extn.mobile.home.subscreens.CustomSearchResultBehaviorController"
+    requestMethodSupported="POST" screenId="extn.mobile.home.subscreens.CustomSearchResult">
+    <MashupRefs>
+        <MashupRef mashupId="eComOrderSearch_getOrderList"
+            mashupRefId="getOrderListOnNext" permissionId=""/>
+    </MashupRefs>
+</Controller>

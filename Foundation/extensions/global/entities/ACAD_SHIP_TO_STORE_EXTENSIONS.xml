@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DBSchema>
+	<Entities>
+		<Entity TableName="YFS_SHIPMENT">
+			<Attributes>
+				<Attribute ColumnName="EXTN_IS_FIREARM" XMLName="ExtnIsFirearm" DataType="Flag" Nullable="true" Description="Contains flag details if the shipment contains Firearm items" XMLGroup="Extn" />
+				<Attribute ColumnName="EXTN_LANE" XMLName="ExtnLane" Size="40" Type="VARCHAR2" Nullable="true" Description="Contains Lane details where shipment was packed in DC" XMLGroup="Extn" />
+			</Attributes>
+		</Entity>
+		<Entity TableName="YFS_SHIPMENT_CONTAINER">
+			<Attributes>
+				<Attribute ColumnName="EXTN_IS_SO_CANCELLED" XMLName="ExtnIsSOCancelled" DataType="Flag" Nullable="true" Description="Customer Cancelled identifier at the container level" XMLGroup="Extn" />
+				<Attribute ColumnName="EXTN_CANCEL_ACTIONED" XMLName="ExtnCancellationActionedAt" Size="40" Type="VARCHAR2" Nullable="true" 
+				Description="Customer Cancellation Actioned during staging" XMLGroup="Extn" />
+				<!--OMNI-8004 Start-->
+				<Attribute ColumnName="EXTN_ARRIVED_ATSTORE" XMLName="ExtnArrivedAtStore" DataType="Flag" Nullable="true" 
+				Description="Contains flag details if SIM receipt has been consumed in Sterling" XMLGroup="Extn" />
+				<!--OMNI-8004 End-->
+				<!-- OMNI-32358 - STS 1.1 - Start -->
+				<Attribute ColumnName="EXTN_SO_SHIPMENT_NO" XMLName="ExtnSOShipmentNo" Size="40" Type="VARCHAR2" Nullable="true" 
+				Description="On SO confirmShipment updating the shipment no in TO shipment container level - STS 1.1" XMLGroup="Extn" />
+				<!-- OMNI-32358 - STS 1.1 - End -->
+			</Attributes>
+		</Entity>
+		
+		<Entity TableName="YFS_ORDER_LINE">
+			<Attributes>
+				<Attribute ColumnName="EXTN_DC_DEPARTURE_DATE" XMLName="ExtnDCDepartureDate" DataType="TimeStamp"  Nullable="true" Description="DC Departure Date" XMLGroup="Extn" />
+				<Attribute ColumnName="EXTN_STORE_DELIVERY_DATE" XMLName="ExtnStoreDeliveryDate" DataType="TimeStamp" Nullable="true" 
+				Description="Store Delivery Date" XMLGroup="Extn" />
+				<!-- STS 1.1 OMNI-30154 - Start -->
+				<Attribute ColumnName="EXTN_ORIGINAL_FULFILLMENT_TYPE" XMLName="ExtnOriginalFulfillmentType" Size="40" Type="VARCHAR2" Nullable="false"
+				DefaultValue="' '" Description="To Update the old Fulfillment Type for BOPIS Save the Sale Order" XMLGroup="Extn" />
+				<!-- STS 1.1 OMNI-30154 - End -->
+				<!-- OMNI-75707 - Flag to indicate if delivery fee is applicable for the line - Start -->
+				<Attribute ColumnName="EXTN_IS_DELIVERY_FEE_APPLICABLE" XMLName="ExtnIsDeliveryFeeApplicable" DataType="Flag" DefaultValue="N" Description="Flag to indicate if delivery fee is applicable for the line"  Nullable="true" XMLGroup="Extn" />
+				<!-- OMNI-75707 -Flag to indicate if delivery fee is applicable for the line- End -->
+			</Attributes>
+		</Entity>
+		
+		<Entity TableName="YFS_RECEIPT_LINE">
+			<Attributes>
+				<Attribute ColumnName="EXTN_SHIPMENT_CONTAINER_KEY" DataType="VARCHAR2-50" DefaultValue="' '" Description="Container key" Nullable="false" XMLName="ExtnShipmentContainerKey" XMLGroup="Extn"/>		
+			</Attributes>
+		</Entity>
+
+		<!-- OMNI-6614: STS Start-->
+		<Entity TableName="YFS_ITEM">
+			<Attributes>
+				<Attribute 
+				ColumnName="EXTN_SHIP_TO_STORE_ITEM" 
+				DataType="STSFlag"
+				DefaultValue="N" 
+				Description="Y means ship to store item"  
+				Nullable="true" 
+				Type="CHAR"
+				Size="1"
+				XMLName="ExtnShipToStoreItem"
+				XMLGroup="Extn"/>
+				<!-- OMNI-61443 - STS 3.0 - Start -->
+                <Attribute ColumnName="EXTN_STS_PRIMARY_SOURCE" DataType="VARCHAR2-20" Description="Primary Sourcing Location Of a Item" Nullable="true" XMLName="ExtnSTSPrimarySource" XMLGroup="Extn" />
+                <!-- OMNI-61443 - STS 3.0 - End -->
+			</Attributes>
+		</Entity>
+		<!-- OMNI-6614: STS End -->
+
+	</Entities>
+</DBSchema>

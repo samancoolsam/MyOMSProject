@@ -1,0 +1,603 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin>
+    <extension id="AutoLoader" point="com.yantra.yfc.rcp.YRCPluginAutoLoader">
+        <AutoLoad ClassToLoad="com.academy.som.ExtnAutoLoader" LoadOrder="500"/>
+    </extension>
+  <!-- START: SHIN-22 commented the below logic due to the post window initializer class 
+     START: SHIN-6 
+    <extension
+          id="AcademyApplicationInitializer"
+          point="com.yantra.yfc.rcp.YRCApplicationInitializer">
+       <Initializer
+             class="com.academy.som.AcademyApplicationInitializer">
+       </Initializer>
+    </extension>
+     END: SHIN-6 
+     END: SHIN-22 -->
+	
+    <extension point="org.eclipse.ui.actionSets">
+        <actionSet
+            id="com.yantra.pca.ycd.rcp.tasks.printPickTicket.wizards.YCDPrintPickTicketWizard.extn.actionSet"
+            label="com.yantra.pca.ycd.rcp.tasks.printPickTicket.wizards.YCDPrintPickTicketWizard.extn.actionSet" visible="true">
+            <action
+                class="com.academy.som.printpickticket.actions.AcademyPrintPickTicketForItemAction"
+                definitionId="PRINT_ITEM_PICK_TICKET_COMMAND"
+                id="PRINT_ITEM_PICK_TICKET_ACTION"
+                label="PRINT_ITEM_PICK_TICKET_ACTION" style="push"/>
+            <action
+                class="com.academy.som.printpickticket.actions.AcademyPrintShipmentPickTicketsAction"
+                definitionId="PRINT_SHIPMENT_PICK_TICKETS_COMMAND"
+                id="PRINT_SHIPMENT_PICK_TICKETS_ACTION"
+                label="PRINT_SHIPMENT_PICK_TICKETS_ACTION" style="push"/>
+            <action
+                class="com.academy.som.printpickticket.actions.AcademyReprintShipmentPickTicketsAction"
+                definitionId="REPRINT_SHIPMENT_PICK_TICKETS_COMMAND"
+                id="REPRINT_SHIPMENT_PICK_TICKETS_ACTION"
+                label="REPRINT_SHIPMENT_PICK_TICKETS_ACTION" style="push"/>
+        </actionSet>
+        <actionSet
+            id="com.yantra.pca.ycd.rcp.tasks.common.advancedShipmentSearch.screens.YCDAdvancedShipmentSearchCriteriaPanel.extn.actionSet"
+            label="com.yantra.pca.ycd.rcp.tasks.common.advancedShipmentSearch.screens.YCDAdvancedShipmentSearchCriteriaPanel.extn.actionSet" visible="true">
+            <action
+                class="com.academy.som.searchshipment.actions.AcademyShipmentSearchResetAction"
+                definitionId="SHIPMENT_SEARCH_RESET_COMMAND"
+                id="SHIPMENT_SEARCH_RESET_ACTION"
+                label="SHIPMENT_SEARCH_RESET_ACTION" style="push"/>
+        </actionSet>
+    </extension>
+    <extension
+          id="com.yantra.pca.ycd.rcp.tasks.common.advancedShipmentSearch.screens.YCDAdvancedShipmentSearchCriteriaPanel.extn.commands"
+          name="%com.yantra.pca.ycd.rcp.tasks.common.advancedShipmentSearch.screens.YCDAdvancedShipmentSearchCriteriaPanel.extn.commands"
+          point="org.eclipse.ui.commands">
+       <command
+             id="SHIPMENT_SEARCH_RESET_COMMAND"
+             name="SHIPMENT_SEARCH_RESET_COMMAND">
+       </command>
+    </extension>
+       <extension
+          id="com.yantra.pca.ycd.rcp.tasks.common.advancedShipmentSearch.screens.YCDAdvancedShipmentSearchCriteriaPanel.extn.bindings"
+          name="%com.yantra.pca.ycd.rcp.tasks.common.advancedShipmentSearch.screens.YCDAdvancedShipmentSearchCriteriaPanel.extn.bindings"
+          point="org.eclipse.ui.bindings">
+       <key
+             commandId="SHIPMENT_SEARCH_RESET_COMMAND"
+             contextId="com.yantra.pca.ycd.rcp.tasks.common.advancedShipmentSearch.screens.YCDAdvancedShipmentSearchCriteriaPanel"
+             schemeId="defaultYantraKeyConfigurations"
+             sequence="F9">
+       </key>
+    </extension>
+    <extension
+        id="com.yantra.pca.ycd.rcp.tasks.printPickTicket.wizards.YCDPrintPickTicketWizard.extn.commands"
+        name="%com.yantra.pca.ycd.rcp.tasks.printPickTicket.wizards.YCDPrintPickTicketWizard.extn.commands" point="org.eclipse.ui.commands">
+        <command id="PRINT_ITEM_PICK_TICKET_COMMAND" name="PRINT_PICK_TICKET_COMMAND"/>
+        <command id="PRINT_SHIPMENT_PICK_TICKETS_COMMAND" name="PRINT_SHIPMENT_PICK_TICKETS_COMMAND"/>
+        <command id="REPRINT_SHIPMENT_PICK_TICKETS_COMMAND" name="REPRINT_SHIPMENT_PICK_TICKETS_COMMAND"/>
+    </extension>
+    <extension
+        id="com.yantra.pca.ycd.rcp.tasks.printPickTicket.wizards.YCDPrintPickTicketWizard.extn.bindings"
+        name="%com.yantra.pca.ycd.rcp.tasks.printPickTicket.wizards.YCDPrintPickTicketWizard.extn.bindings" point="org.eclipse.ui.bindings">
+        <key commandId="PRINT_ITEM_PICK_TICKET_COMMAND"
+            contextId="com.yantra.pca.ycd.rcp.tasks.printPickTicket.wizards.YCDPrintPickTicketWizard"
+            schemeId="defaultYantraKeyConfigurations" sequence="F4"/>
+        <key commandId="PRINT_SHIPMENT_PICK_TICKETS_COMMAND"
+            contextId="com.yantra.pca.ycd.rcp.tasks.printPickTicket.wizards.YCDPrintPickTicketWizard"
+            schemeId="defaultYantraKeyConfigurations" sequence="F8"/>
+        <key commandId="REPRINT_SHIPMENT_PICK_TICKETS_COMMAND"
+            contextId="com.yantra.pca.ycd.rcp.tasks.printPickTicket.wizards.YCDPrintPickTicketWizard"
+            schemeId="defaultYantraKeyConfigurations" sequence="F7"/>
+    </extension>
+    <extension point="org.eclipse.ui.contexts">
+        <context
+            id="com.yantra.pca.ycd.rcp.tasks.printPickTicket.wizards.YCDPrintPickTicketWizard" name="%com.yantra.pca.ycd.rcp.tasks.printPickTicket.wizards.YCDPrintPickTicketWizard"/>
+    </extension>
+    <extension point="org.eclipse.ui.contexts">
+        <context
+            id="com.yantra.pca.ycd.rcp.tasks.printPickTicket.wizardpages.YCDPrintPickTicketScreen" name="%com.yantra.pca.ycd.rcp.tasks.printPickTicket.wizardpages.YCDPrintPickTicketScreen"/>
+    </extension>
+    <extension point="org.eclipse.ui.contexts">
+        <context
+            id="com.yantra.pca.ycd.rcp.tasks.printPickTicket.wizards.YCDPrintPickTicketWizard123" name="%com.yantra.pca.ycd.rcp.tasks.printPickTicket.wizards.YCDPrintPickTicketWizard123"/>
+    </extension>
+    <!-- Record Backroom Pick Customizations -->
+    <extension point="org.eclipse.ui.actionSets">
+        <actionSet
+            id="com.yantra.pca.ycd.rcp.tasks.backroompick.wizards.YCDBackroompickWizard.extn.actionSet"
+            label="com.yantra.pca.ycd.rcp.tasks.backroompick.wizards.YCDBackroompickWizard.extn.actionSet" visible="true">
+            <action
+                class="com.academy.som.backroompick.actions.AcademyRecordBackroomShipOutNextAction"
+                definitionId="BACKROOM_PICK_NEXT_COMMAND"
+                id="BACKROOM_PICK_NEXT_ACTION"
+                label="BACKROOM_PICK_NEXT_ACTION" style="push"/>
+            <action
+                class="com.academy.som.backroompick.actions.AcademyRecordBackroomShipOutConfirmAction"
+                definitionId="BACKROOM_PICK_CONFIRM_COMMAND"
+                id="BACKROOM_PICK_CONFIRM_ACTION"
+                label="BACKROOM_PICK_CONFIRM_ACTION" style="push"/>
+        </actionSet>
+    </extension>
+    <extension
+        id="com.yantra.pca.ycd.rcp.tasks.backroompick.wizards.YCDBackroompickWizard.extn.commands"
+        name="%com.yantra.pca.ycd.rcp.tasks.backroompick.wizards.YCDBackroompickWizard.extn.commands" point="org.eclipse.ui.commands">
+        <command id="BACKROOM_PICK_NEXT_COMMAND" name="BACKROOM_PICK_NEXT_COMMAND"/>
+        <command id="BACKROOM_PICK_CONFIRM_COMMAND" name="BACKROOM_PICK_CONFIRM_COMMAND"/>
+    </extension>
+    <extension
+        id="com.yantra.pca.ycd.rcp.tasks.backroompick.wizards.YCDBackroompickWizard.extn.bindings"
+        name="%com.yantra.pca.ycd.rcp.tasks.backroompick.wizards.YCDBackroompickWizard.extn.bindings" point="org.eclipse.ui.bindings">
+        <key commandId="BACKROOM_PICK_NEXT_COMMAND"
+            contextId="com.yantra.pca.ycd.rcp.tasks.backroompick.wizards.YCDBackroompickWizard"
+            schemeId="defaultYantraKeyConfigurations" sequence="F11"/>
+        <key commandId="BACKROOM_PICK_CONFIRM_COMMAND"
+            contextId="com.yantra.pca.ycd.rcp.tasks.backroompick.wizards.YCDBackroompickWizard"
+            schemeId="defaultYantraKeyConfigurations" sequence="F8"/>
+    </extension>
+    <extension point="org.eclipse.ui.contexts">
+        <context
+            id="com.yantra.pca.ycd.rcp.tasks.backroompick.wizards.YCDBackroompickWizard" name="%com.yantra.pca.ycd.rcp.tasks.backroompick.wizards.YCDBackroompickWizard"/>
+    </extension>
+    <extension point="org.eclipse.ui.contexts">
+        <context
+            id="com.yantra.pca.ycd.rcp.tasks.backroompick.wizards.YCDBackroompick" name="%com.yantra.pca.ycd.rcp.tasks.backroompick.wizards.YCDBackroompick"/>
+    </extension>
+    <extension point="org.eclipse.ui.contexts">
+        <context
+            id="com.yantra.pca.ycd.rcp.tasks.backroompick.wizardpages.YCDBackroomPick" name="%com.yantra.pca.ycd.rcp.tasks.backroompick.wizardpages.YCDBackroomPick"/>
+    </extension>
+    <extension point="org.eclipse.ui.contexts">
+        <context
+            id="com.yantra.pca.ycd.rcp.tasks.backroompick.wizardpages.YCDBackroomPickShortageReasons" name="%com.yantra.pca.ycd.rcp.tasks.backroompick.wizardpages.YCDBackroomPickShortageReasons"/>
+    </extension>
+    <extension point="org.eclipse.ui.contexts">
+        <context
+            id="com.yantra.pca.ycd.rcp.tasks.common.advancedShipmentSearch.screens.YCDAdvancedShipmentSearchCriteriaPanel" name="%com.yantra.pca.ycd.rcp.tasks.common.advancedShipmentSearch.screens.YCDAdvancedShipmentSearchCriteriaPanel"/>
+    </extension>
+    <extension point="org.eclipse.ui.actionSets">
+        <actionSet
+            id="com.yantra.pca.ycd.rcp.tasks.backroompick.wizardpages.YCDBackroomPick.extn.actionSet"
+            label="com.yantra.pca.ycd.rcp.tasks.backroompick.wizardpages.YCDBackroomPick.extn.actionSet" visible="true">
+            <action
+                class="com.academy.som.backroompick.actions.AcademyRecordBackroomShipOutNextAction"
+                definitionId="BACKROOMPICK_NEXT_ACTION.extn.command"
+                id="BACKROOMPICK_NEXT_ACTION"
+                label="%BACKROOMPICK_NEXT_ACTION" style="push"/>
+        </actionSet>
+    </extension>
+    <extension
+        id="com.yantra.pca.ycd.rcp.tasks.backroompick.wizardpages.YCDBackroomPick.extn.commands"
+        name="%com.yantra.pca.ycd.rcp.tasks.backroompick.wizardpages.YCDBackroomPick.extn.commands" point="org.eclipse.ui.commands">
+        <command id="BACKROOMPICK_NEXT_ACTION.extn.command" name="%BACKROOMPICK_NEXT_ACTION.extn.command"/>
+    </extension>
+    <extension
+          id="EXCEPTION_TASKS_RELATEDTASK_GROUPS"
+          name="EXCEPTION_TASKS_RELATEDTASK_GROUPS"
+          point="com.yantra.yfc.rcp.YRCRelatedTaskGroups">
+       <groups
+             id="EXCEPTION_TASKS_GROUPS">
+          <group
+                id="Exception Tasks"
+                name="Exception Tasks"
+                sequence="20">
+          </group>
+       </groups>
+    </extension>
+    <extension point="org.eclipse.ui.actionSets">
+        <actionSet id="Reprint_Shipment_ActionSet"
+            label="Reprint_Shipment_ActionSet" visible="true">
+            <!--OMNI-53854-->
+		   <!--updated  id="Reprint_Shipment_Invoice_Action" state="true" to state="false" -->
+            <action
+                class="com.academy.som.shipmentDetails.actions.AcademyReprintShipmentInvoiceAction"
+                id="Reprint_Shipment_Invoice_Action"
+                label="Reprint_Shipment_Invoice_Action" state="false" style="push"/>
+            <action
+                class="com.academy.som.shipmentDetails.actions.AcademyReprintShippingLabelAction"
+                id="Reprint_Shipping_Label_Action"
+                label="Reprint_Shipping_Label_Action" state="true" style="push"/>
+            <!--OMNI-53854-->
+		    <!--updated  id="Reprint_Packslip_Label_Action" state="true" to state="false" -->
+		   <action
+                class="com.academy.som.shipmentDetails.actions.AcademyReprintPackslipLabelAction"
+                id="Reprint_Packslip_Label_Action"
+                label="Reprint_Packslip_Label_Action" state="false" style="push"/>
+             <action
+                class="com.academy.som.shipmentDetails.actions.AcademyReprintShipmentBOLAction"
+                id="Reprint_Shipment_BOL"
+                label="Reprint_Shipment_BOL" state="true" style="push"/>
+            <action
+                class="com.academy.som.shipmentDetails.actions.AcademyReprintShipmentPickTicketAction"
+                id="Reprint_Shipment_PickTicket_Action"
+                label="Reprint_Shipment_PickTicket_Action" state="true" style="push"/>
+			<!--Start STL-737 Changes: Add action for Reprint ORMD Label-->
+            <action
+                class="com.academy.som.shipmentDetails.actions.AcademyReprintORMDLabelAction"
+                id="Reprint_ORMD_Action"
+                label="Reprint_ORMD_Action" state="true" style="push"/>
+            <!--End STL-737 Changes-->
+            <action
+                class="com.academy.som.shipmentDetails.actions.AcademyAutoCorrectShipmentAction"
+                id="Auto_Correct_Shipment_Action"
+                label="Auto_Correct_Shipment_Action" state="true" style="push"/>
+            <action
+                class="com.academy.som.shipmentDetails.actions.AcademyAutoCorrectManifestAction"
+                id="Auto_Correct_Manifest_Action"
+                label="Auto_Correct_Manifest_Action" state="true" style="push"/>
+        </actionSet>
+    </extension>
+    <extension point="com.yantra.yfc.rcp.YRCRelatedTasks">
+        <tasks id="Reprint_Shipment_Tasks">
+            <task actionId="Reprint_Shipment_Invoice_Action"
+                filterRequired="false"
+                groupId="Exception Tasks"
+                id="Reprint_Shipment_Invoice_Task" isExtension="false" name="Reprint Return Label">
+                <categories id="Reprint_Shipment_Categories">
+                    <category id="YCD_SHIPMENT_DETAILS_RELATED"/>
+                </categories>
+            </task>
+            <task actionId="Reprint_Shipping_Label_Action"
+                filterRequired="false"
+                groupId="Exception Tasks"
+                id="Reprint_Shipping_Label_Task" isExtension="false" name="Reprint Shipping Label">
+                <categories id="Reprint_Shipment_Categories">
+                    <category id="YCD_SHIPMENT_DETAILS_RELATED"/>
+                </categories>
+            </task>
+             <task actionId="Reprint_Shipment_BOL"
+                filterRequired="false"
+                groupId="Exception Tasks"
+                id="Reprint_Shipment_BOL_Task" isExtension="false" name="Reprint Shipment BOL">
+                <categories id="Reprint_Shipment_BOL_Categories">
+                    <category id="YCD_SHIPMENT_DETAILS_RELATED"/>
+                </categories>
+            </task>
+            <task actionId="Reprint_Packslip_Label_Action"
+                filterRequired="false"
+                groupId="Exception Tasks"
+                id="Reprint_Packslip_Label_Task" isExtension="false" name="Reprint Packing Slip ">
+                <categories id="Reprint_Shipment_Categories">
+                    <category id="YCD_SHIPMENT_DETAILS_RELATED"/>
+                </categories>
+            </task>
+			<!--Start STL-737 Changes-Add task for Reprint ORMD Label-->
+            <task actionId="Reprint_ORMD_Action"
+                filterRequired="false"
+                groupId="Exception Tasks"
+                id="Reprint_ORMD_Task" isExtension="false" name="Reprint ORMD Label">
+                <categories id="Reprint_Shipment_Categories">
+                    <category id="YCD_SHIPMENT_DETAILS_RELATED"/>
+                </categories>
+            </task>
+            <!--End STL-737 Changes-->
+            <task actionId="Reprint_Shipment_PickTicket_Action"
+                filterRequired="false"
+                groupId="Exception Tasks"
+                id="Reprint_Shipment_PickTicket_Task"
+                isExtension="false" name="Reprint Shipment Pick Ticket">
+                <categories id="Reprint_Shipment_Categories">
+                    <category id="YCD_SHIPMENT_DETAILS_RELATED"/>
+                </categories>
+            </task>
+            <task actionId="Auto_Correct_Shipment_Action"
+                filterRequired="false"
+                groupId="Exception Tasks"
+                id="Auto_Correct_Shipment_Task"
+                isExtension="false" name="Auto Correct Shipment Error">
+                <categories id="Reprint_Shipment_Categories">
+                    <category id="YCD_SHIPMENT_DETAILS_RELATED"/>
+                </categories>
+            </task>
+           	<task actionId="Auto_Correct_Manifest_Action"
+                filterRequired="false"
+                groupId="Exception Tasks"
+                id="Auto_Correct_Manifest_Task"
+                isExtension="false" name="Auto Correct Manifest Error">
+                <categories id="Reprint_Shipment_Categories">
+                    <category id="YCD_SHIPMENT_DETAILS_RELATED"/>
+                </categories>
+            </task>
+        </tasks>
+    </extension>
+    <extension point="com.yantra.yfc.rcp.YRCRelatedTaskCategories">
+        <categories id="Reprint_Shipment_Categories">
+            <category id="YCD_SHIPMENT_DETAILS_RELATED">
+                <tasks id="Reprint_Shipment_Tasks">
+                    <!-- <task id="Reprint_Shipment_Invoice_Task"/> --> <!--OMNI-53854-->
+                    <task id="Reprint_Shipping_Label_Task"/>
+                    <task id="Reprint_Shipment_BOL_Task"/>
+                    <!--   <task id="Reprint_Packslip_Label_Task"/>  --> <!--OMNI-53854-->
+                    <task id="Reprint_Shipment_PickTicket_Task"/>
+					<task id="Reprint_ORMD_Task"/><!--Add as a part of STL-737-->
+                    <task id="Auto_Correct_Shipment_Task"/>
+                    <task id="Auto_Correct_Manifest_Task"/>
+                </tasks>
+            </category>
+        </categories>
+    </extension>
+    <extension
+          id="com.yantra.pca.ycd.rcp.tasks.shipmentTracking.screens.YCDShipmentDetails.extn.contributors"
+          name="%com.yantra.pca.ycd.rcp.tasks.shipmentTracking.screens.YCDShipmentDetails.extn.contributors"
+          point="com.yantra.yfc.rcp.YRCRelatedTasksExtensionContributor">
+       <relatedTasksExtensionContributor
+             class="com.academy.som.shipmentDetails.contributors.AcademyShipmentDetailRelatedTasksExtensionContributor"
+             editorId="com.yantra.pca.ycd.rcp.editors.YCDShipmentEditor"/>
+    </extension>
+	
+	<!-- Close Manifest related : Start -->
+	<extension
+          point="com.yantra.yfc.rcp.YRCRelatedTasks">
+       <tasks
+             id="Close_Manifest_Tasks">
+          <task
+                actionId="Close_Manifest_Action"
+                filterRequired="false"
+                groupId="Shipping_Tasks"
+                id="Close_Manifest_Task"
+                isExtension="false"
+                name="Close Manifest">
+             <categories
+                   id="Close_Manifest_Categories">
+                <category
+                      id="YCD_GLOBAL_RELATED">
+                </category>
+             </categories>
+          </task>
+       </tasks>
+    </extension>
+    <extension
+          point="com.yantra.yfc.rcp.YRCRelatedTaskCategories">
+       <categories
+             id="Close_Manifest_Categories">
+          <category
+                id="YCD_GLOBAL_RELATED">
+             <tasks
+                   id="Close_Manifest_Tasks">
+				<task
+                      id="ACAD_Print_Pick_Ticket_Task">
+                </task>
+                <task
+                      id="ACAD_Shipment_Search_Task">
+                </task>
+                <task
+                      id="ACAD_Backroom_Pick_Task">
+                </task>
+                <task
+                      id="Close_Manifest_Task">
+                </task>
+             </tasks>
+          </category>
+       </categories>
+    </extension>
+    <extension
+          point="org.eclipse.ui.actionSets">
+       <actionSet
+             id="CloseManifestActions"
+             label="CloseManifestActions"
+             visible="true">
+             <action
+                class="com.academy.som.closemanifest.actions.AcademyCloseManifestConfirmAction"
+                definitionId="com.academy.som.closemanifest.actions.AcademyCloseManifestConfirmAction"
+                id="Close_Manifest_Confirm_Action"
+                label="Close_Manifest_Confirm_Action" style="push"/>
+            <action
+                class="com.academy.som.closemanifest.actions.AcademyCloseManifestAction"
+                definitionId="com.academy.som.closemanifest.actions.AcademyCloseManifestAction"
+                id="Close_Manifest_Action"
+                label="Close_Manifest_Action" style="push"/>
+       </actionSet>
+    </extension>
+    <extension
+          point="org.eclipse.ui.editors">
+       <editor
+             class="com.academy.som.closemanifest.editors.AcademyCloseManifestEditor"
+             default="false"
+             icon="icons/shipments.gif"
+             id="com.academy.som.closemanifest.editors.AcademyCloseManifestEditor"
+             name="AcademyCloseManifestEditor">
+       </editor>
+    </extension>
+    <extension
+          point="org.eclipse.ui.contexts">
+       <context
+             description="Close Manifest Wizard"
+             id="com.academy.som.closemanifest.wizards.AcademyCloseManifestWizard"
+             name="AcademyCloseManifestWizard">
+       </context>
+    </extension>
+    <extension
+          id="id1"
+          point="com.yantra.yfc.rcp.YRCPostWindowOpenInitializer">
+       <Initializer
+             class="com.academy.som.AcademyPostWindowOpenInitializer">
+       </Initializer>
+    </extension>
+	<!-- Close Manifest related: End -->
+	
+	<!--Start changes for STL-925,926 Print Pick Ticket Screen-->
+	 	<extension
+          id="ACAD_INSTORE_TASKS_GROUPS"
+          name="ACAD_INSTORE_TASKS_GROUPS"
+          point="com.yantra.yfc.rcp.YRCRelatedTaskGroups">
+       <groups
+             id="ACAD_INSTORE_TASKS_GROUPS">
+          <group
+                id="Shipping_Tasks"
+                name="Shipping"
+                sequence="20">
+          </group>
+       </groups>
+    </extension>
+    <extension point="com.yantra.yfc.rcp.YRCRelatedTasks">
+        <tasks id="ACAD_InStore_Tasks">
+            <task actionId="com.yantra.ycd.tasks.YCDPrintPickTicket"
+                filterRequired="false"
+                groupId="Shipping_Tasks"
+                id="ACAD_Print_Pick_Ticket_Task" isExtension="false" name="Print Pick Ticket">
+                <categories id="InStore_Categories">
+                    <category id="YCD_GLOBAL_RELATED"/>
+                </categories>
+            </task> 
+            <task actionId="com.yantra.ycd.tasks.YCDAdvancedShipmentSearch"
+                filterRequired="false"
+                groupId="Shipping_Tasks"
+                id="ACAD_Shipment_Search_Task" isExtension="false" name="Search Shipment">
+                <categories id="InStore_Categories">
+                    <category id="YCD_GLOBAL_RELATED"/>
+                </categories>
+            </task> 
+               <task actionId="com.yantra.ycd.tasks.YCDBackroomPickAction"
+                filterRequired="false"
+                groupId="Shipping_Tasks"
+                id="ACAD_Backroom_Pick_Task" isExtension="false" name="Record Backroom Pick">
+                <categories id="InStore_Categories">
+                    <category id="YCD_GLOBAL_RELATED"/>
+                </categories>
+            </task>  
+        </tasks>
+    </extension>
+    <extension
+          id="com.yantra.pca.ycd.rcp.tasks.quickAccess.wizards.YCDQuickAccessWizard.extn.contributors"
+          name="%com.yantra.pca.ycd.rcp.tasks.quickAccess.wizards.YCDQuickAccessWizard.extn.contributors"
+          point="com.yantra.yfc.rcp.YRCRelatedTasksExtensionContributor">
+       <relatedTasksExtensionContributor
+             class="com.academy.som.quickaccess.contributors.AcademyQuickAccessTasksExtensionContributor"
+             editorId="com.yantra.pca.ycd.rcp.editors.YCDQuickAccessEditor">
+       </relatedTasksExtensionContributor>
+    </extension>
+	<!--End changes for Print Pick Ticket scree-->
+	<!--Start changes for STL-925,926 Advance Shipment Search Screen-->
+	
+	<extension
+          point="com.yantra.yfc.rcp.YRCRelatedTaskCategories">
+       <categories
+             id="InStore_Categories">
+          <category
+                id="YCD_ADVANCED_SHIPMENT_SEARCH_RELATED">
+             <tasks
+                   id="ACAD_InStore_Tasks">
+                <task
+                      id="ACAD_Print_Pick_Ticket_Task">
+                </task>
+                <task
+                      id="ACAD_Shipment_Search_Task">
+                </task>
+                <task
+                      id="ACAD_Backroom_Pick_Task">
+                </task>
+                <task
+                      id="Close_Manifest_Task">
+                </task>
+                </tasks>
+	  </category>
+       </categories>
+    </extension>
+    <extension point="com.yantra.yfc.rcp.YRCRelatedTasks">
+        <tasks id="ACAD_InStore_Tasks">
+            <task actionId="com.yantra.ycd.tasks.YCDPrintPickTicket"
+                filterRequired="false"
+                groupId="Shipping_Tasks"
+                id="ACAD_Print_Pick_Ticket_Task" isExtension="false" name="Print Pick Ticket">
+                <categories id="InStore_Categories">
+                    <category id="YCD_ADVANCED_SHIPMENT_SEARCH_RELATED"/>
+                </categories>
+            </task> 
+            <task actionId="com.yantra.ycd.tasks.YCDAdvancedShipmentSearch"
+                filterRequired="false"
+                groupId="Shipping_Tasks"
+                id="ACAD_Shipment_Search_Task" isExtension="false" name="Search Shipment">
+                <categories id="InStore_Categories">
+                    <category id="YCD_ADVANCED_SHIPMENT_SEARCH_RELATED"/>
+                </categories>
+            </task> 
+               <task actionId="com.yantra.ycd.tasks.YCDBackroomPickAction"
+                filterRequired="false"
+                groupId="Shipping_Tasks"
+                id="ACAD_Backroom_Pick_Task" isExtension="false" name="Record Backroom Pick">
+                <categories id="InStore_Categories">
+                    <category id="YCD_ADVANCED_SHIPMENT_SEARCH_RELATED"/>
+                </categories>
+            </task>  
+          </tasks>
+    </extension>
+    <!--End changes for Advance Shipment Search Screen-->
+    <!--Start changes for STL-925,926 Record Backroom Pick Screen-->
+    <extension
+          point="com.yantra.yfc.rcp.YRCRelatedTaskCategories">
+       <categories
+             id="InStore_Categories">
+          <category
+                id="YCD_BACKROOM_PICK_RELATED">
+             <tasks
+                   id="ACAD_InStore_Tasks">
+                <task
+                      id="ACAD_Print_Pick_Ticket_Task">
+                </task>
+                <task
+                      id="ACAD_Shipment_Search_Task">
+                </task>
+                <task
+                      id="ACAD_Backroom_Pick_Task">
+                </task>
+                <task
+                      id="Close_Manifest_Task">
+                </task>
+                </tasks>
+	  </category>
+       </categories>
+    </extension>
+    <extension point="com.yantra.yfc.rcp.YRCRelatedTasks">
+        <tasks id="ACAD_InStore_Tasks">
+            <task actionId="com.yantra.ycd.tasks.YCDPrintPickTicket"
+                filterRequired="false"
+                groupId="Shipping_Tasks"
+                id="ACAD_Print_Pick_Ticket_Task" isExtension="false" name="Print Pick Ticket">
+                <categories id="InStore_Categories">
+                    <category id="YCD_BACKROOM_PICK_RELATED"/>
+                </categories>
+            </task> 
+            <task actionId="com.yantra.ycd.tasks.YCDAdvancedShipmentSearch"
+                filterRequired="false"
+                groupId="Shipping_Tasks"
+                id="ACAD_Shipment_Search_Task" isExtension="false" name="Search Shipment">
+                <categories id="InStore_Categories">
+                    <category id="YCD_BACKROOM_PICK_RELATED"/>
+                </categories>
+            </task> 
+               <task actionId="com.yantra.ycd.tasks.YCDBackroomPickAction"
+                filterRequired="false"
+                groupId="Shipping_Tasks"
+                id="ACAD_Backroom_Pick_Task" isExtension="false" name="Record Backroom Pick">
+                <categories id="InStore_Categories">
+                    <category id="YCD_BACKROOM_PICK_RELATED"/>
+                </categories>
+            </task> 
+        </tasks>
+    </extension>
+     <!--End changes for STL-925,926 Record Backroom Pick Screen-->
+       <!--Start changes for STL-925,926 Close Manifest Screen-->
+    <extension
+          id="com.academy.som.closemanifest.wizards.AcademyCloseManifestWizard.extn.contributors"
+          name="%com.academy.som.closemanifest.wizards.AcademyCloseManifestWizard.extn.contributors"
+          point="com.yantra.yfc.rcp.YRCRelatedTasksExtensionContributor">
+       <relatedTasksExtensionContributor
+             class="com.academy.som.closemanifest.contributors.AcademyCloseManifestTasksExtensionContributor"
+             editorId="com.academy.som.closemanifest.editors.AcademyCloseManifestEditor">
+       </relatedTasksExtensionContributor>
+    </extension>
+    <!--End changes for STL-925,926 Close Manifest Screen-->
+	<!--Included as part of SOM upgrade -->
+	<extension point="com.yantra.yfc.rcp.YRCRelatedTaskCategories">
+        <categories id="InStore_Categories">
+         <category id="YCD_PRINT_PICK_TICKET_RELATED"> 
+            <tasks id="ACAD_InStore_Tasks">
+            <task id="ACAD_Print_Pick_Ticket_Task">
+            </task>
+            <task id="ACAD_Shipment_Search_Task">
+             </task>
+            <task id="ACAD_Backroom_Pick_Task">
+            </task>
+            <task id="Close_Manifest_Task">
+            </task>
+			</tasks>
+		</category>
+        </categories>
+    </extension>
+<!--Included as part of SOM upgrade -->
+	</plugin>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+<Receipt ArrivalDateTime="" DriverName="" EnterpriseCode="" NumOfCartons="" NumOfPallets="" OpenReceiptFlag="" ReceiptDate="" ReceiptHeaderKey="" ReceiptNo="" ReceivingDock="" ReceivingNode="" ShipmentKey="" Status="">
+ <ReceiptLines>
+<ReceiptLine AvailableForTranQuantity="" CaseId=""  DispositionCode="" EnterpriseCode=""  InspectedBy="" InspectionComments="" InspectionDate="" ItemID="" LocationId="" Lockid="" LotAttribute1="" LotAttribute2="" LotAttribute3="" LotKeyReference="" LotNumber="" ManufacturingDate="" NetWeight="" NetWeightUom="" OrderHeaderKey="" OrderLineKey="" OrderNo="" OrderReleaseKey="" OrigReceiptLineKey="" OriginalQuantity="" PalletId="" PrimeLineNo="" ProductClass="" Quantity="" ReceiptHeaderKey="" ReceiptLineKey="" ReceiptLineNo="" ReleaseNo="" RevisionNo="" SerialNo="" ShipByDate="" ShipmentContainerKey="" ShipmentLineKey="" SubLineNo="" TagNumber="" TransactionId="" TransactionName="" UnitOfMeasure="">
+	<OrderLine MaxLineStatus=""  MaxLineStatusDesc="" MinLineStatus="" MinLineStatusDesc=""  OrderHeaderKey="" OrderLineKey="" PrimeLineNo="" ChainedFromOrderLineKey="" ChainedFromOrderHeaderKey="" PackListType="" > 
+		<Order DocumentType="" MaxOrderStatus="" MaxOrderStatusDesc="" MinOrderStatus="" MinOrderStatusDesc="" OrderNo="" OrderHeaderKey="" ReceivingNode="" >
+			<OrderLines>
+				<OrderLine MaxLineStatus=""  MaxLineStatusDesc="" MinLineStatus="" MinLineStatusDesc=""  OrderHeaderKey="" OrderLineKey="" PrimeLineNo="" ChainedFromOrderLineKey="" ChainedFromOrderHeaderKey="" PackListType="" >
+					<ChainedFromOrderLine OrderLineKey="" FulfillmentType="">
+						<OrderHoldTypes>
+							<OrderHoldType HoldType="" Status="" StatusDescription="" />
+						</OrderHoldTypes>
+					</ChainedFromOrderLine>
+				</OrderLine>
+			</OrderLines>
+		</Order>		
+	</OrderLine>
+   </ReceiptLine>
+  </ReceiptLines>
+  <Shipment ActualDeliveryDate=""  ReceivingNode="" SellerOrganizationCode="" ShipNode=""  ShipmentKey="" ShipmentNo=""  PackListType="">
+  <ShipmentLines>
+  <ShipmentLine ParentShipmentLineKey="" ActualQuantity="" CustomerPoLineNo="" CustomerPoNo=""
+            IsPickable="" ItemDesc="" ItemID="" KitCode="" PrimeLineNo="" ProductClass="" Quantity=""
+            ReceivedQuantity="" ReleaseNo="" RequestedSerialNo=""
+            ReturnShippingLabelLevel="" Segment="" SegmentType=""
+            ShipToCustomerId="" ShipmentConsolidationGroupId=""
+            ShipmentKey="" ShipmentLineKey="" ShipmentLineNo=""
+            ShipmentSubLineNo="" ShortageQty="" SubLineNo="" UnitOfMeasure=""/>
+  </ShipmentLines>
+</Shipment>
+  </Receipt>

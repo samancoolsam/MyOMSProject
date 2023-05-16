@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="sterlingoms" default="">
+   <path id="svnant.classpath">
+      <fileset dir="/apps/SterlingOMS/Foundation/Migration/apache-ant-1.7.1/lib/">
+         <include name="svnant.jar" />
+      </fileset>
+   </path>
+   <typedef resource="org/tigris/subversion/svnant/svnantlib.xml" classpathref="svnant.classpath" />
+   <target name="app-build" depends="checkout,appbuild"/>
+   <target name="app-build-no-cdt" depends="checkout,appbuildnocdt"/>
+   <target name="agt-build" depends="checkout,agtbuild"/>
+   <target name="checkout">
+      <delete dir="SterlingOMS" failonerror="false" />
+      <input message="Please enter SVN branch name: " addproperty="SVN_BRANCH" />
+      <input message="Please enter SVN user name: " addproperty="SVN_USR" />
+      <input message="Please enter SVN password: " addproperty="SVN_PWD" >
+         <handler classname="org.apache.tools.ant.input.SecureInputHandler" />
+      </input>
+      <svn username="${SVN_USR}" password="${SVN_PWD}">
+         <export srcUrl="http://websvn.academy.com/svn/SterlingOMS/branches/${SVN_BRANCH}" destPath="./SterlingOMS/" force="true" />
+      </svn>
+   </target>
+   <target name="appbuildnocdt">
+      <ant dir="SterlingOMS" target="app-build-no-cdt"/>
+   </target>
+   <target name="appbuild">
+      <ant dir="SterlingOMS" target="app-build"/>
+   </target>
+   <target name="agtbuild">
+      <ant dir="SterlingOMS" target="agt-build"/>
+   </target>
+</project>

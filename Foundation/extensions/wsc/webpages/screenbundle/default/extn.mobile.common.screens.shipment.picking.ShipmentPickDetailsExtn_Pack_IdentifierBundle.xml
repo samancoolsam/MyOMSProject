@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ScreenBundle identifierId="Pack"
+    screenBundleId="extn.mobile.common.screens.shipment.picking.ShipmentPickDetailsExtnBundle" screenId="extn.mobile.common.screens.shipment.picking.ShipmentPickDetailsExtn">
+    <BundleEntries/>
+</ScreenBundle>

@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<forms>
+    <form Id="com.yantra.pca.ycd.rcp.tasks.customerConsumerEntry.wizardpages.YCDConsumerCustomerEntryWizardPage">
+        <commands>
+            <command APIName="AcademygetCommonCodeListForCreateCustomerForm" APIType="SERVICE" Name="getOrganizationHierarchy" URL="DEFAULT" inputNamespace="" outputNamespace="" version=""/>
+       </commands>
+    </form>
+    <form Id="com.yantra.pca.ycd.rcp.tasks.customerContactManagement.wizardpages.YCDManageContactsWizardPage">
+        <commands>
+            <command APIName="AcademygetCommonCodeListForManageCustomerForm" APIType="SERVICE" Name="getCustomerDetails" URL="DEFAULT" inputNamespace="" outputNamespace="" version=""/>
+        </commands>
+    </form>
+    <form Id="com.yantra.pca.ycd.rcp.tasks.payment.screens.YCDPaymentConfirmationPanel">
+        <commands>
+            <command APIName="changeOrder" APIType="API" Name="changeOrder" URL="DEFAULT" inputNamespace="extn_changeOrder" outputNamespace="" version=""/>
+        </commands>
+    </form>
+    <form Id="com.yantra.pca.ycd.rcp.tasks.orderSummary.wizards.YCDOrderSummaryWizard">
+        <commands>
+        <command APIName="getShipmentListForOrder" APIType="API" Name="getShipmentListForOrder" URL="DEFAULT" inputNamespace="" outputNamespace="" version=""/>
+           
+            <command APIName="changeOrder" APIType="API" Name="changeOrder" URL="DEFAULT" inputNamespace="extn_changeOrder" outputNamespace="" version=""/>
+        </commands>
+    </form>
+    <form Id="com.academy.ecommerce.sterling.orderSummary.actions.TaxIdPopUpFormId">
+        <commands>
+            <command APIName="changeOrder" APIType="API" Name="changeOrder" URL="DEFAULT" inputNamespace="extn_changeOrder" outputNamespace="" version=""/>
+        </commands>
+    </form>
+    <form Id="com.yantra.pca.ycd.rcp.tasks.common.fulfillmentSummary.screens.YCDGiftShipPopup">
+        <commands>
+            <command APIName="getCommonCodeList" APIType="API" Name="getCommonCodeList" URL="DEFAULT" inputNamespace="ExtnInputCommonCode" outputNamespace="ExtnOutputCommonCode" version=""/>
+        </commands>
+    </form>
+    <form Id="com.yantra.pca.ycd.rcp.tasks.common.deliveryOptions.screens.YCDChangeDeliveryOptionsPageComposite">
+        <commands>
+            <command APIName="listCarrierService" APIType="API" Name="listCarrierService" URL="DEFAULT" inputNamespace="ExtnListCarrierService" outputNamespace="ExtnListCarrierService" version=""/>
+        </commands>
+    </form>
+    <form Id="AcademyFulfillmentOptionsContext">
+        <commands>
+            <command Name="AcademyGetLosRestrictionListService"
+                APIName="AcademyGetLosRestrictionListService" APIType="SERVICE"
+                outputNamespace=""
+                inputNamespace="" version="" URL="DEFAULT"/>
+                <command Name="GetPersonInfoListService"
+                APIName="GetPersonInfoListService" APIType="SERVICE"
+                outputNamespace=""
+                inputNamespace="" version="" URL="DEFAULT"/>
+                </commands>
+    </form>
+  <form Id="com.yantra.pca.ycd.rcp.tasks.customerConsumerEntry.wizardpages.YCDConsumerCustomerEntryWizardPage">
+		<commands>
+			<command Name="getOrganizationHierarchy" APIName="AcademygetCommonCodeListForCreateCustomerForm" 
+			APIType="SERVICE" inputNamespace="" 
+			outputNamespace="" version="" URL="DEFAULT"/>
+			<!-- <command Name="manageCustomer" APIName="AcademyManageCustomer" 
+			APIType="SERVICE" inputNamespace="" 
+			outputNamespace="" version="" URL="DEFAULT"/> -->
+		</commands>
+	</form> 
+	   <form Id="com.yantra.pca.ycd.rcp.tasks.customerContactManagement.wizardpages.YCDManageContactsWizardPage">
+		<commands>
+			<command Name="getCustomerDetails" APIName="AcademygetCommonCodeListForManageCustomerForm" 
+			APIType="SERVICE" inputNamespace="" 
+			outputNamespace="" version="" URL="DEFAULT"/>
+			<command Name="getCustomerList" APIName="getCustomerList" 
+			APIType="API" inputNamespace="" 
+			outputNamespace="" version="" URL="DEFAULT"/>
+		</commands>
+	</form>
+	    <form Id="com.yantra.pca.ycd.rcp.tasks.payment.screens.YCDPaymentConfirmationPanel">
+		<commands>
+			<command Name="changeOrder" APIName="changeOrder" 
+			APIType="API" inputNamespace="extn_changeOrder" 
+			outputNamespace="" version="" URL="DEFAULT"/>
+		</commands>
+	</form>
+	<form Id="com.yantra.pca.ycd.rcp.tasks.orderSummary.wizards.YCDOrderSummaryWizard">
+		<commands>
+			<command Name="changeOrder" APIName="changeOrder" 
+			APIType="API" inputNamespace="extn_changeOrder" 
+			outputNamespace="" version="" URL="DEFAULT"/>
+		</commands>
+	</form>
+		<form Id="com.academy.ecommerce.sterling.orderSummary.actions.TaxIdPopUpFormId">
+		<commands>
+			<command Name="changeOrder" APIName="changeOrder" 
+			APIType="API" inputNamespace="extn_changeOrder" 
+			outputNamespace="" version="" URL="DEFAULT"/>
+		</commands>
+	</form>
+	 <form Id="com.yantra.pca.ycd.rcp.tasks.common.fulfillmentSummary.screens.YCDGiftShipPopup">
+		<commands>
+			<command Name="getCommonCodeList" APIName="getCommonCodeList" 
+			APIType="API" inputNamespace="ExtnInputCommonCode" 
+			outputNamespace="ExtnOutputCommonCode" version="" URL="DEFAULT"/>
+		</commands>
+	</form>
+	<form Id="com.yantra.pca.ycd.rcp.tasks.common.deliveryOptions.screens.YCDChangeDeliveryOptionsPageComposite">
+		<commands>
+			<command Name="listCarrierService" APIName="listCarrierService" 
+			APIType="API" inputNamespace="ExtnListCarrierService" 
+			outputNamespace="ExtnListCarrierService" version="" URL="DEFAULT"/>
+		</commands>
+	</form>
+<form Id="com.yantra.pca.ycd.rcp.tasks.itemSearch.wizards.YCDItemSearchWizard">
+		<commands>
+			<command Name="GetItemListForOrderingNoAvail" APIName="getCompleteItemList" inputNamespace="" outputNamespace="GetItemListForOrderingNoAvail" APIType="API" URL="DEFAULT" prototype="true" version=""/>
+			<command Name="getItemListForOrdering" APIName="getCompleteItemList" APIType="API" inputNamespace="" outputNamespace="CompleteItemList" prototype="true" version="" URL="DEFAULT"/>
+		</commands>
+		<namespaces>
+				  <namespace name="GetItemListForOrderingNoAvail" type="output" templateName="GetItemListForOrderingNoAvail_Output"/>
+				  <namespace name="CompleteItemList" type="output" templateName="CompleteItemList_Output"/>
+		</namespaces>
+</form>
+        <form Id="com.academy.ecommerce.sterling.orderSummary.extn.AcademyGiftCardLoad">
+          <commands>
+          <command APIName="getShipmentListForOrder" APIType="API" Name="getShipmentListForOrder" URL="DEFAULT" inputNamespace="" outputNamespace="" version=""/>
+                    <command APIName="getItemList" APIType="API" Name="getItemList" URL="DEFAULT" inputNamespace="" outputNamespace="" version=""/>
+        </commands>
+    </form>
+      <form Id="com.academy.ecommerce.sterling.orderSummary.extn.AcademyGiftCardChildComposite">
+          <commands>
+         <command APIName="AcademyBulkGCLinesMessageForActivation" APIType="SERVICE" Name="AcademyBulkGCLinesMessageForActivation" URL="DEFAULT" inputNamespace="" outputNamespace="" version=""/>
+         <command APIName="getShipmentListForOrder" APIType="API" Name="getShipmentListForOrder" URL="DEFAULT" inputNamespace="" outputNamespace="" version=""/>
+         <command APIName="changeShipment" APIType="API" Name="changeShipment" URL="DEFAULT" inputNamespace="" outputNamespace="" version=""/>
+        </commands>
+    </form>
+	<form Id="com.academy.ecommerce.sterling.orderSummary.actions.AcademyGiftCardLoadAction">
+		<commands>
+		 <command APIName="getShipmentListForOrder" APIType="API" Name="getShipmentListForOrder" URL="DEFAULT" inputNamespace="" outputNamespace="" version=""/>
+		</commands>
+		</form>
+	<!-- Service to invoke IBM Wallet webservice to encrypt Credit Card Number -->
+    <form Id="com.yantra.pca.ycd.rcp.tasks.payment.screens.YCDPaymentConfirmationPanel">
+        <commands>
+			<command Name="AcademyEncriptCreditCardInformation" APIName="AcademyEncriptMultipleCCInfoService" APIType="SERVICE"  URL="DEFAULT" inputNamespace="" outputNamespace="AcademyEncriptCreditCardInformation" version=""/>
+        </commands>
+    </form>		
+	 <!-- Added as part of Appeasement CR-->
+     <form Id="com.yantra.pca.ycd.rcp.tasks.customerAppeasement.wizards.YCDCustomerAppeasementWizard">
+        <commands>
+			<!--command Name="AcademyGetAppeasementListForOrderService" APIName="AcademyGetAppeasementListForOrderService" APIType="SERVICE"  URL="DEFAULT" inputNamespace="" outputNamespace="" version=""/-->
+			<command Name="AcademyGetAppeasementListForOrderService" APIName="AcademyGetAppeasementListForOrderService" APIType="SERVICE"  URL="DEFAULT" inputNamespace="" outputNamespace="" version=""/>
+			<command Name="recordInvoiceCreation" APIName="AcademyDummyService" APIType="SERVICE"  URL="DEFAULT" inputNamespace="" outputNamespace="" version=""/>
+			<command Name="changeOrder" APIName="AcademyChangeOrderService" APIType="SERVICE"  URL="DEFAULT" inputNamespace="" outputNamespace="" version=""/>
+			<command Name="AcademyGetOrderLinesShipmentStatus" APIName="AcademyGetOrderLinesShipmentStatus" APIType="SERVICE"  URL="DEFAULT" inputNamespace="" outputNamespace="" version=""/>
+        </commands>
+        <!-- Added as part of Gift Card Balance Check CR-->
+    </form>	
+         <form Id="com.academy.ecommerce.sterling.quickAccess.extn.AcademyGiftBalChk">
+        <commands>
+			<command Name="AcademyGiftCardLookupService" APIName="AcademyGiftCardLookupService" APIType="SERVICE"  URL="DEFAULT" inputNamespace="" outputNamespace="" version=""/>
+        </commands>
+    </form>
+    <form Id="com.yantra.pca.ycd.rcp.tasks.customerConsumerEntry.wizards.YCDConsumerEntryWizard">
+		<commands>
+			<command Name="getCustomerList" APIName="getCustomerList" 
+			APIType="API" inputNamespace="" 
+			outputNamespace="" version="" URL="DEFAULT"/>
+		</commands>
+	</form>
+	
+	<form Id="com.yantra.pca.ycd.rcp.tasks.cancelOrder.wizards.YCDCancelOrderWizard">
+		<commands>
+			<command Name="AcademyGetChangeShipmentContainerService" APIName="AcademyGetChangeShipmentContainerService" 
+			APIType="SERVICE" inputNamespace="" 
+			outputNamespace="" version="" URL="DEFAULT"/>
+			<command Name="getWaveList" APIName="getWaveList" 
+			APIType="API" inputNamespace="" 
+			outputNamespace="" version="" URL="DEFAULT"/>
+		</commands>
+	</form>
+	  <!-- Added as part of Cognos customization through COM-->
+            <form Id="com.academy.ecommerce.sterling.quickAccess.extn.AcademyCognos">
+        <commands>
+			<command Name="getProperty" APIName="getProperty" APIType="API"  URL="DEFAULT" inputNamespace="" outputNamespace="" version=""/>
+        </commands>
+    </form>
+    	<form Id="com.yantra.pca.ycd.rcp.tasks.alert.screens.YCDCreateAlert">
+		<commands>
+			<command Name="getOrderLineList" APIName="getOrderLineList" APIType="API" inputNamespace="" outputNamespace="getOrderLineList" version="" URL="DEFAULT"/>
+			<command Name="getCommonCodeList" APIName="getCommonCodeList" 
+			APIType="API" URL="DEFAULT" inputNamespace="" outputNamespace="" version=""/>
+			<command Name="getCustomerList" APIName="getCustomerList" 
+			APIType="API" inputNamespace="" 
+			outputNamespace="" version="" URL="DEFAULT"/>
+		</commands>
+		<namespaces>
+				<namespace name="getOrderLineList" type="output" templateName="extn_getOrderLineList_Output"/>
+		</namespaces>
+	</form>
+	    	<form Id="com.yantra.pca.ycd.rcp.tasks.alertSearch.wizards.YCDAlertSearchWizard">
+		<commands>
+			<command Name="getCommonCodeList" APIName="getCommonCodeList" 
+			APIType="API" URL="DEFAULT" inputNamespace="" outputNamespace="" version=""/>
+			</commands>
+	</form>
+	
+	<!-- Added for STL 1023-->	
+	<form Id="com.yantra.pca.ycd.rcp.tasks.alert.screens.YCDAlertList">
+        <commands>
+            <command APIName="getExceptionList" APIType="API" Name="getExceptionList" URL="DEFAULT" inputNamespace="Input_getExceptionList" outputNamespace="getExceptionList" version=""/>
+            </commands>
+	</form>
+	<!-- Added for STL 1023-->
+</forms>

@@ -1,0 +1,18 @@
+<Shipments>
+	<Shipment ShipmentNo="" ShipNode="" ShipmentKey="" Status="" CarrierServiceCode="" SCAC="" ShipmentType="">
+		<Extn ExtnRMSTransferNo="" ExtnExeterContainerId=""/>
+		<Containers>
+			<!-- OMNI-6615 : Begin -->
+			<!-- Attribute ShipmentType, ContainerNo and ContainerDetails element were added -->
+			<Container TrackingNo="" ContainerNo="" >
+				<ContainerDetails>
+					<ContainerDetail ItemID="" Quantity="" UnitOfMeasure="" />
+				</ContainerDetails>
+			</Container>
+			<!-- OMNI-6615 : End -->
+		</Containers>
+		<ShipmentLines>
+			<ShipmentLine ShipmentLineNo="" Quantity="" ItemID=""/>
+		</ShipmentLines>
+	</Shipment>
+</Shipments>
