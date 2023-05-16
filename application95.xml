@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application id="Application_ID" version="5"
+    xmlns="http://java.sun.com/xml/ns/javaee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/application_5.xsd">
+    <display-name>Sterling Applications</display-name>
+    <icon>
+        <small-icon>item02.gif</small-icon>
+        <large-icon>item02.gif</large-icon>
+    </icon>
+    <module id="wscWebModule">
+        <web>
+            <web-uri>wsc.war</web-uri>
+            <context-root>/wsc</context-root>
+        </web>
+    </module>
+    <module id="smcfsWebModule">
+        <web>
+            <web-uri>smcfs.war</web-uri>
+            <context-root>/smcfs</context-root>
+        </web>
+    </module>
+    <module id="smcfsejbModule">
+        <ejb>smcfsejb.jar</ejb>
+    </module>
+    <module id="sbcWebModule">
+        <web>
+            <web-uri>sbc.war</web-uri>
+            <context-root>/sbc</context-root>
+        </web>
+    </module>
+    <module id="smaWebModule">
+        <web>
+            <web-uri>sma.war</web-uri>
+            <context-root>/sma</context-root>
+        </web>
+    </module>
+	<module id="isccsWebModule">
+        <web>
+            <web-uri>isccs.war</web-uri>
+            <context-root>/isccs</context-root>
+        </web>
+    </module>
+    <!-- Begin : OMNI-61356 : Commenting out references for axis2.war -->
+	<!-- <module id="AxisWebModule"> 
+        <web> 
+            <web-uri>axis2.war</web-uri> 
+            <context-root>/yantrawebservices</context-root> 
+        </web> 
+    </module> -->
+    <!-- End : OMNI-61356 : Commenting out references for axis2.war -->
+
+	<!--<module id="wscdevWebModule">
+        <web>
+            <web-uri>wscdev.war</web-uri>
+            <context-root>/wscdev</context-root>
+        </web>
+    </module>
+    <module id="isccsdevModule">
+        <web>
+            <web-uri>isccsdev.war</web-uri>
+            <context-root>/isccsdev</context-root>
+        </web>
+    </module>-->
+</application>

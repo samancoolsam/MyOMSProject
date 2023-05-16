@@ -1,0 +1,72 @@
+PAAPOMS01
+#Remove files from Images and Pierbridge directories
+00 01 * * * /apps/scripts/cleanImagesDirectory.sh
+00 02 * * * /apps/scripts/cleanPierbridgeDirectory.sh
+
+
+
+PAAPOMS02
+#Trigger Agents
+#30 22 * * * /apps/SterlingOMS/Foundation/bin/ta.sh FinalInvoiceUpdateAgent > /appslog/triggeragent/FinalInvoiceUpdateAgent_`date +\%Y\%m\%d\%H\%M\%S`.log
+30 22 * * * /apps/SterlingOMS/Foundation/bin/ta.sh EOD > /appslog/triggeragent/EOD_`date +\%Y\%m\%d\%H\%M\%S`.log
+00 * * * * /apps/SterlingOMS/Foundation/bin/ta.sh RESERVATIONPRG 1>/appslog/triggeragent/RESERVATIONPRG_`date +\%Y\%m\%d\%H\%M\%S`.log &
+00 20 * * 0 /apps/SterlingOMS/Foundation/bin/ta.sh SHIPMENTPRG.0005 1>/appslog/triggeragent/SHIPMENTPRG.0005_`date +\%Y\%m\%d\%H\%M\%S`.log &
+00 18 * * 0 /apps/SterlingOMS/Foundation/bin/ta.sh MANIFESTPRG 1>/appslog/triggeragent/MANIFESTPRG_`date +\%Y\%m\%d\%H\%M\%S`.log &
+59 23 * * 0 /apps/SterlingOMS/Foundation/bin/ta.sh PURGE.0003 1>/appslog/triggeragent/PURGE.0003_`date +\%Y\%m\%d\%H\%M\%S`.log &
+59 23 * * 0 /apps/SterlingOMS/Foundation/bin/ta.sh PURGE 1>/appslog/triggeragent/PURGE_`date +\%Y\%m\%d\%H\%M\%S`.log &
+00 20 * * 0 /apps/SterlingOMS/Foundation/bin/ta.sh SHIPMENTPRG 1>/appslog/triggeragent/SHIPMENTPRG_`date +\%Y\%m\%d\%H\%M\%S`.log &
+00 22 * * 3,6 /apps/SterlingOMS/Foundation/bin/ta.sh INVENTORYAUDITPRG 1>/appslog/triggeragent/INVENTORYAUDITPRG_`date +\%Y\%m\%d\%H\%M\%S`.log &
+00 21 * * 0 /apps/SterlingOMS/Foundation/bin/ta.sh INVENTORYPRG 1>/appslog/triggeragent/INVENTORYPRG_`date +\%Y\%m\%d\%H\%M\%S`.log &
+59 23 * * 0 /apps/SterlingOMS/Foundation/bin/ta.sh REPROCESSPRG 1>/appslog/triggeragent/REPROCESSPRG_`date +\%Y\%m\%d\%H\%M\%S`.log &
+00 23 * * 6 /apps/SterlingOMS/Foundation/bin/ta.sh INBOXPRG 1>/appslog/triggeragent/INBOXPRG_`date +\%Y\%m\%d\%H\%M\%S`.log &
+#00 21 * * 0 /apps/SterlingOMS/Foundation/bin/ta.sh ORDERHISTPRG 1>/appslog/triggeragent/ORDERHISTPRG_`date +\%Y\%m\%d\%H\%M\%S`.log &
+#00 20 * * 0 /apps/SterlingOMS/Foundation/bin/ta.sh SHIPMENTHISTPRG 1>/appslog/triggeragent/SHIPMENTHISTPRG_`date +\%Y\%m\%d\%H\%M\%S`.log &
+59 23 * * 2,5 /apps/SterlingOMS/Foundation/bin/ta.sh YFS_AUDIT_PURGE 1>/appslog/triggeragent/YFS_AUDIT_PURGE_`date +\%Y\%m\%d\%H\%M\%S`.log &
+00 21 * * 0 /apps/SterlingOMS/Foundation/bin/ta.sh USERACTIVITYPRG 1>/appslog/triggeragent/USERACTIVITYPRG_`date +\%Y\%m\%d\%H\%M\%S`.log &
+59 23 * * 3,6 /apps/SterlingOMS/Foundation/bin/ta.sh USERACTAUDITPRG 1>/appslog/triggeragent/USERACTAUDITPRG_`date +\%Y\%m\%d\%H\%M\%S`.log &
+00 21 * * 0 /apps/SterlingOMS/Foundation/bin/ta.sh EXPORTTBLPRG 1>/appslog/triggeragent/EXPORTTBLPRG_`date +\%Y\%m\%d\%H\%M\%S`.log &
+59 23 * * 5 /apps/SterlingOMS/Foundation/bin/ta.sh SHIPMENT_MONITOR 1>/appslog/triggeragent/SHIPMENT_MONITOR_`date +\%Y\%m\%d\%H\%M\%S`.log &
+59 23 * * 5 /apps/SterlingOMS/Foundation/bin/ta.sh CLOSE_ORDER.0001 1>/appslog/triggeragent/CLOSE_ORDER.0001_`date +\%Y\%m\%d\%H\%M\%S`.log &
+59 23 * * 5 /apps/SterlingOMS/Foundation/bin/ta.sh ORDER_MONITOR_Ex.0003 1>/appslog/triggeragent/ORDER_MONITOR_EX.0003_`date +\%Y\%m\%d\%H\%M\%S`.log &
+59 23 * * 2,5 /apps/SterlingOMS/Foundation/bin/ta.sh ITEM_AUDIT_PURGE 1>/appslog/triggeragent/ITEM_AUDIT_PURGE_`date +\%Y\%m\%d\%H\%M\%S`.log &
+59 23 * * 0 /apps/SterlingOMS/Foundation/bin/ta.sh PURGE.0005 1>/appslog/triggeragent/PURGE.0005_`date +\%Y\%m\%d\%H\%M\%S`.log &
+59 23 * * 2,5 /apps/SterlingOMS/Foundation/bin/ta.sh YFS_AUDIT_PURGE_1 1>/appslog/triggeragent/ YFS_AUDIT_PURGE_1_`date +\%Y\%m\%d\%H\%M\%S`.log &
+59 23 * * 0 /apps/SterlingOMS/Foundation/bin/ta.sh STATUSAUDITPRG 1>/appslog/triggeragent/STATUSAUDITPRG_`date +\%Y\%m\%d\%H\%M\%S`.log &
+# Commenting statistics Table Purge for peak season
+00 21 * * 5 /apps/SterlingOMS/Foundation/bin/ta.sh STATTBLPRG 1>/appslog/triggeragent/STATTBLPRG_`date +\%Y\%m\%d\%H\%M\%S`.log &
+
+#Miscellaneous
+00,30 * * * * /apps/SterlingOMS/Foundation/Monitoring/monitor.sh
+
+#Stop and Start Servers
+00 23 * * * /apps/SterlingOMS/Foundation/bin/stopserver.sh ACADEMY_PUBLISH_INVOICE_AGENT_SERVER
+30 00 * * * nohup /apps/SterlingOMS/Foundation/bin/ss.sh ACADEMY_PUBLISH_INVOICE_AGENT_SERVER "-Xms1024m -Xmx1024m" 1 > /dev/null &
+00 23 * * * /apps/SterlingOMS/Foundation/bin/stopserver.sh AcademyProcessFinTranServer
+30 00 * * * nohup /apps/SterlingOMS/Foundation/bin/ss.sh AcademyProcessFinTranServer "-Xms1024m -Xmx1024m" 1 > /dev/null &
+00 23 * * * /apps/SterlingOMS/Foundation/bin/stopserver.sh ACADCloseManifestReprocessingAgent
+00 15 * * * nohup /apps/SterlingOMS/Foundation/bin/ss.sh ACADCloseManifestReprocessingAgent "-Xms1024m -Xmx1024m" 1 > /dev/null &
+
+#Stop and Start AUTO_CLOSE_MANIFEST_AGENT_SERVER
+00 18 * * 1-5 /apps/SterlingOMS/Foundation/bin/stopserver.sh AUTO_CLOSE_MANIFEST_AGENT_SERVER
+00 17 * * 1-5 nohup /apps/SterlingOMS/Foundation/bin/ss.sh AUTO_CLOSE_MANIFEST_AGENT_SERVER "-Xms1024m -Xmx1024m" 1 > /dev/null &
+
+#Host Capture
+00,05,10,15,20,25,30,35,40,45,50,55 19-22 * * * /apps/SterlingOMS/Foundation/bin/ta.sh PAYMENT_EXECUTION_CHARGE 1 > /appslog/triggeragent/PAYMENT_EXECUTION_CHARGE_`date +\%Y\%m\%d\%H\%M\%S`.log &
+#Added to process CLS Return files and publish the TLog to downstream before 8 AM CST
+00,05,10,15,20,25,30 07 * * 1,2,3,4,5 /apps/SterlingOMS/Foundation/bin/ta.sh PAYMENT_EXECUTION_CHARGE 1 > /appslog/triggeragent/PAYMENT_EXECUTION_CHARGE_`date +\%Y\%m\%d\%H\%M\%S`.log &
+
+30 00 * * * nohup /apps/SterlingOMS/Foundation/bin/ss.sh ACADEMY_PUBLISH_INVOICE_AGENT_SERVER "-Xms1024m -Xmx1024m" 2 > /dev/null &
+#30 00 * * * nohup /apps/SterlingOMS/Foundation/bin/ss.sh ACADEMY_PUBLISH_INVOICE_AGENT_SERVER "-Xms1024m -Xmx1024m" 3 > /dev/null &
+#30 00 * * * nohup /apps/SterlingOMS/Foundation/bin/ss.sh ACADEMY_PUBLISH_INVOICE_AGENT_SERVER "-Xms1024m -Xmx1024m" 4 > /dev/null &
+#30 00 * * * nohup /apps/SterlingOMS/Foundation/bin/ss.sh ACADEMY_PUBLISH_INVOICE_AGENT_SERVER "-Xms1024m -Xmx1024m" 5 > /dev/null &
+#30 00 * * * nohup /apps/SterlingOMS/Foundation/bin/ss.sh ACADEMY_PUBLISH_INVOICE_AGENT_SERVER "-Xms1024m -Xmx1024m" 6 > /dev/null &
+#30 00 * * * nohup /apps/SterlingOMS/Foundation/bin/ss.sh ACADEMY_PUBLISH_INVOICE_AGENT_SERVER "-Xms1024m -Xmx1024m" 7 > /dev/null &
+#30 00 * * * nohup /apps/SterlingOMS/Foundation/bin/ss.sh ACADEMY_PUBLISH_INVOICE_AGENT_SERVER "-Xms1024m -Xmx1024m" 8 > /dev/null &
+#30 00 * * * nohup /apps/SterlingOMS/Foundation/bin/ss.sh ACADEMY_PUBLISH_INVOICE_AGENT_SERVER "-Xms1024m -Xmx1024m" 9 > /dev/null &
+
+#Remove files from Images and Pierbridge directories
+00 01 * * * /apps/scripts/cleanImagesDirectory.sh
+00 02 * * * /apps/scripts/cleanPierbridgeDirectory.sh
+
+#Publish Invoice Agent Monitor
+00 07,19 * * * /apps/scripts/invoice_agent_monitor.sh

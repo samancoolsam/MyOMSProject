@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="Build Script For Academy" default="" basedir=".">
+   <echo message="${JAVA_HOME}" />
+   <taskdef resource="net/sf/antcontrib/antcontrib.properties"/>
+
+   <target name="app-build" depends="clean, copy-files, build-jars, create-ear, build-pca, deploy-cdt, deploy-ear" description="Build App Box" />
+   <!--<target name="app-build" depends="clean, copy-files, build-jars, create-ear, deploy-cdt, deploy-ear" description="Build App Box" />-->
+   <target name="app-build-no-cdt" depends="clean, copy-files, build-jars, create-ear, build-pca, deploy-ear" description="Build App Box" />
+   <!-- Removing wscdev & isccsdev war build from QA & Prod Build -->
+   <target name="app-build-dev" depends="clean, copy-files, build-jars, create-ear-dev, build-pca, deploy-cdt, deploy-ear" description="Build App Box" />
+   <target name="app-build-dev-no-cdt" depends="clean, copy-files, build-jars, create-ear-dev, build-pca, deploy-ear" description="Build App Box" />
+	<!--<target name="app-build-no-cdt" depends="clean, copy-files, build-jars, create-ear, deploy-ear" description="Build App Box" />-->
+   <target name="agt-build" depends="clean, copy-files, build-jars" description="Build Agent Box" />
+   <target name="app-build-wsc-war" depends="clean, copy-files,build-academy-jar,build-resource-jar,build-academywsc-jar,build-wsc-ear" description="Build App-WSC Box" />
+   <target name="app-build-isccs-war" depends="clean, copy-files,build-academy-jar,build-resource-jar,build-isccs-ear" description="Build App-ISCCS Box" />
+
+   <property file="build95.properties" />
+
+   <property environment="env" />
+
+   <path id="project.class.path">
+   	<fileset dir="${YFS_HOME}/jar/">
+         <include name="**/**/**/*.jar" />
+      </fileset>
+      <fileset dir="/apps/IBM/WebSphere/AppServer/lib">
+         <include name="**/j2ee.jar" />
+      </fileset>
+      <fileset dir="lib/axis">
+         <include name="**/*.jar" />
+      </fileset>
+      <fileset dir="${YFS_HOME}/rcp/COM/9.3/platform/rcpdependencies/windows/eclipse/plugins">
+         <include name="**/*.jar" />
+      </fileset>
+      <fileset dir="${YFS_HOME}/rcp/COM/9.3/platform/rcpclient">
+         <include name="**/*.jar" />
+      </fileset> 
+   	 <!--<fileset dir="${YFS_HOME}/lib">
+   	     <include name="**/*.jar" />
+   	 </fileset>-->
+   </path> 
+	<path id ="classpath.base">
+		<fileset dir="${YFS_HOME}/lib">
+		   <include name="**/*.jar" />
+		 </fileset> 
+	</path>
+
+
+   <target name="clean" description="clean" />
+
+   <target name="copy-files" description="Deploys the project files in the relevant folders of MCF Installation">
+      <copy todir="${YFS_HOME}" overwrite="true">
+         <fileset dir="Foundation" excludes="**/properties/**">
+            <exclude name="**/rcpextn_som/**"/>
+            <exclude name="**/rcpextn_com/**"/>
+         	<exclude name="**/repository/eardata/smcfs/**"/>
+         </fileset>
+      </copy>
+      <copy file="Foundation/properties/customer_overrides.properties.${server}.95" tofile="${YFS_HOME}/properties/customer_overrides.properties" overwrite="true"/>
+      <copy file="Foundation/properties/customer_overrides_agent.properties.${server}.95" tofile="${YFS_HOME}/properties/customer_overrides_agent.properties" overwrite="true"/>	  
+      <copy file="Foundation/bin/ss.sh.${server}" tofile="${YFS_HOME}/bin/ss.sh" overwrite="true"/>
+	  <copy file="Foundation/bin/ss_ms.sh.${server}" tofile="${YFS_HOME}/bin/ss_ms.sh" overwrite="true"/>
+	  <chmod dir="${YFS_HOME}/bin" perm="755" includes="**/*.sh"/>
+      <copy file="Foundation/properties/xapirest.properties" tofile="${YFS_HOME}/properties/xapirest.properties" overwrite="true"/>
+
+<!--<copy file="Foundation/properties/AGENTDynamicclasspath.cfg.95" tofile="${YFS_HOME}/properties/AGENTDynamicclasspath.cfg" overwrite="true"/>
+<copy file="Foundation/properties/AGENTDynamicclasspath.cfg.in.95" tofile="${YFS_HOME}/properties/AGENTDynamicclasspath.cfg.in" overwrite="true"/>
+<copy file="Foundation/properties/APPDynamicclasspath.cfg.in.95" tofile="${YFS_HOME}/properties/APPDynamicclasspath.cfg.in" overwrite="true"/>
+<copy file="Foundation/properties/APPDynamicclasspath.cfg.95" tofile="${YFS_HOME}/properties/APPDynamicclasspath.cfg" overwrite="true"/>
+<copy file="Foundation/properties/dynamicclasspath.cfg.95" tofile="${YFS_HOME}/properties/dynamicclasspath.cfg" overwrite="true"/>
+<copy file="Foundation/properties/dynamicclasspath.cfg.in.95" tofile="${YFS_HOME}/properties/dynamicclasspath.cfg.in" overwrite="true"/>
+-->
+   </target>
+
+   <target name="build-jars" depends="build-academy-jar,build-academywsc-jar,build-resource-jar,build-entities-jar" description="Make Jars" />
+
+   <target name="build-academy-jar" description="Build academy jar">
+      <delete dir="classes" />
+      <mkdir dir="classes" />
+      <javac includeantruntime="false" fork="yes" encoding="iso-8859-1"  destdir="classes" executable="${JAVA_HOME}/bin/javac" debug="yes" debuglevel="lines,vars,source">
+         <src path="src" />
+<classpath refid="classpath.base" />
+      	 <!--<classpath>
+      	 	<pathelement path="${YFS_HOME}/lib/*.jar"/>
+      	 </classpath>-->
+      </javac>
+      <tstamp>
+         <format property="NOW" pattern="EEE, MMMM dd yyyy hh:mm aa z" />
+      </tstamp>
+      <echo file="classes/version.txt">Release Version: ${project.name} V ${release.version}
+			Release Date: ${NOW}</echo>
+      <jar destfile="academy.jar" basedir="classes">
+         <manifest>
+            <attribute name="Built-By" value="${user.name}" />
+            <section name="version-information">
+               <attribute name="Version" value="${release.version}" />
+               <attribute name="Date" value="${NOW}" />
+            </section>
+         </manifest>
+      </jar>
+      <copy todir="${YFS_HOME}/jar/academy/1/">
+         <fileset dir=".">
+            <include name="academy.jar" />
+         </fileset>
+      </copy>
+		<copy todir="${YFS_HOME}/repository/eardata/isccs/war/WEB-INF/lib/">
+         <fileset dir=".">
+            <include name="academy.jar" />
+         </fileset>
+      </copy>
+   </target>
+     <target name="build-academywsc-jar" description="Build academy jar">
+      <delete dir="classesui" />
+      <mkdir dir="classesui" />
+      <javac encoding="iso-8859-1" fork="yes" destdir="classesui" executable="/usr/java8_64/bin/javac" debug="yes" debuglevel="lines,vars,source">
+         <src path="uijars" />
+<classpath refid="classpath.base" />
+      </javac>
+      <tstamp>
+         <format property="NOW" pattern="EEE, MMMM dd yyyy hh:mm aa z" />
+      </tstamp>
+      <echo file="classesui/version.txt">Release Version: ${project.name} V ${release.version}
+                        Release Date: ${NOW}</echo>
+      <jar destfile="academywsc.jar" basedir="classesui">
+         <manifest>
+            <attribute name="Built-By" value="${user.name}" />
+            <section name="version-information">
+               <attribute name="Version" value="${release.version}" />
+               <attribute name="Date" value="${NOW}" />
+            </section>
+         </manifest>
+      </jar>
+      <copy todir="${YFS_HOME}/repository/eardata/wsc/war/WEB-INF/lib/">
+         <fileset dir=".">
+            <include name="academywsc.jar" />
+         </fileset>
+      </copy>
+   </target>
+
+   <target name="build-resource-jar" description="Deploys extensions on MCF app">
+      <exec executable="${YFS_HOME}/bin/deployer.sh" failonerror="true">
+         <arg value="-t" />
+         <arg value="resourcejar" />
+      </exec>
+   </target>
+
+   <target name="build-entities-jar" description="Deploys extensions on MCF app">
+      <exec executable="${YFS_HOME}/bin/deployer.sh" failonerror="true">
+         <arg value="-t" />
+         <arg value="entitydeployer" />
+      </exec>
+   </target>
+
+   <target name="create-ear" depends="build-ear,expose-webservices" description="Create EAR for deployment" />
+
+   <target name="build-ear" description="Builds EAR file for deployment">
+      <exec executable="${YFS_HOME}/bin/buildear.sh">
+         <arg value="-Dappserver=websphere" />
+         <arg value="-Dearfile=smcfs.ear" />
+         <arg value="-Dnodocear=true" />
+         <arg value="-Ddevmode=true" />
+         <arg value="-Dnowebservice=true" />
+         <arg value="-Dwarfiles=smcfs,sma,sbc,wsc,isccs" />
+         <arg value="create-ear" />
+      </exec>
+   </target>
+   
+   <target name="create-ear-dev" depends="build-ear-dev,expose-webservices-dev" description="Create EAR for deployment" />
+
+   <target name="build-ear-dev" description="Builds EAR file for deployment">
+      <exec executable="${YFS_HOME}/bin/buildear.sh">
+         <arg value="-Dappserver=websphere" />
+         <arg value="-Dearfile=smcfs.ear" />
+         <arg value="-Dnodocear=true" />
+         <arg value="-Ddevmode=true" />
+         <arg value="-Dnowebservice=true" />
+         <arg value="-Dwarfiles=smcfs,sma,sbc,wsc,isccs,wscdev,isccsdev" />
+         <arg value="create-ear" />
+      </exec>
+   </target>
+   
+   <target name="build-wsc-ear" description="Builds EAR file for deployment">
+      <exec executable="${YFS_HOME}/bin/buildear.sh">
+         <arg value="-Dappserver=websphere" />
+         <arg value="-Dearfile=smcfs.ear" />
+         <arg value="-Dnodocear=true" />
+         <arg value="-Ddevmode=true" />
+         <arg value="-Dnowebservice=true" />
+         <arg value="-Dwarfiles=wsc,wscdev" />
+         <arg value="create-ear" />
+      </exec>
+   </target>
+   
+   <target name="build-isccs-ear" description="Builds EAR file for deployment">
+      <exec executable="${YFS_HOME}/bin/buildear.sh">
+         <arg value="-Dappserver=websphere" />
+         <arg value="-Dearfile=smcfs.ear" />
+         <arg value="-Dnodocear=true" />
+         <arg value="-Ddevmode=true" />
+         <arg value="-Dnowebservice=true" />
+         <arg value="-Dwarfiles=isccs,isccsdev" />
+         <arg value="create-ear" />
+      </exec>
+   </target>
+
+   <target name="expose-webservices" description="Exposes the Webservices in Sterling Application">
+      <delete dir="${YFS_HOME}/external_deployments/tempear" />
+      <delete dir="${YFS_HOME}/external_deployments/backupear" />
+      <mkdir dir="${YFS_HOME}/external_deployments/tempear" />
+      <mkdir dir="${YFS_HOME}/external_deployments/backupear" />
+      <unzip src="${YFS_HOME}/external_deployments/smcfs.ear" dest="${YFS_HOME}/external_deployments/tempear" />
+      <delete file="${YFS_HOME}/external_deployments/tempear/META-INF/application95.xml" />
+      <delete file="${YFS_HOME}/external_deployments/tempear/META-INF/application_dev95.xml" />
+	  <!-- Begin : OMNI-61356 : Commenting out references for axis2.war -->
+      <!-- <delete file="${YFS_HOME}/external_deployments/tempear/axis2.war" /> -->
+      <!-- End : OMNI-61356 : Commenting out references for axis2.war -->
+      <copy file="application95.xml" tofile="${YFS_HOME}/external_deployments/tempear/META-INF/application.xml" overwrite="true"/> 
+	  <!-- Begin : OMNI-61356 : Commenting out references for axis2.war -->
+      <!-- <copy file="lib/webservice/axis2.war" todir="${YFS_HOME}/external_deployments/tempear" />  -->
+	  <!-- End : OMNI-61356 : Commenting out references for axis2.war -->
+      <copy file="${YFS_HOME}/external_deployments/smcfs.ear" todir="${YFS_HOME}/external_deployments/backupear" />
+      <jar destfile="${YFS_HOME}/external_deployments/smcfs.ear" basedir="${YFS_HOME}/external_deployments/tempear" />
+   </target>
+   
+   <target name="expose-webservices-dev" description="Exposes the Webservices in Sterling Application for dev">
+      <delete dir="${YFS_HOME}/external_deployments/tempear" />
+      <delete dir="${YFS_HOME}/external_deployments/backupear" />
+      <mkdir dir="${YFS_HOME}/external_deployments/tempear" />
+      <mkdir dir="${YFS_HOME}/external_deployments/backupear" />
+      <unzip src="${YFS_HOME}/external_deployments/smcfs.ear" dest="${YFS_HOME}/external_deployments/tempear" />
+      <delete file="${YFS_HOME}/external_deployments/tempear/META-INF/application95.xml" />
+      <delete file="${YFS_HOME}/external_deployments/tempear/META-INF/application_dev95.xml" />
+	  
+   	  <!-- Begin : OMNI-61356 : Commenting out references for axis2.war -->
+       <!-- <delete file="${YFS_HOME}/external_deployments/tempear/axis2.war" />  -->
+	  <!-- End : OMNI-61356 : Commenting out references for axis2.war -->
+	  
+      <copy file="application_dev95.xml" tofile="${YFS_HOME}/external_deployments/tempear/META-INF/application.xml" overwrite="true"/> 
+	  <!-- Begin : OMNI-61356 : Commenting out references for axis2.war -->
+      <!-- <copy file="lib/webservice/axis2.war" todir="${YFS_HOME}/external_deployments/tempear" /> -->
+	  <!-- End : OMNI-61356 : Commenting out references for axis2.war -->
+	  
+      <copy file="${YFS_HOME}/external_deployments/smcfs.ear" todir="${YFS_HOME}/external_deployments/backupear" />
+      <jar destfile="${YFS_HOME}/external_deployments/smcfs.ear" basedir="${YFS_HOME}/external_deployments/tempear" />
+   </target>
+
+ <target name="build-pca" depends="build-som" description="clean" />
+
+   <target name="copy-som">
+      <delete dir="${YFS_HOME}/rcpextn_som" failonerror="false" />
+      <copy todir="${YFS_HOME}/rcpextn_som" overwrite="true">
+         <fileset dir="Foundation/rcpextn_som" excludes="**/locations.ycfg.*">
+            <exclude name="**/plugins/com.academy.som/com/**" />
+         </fileset>
+      </copy>
+      <copy file="Foundation/rcpextn_som/resources/locations.ycfg.${server}" tofile="${YFS_HOME}/rcpextn_som/resources/locations.ycfg" overwrite="true"/>
+   </target>
+
+   <target name="build-som" depends="copy-som">
+      <javac classpathref="project.class.path" destdir="${YFS_HOME}/rcpextn_som/plugins/com.academy.som" executable="${JAVA_HOME}/bin/javac" debug="on" debuglevel="lines,vars,source">
+         <src path="Foundation/rcpextn_som/plugins/com.academy.som/com" />
+      </javac>
+      <exec dir="${YFS_HOME}/bin" executable="./sci_ant.sh">
+         <env key="RCP_EXTN_FOLDER" value="${YFS_HOME}/rcpextn_som" />
+         <arg value="-f" />
+         <arg value="buildsomapplication.xml" />
+         <arg value="buildSOMForWindows" />
+		 <arg value="-DSOMVersion=9.3" />
+         <arg value="-logfile" />
+         <arg value="AcademySOMapp.log" />
+      </exec>
+      <unzip dest="${YFS_HOME}/pcaUpdates/YFSSYS00006/9.3/win32.win32.x86" src="${YFS_HOME}/rcpdrop/windows/9.3/som.zip"/>
+   </target>
+<!--
+   <target name="copy-com">
+      <delete dir="${YFS_HOME}/rcpextn_com" failonerror="false" />
+      <copy todir="${YFS_HOME}/rcpextn_com" overwrite="true">
+         <fileset dir="Foundation/rcpextn_com" excludes="**/locations.ycfg.*">
+            <exclude name="**/plugins/com.academy.ecommerce.sterling/com/**" />
+         </fileset>
+      </copy>
+      <copy file="Foundation/rcpextn_com/resources/locations.ycfg.${server}" tofile="${YFS_HOME}/rcpextn_com/resources/locations.ycfg" overwrite="true"/>
+   </target>
+
+   <target name="build-com" depends="copy-com">
+      <javac classpathref="project.class.path" destdir="${YFS_HOME}/rcpextn_com/plugins/com.academy.ecommerce.sterling" executable="${JAVA_HOME}/bin/javac" debug="on" debuglevel="lines,vars,source">
+         <src path="Foundation/rcpextn_com/plugins/com.academy.ecommerce.sterling/com" />
+      </javac>
+      <exec dir="${YFS_HOME}/bin" executable="./sci_ant.sh">
+         <env key="RCP_EXTN_FOLDER" value="${YFS_HOME}/rcpextn_com" />
+         <arg value="-f" />
+         <arg value="buildcomapplication.xml" />
+         <arg value="buildCOMForWindows" />
+         <arg value="-logfile" />
+         <arg value="AcademyCOMapp.log" />
+      </exec>
+      <unzip dest="${YFS_HOME}/pcaUpdates/YFSSYS00011/9.2.1.5/win32.win32.x86" src="${YFS_HOME}/rcpdrop/windows/9.2.1/com.zip"/>
+   </target>
+-->
+   <target name="export-cdt" description="Export and prepare CDT archive" >
+      <delete>
+         <fileset dir="/apps/SterlingOMS/CDT/xml" includes="**/*"/>
+      </delete>
+      <exec executable="${YFS_HOME}/bin/cs.sh" failonerror="true">
+         <arg value="${cdtmaster}" />
+         <arg value="${cdtmasterpwd}" />
+         <arg value="XML" />
+         <arg value="academy" />
+      </exec>
+      <zip destfile="/apps/SterlingOMS/CDT/CDT.zip">
+         <fileset dir="/apps/SterlingOMS/CDT/xml">
+            <include name="**/**"/>
+         </fileset>
+      </zip>
+   </target>
+
+   <target name="deploy-cdt" description="Extract archive and deploy CDT" >
+      <propertycopy name="cdttgt" from="${server}.cdttgt" />
+      <propertycopy name="cdttgtpwd" from="${server}.cdttgtpwd" />
+	  <delete>
+         <fileset dir="/apps/SterlingOMS/CDT/xml" includes="**/*"/>
+      </delete>
+      <unzip src="CDT.zip" dest="/apps/SterlingOMS/CDT/xml"/>
+      <exec executable="${YFS_HOME}/bin/cs.sh" failonerror="true">
+         <arg value="XML" />
+         <arg value="academy" />
+         <arg value="${cdttgt}" />
+         <arg value="${cdttgtpwd}" />
+      </exec>
+   </target>
+
+   <target name="deploy-ear" description="clean" />
+
+</project>
